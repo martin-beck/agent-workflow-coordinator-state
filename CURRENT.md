@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Design correctness-preserving formal strategy for Handoffctl.tla OOM at exact hosted run 34780676824; do not omit required models or weaken invariants. Lifecycle/recovery blockers remain open. | codex-awc-ar0011-tla-admission-20260913 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Obtain fresh independent review and exact-head CI for PR #22 at product commit 322bb86; hosted portable formal verify must confirm 1280m completes the full tracked model. Lifecycle/recovery blockers remain open. | codex-awc-ar0011-tla-admission-20260913 |
 
 ## Planned
 
