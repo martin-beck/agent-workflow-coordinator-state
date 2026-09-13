@@ -88,7 +88,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0001](tasks/AR-0001.md): Integrate AWQ v0.32.0 into the coordinator | codex-awc-ar0001-pub-20260913 | Adopt AWQ v0.32.0 while retaining coordinator-native quality and formal gates. | Obtain independent exact-head review and green required CI for PR #20 at product commit 5ce3b97; merge only after review. |
+| P0 | [AR-0001](tasks/AR-0001.md): Integrate AWQ v0.32.0 into the coordinator | codex-awc-ar0001-pub-20260913 | Adopt AWQ v0.32.0 while retaining coordinator-native quality and formal gates. | Merged PR #20 at merge commit 713761b; post-merge AWQ PR check passes; no coordinator release was published by this merge. |
 
 ### Planned (9)
 
