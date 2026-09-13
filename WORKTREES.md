@@ -12,5 +12,5 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-v034-complexity` | `fix/v0.3.4-reconcile-complexity` | `2f99648163e2` | 0 | behind 40, ahead 0 |
 | `agent-workflow-coordinator-v034-release` | `DETACHED` | `590036fbf9a0` | 0 | behind 39, ahead 0 |
 | `remote-agent-terminal-coordinator-v035` | `fix/v0.3.5-worktree-fence` | `fd53737ecffb` | 0 | behind 37, ahead 0 |
-| `agent-workflow-coordinator-tla-admission-safety` | `feature/tla-admission-safety` | `7e6ef5d7e298` | 0 | behind 0, ahead 16 |
+| `agent-workflow-coordinator-tla-admission-safety` | `feature/tla-admission-safety` | `020070e65962` | 0 | behind 0, ahead 17 |
 | `agent-workflow-coordinator-v035` | `DETACHED` | `510817b93feb` | 0 | behind 37, ahead 0 |
