@@ -9,8 +9,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-awq-v032` | `feature/awq-v032-integration` | `35ec43f98e52` | 0 | behind 29, ahead 0 |
 | `agent-workflow-coordinator-upgrade` | `feature/upgrade-protocol` | `053b59aec303` | 0 | behind 1, ahead 0 |
 | `agent-workflow-coordinator-upgrade-contract` | `feature/upgrade-contract` | `736d2e2bea51` | 0 | behind 0, ahead 2 |
-| `agent-workflow-coordinator-upgrade-sqlite-backup` | `feature/upgrade-sqlite-backup` | `bd0705967299` | 2 | behind 0, ahead 0 |
-| changed files | - | - | - | `tests/test_sqlite_backup.py`, `tools/sqlite_backup.py` |
+| `agent-workflow-coordinator-upgrade-sqlite-backup` | `feature/upgrade-sqlite-backup` | `80820b3f89d1` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-v031-release` | `DETACHED` | `afb332dc90dc` | 0 | behind 45, ahead 0 |
 | `agent-workflow-coordinator-v034-complexity` | `fix/v0.3.4-reconcile-complexity` | `2f99648163e2` | 0 | behind 40, ahead 0 |
 | `agent-workflow-coordinator-v034-release` | `DETACHED` | `590036fbf9a0` | 0 | behind 39, ahead 0 |
