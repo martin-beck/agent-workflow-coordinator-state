@@ -91,7 +91,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
-| P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | codex-awc-ar0005-git-backup-20260914 | Back up and restore complete Git-backed coordination state without losing task history. | Independent review amended commit 2fc058d before publication; exact PR #25 CI must rerun. Selector/profile/runtime ignored-file policy remains explicit scope to review. |
+| P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | codex-awc-ar0005-git-backup-20260914 | Back up and restore complete Git-backed coordination state without losing task history. | PR #25 merged as 96a568b; post-merge main Verify run 34787111423 is in progress. Confirm terminal post-merge result before closing AR-0005. |
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | codex-awc-ar0006-sqlite-20260914 | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | PR #26 remains open at 1c3bd23; run 34786322211 was cancelled as orphaned after formal step stopped updating; request a fresh exact-head verify on a healthy runner. |
 
 ### Blocked (2)
