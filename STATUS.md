@@ -92,7 +92,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
 | P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | codex-awc-ar0005-git-backup-20260914 | Back up and restore complete Git-backed coordination state without losing task history. | PR #25 remains open at bf634d6; run 34785850606 was cancelled as orphaned after formal step stopped updating; request a fresh exact-head verify on a healthy runner. |
-| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | codex-awc-ar0006-sqlite-20260914 | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | Review 1c3bd23 failure-hardening amendment; publish only after independent review. Selector/migration equivalence remains explicit child scope. |
+| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | codex-awc-ar0006-sqlite-20260914 | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | PR #26 open at 1c3bd23; await independent exact-head review and healthy hosted checks. Keep selector/migration equivalence and crash-recovery orchestration as follow-up scope. |
 
 ### Blocked (2)
 
