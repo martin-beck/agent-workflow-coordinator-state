@@ -12,7 +12,7 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
 | #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
-| #26 | `feature/upgrade-sqlite-backup@1c3bd23c59ac` | `main` | UNSTABLE | COMPLETED:SUCCESS, QUEUED: | feat(upgrade): harden SQLite backup failure recovery |
+| #26 | `feature/upgrade-sqlite-backup@1c3bd23c59ac` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(upgrade): harden SQLite backup failure recovery |
 
 ## Recent workflows
 
@@ -20,7 +20,7 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- |
 | 34787111423 | `96a568bcb388` | push | Verify | completed:success |
 | 34786628322 | `2fc058d5b60a` | pull_request | Verify | completed:success |
-| 34786322211 | `1c3bd23c59ac` | pull_request | Verify | queued:- |
+| 34786322211 | `1c3bd23c59ac` | pull_request | Verify | in_progress:- |
 | 34785850606 | `bf634d612ada` | pull_request | Verify | completed:cancelled |
 | 34785182683 | `22d72310cdd7` | pull_request | Verify | completed:cancelled |
 | 34785041586 | `4d91fdeb941b` | pull_request | Verify | completed:cancelled |
