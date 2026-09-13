@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | Review d6974e7 generator slice; next add release catalog compatibility matrix and publication fixtures. |
+| P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
 
 ### Blocked (1)
 
