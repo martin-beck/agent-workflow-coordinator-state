@@ -12,13 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
 | #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
-| #25 | `feature/upgrade-git-backup@bf634d612ada` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(upgrade): add verified Git backup artifacts |
+| #25 | `feature/upgrade-git-backup@bf634d612ada` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add verified Git backup artifacts |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34785850606 | `bf634d612ada` | pull_request | Verify | in_progress:- |
+| 34785850606 | `bf634d612ada` | pull_request | Verify | completed:cancelled |
 | 34785182683 | `22d72310cdd7` | pull_request | Verify | completed:cancelled |
 | 34785041586 | `4d91fdeb941b` | pull_request | Verify | completed:cancelled |
 | 34784812954 | `ca56b9175b3c` | push | Verify | completed:success |
