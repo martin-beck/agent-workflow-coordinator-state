@@ -11,12 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #23 | `feature/upgrade-contract@736d2e2bea51` | `main` | UNKNOWN | - | feat(upgrade): add deterministic release contract generator |
+| #23 | `feature/upgrade-contract@736d2e2bea51` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(upgrade): add deterministic release contract generator |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34784319165 | `736d2e2bea51` | pull_request | Verify | in_progress:- |
 | 34783911645 | `59a49ef38230` | pull_request | Verify | completed:failure |
 | 34783602544 | `b0bf1d9bedd5` | pull_request | Verify | completed:failure |
 | 34783581868 | `5b7c88f3db04` | pull_request | Verify | completed:cancelled |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34780530664 | `0d5c94529632` | pull_request | Verify | completed:failure |
 | 34780486084 | `533772a72cfa` | pull_request | Verify | completed:failure |
 | 34780376201 | `7092e1bff93d` | pull_request | Verify | completed:failure |
-| 34780354376 | `bf673085d9a5` | pull_request | Verify | completed:cancelled |
