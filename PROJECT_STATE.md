@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #21 | `feature/upgrade-protocol@053b59aec303` | `main` | UNSTABLE | IN_PROGRESS: | feat: define correctness-first upgrade protocol |
+| #21 | `feature/upgrade-protocol@053b59aec303` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat: define correctness-first upgrade protocol |
 
 ## Recent workflows
 
