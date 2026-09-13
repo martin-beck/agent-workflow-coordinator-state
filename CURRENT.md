@@ -10,6 +10,12 @@ Never edit this file directly.
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. | codex-awc-ar0003-contract-20260913 |
 | P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | Back up and restore complete Git-backed coordination state without losing task history. | Define verified Git backup artifacts, restore ordering, and fault-injection coverage. | codex-awc-ar0005-git-backup-20260914 |
 
+## Open
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | Specify SQLite backup, migration, selector, integrity, and restore invariants with crash tests. | - |
+
 ## Blocked
 
 | Priority | Task | Summary | Next action | Owner |
@@ -21,7 +27,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | Specify SQLite backup, migration, selector, integrity, and restore invariants with crash tests. | - |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the phase machine and explicit rollback commands only after contract and backend children are accepted. | - |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Formally verify upgrade safety, crash recovery, rollback, and functional reopen conditions. | Model upgrade and rollback invariants and bind them to exhaustive bounded implementation tests. | - |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. | - |
