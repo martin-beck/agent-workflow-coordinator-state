@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #20 | `feature/awq-v032-integration@35ec43f98e52` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat: add AWQ v0.32 quality gates |
+| #20 | `feature/awq-v032-integration@35ec43f98e52` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat: add AWQ v0.32 quality gates |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34777020086 | `35ec43f98e52` | pull_request | Verify | in_progress:- |
+| 34777020086 | `35ec43f98e52` | pull_request | Verify | completed:success |
 | 34775413936 | `5ce3b977ef4a` | pull_request | Verify | completed:success |
 | 34473915467 | `d2482ca66902` | push | Verify | completed:success |
 | 34473064132 | `c1f3811bc995` | pull_request | Verify | completed:success |
