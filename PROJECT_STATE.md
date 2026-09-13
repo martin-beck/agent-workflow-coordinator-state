@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #22 | `feature/tla-admission-safety@09b38dbd1a56` | `main` | UNKNOWN | - | feat(formal): bound TLC admission and resources |
 
 ## Recent workflows
 
