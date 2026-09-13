@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `96a568bcb388a0912dc90ca90e96edfabcdcbf48`
+- Product remote main: `0918380263359bd3fdb9ffdebca6870c89e863e0`
 - Local origin/main: `bd070596729949a77cfb4fae7c4230055f3f4ece`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,9 +10,8 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
-| #26 | `feature/upgrade-sqlite-backup@1c3bd23c59ac` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(upgrade): harden SQLite backup failure recovery |
+| #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
+| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
 
 ## Recent workflows
 
@@ -20,7 +19,7 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- |
 | 34787111423 | `96a568bcb388` | push | Verify | completed:success |
 | 34786628322 | `2fc058d5b60a` | pull_request | Verify | completed:success |
-| 34786322211 | `1c3bd23c59ac` | pull_request | Verify | in_progress:- |
+| 34786322211 | `1c3bd23c59ac` | pull_request | Verify | completed:success |
 | 34785850606 | `bf634d612ada` | pull_request | Verify | completed:cancelled |
 | 34785182683 | `22d72310cdd7` | pull_request | Verify | completed:cancelled |
 | 34785041586 | `4d91fdeb941b` | pull_request | Verify | completed:cancelled |
