@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #21 | `feature/upgrade-protocol@19742ef4ecb0` | `main` | UNSTABLE | IN_PROGRESS: | feat: define correctness-first upgrade protocol |
+| #21 | `feature/upgrade-protocol@19742ef4ecb0` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:FAILURE | feat: define correctness-first upgrade protocol |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34778464507 | `19742ef4ecb0` | pull_request | Verify | in_progress:- |
+| 34778464507 | `19742ef4ecb0` | pull_request | Verify | completed:failure |
 | 34778163166 | `589ac6e43412` | pull_request | Verify | completed:cancelled |
 | 34777849887 | `f02b4234ac86` | pull_request | Verify | completed:cancelled |
 | 34777610511 | `713761b42867` | push | Verify | completed:success |
