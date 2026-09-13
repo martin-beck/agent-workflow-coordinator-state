@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**11 ARs tracked** across 3 active status categories.
+**11 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
-| **Planned** | Defined work awaiting promotion or dependencies | 4 |
+| **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 6 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - Planned"]:::status_planned
+        AR_0007["AR-0007 - Open"]:::status_open
         AR_0008["AR-0008 - Planned"]:::status_planned
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -86,17 +86,22 @@ flowchart LR
 
 ## Complete AR inventory
 
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the phase machine and explicit rollback commands only after contract and backend children are accepted. |
+
 ### Blocked (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Unclaimed | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. |
 
-### Planned (4)
+### Planned (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the phase machine and explicit rollback commands only after contract and backend children are accepted. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | Formally verify upgrade safety, crash recovery, rollback, and functional reopen conditions. | Model upgrade and rollback invariants and bind them to exhaustive bounded implementation tests. |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
