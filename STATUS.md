@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 9 |
 | **Future** | Deferred roadmap work | 0 |
@@ -28,7 +28,7 @@ alternative.
 flowchart LR
     subgraph series_00["00 - Coordination foundation"]
         direction TB
-        AR_0001["AR-0001 - Open"]:::status_open
+        AR_0001["AR-0001 - In progress"]:::status_in_progress
         AR_0002["AR-0002 - Planned"]:::status_planned
         AR_0003["AR-0003 - Planned"]:::status_planned
         AR_0004["AR-0004 - Planned"]:::status_planned
@@ -84,11 +84,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (1)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0001](tasks/AR-0001.md): Integrate AWQ v0.32.0 into the coordinator | Unclaimed | Adopt AWQ v0.32.0 while retaining coordinator-native quality and formal gates. | Obtain independent exact-head review and green required CI for PR #20 at product commit 5ce3b97; merge only after review. |
+| P0 | [AR-0001](tasks/AR-0001.md): Integrate AWQ v0.32.0 into the coordinator | codex-awc-ar0001-pub-20260913 | Adopt AWQ v0.32.0 while retaining coordinator-native quality and formal gates. | Obtain independent exact-head review and green required CI for PR #20 at product commit 5ce3b97; merge only after review. |
 
 ### Planned (9)
 
