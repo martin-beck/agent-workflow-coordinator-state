@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Obtain fresh independent review and exact-head CI for PR #22 at product commit f8e8cbf; hosted portable formal verify must confirm reduced JVM heap and lifecycle review remains open. | codex-awc-ar0011-tla-admission-20260913 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact hosted verify run 34780676824 formal step; terminal result required before lifecycle/recovery implementation. Exact PR head is f8e8cbf. | codex-awc-ar0011-tla-admission-20260913 |
 
 ## Planned
 
