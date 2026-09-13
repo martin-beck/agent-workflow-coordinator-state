@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | codex-awc-ar0006-sqlite-20260914 | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | PR #26 merged as 091838e; post-merge main Verify run 34788070608 is in progress. Confirm terminal success before closing AR-0006. |
+| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | codex-awc-ar0006-sqlite-20260914 | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | AR-0006 complete; PR #26 merged and post-merge main verification green. AR-0004 remains blocked pending its correctness fixes and healthy exact-head rerun. |
 
 ### Blocked (2)
 
