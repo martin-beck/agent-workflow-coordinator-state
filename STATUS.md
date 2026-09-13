@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260914 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Cancel orphaned run 34785182683 through handoffctl, then classify fresh rerun feasibility; required self-hosted runner remains unreliable. |
+| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260914 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Fresh exact-head rerun 34785182683 at 22d72310 is in progress; await terminal AWQ + Verify and independent review. Do not merge. |
 
 ### Blocked (1)
 
