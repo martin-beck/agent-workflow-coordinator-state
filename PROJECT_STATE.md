@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #20 | `feature/awq-v032-integration@35ec43f98e52` | `main` | UNSTABLE | IN_PROGRESS: | feat: add AWQ v0.32 quality gates |
+| #20 | `feature/awq-v032-integration@35ec43f98e52` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat: add AWQ v0.32 quality gates |
 
 ## Recent workflows
 
