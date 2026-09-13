@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | IN_PROGRESS: | feat(upgrade): add fail-closed admission invariants |
+| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(upgrade): add fail-closed admission invariants |
 
 ## Recent workflows
 
