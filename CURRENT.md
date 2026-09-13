@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the phase machine and explicit rollback commands only after contract and backend children are accepted. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Isolated worktree /srv/data/projects/agent-workflow-coordinator-upgrade-engine created at origin/main cd4ec1c. Read upgrade protocol/contracts and implement a bounded phase-machine/rollback slice with failure-path tests. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
