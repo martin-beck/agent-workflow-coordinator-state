@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Replace generic adapter with concrete Git/SQLite backup-restore-selector adapters; bind admission snapshots to adapter reads and implement barrier release/reopen crash recovery plus multiprocess tests. Publication remains blocked. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement concrete read-only Git/SQLite authority probes, backup/restore destination equivalence, selector identity and durable barrier/fence lifecycle. Publication remains blocked. |
 
 ### Blocked (1)
 
