@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. | codex-awc-ar0003-contract-20260913 |
-| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | PR #26 remains open at 1c3bd23; fresh rerun of 34786322211 is in progress after runner confirmed online/idle. Await terminal AWQ+native verify and independent review; do not merge. | codex-awc-ar0006-sqlite-20260914 |
+| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | PR #26 merged as 091838e; post-merge main Verify run 34788070608 is in progress. Confirm terminal success before closing AR-0006. | codex-awc-ar0006-sqlite-20260914 |
 
 ## Blocked
 
