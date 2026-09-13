@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `713761b428676c0c290b207d4f04eee0a57390c3`
+- Product remote main: `bd070596729949a77cfb4fae7c4230055f3f4ece`
 - Local origin/main: `713761b428676c0c290b207d4f04eee0a57390c3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #21 | `feature/upgrade-protocol@053b59aec303` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat: define correctness-first upgrade protocol |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34778673032 | `053b59aec303` | pull_request | Verify | in_progress:- |
+| 34778673032 | `053b59aec303` | pull_request | Verify | completed:success |
 | 34778464507 | `19742ef4ecb0` | pull_request | Verify | completed:failure |
 | 34778163166 | `589ac6e43412` | pull_request | Verify | completed:cancelled |
 | 34777849887 | `f02b4234ac86` | pull_request | Verify | completed:cancelled |
