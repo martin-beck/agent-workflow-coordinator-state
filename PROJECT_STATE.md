@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #22 | `feature/tla-admission-safety@322bb8645e36` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(formal): bound TLC admission and resources |
+| #22 | `feature/tla-admission-safety@84461ecf363f` | `main` | CLEAN | - | feat(formal): bound TLC admission and resources |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34781770908 | `84461ecf363f` | pull_request | Verify | pending:- |
 | 34781503035 | `322bb8645e36` | pull_request | Verify | in_progress:- |
 | 34780676824 | `f8e8cbf245d5` | pull_request | Verify | completed:failure |
 | 34780661442 | `f12ece27ac1b` | pull_request | Verify | completed:cancelled |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34780031404 | `3037580ffedd` | pull_request | Verify | completed:failure |
 | 34779835358 | `09b38dbd1a56` | pull_request | Verify | completed:failure |
 | 34779207588 | `bd0705967299` | push | Verify | completed:success |
-| 34778673032 | `053b59aec303` | pull_request | Verify | completed:success |
