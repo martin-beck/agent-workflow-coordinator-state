@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-tla-admission-20260913 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Review and commit tiered formal prototype only after parent review; current product worktree is intentionally uncommitted. Active run 34781770908 remains historical for 84461ec; do not attribute to prototype. |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-tla-admission-20260913 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Parent review required before pushing signed tiered formal commit 9995331; exact hosted run 34781770908 remains historical for 84461ec. Push only after review approval. |
 
 ### Planned (8)
 
