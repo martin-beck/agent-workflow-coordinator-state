@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**11 ARs tracked** across 5 active status categories.
+**11 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
@@ -31,7 +31,7 @@ flowchart LR
         AR_0001["AR-0001 - Done"]:::status_done
         AR_0002["AR-0002 - Done"]:::status_done
         AR_0003["AR-0003 - In progress"]:::status_in_progress
-        AR_0004["AR-0004 - Open"]:::status_open
+        AR_0004["AR-0004 - In progress"]:::status_in_progress
         AR_0005["AR-0005 - Planned"]:::status_planned
         AR_0006["AR-0006 - Planned"]:::status_planned
         AR_0007["AR-0007 - Planned"]:::status_planned
@@ -86,17 +86,12 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
-
-### Open (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Unclaimed | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Specify quiescence, prerequisite, admission, and reopen invariants with negative-path tests. |
+| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260913 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Specify quiescence, prerequisite, admission, and reopen invariants with negative-path tests. |
 
 ### Blocked (1)
 
