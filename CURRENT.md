@@ -7,13 +7,8 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Generate and validate complete, bounded upgrade instructions for every release. | Specify the release contract schema, generator, compatibility matrix, and hostile validation fixtures. | codex-awc-ar0003-contract-20260913 |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor fresh exact-head CI for PR #22 at b0bf1d9; full required-cgroup attestation must pass with runner manifest and actual containment metadata. Prior run 34783340495 remains terminal infrastructure failure. | codex-awc-ar0011-tla-admission-20260913 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Generate and validate complete, bounded upgrade instructions for every release. | Specify the release contract schema, generator, compatibility matrix, and hostile validation fixtures. | - |
 
 ## Planned
 
