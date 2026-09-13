@@ -5,13 +5,13 @@
 
 ## Portfolio overview
 
-**11 ARs tracked** across 3 active status categories.
+**11 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 0 |
-| **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
+| **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
 | **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 2 |
@@ -38,7 +38,7 @@ flowchart LR
         AR_0008["AR-0008 - Planned"]:::status_planned
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
-        AR_0011["AR-0011 - In progress"]:::status_in_progress
+        AR_0011["AR-0011 - Blocked"]:::status_blocked
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -86,12 +86,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | Specify the release contract schema, generator, compatibility matrix, and hostile validation fixtures. |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-tla-admission-20260913 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor fresh exact-head CI for PR #22 at b0bf1d9; full required-cgroup attestation must pass with runner manifest and actual containment metadata. Prior run 34783340495 remains terminal infrastructure failure. |
+
+### Blocked (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Unclaimed | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor fresh exact-head CI for PR #22 at b0bf1d9; full required-cgroup attestation must pass with runner manifest and actual containment metadata. Prior run 34783340495 remains terminal infrastructure failure. |
 
 ### Planned (7)
 
