@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Code checkpoint f58ccd4 on feature/upgrade-engine: run independent review against explicit backend/quiescence/rollback integration requirements before any push or PR. Current slice is journal-only and must not be published as complete AR-0007. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Incremental safety checkpoint 7bab516; independent review still blocks publication. Next implement immutable phase context, durable barrier/fencing/backend evidence, malformed/ambiguous journal recovery, and crash-boundary tests. |
 
 ### Blocked (1)
 
