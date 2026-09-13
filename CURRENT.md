@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0002](tasks/AR-0002.md): Correctness-first coordinator upgrade protocol | Define a correctness-first coordinator release upgrade with verified backup and rollback. | Obtain fresh independent exact-head review and green required CI for PR #21 at product commit 053b59a; merge only after both pass. AR-0003 through AR-0008 remain prerequisites for executable upgrade engine. | codex-awc-ar0002-protocol-20260913 |
+| P0 | [AR-0002](tasks/AR-0002.md): Correctness-first coordinator upgrade protocol | Define a correctness-first coordinator release upgrade with verified backup and rollback. | Merged PR #21 at bd070596729949a77cfb4fae7c4230055f3f4ece. Post-merge AWQ and focused contract verification pass; no coordinator release published. AR-0011 remains the next open child. | codex-awc-ar0002-protocol-20260913 |
 
 ## Open
 
