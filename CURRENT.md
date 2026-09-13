@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head CI run 34781770908 for PR #22 at product commit 84461ec; do not merge. Lifecycle/recovery blockers remain open. | codex-awc-ar0011-tla-admission-20260913 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Review and commit tiered formal prototype only after parent review; current product worktree is intentionally uncommitted. Active run 34781770908 remains historical for 84461ec; do not attribute to prototype. | codex-awc-ar0011-tla-admission-20260913 |
 
 ## Planned
 
