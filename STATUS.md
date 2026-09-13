@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**11 ARs tracked** across 3 active status categories.
+**11 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 8 |
+| **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 2 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -30,7 +30,7 @@ flowchart LR
         direction TB
         AR_0001["AR-0001 - Done"]:::status_done
         AR_0002["AR-0002 - Done"]:::status_done
-        AR_0003["AR-0003 - Planned"]:::status_planned
+        AR_0003["AR-0003 - Open"]:::status_open
         AR_0004["AR-0004 - Planned"]:::status_planned
         AR_0005["AR-0005 - Planned"]:::status_planned
         AR_0006["AR-0006 - Planned"]:::status_planned
@@ -92,11 +92,16 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-tla-admission-20260913 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor fresh exact-head CI for PR #22 at b0bf1d9; full required-cgroup attestation must pass with runner manifest and actual containment metadata. Prior run 34783340495 remains terminal infrastructure failure. |
 
-### Planned (8)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Unclaimed | Generate and validate complete, bounded upgrade instructions for every release. | Specify the release contract schema, generator, compatibility matrix, and hostile validation fixtures. |
+
+### Planned (7)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
 | P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Unclaimed | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Specify quiescence, prerequisite, admission, and reopen invariants with negative-path tests. |
 | P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | Unclaimed | Back up and restore complete Git-backed coordination state without losing task history. | Define verified Git backup artifacts, restore ordering, and fault-injection coverage. |
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Unclaimed | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | Specify SQLite backup, migration, selector, integrity, and restore invariants with crash tests. |
