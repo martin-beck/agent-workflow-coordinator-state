@@ -8,12 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. | codex-awc-ar0003-contract-20260913 |
-| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Cancel orphaned run 34785182683 through handoffctl, then classify fresh rerun feasibility; required self-hosted runner remains unreliable. | codex-awc-ar0004-quiescence-20260913 |
 
 ## Blocked
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Cancel orphaned run 34785182683 through handoffctl, then classify fresh rerun feasibility; required self-hosted runner remains unreliable. | - |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. | - |
 
 ## Planned
