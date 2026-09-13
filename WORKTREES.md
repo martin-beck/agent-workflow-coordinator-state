@@ -12,6 +12,5 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-v034-complexity` | `fix/v0.3.4-reconcile-complexity` | `2f99648163e2` | 0 | behind 40, ahead 0 |
 | `agent-workflow-coordinator-v034-release` | `DETACHED` | `590036fbf9a0` | 0 | behind 39, ahead 0 |
 | `remote-agent-terminal-coordinator-v035` | `fix/v0.3.5-worktree-fence` | `fd53737ecffb` | 0 | behind 37, ahead 0 |
-| `agent-workflow-coordinator-tla-admission-safety` | `feature/tla-admission-safety` | `37cc04b9bb1b` | 3 | behind 0, ahead 35 |
-| changed files | - | - | - | `formal/handoffctl/attest.py`, `formal/handoffctl/verify.sh`, `tests/test_formal_evidence.py` |
+| `agent-workflow-coordinator-tla-admission-safety` | `feature/tla-admission-safety` | `5b7c88f3db04` | 0 | behind 0, ahead 36 |
 | `agent-workflow-coordinator-v035` | `DETACHED` | `510817b93feb` | 0 | behind 37, ahead 0 |
