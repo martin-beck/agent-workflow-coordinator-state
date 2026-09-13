@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(upgrade): add fail-closed admission invariants |
+| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34785182683 | `22d72310cdd7` | pull_request | Verify | in_progress:- |
+| 34785182683 | `22d72310cdd7` | pull_request | Verify | completed:cancelled |
 | 34785041586 | `4d91fdeb941b` | pull_request | Verify | completed:cancelled |
 | 34784812954 | `ca56b9175b3c` | push | Verify | completed:success |
 | 34784319165 | `736d2e2bea51` | pull_request | Verify | completed:success |
