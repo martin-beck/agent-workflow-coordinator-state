@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Obtain fresh independent review and exact-head CI for PR #22 at product commit 7092e1b; portable CI containment now uses serial GC and reserves host process headroom; verify hosted formal run. | codex-awc-ar0011-tla-admission-20260913 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Obtain fresh independent review and exact-head CI for PR #22 at product commit 0d5c945; hosted portable formal verify must confirm JVM native-memory envelope and lifecycle review remains open. | codex-awc-ar0011-tla-admission-20260913 |
 
 ## Planned
 
