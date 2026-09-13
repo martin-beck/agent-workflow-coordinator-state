@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0002](tasks/AR-0002.md): Correctness-first coordinator upgrade protocol | codex-awc-ar0002-protocol-20260913 | Define a correctness-first coordinator release upgrade with verified backup and rollback. | Freeze the correctness invariants, state machine, compatibility boundary, and child-AR contracts. |
+| P0 | [AR-0002](tasks/AR-0002.md): Correctness-first coordinator upgrade protocol | codex-awc-ar0002-protocol-20260913 | Define a correctness-first coordinator release upgrade with verified backup and rollback. | Obtain independent review of schema/docs, then hand child-contract implementation to AR-0003 through AR-0008; do not implement replacement engine until their contracts pass. |
 
 ### Planned (9)
 
