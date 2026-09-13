@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**1 ARs tracked** across 1 active status categories.
+**10 ARs tracked** across 2 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 9 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 0 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -29,7 +29,34 @@ flowchart LR
     subgraph series_00["00 - Coordination foundation"]
         direction TB
         AR_0001["AR-0001 - Open"]:::status_open
+        AR_0002["AR-0002 - Planned"]:::status_planned
+        AR_0003["AR-0003 - Planned"]:::status_planned
+        AR_0004["AR-0004 - Planned"]:::status_planned
+        AR_0005["AR-0005 - Planned"]:::status_planned
+        AR_0006["AR-0006 - Planned"]:::status_planned
+        AR_0007["AR-0007 - Planned"]:::status_planned
+        AR_0008["AR-0008 - Planned"]:::status_planned
+        AR_0009["AR-0009 - Planned"]:::status_planned
+        AR_0010["AR-0010 - Planned"]:::status_planned
     end
+    AR_0001 --> AR_0002
+    AR_0002 --> AR_0003
+    AR_0002 --> AR_0004
+    AR_0002 --> AR_0005
+    AR_0002 --> AR_0006
+    AR_0003 --> AR_0007
+    AR_0003 --> AR_0008
+    AR_0003 --> AR_0010
+    AR_0004 --> AR_0007
+    AR_0004 --> AR_0008
+    AR_0005 --> AR_0007
+    AR_0005 --> AR_0008
+    AR_0006 --> AR_0007
+    AR_0006 --> AR_0008
+    AR_0007 --> AR_0009
+    AR_0007 --> AR_0010
+    AR_0008 --> AR_0009
+    AR_0008 --> AR_0010
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -44,7 +71,16 @@ flowchart LR
 
 | AR | Prerequisites | Dependents |
 | --- | --- | --- |
-| [AR-0001](tasks/AR-0001.md) | None | None |
+| [AR-0001](tasks/AR-0001.md) | None | [AR-0002](tasks/AR-0002.md) |
+| [AR-0002](tasks/AR-0002.md) | [AR-0001](tasks/AR-0001.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) |
+| [AR-0003](tasks/AR-0003.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md), [AR-0010](tasks/AR-0010.md) |
+| [AR-0004](tasks/AR-0004.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
+| [AR-0005](tasks/AR-0005.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
+| [AR-0006](tasks/AR-0006.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
+| [AR-0007](tasks/AR-0007.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md) |
+| [AR-0008](tasks/AR-0008.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md) |
+| [AR-0009](tasks/AR-0009.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
+| [AR-0010](tasks/AR-0010.md) | [AR-0003](tasks/AR-0003.md), [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 
 ## Complete AR inventory
 
@@ -53,3 +89,17 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0001](tasks/AR-0001.md): Integrate AWQ v0.32.0 into the coordinator | Unclaimed | Adopt AWQ v0.32.0 while retaining coordinator-native quality and formal gates. | Obtain independent exact-head review and green required CI for PR #20 at product commit 5ce3b97; merge only after review. |
+
+### Planned (9)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0002](tasks/AR-0002.md): Correctness-first coordinator upgrade protocol | Unclaimed | Define a correctness-first coordinator release upgrade with verified backup and rollback. | Freeze the correctness invariants, state machine, compatibility boundary, and child-AR contracts. |
+| P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Unclaimed | Generate and validate complete, bounded upgrade instructions for every release. | Specify the release contract schema, generator, compatibility matrix, and hostile validation fixtures. |
+| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Unclaimed | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Specify quiescence, prerequisite, admission, and reopen invariants with negative-path tests. |
+| P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | Unclaimed | Back up and restore complete Git-backed coordination state without losing task history. | Define verified Git backup artifacts, restore ordering, and fault-injection coverage. |
+| P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Unclaimed | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | Specify SQLite backup, migration, selector, integrity, and restore invariants with crash tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the phase machine and explicit rollback commands only after contract and backend children are accepted. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | Formally verify upgrade safety, crash recovery, rollback, and functional reopen conditions. | Model upgrade and rollback invariants and bind them to exhaustive bounded implementation tests. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. |
+| P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
