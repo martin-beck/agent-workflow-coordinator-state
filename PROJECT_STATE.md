@@ -10,14 +10,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
-| #26 | `feature/upgrade-sqlite-backup@1c3bd23c59ac` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): harden SQLite backup failure recovery |
+| #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
+| #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
+| #26 | `feature/upgrade-sqlite-backup@1c3bd23c59ac` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): harden SQLite backup failure recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34787111423 | `96a568bcb388` | push | Verify | in_progress:- |
 | 34786628322 | `2fc058d5b60a` | pull_request | Verify | completed:success |
 | 34786322211 | `1c3bd23c59ac` | pull_request | Verify | completed:cancelled |
 | 34785850606 | `bf634d612ada` | pull_request | Verify | completed:cancelled |
@@ -29,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34783602544 | `b0bf1d9bedd5` | pull_request | Verify | completed:failure |
 | 34783581868 | `5b7c88f3db04` | pull_request | Verify | completed:cancelled |
 | 34783340495 | `37cc04b9bb1b` | pull_request | Verify | completed:failure |
-| 34781770908 | `84461ecf363f` | pull_request | Verify | completed:cancelled |
