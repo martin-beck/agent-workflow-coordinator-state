@@ -8,7 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | Generate and validate complete, bounded upgrade instructions for every release. | Review d6974e7 generator slice; next add release catalog compatibility matrix and publication fixtures. | codex-awc-ar0003-contract-20260913 |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. | codex-awc-ar0011-tla-admission-20260913 |
+
+## Blocked
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. | - |
 
 ## Planned
 
