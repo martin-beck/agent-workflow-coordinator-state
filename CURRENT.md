@@ -3,11 +3,16 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## Blocked
+## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Cancel orphaned run 34785182683 through handoffctl, then classify fresh rerun feasibility; required self-hosted runner remains unreliable. | - |
+
+## Blocked
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. | - |
 
 ## Planned
