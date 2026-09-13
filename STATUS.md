@@ -91,7 +91,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
-| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260913 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Continue AR-0004 isolated implementation from commit 42a55be; add any required contract integration and publish only after independent review. PR #23 merge evidence recorded separately. |
+| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260913 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Obtain fresh independent review and exact-head CI for PR #24 at 4d91fde; do not merge until AWQ/native gates and review pass. |
 
 ### Blocked (1)
 
