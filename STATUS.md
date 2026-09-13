@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-tla-admission-20260913 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Obtain fresh independent review and exact-head CI for PR #22 at product commit 09b38db; review cgroup/admission behavior before merge. |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-tla-admission-20260913 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Obtain fresh independent review and exact-head CI for PR #22 at product commit 3037580; hosted AWQ is queued; do not merge until fresh review and all exact-head checks pass. |
 
 ### Planned (8)
 
