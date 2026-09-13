@@ -91,7 +91,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
-| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260913 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Monitor exact-head run 34785182683 for PR #24; do not merge while formal verify is active. AWQ SUCCESS, native pre-formal checks SUCCESS, formal step active. |
+| P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | codex-awc-ar0004-quiescence-20260913 | Prevent upgrades from starting unless the coordination system can remain safe and functional. | Cancel orphaned run 34785182683 through handoffctl, then classify fresh rerun feasibility; required self-hosted runner remains unreliable. |
 
 ### Blocked (1)
 
