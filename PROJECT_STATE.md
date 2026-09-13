@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `d2482ca669029fbbad884dfbeeb4248d8937dbab`
+- Product remote main: `713761b428676c0c290b207d4f04eee0a57390c3`
 - Local origin/main: `d2482ca669029fbbad884dfbeeb4248d8937dbab`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,7 +10,6 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #20 | `feature/awq-v032-integration@35ec43f98e52` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat: add AWQ v0.32 quality gates |
 
 ## Recent workflows
 
