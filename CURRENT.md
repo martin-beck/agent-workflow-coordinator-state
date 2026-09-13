@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Parent review required before pushing signed tiered formal commit 9995331; exact hosted run 34781770908 remains historical for 84461ec. Push only after review approval. | codex-awc-ar0011-tla-admission-20260913 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor fresh exact-head CI for PR #22 at product commit 37cc04b; require AWQ, scope, exact full cgroup gate, attestation, and independent review before merge. | codex-awc-ar0011-tla-admission-20260913 |
 
 ## Planned
 
