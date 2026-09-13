@@ -12,6 +12,7 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
 | #24 | `feature/upgrade-quiescence@22d72310cdd7` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:CANCELLED | feat(upgrade): add fail-closed admission invariants |
+| #25 | `feature/upgrade-git-backup@bf634d612ada` | `main` | UNKNOWN | - | feat(upgrade): add verified Git backup artifacts |
 
 ## Recent workflows
 
