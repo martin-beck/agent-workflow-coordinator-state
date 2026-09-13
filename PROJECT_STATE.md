@@ -11,12 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #24 | `feature/upgrade-quiescence@4d91fdeb941b` | `main` | UNKNOWN | - | feat(upgrade): add fail-closed admission invariants |
+| #24 | `feature/upgrade-quiescence@4d91fdeb941b` | `main` | UNSTABLE | COMPLETED:SUCCESS, QUEUED: | feat(upgrade): add fail-closed admission invariants |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34785041586 | `4d91fdeb941b` | pull_request | Verify | queued:- |
 | 34784812954 | `ca56b9175b3c` | push | Verify | in_progress:- |
 | 34784319165 | `736d2e2bea51` | pull_request | Verify | completed:success |
 | 34783911645 | `59a49ef38230` | pull_request | Verify | completed:failure |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34780676824 | `f8e8cbf245d5` | pull_request | Verify | completed:failure |
 | 34780661442 | `f12ece27ac1b` | pull_request | Verify | completed:cancelled |
 | 34780530664 | `0d5c94529632` | pull_request | Verify | completed:failure |
-| 34780486084 | `533772a72cfa` | pull_request | Verify | completed:failure |
