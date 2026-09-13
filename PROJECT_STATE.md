@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #21 | `feature/upgrade-protocol@19742ef4ecb0` | `main` | UNKNOWN | - | feat: define correctness-first upgrade protocol |
+| #21 | `feature/upgrade-protocol@19742ef4ecb0` | `main` | CLEAN | - | feat: define correctness-first upgrade protocol |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34778464507 | `19742ef4ecb0` | pull_request | Verify | pending:- |
 | 34778163166 | `589ac6e43412` | pull_request | Verify | in_progress:- |
 | 34777849887 | `f02b4234ac86` | pull_request | Verify | completed:cancelled |
 | 34777610511 | `713761b42867` | push | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34364689180 | `47dcee15f4cb` | pull_request | Verify | completed:success |
 | 34337176767 | `fe3eeae5984e` | push | Verify | completed:success |
 | 34317980880 | `fd53737ecffb` | pull_request | Verify | completed:success |
-| 34288116673 | `510817b93feb` | push | Verify | completed:success |
