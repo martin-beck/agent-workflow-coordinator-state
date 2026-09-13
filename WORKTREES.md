@@ -8,10 +8,12 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-awq-formal-evidence` | `feature/awq-formal-evidence` | `c1f3811bc995` | 0 | behind 32, ahead 0 |
 | `agent-workflow-coordinator-awq-v032` | `feature/awq-v032-integration` | `35ec43f98e52` | 0 | behind 29, ahead 0 |
 | `agent-workflow-coordinator-upgrade` | `feature/upgrade-protocol` | `053b59aec303` | 0 | behind 1, ahead 0 |
-| `agent-workflow-coordinator-upgrade-contract` | `feature/upgrade-contract` | `bd0705967299` | 0 | behind 0, ahead 0 |
+| `agent-workflow-coordinator-upgrade-contract` | `feature/upgrade-contract` | `bd0705967299` | 2 | behind 0, ahead 0 |
+| changed files | - | - | - | `tests/test_upgrade_generator.py`, `tools/generate_upgrade_contract.py` |
 | `agent-workflow-coordinator-v031-release` | `DETACHED` | `afb332dc90dc` | 0 | behind 45, ahead 0 |
 | `agent-workflow-coordinator-v034-complexity` | `fix/v0.3.4-reconcile-complexity` | `2f99648163e2` | 0 | behind 40, ahead 0 |
 | `agent-workflow-coordinator-v034-release` | `DETACHED` | `590036fbf9a0` | 0 | behind 39, ahead 0 |
 | `remote-agent-terminal-coordinator-v035` | `fix/v0.3.5-worktree-fence` | `fd53737ecffb` | 0 | behind 37, ahead 0 |
-| `agent-workflow-coordinator-tla-admission-safety` | `feature/tla-admission-safety` | `b0bf1d9bedd5` | 0 | behind 0, ahead 37 |
+| `agent-workflow-coordinator-tla-admission-safety` | `feature/tla-admission-safety` | `b0bf1d9bedd5` | 1 | behind 0, ahead 37 |
+| changed files | - | - | - | `.github/workflows/verify.yml` |
 | `agent-workflow-coordinator-v035` | `DETACHED` | `510817b93feb` | 0 | behind 37, ahead 0 |
