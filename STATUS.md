@@ -91,7 +91,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0003](tasks/AR-0003.md): Release-upgrade contract and generator | codex-awc-ar0003-contract-20260913 | Generate and validate complete, bounded upgrade instructions for every release. | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
-| P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | codex-awc-ar0005-git-backup-20260914 | Back up and restore complete Git-backed coordination state without losing task history. | Define verified Git backup artifacts, restore ordering, and fault-injection coverage. |
+| P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | codex-awc-ar0005-git-backup-20260914 | Back up and restore complete Git-backed coordination state without losing task history. | PR #25 open at bf634d6; await independent exact-head review and hosted checks before publication. |
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | codex-awc-ar0006-sqlite-20260914 | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | Review 80820b3 verified backup slice; next integrate selector/migration equivalence and crash injection. |
 
 ### Blocked (2)
