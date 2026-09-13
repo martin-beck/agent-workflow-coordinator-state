@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #22 | `feature/tla-admission-safety@322bb8645e36` | `main` | UNSTABLE | IN_PROGRESS: | feat(formal): bound TLC admission and resources |
+| #22 | `feature/tla-admission-safety@322bb8645e36` | `main` | UNSTABLE | COMPLETED:SUCCESS, IN_PROGRESS: | feat(formal): bound TLC admission and resources |
 
 ## Recent workflows
 
