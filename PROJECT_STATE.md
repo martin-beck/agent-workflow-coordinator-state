@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `bd070596729949a77cfb4fae7c4230055f3f4ece`
+- Product remote main: `ca56b9175b3ce3eec4dd7af38d65aa0ba1d1d105`
 - Local origin/main: `bd070596729949a77cfb4fae7c4230055f3f4ece`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,7 +11,6 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
-| #23 | `feature/upgrade-contract@736d2e2bea51` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat(upgrade): add deterministic release contract generator |
 
 ## Recent workflows
 
