@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
+| #22 | `feature/tla-admission-safety@59a49ef38230` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): bound TLC admission and resources |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34783911645 | `59a49ef38230` | pull_request | Verify | in_progress:- |
+| 34783911645 | `59a49ef38230` | pull_request | Verify | completed:failure |
 | 34783602544 | `b0bf1d9bedd5` | pull_request | Verify | completed:failure |
 | 34783581868 | `5b7c88f3db04` | pull_request | Verify | completed:cancelled |
 | 34783340495 | `37cc04b9bb1b` | pull_request | Verify | completed:failure |
