@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #47 | `feat/upgrade-process-wal-evidence@82bdeb7e0f1e` | `main` | UNKNOWN | - | test(upgrade): cover caller-owned WAL recovery seam |
 
 ## Recent workflows
 
