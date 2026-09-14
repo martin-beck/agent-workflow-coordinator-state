@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #92 | `feature/ar0007-next-reader-consistency@6e33daff1acb` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: verify authority unchanged after stale retries |
+| #92 | `feature/ar0007-next-reader-consistency@6e33daff1acb` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: verify authority unchanged after stale retries |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34888952157 | `6e33daff1acb` | pull_request | Verify | in_progress:- |
+| 34888952157 | `6e33daff1acb` | pull_request | Verify | completed:success |
 | 34888712155 | `9ce42028c198` | push | Verify | completed:success |
 | 34888585382 | `b9169eb79b73` | pull_request | Verify | completed:success |
 | 34888346228 | `85bf3f068085` | push | Verify | completed:success |
