@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #73 | `feature/ar0007-sqlite-sidecar-faults@8dab177c1841` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(sqlite): verify backup reopen after crash |
+| #73 | `feature/ar0007-sqlite-sidecar-faults@8dab177c1841` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(sqlite): verify backup reopen after crash |
 
 ## Recent workflows
 
