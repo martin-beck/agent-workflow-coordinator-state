@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #73 | `feature/ar0007-sqlite-sidecar-faults@8dab177c1841` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(sqlite): verify backup reopen after crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34879980260 | `8dab177c1841` | pull_request | Verify | in_progress:- |
 | 34879635996 | `a578e16c1b28` | push | Verify | completed:success |
 | 34879454651 | `e62c0762f708` | pull_request | Verify | completed:success |
 | 34879073000 | `4ef1c7f66c92` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34877075004 | `a1b975178a9b` | pull_request | Verify | completed:success |
 | 34876733468 | `c37811473db1` | push | Verify | completed:success |
 | 34876563718 | `b44fd0b49e2c` | pull_request | Verify | completed:success |
-| 34876168740 | `a6a95ce2940b` | pull_request | Verify | completed:success |
