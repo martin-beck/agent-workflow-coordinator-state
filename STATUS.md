@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Continue AR-0007 with the durable AR-0012 control-store barrier adapter; preserve rejection-only apply/rollback, bind exact implementation/TLC evidence, and obtain independent review before any further publication. AR-0013 launcher remains downstream. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Extend d4f9369 with recheck_held, explicit ambiguous commit-boundary handling, affected-row CAS verification, fresh-session lifecycle, and hostile process/WAL/authority-fencing tests. Keep apply/rollback rejection-only; do not publish until independent review clears these findings. |
 
 ### Blocked (1)
 
