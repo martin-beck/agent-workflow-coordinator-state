@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #70 | `feature/ar0007-sqlite-sidecar-faults@aa4c40db15b3` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(fencing): bind SQLite WAL and SHM identities |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34877522635 | `aa4c40db15b3` | pull_request | Verify | completed:success |
 | 34877205259 | `58cb897490da` | push | Verify | completed:success |
 | 34877075004 | `a1b975178a9b` | pull_request | Verify | completed:success |
 | 34876733468 | `c37811473db1` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34874761171 | `fa8430660e38` | pull_request | Verify | completed:success |
 | 34874276419 | `6e8177d64609` | push | Verify | completed:success |
 | 34874123819 | `150cf29231d4` | pull_request | Verify | completed:success |
-| 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
