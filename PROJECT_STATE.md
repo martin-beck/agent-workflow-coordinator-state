@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #35 | `feature/upgrade-engine@cebb3e4df1e7` | `main` | UNKNOWN | - | test(upgrade): cover mutation-fence failure paths |
+| #35 | `feature/upgrade-engine@cebb3e4df1e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): cover mutation-fence failure paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34830828601 | `cebb3e4df1e7` | pull_request | Verify | completed:success |
 | 34830139124 | `b50558caa592` | push | Verify | completed:failure |
 | 34830042614 | `f65ce0f0367a` | pull_request | Verify | completed:success |
 | 34829877406 | `9a97e208ed7d` | push | Verify | completed:failure |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34826709556 | `ee786901b9fa` | pull_request | Verify | completed:failure |
 | 34826557721 | `c0991a4abec8` | pull_request | Verify | completed:failure |
 | 34823837324 | `257ac7cf7914` | push | Verify | completed:success |
-| 34823601190 | `47511128b944` | pull_request | Verify | completed:success |
