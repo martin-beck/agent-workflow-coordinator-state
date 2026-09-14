@@ -3,11 +3,16 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #75 merged at 119ed74 from signed aaf8141. The ambiguous-restore harness kills a verified restore after atomic replacement and before directory fsync, reopens and validates integrity plus manifest database_sha256, then retries the same restore idempotently and revalidates the digest. Independent review passed 20 focused tests, 401 full tests, 95% coverage, Ruff, mypy, format, and diff. Post-merge Verify 34881075740 succeeded on the exact merge head; production mutation/dispatch/upgrade/apply/rollback wiring remains unchanged. | Implement the next control/journal reconciliation slice at merged head 119ed74: bind manifest digest and authority revision/fence to durable control state, exercise idempotent recovery or explicit ambiguous safe mode, and publish the next signed PR after independent review. | codex-awc-ar0007-next-20260914 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #75 merged at 119ed74 from signed aaf8141. The ambiguous-restore harness kills a verified restore after atomic replacement and before directory fsync, reopens and validates integrity plus manifest database_sha256, then retries the same restore idempotently and revalidates the digest. Independent review passed 20 focused tests, 401 full tests, 95% coverage, Ruff, mypy, format, and diff. Post-merge Verify 34881075740 succeeded on the exact merge head; production mutation/dispatch/upgrade/apply/rollback wiring remains unchanged. | Implement the next control/journal reconciliation slice at merged head 119ed74: bind manifest digest and authority revision/fence to durable control state, exercise idempotent recovery or explicit ambiguous safe mode, and publish the next signed PR after independent review. | - |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Concise control/journal acceptance checkpoint at exact product 119ed74: before any mutation/refinement claim, one durable record must bind project_id, operation_id, manifest/artifact digest, authority revision, expected control revision, fencing token/owner, durable barrier digest, target, and envelope digest. Required order is durable journal intent -> verified backup/manifest -> control CAS with expected revision -> restore/reopen/runtime reread -> durable completion/release; every boundary has SIGKILL/fault traces. Retry must reread and classify exact digest/revision match as idempotent, stale/mismatch as CAS rejection or ambiguous safe mode, never duplicate restore or release. Control-store exclusion, lock release, and independent review are mandatory. Current PR #75 only proves artifact retry; formal hashes unchanged and implementation_refinement=not-proven. | Keep AR-0008 diagnostic-only and mutation disabled. Await exact executable control/journal trace and independent review before any model extension, formal hash update, or correspondence claim; no TLC. | - |
 
 ## Planned

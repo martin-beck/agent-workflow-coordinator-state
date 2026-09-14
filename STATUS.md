@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**13 ARs tracked** across 3 active status categories.
+**13 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - Open"]:::status_open
+        AR_0007["AR-0007 - In progress"]:::status_in_progress
         AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -93,11 +93,16 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | PR #75 merged at 119ed74 from signed aaf8141. The ambiguous-restore harness kills a verified restore after atomic replacement and before directory fsync, reopens and validates integrity plus manifest database_sha256, then retries the same restore idempotently and revalidates the digest. Independent review passed 20 focused tests, 401 full tests, 95&#37; coverage, Ruff, mypy, format, and diff. Post-merge Verify 34881075740 succeeded on the exact merge head; production mutation/dispatch/upgrade/apply/rollback wiring remains unchanged. | Implement the next control/journal reconciliation slice at merged head 119ed74: bind manifest digest and authority revision/fence to durable control state, exercise idempotent recovery or explicit ambiguous safe mode, and publish the next signed PR after independent review. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #75 merged at 119ed74 from signed aaf8141. The ambiguous-restore harness kills a verified restore after atomic replacement and before directory fsync, reopens and validates integrity plus manifest database_sha256, then retries the same restore idempotently and revalidates the digest. Independent review passed 20 focused tests, 401 full tests, 95&#37; coverage, Ruff, mypy, format, and diff. Post-merge Verify 34881075740 succeeded on the exact merge head; production mutation/dispatch/upgrade/apply/rollback wiring remains unchanged. | Implement the next control/journal reconciliation slice at merged head 119ed74: bind manifest digest and authority revision/fence to durable control state, exercise idempotent recovery or explicit ambiguous safe mode, and publish the next signed PR after independent review. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | Concise control/journal acceptance checkpoint at exact product 119ed74: before any mutation/refinement claim, one durable record must bind project_id, operation_id, manifest/artifact digest, authority revision, expected control revision, fencing token/owner, durable barrier digest, target, and envelope digest. Required order is durable journal intent -&gt; verified backup/manifest -&gt; control CAS with expected revision -&gt; restore/reopen/runtime reread -&gt; durable completion/release; every boundary has SIGKILL/fault traces. Retry must reread and classify exact digest/revision match as idempotent, stale/mismatch as CAS rejection or ambiguous safe mode, never duplicate restore or release. Control-store exclusion, lock release, and independent review are mandatory. Current PR #75 only proves artifact retry; formal hashes unchanged and implementation_refinement=not-proven. | Keep AR-0008 diagnostic-only and mutation disabled. Await exact executable control/journal trace and independent review before any model extension, formal hash update, or correspondence claim; no TLC. |
 
 ### Planned (4)
