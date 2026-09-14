@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #31 | `feature/upgrade-formal-recovery@c0991a4abec8` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(formal): add bounded v10 barrier model |
+| #31 | `feature/upgrade-formal-recovery@c0991a4abec8` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): add bounded v10 barrier model |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34826557721 | `c0991a4abec8` | pull_request | Verify | in_progress:- |
+| 34826557721 | `c0991a4abec8` | pull_request | Verify | completed:failure |
 | 34823837324 | `257ac7cf7914` | push | Verify | completed:success |
 | 34823601190 | `47511128b944` | pull_request | Verify | completed:success |
 | 34822614895 | `9db4bf2ba305` | workflow_dispatch | Verify | completed:success |
