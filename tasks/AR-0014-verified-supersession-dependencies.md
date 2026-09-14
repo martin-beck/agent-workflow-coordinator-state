@@ -7,14 +7,14 @@
     "AR-0002"
   ],
   "id": "AR-0014",
-  "next_action": "Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work.",
+  "next_action": "Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed.",
   "owner": "codex-ar0014-official-20260914",
   "plan": "../plans/AR-0014.md",
   "priority": "P0",
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Make explicitly verified superseded tasks satisfy dependencies only through a completed successor.",
-  "task_revision": 3,
+  "task_revision": 4,
   "title": "Verified supersession dependency readiness",
   "updated_at": "2026-09-14T19:18:15+00:00",
   "worktree_key": "agent-workflow-coordinator-verified-supersession-dependencies"
@@ -57,3 +57,7 @@ Authoritative sources:
   AR's feature scope. Release publication remains pending.
 
 - 2026-09-14T19:18:15+00:00: Claimed by codex-ar0014-official-20260914.
+
+- 2026-09-14T19:18:15+00:00: Canonical handoffctl transition recorded coordinator-only v0.3.6
+  release and retired the downstream AR-1182 implementation path. No ASB or asb-tui files are part
+  of this state.
