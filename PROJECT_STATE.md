@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #41 | `feature/upgrade-engine@8022311588e9` | `main` | UNSTABLE | QUEUED:, QUEUED: | docs(upgrade): specify caller-owned SQLite barrier admission seam |
+| #41 | `feature/upgrade-engine@8022311588e9` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | docs(upgrade): specify caller-owned SQLite barrier admission seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34836463466 | `8022311588e9` | pull_request | Verify | queued:- |
+| 34836463466 | `8022311588e9` | pull_request | Verify | completed:success |
 | 34835815973 | `8a67aadb5854` | push | Verify | completed:success |
 | 34835706022 | `80dad94503f7` | pull_request | Verify | completed:success |
 | 34835497258 | `e8711cc7c37c` | pull_request | Verify | completed:failure |
