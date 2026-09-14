@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Header correction merged, but post-merge full coverage failed at 94% because mutation_fence.py branch coverage is 75%; coverage corrective tests in progress. | Add meaningful mutation_fence failure-path tests to restore total branch coverage >=95%, rerun full exact gates and post-merge verification; do not weaken thresholds or enable mutation. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Foundation coverage correction merged and post-merge verification is green; full control-store/barrier integration remains open. | Implement separate control-store binding and common->control->authority scope with durable barrier rereads across every SQLite mutation route; add multiprocess/WAL/process-death tests, independent review, and keep upgrade mutation disabled. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. | codex-awc-ar0008-formal2-20260914 |
 
 ## Planned
