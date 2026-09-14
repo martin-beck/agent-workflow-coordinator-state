@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Exact docs head 3ec1d02 passes identity/lock/pre-commit review except immutable marker versus WAL/SHM sidecar rebinding contradiction. | Separate stable DB identity from mutable sidecar lifecycle evidence with crash-safe fsynced reconcile protocol; rerun exact-head review, then publish docs-only PR. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Remote docs head 686ef2d separates stable marker identity from fsynced WAL/SHM lifecycle evidence; final independent review pending. | Complete exact-head review of 686ef2d, then publish docs-only PR if approved; retain rejection-only runtime behavior and track executable implementation separately. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. | codex-awc-ar0008-formal2-20260914 |
 
 ## Planned
