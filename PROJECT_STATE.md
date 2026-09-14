@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #75 | `feature/ar0007-sqlite-sidecar-faults@aaf81411c065` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(sqlite): retry ambiguous restore after crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34880937654 | `aaf81411c065` | pull_request | Verify | in_progress:- |
 | 34880604113 | `b68b754efd57` | push | Verify | completed:success |
 | 34880446034 | `958cc241acd0` | pull_request | Verify | completed:success |
 | 34880127263 | `46fe360d93e2` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34878458042 | `d259a04853e1` | pull_request | Verify | completed:success |
 | 34877951881 | `6a223c9ec7f4` | push | Verify | completed:success |
 | 34877522635 | `aa4c40db15b3` | pull_request | Verify | completed:success |
-| 34877205259 | `58cb897490da` | push | Verify | completed:success |
