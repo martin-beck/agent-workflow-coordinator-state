@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Await independent signoff on normative BackupBoundary v4 in plans/AR-0007.md at state commit d901fdc; only then implement and test the boundary contract. Product remains untouched. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Await independent signoff on effective BackupBoundary v3/v4/v5 contract in plans/AR-0007.md at state commit f7c10c8; only then implement and test the boundary contract. Product remains untouched. |
 
 ### Blocked (1)
 
