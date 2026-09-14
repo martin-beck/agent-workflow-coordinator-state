@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #65 | `feature/ar0007-context-trace-contract@150cf29231d4` | `main` | CLEAN | - | feat(fencing): bind engine context to caller lease |
+| #65 | `feature/ar0007-context-trace-contract@150cf29231d4` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(fencing): bind engine context to caller lease |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34874123819 | `150cf29231d4` | pull_request | Verify | queued:- |
+| 34874123819 | `150cf29231d4` | pull_request | Verify | in_progress:- |
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
 | 34873570172 | `621c062260ee` | pull_request | Verify | completed:success |
 | 34873252772 | `4a76344e688e` | push | Verify | completed:success |
