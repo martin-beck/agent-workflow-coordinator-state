@@ -3,11 +3,16 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #54 merged at aa21a5504ee4543bb6a422f6bb4e23c7c380104c; signed follow-up PR #55 merged at 2cd8758c840d612830b5e4481d69d8a0bf1316f3. Post-merge Verify 34863964030 passed awq, scope, verify; smoke skipped. Local full gate passed 354 tests plus mypy tools/tests. | Continue AR-0007 toward real caller trace/refinement: integrate admitted_cas and selector adapter with concrete barrier/session scope only after exact multiprocess/failure evidence; keep runtime mutation/apply/rollback disabled. AR-0008 diagnostic-only; AR-0012/AR-0013 planned. | codex-awc-ar0007-lock-domain-20260914 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #54 merged at aa21a5504ee4543bb6a422f6bb4e23c7c380104c; signed follow-up PR #55 merged at 2cd8758c840d612830b5e4481d69d8a0bf1316f3. Post-merge Verify 34863964030 passed awq, scope, verify; smoke skipped. Local full gate passed 354 tests plus mypy tools/tests. | Continue AR-0007 toward real caller trace/refinement: integrate admitted_cas and selector adapter with concrete barrier/session scope only after exact multiprocess/failure evidence; keep runtime mutation/apply/rollback disabled. AR-0008 diagnostic-only; AR-0012/AR-0013 planned. | - |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #49 merged at 794aa66ca1a35c96c9323003a924994067e749db; post-merge Verify 34858485508 passed scope, AWQ, formal/TLC, attestation, and DCO. Keep diagnostic-only boundaries. | Continue AR-0008 with canonical/full model admission and implementation-correspondence evidence; do not claim refinement or promote AR-0012. AR-0007 remains the parallel executable-correctness lane. | - |
 
 ## Planned

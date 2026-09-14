@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**13 ARs tracked** across 3 active status categories.
+**13 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - Open"]:::status_open
+        AR_0007["AR-0007 - In progress"]:::status_in_progress
         AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -93,11 +93,16 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | PR #54 merged at aa21a5504ee4543bb6a422f6bb4e23c7c380104c; signed follow-up PR #55 merged at 2cd8758c840d612830b5e4481d69d8a0bf1316f3. Post-merge Verify 34863964030 passed awq, scope, verify; smoke skipped. Local full gate passed 354 tests plus mypy tools/tests. | Continue AR-0007 toward real caller trace/refinement: integrate admitted_cas and selector adapter with concrete barrier/session scope only after exact multiprocess/failure evidence; keep runtime mutation/apply/rollback disabled. AR-0008 diagnostic-only; AR-0012/AR-0013 planned. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-lock-domain-20260914 | PR #54 merged at aa21a5504ee4543bb6a422f6bb4e23c7c380104c; signed follow-up PR #55 merged at 2cd8758c840d612830b5e4481d69d8a0bf1316f3. Post-merge Verify 34863964030 passed awq, scope, verify; smoke skipped. Local full gate passed 354 tests plus mypy tools/tests. | Continue AR-0007 toward real caller trace/refinement: integrate admitted_cas and selector adapter with concrete barrier/session scope only after exact multiprocess/failure evidence; keep runtime mutation/apply/rollback disabled. AR-0008 diagnostic-only; AR-0012/AR-0013 planned. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | PR #49 merged at 794aa66ca1a35c96c9323003a924994067e749db; post-merge Verify 34858485508 passed scope, AWQ, formal/TLC, attestation, and DCO. Keep diagnostic-only boundaries. | Continue AR-0008 with canonical/full model admission and implementation-correspondence evidence; do not claim refinement or promote AR-0012. AR-0007 remains the parallel executable-correctness lane. |
 
 ### Planned (4)
