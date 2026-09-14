@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #30 merged and post-merge main Verify is green; durable control-plane checkpoint shipped, full executable upgrade remains open. | Continue AR-0007/AR-0012 dependency work with concrete authority-lock/reread fencing, independent process/WAL/process-death tests, and AR-0008 v10 formal refinement. No successor AR can be promoted until this dependency is explicitly complete; keep apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Obtain independent exact-head review of signed 2ac7c3e and then publish the bounded v10 model evidence; correspondence remains not-proven and executable mutation remains disabled. | codex-awc-ar0008-formal-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Signed 2ac7c3e adds a bounded v10 barrier model and TLC pass, but independent review found invariant/action soundness and exact-head provenance gaps; publication held. | Correct or explicitly narrow the v10 model: non-tautological active-session/CAS/lock/write-drain/recheck/rollback invariants and actions, bind evidence to exact merged product head 257ac7c, rerun TLC, and obtain independent review before publication. | codex-awc-ar0008-formal-20260914 |
 
 ## Planned
 
