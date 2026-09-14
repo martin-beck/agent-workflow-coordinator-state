@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #76 | `feature/ar0007-sqlite-sidecar-faults@306f55f5139a` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(journal): recover bound control after crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34881431017 | `306f55f5139a` | pull_request | Verify | in_progress:- |
 | 34881075740 | `119ed74dc3fb` | push | Verify | completed:success |
 | 34880937654 | `aaf81411c065` | pull_request | Verify | completed:success |
 | 34880604113 | `b68b754efd57` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34879073000 | `4ef1c7f66c92` | push | Verify | completed:success |
 | 34878928287 | `688dcd9abf09` | pull_request | Verify | completed:success |
 | 34878458042 | `d259a04853e1` | pull_request | Verify | completed:success |
-| 34877951881 | `6a223c9ec7f4` | push | Verify | completed:success |
