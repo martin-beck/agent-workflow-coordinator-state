@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #127 merged as ed8a7574. Post-merge Verify 34903223080 succeeded with TLC 90,752/94 and attestation artifact 10371159429. Exact-head formal evidence recorded. | Do not manufacture another redundant assertion. Next slice requires an independently identified production-boundary correctness gap or reviewed caller integration seam from ed8a7574; keep mutation, dispatch, upgrade, apply, and rollback routes disabled until such evidence exists. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #127 merged as ed8a7574; Verify 34903223080 succeeded with TLC 90,752/94 and attestation artifact 10371159429. Published signed DCO PR #128 at f40455d from exact merged head. | Independently review PR #128 exact head f40455d; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34903223080 succeeded on ed8a7574 (PR127): TLC no errors, 90,752/94 distinct states, attestation artifact 10371159429. No next AR-0007 PR is open. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
