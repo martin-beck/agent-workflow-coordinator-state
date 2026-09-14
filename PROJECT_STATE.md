@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #68 | `feature/ar0007-sqlite-authority-adapter@a6a95ce2940b` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat(fencing): add read-only SQLite authority adapter |
+| #68 | `feature/ar0007-sqlite-authority-adapter@a6a95ce2940b` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(fencing): add read-only SQLite authority adapter |
 
 ## Recent workflows
 
