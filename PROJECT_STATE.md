@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Product remote main: `8e87fdb07359ec97c34f11d935dd3c0a6fe2ab26`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #29 | `feature/upgrade-engine@bbbbe73c8706` | `main` | UNKNOWN | - | feat(upgrade): add barrier session contract seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34819110267 | `bbbbe73c8706` | pull_request | Verify | completed:success |
 | 34810167423 | `46fd7f596687` | push | Verify | completed:success |
 | 34809949588 | `01b305b4ac7b` | pull_request | Verify | completed:success |
 | 34809697468 | `59d72c6379a1` | pull_request | Verify | completed:failure |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34785850606 | `bf634d612ada` | pull_request | Verify | completed:cancelled |
 | 34785182683 | `22d72310cdd7` | pull_request | Verify | completed:success |
 | 34785041586 | `4d91fdeb941b` | pull_request | Verify | completed:cancelled |
-| 34784812954 | `ca56b9175b3c` | push | Verify | completed:success |
