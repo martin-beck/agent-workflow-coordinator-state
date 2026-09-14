@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #48 merged and PR #50 published at e3c651aa75a3888d0bff04d2a3310589ebe934d6: SQLite route inventory contract plus multiprocess stale-fence rejection test; mutation remains disabled. | Await PR #50 exact-head AWQ/scope/verify and two independent reviews; merge only after all required gates pass, then post-merge verify and reconcile. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #50 merged at 42e1d8f7f0f08f00b1cf8e6223d6591e6dcc33b6; post-merge Verify 34859850530 passed scope, AWQ, tests/coverage, formal tier, attestation, and DCO. | Continue AR-0007 with complete authority-route inventory/refinement: cover rollback-control and upgrade-authority writes, add route-specific stale-fence/process-death evidence, and keep mutation disabled. AR-0008 remains diagnostic-only; do not promote AR-0012. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-refinement-20260914 | PR #49 merged at 794aa66ca1a35c96c9323003a924994067e749db; post-merge Verify 34858485508 passed scope, AWQ, formal/TLC, attestation, and DCO. Keep diagnostic-only boundaries. | Continue AR-0008 with canonical/full model admission and implementation-correspondence evidence; do not claim refinement or promote AR-0012. AR-0007 remains the parallel executable-correctness lane. |
 
 ### Planned (4)
