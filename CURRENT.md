@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Post-merge Verify 34898450080 failed on merged ad8692bb because the lock-timeout test required exactly one sleep despite bounded retry polling. PR #118 is a signed test-only corrective repair from exact merged head. | Independently review PR #118 exact head 519d9d3; merge only after awq/scope/smoke and exact-head coverage >=95% pass. Production lock semantics and mutation routes remain unchanged. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #118 corrective merge 677aa73a; prior Verify 34898450080 failed only on the brittle exact-one-sleep assertion, while the corrective post-merge Verify 34898935434 is in progress. Awaiting terminal success. | Monitor Verify 34898935434 to terminal result, then publish the next bounded signed test-only slice from exact 677aa73a. Keep mutation/apply/rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #118 exact signed head 519d9d3 against ad8692bb: test-only lock polling assertion now accepts repeated 50ms bounded sleeps; focused tests 69 passed (49 subtests), awq/scope/smoke pass, verify skipped. | Continue independent exact-head review after corrective merge; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
