@@ -10,6 +10,12 @@ Never edit this file directly.
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #77 merged at 571b472 from signed 36cd3ed; post-merge Verify 34882351034 passed. Next PR #80 adds a fresh-instance control-store release recovery harness from exact head 571b472. | Independently review PR #80 exact head 7eaaebe, then merge only after awq/scope/smoke and exact-head checks pass. Keep production mutation and dispatch disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Exact PR #80 audit at head 7eaaebe against merged base 571b472: test-only control-store reopen coverage exercises a fresh SQLite store and adapter operation lock, revalidates exact authority/fencing evidence, then completes held-to-released CAS. Focused test and full 69-test rollback-control-store module pass. No production or formal files changed; refinement remains not-proven and mutation disabled. GitHub Verify 34883071202 has awq and scope SUCCESS, smoke SUCCESS, verify SKIPPED (path-scoped); no formal/model claim is implied. | Keep AR-0008 diagnostic-only; require AR-0012 to provide executable journal/control-store CAS, cross-store crash/reconciliation, and production caller evidence before any formal correspondence or mutation enablement. PR #80 is acceptable as narrowly scoped test evidence; independently review any post-merge head. | codex-awc-ar0008-next-20260914 |
 
+## Open
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Independently review PR #79 at the immutable checkpoint, wait for exact-head CI, merge only after all required checks pass, then publish a signed immutable coordinator release before downstream vendor synchronization. | - |
+
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
