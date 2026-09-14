@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e4921fa0c06c31c1fe86dec9fc7c0c384af1aeda`
+- Product remote main: `6e8177d646096357f4ffeeeee3e5024b2415d248`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #65 | `feature/ar0007-context-trace-contract@150cf29231d4` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(fencing): bind engine context to caller lease |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34874123819 | `150cf29231d4` | pull_request | Verify | in_progress:- |
+| 34874276419 | `6e8177d64609` | push | Verify | completed:success |
+| 34874123819 | `150cf29231d4` | pull_request | Verify | completed:success |
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
 | 34873570172 | `621c062260ee` | pull_request | Verify | completed:success |
 | 34873252772 | `4a76344e688e` | push | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34871844538 | `cfbec76bb4c8` | pull_request | Verify | completed:success |
 | 34871427051 | `1f22acc0f527` | push | Verify | completed:success |
 | 34871106436 | `ff4c0fa87e7d` | pull_request | Verify | completed:success |
-| 34870065842 | `29eea5fc3996` | push | Verify | completed:success |
