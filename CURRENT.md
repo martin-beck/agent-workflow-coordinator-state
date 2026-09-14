@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Commit/review the residual control descriptor/authorization fault tests, rerun exact-head 95% coverage and all quality gates, then proceed to production/runtime/sidecar/formal review. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Obtain independent exact-head review of 67324f2; then close production authority/runtime and sidecar binding, run fresh exact-head formal model and complete publication gates. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
