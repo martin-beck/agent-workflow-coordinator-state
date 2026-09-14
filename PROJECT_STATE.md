@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `588640e5ddc63a03202b257cf237af61fc11d224`
+- Product remote main: `ff3c5b22ffb3bc9145d8cb57d9e7b2bf5bd72739`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #98 | `feature/ar0007-next-recovered-identity@daec18f7fa45` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: assert recovered fencing token |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34891193544 | `ff3c5b22ffb3` | push | Verify | completed:success |
 | 34891081449 | `daec18f7fa45` | pull_request | Verify | completed:success |
 | 34890848910 | `588640e5ddc6` | push | Verify | completed:success |
 | 34890717451 | `32dbd4e4a22f` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34889667841 | `15231870974d` | pull_request | Verify | completed:success |
 | 34889449959 | `5759d94ccec1` | push | Verify | completed:success |
 | 34889329598 | `56a9e760031a` | pull_request | Verify | completed:success |
-| 34889087540 | `c637a7334316` | push | Verify | completed:success |
