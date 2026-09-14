@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #36 | `feature/upgrade-engine@2ea0fd325336` | `main` | UNKNOWN | - | feat(upgrade): add control-binding descriptor foundation |
 
 ## Recent workflows
 
