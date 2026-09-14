@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `a1bc4459f884ce447e8ee2884df12ea3ff4b710b`
+- Product remote main: `a900f922a45ac987fd268860c9156ce322860039`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #82 | `feature/ar0007-control-ambiguous@24853e68e9df` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(control): reopen ambiguous CAS state |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34884655187 | `a1bc4459f884` | push | Verify | in_progress:- |
+| 34884757920 | `a900f922a45a` | push | Verify | completed:success |
+| 34884655187 | `a1bc4459f884` | push | Verify | completed:cancelled |
 | 34884583053 | `71f2aec85f4b` | pull_request | Verify | completed:success |
 | 34884565031 | `24853e68e9df` | pull_request | Verify | completed:success |
 | 34884165286 | `05ebaee04376` | push | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34883071202 | `7eaaebe016a5` | pull_request | Verify | completed:success |
 | 34882818102 | `2916855f8b0b` | pull_request | Verify | completed:success |
 | 34882351034 | `571b4728c328` | push | Verify | completed:success |
-| 34881977614 | `36cd3ed24087` | pull_request | Verify | completed:success |
