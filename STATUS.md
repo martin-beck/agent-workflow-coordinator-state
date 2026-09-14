@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #128 merged as f9370983; Verify 34903703986 succeeded with TLC 90,752/94 and attestation artifact 10371536753. Published signed DCO PR #129 at 3be99ad from exact merged head. | Independently review PR #129 exact head 3be99ad; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34903703986 succeeded on f9370983 (PR128): TLC no errors, 90,752/94 distinct states, attestation artifact 10371536753. No next production-boundary PR is open. | Monitor publication of the next contract-safe production-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #129 exact signed head 3be99ad against f9370983: typed fail-closed LockDomainIdentity.assert_descriptor_binding and assert_current revalidation; lock-domain tests 11 passed (2 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next contract-safe caller-integration seam; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
 
