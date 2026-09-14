@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Signed 90ca427 strengthens the durable barrier control-plane slice; quality/formal evidence recorded, but publication remains blocked on authority integration and hostile failure coverage. | Raise branch coverage to &gt;=95&#37;, then add concrete authority-lock/reread fencing, independent-process/WAL/process-death tests, and the AR-0008 v10 formal refinement before any publication claim; keep apply/rollback rejection-only. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Signed 90ca427 plus 9db4bf2 form a quality-green durable barrier control-plane checkpoint; publication remains blocked on authority integration, hostile process evidence, and v10 refinement. | Obtain independent exact-head review of 9db4bf2. If approved as a narrowly scoped contract checkpoint, publish with explicit non-claims; otherwise continue authority-lock/fencing, independent WAL/process-death tests, and AR-0008 formal refinement. Keep upgrade apply/rollback rejection-only. |
 
 ### Blocked (1)
 
