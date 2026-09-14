@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #86 | `feature/ar0007-next-control-journal@1dfea479f483` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: verify ambiguous reconciliation retry boundary |
+| #86 | `feature/ar0007-next-control-journal@1dfea479f483` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: verify ambiguous reconciliation retry boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34886204013 | `1dfea479f483` | pull_request | Verify | in_progress:- |
+| 34886204013 | `1dfea479f483` | pull_request | Verify | completed:success |
 | 34885836520 | `73f855d7b71f` | workflow_dispatch | Verify | completed:failure |
 | 34885740162 | `73f855d7b71f` | pull_request | Verify | completed:success |
 | 34885522216 | `873d0d71a2b4` | push | Verify | completed:success |
