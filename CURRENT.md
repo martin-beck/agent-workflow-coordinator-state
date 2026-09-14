@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review b2df9a2 independently; then implement targeted adapter/release/revalidation and lock/write fault tests to close remaining meaningful coverage without exclusions. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 9d0f918 independently; then raise total coverage through meaningful upgrade_authority/storage/admission tests and close production authority/runtime reread, sidecar binding, and formal gates. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
