@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #116 | `feature/ar0007-next-postverify6@ce36ff058e69` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: assert newer recovered state revision |
+| #116 | `feature/ar0007-next-postverify6@ce36ff058e69` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: assert newer recovered state revision |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34897878157 | `ce36ff058e69` | pull_request | Verify | queued:- |
+| 34897878157 | `ce36ff058e69` | pull_request | Verify | completed:success |
 | 34897622382 | `1be118def660` | push | Verify | completed:success |
 | 34897498316 | `92115530c01b` | pull_request | Verify | completed:success |
 | 34897226331 | `0d9e565d329a` | push | Verify | completed:success |
