@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Await authorized creation and acceptance of P0 successor AR records for GitHub issues #27 and #28; then claim one dependency-ready slice and implement only against its accepted contract. Keep apply/rollback rejection-only. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the smallest contract-safe AR-0007 slice against accepted successor contracts; keep apply/rollback rejection-only; publish only after exact-head independent review. |
 
 ### Blocked (1)
 
