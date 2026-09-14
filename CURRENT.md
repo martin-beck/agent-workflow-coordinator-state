@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #136 merged as 4aa8e86e. Post-merge Verify 34907694494 succeeded with TLC 90,752/94 and attestation artifact 10373321945. Exact-head formal evidence recorded. | AR-0007 remains open: next bounded gap is independently reviewed crash/recheck evidence around the rejection-only caller seam. Do not enable mutation/dispatch or promote AR-0012 without production-caller dependency evidence. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34907694494 for merge 4aa8e86e (PR136) is still in progress; formal/attestation logs not yet available. | Monitor Verify 34907694494 to completion, then inspect TLC states/attestation for the rejection-only mutation-phase slice; preserve implementation_refinement=not-proven and AR-0012 unpromoted. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Verify 34907694494 completed success on merge 4aa8e86e (PR136): TLC no errors, main 121,472/90,752 and small 110/94; attestation artifact 10373321945. | Continue independent review of the next production-caller seam; preserve implementation_refinement=not-proven, mutation disabled, and keep AR-0012 unpromoted. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
