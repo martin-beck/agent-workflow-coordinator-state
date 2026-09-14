@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #30 | `feature/upgrade-engine@9db4bf2ba305` | `main` | UNKNOWN | - | feat(upgrade): durable barrier control-plane checkpoint |
+| #30 | `feature/upgrade-engine@9db4bf2ba305` | `main` | DIRTY | - | feat(upgrade): durable barrier control-plane checkpoint |
 
 ## Recent workflows
 
