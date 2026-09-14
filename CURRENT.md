@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independent-review exact head ca28483281be18fac98f018dc8841ada64013787; then extend only with an accepted control-store barrier adapter contract. Keep apply/rollback rejection-only until AR-0012 and AR-0013 executable contracts plus AR-0008 refinement are accepted. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Open a PR from signed bbbbe73 only after recording the successful six-model TLC run; retain contract-only/rejection-only scope, then implement the durable AR-0012 control-store barrier adapter under independent review. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
