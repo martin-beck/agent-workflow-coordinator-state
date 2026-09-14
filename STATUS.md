@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #134 merged as 6b421fd2; Verify 34906628555 succeeded with TLC 90,752/94 and attestation artifact 10371874416. Published signed DCO PR #135 at 69e3ef9 from exact merged head. | Independently review PR #135 exact head 69e3ef9; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #135 exact signed head 69e3ef9 against 6b421fd2: uncalled from_rechecked_session holds scope before typed identity/session validation; adapter tests 11 passed, awq/scope/smoke pass, verify skipped. | Continue independent review of the next caller/session seam; require concrete stale/replacement identity, lease/revision, crash/reopen, and route-reachability evidence while preserving not-proven refinement and no AR-0012 promotion. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Merge 9a0429ef post-merge Verify 34907059056 is still in progress; formal/attestation logs are not yet available. AR-0007 progress remains pending exact completion evidence. | Monitor Verify 34907059056 to completion, then inspect TLC states/attestation and assess sufficiency for this non-mutating caller slice; keep implementation_refinement=not-proven and AR-0012 unpromoted. |
 
 ### Open (1)
 
