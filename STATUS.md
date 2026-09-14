@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #127 merged as ed8a7574; Verify 34903223080 succeeded with TLC 90,752/94 and attestation artifact 10371159429. Published signed DCO PR #128 at f40455d from exact merged head. | Independently review PR #128 exact head f40455d; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #128 exact signed head f40455d against ed8a7574: fail-closed uncalled ScopedBackendAdapter rejects mutates_authority=true/missing; adapter tests 8 passed, focused authority/adapter evidence 22 passed, awq/scope/smoke pass, verify skipped. | Continue independent review of the next contract-safe caller-integration seam; preserve implementation_refinement=not-proven and mutation disabled. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | PR128 merged as f9370983; post-merge Verify 34903703986 is in progress. No next production-boundary PR is open; formal/refinement boundary unchanged. | Monitor Verify 34903703986 to completion, then review the next contract-safe production-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
 
