@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #71 | `feature/ar0007-sqlite-sidecar-faults@688dcd9abf09` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(fencing): exercise SQLite crash rollback boundary |
+| #71 | `feature/ar0007-sqlite-sidecar-faults@688dcd9abf09` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(fencing): exercise SQLite crash rollback boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34878928287 | `688dcd9abf09` | pull_request | Verify | queued:- |
+| 34878928287 | `688dcd9abf09` | pull_request | Verify | in_progress:- |
 | 34878458042 | `d259a04853e1` | pull_request | Verify | completed:success |
 | 34877951881 | `6a223c9ec7f4` | push | Verify | completed:success |
 | 34877522635 | `aa4c40db15b3` | pull_request | Verify | completed:success |
