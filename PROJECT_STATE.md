@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #46 | `fix/upgrade-lock-guard-coverage@2b91cf3e231f` | `main` | UNKNOWN | - | test(upgrade): cover lock guard rejection paths |
 
 ## Recent workflows
 
