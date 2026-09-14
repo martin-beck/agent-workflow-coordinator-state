@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #43 | `feature/upgrade-engine@445df2d3f7be` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): add subprocess WAL recovery fixtures |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34846475548 | `445df2d3f7be` | pull_request | Verify | completed:success |
 | 34836911756 | `7b70225f5479` | push | Verify | completed:success |
 | 34836792274 | `499f86a27440` | pull_request | Verify | completed:success |
 | 34836548464 | `e6bfb1df7927` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34834926514 | `7cb1c7be8711` | pull_request | Verify | completed:success |
 | 34834489678 | `0291ab515ece` | push | Verify | completed:success |
 | 34834437154 | `c6999ca684b6` | pull_request | Verify | completed:success |
-| 34832529038 | `83f1482b061e` | push | Verify | completed:success |
