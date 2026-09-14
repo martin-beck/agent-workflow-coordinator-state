@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #48 | `feat/upgrade-ambiguous-fencing@67e671cf3b93` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): recover unknown session outcomes |
+| #48 | `feat/upgrade-ambiguous-fencing@b5f3f7d765de` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat(upgrade): recover unknown session outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34857132049 | `b5f3f7d765de` | pull_request | Verify | in_progress:- |
 | 34856825248 | `67e671cf3b93` | pull_request | Verify | completed:success |
 | 34852545351 | `9c1b21204c9d` | push | Verify | completed:success |
 | 34852458242 | `82bdeb7e0f1e` | pull_request | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34850406213 | `0794cb8c4ad6` | pull_request | Verify | completed:success |
 | 34849920210 | `dbc616c6097c` | pull_request | Verify | completed:success |
 | 34846475548 | `445df2d3f7be` | pull_request | Verify | completed:success |
-| 34836911756 | `7b70225f5479` | push | Verify | completed:success |
