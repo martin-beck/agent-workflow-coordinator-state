@@ -9,7 +9,7 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #30 merged and post-merge main Verify is green; durable control-plane checkpoint shipped, full executable upgrade remains open. | Continue AR-0007/AR-0012 dependency work with concrete authority-lock/reread fencing, independent process/WAL/process-death tests, and AR-0008 v10 formal refinement. No successor AR can be promoted until this dependency is explicitly complete; keep apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
 
-## Blocked
+## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
