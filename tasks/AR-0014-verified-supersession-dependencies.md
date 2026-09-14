@@ -7,16 +7,16 @@
     "AR-0002"
   ],
   "id": "AR-0014",
-  "next_action": "Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work.",
+  "next_action": "PR #83 prepares coordinator-only v0.3.6 release notes; await exact-head CI/review, merge, then publish a signed immutable v0.3.6 tag and perform downstream vendor synchronization through a new ASB-state AR.",
   "owner": "codex-ar0014-release-20260914",
   "plan": "../plans/AR-0014.md",
   "priority": "P0",
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Make explicitly verified superseded tasks satisfy dependencies only through a completed successor.",
-  "task_revision": 3,
+  "task_revision": 4,
   "title": "Verified supersession dependency readiness",
-  "updated_at": "2026-09-14T19:01:34+00:00",
+  "updated_at": "2026-09-14T19:03:53+00:00",
   "worktree_key": "agent-workflow-coordinator-verified-supersession-dependencies"
 }
 ---
@@ -57,3 +57,7 @@ Authoritative sources:
   AR's feature scope. Release publication remains pending.
 
 - 2026-09-14T19:01:34+00:00: Claimed by codex-ar0014-release-20260914.
+
+- 2026-09-14T19:03:53+00:00: Created coordinator-only release preparation PR #83 at signed commit
+  71f2aec. No ASB or asb-tui files included. Downstream audit found current v0.3.5 vendor digest
+  mismatch from downstream patch 4915e9c9a; vendor sync must wait for signed v0.3.6.
