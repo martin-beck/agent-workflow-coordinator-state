@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0012 durable barrier slice remains under correctness repair; rejection-only boundary preserved. | Implement durable ambiguous commit marker/reconciliation, independent authority reread and fencing, crash/WAL/process-death tests, and formal refinement evidence; obtain independent exact-head review before publication. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Signed 90ca427 strengthens the durable barrier control-plane slice; quality/formal evidence recorded, but publication remains blocked on authority integration and hostile failure coverage. | Raise branch coverage to >=95%, then add concrete authority-lock/reread fencing, independent-process/WAL/process-death tests, and the AR-0008 v10 formal refinement before any publication claim; keep apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
