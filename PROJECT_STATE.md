@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #72 | `feature/ar0007-sqlite-sidecar-faults@e62c0762f708` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(sqlite): recover projection after commit crash |
+| #72 | `feature/ar0007-sqlite-sidecar-faults@e62c0762f708` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(sqlite): recover projection after commit crash |
 
 ## Recent workflows
 
