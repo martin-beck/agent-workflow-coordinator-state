@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #104 | `feature/ar0007-next-digest-final@b6be916ee0aa` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: verify recovered identity digest canonicality |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34893442034 | `b6be916ee0aa` | pull_request | Verify | in_progress:- |
 | 34893161358 | `735fd99d4b6d` | push | Verify | completed:success |
 | 34893014960 | `3fb8d51dcb1f` | pull_request | Verify | completed:success |
 | 34892768924 | `5fd3109b1e64` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34891552068 | `40d6509b43ae` | push | Verify | completed:success |
 | 34891428806 | `c04f835f1672` | pull_request | Verify | completed:success |
 | 34891193544 | `ff3c5b22ffb3` | push | Verify | completed:success |
-| 34891081449 | `daec18f7fa45` | pull_request | Verify | completed:success |
