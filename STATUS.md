@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Harden runtime selector publication against symlink/ancestor races, then wire fail-closed SQLite user-facing handoffctl upgrade check/plan/apply/rollback and release-plan validation. Keep Git unavailable until fully integrated. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review d05b613; then implement fail-closed SQLite user-facing handoffctl upgrade command and release-plan wiring, with explicit Git refusal and end-to-end selector/rereader invocation tests. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal-20260914 | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Model stale-fence/CAS rejection and release-specific selector identity transitions; retain explicit non-claims for implementation refinement. |
 
 ### Blocked (1)
