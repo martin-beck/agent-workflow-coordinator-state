@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #98 | `feature/ar0007-next-recovered-identity@daec18f7fa45` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: assert recovered fencing token |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34891081449 | `daec18f7fa45` | pull_request | Verify | in_progress:- |
 | 34890848910 | `588640e5ddc6` | push | Verify | completed:success |
 | 34890717451 | `32dbd4e4a22f` | pull_request | Verify | completed:success |
 | 34890505134 | `25365521ec5b` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34889449959 | `5759d94ccec1` | push | Verify | completed:success |
 | 34889329598 | `56a9e760031a` | pull_request | Verify | completed:success |
 | 34889087540 | `c637a7334316` | push | Verify | completed:success |
-| 34888952157 | `6e33daff1acb` | pull_request | Verify | completed:success |
