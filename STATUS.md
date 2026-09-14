@@ -91,7 +91,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Rebind AR-0008 evidence to 685bad7 with exact hashes and TLC metadata. Keep mutating commands rejection-only until broad protocol redesign is implemented and independently reviewed. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal-20260914 | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Model stale-fence/CAS rejection and release-specific selector identity transitions; retain explicit non-claims for implementation refinement. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal-20260914 | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Add phase-adapter refinement evidence after a signed executable adapter checkpoint; retain bounded-model and Git non-claims. |
 
 ### Blocked (1)
 
