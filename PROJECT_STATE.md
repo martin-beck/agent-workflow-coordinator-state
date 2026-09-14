@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `906b72ceb995dc9c8a8d07d5653bba89b62801bc`
+- Product remote main: `c37811473db19e6abac049f785faf9d578c070b9`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #68 | `feature/ar0007-sqlite-authority-adapter@b44fd0b49e2c` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat(fencing): add read-only SQLite authority adapter |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34876563718 | `b44fd0b49e2c` | pull_request | Verify | in_progress:- |
+| 34876733468 | `c37811473db1` | push | Verify | completed:success |
+| 34876563718 | `b44fd0b49e2c` | pull_request | Verify | completed:success |
 | 34876168740 | `a6a95ce2940b` | pull_request | Verify | completed:success |
 | 34875829055 | `906b72ceb995` | push | Verify | completed:success |
 | 34875647440 | `78056a6fb120` | pull_request | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
 | 34873570172 | `621c062260ee` | pull_request | Verify | completed:success |
 | 34873252772 | `4a76344e688e` | push | Verify | completed:success |
-| 34873087734 | `8846030c0cff` | pull_request | Verify | completed:success |
