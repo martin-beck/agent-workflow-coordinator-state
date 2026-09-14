@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #29 | `feature/upgrade-engine@bbbbe73c8706` | `main` | UNKNOWN | - | feat(upgrade): add barrier session contract seam |
 
 ## Recent workflows
 
