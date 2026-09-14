@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independently review bbbef20 and convert GitHub issues #27 and #28 into P0 successor AR dependencies through the authorized task-creation workflow. Keep upgrade apply/rollback rejection-only; do not implement or rebind formal evidence until both dependency contracts are accepted. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Await authorized creation and acceptance of P0 successor AR records for GitHub issues #27 and #28; then claim one dependency-ready slice and implement only against its accepted contract. Keep apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Open
 
