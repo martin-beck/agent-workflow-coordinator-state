@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #66 | `feature/ar0007-engine-interface-proof@fa8430660e38` | `main` | CLEAN | - | test(fencing): prove scoped adapter engine compatibility |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34874761171 | `fa8430660e38` | pull_request | Verify | queued:- |
 | 34874276419 | `6e8177d64609` | push | Verify | completed:success |
 | 34874123819 | `150cf29231d4` | pull_request | Verify | completed:success |
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34872059183 | `1b112a363ee4` | push | Verify | completed:success |
 | 34871844538 | `cfbec76bb4c8` | pull_request | Verify | completed:success |
 | 34871427051 | `1f22acc0f527` | push | Verify | completed:success |
-| 34871106436 | `ff4c0fa87e7d` | pull_request | Verify | completed:success |
