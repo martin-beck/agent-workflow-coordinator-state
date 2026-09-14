@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #89 | `feature/ar0007-next-ambiguous-stability@c6b88b99d2d4` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: recheck stale writer after process restart |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34887891878 | `c6b88b99d2d4` | pull_request | Verify | in_progress:- |
 | 34887610614 | `34424dbd2323` | push | Verify | completed:success |
 | 34887480006 | `cc1ebad1b07c` | pull_request | Verify | completed:success |
 | 34887132256 | `ce7b6d851424` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34885522216 | `873d0d71a2b4` | push | Verify | completed:success |
 | 34885341277 | `6eca3cb5402a` | pull_request | Verify | completed:success |
 | 34884757920 | `a900f922a45a` | push | Verify | completed:success |
-| 34884655187 | `a1bc4459f884` | push | Verify | completed:cancelled |
