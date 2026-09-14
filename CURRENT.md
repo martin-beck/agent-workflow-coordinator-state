@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #118 corrective merge 677aa73a; Verify 34898935434 succeeded with TLC 90,752/94 and attestation 10369842414. Published bounded test-only PR #119 at 87a90938 from exact merged head. | Independently review PR #119 exact head 87a90938; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34898935434 succeeded on 677aa73a (PR118): TLC no errors, 90,752/94 distinct states, attestation artifact 10369842414. No next AR-0007 PR is open. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #119 exact signed head 87a90938 against 677aa73a: test-only bounded polling interval assertion accepts 0 < sleep <= 50ms; focused tests 69 passed (49 subtests), awq/scope/smoke pass, verify skipped. | Continue independent exact-head review after merge; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
