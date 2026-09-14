@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Foundation coverage correction merged and post-merge verification is green; full control-store/barrier integration remains open. | Implement separate control-store binding and common-&gt;control-&gt;authority scope with durable barrier rereads across every SQLite mutation route; add multiprocess/WAL/process-death tests, independent review, and keep upgrade mutation disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Control-binding descriptor foundation merged and post-merge verification green; authority lock/barrier/SQLite route integration remains open. | Implement and independently review common-&gt;control-&gt;authority scope with durable barrier rereads around one complete SQLite mutation route, then expand to all routes and process/WAL evidence; keep apply/rollback rejection-only. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
