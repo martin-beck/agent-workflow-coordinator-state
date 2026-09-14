@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Wire inspect_authority through concrete Git/SQLite adapters and engine snapshots; add adapter backup/restore equivalence and selector identity tests. Keep backend config immutable and publication blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement concrete Git/SQLite adapter restore, selector CAS, durable barrier/fence, and crash/concurrency evidence; publication remains blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
