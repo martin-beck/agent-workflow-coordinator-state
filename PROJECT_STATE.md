@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #65 | `feature/ar0007-context-trace-contract@150cf29231d4` | `main` | CLEAN | - | feat(fencing): bind engine context to caller lease |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34874123819 | `150cf29231d4` | pull_request | Verify | queued:- |
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
 | 34873570172 | `621c062260ee` | pull_request | Verify | completed:success |
 | 34873252772 | `4a76344e688e` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34871427051 | `1f22acc0f527` | push | Verify | completed:success |
 | 34871106436 | `ff4c0fa87e7d` | pull_request | Verify | completed:success |
 | 34870065842 | `29eea5fc3996` | push | Verify | completed:success |
-| 34869864156 | `1d4a6bd81676` | pull_request | Verify | completed:success |
