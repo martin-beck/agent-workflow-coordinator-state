@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review bf0968c; then reopen/follow up AR-0003 for typed executable release opcodes and production SQLite phase adapter before user-facing handoffctl upgrade commands. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 3600465 independently; implement typed opcode registry/SQLite phase adapter and fail-closed handoffctl check/plan/apply/rollback CLI. Rebind formal evidence to the final exact head. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Model stale-fence/CAS rejection and release-specific selector identity transitions; retain explicit non-claims for implementation refinement. | codex-awc-ar0008-formal-20260914 |
 
 ## Blocked
