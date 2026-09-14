@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #81 | `feature/coverage-repair-79@a8ef7efd19a3` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(state): restore supersession coverage gate |
+| #81 | `feature/coverage-repair-79@a8ef7efd19a3` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test(state): restore supersession coverage gate |
 
 ## Recent workflows
 
