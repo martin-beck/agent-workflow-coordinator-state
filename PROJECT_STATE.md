@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `a3a0ed480cbb100db82f4e50087b8b73f12b5aa6`
+- Product remote main: `c0d33dfb9b15fe325fca63662bc9863a298216a2`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,7 +10,6 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #32 | `feature/upgrade-engine@cfff2d696068` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | docs(upgrade): specify control-store provisioning and fencing contract |
 
 ## Recent workflows
 
