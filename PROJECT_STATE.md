@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #79 | `fix/verified-superseded-dependencies@2916855f8b0b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: honor verified superseded dependency chains |
-| #80 | `feature/ar0007-control-reopen@7eaaebe016a5` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(control): reopen release fence before completion |
+| #80 | `feature/ar0007-control-reopen@7eaaebe016a5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test(control): reopen release fence before completion |
 
 ## Recent workflows
 
