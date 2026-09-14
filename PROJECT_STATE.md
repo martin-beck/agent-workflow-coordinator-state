@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #49 | `feature/upgrade-formal-recovery@bc4c2ecba319` | `main` | UNKNOWN | - | feat(formal): model session intent unknown outcomes |
+| #49 | `feature/upgrade-formal-recovery@bc4c2ecba319` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | feat(formal): model session intent unknown outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34857765107 | `bc4c2ecba319` | pull_request | Verify | in_progress:- |
 | 34857425832 | `21cc0245b2c6` | push | Verify | completed:success |
 | 34857132049 | `b5f3f7d765de` | pull_request | Verify | completed:success |
 | 34856825248 | `67e671cf3b93` | pull_request | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34851144597 | `c0bcdf3745d3` | pull_request | Verify | completed:success |
 | 34850795199 | `09122316c212` | push | Verify | completed:failure |
 | 34850406213 | `0794cb8c4ad6` | pull_request | Verify | completed:success |
-| 34849920210 | `dbc616c6097c` | pull_request | Verify | completed:success |
