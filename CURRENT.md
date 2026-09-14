@@ -7,13 +7,13 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #128 merged as f9370983; Verify 34903703986 succeeded with TLC 90,752/94 and attestation artifact 10371536753. Published signed DCO PR #129 at 3be99ad from exact merged head. | Independently review PR #129 exact head 3be99ad; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #129 exact signed head 3be99ad against f9370983: typed fail-closed LockDomainIdentity.assert_descriptor_binding and assert_current revalidation; lock-domain tests 11 passed (2 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next contract-safe caller-integration seam; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #128 merged as f9370983; Verify 34903703986 succeeded with TLC 90,752/94 and attestation artifact 10371536753. Published signed DCO PR #129 at 3be99ad from exact merged head. | Independently review PR #129 exact head 3be99ad; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | - |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
 
 ## Planned
