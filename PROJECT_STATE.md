@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #53 | `feature/typed-admission-interfaces@7fd6bb418a6e` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat: define typed admission and selector publication contracts |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34861850311 | `7fd6bb418a6e` | pull_request | Verify | in_progress:- |
 | 34861299047 | `551ac41c6740` | push | Verify | completed:success |
 | 34861212500 | `746426a58118` | pull_request | Verify | completed:success |
 | 34861076403 | `1c9d31744dfb` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34858485508 | `794aa66ca1a3` | push | Verify | completed:success |
 | 34858300681 | `a4d651f45658` | pull_request | Verify | completed:success |
 | 34857926093 | `649925465727` | pull_request | Verify | completed:success |
-| 34857765107 | `bc4c2ecba319` | pull_request | Verify | completed:failure |
