@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #124 merged as 25f09b7d. Post-merge Verify 34902084937 succeeded with TLC 90,752/94 and attestation artifact 10370638259. Exact-head formal evidence recorded. | Start the next dependency-safe AR-0007 correctness slice from exact head 25f09b7d; keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR124 merged as 25f09b7d; post-merge Verify 34902084937 is queued/in progress. No next AR-0007 PR is open; formal boundary unchanged. | Monitor Verify 34902084937 to completion, then review next exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34902084937 succeeded on 25f09b7d (PR124): TLC no errors, 90,752/94 distinct states, attestation artifact 10370638259. No next AR-0007 PR is open. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
