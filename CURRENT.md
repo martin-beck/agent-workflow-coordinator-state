@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #122 merged as ab3748cd. Post-merge Verify 34901161012 succeeded with TLC 90,752/94 and attestation artifact 10370976887. Starting next bounded test-only slice from exact merged head. | Implement and independently review the next narrow test-only correctness assertion from ab3748cd; preserve production mutation, dispatch, upgrade, apply, and rollback routes as disabled. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #122 merged as ab3748cd; Verify 34901161012 succeeded with TLC 90,752/94 and attestation artifact 10370976887. Published signed DCO PR #123 at 8eb3064 from exact merged head. | Independently review PR #123 exact head 8eb3064; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34901161012 succeeded on ab3748cd (PR122): TLC no errors, 90,752/94 distinct states, attestation artifact 10370976887. No next AR-0007 PR is open. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
