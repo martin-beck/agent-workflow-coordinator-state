@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #134 merged as 6b421fd2; Verify 34906628555 succeeded with TLC 90,752/94 and attestation artifact 10371874416. Published signed DCO PR #135 at 69e3ef9 from exact merged head. | Independently review PR #135 exact head 69e3ef9; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Canonical caller/session-recheck review lane is active from merge 6b421fd2; no new PR is published yet (only unrelated PR #85 open). | Review the next exact-head caller/session-recheck diff against v9 lock order, descriptor/session identity, lease/revision, crash/reopen, and route-reachability obligations; preserve not-proven refinement and do not promote AR-0012. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #135 exact signed head 69e3ef9 against 6b421fd2: uncalled from_rechecked_session holds scope before typed identity/session validation; adapter tests 11 passed, awq/scope/smoke pass, verify skipped. | Continue independent review of the next caller/session seam; require concrete stale/replacement identity, lease/revision, crash/reopen, and route-reachability evidence while preserving not-proven refinement and no AR-0012 promotion. |
 
 ### Open (1)
 
