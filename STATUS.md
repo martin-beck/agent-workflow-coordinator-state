@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #133 merged as 3e8a7bb6. Post-merge Verify 34905872976 succeeded with TLC 90,752/94 and attestation artifact 10372448982. Exact-head formal evidence recorded. | Start the next uncalled caller-integration seam from exact head 3e8a7bb6; preserve fail-closed behavior and keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Dependency audit: a separate uncalled live session-recheck caller seam can proceed under AR-0007 without violating its boundary, provided it remains fail-closed, no dispatch/mutation routes are wired, and implementation_refinement stays not-proven. AR-0012 remains planned/unclaimed and cannot be promoted or enabled until AR-0007 completion plus independent barrier/fencing evidence. | Review the next exact-head uncalled session-recheck seam for stale/missing lease rejection, route isolation, and precise non-claims; do not promote AR-0012 or enable mutation. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Independent AR-0008 lane is ready for the AR-0007 caller/session seam; no new PR is published yet (only unrelated PR #85 open). | Review exact seam head when published against BackupBoundary v9 obligations: stale/replacement identity, missing/expired lease, crash/reopen, lock timeout, and unreachable production routes; preserve not-proven refinement and do not promote AR-0012. |
 
 ### Open (1)
 
