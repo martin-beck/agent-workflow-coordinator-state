@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #142 merged as 80747a40; post-merge Verify 34910437806 passed with TLC 121472/90752 main, 110/94 small, attestation 10374456790. Keep rejection-only routes. | Start the next bounded repeated process-handoff evidence slice from 80747a40; keep production routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #143 published from exact merged head 80747a40 at signed DCO commit 0df4b47. Test-only repeated stale retry evidence now repeats rejection after the first failed handoff, proving lock cleanup does not poison the next retry. | Independently review PR #143 exact head 0df4b47; merge only after focused/full tests, coverage >=95%, quality, and formal evidence pass. Keep production dispatch, mutation, upgrade, apply, and rollback routes unreachable; do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Monitoring the next AR-0007 recovery slice from exact merged 80747a40. No subsequent reviewable PR or exact implementation head is currently published; only unrelated PR #85 is open. Trusted reread/stale lease, process handoff, lock cleanup and formal boundaries remain pending exact evidence. | Review the next published AR-0007 exact head for trusted reread/stale lease rejection, process handoff and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
