@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**14 ARs tracked** across 4 active status categories.
+**14 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 3 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -41,7 +41,7 @@ flowchart LR
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
-        AR_0014["AR-0014 - Open"]:::status_open
+        AR_0014["AR-0014 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -96,18 +96,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #77 merged at 571b472 from signed 36cd3ed; post-merge Verify 34882351034 passed. Next PR #80 adds a fresh-instance control-store release recovery harness from exact head 571b472. | Independently review PR #80 exact head 7eaaebe, then merge only after awq/scope/smoke and exact-head checks pass. Keep production mutation and dispatch disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Combined main regression at 5b38583 (PR #80 plus PR #79) ran 404 tests successfully but failed the repository Verify coverage gate: 5,423 statements, 1,908 branches, total branch coverage 94&#37;, below fail-under=95. The failure occurred before formal workflow execution; GitHub checks show awq SUCCESS, scope SUCCESS, verify FAILURE, smoke SKIPPED. TLC admission also failed closed in the test log because systemd-run cgroup containment was unavailable, so no TLC result exists. This regression provides no implementation refinement or formal correspondence evidence. | Track the corrective coverage PR and independently review its exact head. Keep AR-0008 diagnostic-only with implementation_refinement=not-proven and mutation disabled; require coverage &gt;=95 and a successful admitted formal workflow before treating the publication gate as green, and require separate executable caller/trace evidence before any refinement claim. |
-
-### Open (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work. |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | codex-ar0014-release-20260914 | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work. |
 
 ### Planned (4)
 

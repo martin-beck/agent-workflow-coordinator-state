@@ -9,12 +9,7 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #77 merged at 571b472 from signed 36cd3ed; post-merge Verify 34882351034 passed. Next PR #80 adds a fresh-instance control-store release recovery harness from exact head 571b472. | Independently review PR #80 exact head 7eaaebe, then merge only after awq/scope/smoke and exact-head checks pass. Keep production mutation and dispatch disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Combined main regression at 5b38583 (PR #80 plus PR #79) ran 404 tests successfully but failed the repository Verify coverage gate: 5,423 statements, 1,908 branches, total branch coverage 94%, below fail-under=95. The failure occurred before formal workflow execution; GitHub checks show awq SUCCESS, scope SUCCESS, verify FAILURE, smoke SKIPPED. TLC admission also failed closed in the test log because systemd-run cgroup containment was unavailable, so no TLC result exists. This regression provides no implementation refinement or formal correspondence evidence. | Track the corrective coverage PR and independently review its exact head. Keep AR-0008 diagnostic-only with implementation_refinement=not-proven and mutation disabled; require coverage >=95 and a successful admitted formal workflow before treating the publication gate as green, and require separate executable caller/trace evidence before any refinement claim. | codex-awc-ar0008-next-20260914 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Independently review PR #79 at the immutable checkpoint, wait for exact-head CI, merge only after all required checks pass, then publish a signed immutable coordinator release before downstream vendor synchronization. | - |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work. | codex-ar0014-release-20260914 |
 
 ## Planned
 
