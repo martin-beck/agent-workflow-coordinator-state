@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #128 merged as f9370983. Post-merge Verify 34903703986 succeeded with TLC 90,752/94 and attestation artifact 10371536753. Exact-head formal evidence recorded. | Start the next uncalled fail-closed production-boundary slice from exact head f9370983; require a concrete contract gap, preserve mutation/dispatch/apply/rollback disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR128 merged as f9370983; post-merge Verify 34903703986 is in progress. No next production-boundary PR is open; formal/refinement boundary unchanged. | Monitor Verify 34903703986 to completion, then review the next contract-safe production-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34903703986 succeeded on f9370983 (PR128): TLC no errors, 90,752/94 distinct states, attestation artifact 10371536753. No next production-boundary PR is open. | Monitor publication of the next contract-safe production-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
