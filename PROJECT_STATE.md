@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #76 | `feature/ar0007-sqlite-sidecar-faults@306f55f5139a` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(journal): recover bound control after crash |
+| #76 | `feature/ar0007-sqlite-sidecar-faults@306f55f5139a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test(journal): recover bound control after crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34881431017 | `306f55f5139a` | pull_request | Verify | in_progress:- |
+| 34881431017 | `306f55f5139a` | pull_request | Verify | queued:- |
 | 34881075740 | `119ed74dc3fb` | push | Verify | completed:success |
 | 34880937654 | `aaf81411c065` | pull_request | Verify | completed:success |
 | 34880604113 | `b68b754efd57` | push | Verify | completed:success |
