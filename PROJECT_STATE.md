@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `c0d33dfb9b15fe325fca63662bc9863a298216a2`
+- Product remote main: `9a97e208ed7d8a57dfc4ca4be87538b67aca4270`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,7 +10,6 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #33 | `feature/upgrade-engine@bb29fe6f19a3` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add fail-closed mutation-fence foundation |
 
 ## Recent workflows
 
