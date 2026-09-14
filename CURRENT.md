@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Open a PR from signed bbbbe73 only after recording the successful six-model TLC run; retain contract-only/rejection-only scope, then implement the durable AR-0012 control-store barrier adapter under independent review. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Continue AR-0007 with the durable AR-0012 control-store barrier adapter; preserve rejection-only apply/rollback, bind exact implementation/TLC evidence, and obtain independent review before any further publication. AR-0013 launcher remains downstream. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
