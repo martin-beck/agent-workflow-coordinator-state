@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e9276b88800c439cb99861a89f0fde128147ef1e`
+- Product remote main: `49514ba29bde8c3210c83604970a6e7becaaa40e`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #132 | `feature/ar0007-session-binding2@88adbcede965` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: bind session identity revision to lease |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34905407071 | `49514ba29bde` | push | Verify | in_progress:- |
 | 34905314205 | `88adbcede965` | pull_request | Verify | completed:success |
 | 34904906172 | `e9276b88800c` | push | Verify | completed:success |
 | 34904788157 | `90b210bb8d12` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34903580526 | `f40455dbbee2` | pull_request | Verify | completed:success |
 | 34903223080 | `ed8a75745e91` | push | Verify | completed:success |
 | 34903124291 | `50b7e4cb8e8b` | pull_request | Verify | completed:success |
-| 34902934701 | `e6674512da5d` | push | Verify | completed:success |
