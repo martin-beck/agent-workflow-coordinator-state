@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #69 | `feature/ar0007-sqlite-fault-harness@a1b975178a9b` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(fencing): prove SQLite reader replacement recovery |
+| #69 | `feature/ar0007-sqlite-fault-harness@a1b975178a9b` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(fencing): prove SQLite reader replacement recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34877075004 | `a1b975178a9b` | pull_request | Verify | queued:- |
+| 34877075004 | `a1b975178a9b` | pull_request | Verify | in_progress:- |
 | 34876733468 | `c37811473db1` | push | Verify | completed:success |
 | 34876563718 | `b44fd0b49e2c` | pull_request | Verify | completed:success |
 | 34876168740 | `a6a95ce2940b` | pull_request | Verify | completed:success |
