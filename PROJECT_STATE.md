@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #77 | `feature/ar0007-sqlite-sidecar-faults@36cd3ed24087` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(journal): reject stale fence bindings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34881977614 | `36cd3ed24087` | pull_request | Verify | in_progress:- |
 | 34881587836 | `de2278af56f5` | push | Verify | completed:success |
 | 34881431017 | `306f55f5139a` | pull_request | Verify | completed:success |
 | 34881075740 | `119ed74dc3fb` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34879635996 | `a578e16c1b28` | push | Verify | completed:success |
 | 34879454651 | `e62c0762f708` | pull_request | Verify | completed:success |
 | 34879073000 | `4ef1c7f66c92` | push | Verify | completed:success |
-| 34878928287 | `688dcd9abf09` | pull_request | Verify | completed:success |
