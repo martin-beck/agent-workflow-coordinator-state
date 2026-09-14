@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #91 | `feature/ar0007-next-fresh-recheck@b9169eb79b73` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: compare repeated fresh fence readers |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34888585382 | `b9169eb79b73` | pull_request | Verify | in_progress:- |
 | 34888346228 | `85bf3f068085` | push | Verify | completed:success |
 | 34888238839 | `8f0658f20e2d` | pull_request | Verify | completed:success |
 | 34888024141 | `e4b274e32370` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34886366200 | `a957bed5c37a` | push | Verify | completed:success |
 | 34886204013 | `1dfea479f483` | pull_request | Verify | completed:success |
 | 34885836520 | `73f855d7b71f` | workflow_dispatch | Verify | completed:failure |
-| 34885740162 | `73f855d7b71f` | pull_request | Verify | completed:success |
