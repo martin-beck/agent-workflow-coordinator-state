@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #118 corrective merge 677aa73a; Verify 34898935434 succeeded, TLC 90,752/94 states, and attestation 10369842414 passed. Starting next bounded lock-timeout contract slice. | Implement and independently review a bounded lock-poll interval assertion from exact 677aa73a; keep mutation/apply/rollback routes disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #118 corrective merge 677aa73a; Verify 34898935434 succeeded with TLC 90,752/94 and attestation 10369842414. Published bounded test-only PR #119 at 87a90938 from exact merged head. | Independently review PR #119 exact head 87a90938; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34898935434 succeeded on 677aa73a (PR118): TLC no errors, 90,752/94 distinct states, attestation artifact 10369842414. No next AR-0007 PR is open. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
