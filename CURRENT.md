@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 1fcab38 independently; bind a real release-specific SQLite authority/runtime rereader and revision source or create explicit dependency AR, then complete formal refinement/production fault evidence before publication. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 7934a60 independently; rebind/rerun AR-0008 formal evidence at this exact head; then implement user-facing handoffctl upgrade command/release-plan wiring or create explicit dependency AR. Keep Git fail-closed unless fully integrated. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Add an abstract stale-fence/CAS rejection transition and map it to exact public CAS tests; retain explicit non-claims for implementation refinement. | codex-awc-ar0008-formal-20260914 |
 
 ## Blocked
