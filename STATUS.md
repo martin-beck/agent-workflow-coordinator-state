@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #135 merged as 9a0429ef. Post-merge Verify 34907059056 succeeded with TLC 90,752/94 and attestation artifact 10372019664. Exact-head formal evidence recorded. | AR-0007 remains open: the fail-closed caller/session seams are merged but intentionally uncalled. Do not close or promote AR-0012 until a separately approved production caller integration proves safe dispatch reachability, mutation gates, crash recovery, and rollback invariants. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #135 merged as 9a0429ef. Post-merge Verify 34907059056 succeeded with TLC 90,752/94 and attestation artifact 10372019664. Published signed DCO PR #136 at 32ed4b3 from exact merged head. | Independently review PR #136 exact head 32ed4b3; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Production-caller reachability review lane is active from merge 9a0429ef; no new PR is published yet (only unrelated PR #85 open). | Review exact caller-reachability head when published for fail-closed route behavior, immediate identity/session/lease/revision checks, no real mutation or AR-0012 barrier implementation, and formal-obligation mapping. |
 
 ### Open (1)
