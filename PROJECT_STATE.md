@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7d9933a932d8cd0905423d0076fa991e2b657de0`
+- Product remote main: `ab3748cdc24804935f3c77e7458247dce17d7d79`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #122 | `feature/ar0007-next-postverify12@fe7b9a6f1b33` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: clear operation ownership after failure |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34901161012 | `ab3748cdc248` | push | Verify | in_progress:- |
 | 34901044278 | `fe7b9a6f1b33` | pull_request | Verify | completed:success |
 | 34900639133 | `7d9933a932d8` | push | Verify | completed:success |
 | 34900484794 | `f2b4f12942a5` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34898800121 | `519d9d3b34c1` | pull_request | Verify | completed:success |
 | 34898450080 | `ad8692bb7940` | push | Verify | completed:failure |
 | 34898320060 | `c0eb59eeb76d` | pull_request | Verify | completed:success |
-| 34898014642 | `a83ebb451aaa` | push | Verify | completed:success |
