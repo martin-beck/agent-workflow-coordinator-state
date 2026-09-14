@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Close v9 identity slice gaps before control-store work: bind durable_barrier_id in admission identity; add full v9 envelope/context to every journal record and grammar-safe phase IDs; add missing/mutated snapshot, journal, and admitted/current pair tests. Then redesign control CAS API with fixed lock ownership, strict payload schema, transaction fencing, UUIDv4, and verified WAL durability. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Redesign and implement approved v9 external control-store/barrier API with fixed lock ownership, strict payload/CAS schema, UUIDv4/project binding, verified WAL durability, and crash/concurrency tests. Journal identity slice is checkpoint acd7352; publication remains blocked. |
 
 ### Blocked (1)
 
