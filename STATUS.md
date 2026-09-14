@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #30 merged and post-merge main Verify is green; durable control-plane checkpoint shipped, full executable upgrade remains open. | Continue AR-0007/AR-0012 dependency work with concrete authority-lock/reread fencing, independent process/WAL/process-death tests, and AR-0008 v10 formal refinement. No successor AR can be promoted until this dependency is explicitly complete; keep apply/rollback rejection-only. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Concrete runtime fencing remains unimplemented; independent review identified authority-write, lock-order, release-race, process-death/WAL, rollback-ambiguity, and refinement blockers. | Implement one reviewable concrete authority-lock and barrier-enforcement slice on feature/upgrade-engine; add multiprocess/failure tests; keep apply/rollback rejection-only. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
