@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Extend d4f9369 with recheck_held, explicit ambiguous commit-boundary handling, affected-row CAS verification, fresh-session lifecycle, and hostile process/WAL/authority-fencing tests. Keep apply/rollback rejection-only; do not publish until independent review clears these findings. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0012 durable barrier slice remains under correctness repair; rejection-only boundary preserved. | Implement durable ambiguous commit marker/reconciliation, independent authority reread and fencing, crash/WAL/process-death tests, and formal refinement evidence; obtain independent exact-head review before publication. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
