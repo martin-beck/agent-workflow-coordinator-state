@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Obtain independent exact-head review of 67324f2; then close production authority/runtime and sidecar binding, run fresh exact-head formal model and complete publication gates. | codex-awc-ar0007-upgrade-engine-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Formally verify upgrade safety, crash recovery, rollback, and functional reopen conditions. | Model upgrade and rollback invariants and bind them to exhaustive bounded implementation tests. | codex-awc-ar0008-formal-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Bind model actions to public implementation tests and add explicit Git/SQLite/WAL/fault evidence; keep Git backend fail-closed. | codex-awc-ar0008-formal-20260914 |
 
 ## Blocked
 
