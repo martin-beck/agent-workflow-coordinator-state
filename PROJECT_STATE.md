@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e9a7168de390dd52a5f3a187cffa0cc5bb81d73b`
+- Product remote main: `e980aa9ca8e5c0633ca3fc9d4ff4df7db805dff0`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #101 | `feature/ar0007-next-barrier-final@d865659a38a2` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: assert recovered barrier project identity |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34892394652 | `e980aa9ca8e5` | push | Verify | completed:success |
 | 34892185915 | `d865659a38a2` | pull_request | Verify | completed:success |
 | 34891921807 | `e9a7168de390` | push | Verify | completed:success |
 | 34891788600 | `a1f089c8317e` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34890717451 | `32dbd4e4a22f` | pull_request | Verify | completed:success |
 | 34890505134 | `25365521ec5b` | push | Verify | completed:success |
 | 34890346158 | `9de96bb45db1` | pull_request | Verify | completed:success |
-| 34890104204 | `10aaddfff868` | push | Verify | completed:success |
