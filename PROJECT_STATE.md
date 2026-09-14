@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #35 | `feature/upgrade-engine@cebb3e4df1e7` | `main` | UNKNOWN | - | test(upgrade): cover mutation-fence failure paths |
 
 ## Recent workflows
 
