@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #45 | `fix/upgrade-lock-guard-mypy@c0bcdf3745d3` | `main` | UNKNOWN | - | test(upgrade): fix typed negative guard fixture |
+| #45 | `fix/upgrade-lock-guard-mypy@c0bcdf3745d3` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): fix typed negative guard fixture |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34851144597 | `c0bcdf3745d3` | pull_request | Verify | completed:success |
 | 34850795199 | `09122316c212` | push | Verify | completed:failure |
 | 34850406213 | `0794cb8c4ad6` | pull_request | Verify | completed:success |
 | 34849920210 | `dbc616c6097c` | pull_request | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34835815973 | `8a67aadb5854` | push | Verify | completed:success |
 | 34835706022 | `80dad94503f7` | pull_request | Verify | completed:success |
 | 34835497258 | `e8711cc7c37c` | pull_request | Verify | completed:failure |
-| 34835000643 | `fc58d4cbc752` | push | Verify | completed:success |
