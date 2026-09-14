@@ -1660,6 +1660,57 @@ class HandoffTest(unittest.TestCase):
         ):
             CORE.mutate(args, "recover-expired")
 
+    def test_recover_expired_batch_is_atomic_and_clears_all_claims(self) -> None:
+        first = self.make_task(
+            "AR-0001",
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2000-01-01T00:00:00+00:00",
+        )
+        second = self.make_task(
+            "AR-0002",
+            status="in_progress",
+            owner="worker-b",
+            claim_expires="2000-01-01T00:00:00+00:00",
+        )
+        self.refresh_views()
+        args = argparse.Namespace(
+            claims=["AR-0001=1", "AR-0002=1"],
+            note="UTC expiry independently verified.",
+        )
+        with patch.object(CORE, "commit", return_value=True):
+            CORE.recover_expired_batch(args)
+        for path in (first, second):
+            meta, body = CORE.read_task(path)
+            self.assertEqual("open", meta["status"])
+            self.assertEqual("", meta["owner"])
+            self.assertEqual("", meta["claim_expires"])
+            self.assertEqual(2, meta["task_revision"])
+            self.assertIn("Recovered expired claim formerly owned by", body)
+        self.assertEqual([], CORE.validate())
+
+    def test_recover_expired_batch_rejects_one_invalid_claim_without_mutation(self) -> None:
+        first = self.make_task(
+            "AR-0001",
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2000-01-01T00:00:00+00:00",
+        )
+        second = self.make_task(
+            "AR-0002",
+            status="in_progress",
+            owner="worker-b",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        self.refresh_views()
+        before = (first.read_text(), second.read_text(), (CORE.ROOT / "CURRENT.md").read_text())
+        args = argparse.Namespace(
+            claims=["AR-0001=1", "AR-0002=1"],
+            note="UTC expiry independently verified.",
+        )
+        with self.assertRaisesRegex(RuntimeError, "claim has not expired"):
+            CORE.recover_expired_batch(args)
+        self.assertEqual(before, (first.read_text(), second.read_text(), (CORE.ROOT / "CURRENT.md").read_text()))
     def test_run_preflight_and_durable_journal_precede_reconcile(self) -> None:
         self.make_task(
             status="in_progress",

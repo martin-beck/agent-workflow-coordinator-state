@@ -1192,6 +1192,101 @@ def apply_recover_expired(args: argparse.Namespace, meta: Meta, _tasks: list[Tas
     return f"Recovered expired claim formerly owned by {previous_owner}. {args.note}"
 
 
+def parse_recovery_claims(values: list[str]) -> list[tuple[str, int]]:
+    """Parse one or more privacy-safe TASK=REVISION recovery claims."""
+    if not values:
+        raise RuntimeError("at least one task=revision claim is required")
+    claims: list[tuple[str, int]] = []
+    seen: set[str] = set()
+    for value in values:
+        task_id, separator, revision = value.partition("=")
+        if not separator or not task_id or not revision.isdigit():
+            raise RuntimeError("recovery claims must use TASK=REVISION")
+        if task_id in seen:
+            raise RuntimeError(f"duplicate recovery task: {task_id}")
+        seen.add(task_id)
+        claims.append((task_id, int(revision)))
+    return claims
+
+
+def recover_expired_batch(args: argparse.Namespace) -> None:
+    """Recover several expired claims in one fail-closed Git transaction."""
+    if backend_selection()["backend"] == "sqlite":
+        raise RuntimeError("recover-expired-batch is currently supported only by the Git backend")
+    claims = parse_recovery_claims(args.claims)
+    captured = dt.datetime.now(dt.UTC)
+    with locked():
+        sync_replica_before_write()
+        tasks = all_tasks()
+        by_id = {meta["id"]: (path, meta, body) for path, meta, body in tasks}
+        selected: list[tuple[Path, Meta, str]] = []
+        for task_id, expected_revision in claims:
+            item = by_id.get(task_id)
+            if item is None:
+                raise RuntimeError(f"unknown recovery task: {task_id}")
+            path, meta, body = item
+            if meta.get("status") != "in_progress" or not meta.get("owner"):
+                raise RuntimeError(f"{task_id} does not have an active claim")
+            if meta.get("task_revision") != expected_revision:
+                raise RuntimeError(
+                    f"{task_id}: stale revision: expected {expected_revision}, "
+                    f"current {meta.get('task_revision')}"
+                )
+            try:
+                expiry = parse_claim_expiry(meta.get("claim_expires"))
+            except (TypeError, ValueError) as error:
+                raise RuntimeError(f"{task_id} has invalid claim expiry") from error
+            if expiry > captured:
+                raise RuntimeError(f"{task_id} claim has not expired")
+            selected.append((path, meta, body))
+        if not args.note.strip():
+            raise RuntimeError("expired-claim recovery note must not be empty")
+
+        view_paths = rendered_task_views(tasks)
+        before: dict[Path, str | None] = {
+            path: path.read_text() for path, _, _ in selected
+        }
+        before.update({target: target.read_text() if target.exists() else None for target in view_paths})
+        committed = False
+        try:
+            for path, meta, body in selected:
+                previous_owner = str(meta["owner"])
+                meta["status"] = "open"
+                meta["owner"] = ""
+                meta["claim_expires"] = ""
+                meta["task_revision"] += 1
+                meta["updated_at"] = now()
+                body += (
+                    "\n"
+                    + textwrap.fill(
+                        f"{meta['updated_at']}: Recovered expired claim formerly owned by "
+                        f"{previous_owner}. {args.note}",
+                        width=100,
+                        initial_indent="- ",
+                        subsequent_indent="  ",
+                        break_long_words=False,
+                        break_on_hyphens=False,
+                    )
+                    + "\n"
+                )
+                write_task(path, meta, body)
+            views = rendered_task_views(all_tasks())
+            for target, content in views.items():
+                atomic(target, content)
+            errors = validate(live=False)
+            if errors:
+                raise RuntimeError("\n".join(errors))
+            committed = commit(
+                "chore(state): recover expired claims",
+                [path for path, _, _ in selected] + list(views),
+            )
+            push_replica()
+        except Exception:
+            if not committed:
+                restore_paths(before)
+            raise
+
+
 def require_promotion_preflight(kind: str) -> None:
     """Reject a promotion before writes when its source checkout is ambiguous."""
     if kind not in ("promote", "resume"):
@@ -1682,9 +1777,13 @@ def dispatch_bound_command(args: argparse.Namespace) -> int:
         "promote",
         "resume",
         "recover-expired",
+        "recover-expired-batch",
         "update",
     ):
-        mutate(args, args.cmd)
+        if args.cmd == "recover-expired-batch":
+            recover_expired_batch(args)
+        else:
+            mutate(args, args.cmd)
     elif args.cmd == "run":
         if args.command and args.command[0] == "--":
             args.command = args.command[1:]
@@ -1738,6 +1837,9 @@ def main() -> int:
     item = commands.add_parser("recover-expired")
     item.add_argument("task")
     item.add_argument("--expected-revision", type=int, required=True)
+    item.add_argument("--note", required=True)
+    item = commands.add_parser("recover-expired-batch")
+    item.add_argument("claims", nargs="+", metavar="TASK=REVISION")
     item.add_argument("--note", required=True)
     item = commands.add_parser("update")
     item.add_argument("task")
