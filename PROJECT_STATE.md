@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #37 | `feature/upgrade-engine@e9ead2281580` | `main` | UNKNOWN | - | feat(upgrade): add optional ordered mutation scope seam |
+| #37 | `feature/upgrade-engine@e9ead2281580` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add optional ordered mutation scope seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34832461277 | `e9ead2281580` | pull_request | Verify | completed:success |
 | 34831868962 | `872a574ffc05` | push | Verify | completed:success |
 | 34831793845 | `2ea0fd325336` | pull_request | Verify | completed:success |
 | 34830900049 | `57aad248e821` | push | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34828915484 | `c0d33dfb9b15` | push | Verify | completed:success |
 | 34828849671 | `cfff2d696068` | pull_request | Verify | completed:success |
 | 34827084870 | `a3a0ed480cbb` | push | Verify | completed:success |
-| 34826903622 | `ee930bc97b90` | pull_request | Verify | completed:success |
