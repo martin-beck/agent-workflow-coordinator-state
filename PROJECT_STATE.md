@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #31 | `feature/upgrade-formal-recovery@c0991a4abec8` | `main` | UNKNOWN | - | feat(formal): add bounded v10 barrier model |
 
 ## Recent workflows
 
