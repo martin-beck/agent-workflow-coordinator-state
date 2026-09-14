@@ -91,7 +91,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independently review bbbef20 and convert GitHub issues #27 and #28 into P0 successor AR dependencies through the authorized task-creation workflow. Keep upgrade apply/rollback rejection-only; do not implement or rebind formal evidence until both dependency contracts are accepted. |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-independent-review-20260914 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | codex-awc-ar0011-independent-review-20260914 | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Independently review exact head 59d72c6 and wait for PR publication-tier run 34809697468. Merge only if exact-head CI is green and review accepts the fork-safe event routing and evidence claims; weekly/manual full-exhaustive remains the sole full formal attestation. |
 
 ### Open (1)
 
