@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `9a97e208ed7d8a57dfc4ca4be87538b67aca4270`
+- Product remote main: `b50558caa59202bc192f7867c6ea708dba835ed8`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,7 +10,6 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #34 | `feature/upgrade-engine@f65ce0f0367a` | `main` | CLEAN | COMPLETED:SUCCESS, IN_PROGRESS:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): add canonical mutation-fence test header |
 
 ## Recent workflows
 
