@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement exact v9 barrier/envelope digests and bind/revalidate them at PhaseContext, journal, control store, and admission boundaries; then add rollback crash/recovery ordering tests. Keep Git fail-closed. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Complete explicit durable rollback_verified -> releasing -> released sequencing with crash/fault recovery and independent authority/runtime rereads; then rerun exact-head review and coverage/formal gates. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
