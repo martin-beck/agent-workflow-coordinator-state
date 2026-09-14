@@ -98,7 +98,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #30 merged and post-merge main Verify is green; durable control-plane checkpoint shipped, full executable upgrade remains open. | Continue AR-0007/AR-0012 dependency work with concrete authority-lock/reread fencing, independent process/WAL/process-death tests, and AR-0008 v10 formal refinement. No successor AR can be promoted until this dependency is explicitly complete; keep apply/rollback rejection-only. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Signed c0991a4 corrects v10 safety gaps, binds all 14 invariants, and records exact merged-head provenance; independent review pending. | Obtain independent exact-head review of c0991a4, then publish the bounded v10 formal checkpoint with explicit semantic/model non-claims; do not claim Python refinement or enable executable mutation. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
 
