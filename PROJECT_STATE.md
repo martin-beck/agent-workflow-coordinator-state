@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #69 | `feature/ar0007-sqlite-fault-harness@a1b975178a9b` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(fencing): prove SQLite reader replacement recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34877075004 | `a1b975178a9b` | pull_request | Verify | queued:- |
 | 34876733468 | `c37811473db1` | push | Verify | completed:success |
 | 34876563718 | `b44fd0b49e2c` | pull_request | Verify | completed:success |
 | 34876168740 | `a6a95ce2940b` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34874123819 | `150cf29231d4` | pull_request | Verify | completed:success |
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
 | 34873570172 | `621c062260ee` | pull_request | Verify | completed:success |
-| 34873252772 | `4a76344e688e` | push | Verify | completed:success |
