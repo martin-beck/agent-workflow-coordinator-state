@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #66 | `feature/ar0007-engine-interface-proof@fa8430660e38` | `main` | CLEAN | - | test(fencing): prove scoped adapter engine compatibility |
+| #66 | `feature/ar0007-engine-interface-proof@fa8430660e38` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(fencing): prove scoped adapter engine compatibility |
 
 ## Recent workflows
 
