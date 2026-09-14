@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #45 | `fix/upgrade-lock-guard-mypy@c0bcdf3745d3` | `main` | UNKNOWN | - | test(upgrade): fix typed negative guard fixture |
 
 ## Recent workflows
 
