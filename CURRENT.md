@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review bbbc1bc independently; then close real delegate/runtime reread, WAL sidecar/artifact inode binding, coverage and formal gates. Do not publish while any gate is red. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Finish meaningful branch coverage for upgrade_engine/control_store to >=95% without exclusions; then close production authority/runtime reread and sidecar binding gaps before formal review. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
