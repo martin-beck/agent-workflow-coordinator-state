@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #31 | `feature/upgrade-formal-recovery@c0991a4abec8` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): add bounded v10 barrier model |
+| #31 | `feature/upgrade-formal-recovery@ee786901b9fa` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat(formal): add bounded v10 barrier model |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34826709556 | `ee786901b9fa` | pull_request | Verify | queued:- |
 | 34826557721 | `c0991a4abec8` | pull_request | Verify | completed:failure |
 | 34823837324 | `257ac7cf7914` | push | Verify | completed:success |
 | 34823601190 | `47511128b944` | pull_request | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34809697468 | `59d72c6379a1` | pull_request | Verify | completed:failure |
 | 34789037308 | `cd4ec1c53c61` | push | Verify | completed:success |
 | 34788070608 | `091838026335` | push | Verify | completed:success |
-| 34787111423 | `96a568bcb388` | push | Verify | completed:success |
