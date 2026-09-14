@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #84 | `feature/ar0007-next-recovery@6eca3cb5402a` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(control): reopen ambiguous reconciliation |
+| #84 | `feature/ar0007-next-recovery@6eca3cb5402a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test(control): reopen ambiguous reconciliation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34885341277 | `6eca3cb5402a` | pull_request | Verify | in_progress:- |
+| 34885341277 | `6eca3cb5402a` | pull_request | Verify | queued:- |
 | 34884757920 | `a900f922a45a` | push | Verify | completed:success |
 | 34884655187 | `a1bc4459f884` | push | Verify | completed:cancelled |
 | 34884583053 | `71f2aec85f4b` | pull_request | Verify | completed:success |
