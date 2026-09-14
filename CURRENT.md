@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Signed provisioning contract draft 71ec783 is published locally but independent review requires identity, TOCTOU, sidecar, atomic marker, pre-commit, privacy, and existing-authority amendments before implementation. | Amend CONTROL_STORE_PROVISIONING.md per exact review blockers, rerun independent review, then publish docs-only PR; keep apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Amended contract e2e607c substantially closes provisioning gaps; independent review requires four final clarifications before docs-only publication. | Define canonical repository IDs, concrete authority lock semantics, WAL/SHM lifecycle rebinding, and exact pre-commit ambiguity protocol; rerun exact-head review, then publish docs-only PR. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. | codex-awc-ar0008-formal2-20260914 |
 
 ## Planned
