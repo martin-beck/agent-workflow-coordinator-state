@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #64 | `feature/ar0007-caller-trace-contract@621c062260ee` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(fencing): require complete authority adapter contract |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34873570172 | `621c062260ee` | pull_request | Verify | queued:- |
 | 34873252772 | `4a76344e688e` | push | Verify | completed:success |
 | 34873087734 | `8846030c0cff` | pull_request | Verify | completed:success |
 | 34872729844 | `7acc3ddd3a82` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34870065842 | `29eea5fc3996` | push | Verify | completed:success |
 | 34869864156 | `1d4a6bd81676` | pull_request | Verify | completed:success |
 | 34869376533 | `50c1387d8917` | push | Verify | completed:success |
-| 34869205031 | `fb4708d3c0c6` | pull_request | Verify | completed:success |
