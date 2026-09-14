@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Redesign and implement approved v9 external control-store/barrier API with fixed lock ownership, strict payload/CAS schema, UUIDv4/project binding, verified WAL durability, and crash/concurrency tests. Journal checkpoint acc4094 is pushed; publication remains blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement approved v9 external control-store/barrier API with fixed lock ownership, strict payload/CAS schema, UUIDv4/project binding, verified WAL durability, and crash/concurrency tests. Journal checkpoint 31048c9 is pushed; publication remains blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
