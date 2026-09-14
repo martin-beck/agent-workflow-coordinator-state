@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #141 | `ar0007-process-handoff@d48a62b16f39` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test: cover process handoff session rejection |
+| #141 | `ar0007-process-handoff@d48a62b16f39` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cover process handoff session rejection |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34909872017 | `d48a62b16f39` | pull_request | Verify | queued:- |
+| 34909872017 | `d48a62b16f39` | pull_request | Verify | completed:success |
 | 34909563807 | `745fccad169a` | push | Verify | completed:success |
 | 34909444046 | `c9817f585502` | pull_request | Verify | completed:success |
 | 34909133108 | `cc578ec52b11` | push | Verify | completed:success |
