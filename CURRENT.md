@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #48 merged at 21cc0245b2c6a85a8a3036d8ed3ed9637549c7d4; merge-tree Verify 34857425832 passed scope, AWQ, tests/coverage, and the event-appropriate formal tier. | Keep AR-0007 in progress for the remaining authority-route fencing and formal implementation correspondence. Do not enable apply/rollback or promote AR-0012. AR-0008 is the next active formal lane. | codex-awc-ar0007-upgrade-engine-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #49 at bc4c2ec adds the bounded session-intent unknown-outcome TLC model and exact evidence; independent diagnostics pass all six existing PR-tier models plus the new intent model. | Obtain two independent exact-head reviews and all PR #49 checks; merge only if green. Preserve diagnostic-only claim boundaries, canonical runner ownership, mutation disabled, and formal correspondence not-proven. | codex-awc-ar0008-refinement-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #49 rebased provenance to signed DCO-clean head 6499254 after the initial merge commit failed DCO; bounded intent model/evidence unchanged. | Await fresh PR #49 checks on exact head 6499254, including canonical PR-tier TLC and DCO. Then obtain two independent exact-head reviews and merge only if all required checks are green; preserve diagnostic-only boundaries. | codex-awc-ar0008-refinement-20260914 |
 
 ## Planned
 
