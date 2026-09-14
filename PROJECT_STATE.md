@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #49 | `feature/upgrade-formal-recovery@bc4c2ecba319` | `main` | UNKNOWN | - | feat(formal): model session intent unknown outcomes |
 
 ## Recent workflows
 
