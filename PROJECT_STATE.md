@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #129 | `feature/ar0007-identity-binding@3be99ad44d61` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: expose typed lock identity binding |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34904054899 | `3be99ad44d61` | pull_request | Verify | completed:success |
 | 34903703986 | `f93709836559` | push | Verify | completed:success |
 | 34903580526 | `f40455dbbee2` | pull_request | Verify | completed:success |
 | 34903223080 | `ed8a75745e91` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34902084937 | `25f09b7d2ae6` | push | Verify | completed:success |
 | 34901968024 | `3c40afbbe6c8` | pull_request | Verify | completed:success |
 | 34901608130 | `8ba0a8227ea3` | push | Verify | completed:success |
-| 34901494208 | `8eb306426b53` | pull_request | Verify | completed:success |
