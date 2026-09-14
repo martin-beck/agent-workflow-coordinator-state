@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #93 | `feature/ar0007-next-authority-recheck@56a9e760031a` | `main` | UNSTABLE | QUEUED:, COMPLETED:SUCCESS | test: recheck authority after every fresh read |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34889329598 | `56a9e760031a` | pull_request | Verify | queued:- |
 | 34889087540 | `c637a7334316` | push | Verify | completed:success |
 | 34888952157 | `6e33daff1acb` | pull_request | Verify | completed:success |
 | 34888712155 | `9ce42028c198` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34887610614 | `34424dbd2323` | push | Verify | completed:success |
 | 34887480006 | `cc1ebad1b07c` | pull_request | Verify | completed:success |
 | 34887132256 | `ce7b6d851424` | push | Verify | completed:success |
-| 34886830809 | `851203155776` | pull_request | Verify | completed:success |
