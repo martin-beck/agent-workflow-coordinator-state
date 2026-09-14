@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34903703986 | `f93709836559` | push | Verify | in_progress:- |
+| 34903703986 | `f93709836559` | push | Verify | completed:success |
 | 34903580526 | `f40455dbbee2` | pull_request | Verify | completed:success |
 | 34903223080 | `ed8a75745e91` | push | Verify | completed:success |
 | 34903124291 | `50b7e4cb8e8b` | pull_request | Verify | completed:success |
