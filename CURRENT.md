@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #133 merged as 3e8a7bb6. Post-merge Verify 34905872976 succeeded with TLC 90,752/94 and attestation artifact 10372448982. Exact-head formal evidence recorded. | Start the next uncalled caller-integration seam from exact head 3e8a7bb6; preserve fail-closed behavior and keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #133 merged as 3e8a7bb6. Post-merge Verify 34905872976 succeeded with TLC 90,752/94 and attestation artifact 10372448982. Published signed DCO PR #134 at 6324d7c from exact merged head. | Independently review PR #134 exact head 6324d7c; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Independent AR-0008 lane is ready for the AR-0007 caller/session seam; no new PR is published yet (only unrelated PR #85 open). | Review exact seam head when published against BackupBoundary v9 obligations: stale/replacement identity, missing/expired lease, crash/reopen, lock timeout, and unreachable production routes; preserve not-proven refinement and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
