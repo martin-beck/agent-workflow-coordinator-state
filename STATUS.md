@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement approved v9 external control-store/barrier contract and bind concrete adapter snapshots; add crash/concurrency/fault tests. Checkpoints f5abc9b and 6e370d5 are identity-only; publication remains blocked. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Close v9 identity slice gaps before control-store work: bind durable_barrier_id in admission identity; add full v9 envelope/context to every journal record and grammar-safe phase IDs; add missing/mutated snapshot, journal, and admitted/current pair tests. Then redesign control CAS API with fixed lock ownership, strict payload schema, transaction fencing, UUIDv4, and verified WAL durability. |
 
 ### Blocked (1)
 
