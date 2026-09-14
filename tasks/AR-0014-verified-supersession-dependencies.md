@@ -2,21 +2,21 @@
 {
   "branch": "fix/verified-superseded-dependencies",
   "checkpoint_commit": "0a99db37fc9fbf9dbad815c38ccb7bb369d29901",
-  "claim_expires": "2026-09-14T21:18:15+00:00",
+  "claim_expires": "",
   "depends_on": [
     "AR-0002"
   ],
   "id": "AR-0014",
   "next_action": "Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed.",
-  "owner": "codex-ar0014-official-20260914",
+  "owner": "",
   "plan": "../plans/AR-0014.md",
   "priority": "P0",
   "schema_version": 1,
-  "status": "in_progress",
+  "status": "open",
   "summary": "Make explicitly verified superseded tasks satisfy dependencies only through a completed successor.",
-  "task_revision": 4,
+  "task_revision": 5,
   "title": "Verified supersession dependency readiness",
-  "updated_at": "2026-09-14T19:18:15+00:00",
+  "updated_at": "2026-09-14T21:18:57+00:00",
   "worktree_key": "agent-workflow-coordinator-verified-supersession-dependencies"
 }
 ---
@@ -61,3 +61,7 @@ Authoritative sources:
 - 2026-09-14T19:18:15+00:00: Canonical handoffctl transition recorded coordinator-only v0.3.6
   release and retired the downstream AR-1182 implementation path. No ASB or asb-tui files are part
   of this state.
+
+- 2026-09-14T21:18:57+00:00: Recovered expired claim formerly owned by
+  codex-ar0014-official-20260914. Recover expired lease so shared coordinator state can reconcile;
+  preserve completed supersession evidence.

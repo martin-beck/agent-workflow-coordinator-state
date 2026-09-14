@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**16 ARs tracked** across 3 active status categories.
+**16 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 3 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
@@ -41,7 +41,7 @@ flowchart LR
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
-        AR_0014["AR-0014 - In progress"]:::status_in_progress
+        AR_0014["AR-0014 - Open"]:::status_open
         AR_0015["AR-0015 - Planned"]:::status_planned
         AR_0016["AR-0016 - Planned"]:::status_planned
     end
@@ -104,13 +104,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (3)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #115 merged as 1be118de; Verify 34897622382, TLC 90,752/94 states, and attestation 10369486731 passed. PR #116 adds test-only proof that recovered state revision is newer than initial. | Independently review PR #116 exact head ce36ff0; merge only after awq/scope/smoke and exact-head coverage &gt;=95&#37; pass. Keep mutation/apply/rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #116 exact signed head ce36ff0 against base 1be118de: one test-only recovered state_revision assertion; focused rollback/reopen tests 69 passed (49 subtests), all awq/scope/smoke checks pass, verify skipped. | Continue independent exact-head review of the next AR-0007 slice; preserve implementation_refinement=not-proven and mutation disabled. |
-| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | codex-ar0014-official-20260914 | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 
 ### Planned (6)
 
