@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #116 merged as a83ebb45; Verify 34898014642 is in progress on exact merge head. Next bounded slice prepared. | Monitor Verify 34898014642 to terminal result, then publish the next bounded signed test-only slice from exact a83ebb45. Keep mutation/apply/rollback routes disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #116 merged as a83ebb45; Verify 34898014642 succeeded, TLC 90,752/94 states, and attestation 10368623876 passed. Starting next bounded test-only slice. | Implement and independently review the next bounded recovered-session identity assertion from exact a83ebb45; keep mutation/apply/rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34898014642 succeeded on a83ebb45: TLC no errors, 90,752 and 94 distinct states; attestation artifact 10368623876. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
