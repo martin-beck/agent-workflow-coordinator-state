@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #48 | `feat/upgrade-ambiguous-fencing@67e671cf3b93` | `main` | UNKNOWN | - | feat(upgrade): recover unknown session outcomes |
 
 ## Recent workflows
 
