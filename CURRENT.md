@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #51 published at bdef8c6: rollback-control/session route inventory contract plus diagnostic SQLite WAL process-death rollback evidence; no production behavior changed. | Await PR #51 exact-head AWQ/scope/smoke and two independent reviews; merge only after all gates pass, then post-merge Verify and reconcile. Keep mutation disabled and AR-0012 planned. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #51 merged at 31d7449df530bb220fe4b9eae18eee4cd2970432; post-merge Verify 34860707485 passed scope, AWQ, tests/coverage, formal tier, attestation, and DCO. | Continue AR-0007 with remaining executable correspondence: bind every authority mutation route to one admission fence, add exact trace/refinement evidence, and keep apply/rollback rejection-only. AR-0008 remains diagnostic-only; do not promote AR-0012. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #49 merged at 794aa66ca1a35c96c9323003a924994067e749db; post-merge Verify 34858485508 passed scope, AWQ, formal/TLC, attestation, and DCO. Keep diagnostic-only boundaries. | Continue AR-0008 with canonical/full model admission and implementation-correspondence evidence; do not claim refinement or promote AR-0012. AR-0007 remains the parallel executable-correctness lane. | codex-awc-ar0008-refinement-20260914 |
 
 ## Planned
