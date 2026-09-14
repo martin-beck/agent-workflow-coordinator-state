@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7b70225f54795b5358163bc7c32cc1c1701d5eb2`
+- Product remote main: `09122316c212fed605798c8d7c6f3a479d0e445c`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,8 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #43 | `feature/upgrade-engine@445df2d3f7be` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): add subprocess WAL recovery fixtures |
-| #44 | `feature/upgrade-common-lock-guard-v3@0794cb8c4ad6` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add capability-bound common lock seam |
+| #43 | `feature/upgrade-engine@445df2d3f7be` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): add subprocess WAL recovery fixtures |
 
 ## Recent workflows
 
