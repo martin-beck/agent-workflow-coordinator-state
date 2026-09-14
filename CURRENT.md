@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Await independent signoff on effective BackupBoundary v3/v4/v5/v6/v7/v8/v9 contract in plans/AR-0007.md at state commit 5f461d5; only then implement and test the boundary contract. Product remains untouched. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement v9 PhaseContext/journal/admission identity bindings from clean 63fe8bc, with focused contract tests. Then add concrete control-store/adapter slices; publication remains blocked pending full fault, crash, formal, coverage, and exact-head review. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
