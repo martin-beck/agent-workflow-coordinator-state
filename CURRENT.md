@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Optional ordered SQLite mutation-scope seam merged and post-merge verification green; trusted barrier reread, cross-thread exclusion, full route wiring, and process/WAL evidence remain open. | Replace arbitrary status callback with trusted durable control-store reread/CAS binding; add process-local cross-thread exclusion and independent process-death/WAL/SHM tests, then wire every SQLite mutation route while keeping apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Bounded descriptor-safe SQLite barrier reread merged as PR #38; 314 tests and 95% branch coverage green; apply/rollback and storage_backend remain disabled. | Implement full SQLite mutation-route fencing and independent WAL/SHM/process-death evidence; bind accepted behavior to AR-0008 refinement before any mutating upgrade enablement. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Open
 
