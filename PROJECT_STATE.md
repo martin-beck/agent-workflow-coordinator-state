@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #36 | `feature/upgrade-engine@2ea0fd325336` | `main` | UNKNOWN | - | feat(upgrade): add control-binding descriptor foundation |
+| #36 | `feature/upgrade-engine@2ea0fd325336` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add control-binding descriptor foundation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34831793845 | `2ea0fd325336` | pull_request | Verify | completed:success |
 | 34830900049 | `57aad248e821` | push | Verify | completed:success |
 | 34830828601 | `cebb3e4df1e7` | pull_request | Verify | completed:success |
 | 34830139124 | `b50558caa592` | push | Verify | completed:failure |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34827084870 | `a3a0ed480cbb` | push | Verify | completed:success |
 | 34826903622 | `ee930bc97b90` | pull_request | Verify | completed:success |
 | 34826709556 | `ee786901b9fa` | pull_request | Verify | completed:failure |
-| 34826557721 | `c0991a4abec8` | pull_request | Verify | completed:failure |
