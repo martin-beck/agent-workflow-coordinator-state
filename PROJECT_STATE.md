@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e5517eaebbcce72975d2f3a000defa12d6a2b17c`
+- Product remote main: `e777608e00c3f7c49adab4c18151613e7f8397d8`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #105 | `feature/ar0007-next-digest-stability@b5f0e30a8bee` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: assert digest stability across reopen |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34893936049 | `e777608e00c3` | push | Verify | completed:success |
 | 34893818489 | `b5f0e30a8bee` | pull_request | Verify | completed:success |
 | 34893570421 | `e5517eaebbcc` | push | Verify | completed:success |
 | 34893442034 | `b6be916ee0aa` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34892185915 | `d865659a38a2` | pull_request | Verify | completed:success |
 | 34891921807 | `e9a7168de390` | push | Verify | completed:success |
 | 34891788600 | `a1f089c8317e` | pull_request | Verify | completed:success |
-| 34891552068 | `40d6509b43ae` | push | Verify | completed:success |
