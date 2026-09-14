@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #111 | `feature/ar0007-next-postverify@18230aadc363` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject stale child inheritance |
+| #111 | `feature/ar0007-next-postverify@18230aadc363` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject stale child inheritance |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34895955058 | `18230aadc363` | pull_request | Verify | in_progress:- |
+| 34895955058 | `18230aadc363` | pull_request | Verify | completed:success |
 | 34895669729 | `444f23c6ec1b` | push | Verify | completed:success |
 | 34895558639 | `e147175242b6` | pull_request | Verify | completed:success |
 | 34895346257 | `e52e43cb6f47` | push | Verify | completed:success |
