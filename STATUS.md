@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**13 ARs tracked** across 3 active status categories.
+**13 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -35,7 +35,7 @@ flowchart LR
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - In progress"]:::status_in_progress
-        AR_0008["AR-0008 - In progress"]:::status_in_progress
+        AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
         AR_0011["AR-0011 - Done"]:::status_done
@@ -93,12 +93,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Optional ordered SQLite mutation-scope seam merged and post-merge verification green; trusted barrier reread, cross-thread exclusion, full route wiring, and process/WAL evidence remain open. | Replace arbitrary status callback with trusted durable control-store reread/CAS binding; add process-local cross-thread exclusion and independent process-death/WAL/SHM tests, then wire every SQLite mutation route while keeping apply/rollback rejection-only. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
 
