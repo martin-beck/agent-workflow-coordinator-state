@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #127 | `feature/ar0007-next-postverify17@50b7e4cb8e8b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: revalidate caller guard after reacquire |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34903124291 | `50b7e4cb8e8b` | pull_request | Verify | completed:success |
 | 34902934701 | `e6674512da5d` | push | Verify | completed:success |
 | 34902834420 | `7e506013f7f5` | pull_request | Verify | completed:success |
 | 34902530641 | `2513f2179c57` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34901161012 | `ab3748cdc248` | push | Verify | completed:success |
 | 34901044278 | `fe7b9a6f1b33` | pull_request | Verify | completed:success |
 | 34900639133 | `7d9933a932d8` | push | Verify | completed:success |
-| 34900484794 | `f2b4f12942a5` | pull_request | Verify | completed:success |
