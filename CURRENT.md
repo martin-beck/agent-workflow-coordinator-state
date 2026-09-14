@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #136 merged as 4aa8e86e; Verify 34907694494 succeeded with TLC 90,752/94 and attestation artifact 10373321945. Published signed DCO PR #137 at 3c10301 from exact merged head. | Independently review PR #137 exact head 3c10301; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #137 exact signed head 3c10301 against 4aa8e86e: in-process SystemExit hostile evidence proves rechecked scope context unwinds before adapter construction; focused adapter tests 13 passed (3 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next crash/recheck caller seam; require real process-death/lock-release evidence before stronger BackupBoundary claims, preserve implementation_refinement=not-proven and no AR-0012 promotion. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34908127254 for merge 98b7f47c (PR137) remains in progress; formal/attestation logs are not yet available. | Monitor Verify 34908127254 to completion, inspect exact TLC/attestation evidence, and preserve implementation_refinement=not-proven with AR-0012 unpromoted. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
