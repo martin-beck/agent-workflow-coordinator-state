@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e6bfb1df7927330f2265c111ab81976615c3273b`
+- Product remote main: `7b70225f54795b5358163bc7c32cc1c1701d5eb2`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #42 | `feature/upgrade-formal-recovery@499f86a27440` | `main` | UNKNOWN | - | feat(formal): support explicit isolated TLC admission diagnostics |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34836792274 | `499f86a27440` | pull_request | Verify | completed:success |
 | 34836548464 | `e6bfb1df7927` | push | Verify | completed:success |
 | 34836463466 | `8022311588e9` | pull_request | Verify | completed:success |
 | 34835815973 | `8a67aadb5854` | push | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34834437154 | `c6999ca684b6` | pull_request | Verify | completed:success |
 | 34832529038 | `83f1482b061e` | push | Verify | completed:success |
 | 34832461277 | `e9ead2281580` | pull_request | Verify | completed:success |
-| 34831868962 | `872a574ffc05` | push | Verify | completed:success |
