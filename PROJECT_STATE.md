@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #113 | `feature/ar0007-next-postverify3@b6b36341452e` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: assert recovered session remains held |
+| #113 | `feature/ar0007-next-postverify3@b6b36341452e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: assert recovered session remains held |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34896739178 | `b6b36341452e` | pull_request | Verify | in_progress:- |
+| 34896739178 | `b6b36341452e` | pull_request | Verify | completed:success |
 | 34896475629 | `b435c4d0b406` | push | Verify | completed:success |
 | 34896352568 | `edcfa2fe357e` | pull_request | Verify | completed:success |
 | 34896113685 | `2a168e375aa2` | push | Verify | completed:success |
