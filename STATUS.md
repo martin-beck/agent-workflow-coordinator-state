@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #54 published at af156c8: uncalled admitted_cas control-store seam requiring immutable lease, matching recheck, record identity, and ordered scope before I/O. Full suite passes 352 tests; runtime remains unchanged. | Await PR #54 exact-head checks and two independent reviews; merge only if the wrapper remains uncalled/fail-closed and all gates pass. Then post-merge Verify and continue toward real caller trace/refinement evidence; keep AR-0012 and AR-0013 planned. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #54 merged at aa21a5504ee4543bb6a422f6bb4e23c7c380104c, but merge-tree Verify 34863442630 failed mypy on the admitted-control test fixture. Signed follow-up PR #55 at 0d2281e fixes the test typing; local full gate passes 354 tests plus mypy tools/tests. | Await PR #55 exact-head AWQ/scope/smoke and two independent reviews; merge only after Verify/post-merge evidence is green. Keep AR-0007 incomplete and mutation/apply/rollback disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-refinement-20260914 | PR #49 merged at 794aa66ca1a35c96c9323003a924994067e749db; post-merge Verify 34858485508 passed scope, AWQ, formal/TLC, attestation, and DCO. Keep diagnostic-only boundaries. | Continue AR-0008 with canonical/full model admission and implementation-correspondence evidence; do not claim refinement or promote AR-0012. AR-0007 remains the parallel executable-correctness lane. |
 
 ### Planned (4)
