@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #68 | `feature/ar0007-sqlite-authority-adapter@b44fd0b49e2c` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat(fencing): add read-only SQLite authority adapter |
+| #68 | `feature/ar0007-sqlite-authority-adapter@b44fd0b49e2c` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat(fencing): add read-only SQLite authority adapter |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34876563718 | `b44fd0b49e2c` | pull_request | Verify | queued:- |
+| 34876563718 | `b44fd0b49e2c` | pull_request | Verify | in_progress:- |
 | 34876168740 | `a6a95ce2940b` | pull_request | Verify | completed:success |
 | 34875829055 | `906b72ceb995` | push | Verify | completed:success |
 | 34875647440 | `78056a6fb120` | pull_request | Verify | completed:success |
