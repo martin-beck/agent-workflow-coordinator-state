@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #111 | `feature/ar0007-next-postverify@18230aadc363` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject stale child inheritance |
+| #111 | `feature/ar0007-next-postverify@18230aadc363` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject stale child inheritance |
 
 ## Recent workflows
 
