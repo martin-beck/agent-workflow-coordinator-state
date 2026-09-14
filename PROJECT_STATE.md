@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `873d0d71a2b4f6e3246135b18e5cd683dc3797e6`
+- Product remote main: `a957bed5c37a60a52e039a6d7ac4b342f687f763`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,12 +11,12 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #86 | `feature/ar0007-next-control-journal@1dfea479f483` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: verify ambiguous reconciliation retry boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34886366200 | `a957bed5c37a` | push | Verify | completed:success |
 | 34886204013 | `1dfea479f483` | pull_request | Verify | completed:success |
 | 34885836520 | `73f855d7b71f` | workflow_dispatch | Verify | completed:failure |
 | 34885740162 | `73f855d7b71f` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34884565031 | `24853e68e9df` | pull_request | Verify | completed:success |
 | 34884165286 | `05ebaee04376` | push | Verify | completed:success |
 | 34884022446 | `a8ef7efd19a3` | pull_request | Verify | completed:success |
-| 34883440203 | `5b38583eb73c` | push | Verify | completed:failure |
