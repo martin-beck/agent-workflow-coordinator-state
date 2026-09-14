@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #51 | `feature/upgrade-authority-coverage@bdef8c67057f` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: cover remaining authority routes and WAL crash rollback |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34860451683 | `bdef8c67057f` | pull_request | Verify | in_progress:- |
 | 34859850530 | `42e1d8f7f0f0` | push | Verify | completed:success |
 | 34859712500 | `c313676bc9a7` | pull_request | Verify | completed:success |
 | 34859475976 | `e3c651aa75a3` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34857132049 | `b5f3f7d765de` | pull_request | Verify | completed:success |
 | 34856825248 | `67e671cf3b93` | pull_request | Verify | completed:success |
 | 34852545351 | `9c1b21204c9d` | push | Verify | completed:success |
-| 34852458242 | `82bdeb7e0f1e` | pull_request | Verify | completed:success |
