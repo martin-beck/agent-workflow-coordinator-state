@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement durable rollback_verified journal/cross-product reconciliation and one operation-scoped common-control-authority lock context. Then add fault/concurrency tests and production handoffctl provisioning; Git remains fail-closed. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement descriptor-bound mandatory authority/control paths, exact barrier/journal cross-product reconciliation, durable release postcondition reread, and non-reentrant outer lock API. Add crash/fault evidence; Git remains fail-closed. |
 
 ### Blocked (1)
 
