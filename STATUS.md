@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #135 merged as 9a0429ef. Post-merge Verify 34907059056 succeeded with TLC 90,752/94 and attestation artifact 10372019664. Published signed DCO PR #136 at 32ed4b3 from exact merged head. | Independently review PR #136 exact head 32ed4b3; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #136 exact signed head 32ed4b3 against 9a0429ef: commit/apply/rollback phases reject before scope/backend; focused adapter/authority tests 26 passed (3 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next production-caller seam; preserve implementation_refinement=not-proven and mutation disabled. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34907694494 for merge 4aa8e86e (PR136) is still in progress; formal/attestation logs not yet available. | Monitor Verify 34907694494 to completion, then inspect TLC states/attestation for the rejection-only mutation-phase slice; preserve implementation_refinement=not-proven and AR-0012 unpromoted. |
 
 ### Open (1)
 
