@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #62 | `feature/ar0007-caller-trace-audit@aaef9b8aabd9` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat(fencing): add uncalled scoped backend boundary |
+| #62 | `feature/ar0007-caller-trace-audit@aaef9b8aabd9` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(fencing): add uncalled scoped backend boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34872547740 | `aaef9b8aabd9` | pull_request | Verify | queued:- |
+| 34872547740 | `aaef9b8aabd9` | pull_request | Verify | in_progress:- |
 | 34872059183 | `1b112a363ee4` | push | Verify | completed:success |
 | 34871844538 | `cfbec76bb4c8` | pull_request | Verify | completed:success |
 | 34871427051 | `1f22acc0f527` | push | Verify | completed:success |
