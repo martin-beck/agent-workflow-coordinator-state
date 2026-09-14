@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #94 | `feature/ar0007-next-authority-restart@15231870974d` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: verify authority after restart rejection |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34889667841 | `15231870974d` | pull_request | Verify | in_progress:- |
 | 34889449959 | `5759d94ccec1` | push | Verify | completed:success |
 | 34889329598 | `56a9e760031a` | pull_request | Verify | completed:success |
 | 34889087540 | `c637a7334316` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34888024141 | `e4b274e32370` | push | Verify | completed:success |
 | 34887891878 | `c6b88b99d2d4` | pull_request | Verify | completed:success |
 | 34887610614 | `34424dbd2323` | push | Verify | completed:success |
-| 34887480006 | `cc1ebad1b07c` | pull_request | Verify | completed:success |
