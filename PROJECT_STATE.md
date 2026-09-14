@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #133 | `feature/ar0007-adapter-session-entry@b3ef227154b4` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: bind adapter entry to validated session |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34905776865 | `b3ef227154b4` | pull_request | Verify | completed:success |
 | 34905407071 | `49514ba29bde` | push | Verify | completed:success |
 | 34905314205 | `88adbcede965` | pull_request | Verify | completed:success |
 | 34904906172 | `e9276b88800c` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34903703986 | `f93709836559` | push | Verify | completed:success |
 | 34903580526 | `f40455dbbee2` | pull_request | Verify | completed:success |
 | 34903223080 | `ed8a75745e91` | push | Verify | completed:success |
-| 34903124291 | `50b7e4cb8e8b` | pull_request | Verify | completed:success |
