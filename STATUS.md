@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #136 merged as 4aa8e86e; Verify 34907694494 succeeded with TLC 90,752/94 and attestation artifact 10373321945. Published signed DCO PR #137 at 3c10301 from exact merged head. | Independently review PR #137 exact head 3c10301; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Crash/recheck evidence review lane is active from merge 4aa8e86e; no new AR-0007 PR is published yet (only unrelated PR #85 open). | Review exact crash/recheck head when published for process-death/exception, lock release, stale identity/lease, rejection-only routes, and formal mapping; preserve not-proven refinement and do not promote AR-0012. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #137 exact signed head 3c10301 against 4aa8e86e: in-process SystemExit hostile evidence proves rechecked scope context unwinds before adapter construction; focused adapter tests 13 passed (3 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next crash/recheck caller seam; require real process-death/lock-release evidence before stronger BackupBoundary claims, preserve implementation_refinement=not-proven and no AR-0012 promotion. |
 
 ### Open (1)
 
