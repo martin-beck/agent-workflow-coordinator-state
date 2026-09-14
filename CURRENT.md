@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #38, #39, and design-only PR #41 merged; exact post-merge Verify run 34836548464 passed. Full session/WAL/process evidence remains open. | Keep runtime mutation disabled; implement only the reviewed caller-owned session/recheck seam after AR-0012 promotion prerequisites are accepted, with process-death/WAL evidence and formal correspondence. | codex-awc-ar0007-upgrade-engine-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #42 isolated-lock support merged and six-model local isolated diagnostic passed; canonical publication/weekly TLC remains runner-owned and unclaimed. | Retain the isolated six-model result as local diagnostic evidence only; obtain authorized canonical admission for publication/full attestation, while keeping correspondence not-proven and mutation disabled. | codex-awc-ar0008-refinement-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Six isolated PR-tier TLC models pass; isolated full lifecycle diagnostic reached 29.5M generated/23.8M distinct states without a violation but timed out during queue drain. Canonical TLC remains runner-owned. | Retain six-model isolated evidence and the full-run timeout as diagnostics only; obtain authorized canonical admission for publication/full attestation or schedule the full model under the owning runner. Keep correspondence not-proven and mutation disabled. | codex-awc-ar0008-refinement-20260914 |
 
 ## Planned
 
