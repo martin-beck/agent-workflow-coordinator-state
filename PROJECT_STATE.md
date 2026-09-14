@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #41 | `feature/upgrade-engine@8022311588e9` | `main` | UNKNOWN | - | docs(upgrade): specify caller-owned SQLite barrier admission seam |
 
 ## Recent workflows
 
