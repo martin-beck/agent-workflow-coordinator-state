@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #133 merged as 3e8a7bb6. Post-merge Verify 34905872976 succeeded with TLC 90,752/94 and attestation artifact 10372448982. Published signed DCO PR #134 at 6324d7c from exact merged head. | Independently review PR #134 exact head 6324d7c; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Independent AR-0008 lane is ready for the AR-0007 caller/session seam; no new PR is published yet (only unrelated PR #85 open). | Review exact seam head when published against BackupBoundary v9 obligations: stale/replacement identity, missing/expired lease, crash/reopen, lock timeout, and unreachable production routes; preserve not-proven refinement and do not promote AR-0012. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #134 exact signed head 6324d7c against 3e8a7bb6: uncalled typed adapter entry now requires OrderedAdmissionScope.assert_ordered before descriptor/session validation; focused adapter tests 10 passed, awq/scope/smoke pass, verify skipped. | Continue independent review of the next caller/session seam; require stale/replacement identity, lease/revision, crash/reopen, and lock-failure evidence while preserving not-proven refinement and disabled mutation. |
 
 ### Open (1)
 
