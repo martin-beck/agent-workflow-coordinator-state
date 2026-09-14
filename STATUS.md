@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #137 merged as 98b7f47c. Post-merge Verify 34908127254 succeeded: TLC 90,752/94 main, 110/94 small, attestation artifact 10373291657. Exact-head evidence recorded. | Next bounded gap is independently reviewed rejection-only route coverage for stale/missing/replaced evidence after crash; keep mutation/dispatch/upgrade/apply/rollback unreachable and do not promote AR-0012. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Verify 34908127254 completed success on merge 98b7f47c (PR137): TLC no errors, main 121,472/90,752 and small 110/94; attestation artifact 10373291657. | Continue independent review of the next crash/recheck caller seam; preserve implementation_refinement=not-proven and AR-0012 unpromoted. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Stale/missing/replaced-after-crash review lane is active from merge 98b7f47c; no new AR-0007 PR is published yet (only unrelated PR #85 open). | Review exact next head for rejection-only route behavior, lock cleanup, stale/missing/replaced identity after crash, and exact formal mapping; preserve implementation_refinement=not-proven and do not promote AR-0012. |
 
 ### Open (1)
 
