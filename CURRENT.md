@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Docs-only provisioning/fencing contract merged in PR #32; post-merge main verification passed. Runtime implementation remains open and rejection-only. | Implement the contract: provisioning descriptor/lifecycle record, authority.lock, MutationFence integration across every SQLite mutation route, and multiprocess/WAL/process-death tests; then independently review and publish the next exact-head PR. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Runtime seam ef6272b is an un-wired foundation only; independent review found missing control-store/barrier/lock integration and marker/lifecycle symlink vulnerability. | Harden marker/lifecycle no-follow reads and hostile tests as a bounded seam checkpoint; then implement real control-store binding, full lock composition/barrier rereads, and process/WAL evidence before any mutation. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. | codex-awc-ar0008-formal2-20260914 |
 
 ## Planned
