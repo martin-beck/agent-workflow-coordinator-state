@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #132 merged as 49514ba2. Post-merge Verify 34905407071 succeeded with TLC 90,752/94 and attestation artifact 10371799691. Published signed DCO PR #133 at b3ef227 from exact merged head. | Independently review PR #133 exact head b3ef227; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34905407071 succeeded on 49514ba2 (PR132): TLC no errors, 90,752/94 distinct states, attestation artifact 10371799691. No next typed session-boundary PR is open. | Monitor publication of the next typed session-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #133 exact signed head b3ef227 against 49514ba2: uncalled typed adapter entry requires LockDomainIdentity descriptor binding and BarrierSessionState/AdmissionLease validation; adapter tests 9 passed, awq/scope/smoke pass, verify skipped. | Continue independent review of the next typed caller/session seam; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
 
