@@ -11,6 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #43 | `feature/upgrade-engine@445df2d3f7be` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): add subprocess WAL recovery fixtures |
+| #44 | `feature/upgrade-common-lock-guard-v3@dbc616c6097c` | `main` | UNKNOWN | - | feat(upgrade): add capability-bound common lock seam |
 
 ## Recent workflows
 
