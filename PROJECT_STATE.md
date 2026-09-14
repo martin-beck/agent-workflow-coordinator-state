@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #72 | `feature/ar0007-sqlite-sidecar-faults@e62c0762f708` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test(sqlite): recover projection after commit crash |
+| #72 | `feature/ar0007-sqlite-sidecar-faults@e62c0762f708` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(sqlite): recover projection after commit crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34879454651 | `e62c0762f708` | pull_request | Verify | in_progress:- |
+| 34879454651 | `e62c0762f708` | pull_request | Verify | completed:success |
 | 34879073000 | `4ef1c7f66c92` | push | Verify | completed:success |
 | 34878928287 | `688dcd9abf09` | pull_request | Verify | completed:success |
 | 34878458042 | `d259a04853e1` | pull_request | Verify | completed:success |
