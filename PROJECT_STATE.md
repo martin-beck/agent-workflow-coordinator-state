@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `a900f922a45ac987fd268860c9156ce322860039`
+- Product remote main: `873d0d71a2b4f6e3246135b18e5cd683dc3797e6`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #84 | `feature/ar0007-next-recovery@6eca3cb5402a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(control): reopen ambiguous reconciliation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34885522216 | `873d0d71a2b4` | push | Verify | completed:success |
 | 34885341277 | `6eca3cb5402a` | pull_request | Verify | completed:success |
 | 34884757920 | `a900f922a45a` | push | Verify | completed:success |
 | 34884655187 | `a1bc4459f884` | push | Verify | completed:cancelled |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34883422935 | `0a99db37fc9f` | push | Verify | completed:cancelled |
 | 34883170833 | `fd491b9627ad` | pull_request | Verify | completed:success |
 | 34883071202 | `7eaaebe016a5` | pull_request | Verify | completed:success |
-| 34882818102 | `2916855f8b0b` | pull_request | Verify | completed:success |
