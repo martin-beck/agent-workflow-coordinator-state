@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #109 | `feature/ar0007-next-digest-final5@6d89bd096e03` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject uniform recovered digest |
+| #109 | `feature/ar0007-next-digest-final5@6d89bd096e03` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject uniform recovered digest |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34895217575 | `6d89bd096e03` | pull_request | Verify | in_progress:- |
+| 34895217575 | `6d89bd096e03` | pull_request | Verify | completed:success |
 | 34894953464 | `82c0a3b6d6a8` | push | Verify | completed:success |
 | 34894836095 | `160be1b530be` | pull_request | Verify | completed:success |
 | 34894615738 | `4790f584168d` | push | Verify | completed:success |
