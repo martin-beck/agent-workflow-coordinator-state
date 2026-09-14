@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Add subprocess/process-death rollback recovery test and reject bool CAS revisions; document/test schema-v2 refusal contract. Then address CI-equivalent mypy/coverage without weakening gates. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review bbbc1bc independently; then close real delegate/runtime reread, WAL sidecar/artifact inode binding, coverage and formal gates. Do not publish while any gate is red. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
