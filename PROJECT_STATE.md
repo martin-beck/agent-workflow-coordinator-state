@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `2a168e375aa20386dcc98c02e2d4c6972bf55af4`
+- Product remote main: `b435c4d0b406627cccdf594c6914330452b4d28f`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #112 | `feature/ar0007-next-postverify2@edcfa2fe357e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject stale rollback child inheritance |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34896475629 | `b435c4d0b406` | push | Verify | in_progress:- |
 | 34896352568 | `edcfa2fe357e` | pull_request | Verify | completed:success |
 | 34896113685 | `2a168e375aa2` | push | Verify | completed:success |
 | 34895955058 | `18230aadc363` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34894836095 | `160be1b530be` | pull_request | Verify | completed:success |
 | 34894615738 | `4790f584168d` | push | Verify | completed:success |
 | 34894489456 | `765c212a9a00` | pull_request | Verify | completed:success |
-| 34894272654 | `f8f4387386a5` | push | Verify | completed:success |
