@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Remote docs head 686ef2d separates stable marker identity from fsynced WAL/SHM lifecycle evidence; final independent review pending. | Complete exact-head review of 686ef2d, then publish docs-only PR if approved; retain rejection-only runtime behavior and track executable implementation separately. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Docs-only provisioning/fencing contract merged in PR #32; post-merge main verification passed. Runtime implementation remains open and rejection-only. | Implement the contract: provisioning descriptor/lifecycle record, authority.lock, MutationFence integration across every SQLite mutation route, and multiprocess/WAL/process-death tests; then independently review and publish the next exact-head PR. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
