@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - In progress"]:::status_in_progress
+        AR_0007["AR-0007 - Open"]:::status_open
         AR_0008["AR-0008 - In progress"]:::status_in_progress
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -104,17 +104,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #139 published from exact merged head 63621b15 at signed DCO commit 26fc4c0. Test-only hostile evidence now covers abort followed by replaced authority descriptor and ambiguous durable-session state; both immediate rechecks reject and scope ownership is cleaned up. | Independently review PR #139 exact head 26fc4c0; merge only after focused/full tests, coverage &gt;=95&#37;, quality, and formal evidence pass. Keep production dispatch, mutation, upgrade, apply, and rollback routes unreachable; do not promote AR-0012. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #139 exact signed head 26fc4c0 against 63621b15: abort scope releases ownership; subsequent authority descriptor replacement and ambiguous durable session are rejected fail-closed. Focused scope tests 7 passed (2 subtests), awq/scope/smoke pass, Verify skipped. | Continue independent review of the next stale/replacement crash seam; require independent-process evidence and admitted TLC before stronger claims, preserve implementation_refinement=not-proven and no AR-0012 promotion. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | PR #139 published from exact merged head 63621b15 at signed DCO commit 26fc4c0. Test-only hostile evidence now covers abort followed by replaced authority descriptor and ambiguous durable-session state; both immediate rechecks reject and scope ownership is cleaned up. | Independently review PR #139 exact head 26fc4c0; merge only after focused/full tests, coverage &gt;=95&#37;, quality, and formal evidence pass. Keep production dispatch, mutation, upgrade, apply, and rollback routes unreachable; do not promote AR-0012. |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 
 ### Planned (6)
