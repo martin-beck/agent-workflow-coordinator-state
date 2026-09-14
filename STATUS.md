@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #30 merged as 257ac7c: durable barrier control-plane checkpoint shipped; executable upgrade remains disabled. | After post-merge main Verify is green, promote/claim the next dependency-safe AR for concrete authority fencing and v10 formal refinement; keep apply/rollback rejection-only and AR-0007 open until those contracts are integrated. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #30 merged and post-merge main Verify is green; durable control-plane checkpoint shipped, full executable upgrade remains open. | Continue AR-0007/AR-0012 dependency work with concrete authority-lock/reread fencing, independent process/WAL/process-death tests, and AR-0008 v10 formal refinement. No successor AR can be promoted until this dependency is explicitly complete; keep apply/rollback rejection-only. |
 
 ### Blocked (1)
 
