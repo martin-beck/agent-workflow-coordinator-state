@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0291ab515eced70f9a9e6196c6c73beb3454062d`
+- Product remote main: `fc58d4cbc7526c5d367dd8f243957afc9e2ad286`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #39 | `feature/upgrade-engine@7cb1c7be8711` | `main` | UNKNOWN | - | test(upgrade): cover every SQLite mutation route with the fence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34834926514 | `7cb1c7be8711` | pull_request | Verify | completed:success |
 | 34834489678 | `0291ab515ece` | push | Verify | completed:success |
 | 34834437154 | `c6999ca684b6` | pull_request | Verify | completed:success |
 | 34832529038 | `83f1482b061e` | push | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34830139124 | `b50558caa592` | push | Verify | completed:failure |
 | 34830042614 | `f65ce0f0367a` | pull_request | Verify | completed:success |
 | 34829877406 | `9a97e208ed7d` | push | Verify | completed:failure |
-| 34829812928 | `bb29fe6f19a3` | pull_request | Verify | completed:success |
