@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**13 ARs tracked** across 3 active status categories.
+**14 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -41,12 +41,14 @@ flowchart LR
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
+        AR_0014["AR-0014 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
     AR_0002 --> AR_0004
     AR_0002 --> AR_0005
     AR_0002 --> AR_0006
+    AR_0002 --> AR_0014
     AR_0003 --> AR_0007
     AR_0003 --> AR_0008
     AR_0003 --> AR_0010
@@ -78,7 +80,7 @@ flowchart LR
 | AR | Prerequisites | Dependents |
 | --- | --- | --- |
 | [AR-0001](tasks/AR-0001.md) | None | [AR-0002](tasks/AR-0002.md) |
-| [AR-0002](tasks/AR-0002.md) | [AR-0001](tasks/AR-0001.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) |
+| [AR-0002](tasks/AR-0002.md) | [AR-0001](tasks/AR-0001.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md), [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) |
 | [AR-0003](tasks/AR-0003.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md), [AR-0010](tasks/AR-0010.md) |
 | [AR-0004](tasks/AR-0004.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
 | [AR-0005](tasks/AR-0005.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
@@ -90,6 +92,7 @@ flowchart LR
 | [AR-0011](tasks/AR-0011.md) | None | None |
 | [AR-0012](tasks/AR-0012.md) | [AR-0007](tasks/AR-0007.md) | None |
 | [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
+| [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) | [AR-0002](tasks/AR-0002.md) | None |
 
 ## Complete AR inventory
 
@@ -99,6 +102,12 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #77 merged at 571b472 from signed 36cd3ed. The journal harness rejects authority-revision and fencing-token drift after crash-reopen while preserving barrier/envelope digest checks. Independent review and post-merge Verify 34882351034 passed; awq, scope, and smoke green, verify policy-complete. Production mutation and dispatch remain disabled. | Implement the next control/journal slice at merged head 571b472: exercise durable SQLiteControlStore CAS/release or stale-fence/ambiguous-safe-mode recovery bound to the journal; publish a signed PR after independent review. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge exact head 571b4728c328308b5c3549e38374f0b55363115d (PR #77, 36cd3ed) is test-only stale-fence journal coverage: both authority_revision and fencing_token drift reject a SIGKILL-persisted journal context. GitHub Verify run 34882351034 succeeded; its verify tier and formal workflow step completed successfully, but formal model files/evidence hashes are unchanged and no implementation refinement claim is added. Formal hashes remain TLA 2a1a31f5, CFG e38502a2, evidence 035e6c15; implementation_refinement=not-proven; mutation disabled. Current local canonical admission remains unavailable (gha-workflow-coordinator-owned /tmp lock/queue), so no local TLC launched. | Promote AR-0012 as the next correctness owner for durable journal/control-store barrier CAS, SQLite mutation-route fencing, stale-owner rejection, and cross-store crash/reconciliation traces. Keep AR-0008 diagnostic-only; require AR-0012 exact executable evidence and independent formal mapping before any model/hash update or mutation enablement. AR-0013 remains subsequent selector/runtime binding. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Independently review PR #79 at the immutable checkpoint, wait for exact-head CI, merge only after all required checks pass, then publish a signed immutable coordinator release before downstream vendor synchronization. |
 
 ### Planned (4)
 
