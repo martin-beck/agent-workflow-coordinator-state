@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #130 merged as ec4aefc7; Verify 34904492964 succeeded with TLC 90,752/94 and attestation artifact 10372491417. Published signed DCO PR #131 at 90b210b from exact merged head. | Independently review PR #131 exact head 90b210b; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #131 merged as e9276b88. Post-merge Verify 34904906172 succeeded with TLC 90,752/94 and attestation artifact 10371813705. Exact-head formal evidence recorded. | Start the next typed identity/session boundary slice from exact head e9276b88; preserve fail-closed behavior and keep mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR131 merged as e9276b88; post-merge Verify 34904906172 remains in progress. No next typed identity/session PR is open; formal boundary unchanged. | Monitor Verify 34904906172 to completion, then review next typed identity/session seam; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
