@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #42 | `feature/upgrade-formal-recovery@499f86a27440` | `main` | UNKNOWN | - | feat(formal): support explicit isolated TLC admission diagnostics |
 
 ## Recent workflows
 
