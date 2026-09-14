@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #82 | `feature/ar0007-control-ambiguous@24853e68e9df` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(control): reopen ambiguous CAS state |
+| #82 | `feature/ar0007-control-ambiguous@24853e68e9df` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(control): reopen ambiguous CAS state |
 
 ## Recent workflows
 
