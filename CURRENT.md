@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #117 merged as ad8692bb; post-merge Verify 34898450080 is in progress on exact merge head. Next bounded slice awaits terminal gate. | Monitor Verify 34898450080 to terminal result, then publish the next bounded signed test-only slice from exact ad8692bb. Keep mutation/apply/rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #117 exact signed head c0eb59e against a83ebb45: one test-only repeated-reader child-free assertion; focused rollback/reopen tests 69 passed (49 subtests), awq/scope/smoke pass, verify skipped. | Continue independent exact-head review of the next AR-0007 slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR117 merged as ad8692bb; post-merge Verify 34898450080 is queued/in progress. No next AR-0007 PR is open; formal boundary unchanged. | Monitor Verify 34898450080 to completion, then review the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
