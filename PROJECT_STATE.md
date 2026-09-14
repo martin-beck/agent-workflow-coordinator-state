@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #54 | `feature/admitted-control-store@af156c8183b1` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | feat: add fail-closed admitted control-store seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34863032148 | `af156c8183b1` | pull_request | Verify | queued:- |
 | 34862545950 | `0545eb00b5ad` | push | Verify | completed:success |
 | 34862470603 | `6f627248586d` | pull_request | Verify | completed:success |
 | 34862308975 | `70f1eec17a23` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34860451683 | `bdef8c67057f` | pull_request | Verify | completed:success |
 | 34859850530 | `42e1d8f7f0f0` | push | Verify | completed:success |
 | 34859712500 | `c313676bc9a7` | pull_request | Verify | completed:success |
-| 34859475976 | `e3c651aa75a3` | pull_request | Verify | completed:success |
