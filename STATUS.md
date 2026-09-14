@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Runtime seam ef6272b is an un-wired foundation only; independent review found missing control-store/barrier/lock integration and marker/lifecycle symlink vulnerability. | Harden marker/lifecycle no-follow reads and hostile tests as a bounded seam checkpoint; then implement real control-store binding, full lock composition/barrier rereads, and process/WAL evidence before any mutation. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | PR #33 foundation merged but post-merge Verify failed only source-header check on new test; corrective header PR in progress. | Add canonical Huawei/MIT header to tests/test_mutation_fence.py, pass exact post-merge gates, then continue control-store binding and barrier/lock integration. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
