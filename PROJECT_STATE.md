@@ -11,12 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #43 | `feature/upgrade-engine@445df2d3f7be` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): add subprocess WAL recovery fixtures |
-| #44 | `feature/upgrade-common-lock-guard-v3@dbc616c6097c` | `main` | UNKNOWN | - | feat(upgrade): add capability-bound common lock seam |
+| #44 | `feature/upgrade-common-lock-guard-v3@dbc616c6097c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(upgrade): add capability-bound common lock seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34849920210 | `dbc616c6097c` | pull_request | Verify | in_progress:- |
 | 34846475548 | `445df2d3f7be` | pull_request | Verify | completed:success |
 | 34836911756 | `7b70225f5479` | push | Verify | completed:success |
 | 34836792274 | `499f86a27440` | pull_request | Verify | completed:success |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34835000643 | `fc58d4cbc752` | push | Verify | completed:success |
 | 34834926514 | `7cb1c7be8711` | pull_request | Verify | completed:success |
 | 34834489678 | `0291ab515ece` | push | Verify | completed:success |
-| 34834437154 | `c6999ca684b6` | pull_request | Verify | completed:success |
