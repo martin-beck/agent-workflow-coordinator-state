@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #66 | `feature/ar0007-engine-interface-proof@fa8430660e38` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(fencing): prove scoped adapter engine compatibility |
+| #66 | `feature/ar0007-engine-interface-proof@fa8430660e38` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(fencing): prove scoped adapter engine compatibility |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34874761171 | `fa8430660e38` | pull_request | Verify | queued:- |
+| 34874761171 | `fa8430660e38` | pull_request | Verify | in_progress:- |
 | 34874276419 | `6e8177d64609` | push | Verify | completed:success |
 | 34874123819 | `150cf29231d4` | pull_request | Verify | completed:success |
 | 34873752050 | `e4921fa0c06c` | push | Verify | completed:success |
