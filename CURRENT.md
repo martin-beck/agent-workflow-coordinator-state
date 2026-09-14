@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #38 descriptor-safe barrier reread and PR #39 route-completeness evidence merged; 315 tests and 95% branch coverage green; apply/rollback and storage_backend remain disabled. | Implement independent WAL/SHM/process-death crash-boundary evidence and then bind every future SQLite mutation path to the accepted fence; reconcile with AR-0008 refinement before any mutating upgrade enablement. | codex-awc-ar0007-upgrade-engine-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Added bounded v10 refinement contract and refinement-map link; exact formal artifact review remains open and TLC admission is infrastructure-blocked. | Independently review the contract against current runtime heads, correct any stale snapshot binding, then run/publish the formal gate only when canonical TLC admission is available; keep mutation disabled. | codex-awc-ar0008-refinement-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 refinement contract now carries exact runtime/route-test snapshots and file hashes; formal evidence checks pass, but canonical TLC admission remains infrastructure-blocked. | Complete independent provenance review, publish the formal contract if exact-head CI can run, and obtain canonical TLC admission before claiming any model execution; keep correspondence not-proven and mutation disabled. | codex-awc-ar0008-refinement-20260914 |
 
 ## Planned
 
