@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #49 | `feature/upgrade-formal-recovery@bc4c2ecba319` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | feat(formal): model session intent unknown outcomes |
+| #49 | `feature/upgrade-formal-recovery@bc4c2ecba319` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model session intent unknown outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34857765107 | `bc4c2ecba319` | pull_request | Verify | in_progress:- |
+| 34857765107 | `bc4c2ecba319` | pull_request | Verify | completed:failure |
 | 34857425832 | `21cc0245b2c6` | push | Verify | completed:success |
 | 34857132049 | `b5f3f7d765de` | pull_request | Verify | completed:success |
 | 34856825248 | `67e671cf3b93` | pull_request | Verify | completed:success |
