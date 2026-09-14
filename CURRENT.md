@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #142 merged as 80747a40; post-merge Verify pending. Exact PR head 55125dd passed independent review and all PR checks; preserve rejection-only routes. | Record post-merge Verify for merge 80747a40, then continue the next bounded repeated process-handoff evidence slice; keep production routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #142 merged as 80747a40; post-merge Verify 34910437806 passed with TLC 121472/90752 main, 110/94 small, attestation 10374456790. Keep rejection-only routes. | Start the next bounded repeated process-handoff evidence slice from 80747a40; keep production routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #142 exact signed head 55125dd against 55c46125. Test-only forked child dies twice while holding scope; parent rereads trusted authority/session, replaces durable authority/state revision and digest, rejects stale retry on authority revision change and old lease, and confirms lock cleanup. Focused tests pass 10 tests and 2 subtests; AWQ/scope/smoke are green, Verify skipped. | Continue independent review of the next AR-0007 crash/recheck seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
