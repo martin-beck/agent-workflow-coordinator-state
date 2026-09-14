@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #99 | `feature/ar0007-next-fencing-final@c04f835f1672` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: assert recovered fencing owner |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34891428806 | `c04f835f1672` | pull_request | Verify | in_progress:- |
 | 34891193544 | `ff3c5b22ffb3` | push | Verify | completed:success |
 | 34891081449 | `daec18f7fa45` | pull_request | Verify | completed:success |
 | 34890848910 | `588640e5ddc6` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34889778674 | `f2be6c19d620` | push | Verify | completed:success |
 | 34889667841 | `15231870974d` | pull_request | Verify | completed:success |
 | 34889449959 | `5759d94ccec1` | push | Verify | completed:success |
-| 34889329598 | `56a9e760031a` | pull_request | Verify | completed:success |
