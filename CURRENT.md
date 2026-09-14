@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Signed 90ca427 plus 9db4bf2 form a quality-green durable barrier control-plane checkpoint; publication remains blocked on authority integration, hostile process evidence, and v10 refinement. | Obtain independent exact-head review of 9db4bf2. If approved as a narrowly scoped contract checkpoint, publish with explicit non-claims; otherwise continue authority-lock/fencing, independent WAL/process-death tests, and AR-0008 formal refinement. Keep upgrade apply/rollback rejection-only. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #30 merged as 257ac7c: durable barrier control-plane checkpoint shipped; executable upgrade remains disabled. | After post-merge main Verify is green, promote/claim the next dependency-safe AR for concrete authority fencing and v10 formal refinement; keep apply/rollback rejection-only and AR-0007 open until those contracts are integrated. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
