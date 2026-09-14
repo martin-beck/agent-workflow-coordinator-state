@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #67 | `feature/ar0007-authority-boundary-audit@78056a6fb120` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(fencing): add read-only Git authority adapter |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34875647440 | `78056a6fb120` | pull_request | Verify | in_progress:- |
 | 34874943675 | `567c5fb254f1` | push | Verify | completed:success |
 | 34874761171 | `fa8430660e38` | pull_request | Verify | completed:success |
 | 34874276419 | `6e8177d64609` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34872729844 | `7acc3ddd3a82` | push | Verify | completed:success |
 | 34872547740 | `aaef9b8aabd9` | pull_request | Verify | completed:success |
 | 34872059183 | `1b112a363ee4` | push | Verify | completed:success |
-| 34871844538 | `cfbec76bb4c8` | pull_request | Verify | completed:success |
