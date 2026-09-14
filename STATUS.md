@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #126 merged as e6674512. Post-merge Verify 34902934701 succeeded with TLC 90,752/94 and attestation artifact 10371517159. Exact-head formal evidence recorded. | Start the next dependency-safe AR-0007 correctness slice from exact head e6674512; keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | PR126 merged as e6674512; post-merge Verify 34902934701 is in progress. No next AR-0007 PR is open; formal boundary unchanged. | Monitor Verify 34902934701 to completion, then review next exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34902934701 succeeded on e6674512 (PR126): TLC no errors, 90,752/94 distinct states, attestation artifact 10371517159. No next AR-0007 PR is open. | Monitor publication of the next AR-0007 exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
 
