@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `fc58d4cbc7526c5d367dd8f243957afc9e2ad286`
+- Product remote main: `8a67aadb58540ad86ff1679c750b8c6af1650fa9`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #40 | `feature/upgrade-formal-recovery@e8711cc7c37c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | docs(formal): bind v10 evidence to current fenced-route heads |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34835706022 | `80dad94503f7` | pull_request | Verify | completed:success |
 | 34835497258 | `e8711cc7c37c` | pull_request | Verify | completed:failure |
 | 34835000643 | `fc58d4cbc752` | push | Verify | completed:success |
 | 34834926514 | `7cb1c7be8711` | pull_request | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34831793845 | `2ea0fd325336` | pull_request | Verify | completed:success |
 | 34830900049 | `57aad248e821` | push | Verify | completed:success |
 | 34830828601 | `cebb3e4df1e7` | pull_request | Verify | completed:success |
-| 34830139124 | `b50558caa592` | push | Verify | completed:failure |
