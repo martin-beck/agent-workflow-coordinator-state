@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**14 ARs tracked** across 4 active status categories.
+**14 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 3 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -41,7 +41,7 @@ flowchart LR
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
-        AR_0014["AR-0014 - Open"]:::status_open
+        AR_0014["AR-0014 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -96,18 +96,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #82 merged as a900f92; Verify 34884757920 and TLC attestation 10364417989 passed. PR #84 adds fresh-instance ambiguous control reconciliation evidence from exact main a900f92. | Independently review PR #84 exact head 6eca3cb; merge only after awq/scope/smoke and exact-head coverage &gt;=95&#37; pass. Keep production mutation and dispatch disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Merged exact head 873d0d7 (PR #84) passed Verify run 34885522216. 405 tests passed with total branch coverage 95&#37;; AWQ, scope, and formal workflow passed (smoke skipped by event). Formal tier reported no errors across all checked models, including 90752 distinct states for the main barrier model and 94 for recovery; attestation artifact 10364811181 was finalized. Formal hashes unchanged: TLA 2a1a31f5, CFG e38502a, evidence 035e6c15; implementation_refinement=not-proven and mutation disabled. | Next AR-0007/AR-0012 slice must provide an executable journal/control-store reconciliation trace: shared operation/authority revision/fence/digest identity, explicit commit/reject/ambiguous outcome, process-death reopen persistence, verified-only recovery, idempotent retry, stale-owner rejection, and binding to the actual production caller. Require independent tests, exact-head CI, and formal provenance before any correspondence claim. |
-
-### Open (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work. |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | codex-ar0014-official-20260914 | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work. |
 
 ### Planned (4)
 
