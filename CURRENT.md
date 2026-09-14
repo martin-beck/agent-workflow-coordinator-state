@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #138 merged as 63621b15. Post-merge Verify 34908529579 succeeded: TLC 90,752/94 main, 110/94 small; attestation artifact 10373198625. The rejection-only caller boundary remains fail-closed and uncalled by production mutation routes. | AR-0007 remains open: next bounded gap is independently reviewed crash/recheck evidence for replaced descriptor or durable-session state after abort. Keep dispatch, mutation, upgrade, apply, and rollback routes unreachable; do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34908529579 for merge 63621b15 (PR138) remains in progress; formal/attestation logs not yet available. | Monitor Verify 34908529579 to completion, inspect exact TLC/attestation evidence, and preserve implementation_refinement=not-proven with AR-0012 unpromoted. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Replaced-descriptor/durable-session-after-abort review lane is active from merge 63621b15; no new AR-0007 PR is published yet (only unrelated PR #85 open). | Review exact next head for fail-closed stale/replacement handling, lock cleanup, durable session after abort, route reachability, and formal limits; preserve implementation_refinement=not-proven and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
