@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #71 | `feature/ar0007-sqlite-sidecar-faults@688dcd9abf09` | `main` | UNKNOWN | - | test(fencing): exercise SQLite crash rollback boundary |
+| #71 | `feature/ar0007-sqlite-sidecar-faults@688dcd9abf09` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(fencing): exercise SQLite crash rollback boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34878928287 | `688dcd9abf09` | pull_request | Verify | queued:- |
 | 34878458042 | `d259a04853e1` | pull_request | Verify | completed:success |
 | 34877951881 | `6a223c9ec7f4` | push | Verify | completed:success |
 | 34877522635 | `aa4c40db15b3` | pull_request | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34875829055 | `906b72ceb995` | push | Verify | completed:success |
 | 34875647440 | `78056a6fb120` | pull_request | Verify | completed:success |
 | 34874943675 | `567c5fb254f1` | push | Verify | completed:success |
-| 34874761171 | `fa8430660e38` | pull_request | Verify | completed:success |
