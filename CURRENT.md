@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement the approved v9 external control-store/barrier contract and bind concrete adapter snapshots; add crash/concurrency/fault tests. Checkpoint f5abc9b is identity-only and publication remains blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement approved v9 external control-store/barrier contract and bind concrete adapter snapshots; add crash/concurrency/fault tests. Checkpoints f5abc9b and 6e370d5 are identity-only; publication remains blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
