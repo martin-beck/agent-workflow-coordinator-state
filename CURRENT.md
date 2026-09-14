@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement only after independent review signs the BackupBoundary v1 contract: artifact-root confinement, full context envelope, backend role checks, common lock/recheck, idempotent operation manifest, bounded backend calls, and fail-closed fault semantics. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Await independent signoff on normative BackupBoundary v2 in plans/AR-0007.md at state commit 893302b; only then implement and test the boundary contract. Product remains untouched. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
