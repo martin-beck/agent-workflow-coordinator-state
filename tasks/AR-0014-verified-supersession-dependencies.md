@@ -1,20 +1,20 @@
 ---
 {
   "branch": "fix/verified-superseded-dependencies",
-  "checkpoint_commit": "2916855f8b0b3f23c2bfe1762c6af4afffb4331e",
+  "checkpoint_commit": "0a99db37fc9fbf9dbad815c38ccb7bb369d29901",
   "claim_expires": "",
   "depends_on": ["AR-0002"],
   "id": "AR-0014",
-  "next_action": "Independently review PR #79 at the immutable checkpoint, wait for exact-head CI, merge only after all required checks pass, then publish a signed immutable coordinator release before downstream vendor synchronization.",
+  "next_action": "Publish a signed immutable coordinator release containing the merged supersession implementation after release-specific provenance checks; then perform downstream vendor synchronization through AR-1182. Ignore unrelated coordinator coverage work.",
   "owner": "",
   "plan": "../plans/AR-0014.md",
   "priority": "P0",
   "schema_version": 1,
   "status": "open",
   "summary": "Make explicitly verified superseded tasks satisfy dependencies only through a completed successor.",
-  "task_revision": 1,
+  "task_revision": 2,
   "title": "Verified supersession dependency readiness",
-  "updated_at": "2026-09-14T20:46:38+02:00",
+  "updated_at": "2026-09-14T20:57:31+02:00",
   "worktree_key": "agent-workflow-coordinator-verified-supersession-dependencies"
 }
 ---
@@ -48,3 +48,8 @@ Authoritative sources:
 
 - Issue: https://github.com/martin-beck/agent-workflow-coordinator/issues/78
 - Implementation PR: https://github.com/martin-beck/agent-workflow-coordinator/pull/79
+
+- 2026-09-14T20:57:31+02:00: PR #79 merged through the protected path as
+  `0a99db37fc9fbf9dbad815c38ccb7bb369d29901`; focused Git/SQLite tests and
+  independent review passed. A later unrelated main push is not part of this
+  AR's feature scope. Release publication remains pending.
