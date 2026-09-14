@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `6235e46948b105c7a398ff65fd4a5f9248efbc71`
+- Product remote main: `c8231dfa682c7bc18e03eb69f40d34989cbbf94e`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #120 | `feature/ar0007-next-postverify10@1b8c9a81a3ae` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cap lock polling at remaining deadline |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34900142338 | `c8231dfa682c` | push | Verify | in_progress:- |
 | 34900015717 | `1b8c9a81a3ae` | pull_request | Verify | completed:success |
 | 34899553450 | `6235e46948b1` | push | Verify | completed:success |
 | 34899380106 | `87a90938c08c` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34897878157 | `ce36ff058e69` | pull_request | Verify | completed:success |
 | 34897622382 | `1be118def660` | push | Verify | completed:success |
 | 34897498316 | `92115530c01b` | pull_request | Verify | completed:success |
-| 34897226331 | `0d9e565d329a` | push | Verify | completed:success |
