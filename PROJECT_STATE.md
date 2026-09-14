@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #63 | `feature/ar0007-authority-adapter-contract@8846030c0cff` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat(fencing): bind rollback verification to scope |
+| #63 | `feature/ar0007-authority-adapter-contract@8846030c0cff` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(fencing): bind rollback verification to scope |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34873087734 | `8846030c0cff` | pull_request | Verify | queued:- |
+| 34873087734 | `8846030c0cff` | pull_request | Verify | in_progress:- |
 | 34872729844 | `7acc3ddd3a82` | push | Verify | completed:success |
 | 34872547740 | `aaef9b8aabd9` | pull_request | Verify | completed:success |
 | 34872059183 | `1b112a363ee4` | push | Verify | completed:success |
