@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #74 | `feature/ar0007-sqlite-sidecar-faults@958cc241acd0` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(sqlite): recover manifest after publication crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34880446034 | `958cc241acd0` | pull_request | Verify | queued:- |
 | 34880127263 | `46fe360d93e2` | push | Verify | completed:success |
 | 34879980260 | `8dab177c1841` | pull_request | Verify | completed:success |
 | 34879635996 | `a578e16c1b28` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34877522635 | `aa4c40db15b3` | pull_request | Verify | completed:success |
 | 34877205259 | `58cb897490da` | push | Verify | completed:success |
 | 34877075004 | `a1b975178a9b` | pull_request | Verify | completed:success |
-| 34876733468 | `c37811473db1` | push | Verify | completed:success |
