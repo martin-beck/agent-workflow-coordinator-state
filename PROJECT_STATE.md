@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #74 | `feature/ar0007-sqlite-sidecar-faults@958cc241acd0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(sqlite): recover manifest after publication crash |
+| #74 | `feature/ar0007-sqlite-sidecar-faults@958cc241acd0` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test(sqlite): recover manifest after publication crash |
 
 ## Recent workflows
 
