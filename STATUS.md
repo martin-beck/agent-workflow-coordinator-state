@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**13 ARs tracked** across 3 active status categories.
+**14 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -41,12 +41,14 @@ flowchart LR
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
+        AR_0014["AR-0014 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
     AR_0002 --> AR_0004
     AR_0002 --> AR_0005
     AR_0002 --> AR_0006
+    AR_0002 --> AR_0014
     AR_0003 --> AR_0007
     AR_0003 --> AR_0008
     AR_0003 --> AR_0010
@@ -78,7 +80,7 @@ flowchart LR
 | AR | Prerequisites | Dependents |
 | --- | --- | --- |
 | [AR-0001](tasks/AR-0001.md) | None | [AR-0002](tasks/AR-0002.md) |
-| [AR-0002](tasks/AR-0002.md) | [AR-0001](tasks/AR-0001.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) |
+| [AR-0002](tasks/AR-0002.md) | [AR-0001](tasks/AR-0001.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md), [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) |
 | [AR-0003](tasks/AR-0003.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md), [AR-0010](tasks/AR-0010.md) |
 | [AR-0004](tasks/AR-0004.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
 | [AR-0005](tasks/AR-0005.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
@@ -90,6 +92,7 @@ flowchart LR
 | [AR-0011](tasks/AR-0011.md) | None | None |
 | [AR-0012](tasks/AR-0012.md) | [AR-0007](tasks/AR-0007.md) | None |
 | [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
+| [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) | [AR-0002](tasks/AR-0002.md) | None |
 
 ## Complete AR inventory
 
@@ -99,6 +102,12 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #77 merged at 571b472 from signed 36cd3ed; post-merge Verify 34882351034 passed. Next PR #80 adds a fresh-instance control-store release recovery harness from exact head 571b472. | Independently review PR #80 exact head 7eaaebe, then merge only after awq/scope/smoke and exact-head checks pass. Keep production mutation and dispatch disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Exact PR #80 audit at head 7eaaebe against merged base 571b472: test-only control-store reopen coverage exercises a fresh SQLite store and adapter operation lock, revalidates exact authority/fencing evidence, then completes held-to-released CAS. Focused test and full 69-test rollback-control-store module pass. No production or formal files changed; refinement remains not-proven and mutation disabled. GitHub Verify 34883071202 has awq and scope SUCCESS, smoke SUCCESS, verify SKIPPED (path-scoped); no formal/model claim is implied. | Keep AR-0008 diagnostic-only; require AR-0012 to provide executable journal/control-store CAS, cross-store crash/reconciliation, and production caller evidence before any formal correspondence or mutation enablement. PR #80 is acceptable as narrowly scoped test evidence; independently review any post-merge head. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Independently review PR #79 at the immutable checkpoint, wait for exact-head CI, merge only after all required checks pass, then publish a signed immutable coordinator release before downstream vendor synchronization. |
 
 ### Planned (4)
 
