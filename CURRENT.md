@@ -8,12 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Bounded descriptor-safe SQLite barrier reread merged as PR #38; 314 tests and 95% branch coverage green; apply/rollback and storage_backend remain disabled. | Implement full SQLite mutation-route fencing and independent WAL/SHM/process-death evidence; bind accepted behavior to AR-0008 refinement before any mutating upgrade enablement. | codex-awc-ar0007-upgrade-engine-20260914 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. | - |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. | codex-awc-ar0008-refinement-20260914 |
 
 ## Planned
 
