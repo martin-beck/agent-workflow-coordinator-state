@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #126 | `feature/ar0007-next-postverify16@7e506013f7f5` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: preserve caller guard after lock failure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34902834420 | `7e506013f7f5` | pull_request | Verify | completed:success |
 | 34902530641 | `2513f2179c57` | push | Verify | completed:success |
 | 34902415328 | `a715b210a79f` | pull_request | Verify | completed:success |
 | 34902084937 | `25f09b7d2ae6` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34900639133 | `7d9933a932d8` | push | Verify | completed:success |
 | 34900484794 | `f2b4f12942a5` | pull_request | Verify | completed:success |
 | 34900142338 | `c8231dfa682c` | push | Verify | completed:success |
-| 34900015717 | `1b8c9a81a3ae` | pull_request | Verify | completed:success |
