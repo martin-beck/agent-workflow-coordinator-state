@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #30 | `feature/upgrade-engine@47511128b944` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(upgrade): durable barrier control-plane checkpoint |
+| #30 | `feature/upgrade-engine@47511128b944` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): durable barrier control-plane checkpoint |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34823601190 | `47511128b944` | pull_request | Verify | in_progress:- |
+| 34823601190 | `47511128b944` | pull_request | Verify | completed:success |
 | 34822614895 | `9db4bf2ba305` | workflow_dispatch | Verify | completed:success |
 | 34819400583 | `8e87fdb07359` | push | Verify | completed:success |
 | 34819110267 | `bbbbe73c8706` | pull_request | Verify | completed:success |
