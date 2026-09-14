@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #100 | `feature/ar0007-next-fencing-identity@a1f089c8317e` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: assert recovered barrier identity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34891788600 | `a1f089c8317e` | pull_request | Verify | in_progress:- |
 | 34891552068 | `40d6509b43ae` | push | Verify | completed:success |
 | 34891428806 | `c04f835f1672` | pull_request | Verify | completed:success |
 | 34891193544 | `ff3c5b22ffb3` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34890104204 | `10aaddfff868` | push | Verify | completed:success |
 | 34889997861 | `2c12a3d62b38` | pull_request | Verify | completed:success |
 | 34889778674 | `f2be6c19d620` | push | Verify | completed:success |
-| 34889667841 | `15231870974d` | pull_request | Verify | completed:success |
