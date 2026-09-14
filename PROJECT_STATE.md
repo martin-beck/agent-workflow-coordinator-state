@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #33 | `feature/upgrade-engine@bb29fe6f19a3` | `main` | UNKNOWN | - | feat(upgrade): add fail-closed mutation-fence foundation |
+| #33 | `feature/upgrade-engine@bb29fe6f19a3` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(upgrade): add fail-closed mutation-fence foundation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34829812928 | `bb29fe6f19a3` | pull_request | Verify | in_progress:- |
 | 34828915484 | `c0d33dfb9b15` | push | Verify | completed:success |
 | 34828849671 | `cfff2d696068` | pull_request | Verify | completed:success |
 | 34827084870 | `a3a0ed480cbb` | push | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34822614895 | `9db4bf2ba305` | workflow_dispatch | Verify | completed:success |
 | 34819400583 | `8e87fdb07359` | push | Verify | completed:success |
 | 34819110267 | `bbbbe73c8706` | pull_request | Verify | completed:success |
-| 34810167423 | `46fd7f596687` | push | Verify | completed:success |
