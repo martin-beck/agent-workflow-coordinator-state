@@ -8,12 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #57 merged at f618901b62ddb0738968eb8cb40e0739a530d2eb; merge-tree Verify 34868539458 exposed 94% coverage, fixed by signed test-only PR #58 merged at 50c1387d891719b0227072e7db70ee39a9b74d34. Post-merge Verify 34869376533 passed awq, scope, verify; smoke skipped. Lock-domain contract remains read-only and uncalled. | Continue AR-0007 toward real caller trace/refinement: bind the read-only lock-domain identity to a durable session/lease and actual CAS/selector routes only after exact multiprocess/failure evidence; keep runtime mutation/apply/rollback disabled. AR-0008 diagnostic-only; AR-0012/AR-0013 planned. | codex-awc-ar0007-next-20260914 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Exact origin/main 1ce176c audit: PR #56 caller-owned admission session remains uncalled; formal model/evidence unchanged and implementation_refinement=not-proven. Canonical local TLC attempt was admitted through isolated runner but failed before TLC with JVM pthread_create EAGAIN (host thread exhaustion); recorded as inconclusive infrastructure failure. | Keep AR-0008 diagnostic-only and mutation disabled. Await concrete durable caller binding: typed lock-domain scope, descriptor-safe barrier/authority reread, second recheck, actual CAS route binding, and exact multiprocess/failure traces before any formal correspondence update. AR-0007 remains parallel. | - |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Exact origin/main 1ce176c audit: PR #56 caller-owned admission session remains uncalled; formal model/evidence unchanged and implementation_refinement=not-proven. Canonical local TLC attempt was admitted through isolated runner but failed before TLC with JVM pthread_create EAGAIN (host thread exhaustion); recorded as inconclusive infrastructure failure. | Keep AR-0008 diagnostic-only and mutation disabled. Await concrete durable caller binding: typed lock-domain scope, descriptor-safe barrier/authority reread, second recheck, actual CAS route binding, and exact multiprocess/failure traces before any formal correspondence update. AR-0007 remains parallel. | codex-awc-ar0008-next-20260914 |
 
 ## Planned
 
