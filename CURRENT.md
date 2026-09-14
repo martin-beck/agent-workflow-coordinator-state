@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #38 descriptor-safe barrier reread and PR #39 route-completeness evidence merged; 315 tests and 95% branch coverage green; apply/rollback and storage_backend remain disabled. | Implement independent WAL/SHM/process-death crash-boundary evidence and then bind every future SQLite mutation path to the accepted fence; reconcile with AR-0008 refinement before any mutating upgrade enablement. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #38 descriptor-safe barrier reread and PR #39 route-completeness evidence merged; 315 tests and 95% branch coverage green; AR-0012 is the accepted follow-up for session identity/WAL/process integration. | Keep apply/rollback and storage_backend disabled; advance only with independently reviewed WAL/SHM/process-death evidence and the AR-0012 session/fencing integration contract after AR-0007/0008 dependencies are accepted. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #40 and post-merge Verify passed; formal evidence provenance is published, but canonical TLC admission is host-permission blocked with no TLC process running. | Wait for authorized CI/runner ownership or an explicitly reviewed isolated TLC lock path; then run and attest the formal tier. Keep correspondence not-proven and mutation disabled. | codex-awc-ar0008-refinement-20260914 |
 
 ## Planned
