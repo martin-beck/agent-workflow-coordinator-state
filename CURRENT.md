@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #135 merged as 9a0429ef. Post-merge Verify 34907059056 succeeded with TLC 90,752/94 and attestation artifact 10372019664. Published signed DCO PR #136 at 32ed4b3 from exact merged head. | Independently review PR #136 exact head 32ed4b3; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Production-caller reachability review lane is active from merge 9a0429ef; no new PR is published yet (only unrelated PR #85 open). | Review exact caller-reachability head when published for fail-closed route behavior, immediate identity/session/lease/revision checks, no real mutation or AR-0012 barrier implementation, and formal-obligation mapping. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #136 exact signed head 32ed4b3 against 9a0429ef: commit/apply/rollback phases reject before scope/backend; focused adapter/authority tests 26 passed (3 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next production-caller seam; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
