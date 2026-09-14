@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independently review bbbef20 and convert GitHub issues #27 and #28 into P0 successor AR dependencies through the authorized task-creation workflow. Keep upgrade apply/rollback rejection-only; do not implement or rebind formal evidence until both dependency contracts are accepted. | codex-awc-ar0007-upgrade-engine-20260914 |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Independently review signed source head 01b305b and the exact tested PR merge-tree attestation from run 34809949588 (artifact 10333648754, commit 54be2e9f, tree f00e4c0). Merge only if review accepts the PR merge-ref provenance; reserve full-exhaustive claims for a successful scheduled/manual six-model attestation. | codex-awc-ar0011-independent-review-20260914 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Exact-head PR #22 formal publication gate independently reviewed green. | Await parent merge decision; retain full-exhaustive claims for successful scheduled/manual run and preserve merge-tree attestation provenance. | codex-awc-ar0011-independent-review-20260914 |
 
 ## Open
 
