@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #41 | `feature/upgrade-engine@8022311588e9` | `main` | UNKNOWN | - | docs(upgrade): specify caller-owned SQLite barrier admission seam |
+| #41 | `feature/upgrade-engine@8022311588e9` | `main` | UNSTABLE | QUEUED:, QUEUED: | docs(upgrade): specify caller-owned SQLite barrier admission seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34836463466 | `8022311588e9` | pull_request | Verify | queued:- |
 | 34835815973 | `8a67aadb5854` | push | Verify | completed:success |
 | 34835706022 | `80dad94503f7` | pull_request | Verify | completed:success |
 | 34835497258 | `e8711cc7c37c` | pull_request | Verify | completed:failure |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34832461277 | `e9ead2281580` | pull_request | Verify | completed:success |
 | 34831868962 | `872a574ffc05` | push | Verify | completed:success |
 | 34831793845 | `2ea0fd325336` | pull_request | Verify | completed:success |
-| 34830900049 | `57aad248e821` | push | Verify | completed:success |
