@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `4ef1c7f66c92b1c42f54d32df1e8df1d1e58c34a`
+- Product remote main: `a578e16c1b2814fe6287e3c5f990e1090e61e87c`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #72 | `feature/ar0007-sqlite-sidecar-faults@e62c0762f708` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(sqlite): recover projection after commit crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34879635996 | `a578e16c1b28` | push | Verify | completed:success |
 | 34879454651 | `e62c0762f708` | pull_request | Verify | completed:success |
 | 34879073000 | `4ef1c7f66c92` | push | Verify | completed:success |
 | 34878928287 | `688dcd9abf09` | pull_request | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34876733468 | `c37811473db1` | push | Verify | completed:success |
 | 34876563718 | `b44fd0b49e2c` | pull_request | Verify | completed:success |
 | 34876168740 | `a6a95ce2940b` | pull_request | Verify | completed:success |
-| 34875829055 | `906b72ceb995` | push | Verify | completed:success |
