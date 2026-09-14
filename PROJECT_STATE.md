@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `567c5fb254f1f8c36935eb3acfbd0cb2c2adabac`
+- Product remote main: `906b72ceb995dc9c8a8d07d5653bba89b62801bc`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #67 | `feature/ar0007-authority-boundary-audit@78056a6fb120` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | feat(fencing): add read-only Git authority adapter |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34875647440 | `78056a6fb120` | pull_request | Verify | queued:- |
+| 34875829055 | `906b72ceb995` | push | Verify | completed:success |
+| 34875647440 | `78056a6fb120` | pull_request | Verify | completed:success |
 | 34874943675 | `567c5fb254f1` | push | Verify | completed:success |
 | 34874761171 | `fa8430660e38` | pull_request | Verify | completed:success |
 | 34874276419 | `6e8177d64609` | push | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34873087734 | `8846030c0cff` | pull_request | Verify | completed:success |
 | 34872729844 | `7acc3ddd3a82` | push | Verify | completed:success |
 | 34872547740 | `aaef9b8aabd9` | pull_request | Verify | completed:success |
-| 34872059183 | `1b112a363ee4` | push | Verify | completed:success |
