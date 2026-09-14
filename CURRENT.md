@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #125 merged as 2513f217; Verify 34902530641 succeeded with TLC 90,752/94 and attestation artifact 10371442588. Published signed DCO PR #126 at 7e50601 from exact merged head. | Independently review PR #126 exact head 7e50601; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #126 exact signed head 7e50601 against 2513f217: test-only caller-owned guard preservation after body failure; focused rollback-control tests 74 passed (49 subtests), awq/scope/smoke pass, verify skipped. | Continue independent exact-head review after merge; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR126 merged as e6674512; post-merge Verify 34902934701 is in progress. No next AR-0007 PR is open; formal boundary unchanged. | Monitor Verify 34902934701 to completion, then review next exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
