@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #38 | `feature/upgrade-engine@c6999ca684b6` | `main` | UNKNOWN | - | fix(upgrade): close binding snapshot TOCTOU in mutation fence |
 
 ## Recent workflows
 
