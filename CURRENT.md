@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #137 merged as 98b7f47c; Verify 34908127254 succeeded with TLC 90,752/94 and attestation artifact 10373291657. Published signed DCO PR #138 at 9363ce2 from exact merged head. | Independently review PR #138 exact head 9363ce2; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Stale/missing/replaced-after-crash review lane is active from merge 98b7f47c; no new AR-0007 PR is published yet (only unrelated PR #85 open). | Review exact next head for rejection-only route behavior, lock cleanup, stale/missing/replaced identity after crash, and exact formal mapping; preserve implementation_refinement=not-proven and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #138 exact signed head 9363ce2 against 98b7f47c: disabled rollback rejects before stale-context recheck; one-shot in-process abort unwinds scope before retry; focused adapter tests 15 passed (3 subtests), awq/scope/smoke pass, verify skipped. | Continue independent review of the next crash/recheck seam; require real process-death/lock-release evidence for stronger claims, preserve implementation_refinement=not-proven and no AR-0012 promotion. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
