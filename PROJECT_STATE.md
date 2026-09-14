@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `85bf3f068085cec48d97a9647e3b42297c8bbb0c`
+- Product remote main: `9ce42028c198ee9c3dc4a7cea4e664707629c5c9`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #91 | `feature/ar0007-next-fresh-recheck@b9169eb79b73` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: compare repeated fresh fence readers |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34888712155 | `9ce42028c198` | push | Verify | completed:success |
 | 34888585382 | `b9169eb79b73` | pull_request | Verify | completed:success |
 | 34888346228 | `85bf3f068085` | push | Verify | completed:success |
 | 34888238839 | `8f0658f20e2d` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34886830809 | `851203155776` | pull_request | Verify | completed:success |
 | 34886366200 | `a957bed5c37a` | push | Verify | completed:success |
 | 34886204013 | `1dfea479f483` | pull_request | Verify | completed:success |
-| 34885836520 | `73f855d7b71f` | workflow_dispatch | Verify | completed:failure |
