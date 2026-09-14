@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #60 | `feature/ar0007-cas-selector-binding@ff4c0fa87e7d` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(fencing): add uncalled lock-domain admission scope |
+| #60 | `feature/ar0007-cas-selector-binding@ff4c0fa87e7d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(fencing): add uncalled lock-domain admission scope |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34871106436 | `ff4c0fa87e7d` | pull_request | Verify | in_progress:- |
+| 34871106436 | `ff4c0fa87e7d` | pull_request | Verify | completed:success |
 | 34870065842 | `29eea5fc3996` | push | Verify | completed:success |
 | 34869864156 | `1d4a6bd81676` | pull_request | Verify | completed:success |
 | 34869376533 | `50c1387d8917` | push | Verify | completed:success |
