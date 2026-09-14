@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #60 | `feature/ar0007-cas-selector-binding@ff4c0fa87e7d` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(fencing): add uncalled lock-domain admission scope |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34871106436 | `ff4c0fa87e7d` | pull_request | Verify | in_progress:- |
 | 34870065842 | `29eea5fc3996` | push | Verify | completed:success |
 | 34869864156 | `1d4a6bd81676` | pull_request | Verify | completed:success |
 | 34869376533 | `50c1387d8917` | push | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34865039899 | `92db1d0abc5e` | pull_request | Verify | completed:success |
 | 34863964030 | `2cd8758c840d` | push | Verify | completed:success |
 | 34863794146 | `0d2281e5eafc` | pull_request | Verify | completed:success |
-| 34863442630 | `aa21a5504ee4` | push | Verify | completed:failure |
