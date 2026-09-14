@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 9d0f918 independently; then raise total coverage through meaningful upgrade_authority/storage/admission tests and close production authority/runtime reread, sidecar binding, and formal gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 4fd8ac1 independently; add meaningful non-AR coverage for upgrade_identity/admission/storage/backup or justify remaining defensive branches only through documented policy (no threshold/exclusion weakening), then rerun all gates. |
 
 ### Blocked (1)
 
