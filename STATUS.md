@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Two independent reviews agree no safe runtime patch exists until control-store binding/provisioning contract is specified; mutation remains rejection-only. | Specify and review owner-only project-bound control-store provisioning descriptor, authority-lock identity, MutationFence protocol, and initialization/migration behavior before implementation; then implement exact-route/process-death/WAL tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Signed provisioning contract draft 71ec783 is published locally but independent review requires identity, TOCTOU, sidecar, atomic marker, pre-commit, privacy, and existing-authority amendments before implementation. | Amend CONTROL_STORE_PROVISIONING.md per exact review blockers, rerun independent review, then publish docs-only PR; keep apply/rollback rejection-only. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
