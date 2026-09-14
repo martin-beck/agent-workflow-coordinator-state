@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independently review bbbef20 and convert GitHub issues #27 and #28 into P0 successor AR dependencies through the authorized task-creation workflow. Keep upgrade apply/rollback rejection-only; do not implement or rebind formal evidence until both dependency contracts are accepted. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. | codex-awc-ar0011-independent-review-20260914 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Await signed executable phase-adapter/CLI checkpoint; then extend the v10 model with barrier session, child targets, SQLite fencing, launcher, and crash reconciliation. | - |
-| P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. | - |
 
 ## Planned
 
