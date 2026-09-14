@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #134 merged as 6b421fd2; Verify 34906628555 succeeded with TLC 90,752/94 and attestation artifact 10371874416. Published signed DCO PR #135 at 69e3ef9 from exact merged head. | Independently review PR #135 exact head 69e3ef9; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #135 merged as 9a0429ef. Post-merge Verify 34907059056 succeeded with TLC 90,752/94 and attestation artifact 10372019664. Exact-head formal evidence recorded. | AR-0007 remains open: the fail-closed caller/session seams are merged but intentionally uncalled. Do not close or promote AR-0012 until a separately approved production caller integration proves safe dispatch reachability, mutation gates, crash recovery, and rollback invariants. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34907059056 succeeded on 9a0429ef (PR135): TLC no errors, main 121,472/90,752, small 110/94 distinct states; attestation artifact 10372019664. | Continue independent review of the next caller/session seam; preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
