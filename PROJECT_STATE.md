@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #40 | `feature/upgrade-formal-recovery@e8711cc7c37c` | `main` | UNKNOWN | - | docs(formal): bind v10 evidence to current fenced-route heads |
+| #40 | `feature/upgrade-formal-recovery@e8711cc7c37c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | docs(formal): bind v10 evidence to current fenced-route heads |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34835497258 | `e8711cc7c37c` | pull_request | Verify | in_progress:- |
+| 34835497258 | `e8711cc7c37c` | pull_request | Verify | completed:failure |
 | 34835000643 | `fc58d4cbc752` | push | Verify | completed:success |
 | 34834926514 | `7cb1c7be8711` | pull_request | Verify | completed:success |
 | 34834489678 | `0291ab515ece` | push | Verify | completed:success |
