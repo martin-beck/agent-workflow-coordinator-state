@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #118 corrective merge 677aa73a; prior Verify 34898450080 failed only on the brittle exact-one-sleep assertion, while the corrective post-merge Verify 34898935434 is in progress. Awaiting terminal success. | Monitor Verify 34898935434 to terminal result, then publish the next bounded signed test-only slice from exact 677aa73a. Keep mutation/apply/rollback routes disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #118 corrective merge 677aa73a; Verify 34898935434 succeeded, TLC 90,752/94 states, and attestation 10369842414 passed. Starting next bounded lock-timeout contract slice. | Implement and independently review a bounded lock-poll interval assertion from exact 677aa73a; keep mutation/apply/rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | PR118 merged as 677aa73a; post-merge Verify 34898935434 remains in progress. Corrective test preserves production lock semantics; no next AR-0007 PR is open. | Monitor Verify 34898935434 to completion, then review next exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
