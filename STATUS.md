@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement explicit ambiguous reconciliation/new identity, canonical digest binding, exact release-fault cross-products, and operation-scoped non-reentrant lock context with crash tests. Git remains fail-closed. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Add canonical digest binding and explicit release-fault reconciliation/postcondition reread, then operation-scoped non-reentrant lock context and crash tests. Git remains fail-closed. |
 
 ### Blocked (1)
 
