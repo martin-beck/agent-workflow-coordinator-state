@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #128 merged as f9370983. Post-merge Verify 34903703986 succeeded with TLC 90,752/94 and attestation artifact 10371536753. Exact-head formal evidence recorded. | Start the next uncalled fail-closed production-boundary slice from exact head f9370983; require a concrete contract gap, preserve mutation/dispatch/apply/rollback disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #128 merged as f9370983; Verify 34903703986 succeeded with TLC 90,752/94 and attestation artifact 10371536753. Published signed DCO PR #129 at 3be99ad from exact merged head. | Independently review PR #129 exact head 3be99ad; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34903703986 succeeded on f9370983 (PR128): TLC no errors, 90,752/94 distinct states, attestation artifact 10371536753. No next production-boundary PR is open. | Monitor publication of the next contract-safe production-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
