@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #142 | `ar0007-repeated-handoff@55125dda2168` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cover repeated stale handoff rereads |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34910350644 | `55125dda2168` | pull_request | Verify | completed:success |
 | 34909962582 | `55c46125075b` | push | Verify | completed:success |
 | 34909872017 | `d48a62b16f39` | pull_request | Verify | completed:success |
 | 34909563807 | `745fccad169a` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34908127254 | `98b7f47cc6c0` | push | Verify | completed:success |
 | 34908012929 | `3c1030102f54` | pull_request | Verify | completed:success |
 | 34907694494 | `4aa8e86ec88d` | push | Verify | completed:success |
-| 34907576152 | `32ed4b3649d3` | pull_request | Verify | completed:success |
