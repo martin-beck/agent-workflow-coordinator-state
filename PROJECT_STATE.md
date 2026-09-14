@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #39 | `feature/upgrade-engine@7cb1c7be8711` | `main` | UNKNOWN | - | test(upgrade): cover every SQLite mutation route with the fence |
 
 ## Recent workflows
 
