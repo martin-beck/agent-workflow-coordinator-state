@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #32 | `feature/upgrade-engine@cfff2d696068` | `main` | UNKNOWN | - | docs(upgrade): specify control-store provisioning and fencing contract |
 
 ## Recent workflows
 
