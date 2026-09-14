@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #132 merged as 49514ba2. Post-merge Verify 34905407071 succeeded with TLC 90,752/94 and attestation artifact 10371799691. Published signed DCO PR #133 at b3ef227 from exact merged head. | Independently review PR #133 exact head b3ef227; merge only after exact-head tests, quality, coverage >=95%, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #133 merged as 3e8a7bb6. Post-merge Verify 34905872976 succeeded with TLC 90,752/94 and attestation artifact 10372448982. Exact-head formal evidence recorded. | Start the next uncalled caller-integration seam from exact head 3e8a7bb6; preserve fail-closed behavior and keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR133 merged as 3e8a7bb6; post-merge Verify 34905872976 remains in progress. No next caller-integration PR is open; formal boundary unchanged. | Monitor Verify 34905872976 to completion, then review next caller-integration seam; preserve implementation_refinement=not-proven and mutation disabled. | codex-awc-ar0008-next-20260914 |
 
 ## Open
