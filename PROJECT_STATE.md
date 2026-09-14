@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `83f1482b061e4cf43c160bc5243801418aca5f32`
+- Product remote main: `0291ab515eced70f9a9e6196c6c73beb3454062d`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #38 | `feature/upgrade-engine@c6999ca684b6` | `main` | UNKNOWN | - | fix(upgrade): close binding snapshot TOCTOU in mutation fence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34834437154 | `c6999ca684b6` | pull_request | Verify | completed:success |
 | 34832529038 | `83f1482b061e` | push | Verify | completed:success |
 | 34832461277 | `e9ead2281580` | pull_request | Verify | completed:success |
 | 34831868962 | `872a574ffc05` | push | Verify | completed:success |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34829877406 | `9a97e208ed7d` | push | Verify | completed:failure |
 | 34829812928 | `bb29fe6f19a3` | pull_request | Verify | completed:success |
 | 34828915484 | `c0d33dfb9b15` | push | Verify | completed:success |
-| 34828849671 | `cfff2d696068` | pull_request | Verify | completed:success |
