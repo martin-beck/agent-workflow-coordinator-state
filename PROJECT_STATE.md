@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #112 | `feature/ar0007-next-postverify2@edcfa2fe357e` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject stale rollback child inheritance |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34896352568 | `edcfa2fe357e` | pull_request | Verify | in_progress:- |
 | 34896113685 | `2a168e375aa2` | push | Verify | completed:success |
 | 34895955058 | `18230aadc363` | pull_request | Verify | completed:success |
 | 34895669729 | `444f23c6ec1b` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34894615738 | `4790f584168d` | push | Verify | completed:success |
 | 34894489456 | `765c212a9a00` | pull_request | Verify | completed:success |
 | 34894272654 | `f8f4387386a5` | push | Verify | completed:success |
-| 34894158063 | `c8a0784fba36` | pull_request | Verify | completed:success |
