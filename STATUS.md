@@ -97,7 +97,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Amended contract e2e607c substantially closes provisioning gaps; independent review requires four final clarifications before docs-only publication. | Define canonical repository IDs, concrete authority lock semantics, WAL/SHM lifecycle rebinding, and exact pre-commit ambiguity protocol; rerun exact-head review, then publish docs-only PR. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Exact docs head 3ec1d02 passes identity/lock/pre-commit review except immutable marker versus WAL/SHM sidecar rebinding contradiction. | Separate stable DB identity from mutable sidecar lifecycle evidence with crash-safe fsynced reconcile protocol; rerun exact-head review, then publish docs-only PR. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal2-20260914 | Bounded v10 barrier model merged and post-merge verification passed; implementation refinement remains open. | Keep executable mutation disabled; create/advance follow-up ARs for concrete authority fencing, process-death/WAL evidence, and refinement correspondence. |
 
 ### Planned (4)
