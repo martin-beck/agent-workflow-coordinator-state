@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #77 | `feature/ar0007-sqlite-sidecar-faults@36cd3ed24087` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test(journal): reject stale fence bindings |
+| #77 | `feature/ar0007-sqlite-sidecar-faults@36cd3ed24087` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(journal): reject stale fence bindings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34881977614 | `36cd3ed24087` | pull_request | Verify | in_progress:- |
+| 34881977614 | `36cd3ed24087` | pull_request | Verify | completed:success |
 | 34881587836 | `de2278af56f5` | push | Verify | completed:success |
 | 34881431017 | `306f55f5139a` | pull_request | Verify | completed:success |
 | 34881075740 | `119ed74dc3fb` | push | Verify | completed:success |
