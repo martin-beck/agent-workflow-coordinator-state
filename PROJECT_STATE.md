@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #110 | `feature/ar0007-next-digest-final6@e147175242b6` | `main` | CLEAN | - | test: assert lowercase recovered digest |
+| #110 | `feature/ar0007-next-digest-final6@e147175242b6` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: assert lowercase recovered digest |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34895558639 | `e147175242b6` | pull_request | Verify | queued:- |
+| 34895558639 | `e147175242b6` | pull_request | Verify | in_progress:- |
 | 34895346257 | `e52e43cb6f47` | push | Verify | completed:success |
 | 34895217575 | `6d89bd096e03` | pull_request | Verify | completed:success |
 | 34894953464 | `82c0a3b6d6a8` | push | Verify | completed:success |
