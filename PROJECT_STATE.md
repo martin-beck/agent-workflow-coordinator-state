@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #118 | `feature/ar0007-next-postverify8@519d9d3b34c1` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: accept bounded lock polling retries |
+| #118 | `feature/ar0007-next-postverify8@519d9d3b34c1` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: accept bounded lock polling retries |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34898800121 | `519d9d3b34c1` | pull_request | Verify | in_progress:- |
+| 34898800121 | `519d9d3b34c1` | pull_request | Verify | completed:success |
 | 34898450080 | `ad8692bb7940` | push | Verify | completed:failure |
 | 34898320060 | `c0eb59eeb76d` | pull_request | Verify | completed:success |
 | 34898014642 | `a83ebb451aaa` | push | Verify | completed:success |
