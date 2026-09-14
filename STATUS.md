@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #131 merged as e9276b88; Verify 34904906172 succeeded with TLC 90,752/94 and attestation artifact 10371813705. Published signed DCO PR #132 at 88adbce from exact merged head. | Independently review PR #132 exact head 88adbce; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #132 merged as 49514ba2. Post-merge Verify 34905407071 succeeded with TLC 90,752/94 and attestation artifact 10371799691. Exact-head formal evidence recorded. | Start the next typed session-boundary slice from exact head 49514ba2; preserve fail-closed behavior and keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | PR132 merged as 49514ba2; post-merge Verify 34905407071 remains in progress. No next typed session-boundary PR is open; formal boundary unchanged. | Monitor Verify 34905407071 to completion, then review next typed session-boundary slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
