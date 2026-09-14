@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #81 | `feature/coverage-repair-79@a8ef7efd19a3` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(state): restore supersession coverage gate |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34884165286 | `05ebaee04376` | push | Verify | in_progress:- |
 | 34884022446 | `a8ef7efd19a3` | pull_request | Verify | completed:success |
 | 34883440203 | `5b38583eb73c` | push | Verify | completed:failure |
 | 34883422935 | `0a99db37fc9f` | push | Verify | completed:cancelled |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34881587836 | `de2278af56f5` | push | Verify | completed:success |
 | 34881431017 | `306f55f5139a` | pull_request | Verify | completed:success |
 | 34881075740 | `119ed74dc3fb` | push | Verify | completed:success |
-| 34880937654 | `aaf81411c065` | pull_request | Verify | completed:success |
