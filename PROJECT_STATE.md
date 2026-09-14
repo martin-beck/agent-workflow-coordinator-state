@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #32 | `feature/upgrade-engine@cfff2d696068` | `main` | UNKNOWN | - | docs(upgrade): specify control-store provisioning and fencing contract |
+| #32 | `feature/upgrade-engine@cfff2d696068` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | docs(upgrade): specify control-store provisioning and fencing contract |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34828849671 | `cfff2d696068` | pull_request | Verify | in_progress:- |
 | 34827084870 | `a3a0ed480cbb` | push | Verify | completed:success |
 | 34826903622 | `ee930bc97b90` | pull_request | Verify | completed:success |
 | 34826709556 | `ee786901b9fa` | pull_request | Verify | completed:failure |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34819110267 | `bbbbe73c8706` | pull_request | Verify | completed:success |
 | 34810167423 | `46fd7f596687` | push | Verify | completed:success |
 | 34809949588 | `01b305b4ac7b` | pull_request | Verify | completed:success |
-| 34809697468 | `59d72c6379a1` | pull_request | Verify | completed:failure |
