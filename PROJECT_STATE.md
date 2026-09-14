@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `55c46125075b691fd5f5c3a3a297e85ec06c2a20`
+- Product remote main: `80747a4000cf38886b100666715b77f3335f96fd`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #142 | `ar0007-repeated-handoff@55125dda2168` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cover repeated stale handoff rereads |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34910437806 | `80747a4000cf` | push | Verify | in_progress:- |
 | 34910350644 | `55125dda2168` | pull_request | Verify | completed:success |
 | 34909962582 | `55c46125075b` | push | Verify | completed:success |
 | 34909872017 | `d48a62b16f39` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34908437791 | `9363ce2063df` | pull_request | Verify | completed:success |
 | 34908127254 | `98b7f47cc6c0` | push | Verify | completed:success |
 | 34908012929 | `3c1030102f54` | pull_request | Verify | completed:success |
-| 34907694494 | `4aa8e86ec88d` | push | Verify | completed:success |
