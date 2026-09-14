@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Obtain independent exact-head review of f5ad2fd; then implement production delegate/runtime reread and sidecar binding before formal/coverage gates. Do not publish yet. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Add subprocess/process-death rollback recovery test and reject bool CAS revisions; document/test schema-v2 refusal contract. Then address CI-equivalent mypy/coverage without weakening gates. |
 
 ### Blocked (1)
 
