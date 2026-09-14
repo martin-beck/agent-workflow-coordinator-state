@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `121f2e396ff5da6043faa51df7ab126cf4f6f1e7`
+- Product remote main: `c9fe1ba08f35260f9650d42c8787abdc93f280e9`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,12 +10,12 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #46 | `fix/upgrade-lock-guard-coverage@2b91cf3e231f` | `main` | UNKNOWN | - | test(upgrade): cover lock guard rejection paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34851912635 | `2b91cf3e231f` | pull_request | Verify | completed:success |
 | 34851293244 | `121f2e396ff5` | push | Verify | completed:failure |
 | 34851144597 | `c0bcdf3745d3` | pull_request | Verify | completed:success |
 | 34850795199 | `09122316c212` | push | Verify | completed:failure |
@@ -27,4 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34836548464 | `e6bfb1df7927` | push | Verify | completed:success |
 | 34836463466 | `8022311588e9` | pull_request | Verify | completed:success |
 | 34835815973 | `8a67aadb5854` | push | Verify | completed:success |
-| 34835706022 | `80dad94503f7` | pull_request | Verify | completed:success |
