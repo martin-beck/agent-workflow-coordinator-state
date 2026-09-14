@@ -90,7 +90,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Review 9b7ac7d; then resolve executable release-contract/phase-adapter dependency (reopen AR-0003 or create child) before any handoffctl upgrade command. Rebind formal evidence only after exact production tree is stable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Harden selector reconciliation locking/cleanup/read provisioning, then resolve executable release-contract/phase-adapter dependency before any CLI wiring. Keep formal evidence bound only to signed terminal TLC checkpoint. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-formal-20260914 | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Model stale-fence/CAS rejection and release-specific selector identity transitions; retain explicit non-claims for implementation refinement. |
 
 ### Blocked (1)
