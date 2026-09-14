@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #118 corrective merge 677aa73a; Verify 34898935434 succeeded with TLC 90,752/94 and attestation 10369842414. Published bounded test-only PR #119 at 87a90938 from exact merged head. | Independently review PR #119 exact head 87a90938; merge only after exact-head tests, quality, coverage &gt;=95&#37;, and formal evidence pass. Keep production mutation, dispatch, upgrade, apply, and rollback routes disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #119 merged as 6235e469. Post-merge Verify 34899553450 succeeded: TLC 90,752/94, exact-head attestation artifact 10370072900. Starting next bounded test-only slice from exact merged head. | Implement and independently review the next narrow test-only correctness assertion from 6235e469; preserve production mutation, dispatch, upgrade, apply, and rollback routes as disabled. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | PR119 merged as 6235e469; post-merge Verify 34899553450 is in progress. No next AR-0007 PR is open; formal boundary unchanged. | Monitor Verify 34899553450 to completion, then review next exact-head slice; preserve implementation_refinement=not-proven and mutation disabled. |
 
 ### Open (1)
