@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #33 | `feature/upgrade-engine@bb29fe6f19a3` | `main` | UNKNOWN | - | feat(upgrade): add fail-closed mutation-fence foundation |
 
 ## Recent workflows
 
