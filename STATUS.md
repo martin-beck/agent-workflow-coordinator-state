@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #134 merged as 6b421fd2. Post-merge Verify 34906628555 succeeded with TLC 90,752/94 and attestation artifact 10371874416. Typed uncalled adapter/session boundary remains fail-closed. | AR-0007 completion criteria are not met: no canonical production caller is wired, and upgrade/apply/rollback mutation routes remain disabled. Next bounded gap is an independently reviewed caller integration that proves session/lease/descriptor recheck immediately before any future mutation, with crash/recheck evidence. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34906628555 succeeded on 6b421fd2 (PR134): TLC no errors, 90,752/94 distinct states; attestation artifact 10371874416. Formal tier is sufficient for this non-mutating slice provenance, not for concrete refinement or AR-0012 promotion. | Continue independent review of the next caller/session seam; preserve implementation_refinement=not-proven, mutation disabled, and require BackupBoundary v9 crash/reopen evidence before any promotion. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Canonical caller/session-recheck review lane is active from merge 6b421fd2; no new PR is published yet (only unrelated PR #85 open). | Review the next exact-head caller/session-recheck diff against v9 lock order, descriptor/session identity, lease/revision, crash/reopen, and route-reachability obligations; preserve not-proven refinement and do not promote AR-0012. |
 
 ### Open (1)
 
