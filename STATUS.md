@@ -5,13 +5,13 @@
 
 ## Portfolio overview
 
-**11 ARs tracked** across 5 active status categories.
+**11 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 1 |
-| **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
+| **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 6 |
@@ -38,7 +38,7 @@ flowchart LR
         AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
-        AR_0011["AR-0011 - Blocked"]:::status_blocked
+        AR_0011["AR-0011 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -92,16 +92,11 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-upgrade-engine-20260914 | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independently review bbbef20 and convert GitHub issues #27 and #28 into P0 successor AR dependencies through the authorized task-creation workflow. Keep upgrade apply/rollback rejection-only; do not implement or rebind formal evidence until both dependency contracts are accepted. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Await signed executable phase-adapter/CLI checkpoint; then extend the v10 model with barrier session, child targets, SQLite fencing, launcher, and crash reconciliation. |
-
-### Blocked (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Unclaimed | Prevent unbounded coordinator TLA+ jobs from exhausting shared host memory. | Monitor exact-head run 34783911645 for 59a49ef; verify runner-bus setup passes before required full formal gate. Do not merge until fresh review and all checks pass. |
 
 ### Planned (2)
