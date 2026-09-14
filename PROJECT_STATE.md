@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #75 | `feature/ar0007-sqlite-sidecar-faults@aaf81411c065` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(sqlite): retry ambiguous restore after crash |
+| #75 | `feature/ar0007-sqlite-sidecar-faults@aaf81411c065` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test(sqlite): retry ambiguous restore after crash |
 
 ## Recent workflows
 
