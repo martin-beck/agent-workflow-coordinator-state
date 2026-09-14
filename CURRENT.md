@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Rebind AR-0008 evidence to 685bad7 with exact hashes and TLC metadata. Keep mutating commands rejection-only until broad protocol redesign is implemented and independently reviewed. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Independently review signed redesign checkpoint bbbef20. Keep upgrade apply/rollback rejection-only; create successor dependency ARs for barrier/quiescence plus SQLite write fencing and for the stable selector-aware launcher/versioned runtime/authenticity boundary before implementation or formal rebind. | codex-awc-ar0007-upgrade-engine-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Bounded upgrade recovery model and exact TLC evidence added; implementation refinement remains unproven. | Add phase-adapter refinement evidence after a signed executable adapter checkpoint; retain bounded-model and Git non-claims. | codex-awc-ar0008-formal-20260914 |
 
 ## Blocked
