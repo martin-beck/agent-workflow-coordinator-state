@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Implement concrete SQLite WAL control-store snapshot/recheck/CAS boundary with fixed coordinator lock order; integrate it with rollback verification. Current journal/adapter verification checkpoint 0c4a092 is not publication-ready. | codex-awc-ar0007-upgrade-engine-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Execute upgrades atomically and restore the known-good runtime on every failure path. | Integrate 85f1a2f control store into production adapter construction and add crash/fault/concurrency evidence; Git remains fail-closed. Publication remains blocked. | codex-awc-ar0007-upgrade-engine-20260914 |
 
 ## Blocked
 
