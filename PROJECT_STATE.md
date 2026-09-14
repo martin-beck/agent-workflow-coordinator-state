@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #120 | `feature/ar0007-next-postverify10@1b8c9a81a3ae` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: cap lock polling at remaining deadline |
+| #120 | `feature/ar0007-next-postverify10@1b8c9a81a3ae` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cap lock polling at remaining deadline |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34900015717 | `1b8c9a81a3ae` | pull_request | Verify | queued:- |
+| 34900015717 | `1b8c9a81a3ae` | pull_request | Verify | completed:success |
 | 34899553450 | `6235e46948b1` | push | Verify | completed:success |
 | 34899380106 | `87a90938c08c` | pull_request | Verify | completed:success |
 | 34898935434 | `677aa73a61c3` | push | Verify | completed:success |
