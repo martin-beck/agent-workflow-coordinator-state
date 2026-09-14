@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #71 | `feature/ar0007-sqlite-sidecar-faults@d259a04853e1` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(fencing): exercise SQLite crash rollback boundary |
+| #71 | `feature/ar0007-sqlite-sidecar-faults@d259a04853e1` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(fencing): exercise SQLite crash rollback boundary |
 
 ## Recent workflows
 
