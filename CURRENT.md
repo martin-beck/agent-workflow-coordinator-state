@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #146 merged as ade2f774. Verify 34911999039 succeeded: TLC 121472/90752 main, 110/94 small; attestation artifact 10374781157. Fresh-process stale-lease rejection remains test-only and fail-closed. | AR-0007 remains open: next bounded gap is independently reviewed fresh-process retry with explicit repeated trusted reread and stale-lease rejection. Keep production routes unreachable; do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #147 from ade2f774, signed 5f71278: fresh-process trusted rereads and repeated stale-lease rejection with cleanup. | Review PR #147; keep production routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Monitoring the next AR-0007 fresh-process repeated trusted-reread/stale-lease retry slice from merged ade2f774. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal boundaries remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process repeated trusted reread, stale-lease rejection and cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
