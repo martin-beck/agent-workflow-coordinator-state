@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #271 | `feature/ar0007-binding-validated-scope@d1d6cec5fa94` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | feat: add backend-free validated scope seam |
+| #271 | `feature/ar0007-binding-validated-scope@d1d6cec5fa94` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: add backend-free validated scope seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34954762285 | `d1d6cec5fa94` | pull_request | Verify | in_progress:- |
+| 34954762285 | `d1d6cec5fa94` | pull_request | Verify | completed:success |
 | 34954212599 | `301cc0433eb3` | push | Verify | completed:success |
 | 34954017686 | `f8f83c546893` | pull_request | Verify | completed:success |
 | 34953713089 | `f27ad0442c19` | push | Verify | completed:success |
