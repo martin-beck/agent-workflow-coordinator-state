@@ -12,12 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 | #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
-| #286 | `ar0007-process-recovery@49158eb914ea` | `main` | UNKNOWN | - | test: prove bound snapshot process recovery |
+| #286 | `ar0007-process-recovery@49158eb914ea` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: prove bound snapshot process recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34965641226 | `49158eb914ea` | pull_request | Verify | in_progress:- |
 | 34964955470 | `597188ac7600` | push | Verify | completed:success |
 | 34964826436 | `55e54c3a7795` | pull_request | Verify | completed:success |
 | 34964157240 | `7d184f1d1e11` | pull_request | Verify | completed:success |
@@ -29,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34960809020 | `c01f79997072` | pull_request | Verify | completed:success |
 | 34960349321 | `2022b25b21b4` | push | Verify | completed:success |
 | 34960246457 | `8f79163b9250` | pull_request | Verify | completed:success |
-| 34959860593 | `abdc64c66b54` | push | Verify | completed:success |
