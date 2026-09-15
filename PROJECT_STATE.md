@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `ecadfb9a6b46e7eca3c2f2f6d1eb3241b1fc1dcb`
+- Product remote main: `d4495850db26bee4051b4c566d1cfc62f3f6877d`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,8 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #275 | `feature/ar0007-sidecar-reacquire@648aff41dc97` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: probe lock recovery after WAL rejection |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
