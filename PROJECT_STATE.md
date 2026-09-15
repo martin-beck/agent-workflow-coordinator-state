@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #180 | `ar0007-validated-mapping-revision@cbaa62e45a1e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject mapping state revisions before lock acquisition |
+| #180 | `ar0007-validated-mapping-revision@cbaa62e45a1e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject mapping state revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34923738445 | `cbaa62e45a1e` | pull_request | Verify | in_progress:- |
+| 34923738445 | `cbaa62e45a1e` | pull_request | Verify | completed:success |
 | 34923574505 | `8a010cd50975` | push | Verify | completed:success |
 | 34923484669 | `d6d3907ea7f3` | pull_request | Verify | completed:success |
 | 34923315295 | `0461a91bced5` | push | Verify | completed:success |
