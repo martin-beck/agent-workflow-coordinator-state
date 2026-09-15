@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 merged d449585 with green Verify 34957039341. Published signed PR #276 at bb4ef22: typed read_git_authority_snapshot captures .git identity, clean status, symbolic/resolved HEAD, requested ref reachability, and rereads repository identity immediately before return; dirty, detached, invalid, and mismatched refs fail closed. Fixed Git observation argv only; no mutation/execute path. Focused 2 tests and local quality gates green. | Obtain independent exact-head review and merge PR #276 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Keep CAS/backend mutation, dispatch, apply, rollback, and production integration disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | Independent review blocks PR #276 head 1d1726e: reachable ancestor refs are rejected by equality and final HEAD/ref commits are not reread after reachability. Caller worker is repairing the integrated read-only Git authority seam; no merge or mutation wiring. | Repair PR #276 again: remove ref==HEAD restriction and add final HEAD/requested-ref commit reread after reachability; obtain independent exact-head PASS before merge. Keep CAS/backend mutation, dispatch, apply, rollback, and production integration disabled. |
 
 ### Open (2)
 
