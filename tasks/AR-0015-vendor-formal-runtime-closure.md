@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Ensure every formal verifier runtime input and regression test is present in vendor snapshots.",
-  "task_revision": 3,
+  "task_revision": 4,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:32:50+00:00",
+  "updated_at": "2026-09-15T16:33:00+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -37,3 +37,6 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
   formal-runtime vendor closure PR #85, subject to exact-main rebase and full Verify.
 
 - 2026-09-15T16:32:50+00:00: Claimed by codex-awc-ar0015-v037-20260915.
+
+- 2026-09-15T16:33:00+00:00: Recorded command exit 1; command argv SHA-256
+  2069104216d5af1d160732b2df3ce74de6bb0efdb85402feaa7f6a9fa1c460d9.
