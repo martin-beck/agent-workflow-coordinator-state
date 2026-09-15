@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #158 | `ar0007-validated-context-missing@254bf590492d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject missing caller context before lock |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34917199883 | `254bf590492d` | pull_request | Verify | completed:success |
 | 34916940596 | `794db11da7b8` | push | Verify | completed:success |
 | 34916824568 | `2fd572cb82fe` | pull_request | Verify | completed:success |
 | 34916301938 | `a7ad8e8f7695` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34915285598 | `56f56c1f7aa7` | push | Verify | completed:success |
 | 34914905690 | `20fbad0598bd` | pull_request | Verify | completed:success |
 | 34914512235 | `bc17d47482df` | push | Verify | completed:success |
-| 34914425703 | `7aeaba3d0a9c` | pull_request | Verify | completed:success |
