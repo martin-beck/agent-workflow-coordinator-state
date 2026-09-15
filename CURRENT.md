@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #324 merged as 509906c with real Git/SQLite bound-inspection coverage; post-merge fast run 35036896561 failed only coverage at 94% versus 95% gate. | Repair coverage regression with focused tests without weakening the 95% gate; rerun fast post-merge validation and preserve non-authorizing rollback/refinement nonclaims. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #324 merged as 509906c; PR #325 coverage repair merged as 977f561. Post-merge Verify 35037516193 passed with pr-fast and artifact 10424121055. | Advance the non-authorizing engine-level Git/SQLite hostile rejection evidence slice; preserve byte-for-byte state, lock cleanup, and formal/refinement nonclaims. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
