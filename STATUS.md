@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #249 merged 857ff047; Verify 34941957066 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10385428754. PR #250 published signed head a865961. | Obtain independent review and merge PR #250 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | Current merged product head remains 857ff047 after PR249; Mapping key enumeration is guarded, lookup/get failures remain the next bounded gap. | Review corrective hostile Mapping lookup/get rejection PR when published; require LockDomainError before common-lock, zero ownership, focused/public gates, and preserve mutation disabled/refinement not-proven. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR250 merged c60d285; Verify 34942440016 green after lookup-failure fix, bounded TLC main 121472/90752 and small 110/94, attestation 10386285759. | Continue independent audit from exact merge c60d285; require caller/session failures to normalize before common-lock with zero ownership, and retain mutation disabled/refinement not-proven. |
 
 ### Open (1)
 
