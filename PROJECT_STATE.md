@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #232 | `ar0007-validated-map-owner@9ca3672273d8` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject mapping fencing owners before lock acquisition |
+| #232 | `ar0007-validated-map-owner@9ca3672273d8` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject mapping fencing owners before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34936233419 | `9ca3672273d8` | pull_request | Verify | in_progress:- |
+| 34936233419 | `9ca3672273d8` | pull_request | Verify | completed:success |
 | 34936059109 | `fd42a2525976` | push | Verify | completed:success |
 | 34935982297 | `05f28c55f7f4` | pull_request | Verify | completed:success |
 | 34935812422 | `e6ed245436d4` | push | Verify | completed:success |
