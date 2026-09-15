@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #153 merged 56f56c1f. Verify 34915285598 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376385352. | Start next bounded canonical lock-domain/session caller boundary from 56f56c1f; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #154 published from 56f56c1f at signed 9979977: canonical LockDomainScope.bind captures common/control/authority identity; hold remains recheck-only and mutation routes unreachable. | Independently review PR #154 exact head 9979977; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Independent current-head audit after merged bc17d474/PR152: no new caller-boundary implementation or production route is present; PR153 remains open. The current test-only slice passes 40 focused hostile lock/session tests (12 subtests) on branch 20fbad0; diff versus bc17d474 touches only tests/test_lock_domain_scope.py and no formal/TLC/workflow files. Formal correspondence remains not-proven. | Review the next exact AR-0007 caller-boundary PR when published; run focused hostile tests and admitted canonical TLC only when infrastructure permits. Preserve mutation disabled, implementation_refinement=not-proven, and do not promote AR-0012. |
 
 ### Open (1)
