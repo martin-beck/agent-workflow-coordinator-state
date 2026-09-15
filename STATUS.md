@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #189 merged fb514c33; Verify 34926162930 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10379444461). | Create and publish the next narrow rejection-only caller/session validation slice from fb514c33; keep dispatch, mutation, upgrade, apply, and rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #189 merged fb514c33; Verify 34926162930 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10379444461). PR #190 published at 2deb3ea. | Independently review PR #190 exact head 2deb3ea; merge only after awq/scope/smoke and full Verify pass, then record post-merge evidence. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge formal attestation for fb514c33 (PR189): Verify 34926162930 succeeded with main TLC 121,472 generated/90,752 distinct and small canonical 110/94; attestation artifact 10379444461. No next AR-0007 PR is currently open. | Stay active for the next exact-head caller/session slice. Require exact signed provenance, typed project/authority/revision/fence/barrier equality validation before common-lock, zero ownership on malformed/missing/stale/replaced inputs, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC bound to the exact head. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
