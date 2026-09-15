@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**17 ARs tracked** across 4 active status categories.
+**17 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 3 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 4 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -44,7 +44,7 @@ flowchart LR
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
         AR_0016["AR-0016 - In progress"]:::status_in_progress
-        AR_0017["AR-0017 - Open"]:::status_open
+        AR_0017["AR-0017 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -107,19 +107,14 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (3)
+### In progress (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-real-integration-20260915 | PR #316 merged as 7bf4501; post-merge Verify 35005629097 reached 28,432,589 distinct states but failed at the 20-minute RuntimeMaxSec boundary during liveness checking (exit 1), with TLC low-memory warning and no model error. Correctness remains unclosed pending a longer valid exact-head run. | Use the repaired longer formal timeout path or an explicitly approved rerun; then require terminal exact-head evidence before closure. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-rejection-invariant-20260915 | PR #317 repaired exact head 267efd9; Verify 35006681700 found no model error but failed at the 20-minute RuntimeMaxSec boundary during low-memory liveness checking after 30,663,299 distinct states. Formal pass remains unproven. | Create or select a reviewed formal-runtime remediation that permits this exact model to complete (longer containment and adequate heap), then rerun exact-head Verify before merge. |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge. | Wait for terminal Verify 35003972069; if green, merge PR #315 and require exact post-merge verification. |
-
-### Open (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Unclaimed | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. |
 
 ### Planned (4)
 

@@ -9,13 +9,8 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #316 merged as 7bf4501; post-merge Verify 35005629097 reached 28,432,589 distinct states but failed at the 20-minute RuntimeMaxSec boundary during liveness checking (exit 1), with TLC low-memory warning and no model error. Correctness remains unclosed pending a longer valid exact-head run. | Use the repaired longer formal timeout path or an explicitly approved rerun; then require terminal exact-head evidence before closure. | codex-awc-ar0007-real-integration-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #317 repaired exact head 267efd9; Verify 35006681700 found no model error but failed at the 20-minute RuntimeMaxSec boundary during low-memory liveness checking after 30,663,299 distinct states. Formal pass remains unproven. | Create or select a reviewed formal-runtime remediation that permits this exact model to complete (longer containment and adequate heap), then rerun exact-head Verify before merge. | codex-awc-ar0008-rejection-invariant-20260915 |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. | codex-awc-ar0017-tlc-capacity-20260915 |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge. | Wait for terminal Verify 35003972069; if green, merge PR #315 and require exact post-merge verification. | codex-awc-ar0016-release-gate-20260915 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. | - |
 
 ## Planned
 
