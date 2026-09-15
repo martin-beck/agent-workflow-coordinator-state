@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #247 merged e4e4f88; Verify 34941009931 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384499721. PR #248 published signed head 9f41514. | Obtain independent review and merge PR #248 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #248 merged 965ae278; Verify 34941636617 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384689305. | Start next bounded rejection-only caller/session validation slice from exact merge 965ae278; preserve mutation/dispatch/upgrade/apply/rollback unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | Reviewed PR #248 9f41514 exact head from e4e4f88: test-only memoryview project_id rejection before common-lock; focused suite and AWQ/scope pass, smoke pending, Verify skipped. | Continue independent caller/session audit from exact merged head when PR248 merges; retain bounded TLC evidence only, require zero ownership on malformed/missing/stale/replaced inputs, and preserve mutation disabled/refinement not-proven. |
 
 ### Open (1)
