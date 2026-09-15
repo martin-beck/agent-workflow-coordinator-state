@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0020](tasks/AR-0020.md): Correct formal tier policy for merge and advisory exhaustive runs | Correct post-merge and sustained formal verification tier policy without weakening release evidence. | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. | codex-awc-ar0020-close-20260916 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -40,5 +34,6 @@ Never edit this file directly.
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
 | P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. | - |
 | P0 | [AR-0018](tasks/AR-0018.md): Formal attestation resource-bound consistency | Align formal attestation resource_bounds with the actual workflow-enforced TLC profile; prevent publication of contradictory evidence. | Implement bound derivation in attest.py, add tier-specific regression tests, publish an exact-head PR, and require green post-merge Verify. | - |
+| P0 | [AR-0020](tasks/AR-0020.md): Correct formal tier policy for merge and advisory exhaustive runs | Correct post-merge and sustained formal verification tier policy without weakening release evidence. | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0019](tasks/AR-0019.md): Fast merge formal tier and weekly exhaustive run | Separate fast merge/commit formal checks from weekly full-exhaustive TLC without weakening release or publication evidence. | Specify and implement a bounded fast merge TLC tier, retain weekly full-exhaustive execution as advisory, and preserve release evidence requirements. | - |

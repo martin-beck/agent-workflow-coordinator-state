@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**20 ARs tracked** across 4 active status categories.
+**20 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 12 |
+| **Done** | Accepted, integrated, and durably verified | 13 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 0 |
 
@@ -47,7 +47,7 @@ flowchart LR
         AR_0017["AR-0017 - Done"]:::status_done
         AR_0018["AR-0018 - Done"]:::status_done
         AR_0019["AR-0019 - Done"]:::status_done
-        AR_0020["AR-0020 - In progress"]:::status_in_progress
+        AR_0020["AR-0020 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -117,12 +117,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0020](tasks/AR-0020.md): Correct formal tier policy for merge and advisory exhaustive runs | codex-awc-ar0020-close-20260916 | Correct post-merge and sustained formal verification tier policy without weakening release evidence. | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. |
-
 ### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -140,7 +134,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
 
-### Done (12)
+### Done (13)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -154,5 +148,6 @@ flowchart LR
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 | P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Unclaimed | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. |
 | P0 | [AR-0018](tasks/AR-0018.md): Formal attestation resource-bound consistency | Unclaimed | Align formal attestation resource_bounds with the actual workflow-enforced TLC profile; prevent publication of contradictory evidence. | Implement bound derivation in attest.py, add tier-specific regression tests, publish an exact-head PR, and require green post-merge Verify. |
+| P0 | [AR-0020](tasks/AR-0020.md): Correct formal tier policy for merge and advisory exhaustive runs | Unclaimed | Correct post-merge and sustained formal verification tier policy without weakening release evidence. | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0019](tasks/AR-0019.md): Fast merge formal tier and weekly exhaustive run | Unclaimed | Separate fast merge/commit formal checks from weekly full-exhaustive TLC without weakening release or publication evidence. | Specify and implement a bounded fast merge TLC tier, retain weekly full-exhaustive execution as advisory, and preserve release evidence requirements. |
