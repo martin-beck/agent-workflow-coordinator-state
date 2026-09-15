@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #160 published from 9a508efb at signed 7cd30da: non-text authority revision is rejected before common-lock acquisition. | Independently review PR #160 exact head 7cd30da; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #160 merged f9b871c2. Verify 34917946707 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376343384. | Start next bounded canonical lock-domain/session caller boundary from f9b871c2; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #160 exact signed head 7cd30da against 9a508efb. Test-only rejects non-text authority_revision=1 before common-lock acquisition; lock-call count remains zero and session ownership remains clear. Focused suite passes 45 tests and 18 subtests; AWQ/scope/smoke green, Verify skipped. | Continue independent review of the next caller-boundary slice; require process-death/replacement/WAL evidence, trusted reread plus second recheck and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
