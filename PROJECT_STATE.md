@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `d88c218d71b21b2c82b239ffedc22fefb8df9d88`
+- Product remote main: `2665bf87fc1b683d30be5e4da42e184dd0a1481d`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,13 +11,12 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #246 | `ar0007-fix-vendor-version-alignment@7a6fcbda454d` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: align vendor fixtures with supported release |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34940475832 | `7a6fcbda454d` | pull_request | Verify | in_progress:- |
+| 34940475832 | `7a6fcbda454d` | pull_request | Verify | completed:success |
 | 34939963285 | `d88c218d71b2` | push | Verify | completed:failure |
 | 34939856166 | `58611bc61500` | pull_request | Verify | completed:success |
 | 34939700985 | `550c014c440c` | push | Verify | completed:failure |
