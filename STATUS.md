@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #241 merged a75c3a4; Verify 34939118692 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384701668. Test-only memoryview fencing_owner rejection; mutation/dispatch remain unreachable. | Start next bounded rejection-only caller/session validation slice from exact merge a75c3a4; address non-Mapping malformed context fail-closed behavior and exact-schema handling without production mutation or dispatch. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #241 merged a75c3a4; Verify 34939118692 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384701668. PR #243 published signed head f6b8fc5. | Obtain independent review and merge PR #243 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915 | Reviewed PR #240 e31dc04 exact head from 6b8d635; memoryview fencing_token rejection is test-only and all focused/public gates pass. | Audit next caller/session rejection slice: require non-Mapping context to fail closed as LockDomainError before common-lock, and decide/enforce exact-schema rejection of unknown keys; preserve mutation disabled and implementation_refinement=not-proven. |
 
 ### Open (1)
