@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #183 | `ar0007-validated-decimal-revision@2aafa04b37ed` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject fractional state revisions before lock acquisition |
+| #183 | `ar0007-validated-decimal-revision@2aafa04b37ed` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject fractional state revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34924516596 | `2aafa04b37ed` | pull_request | Verify | in_progress:- |
+| 34924516596 | `2aafa04b37ed` | pull_request | Verify | completed:success |
 | 34924359855 | `993bb612d179` | push | Verify | completed:success |
 | 34924265113 | `096f68fe02c5` | pull_request | Verify | completed:success |
 | 34924091104 | `eccba9fa1805` | push | Verify | completed:success |
