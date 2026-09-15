@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #252 merged b52ba552; Verify 34943468272 green with TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10386242774. PR #253 published signed head e0c7476. | Obtain independent review and merge PR #253 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #253 merged 8605f16; exact-head Verify 34944246754 succeeded with TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752, 110/94 and attestation 10385574817. | Select and publish the next bounded rejection-only caller/session validation slice from 8605f16; preserve mutation, dispatch, upgrade, apply, and rollback unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR253 merge 8605f16 post-merge Verify 34944246754 succeeded. Bounded TLC diagnostics: 121472/90752 main, 4352/2728, 516/232, 146/81, 110/94; all reported no error. Exact-head attestation artifact 10385574817. PR253 remains accepted as test-only non-dict Mapping extra-key rejection before common-lock; no production/formal changes. | Stay active after merge 8605f16: monitor and independently review next AR-0007 caller/session rejection PR for exact base/head, signed DCO, hostile pre-lock rejection and ownership false, public gates, and exact-head admitted TLC attestation. Keep implementation_refinement=not-proven, mutation/dispatch disabled, AR-0012 unpromoted. |
 
 ### Open (1)
