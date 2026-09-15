@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #152 | `ar0007-reread-retry-next@7aeaba3d0a9c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cover transient reread retry rejection |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34914425703 | `7aeaba3d0a9c` | pull_request | Verify | completed:success |
 | 34914029195 | `cac694bea7f7` | push | Verify | completed:success |
 | 34913947616 | `920ba7ecba46` | pull_request | Verify | completed:success |
 | 34913618431 | `1be785ca6e8c` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34912399386 | `845640fa02af` | push | Verify | completed:success |
 | 34912302494 | `5f712785ef00` | pull_request | Verify | completed:success |
 | 34911999039 | `ade2f774c4c6` | push | Verify | completed:success |
-| 34911909579 | `ed77f94e645b` | pull_request | Verify | completed:success |
