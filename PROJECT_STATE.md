@@ -11,14 +11,14 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #307 | `ar0015-formal-runtime@2c8469087864` | `main` | UNSTABLE | QUEUED:, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #308 | `ar0015-formal-runtime-20260915@2c8469087864` | `main` | UNKNOWN | QUEUED:, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #307 | `ar0015-formal-runtime@2c8469087864` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34995711554 | `2c8469087864` | pull_request | Verify | queued:- |
+| 34995752049 | `2c8469087864` | pull_request | Verify | completed:success |
+| 34995711554 | `2c8469087864` | pull_request | Verify | completed:success |
 | 34991547376 | `4526b22b182d` | push | Verify | completed:success |
 | 34991411958 | `67d238ada9b8` | pull_request | Verify | completed:success |
 | 34990844070 | `d54e8de1d620` | push | Verify | completed:failure |
@@ -29,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34988776811 | `91c3840c9e75` | pull_request | Verify | completed:success |
 | 34988298973 | `af8c7083462c` | pull_request | Verify | completed:success |
 | 34987933671 | `cdb74bab4102` | pull_request | Verify | completed:success |
-| 34986674729 | `da1fcac7730f` | pull_request | Verify | completed:success |
