@@ -12,11 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 | #163 | `ar0007-validated-owner-type@01258b4d3934` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject non-text caller fencing owner |
+| #164 | `ar0007-validated-barrier-type@203985bdf041` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: reject non-text caller barrier identifier |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34918806572 | `203985bdf041` | pull_request | Verify | queued:- |
 | 34918644341 | `3b3e7d5e4da3` | push | Verify | completed:success |
 | 34918611254 | `01258b4d3934` | pull_request | Verify | completed:success |
 | 34918517154 | `6387d39dd329` | pull_request | Verify | completed:success |
@@ -28,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34917573595 | `2d33fcd977e1` | pull_request | Verify | completed:success |
 | 34917373742 | `964b50c5e20c` | push | Verify | completed:success |
 | 34917199883 | `254bf590492d` | pull_request | Verify | completed:success |
-| 34916940596 | `794db11da7b8` | push | Verify | completed:success |
