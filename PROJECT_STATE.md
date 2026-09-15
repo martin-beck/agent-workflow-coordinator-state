@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #160 | `ar0007-validated-context-string@7cd30da12f60` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject non-text caller authority revision |
+| #160 | `ar0007-validated-context-string@7cd30da12f60` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject non-text caller authority revision |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34917834329 | `7cd30da12f60` | pull_request | Verify | in_progress:- |
+| 34917834329 | `7cd30da12f60` | pull_request | Verify | completed:success |
 | 34917663957 | `9a508efbe5dc` | push | Verify | completed:success |
 | 34917573595 | `2d33fcd977e1` | pull_request | Verify | completed:success |
 | 34917373742 | `964b50c5e20c` | push | Verify | completed:success |
