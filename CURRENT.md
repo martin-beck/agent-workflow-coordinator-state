@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #272 merged 1a405445 from signed 8e4421d; post-merge Verify 34955394591 green with attestation 10390164023 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. Real child-process abort and fresh-worker stale durable-identity rejection are now covered; WAL/SHM and successful fresh reacquisition remain unproven. | Implement the next separately reviewed lifecycle slice: WAL/SHM or descriptor identity replacement and successful fresh-worker reacquisition after abort, with trusted reread immediately before use and zero CAS/backend calls on rejection; keep mutation/dispatch/apply/rollback disabled. | codex-awc-ar0007-next-20260915b |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #273 merged f22ec9c from signed 85388ed; post-merge Verify 34955853177 green with attestation 10391880084 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. Fresh worker now successfully reacquires unchanged real scope after child abort; WAL/SHM or descriptor replacement remains unproven. | Implement the next separately reviewed lifecycle slice: WAL/SHM sidecar or descriptor identity replacement after abort, with trusted reread immediately before use, stale rejection before CAS/backend, zero backend calls, and mutation/dispatch/apply/rollback disabled. | codex-awc-ar0007-next-20260915b |
 
 ## Open
 
