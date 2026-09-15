@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #314 merged as a5f9105 with release-sensitive full-exhaustive dispatch, but post-merge Verify run 35000601242 failed in the large Handoffctl TLC model because release-sensitive push retained a 1200-second timeout. Repair PR #315 at e4ab56a extends only release-sensitive formal runs to the documented 6000-second bound; independent review and exact-head CI are pending.",
-  "task_revision": 19,
+  "task_revision": 20,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T17:52:31+00:00",
+  "updated_at": "2026-09-15T17:55:49+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -84,3 +84,6 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T17:52:31+00:00: Recorded command exit 0; command argv SHA-256
   e8735e72dc74959d025b4b5dca60a504b5fd726c09caba3f5b5604598131f9ae.
+
+- 2026-09-15T17:55:49+00:00: Recorded command exit 0; command argv SHA-256
+  eaf2472e4b0ec29bac3303a6d46474c99be3c0ab077feca87b1c3650d4745e53.
