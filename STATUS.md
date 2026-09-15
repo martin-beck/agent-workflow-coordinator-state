@@ -111,7 +111,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #319 head 5a9ba29 has correct timeout/docs/capacity content, but push Verify 35023746333 failed before jobs due one-space YAML indentation error on TLC_TIMEOUT_SECONDS. | Fix YAML indentation, validate with actionlint and focused tests, then rerun PR #319 full gates and terminal formal evidence. |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. |
 
 ### Open (2)
