@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `f2d87ccf575857ae0c65911dc8e7e4ee0a176cb7`
+- Product remote main: `901bb7d0cd96e55c0431c3f60f7f8c6626d4ec41`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,14 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
-| #292 | `ar0007-backend-equivalence-next@c6086431db8b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(git): verify bound backend result equivalence |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34972629865 | `4438ec573bfa` | pull_request | Verify | completed:success |
 | 34972208059 | `c6086431db8b` | pull_request | Verify | completed:success |
 | 34971229497 | `f2d87ccf5758` | push | Verify | completed:success |
 | 34970971044 | `9e14a040295d` | pull_request | Verify | completed:success |
@@ -29,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34968934248 | `a914ced397a8` | pull_request | Verify | completed:success |
 | 34968158848 | `2aeb6d8fe4e4` | push | Verify | completed:success |
 | 34968024673 | `048d42052350` | pull_request | Verify | completed:success |
-| 34967550716 | `f4922c710853` | pull_request | Verify | completed:success |
