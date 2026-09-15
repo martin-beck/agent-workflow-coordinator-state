@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR292 published at signed head c6086431 from exact main f2d87cc; real Git snapshot_bound rejects backend identity drift, unverified identity, and non-read-only results before trusted scope/Git. Local focused 18/18, full 486 tests, 95&#37; coverage, static gates pass; AWQ/scope/smoke green. | Obtain independent exact-head review of PR292, then merge only through handoffctl and require post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR292 merged as 901bb7d; post-merge Verify 34972821540 green at 95&#37; coverage (5812 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10398172273. Git backend-equivalence rejection now proves lock release and execute/mutation nonreachability after result tampering. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main 901bb7d; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
