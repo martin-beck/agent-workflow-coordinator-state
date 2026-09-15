@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR298 merged as 9dc3c30; post-merge Verify 34980573703 green at 95% coverage (5891 statements), 497 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10401631087. Strict supported-phase and rollback-target validation now reject before backend access with zero calls, unchanged durable state, released locks, and execute unreachable. Rollback evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 9dc3c30; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR299 merged as 7c17f64; post-merge Verify 34981962945 green at 95% coverage (5907 statements), 499 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10402146784. Trusted evidence-only rollback rereads now bind scope, lease, matching recheck, and rollback target; stale/replaced failures prove zero backend calls, execute unreachable, lock release, and unchanged durable state. Rollback remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 7c17f64; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
