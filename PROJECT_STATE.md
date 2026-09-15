@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #164 | `ar0007-validated-barrier-type@51da9276e304` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: reject non-text caller barrier identifier |
+| #164 | `ar0007-validated-barrier-type@51da9276e304` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject non-text caller barrier identifier |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34919293734 | `51da9276e304` | pull_request | Verify | queued:- |
+| 34919293734 | `51da9276e304` | pull_request | Verify | completed:success |
 | 34919142085 | `4a0c19dc324c` | push | Verify | completed:success |
 | 34919044231 | `825d2e392ef1` | pull_request | Verify | completed:success |
 | 34918806572 | `203985bdf041` | pull_request | Verify | completed:success |
