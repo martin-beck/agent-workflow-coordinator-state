@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #184 | `ar0007-validated-complex-revision@ff35e79ca4a5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: reject complex state revisions before lock acquisition |
+| #184 | `ar0007-validated-complex-revision@ff35e79ca4a5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject complex state revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34924783352 | `ff35e79ca4a5` | pull_request | Verify | queued:- |
+| 34924783352 | `ff35e79ca4a5` | pull_request | Verify | in_progress:- |
 | 34924595376 | `607699c51b66` | push | Verify | completed:success |
 | 34924516596 | `2aafa04b37ed` | pull_request | Verify | completed:success |
 | 34924359855 | `993bb612d179` | push | Verify | completed:success |
