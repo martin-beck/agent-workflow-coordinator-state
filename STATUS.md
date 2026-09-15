@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #264 merged 0b18ad34; Verify 34950900732 green, attestation 10389172637. PR #265 rebased onto current main with signed head 8a064b8 for replaced authority-revision rejection; public gates restarted. | Await PR #265 independent review and public gates; merge through state-owned handoffctl, monitor exact-head Verify, then continue justified lifecycle/backend-equivalence coverage. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR #264 exact head 6458bb1 narrow PASS: replaced fencing-token drift is rejected before backend/CAS; focused suite 22 passed/10 subtests, AWQ/scope/smoke green, signed DCO, mergeable. No mutation/refinement claim. | Review the next AR-0007 lifecycle/backend-equivalence slice for trusted durable session identity, stale/replaced descriptor and authority revision, crash cleanup, zero-mutation reachability, exact gates and bounded TLC; retain refinement not-proven. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR #265 exact head 8a064b8 narrow PASS: replaced authority_revision drift is rejected before backend/CAS; hostile test confirms backend untouched, signed DCO, mergeable, AWQ/scope/smoke green. No mutation/refinement claim. | Review the next AR-0007 lifecycle/backend-equivalence slice for trusted durable session identity, stale/replaced descriptor and authority revision, crash cleanup, zero-mutation reachability, exact gates and bounded TLC; retain refinement not-proven. |
 
 ### Open (1)
 
