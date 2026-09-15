@@ -15,7 +15,7 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
-  "task_revision": 9,
+  "task_revision": 10,
   "title": "Release validation dispatch gate",
   "updated_at": "2026-09-15T17:33:35+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
@@ -55,3 +55,6 @@ the distinction and no release/tag is published by this AR.
   a3c2c97324f8a47dab44ae77163c5a2ea7a970846c1329bbcae7f7c3404ace2a.
 
 - 2026-09-15T17:33:35+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
+
+- 2026-09-15T17:33:35+00:00: Recorded command exit 0; command argv SHA-256
+  134caeefc8951d357bdeac91021a4530285832c9c3c16b0448aeb2339227a69c.
