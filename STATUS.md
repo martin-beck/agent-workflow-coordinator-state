@@ -111,7 +111,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #318 Verify 35015342502 failed before TLC at 20:03:58Z: new host preflight hardcoded /sys/fs/cgroup/memory.max, absent in nested runner cgroup, exit 1. This is a preflight implementation defect, not formal model evidence; AWQ/scope passed. | Repair nested cgroup v2 path discovery and regression tests on PR #318, then rerun exact-head Verify; merge only after terminal green formal evidence. |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #318 amended with signed head d7c52f9: nested cgroup-v2 path discovery now uses /proc/self/cgroup and mountinfo, with regression tests. Focused tests (18 TLC runner, 5 evidence), Ruff/format/diff, DCO/signature pass; GitHub checks restarted. | Wait for amended PR #318 AWQ/scope/Verify; independently inspect exact-head formal result, merge only if all required checks are green, then post-merge Verify. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. |
 
 ### Open (2)
