@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #261 merged 0bc6be0; Verify 34949130944 green with TLC 121472/90752, 4352/2728, 516/232, 146/81, 110/94 and attestation 10388441542. Stale/non-integer backend revisions reject after scope release. | Implement and publish the next rejection-only backend result access/normalization or lifecycle-equivalence slice; preserve mutation, dispatch, apply, and rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #261 merged 0bc6be0; Verify 34949130944 green with TLC 121472/90752, 4352/2728, 516/232, 146/81, 110/94 and attestation 10388441542. PR #262 exact head 3138fc9 independently reviewed PASS; hostile backend result.get failures normalize after scope release. | Merge PR #262 through state-owned handoffctl, monitor exact-head Verify/TLC, then continue hostile result membership/item access and strict schema rejection coverage. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR262 exact-head narrow PASS: base 0bc6be0, signed head 3138fc9, mergeable; hostile dict-subclass backend result.get RuntimeError normalizes to AdmissionLeaseError after write and scope release. Focused admitted-control suite 5 passed, AWQ/scope/smoke green, signed DCO, diff-check clean. | Monitor PR262 merge and post-merge Verify/TLC. Next hostile result slice should cover result membership/item access and strict backend result schema; require cleanup, public gates, exact attestation, and no mutation/refinement claim. |
 
 ### Open (1)
