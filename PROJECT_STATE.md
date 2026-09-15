@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #173 | `ar0007-validated-string-revision@9343c84a708b` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject string state revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34921861681 | `9343c84a708b` | pull_request | Verify | in_progress:- |
 | 34921620308 | `652d420dbbe8` | push | Verify | completed:success |
 | 34921516107 | `c4deb8216d54` | pull_request | Verify | completed:success |
 | 34921365445 | `db874a6f9cbf` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34920568943 | `2a25fc71ee65` | push | Verify | completed:success |
 | 34920482716 | `2dd8abd36d30` | pull_request | Verify | completed:success |
 | 34920311736 | `e9a0e6679473` | push | Verify | completed:success |
-| 34920228432 | `4db75ffb8105` | pull_request | Verify | completed:success |
