@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #248 merged 965ae278; Verify 34941636617 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384689305. PR #249 published signed head 3c25263. | Obtain independent review and merge PR #249 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR248 merged 965ae27; Verify 34941636617 green with bounded TLC main 121472/90752 and small 110/94, attestation 10384689305. | Audit next caller/session rejection slice from exact merged 965ae27; require zero ownership on malformed/missing/stale/replaced inputs and preserve mutation disabled/refinement not-proven. | codex-awc-ar0008-next-20260915b |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR249 3c25263 exact head from 965ae27: hostile Mapping key-enumeration failures now fail closed before common-lock. | Audit next hostile caller Mapping slice: ensure get/item lookup failures also normalize to LockDomainError before common-lock; preserve zero ownership, mutation disabled, and implementation_refinement=not-proven. | codex-awc-ar0008-next-20260915b |
 
 ## Open
 
