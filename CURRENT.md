@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #239 merged 6b8d635; Verify 34938471740 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384721299. PR #240 published signed head e31dc04. | Obtain independent review and merge PR #240 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #240 merged 70068863; Verify 34938842313 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10384647028. | Start next bounded rejection-only caller/session validation slice from exact merge 70068863; preserve mutation/dispatch/upgrade/apply/rollback unreachable. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #240 e31dc04 exact head from 6b8d635; memoryview fencing_token rejection is test-only and all focused/public gates pass. | Audit next caller/session rejection slice: require non-Mapping context to fail closed as LockDomainError before common-lock, and decide/enforce exact-schema rejection of unknown keys; preserve mutation disabled and implementation_refinement=not-proven. | codex-awc-ar0008-next-20260915 |
 
 ## Open
