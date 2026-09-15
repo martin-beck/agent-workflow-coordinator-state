@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #205 | `ar0007-validated-null-owner@b4ae0b921a2a` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject null fencing owners before lock acquisition |
+| #205 | `ar0007-validated-null-owner@b4ae0b921a2a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject null fencing owners before lock acquisition |
 
 ## Recent workflows
 
