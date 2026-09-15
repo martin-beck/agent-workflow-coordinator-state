@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #162 | `ar0007-validated-fence-type@6387d39dd329` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: reject non-text caller fencing token |
+| #162 | `ar0007-validated-fence-type@6387d39dd329` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject non-text caller fencing token |
 
 ## Recent workflows
 
