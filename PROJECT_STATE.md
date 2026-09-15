@@ -11,12 +11,14 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #313 | `ar0016-release-validation-20260915@4b4650167003` | `main` | UNKNOWN | - | ci: require full validation for release metadata |
+| #314 | `ar0016-release-dispatch@fa047726b42e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | ci: gate release-sensitive verification dispatch |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34999902591 | `fa047726b42e` | pull_request | Verify | queued:- |
+| 34999879189 | `4b4650167003` | pull_request | Verify | in_progress:- |
 | 34999092550 | `b67c54a34ddb` | push | Verify | completed:success |
 | 34998787802 | `adf6f21a936d` | pull_request | Verify | completed:success |
 | 34998625647 | `f027fe89a40d` | pull_request | Verify | completed:failure |
@@ -27,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34996889697 | `b309d7e690fc` | pull_request | Verify | completed:success |
 | 34996739607 | `0f4322f55df3` | pull_request | Verify | completed:success |
 | 34996220200 | `7b487aa50f20` | push | Verify | completed:success |
-| 34995942726 | `ab43c0d151ef` | pull_request | Verify | completed:success |
-| 34995752049 | `2c8469087864` | pull_request | Verify | completed:success |
