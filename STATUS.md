@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - In progress"]:::status_in_progress
+        AR_0007["AR-0007 - Open"]:::status_open
         AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -104,17 +104,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR #306 merged as 4526b22b182d0b674d765b4ea2b82a8401524122; post-merge Verify 34991547376 green: 512 tests, 95&#37; coverage, all event-appropriate TLC tiers no-error; artifact 10405499029. Continue trusted-session/backend-equivalence work with mutation, dispatch, execute, apply, and rollback unreachable; implementation_refinement remains not-proven. | Start the next AR-0007 correctness slice from exact main 4526b22b182d0b674d765b4ea2b82a8401524122; require independent exact-head review, signed public gates, and post-merge Verify. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | Prevent release preparation from bypassing full coordinator validation through path-based CI skipping. | Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | PR #306 merged as 4526b22b182d0b674d765b4ea2b82a8401524122; post-merge Verify 34991547376 green: 512 tests, 95&#37; coverage, all event-appropriate TLC tiers no-error; artifact 10405499029. Continue trusted-session/backend-equivalence work with mutation, dispatch, execute, apply, and rollback unreachable; implementation_refinement remains not-proven. | Start the next AR-0007 correctness slice from exact main 4526b22b182d0b674d765b4ea2b82a8401524122; require independent exact-head review, signed public gates, and post-merge Verify. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | AR-0008 evidence-map slice merged as PR #311 at b67c54a34ddb0789f561df0b4786ee34b8c2b2a9. Exact post-merge Verify 34999092550 passed: 512 tests, 95&#37; coverage, all formal tiers no-error, artifact 10408728117. Added one explicit mapping from six typed rollback rejection tests to formal obligations; correspondence and implementation_refinement remain not-proven and mutation/authorization unreachable. | Continue AR-0008 only for a genuinely missing executable formal obligation. Require exact-head independent review, DCO, public gates, and post-merge Verify; do not promote AR-0012 or claim concrete refinement. |
 
 ### Planned (4)
