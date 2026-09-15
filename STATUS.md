@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 7 |
+| **Done** | Accepted, integrated, and durably verified | 8 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 0 |
 
@@ -41,7 +41,7 @@ flowchart LR
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
-        AR_0014["AR-0014 - In progress"]:::status_in_progress
+        AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Planned"]:::status_planned
         AR_0016["AR-0016 - Planned"]:::status_planned
     end
@@ -104,12 +104,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR #306 merged as 4526b22b182d0b674d765b4ea2b82a8401524122; post-merge Verify 34991547376 green: 512 tests, 95&#37; coverage, all event-appropriate TLC tiers no-error; artifact 10405499029. Continue trusted-session/backend-equivalence work with mutation, dispatch, execute, apply, and rollback unreachable; implementation_refinement remains not-proven. | Start the next AR-0007 correctness slice from exact main 4526b22b182d0b674d765b4ea2b82a8401524122; require independent exact-head review, signed public gates, and post-merge Verify. |
-| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | codex-awc-ar0014-release-20260915 | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 
 ### Open (1)
 
@@ -128,7 +127,7 @@ flowchart LR
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | Ensure every formal verifier runtime input and regression test is present in vendor snapshots. | Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Prevent release preparation from bypassing full coordinator validation through path-based CI skipping. | Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify. |
 
-### Done (7)
+### Done (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -139,3 +138,4 @@ flowchart LR
 | P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | Unclaimed | Back up and restore complete Git-backed coordination state without losing task history. | AR-0005 complete; PR #25 merged and post-merge main verification green. AR-0006 PR #26 remains open pending independent review and exact-head checks. |
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Unclaimed | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | AR-0006 complete; PR #26 merged and post-merge main verification green. AR-0004 remains blocked pending its correctness fixes and healthy exact-head rerun. |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Unclaimed | Exact-head PR #22 formal publication gate independently reviewed green. | Await parent merge decision; retain full-exhaustive claims for successful scheduled/manual run and preserve merge-tree attestation provenance. |
+| P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
