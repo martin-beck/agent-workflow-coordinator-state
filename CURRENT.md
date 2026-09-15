@@ -3,13 +3,18 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. | codex-awc-ar0017-close-20260916 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #316 merged as 7bf4501; post-merge Verify 35005629097 reached 28,432,589 distinct states but failed at the 20-minute RuntimeMaxSec boundary during liveness checking (exit 1), with TLC low-memory warning and no model error. Correctness remains unclosed pending a longer valid exact-head run. | Use the repaired longer formal timeout path or an explicitly approved rerun; then require terminal exact-head evidence before closure. | - |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #317 repaired exact head 267efd9; Verify 35006681700 found no model error but failed at the 20-minute RuntimeMaxSec boundary during low-memory liveness checking after 30,663,299 distinct states. Formal pass remains unproven. | Create or select a reviewed formal-runtime remediation that permits this exact model to complete (longer containment and adequate heap), then rerun exact-head Verify before merge. | - |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. | - |
 
 ## Planned
