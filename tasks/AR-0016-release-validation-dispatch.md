@@ -2,7 +2,7 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "2026-09-15T19:41:55+00:00",
+  "claim_expires": "2026-09-15T19:44:58+00:00",
   "depends_on": [
     "AR-0003",
     "AR-0015"
@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #314 merged as a5f9105; post-merge Verify 35000601242 failed because release-sensitive full-exhaustive push used a 1200-second timeout. Repair PR #315 is at 067ba1cc18c947080cd0eb79bc6a90fdfce1ae76 with fork-first 600-second timeout and release-sensitive 6000-second timeout. Independent review passed; exact-head Verify 35003972069 is running with AWQ and scope green.",
-  "task_revision": 24,
+  "task_revision": 25,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T18:11:55+00:00",
+  "updated_at": "2026-09-15T18:14:58+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -96,3 +96,5 @@ the distinction and no release/tag is published by this AR.
 - 2026-09-15T18:06:20+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
 
 - 2026-09-15T18:11:55+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
+
+- 2026-09-15T18:14:58+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
