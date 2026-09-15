@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #249 merged 857ff047; Verify 34941957066 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10385428754. PR #250 published signed head a865961. | Obtain independent review and merge PR #250 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #250 merged c60d285; Verify 34942440016 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10386285759. | Start next bounded rejection-only caller/session validation slice from exact merge c60d285; preserve mutation/dispatch/upgrade/apply/rollback unreachable. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR250 merged c60d285; Verify 34942440016 green after lookup-failure fix, bounded TLC main 121472/90752 and small 110/94, attestation 10386285759. | Continue independent audit from exact merge c60d285; require caller/session failures to normalize before common-lock with zero ownership, and retain mutation disabled/refinement not-proven. | codex-awc-ar0008-next-20260915b |
 
 ## Open
