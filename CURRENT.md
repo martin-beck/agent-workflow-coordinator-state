@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #165 published from a5bd6bd4 at signed c11a2c7: empty authority revision is rejected before common-lock acquisition. | Independently review PR #165 exact head c11a2c7; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #165 merged 62783857. Verify 34919667174 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10377288692. | Start next bounded canonical lock-domain/session caller boundary from 62783857; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #165 exact signed head c11a2c7 against a5bd6bd4. Test-only rejects empty authority_revision before common-lock; focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller-boundary slice. Require project/authority/revision/fence/barrier type and equality validation before common-lock, process-death/replacement/WAL evidence, trusted reread plus second recheck, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
