@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #152 merged as bc17d474; post-merge Verify 34914512235 passed with TLC 121472/90752 main, 110/94 small, attestation 10374774228. Keep rejection-only routes. | Start the next bounded fresh-process reread-failure/retry slice from bc17d474; keep production routes unreachable and do not promote AR-0012. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #152 exact signed head 7aeaba3 against cac694be. Test-only fresh process simulates one transient authority reread failure, retries successfully, then rejects the stale old lease and confirms ownership release. Focused tests pass 12 tests and 4 subtests; AWQ/scope/smoke are green, Verify skipped. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Monitoring the next AR-0007 fresh-process reread-failure/retry slice from merged bc17d474. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal limits remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process reread failure, retry rejection and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
 
