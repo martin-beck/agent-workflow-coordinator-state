@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #273 merged f22ec9c with green Verify 34955853177. Repaired PR #274 onto current main at signed head e6beb78: synchronized active control.sqlite-wal/control.sqlite-shm replacement inside the real SQLite connection is rejected by the existing sidecar identity guard before the scope can proceed; authority remains untouched. Focused 120 tests plus 61 subtests and local quality gates green; mutation/dispatch/apply/rollback untouched. | Obtain independent exact-head review and merge repaired PR #274 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Keep mutation/dispatch/apply/rollback unreachable; next gap is binding-level WAL-sidecar rejection integration if audit requires it. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #274 merged ecadfb9 from signed e6beb78; post-merge Verify 34956548894 green with attestation 10391641798 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. Active control.sqlite WAL/SHM replacement now fails closed before authority/backend; fresh reacquisition after that rejection remains unproven. | Implement and review the next lifecycle slice: after active WAL/SHM sidecar rejection, verify lock release and a clean fresh worker can reacquire unchanged state; preserve zero CAS/backend calls on rejection and keep mutation/dispatch/apply/rollback disabled. |
 
 ### Open (2)
 
