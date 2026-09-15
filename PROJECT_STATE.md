@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `488ad5f3bde45a2d39fa0a503801c1f2f447d6a0`
+- Product remote main: `053f90026c11c5a27106ee3dd5b5c29df4752d7e`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,13 +11,12 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #266 | `feature/ar0007-binding-project-replaced@24550a370042` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject replaced project before backend |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34951727763 | `24550a370042` | pull_request | Verify | in_progress:- |
+| 34951727763 | `24550a370042` | pull_request | Verify | completed:success |
 | 34951409261 | `488ad5f3bde4` | push | Verify | completed:success |
 | 34951277188 | `8a064b83a53c` | pull_request | Verify | completed:success |
 | 34950900732 | `0b18ad34dfc2` | push | Verify | completed:success |
