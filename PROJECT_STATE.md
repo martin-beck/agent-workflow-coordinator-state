@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `8605f16dc7ff06a8b8092f60188d789b1359ed0f`
+- Product remote main: `c1f12944e10db47e1ce4a1c26c1414bbf9a251cf`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #254 | `feature/ar0007-admitted-cas-hostile-value@527ff0611810` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject hostile admitted CAS record values |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34945056962 | `c1f12944e10d` | push | Verify | queued:- |
 | 34944797737 | `527ff0611810` | pull_request | Verify | completed:success |
 | 34944246754 | `8605f16dc7ff` | push | Verify | completed:success |
 | 34944048729 | `e0c7476ff66a` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34942354709 | `a865961b6001` | pull_request | Verify | completed:success |
 | 34941957066 | `857ff0474bbe` | push | Verify | completed:success |
 | 34941881983 | `3c2526322bd6` | pull_request | Verify | completed:success |
-| 34941636617 | `965ae278fc54` | push | Verify | completed:success |
