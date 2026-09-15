@@ -14,9 +14,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Make explicitly verified superseded tasks satisfy dependencies only through a completed successor.",
-  "task_revision": 6,
+  "task_revision": 7,
   "title": "Verified supersession dependency readiness",
-  "updated_at": "2026-09-15T16:19:02+00:00",
+  "updated_at": "2026-09-15T16:19:26+00:00",
   "worktree_key": "agent-workflow-coordinator-verified-supersession-dependencies"
 }
 ---
@@ -67,3 +67,6 @@ Authoritative sources:
   preserve completed supersession evidence.
 
 - 2026-09-15T16:19:02+00:00: Claimed by codex-awc-ar0014-release-20260915.
+
+- 2026-09-15T16:19:26+00:00: Recorded command exit 1; command argv SHA-256
+  2ead702e9b69cde77cc649ea07bd545f129e4e1d0b63f77225b350fae8a607f0.
