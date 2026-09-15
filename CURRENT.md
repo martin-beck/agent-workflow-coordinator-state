@@ -3,16 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR302 merged as 6ec90024; post-merge Verify 34985568817 green at 95% coverage (5911 statements), 506 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10403835401. Concrete Git/SQLite rollback adapters now require bound capability before legacy snapshot or rollback handler observation; engine rejects unbound rollback before backend/execute. Bound evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 6ec90024; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR302 merged as 6ec90024; post-merge Verify 34985568817 green at 95% coverage (5911 statements), 506 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10403835401. Concrete Git/SQLite rollback adapters now require bound capability before legacy snapshot or rollback handler observation; engine rejects unbound rollback before backend/execute. Bound evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 6ec90024; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | - |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR267 merge e1f5ff5 post-merge Verify 34952538380 succeeded: TLC 121472/90752 main, 516/232 intermediate, 146/81 and 110/94 small; all no-error; attestation artifact 10390155786. Durable-barrier identity drift rejection accepted as bounded caller-owned evidence. | Remain active for next trusted-session/backend-equivalence slice. Require descriptor/authority/session identity reread, stale/replaced rejection, crash/process-death cleanup, zero backend/mutation reachability, exact signed/public gates and admitted TLC; retain implementation_refinement=not-proven and AR-0012 unpromoted. | - |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
 
