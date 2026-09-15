@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #155 | `ar0007-validated-caller-boundary@2d5edc86e007` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat: validate caller context before scope hold |
+| #155 | `ar0007-validated-caller-boundary@2d5edc86e007` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: validate caller context before scope hold |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34915880817 | `2d5edc86e007` | pull_request | Verify | in_progress:- |
+| 34915880817 | `2d5edc86e007` | pull_request | Verify | completed:success |
 | 34915653174 | `605a7584f954` | push | Verify | completed:success |
 | 34915547980 | `9979977163e8` | pull_request | Verify | completed:success |
 | 34915285598 | `56f56c1f7aa7` | push | Verify | completed:success |
