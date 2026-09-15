@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #222 | `ar0007-validated-list-fence@4cbacb98e577` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject list fencing tokens before lock acquisition |
+| #222 | `ar0007-validated-list-fence@4cbacb98e577` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject list fencing tokens before lock acquisition |
 
 ## Recent workflows
 
