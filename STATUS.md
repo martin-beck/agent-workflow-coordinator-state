@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #251 merged c15174a; Verify 34942955397 succeeded, TLC 516/232, 121472/90752 + 110/94, attestation 10385533264. | Start next bounded rejection-only caller/session validation slice from exact merge c15174a; preserve mutation/dispatch/upgrade/apply/rollback unreachable. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR251 remains open after successful public AWQ/scope/smoke; Verify skipped, no post-merge formal evidence yet. | Monitor PR251 merge/post-merge Verify, then audit next caller/session boundary from its exact merge; preserve bounded formal evidence and refinement not-proven. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR251 merged c15174a; Verify 34942955397 green with bounded TLC 121472/90752, 516/232, 110/94; attestation 10385533264. | Audit next caller/session boundary from exact merge c15174a; require zero ownership on malformed/missing/stale/replaced inputs and preserve mutation disabled/refinement not-proven. |
 
 ### Open (1)
 
