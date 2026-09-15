@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #151 from 1be785ca, signed 920ba7e: fresh-process authority reread failure closes safely, then retry rejection cleanup. | Review PR #151; keep routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Monitoring the next AR-0007 fresh-process rejection-recovery slice from merged 1be785ca. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal limits remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process rejection recovery, stale-lease rejection and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #151 exact signed head 920ba7e against 1be785ca. Test-only fresh process simulates authority reread failure; ControlStoreError is handled fail-closed with released ownership, then subsequent stale-rejection/retry paths remain available. Focused tests pass 11 tests and 4 subtests; AWQ/scope/smoke are green, Verify skipped. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
