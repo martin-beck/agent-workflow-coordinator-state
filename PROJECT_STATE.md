@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #168 | `ar0007-validated-empty-barrier@2dd8abd36d30` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject empty durable barriers before lock acquisition |
+| #168 | `ar0007-validated-empty-barrier@2dd8abd36d30` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject empty durable barriers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34920482716 | `2dd8abd36d30` | pull_request | Verify | in_progress:- |
+| 34920482716 | `2dd8abd36d30` | pull_request | Verify | completed:success |
 | 34920311736 | `e9a0e6679473` | push | Verify | completed:success |
 | 34920228432 | `4db75ffb8105` | pull_request | Verify | completed:success |
 | 34920076941 | `823a0be152d0` | push | Verify | completed:success |
