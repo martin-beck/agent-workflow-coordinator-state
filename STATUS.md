@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #274 merged ecadfb9 from signed e6beb78; post-merge Verify 34956548894 green with attestation 10391641798 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. Active control.sqlite WAL/SHM replacement now fails closed before authority/backend; fresh reacquisition after that rejection remains unproven. | Implement and review the next lifecycle slice: after active WAL/SHM sidecar rejection, verify lock release and a clean fresh worker can reacquire unchanged state; preserve zero CAS/backend calls on rejection and keep mutation/dispatch/apply/rollback disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 published signed 648aff4 after PR #274: fresh process successfully reacquires real WAL/common/control locks and opens WAL mode after explicit sidecar cleanup; no historical replacement detection claim, CAS/backend or mutation paths untouched. Exact review PASS; public AWQ/scope/smoke green. | Obtain exact-head merge of PR #275 through state-owned handoffctl, then define the next trusted-session/backend-equivalence seam; preserve zero backend calls on rejection, mutation/dispatch/apply/rollback disabled, and refinement not-proven. |
 
 ### Open (2)
 
