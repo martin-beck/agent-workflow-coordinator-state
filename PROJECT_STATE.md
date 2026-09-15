@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #150 | `ar0007-reject-crash-repeat@c823ce9016a1` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: repeat rejection crash recovery |
+| #150 | `ar0007-reject-crash-repeat@c823ce9016a1` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: repeat rejection crash recovery |
 
 ## Recent workflows
 
