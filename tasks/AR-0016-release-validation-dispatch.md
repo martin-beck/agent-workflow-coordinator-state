@@ -2,7 +2,7 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "2026-09-15T18:06:33+00:00",
+  "claim_expires": "2026-09-15T19:18:45+00:00",
   "depends_on": [
     "AR-0003",
     "AR-0015"
@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
-  "task_revision": 15,
+  "task_revision": 16,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T17:38:15+00:00",
+  "updated_at": "2026-09-15T17:48:45+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -72,3 +72,5 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T17:38:15+00:00: Recorded command exit 0; command argv SHA-256
   eaf2472e4b0ec29bac3303a6d46474c99be3c0ab077feca87b1c3650d4745e53.
+
+- 2026-09-15T17:48:45+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
