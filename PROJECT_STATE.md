@@ -12,11 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 | #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
+| #293 | `ar0007-sqlite-backend-equivalence@f22d2725a469` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(sqlite): bind trusted authority snapshots |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34973771785 | `f22d2725a469` | pull_request | Verify | in_progress:- |
 | 34972821540 | `901bb7d0cd96` | push | Verify | completed:success |
 | 34972629865 | `4438ec573bfa` | pull_request | Verify | completed:success |
 | 34972208059 | `c6086431db8b` | pull_request | Verify | completed:success |
@@ -28,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34969833245 | `bf64852e6549` | pull_request | Verify | completed:success |
 | 34969104166 | `99b65e6b6c97` | push | Verify | completed:success |
 | 34968934248 | `a914ced397a8` | pull_request | Verify | completed:success |
-| 34968158848 | `2aeb6d8fe4e4` | push | Verify | completed:success |
