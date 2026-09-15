@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR297 merged as f8a90e1; post-merge Verify 34978987534 green at 95&#37; coverage (5871 statements), TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10400084729. Malformed Git/SQLite bound phases reject before scope/backend access with focused tests and no mutation reachability. Continue AR-0007 with next trusted-session/backend-equivalence slice; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main f8a90e1; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR298 merged as 9dc3c30; post-merge Verify 34980573703 green at 95&#37; coverage (5891 statements), 497 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10401631087. Strict supported-phase and rollback-target validation now reject before backend access with zero calls, unchanged durable state, released locks, and execute unreachable. Rollback evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 9dc3c30; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
