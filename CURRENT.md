@@ -8,12 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #246 corrective fix merged 2665bf8; Verify 34940620829 succeeded, full tests/coverage/formal green, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10385505824. PR #247 published signed head 7c174f3. | Obtain independent review and merge PR #247 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #240 e31dc04 exact head from 6b8d635; memoryview fencing_token rejection is test-only and all focused/public gates pass. | Audit next caller/session rejection slice: require non-Mapping context to fail closed as LockDomainError before common-lock, and decide/enforce exact-schema rejection of unknown keys; preserve mutation disabled and implementation_refinement=not-proven. | codex-awc-ar0008-next-20260915b |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #240 e31dc04 exact head from 6b8d635; memoryview fencing_token rejection is test-only and all focused/public gates pass. | Audit next caller/session rejection slice: require non-Mapping context to fail closed as LockDomainError before common-lock, and decide/enforce exact-schema rejection of unknown keys; preserve mutation disabled and implementation_refinement=not-proven. | - |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
 
 ## Planned
