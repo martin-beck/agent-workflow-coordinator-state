@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #161 merged 72585a47. Verify 34918354674 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10377435541. | Start next bounded canonical lock-domain/session caller boundary from 72585a47; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #162 published from 72585a47 at signed 6387d39: non-text fencing token is rejected before common-lock acquisition. | Independently review PR #162 exact head 6387d39; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Prepared independent acceptance matrix for next AR-0007 slice from merged head 72585a47; PR161 non-text project-id rejection remains narrow test-only evidence. | Review next exact-head caller-boundary PR from 72585a47. Require validated context equality for project/authority/revision/fence, rejection before common-lock, process-death/replacement/WAL evidence, trusted reread plus second recheck, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
