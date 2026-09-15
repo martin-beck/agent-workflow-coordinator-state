@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #245 | `ar0007-reject-context-extra-keys@58611bc61500` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix: reject unknown caller context keys |
+| #245 | `ar0007-reject-context-extra-keys@58611bc61500` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | fix: reject unknown caller context keys |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34939856166 | `58611bc61500` | pull_request | Verify | queued:- |
+| 34939856166 | `58611bc61500` | pull_request | Verify | in_progress:- |
 | 34939700985 | `550c014c440c` | push | Verify | completed:failure |
 | 34939641200 | `1586c14cbc73` | pull_request | Verify | completed:success |
 | 34939520642 | `a3eb0d7885e8` | push | Verify | completed:success |
