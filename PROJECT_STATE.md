@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34977767361 | `71f7dc221d2f` | push | Verify | completed:success |
 | 34977585882 | `83af9a88061e` | pull_request | Verify | completed:success |
 | 34977017048 | `14361be1e014` | pull_request | Verify | completed:success |
 | 34976326663 | `79ecc345824c` | push | Verify | completed:success |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34973771785 | `f22d2725a469` | pull_request | Verify | completed:success |
 | 34972821540 | `901bb7d0cd96` | push | Verify | completed:success |
 | 34972629865 | `4438ec573bfa` | pull_request | Verify | completed:success |
-| 34972208059 | `c6086431db8b` | pull_request | Verify | completed:success |
