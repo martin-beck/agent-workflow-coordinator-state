@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR289 merged as 99b65e6; post-merge Verify 34969104166 green at 95% coverage with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10396642357. Typed recovery rejection paths now have direct lock-release and unchanged durable-state evidence. | Select the next dependency-ready AR-0012 trusted-session/backend-equivalence slice from exact main 99b65e6; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR290 published at signed head bf64852: Git snapshot_bound now validates and copies complete backend context before trusted scope entry, rejecting malformed context before locks or Git. | Obtain independent exact-head review and public PR290 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
