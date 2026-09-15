@@ -7,13 +7,13 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #258 merged 42dbb90; Verify 34947378166 green with TLC 121472/90752, 4352/2728, 516/232, 146/81, 110/94 and attestation 10387906417. Direct recheck comparison exceptions now normalize fail-closed before scope/store. | Implement and publish the next rejection-only lifecycle/backend-equivalence slice for expected revision/fence CAS or lock-order/recheck; preserve mutation, dispatch, apply, and rollback unreachable. | codex-awc-ar0007-next-20260915b |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR258 exact-head narrow PASS: base 3589ed4, signed head 85ff298, mergeable; direct recheck identity comparison exceptions are normalized to AdmissionLeaseError before scope/store, hostile test confirms zero calls. Focused admitted-control suite 5 passed, AWQ/scope/smoke green, signed DCO, diff-check clean. | Monitor PR258 merge and post-merge Verify/TLC. Require exact attestation, then review next stale identity/revision/fence or CAS lifecycle slice with zero-call ownership-false hostile tests and no mutation/refinement claim. | codex-awc-ar0008-next-20260915b |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #258 merged 42dbb90; Verify 34947378166 green with TLC 121472/90752, 4352/2728, 516/232, 146/81, 110/94 and attestation 10387906417. Direct recheck comparison exceptions now normalize fail-closed before scope/store. | Implement and publish the next rejection-only lifecycle/backend-equivalence slice for expected revision/fence CAS or lock-order/recheck; preserve mutation, dispatch, apply, and rollback unreachable. | - |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
 
 ## Planned
