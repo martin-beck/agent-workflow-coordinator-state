@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 publication gate is green after merge abdc64c: Verify 34959860593 succeeded with 95% coverage, TLC pr-publication tiers 516/232, 121472/90752, and 110/94, and exact-head attestation artifact 10392409412. Begin next read-only trusted-session lifecycle/recheck slice; formal refinement remains unproven. | Start the trusted-session lifecycle/recheck slice in tools/git_authority_adapter.py from main abdc64c. Bind immutable Git identity to trusted session context; add hostile replacement/revision/fence tests; keep mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 lifecycle slice PR281 merged as 2022b25. Post-merge Verify 34960349321 succeeded: 95% coverage, TLC tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94, and attestation artifact 10392169900. Next gap is durable revision/fence/barrier binding; formal refinement remains unproven. | Start the next read-only Git/session equivalence slice from main 2022b25: bind authority revision, fencing token/owner, barrier and state revision to snapshot_bound; add drift/replacement and zero-backend-call tests. Keep mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
