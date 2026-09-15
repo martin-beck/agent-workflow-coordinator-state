@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #219 | `ar0007-validated-tuple-authority@8a4701a8a201` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject tuple authority revisions before lock acquisition |
+| #219 | `ar0007-validated-tuple-authority@8a4701a8a201` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject tuple authority revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34933346643 | `8a4701a8a201` | pull_request | Verify | in_progress:- |
+| 34933346643 | `8a4701a8a201` | pull_request | Verify | completed:success |
 | 34933175870 | `6a88d5fed05f` | push | Verify | completed:success |
 | 34933125126 | `88103fc31c9b` | pull_request | Verify | completed:success |
 | 34932934104 | `94b471f1116e` | push | Verify | completed:success |
