@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR285 merged at 597188a: ScopedBackendAdapter now requires an exact typed six-field admission projection matching the complete backend context, rejects hostile/mismatched mappings before scope/backend entry, and preserves full context; post-merge Verify is green. | Implement the next read-only lifecycle slice: compose snapshot_bound through process-abort/fresh-worker recovery and prove locks release and stale sessions reject after restart; retain mutation/dispatch/execute/apply/rollback disabled and require independent exact-head review plus post-merge Verify/TLC. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR286 published at signed head 49158eb: concrete Git snapshot_bound now has subprocess abort, fresh-worker reacquisition, and stale durable-session zero-backend coverage. | Obtain independent exact-head review and public PR286 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
