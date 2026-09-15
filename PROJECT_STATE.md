@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5848d66c40982cd272e63b444e46abfdcff340f0`
+- Product remote main: `0bc6be0b931152e64cb26502f4a94b73960d2db9`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,14 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #261 | `feature/ar0007-admitted-cas-backend-revision@37131d958d48` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject stale admitted CAS backend revisions |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34948955860 | `37131d958d48` | pull_request | Verify | in_progress:- |
+| 34949130944 | `0bc6be0b9311` | push | Verify | in_progress:- |
+| 34948955860 | `37131d958d48` | pull_request | Verify | completed:success |
 | 34948554666 | `5848d66c4098` | push | Verify | completed:success |
 | 34948382270 | `597c437b3135` | pull_request | Verify | completed:success |
 | 34947964927 | `c3746e62bb80` | push | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34946706128 | `d386d6cf8c45` | pull_request | Verify | completed:success |
 | 34946216338 | `a79aa4d63f03` | push | Verify | completed:success |
 | 34946090958 | `d4e3d2a81b42` | pull_request | Verify | completed:success |
-| 34945770581 | `8194b0d59ff7` | push | Verify | completed:success |
