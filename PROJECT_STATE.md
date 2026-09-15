@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #257 | `feature/ar0007-admitted-cas-recheck@d386d6cf8c45` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject drifted admitted CAS recheck evidence |
+| #257 | `feature/ar0007-admitted-cas-recheck@d386d6cf8c45` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject drifted admitted CAS recheck evidence |
 
 ## Recent workflows
 
