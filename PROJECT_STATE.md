@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #238 | `ar0007-validated-bytearray-barrier@f3c0e3e41c53` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject bytearray durable barriers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34938024931 | `f3c0e3e41c53` | pull_request | Verify | completed:success |
 | 34937814518 | `c9bcaf08d803` | push | Verify | completed:success |
 | 34937554697 | `cf4836e8d6e5` | pull_request | Verify | completed:success |
 | 34937300322 | `286f83db8b94` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34936531458 | `1e651dc5da6b` | push | Verify | completed:success |
 | 34936459074 | `70c33b9bbf1a` | pull_request | Verify | completed:success |
 | 34936289749 | `2d9e7c5a4139` | push | Verify | completed:success |
-| 34936233419 | `9ca3672273d8` | pull_request | Verify | completed:success |
