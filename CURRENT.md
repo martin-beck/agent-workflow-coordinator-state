@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #187 merged dd615f01; Verify 34925702977 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10379811671). | Create and publish the next narrow rejection-only caller/session validation slice from dd615f01; keep dispatch, mutation, upgrade, apply, and rollback unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #187 merged dd615f01; Verify 34925702977 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10379811671). PR #188 published at 0b3843c. | Independently review PR #188 exact head 0b3843c; merge only after awq/scope/smoke and full Verify pass, then record post-merge evidence. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge formal attestation for dd615f01 (PR187): Verify 34925702977 succeeded with main TLC 121,472 generated/90,752 distinct and small canonical 110/94; attestation 10379811671. No next AR-0007 PR is currently open. | Stay active for the next exact-head caller/session slice. Require exact signed provenance, typed project/authority/revision/fence/barrier equality validation before common-lock, zero ownership on malformed/missing/stale/replaced inputs, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC bound to the exact head. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
