@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #264 | `feature/ar0007-binding-recheck-replaced@6458bb121d2c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject replaced binding recheck before backend |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34950788042 | `6458bb121d2c` | pull_request | Verify | in_progress:- |
 | 34950419056 | `13caf521f8b1` | push | Verify | completed:success |
 | 34950269616 | `1016ed2fbd18` | pull_request | Verify | completed:success |
 | 34950062496 | `06c6aa3bcaad` | pull_request | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34948382270 | `597c437b3135` | pull_request | Verify | completed:success |
 | 34947964927 | `c3746e62bb80` | push | Verify | completed:success |
 | 34947827287 | `da390ac3319e` | pull_request | Verify | completed:success |
-| 34947378166 | `42dbb90ece9f` | push | Verify | completed:success |
