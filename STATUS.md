@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR283 merged at 8202878: concrete LockDomainScope requires matching AdmissionLease/AdmissionRecheck and performs trusted pre/post-authority-lock rereads with stale/replacement/process-failure rejection; post-merge Verify is green. | Implement the next read-only backend-equivalence slice: compose snapshot_bound with the concrete LockDomainScope, prove zero backend reachability on stale/replaced authority, and retain mutation/dispatch/execute/apply/rollback disabled; require independent exact-head review and post-merge Verify/TLC. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR284 published as signed head 55c0b35: GitAuthorityAdapter.snapshot_bound composes with concrete LockDomainScope and matching AdmissionRecheck, validating trusted session identity before read-only Git observation and rejecting stale/replaced/ambiguous sessions without backend calls. | Obtain independent exact-head review and public PR284 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
