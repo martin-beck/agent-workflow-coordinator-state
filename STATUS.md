@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #156 merged a7ad8e8f. Verify 34916301938 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10375899715. | Start next bounded canonical lock-domain/session caller boundary from a7ad8e8f; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #157 published from a7ad8e8f at signed 2fd572c: stale caller context is rejected before common-lock acquisition; no scope ownership or mutation route is reached. | Independently review PR #157 exact head 2fd572c; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Preparation checkpoint from merged a7ad8e8 (PR156): validated_hold process-death cleanup and fresh caller reacquisition are covered, but no subsequent caller-boundary PR is open; only unrelated PR #85 remains. | Review next exact AR-0007 caller-boundary head against matrix: validated context equality before any lock; common-&gt;control-&gt;authority ordering; trusted authority reread and second recheck after authority lock; stale/replacement/WAL/SHM/process-death rejection; cleanup on every failure; no mutation/dispatch reachability. Run hostile tests and admitted canonical TLC when available; preserve implementation_refinement=not-proven, mutation disabled, AR-0012 unpromoted. |
 
 ### Open (1)
