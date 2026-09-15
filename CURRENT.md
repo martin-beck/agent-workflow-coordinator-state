@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR288 published at signed head f4922c7: typed recovery rejection coverage exercises stale CAS, reused attempt/fence/barrier, authority mismatch, unresolved intent, and zero-backend fresh-worker rejection. | Obtain independent exact-head review and public PR288 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR288 repaired at signed head 048d420: real publication-failure/recovery intent fixture plus durable-state and lock-cleanup assertions now cover typed recovery rejection. | Obtain independent exact-head review and public PR288 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
