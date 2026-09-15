@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR282 published as signed head c01f799: snapshot_bound now binds project, authority revision, fencing token/owner, durable barrier ID, and state revision to the trusted AdmissionLease; hostile drift and replaced-lease paths reject before scope/backend. | Independent exact-head review and public gates for PR282; merge only through handoffctl, then record Verify/TLC/attestation. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR283 published as signed head 75754a4: concrete LockDomainScope now requires AdmissionLease and matching AdmissionRecheck, captures durable session identity, and performs trusted pre/post-authority-lock rereads with stale/replacement/process-failure rejection. | Obtain independent exact-head review and public PR283 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
