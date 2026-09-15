@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #307 merged at 7b487aa50f20d70cba8b860a66d006c2389fd58f; post-merge Verify 34996220200 green (512 tests, 95%, all formal tiers no-error, artifact 10407827035). Existing signed immutable tag v0.3.7 targets unrelated 550c014c and has no GitHub release, so publication provenance is invalid for this merge. Remediate with a new signed v0.3.8 release; do not move v0.3.7.",
-  "task_revision": 11,
+  "task_revision": 12,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:41:22+00:00",
+  "updated_at": "2026-09-15T16:41:29+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -62,3 +62,6 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 
 - 2026-09-15T16:41:22+00:00: Recorded command exit 0; command argv SHA-256
   60acd298aeb8bc7f62fc205abe55cc3d956909334a30a32cd3461cbfdf0f2792.
+
+- 2026-09-15T16:41:29+00:00: Recorded command exit 0; command argv SHA-256
+  eaf2472e4b0ec29bac3303a6d46474c99be3c0ab077feca87b1c3650d4745e53.
