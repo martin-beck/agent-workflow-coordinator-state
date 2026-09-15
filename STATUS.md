@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
@@ -35,7 +35,7 @@ flowchart LR
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - In progress"]:::status_in_progress
-        AR_0008["AR-0008 - In progress"]:::status_in_progress
+        AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
         AR_0011["AR-0011 - Done"]:::status_done
@@ -104,17 +104,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #206 merged dd851b10; Verify 34930549770 green, TLC 121472/90752 + 110/94, attestation 10381463079. PR #207 published at 1992d44 from exact merged head. | Independently review PR #207 exact head 1992d44; merge only after awq/scope/smoke and full Verify pass, then record post-merge evidence. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #200 exact signed head 50324d1 against 18ad842c. Test-only rejects missing authority_revision before common-lock; focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller/session slice. Require exact signed provenance, typed project/authority/revision/fence/barrier equality validation before common-lock, zero ownership on malformed/missing/stale/replaced inputs, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC bound to the exact head. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | Reviewed PR #200 exact signed head 50324d1 against 18ad842c. Test-only rejects missing authority_revision before common-lock; focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller/session slice. Require exact signed provenance, typed project/authority/revision/fence/barrier equality validation before common-lock, zero ownership on malformed/missing/stale/replaced inputs, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC bound to the exact head. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 
 ### Planned (6)
