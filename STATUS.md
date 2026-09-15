@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #258 merged 42dbb90; Verify 34947378166 green with TLC 121472/90752, 4352/2728, 516/232, 146/81, 110/94 and attestation 10387906417. Direct recheck comparison exceptions now normalize fail-closed before scope/store. | Implement and publish the next rejection-only lifecycle/backend-equivalence slice for expected revision/fence CAS or lock-order/recheck; preserve mutation, dispatch, apply, and rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #258 merged 42dbb90; Verify 34947378166 green with TLC 121472/90752, 4352/2728, 110/94 and attestation 10387906417. PR #259 published signed head 3f3b6ec for lock-order failure normalization. | Obtain independent review and merge PR #259 through state-owned handoffctl; monitor exact-head Verify, then continue justified lifecycle/backend-equivalence coverage. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR258 exact-head narrow PASS: base 3589ed4, signed head 85ff298, mergeable; direct recheck identity comparison exceptions are normalized to AdmissionLeaseError before scope/store, hostile test confirms zero calls. Focused admitted-control suite 5 passed, AWQ/scope/smoke green, signed DCO, diff-check clean. | Monitor PR258 merge and post-merge Verify/TLC. Require exact attestation, then review next stale identity/revision/fence or CAS lifecycle slice with zero-call ownership-false hostile tests and no mutation/refinement claim. |
 
 ### Open (1)
