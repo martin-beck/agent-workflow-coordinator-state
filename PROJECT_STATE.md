@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #249 | `ar0007-reject-hostile-context-mapping@3c2526322bd6` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix: reject hostile caller context mappings |
+| #249 | `ar0007-reject-hostile-context-mapping@3c2526322bd6` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | fix: reject hostile caller context mappings |
 
 ## Recent workflows
 
