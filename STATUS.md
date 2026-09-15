@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #255 merged 8194b0d; Verify 34945770581 green with formal evidence and attestation 10387302063. PR #256 published signed head cb56558 for admitted-CAS scope release on store failure. | Obtain independent review and merge PR #256 through state-owned handoffctl; monitor exact-head Verify, then continue justified barrier CAS/recheck lifecycle coverage. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #255 merged 8194b0d; Verify 34945770581 green, attestation 10387302063. PR #256 rebased onto current main with signed head d4e3d2a for admitted-CAS scope release on store failure; public gates green. | Record exact PR256 Verify result, then obtain independent review and merge through state-owned handoffctl; continue justified barrier CAS/recheck lifecycle coverage. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR256 repaired exact head d4e3d2a on base 8194b0d; mergeable and signed DCO. Test-only store-failure path proves admitted CAS context manager releases scope after store exception (order, hold, write, release); focused admitted-control suite 5 passed, AWQ/scope/smoke all green, Verify skipped for PR event. Narrow PASS pending merge/post-merge Verify. | Monitor PR256 merge and exact post-merge Verify/TLC/attestation. Accept only if merge-head formal run is green; preserve rejection-only/no-mutation boundary and implementation_refinement=not-proven. Then review next durable lifecycle slice. |
 
 ### Open (1)
