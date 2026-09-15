@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
@@ -35,7 +35,7 @@ flowchart LR
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - In progress"]:::status_in_progress
-        AR_0008["AR-0008 - In progress"]:::status_in_progress
+        AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
         AR_0011["AR-0011 - Done"]:::status_done
@@ -104,17 +104,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #272 merged 1a405445 from signed 8e4421d; post-merge Verify 34955394591 green with attestation 10390164023 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. Real child-process abort and fresh-worker stale durable-identity rejection are now covered; WAL/SHM and successful fresh reacquisition remain unproven. | Implement the next separately reviewed lifecycle slice: WAL/SHM or descriptor identity replacement and successful fresh-worker reacquisition after abort, with trusted reread immediately before use and zero CAS/backend calls on rejection; keep mutation/dispatch/apply/rollback disabled. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR267 merge e1f5ff5 post-merge Verify 34952538380 succeeded: TLC 121472/90752 main, 516/232 intermediate, 146/81 and 110/94 small; all no-error; attestation artifact 10390155786. Durable-barrier identity drift rejection accepted as bounded caller-owned evidence. | Remain active for next trusted-session/backend-equivalence slice. Require descriptor/authority/session identity reread, stale/replaced rejection, crash/process-death cleanup, zero backend/mutation reachability, exact signed/public gates and admitted TLC; retain implementation_refinement=not-proven and AR-0012 unpromoted. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | PR267 merge e1f5ff5 post-merge Verify 34952538380 succeeded: TLC 121472/90752 main, 516/232 intermediate, 146/81 and 110/94 small; all no-error; attestation artifact 10390155786. Durable-barrier identity drift rejection accepted as bounded caller-owned evidence. | Remain active for next trusted-session/backend-equivalence slice. Require descriptor/authority/session identity reread, stale/replaced rejection, crash/process-death cleanup, zero backend/mutation reachability, exact signed/public gates and admitted TLC; retain implementation_refinement=not-proven and AR-0012 unpromoted. |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 
 ### Planned (6)
