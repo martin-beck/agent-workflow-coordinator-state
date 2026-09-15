@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #185 merged a850f55d; Verify 34925210015 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10379278385). | Create the next narrow rejection-only caller/session validation slice from a850f55d; keep dispatch, mutation, upgrade, apply, and rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #185 merged a850f55d; Verify 34925210015 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10379278385). PR #186 published at d7910f5. | Independently review PR #186 exact head d7910f5; merge only after awq/scope/smoke and full Verify pass, then record post-merge evidence. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #185 exact signed head 372548f against 157b52cd. Test-only rejects infinite state_revision=float(&quot;inf&quot;) before common-lock; focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller/session slice. Require project/authority/revision/fence/barrier type and equality validation before common-lock, process-death/replacement/WAL evidence, trusted reread plus second recheck, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
