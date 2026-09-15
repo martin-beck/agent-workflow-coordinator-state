@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #228 | `ar0007-validated-bytes-owner@8675c031fe7c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject bytes fencing owners before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34935303407 | `8675c031fe7c` | pull_request | Verify | completed:success |
 | 34935129068 | `055f57180d71` | push | Verify | completed:success |
 | 34935077591 | `30c08d564b09` | pull_request | Verify | completed:success |
 | 34934874087 | `5b3763529681` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34934245370 | `8a3cbf22023e` | push | Verify | completed:success |
 | 34934189590 | `6b6bc633cf85` | pull_request | Verify | completed:success |
 | 34934017738 | `6f41ce0ea424` | push | Verify | completed:success |
-| 34933959976 | `4cbacb98e577` | pull_request | Verify | completed:success |
