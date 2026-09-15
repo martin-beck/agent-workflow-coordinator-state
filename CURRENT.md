@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #276 merged 1956a113; post-merge Verify 34958172000 exposed 94% branch coverage from new Git snapshot paths. Published signed PR #278 at b86c1b1 (on repaired logic 7bffe81): focused hostile/error-path tests cover owner-safety, observation/reachability failures, identity reread/final drift, and reachable ancestor tags. Full 462-test unittest run passes; branch coverage is now 95%; no mutation/dispatch/execute/apply/rollback wiring. | Obtain independent exact-head review and merge PR #278 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation and confirm coverage gate. Keep production mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #278 merged as 52663863 from independently reviewed signed head a759190a. Coverage repair adds hostile Git snapshot error/drift tests; 462 tests and local coverage 95% pass. Await post-merge full Verify/TLC/attestation before next AR-0007 slice; mutation/refinement remain disabled. | Monitor push Verify 34959624736 on merge 52663863; require 95% coverage, TLC publication tier, and exact-head attestation. After green evidence, start trusted-session lifecycle/recheck slice; keep mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
