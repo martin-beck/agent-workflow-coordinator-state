@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #203 | `ar0007-validated-null-fence@ad28cd07eb54` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject null fencing tokens before lock acquisition |
+| #203 | `ar0007-validated-null-fence@ad28cd07eb54` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject null fencing tokens before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34929777571 | `ad28cd07eb54` | pull_request | Verify | in_progress:- |
+| 34929777571 | `ad28cd07eb54` | pull_request | Verify | completed:success |
 | 34929584536 | `cea887b12abf` | push | Verify | completed:success |
 | 34929495667 | `38b5741fd0c4` | pull_request | Verify | completed:success |
 | 34929310574 | `fa4d434525c0` | push | Verify | completed:success |
