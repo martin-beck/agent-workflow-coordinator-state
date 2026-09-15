@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #214 | `ar0007-validated-tuple-project@e00704a01a12` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS, QUEUED: | test: reject tuple project identifiers before lock acquisition |
+| #214 | `ar0007-validated-tuple-project@e00704a01a12` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject tuple project identifiers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34932234771 | `e00704a01a12` | pull_request | Verify | queued:- |
+| 34932234771 | `e00704a01a12` | pull_request | Verify | in_progress:- |
 | 34932054113 | `94e2a8b8f990` | push | Verify | completed:success |
 | 34932003548 | `def9c623213c` | pull_request | Verify | completed:success |
 | 34931847358 | `0c3ae5a75261` | push | Verify | completed:success |
