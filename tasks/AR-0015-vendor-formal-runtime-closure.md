@@ -2,22 +2,22 @@
 {
   "branch": "fix/vendor-formal-runtime-closure",
   "checkpoint_commit": "",
-  "claim_expires": "",
+  "claim_expires": "2026-09-15T17:02:50+00:00",
   "depends_on": [
     "AR-0002",
     "AR-0003"
   ],
   "id": "AR-0015",
   "next_action": "Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it.",
-  "owner": "",
+  "owner": "codex-awc-ar0015-v037-20260915",
   "plan": "../plans/AR-0015.md",
   "priority": "P1",
   "schema_version": 1,
-  "status": "open",
+  "status": "in_progress",
   "summary": "Ensure every formal verifier runtime input and regression test is present in vendor snapshots.",
-  "task_revision": 2,
+  "task_revision": 3,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:32:41+00:00",
+  "updated_at": "2026-09-15T16:32:50+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -35,3 +35,5 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 
 - 2026-09-15T16:32:41+00:00: Promote dependency-ready AR-0015 to implement the already prepared
   formal-runtime vendor closure PR #85, subject to exact-main rebase and full Verify.
+
+- 2026-09-15T16:32:50+00:00: Claimed by codex-awc-ar0015-v037-20260915.

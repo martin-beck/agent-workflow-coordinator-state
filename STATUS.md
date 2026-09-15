@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 5 |
 | **Future** | Deferred roadmap work | 0 |
@@ -42,7 +42,7 @@ flowchart LR
         AR_0012["AR-0012 - Planned"]:::status_planned
         AR_0013["AR-0013 - Planned"]:::status_planned
         AR_0014["AR-0014 - Done"]:::status_done
-        AR_0015["AR-0015 - Open"]:::status_open
+        AR_0015["AR-0015 - In progress"]:::status_in_progress
         AR_0016["AR-0016 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
@@ -104,18 +104,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR #306 merged as 4526b22b182d0b674d765b4ea2b82a8401524122; post-merge Verify 34991547376 green: 512 tests, 95&#37; coverage, all event-appropriate TLC tiers no-error; artifact 10405499029. Continue trusted-session/backend-equivalence work with mutation, dispatch, execute, apply, and rollback unreachable; implementation_refinement remains not-proven. | Start the next AR-0007 correctness slice from exact main 4526b22b182d0b674d765b4ea2b82a8401524122; require independent exact-head review, signed public gates, and post-merge Verify. |
+| P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | codex-awc-ar0015-v037-20260915 | Ensure every formal verifier runtime input and regression test is present in vendor snapshots. | Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | PR267 merge e1f5ff5 post-merge Verify 34952538380 succeeded: TLC 121472/90752 main, 516/232 intermediate, 146/81 and 110/94 small; all no-error; attestation artifact 10390155786. Durable-barrier identity drift rejection accepted as bounded caller-owned evidence. | Remain active for next trusted-session/backend-equivalence slice. Require descriptor/authority/session identity reread, stale/replaced rejection, crash/process-death cleanup, zero backend/mutation reachability, exact signed/public gates and admitted TLC; retain implementation_refinement=not-proven and AR-0012 unpromoted. |
-| P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | Ensure every formal verifier runtime input and regression test is present in vendor snapshots. | Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it. |
 
 ### Planned (5)
 
