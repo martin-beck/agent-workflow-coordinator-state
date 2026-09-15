@@ -11,6 +11,12 @@ Never edit this file directly.
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #317 repaired exact head 267efd9; Verify 35006681700 found no model error but failed at the 20-minute RuntimeMaxSec boundary during low-memory liveness checking after 30,663,299 distinct states. Formal pass remains unproven. | Create or select a reviewed formal-runtime remediation that permits this exact model to complete (longer containment and adequate heap), then rerun exact-head Verify before merge. | codex-awc-ar0008-rejection-invariant-20260915 |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge. | Wait for terminal Verify 35003972069; if green, merge PR #315 and require exact post-merge verification. | codex-awc-ar0016-release-gate-20260915 |
 
+## Open
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. | - |
+
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
@@ -18,7 +24,6 @@ Never edit this file directly.
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Promote only after AR-0007 is complete; then implement the accepted barrier, fencing, and fail-closed SQLite contract with exact-head tests and formal refinement evidence. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. | - |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. | - |
 
 ## Done

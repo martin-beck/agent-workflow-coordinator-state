@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**17 ARs tracked** across 3 active status categories.
+**17 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 3 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 5 |
+| **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 9 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -44,7 +44,7 @@ flowchart LR
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
         AR_0016["AR-0016 - In progress"]:::status_in_progress
-        AR_0017["AR-0017 - Planned"]:::status_planned
+        AR_0017["AR-0017 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -115,14 +115,19 @@ flowchart LR
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-rejection-invariant-20260915 | PR #317 repaired exact head 267efd9; Verify 35006681700 found no model error but failed at the 20-minute RuntimeMaxSec boundary during low-memory liveness checking after 30,663,299 distinct states. Formal pass remains unproven. | Create or select a reviewed formal-runtime remediation that permits this exact model to complete (longer containment and adequate heap), then rerun exact-head Verify before merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge. | Wait for terminal Verify 35003972069; if green, merge PR #315 and require exact post-merge verification. |
 
-### Planned (5)
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Unclaimed | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. |
+
+### Planned (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Promote only after AR-0007 is complete; then implement the accepted barrier, fencing, and fail-closed SQLite contract with exact-head tests and formal refinement evidence. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Unclaimed | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
 
 ### Done (9)
