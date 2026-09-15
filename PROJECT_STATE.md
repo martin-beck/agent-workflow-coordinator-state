@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #267 | `feature/ar0007-binding-barrier-replaced@df83e3818a29` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: reject replaced barrier before backend |
+| #267 | `feature/ar0007-binding-barrier-replaced@df83e3818a29` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject replaced barrier before backend |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34952210948 | `df83e3818a29` | pull_request | Verify | queued:- |
+| 34952210948 | `df83e3818a29` | pull_request | Verify | completed:success |
 | 34951825368 | `053f90026c11` | push | Verify | completed:success |
 | 34951727763 | `24550a370042` | pull_request | Verify | completed:success |
 | 34951409261 | `488ad5f3bde4` | push | Verify | completed:success |
