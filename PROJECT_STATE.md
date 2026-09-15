@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `3ced05e3ee88cdeeb14012136fd7367260afc360`
+- Product remote main: `d82539560b14607462cf5116bebb09f6a333bb79`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #175 | `ar0007-validated-sequence-revision@1c72db48d1c1` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject sequence state revisions before lock acquisition |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34922509383 | `d82539560b14` | push | Verify | completed:success |
 | 34922386800 | `1c72db48d1c1` | pull_request | Verify | completed:success |
 | 34922163826 | `3ced05e3ee88` | push | Verify | completed:success |
 | 34922076882 | `09b446aaa207` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34921193686 | `1272b61c668a` | pull_request | Verify | completed:success |
 | 34921044605 | `87bb2180419f` | push | Verify | completed:success |
 | 34920965237 | `4ee359222044` | pull_request | Verify | completed:success |
-| 34920796993 | `3a093f5c4bd5` | push | Verify | completed:success |
