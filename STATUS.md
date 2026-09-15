@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #154 published from 56f56c1f at signed 9979977: canonical LockDomainScope.bind captures common/control/authority identity; hold remains recheck-only and mutation routes unreachable. | Independently review PR #154 exact head 9979977; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #154 merged 605a7584. Verify 34915653174 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376695395. | Start next bounded canonical lock-domain/session caller boundary from 605a7584; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #154 exact signed head 9979977 against base 56f56c1. Adds LockDomainScope.bind: type-validates SQLite session, MutationFence, AdmissionLease, captures canonical LockDomainContract under common lock, and leaves hold as immediate durable recheck. Added binding/invalid-component tests; focused hostile/session/lock suite passes 42 tests and 12 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent review of the next caller-boundary slice; require production-route reachability evidence, durable reopen/WAL behavior and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
