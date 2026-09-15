@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `b05ae3270dbb15b0cb163f6ec9a971941ceb9862`
+- Product remote main: `b788029af98af1f54cb1075825b21207b8cdfb80`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,12 +11,14 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #197 | `ar0007-validated-missing-owner@86c7305ffc15` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject missing fencing owners before lock acquisition |
+| #198 | `ar0007-validated-missing-barrier@6c6492df9d17` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject missing durable barriers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34928278589 | `6c6492df9d17` | pull_request | Verify | completed:success |
+| 34928118452 | `b788029af98a` | push | Verify | completed:success |
 | 34928020095 | `86c7305ffc15` | pull_request | Verify | completed:success |
 | 34927869430 | `b05ae3270dbb` | push | Verify | completed:success |
 | 34927776891 | `3e249adfcf27` | pull_request | Verify | completed:success |
@@ -27,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34927108017 | `bbeca8b432c9` | push | Verify | completed:success |
 | 34927012182 | `7f1ce0e5dbd7` | pull_request | Verify | completed:success |
 | 34926861334 | `69aecaa8b761` | push | Verify | completed:success |
-| 34926770807 | `09c8a0cf223a` | pull_request | Verify | completed:success |
-| 34926627111 | `20296734a47b` | push | Verify | completed:success |
