@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #149 merged as 0b037fcf. Verify 34913240774 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10375471769. | AR-0007 remains open: next bounded gap is independently reviewed fresh-process rejection recovery; keep production routes unreachable and do not promote AR-0012. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Post-merge Verify 34913240774 succeeded on 0b037fcf (PR149): hosted TLC main 121,472 generated/90,752 distinct and small 110/94, plus tiny models, all no errors; attestation artifact 10375471769. Local TLC admission failed closed because systemd-run was unavailable. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Monitoring the next AR-0007 fresh-process rejection-recovery slice from merged 0b037fcf. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal limits remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process rejection recovery, stale-lease rejection and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
 
