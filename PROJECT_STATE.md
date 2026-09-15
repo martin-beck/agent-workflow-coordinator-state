@@ -14,7 +14,7 @@ Generated from local Git and GitHub. Do not edit.
 | #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #318 | `feature/tlc-resource-bound-reliability@e3ad0edb2318` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): raise TLC capacity after host preflight |
-| #319 | `ar0017-timeout@16a3549dc276` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(ci): align release-sensitive formal timeout |
+| #319 | `ar0017-timeout@16a3549dc276` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(ci): align release-sensitive formal timeout |
 
 ## Recent workflows
 
