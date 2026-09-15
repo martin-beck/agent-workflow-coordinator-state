@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #314 merged as a5f9105 with release-sensitive full-exhaustive dispatch, but post-merge Verify run 35000601242 failed in the large Handoffctl TLC model because release-sensitive push retained a 1200-second timeout. Repair PR #315 at e4ab56a extends only release-sensitive formal runs to the documented 6000-second bound; independent review and exact-head CI are pending. | Obtain independent exact-head review and green PR #315 checks; merge only after all required gates pass, then require exact post-merge Verify success before closing AR-0016. |
+| P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #314 merged as a5f9105; post-merge Verify 35000601242 failed because release-sensitive full-exhaustive push used a 1200-second timeout. Repair PR #315 is at 067ba1cc18c947080cd0eb79bc6a90fdfce1ae76 with fork-first 600-second timeout and release-sensitive 6000-second timeout. Independent review passed; exact-head Verify 35003972069 is running with AWQ and scope green. | Wait for Verify 35003972069; merge PR #315 only if all required checks pass, then require exact post-merge Verify success before closing AR-0016. |
 
 ### Open (2)
 
