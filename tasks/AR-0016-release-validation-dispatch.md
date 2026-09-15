@@ -8,16 +8,16 @@
     "AR-0015"
   ],
   "id": "AR-0016",
-  "next_action": "Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify.",
+  "next_action": "Obtain independent exact-head review and green PR #315 checks; merge only after all required gates pass, then require exact post-merge Verify success before closing AR-0016.",
   "owner": "codex-awc-ar0016-release-gate-20260915",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
   "status": "in_progress",
-  "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
-  "task_revision": 17,
+  "summary": "PR #314 merged as a5f9105 with release-sensitive full-exhaustive dispatch, but post-merge Verify run 35000601242 failed in the large Handoffctl TLC model because release-sensitive push retained a 1200-second timeout. Repair PR #315 at e4ab56a extends only release-sensitive formal runs to the documented 6000-second bound; independent review and exact-head CI are pending.",
+  "task_revision": 18,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T17:50:24+00:00",
+  "updated_at": "2026-09-15T17:51:10+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -77,3 +77,7 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T17:50:24+00:00: Recorded command exit 0; command argv SHA-256
   76ff06647f2701d4f15186769ccf44882d01008c5e974287ead14a3ba004bfce.
+
+- 2026-09-15T17:51:10+00:00: Recorded post-merge Verify failure 35000601242: release-sensitive push
+  selected full-exhaustive but formal invocation used 1200 seconds and exited nonzero during
+  Handoffctl model. Repair PR #315 published at e4ab56a602b2f915d03450faff592e6e5373ded5.
