@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `56f56c1f7aa76a375e3a9b9119b28ab0e204c818`
+- Product remote main: `605a7584f95455f1bf916fc41244ed811477a59e`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #154 | `ar0007-canonical-scope-boundary@9979977163e8` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: bind canonical lock domain scope |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34915653174 | `605a7584f954` | push | Verify | completed:success |
 | 34915547980 | `9979977163e8` | pull_request | Verify | completed:success |
 | 34915285598 | `56f56c1f7aa7` | push | Verify | completed:success |
 | 34914905690 | `20fbad0598bd` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34913520132 | `c823ce9016a1` | pull_request | Verify | completed:success |
 | 34913240774 | `0b037fcfc8f0` | push | Verify | completed:success |
 | 34913162730 | `09b85115da18` | pull_request | Verify | completed:success |
-| 34912861644 | `785f3894a2a6` | push | Verify | completed:success |
