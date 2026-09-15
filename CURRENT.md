@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #162 merged 3b3e7d5e. Verify 34918644341 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376383971. | Independently review PR #163 exact head 01258b4, then merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #163 repaired and merged 4a0c19dc. Verify 34919142085 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10377765883. | Rebase PR #164 onto current 4a0c19dc, rerun checks, then merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Re-reviewed repaired PR #163 exact signed head 825d2e3 against 3b3e7d5e. Fencing-token and fencing-owner rejection tests are preserved; owner type rejects before common-lock. Focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller-boundary slice. Require project/authority/revision/fence type and equality validation before common-lock, process-death/replacement/WAL evidence, trusted reread plus second recheck, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
