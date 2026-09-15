@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #240 | `ar0007-validated-memoryview-fence@e31dc04ab5d3` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject memoryview fencing tokens |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34938707579 | `e31dc04ab5d3` | pull_request | Verify | in_progress:- |
 | 34938471740 | `6b8d635cf7d2` | push | Verify | completed:success |
 | 34938373912 | `9f02d9721ba3` | pull_request | Verify | completed:success |
 | 34938143870 | `19d5ee1f3b14` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34937026073 | `f8a642df66ce` | push | Verify | completed:success |
 | 34936971381 | `937072733cc9` | pull_request | Verify | completed:success |
 | 34936774252 | `fa83951cb801` | push | Verify | completed:success |
-| 34936708904 | `3aefd522b374` | pull_request | Verify | completed:success |
