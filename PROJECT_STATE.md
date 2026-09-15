@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #213 | `ar0007-validated-sequence-project@def9c623213c` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject sequence project identifiers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34932003548 | `def9c623213c` | pull_request | Verify | in_progress:- |
 | 34931847358 | `0c3ae5a75261` | push | Verify | completed:success |
 | 34931785549 | `dcad9fe6e9bc` | pull_request | Verify | completed:success |
 | 34931603103 | `0174245dc88f` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34930949725 | `1fe81d266e80` | push | Verify | completed:success |
 | 34930903916 | `1ed99130635b` | pull_request | Verify | completed:success |
 | 34930765735 | `f20588bea718` | push | Verify | completed:success |
-| 34930701111 | `1992d4413811` | pull_request | Verify | completed:success |
