@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #250 | `ar0007-reject-context-value-lookup@a865961b6001` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix: reject caller context lookup failures |
+| #250 | `ar0007-reject-context-value-lookup@a865961b6001` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: reject caller context lookup failures |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34942354709 | `a865961b6001` | pull_request | Verify | in_progress:- |
+| 34942354709 | `a865961b6001` | pull_request | Verify | completed:success |
 | 34941957066 | `857ff0474bbe` | push | Verify | completed:success |
 | 34941881983 | `3c2526322bd6` | pull_request | Verify | completed:success |
 | 34941636617 | `965ae278fc54` | push | Verify | completed:success |
