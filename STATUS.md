@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR290 published at signed head bf64852: Git snapshot_bound now validates and copies complete backend context before trusted scope entry, rejecting malformed context before locks or Git. | Obtain independent exact-head review and public PR290 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR290 merged as be92ec8; post-merge Verify 34970037796 green at 95&#37; coverage (5805 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10397435592. snapshot_bound now validates/copies complete backend context before trusted scope entry. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main be92ec8; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
