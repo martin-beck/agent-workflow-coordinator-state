@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #256 merged a79aa4d; Verify 34946216338 green, TLC 110/94, attestation 10387591927. PR #257 published signed head e0584d9 for stale admitted-CAS recheck rejection. | Obtain independent review and merge PR #257 through state-owned handoffctl; monitor exact-head Verify, then continue justified lifecycle/backend-equivalence coverage. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #257 merged 3589ed4; Verify 34946828016 green with TLC 121472/90752, 4352/2728, 516/232, 146/81, 110/94 and attestation 10387123016. Next hostile direct recheck comparison exception-normalization slice. | Implement and publish the next rejection-only slice normalizing arbitrary direct recheck equality exceptions before scope/store; preserve mutation, dispatch, apply, and rollback unreachable. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR257 exact-head narrow PASS: base a79aa4d, signed head d386d6c, mergeable; added recheck evidence identity/revision drift rejection before scope/store, with focused admitted-control suite 5 passed and PR run 34946706128 AWQ/scope/smoke green, Verify skipped. No production mutation/dispatch. | Monitor PR257 merge and post-merge Verify/TLC. Preserve stale identity/revision/fence matrix and require malformed/hostile recheck values normalize to AdmissionLeaseError before scope/store, lock cleanup, exact-head public gates, attestation, and no refinement claim. | codex-awc-ar0008-next-20260915b |
 
 ## Open
