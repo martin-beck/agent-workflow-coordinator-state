@@ -11,6 +11,7 @@
   "priority": "P1",
   "schema_version": 1,
   "status": "planned",
+  "task_revision": 1,
   "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
   "title": "Release validation dispatch gate",
   "updated_at": "2026-09-14T21:30:00+02:00",
