@@ -109,7 +109,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #150 from 0b037fcf, signed c823ce9: repeated fresh rejection crashes then final retry cleanup. | Review PR #150; keep routes unreachable and do not promote AR-0012. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Monitoring the next AR-0007 fresh-process rejection-recovery slice from merged 0b037fcf. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal limits remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process rejection recovery, stale-lease rejection and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Reviewed PR #150 exact signed head c823ce9 against 0b037fcf. Test-only adds a second fresh-process crash during stale-lease rejection; subsequent final fresh retry still rejects the old lease and demonstrates cleanup. Focused tests pass 11 tests and 4 subtests; AWQ/scope/smoke are green, Verify skipped. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
 
