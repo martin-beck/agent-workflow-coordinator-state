@@ -11,7 +11,8 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #307 | `ar0015-formal-runtime@2c8469087864` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | fix(vendor): include complete formal runtime closure |
+| #307 | `ar0015-formal-runtime@2c8469087864` | `main` | UNSTABLE | QUEUED:, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #308 | `ar0015-formal-runtime-20260915@2c8469087864` | `main` | UNKNOWN | QUEUED:, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
