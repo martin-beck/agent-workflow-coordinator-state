@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #251 merged c15174a; Verify 34942955397 succeeded, TLC 516/232, 121472/90752 + 110/94, attestation 10385533264. | Start next bounded rejection-only caller/session validation slice from exact merge c15174a; preserve mutation/dispatch/upgrade/apply/rollback unreachable. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #251 merged c15174a; Verify 34942955397 succeeded, TLC 516/232, 121472/90752 + 110/94, attestation 10385533264. PR #252 published signed head 6a0818a. | Obtain independent review and merge PR #252 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Current merged head c15174a after PR251; no subsequent AR-0007 caller/session PR is open. | Monitor and independently review next caller/session boundary PR from c15174a; require typed fail-closed validation, zero ownership, focused/public gates, and bounded formal evidence. | codex-awc-ar0008-next-20260915b |
 
 ## Open
