@@ -3,18 +3,21 @@
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
   "claim_expires": "",
-  "depends_on": ["AR-0003", "AR-0015"],
+  "depends_on": [
+    "AR-0003",
+    "AR-0015"
+  ],
   "id": "AR-0016",
   "next_action": "Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify.",
   "owner": "",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
-  "status": "planned",
-  "task_revision": 1,
+  "status": "open",
   "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
+  "task_revision": 2,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-14T21:30:00+02:00",
+  "updated_at": "2026-09-15T17:09:06+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -30,3 +33,6 @@ Acceptance: a regression test or workflow proof demonstrates that release
 preparation invokes full tests, coverage, formal verification, and attestations;
 ordinary non-release PRs retain their bounded fast path; documentation explains
 the distinction and no release/tag is published by this AR.
+
+- 2026-09-15T17:09:06+00:00: Promote dependency-ready AR-0016 to enforce full release validation
+  dispatch after AR-0015 v0.3.8 publication.

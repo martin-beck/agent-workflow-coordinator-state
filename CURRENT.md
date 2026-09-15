@@ -10,6 +10,12 @@ Never edit this file directly.
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #306 merged as 4526b22b182d0b674d765b4ea2b82a8401524122; post-merge Verify 34991547376 green: 512 tests, 95% coverage, all event-appropriate TLC tiers no-error; artifact 10405499029. Continue trusted-session/backend-equivalence work with mutation, dispatch, execute, apply, and rollback unreachable; implementation_refinement remains not-proven. | Start the next AR-0007 correctness slice from exact main 4526b22b182d0b674d765b4ea2b82a8401524122; require independent exact-head review, signed public gates, and post-merge Verify. | codex-awc-ar0007-coverage-20260915c |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | AR-0008 evidence-map slice merged as PR #311 at b67c54a34ddb0789f561df0b4786ee34b8c2b2a9. Exact post-merge Verify 34999092550 passed: 512 tests, 95% coverage, all formal tiers no-error, artifact 10408728117. Added one explicit mapping from six typed rollback rejection tests to formal obligations; correspondence and implementation_refinement remain not-proven and mutation/authorization unreachable. | Continue AR-0008 only for a genuinely missing executable formal obligation. Require exact-head independent review, DCO, public gates, and post-merge Verify; do not promote AR-0012 or claim concrete refinement. | codex-awc-ar0008-recovery-20260915 |
 
+## Open
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Prevent release preparation from bypassing full coordinator validation through path-based CI skipping. | Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify. | - |
+
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
@@ -18,7 +24,6 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Promote only after AR-0007 is complete; then implement the accepted barrier, fencing, and fail-closed SQLite contract with exact-head tests and formal refinement evidence. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. | - |
-| P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Prevent release preparation from bypassing full coordinator validation through path-based CI skipping. | Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify. | - |
 
 ## Done
 
