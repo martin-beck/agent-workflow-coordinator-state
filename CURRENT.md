@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Full exact-head formal gate passed on merged b097c757; six models succeeded. Executable mutation/refinement remains explicitly unproven. | Preserve non-claims; define a separately reviewed mutation/refinement contract before any rollback execution work. | codex-awc-ar0007-next-20260916 |
-| P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. | codex-awc-ar0016-closure-20260916 |
+| P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | codex-awc-ar0016-closure-20260916 |
 
 ## Planned
 
