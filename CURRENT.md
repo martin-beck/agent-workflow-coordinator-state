@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #157 published from a7ad8e8f at signed 2fd572c: stale caller context is rejected before common-lock acquisition; no scope ownership or mutation route is reached. | Independently review PR #157 exact head 2fd572c; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #157 merged 794db11d. Verify 34916940596 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376937088. | Start next bounded canonical lock-domain/session caller boundary from 794db11d; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #157 exact signed head 2fd572c against a7ad8e8. Test-only counted common-lock calls to prove stale validated context is rejected before common-lock acquisition; ownership remains clear. Focused hostile/session/lock suite passes 45 tests and 18 subtests; AWQ/scope/smoke green, Verify skipped. | Continue independent review of the next caller-boundary slice; require process-death/replacement/WAL evidence, trusted reread plus second recheck and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
