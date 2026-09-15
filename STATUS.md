@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 published signed 648aff4 after PR #274: fresh process successfully reacquires real WAL/common/control locks and opens WAL mode after explicit sidecar cleanup; no historical replacement detection claim, CAS/backend or mutation paths untouched. Exact review PASS; public AWQ/scope/smoke green. | Obtain exact-head merge of PR #275 through state-owned handoffctl, then define the next trusted-session/backend-equivalence seam; preserve zero backend calls on rejection, mutation/dispatch/apply/rollback disabled, and refinement not-proven. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 merged d449585 from signed 648aff4; post-merge Verify 34957039341 green with attestation 10392116731 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. WAL/SHM rejection plus explicit sidecar cleanup and fresh lock/WAL-mode reacquisition are covered; mutation/refinement remain unproven. | Select the next dependency-ready trusted-session/backend-equivalence seam; preserve zero CAS/backend calls on rejection, mutation/dispatch/apply/rollback disabled, and formal/refinement claims bounded. |
 
 ### Open (2)
 
