@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #215 merged 1f6641b4; Verify 34932487177 green, TLC 121472/90752 + 110/94, attestation 10382117943. PR #216 published at 7f50da5 from exact merged head. | Independently review PR #216 exact head 7f50da5; merge only after awq/scope/smoke and full Verify pass, then record post-merge evidence. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #216 merged b55a414f; Verify 34932732048 succeeded with TLC 121472/90752 main, 110/94 small, attestation 10381789247. | Create and publish the next narrow rejection-only caller/session validation slice from b55a414f; keep dispatch, mutation, upgrade, apply, and rollback unreachable. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #200 exact signed head 50324d1 against 18ad842c. Test-only rejects missing authority_revision before common-lock; focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller/session slice. Require exact signed provenance, typed project/authority/revision/fence/barrier equality validation before common-lock, zero ownership on malformed/missing/stale/replaced inputs, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC bound to the exact head. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260915 |
 
 ## Open
