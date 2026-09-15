@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
-  "task_revision": 14,
+  "task_revision": 15,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T17:37:59+00:00",
+  "updated_at": "2026-09-15T17:38:15+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -68,4 +68,7 @@ the distinction and no release/tag is published by this AR.
   134caeefc8951d357bdeac91021a4530285832c9c3c16b0448aeb2339227a69c.
 
 - 2026-09-15T17:37:59+00:00: Recorded command exit 0; command argv SHA-256
+  eaf2472e4b0ec29bac3303a6d46474c99be3c0ab077feca87b1c3650d4745e53.
+
+- 2026-09-15T17:38:15+00:00: Recorded command exit 0; command argv SHA-256
   eaf2472e4b0ec29bac3303a6d46474c99be3c0ab077feca87b1c3650d4745e53.
