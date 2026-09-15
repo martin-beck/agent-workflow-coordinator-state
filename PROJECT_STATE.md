@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #167 | `ar0007-validated-empty-owner@4db75ffb8105` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject empty fencing owners before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34920228432 | `4db75ffb8105` | pull_request | Verify | in_progress:- |
 | 34920076941 | `823a0be152d0` | push | Verify | completed:success |
 | 34919986799 | `7db9752e466c` | pull_request | Verify | completed:success |
 | 34919667174 | `627838577683` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34918806572 | `203985bdf041` | pull_request | Verify | completed:success |
 | 34918644341 | `3b3e7d5e4da3` | push | Verify | completed:success |
 | 34918611254 | `01258b4d3934` | pull_request | Verify | completed:success |
-| 34918517154 | `6387d39dd329` | pull_request | Verify | completed:success |
