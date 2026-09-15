@@ -8,16 +8,16 @@
     "AR-0003"
   ],
   "id": "AR-0015",
-  "next_action": "Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it.",
+  "next_action": "Create and independently review a minimal v0.3.8 metadata bump from exact merge 7b487aa; merge it, run exact post-merge Verify, publish signed immutable v0.3.8 targeting that merge, and verify the GitHub release.",
   "owner": "codex-awc-ar0015-v037-20260915",
   "plan": "../plans/AR-0015.md",
   "priority": "P1",
   "schema_version": 1,
   "status": "in_progress",
-  "summary": "Ensure every formal verifier runtime input and regression test is present in vendor snapshots.",
-  "task_revision": 9,
+  "summary": "PR #307 merged at 7b487aa50f20d70cba8b860a66d006c2389fd58f; post-merge Verify 34996220200 green (512 tests, 95%, all formal tiers no-error, artifact 10407827035). Existing signed immutable tag v0.3.7 targets unrelated 550c014c and has no GitHub release, so publication provenance is invalid for this merge. Remediate with a new signed v0.3.8 release; do not move v0.3.7.",
+  "task_revision": 10,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:37:59+00:00",
+  "updated_at": "2026-09-15T16:41:22+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -55,3 +55,7 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 
 - 2026-09-15T16:37:59+00:00: Recorded command exit 0; command argv SHA-256
   ae8a5574caf1d0404a98066b625accc23b07c81b90efb711c5f0077a1e627723.
+
+- 2026-09-15T16:41:22+00:00: 2026-09-15T16:41:00+00:00: Independent review found v0.3.7 signed tag
+  targets 550c014c440cc9bc45727fea71d90a9025c554c3, not verified merge 7b487aa, and no GitHub
+  release exists. Tag collision is immutable; no force-move performed.
