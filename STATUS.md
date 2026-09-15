@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR302 merged as 6ec90024; post-merge Verify 34985568817 green at 95&#37; coverage (5911 statements), 506 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10403835401. Concrete Git/SQLite rollback adapters now require bound capability before legacy snapshot or rollback handler observation; engine rejects unbound rollback before backend/execute. Bound evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 6ec90024; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR304 merged as 5eca1d45; post-merge Verify 34988937078 green at 95&#37; coverage (5944 statements), 510 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10405245875. Typed identity-bound BoundRollbackCapability now invokes the concrete verifier, rejects plain/foreign/mismatched capabilities before journal/backend/handler, and forces diagnostic-only rollback evidence. No mutation or formal-refinement claim. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 5eca1d45; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
