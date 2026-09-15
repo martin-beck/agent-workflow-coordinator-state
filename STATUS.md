@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 merged d449585 from signed 648aff4; post-merge Verify 34957039341 green with attestation 10392116731 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. WAL/SHM rejection plus explicit sidecar cleanup and fresh lock/WAL-mode reacquisition are covered; mutation/refinement remain unproven. | Select the next dependency-ready trusted-session/backend-equivalence seam; preserve zero CAS/backend calls on rejection, mutation/dispatch/apply/rollback disabled, and formal/refinement claims bounded. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 merged d449585 with green Verify 34957039341. Published signed PR #276 at bb4ef22: typed read_git_authority_snapshot captures .git identity, clean status, symbolic/resolved HEAD, requested ref reachability, and rereads repository identity immediately before return; dirty, detached, invalid, and mismatched refs fail closed. Fixed Git observation argv only; no mutation/execute path. Focused 2 tests and local quality gates green. | Obtain independent exact-head review and merge PR #276 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Keep CAS/backend mutation, dispatch, apply, rollback, and production integration disabled. |
 
 ### Open (2)
 
