@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #160 merged f9b871c2. Verify 34917946707 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376343384. | Start next bounded canonical lock-domain/session caller boundary from f9b871c2; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #161 published from f9b871c2 at signed 2d0503a: non-text project identifier is rejected before common-lock acquisition. | Independently review PR #161 exact head 2d0503a; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Preparation checkpoint from merged f9b871c (PR160): validated_hold rejects non-text authority revisions before lock acquisition; no subsequent caller-boundary PR is open, only unrelated PR #85. | Review next exact caller-boundary PR against matrix: exact typed context equality before lock; canonical common-&gt;control-&gt;authority ordering; trusted reread and second recheck; stale/replacement/WAL/SHM/process-death rejection; cleanup on every failure; no mutation/dispatch reachability. Run hostile tests and admitted TLC when available; preserve implementation_refinement=not-proven, mutation disabled, AR-0012 unpromoted. |
 
 ### Open (1)
