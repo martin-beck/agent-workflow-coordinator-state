@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34997001352 | `6332f032b744` | push | Verify | completed:failure |
 | 34996889697 | `b309d7e690fc` | pull_request | Verify | completed:success |
 | 34996739607 | `0f4322f55df3` | pull_request | Verify | completed:success |
 | 34996220200 | `7b487aa50f20` | push | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34990844070 | `d54e8de1d620` | push | Verify | completed:failure |
 | 34990744809 | `41b8697165d2` | pull_request | Verify | completed:success |
 | 34990598347 | `efb493ff1ec6` | pull_request | Verify | completed:success |
-| 34990296503 | `dae5320193b8` | pull_request | Verify | completed:success |
