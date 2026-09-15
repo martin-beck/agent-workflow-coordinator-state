@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #224 | `ar0007-validated-list-barrier@622ff0671a57` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject list durable barriers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34934402530 | `622ff0671a57` | pull_request | Verify | in_progress:- |
 | 34934245370 | `8a3cbf22023e` | push | Verify | completed:success |
 | 34934189590 | `6b6bc633cf85` | pull_request | Verify | completed:success |
 | 34934017738 | `6f41ce0ea424` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34933394558 | `3b3b4417bcf6` | push | Verify | completed:success |
 | 34933346643 | `8a4701a8a201` | pull_request | Verify | completed:success |
 | 34933175870 | `6a88d5fed05f` | push | Verify | completed:success |
-| 34933125126 | `88103fc31c9b` | pull_request | Verify | completed:success |
