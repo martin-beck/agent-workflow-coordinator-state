@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #249 | `ar0007-reject-hostile-context-mapping@3c2526322bd6` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix: reject hostile caller context mappings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34941881983 | `3c2526322bd6` | pull_request | Verify | in_progress:- |
 | 34941636617 | `965ae278fc54` | push | Verify | completed:success |
 | 34941365998 | `9f415146eb6c` | pull_request | Verify | completed:success |
 | 34941009931 | `e4e4f887cfd9` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34939700985 | `550c014c440c` | push | Verify | completed:failure |
 | 34939641200 | `1586c14cbc73` | pull_request | Verify | completed:success |
 | 34939520642 | `a3eb0d7885e8` | push | Verify | completed:success |
-| 34939461677 | `1f84a72d6e47` | push | Verify | completed:cancelled |
