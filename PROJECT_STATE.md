@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #225 | `ar0007-validated-tuple-barrier@787479904f17` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject tuple durable barriers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34934620704 | `787479904f17` | pull_request | Verify | completed:success |
 | 34934462904 | `647a844ff7e3` | push | Verify | completed:success |
 | 34934402530 | `622ff0671a57` | pull_request | Verify | completed:success |
 | 34934245370 | `8a3cbf22023e` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34933599065 | `570af2c9d637` | push | Verify | completed:success |
 | 34933557906 | `565a4362fbe4` | pull_request | Verify | completed:success |
 | 34933394558 | `3b3b4417bcf6` | push | Verify | completed:success |
-| 34933346643 | `8a4701a8a201` | pull_request | Verify | completed:success |
