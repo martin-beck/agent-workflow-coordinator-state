@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR301 merged as 7f71997; post-merge Verify 34984107063 green at 95% coverage (5907 statements), 503 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10402354012. Bound rollback process-abort/fresh-worker recovery and authority/session, Git identity, and SQLite descriptor drift now preserve durable state, release locks, keep execute unreachable, and remain non-mutating. implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 7f71997; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR302 merged as 6ec90024; post-merge Verify 34985568817 green at 95% coverage (5911 statements), 506 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10403835401. Concrete Git/SQLite rollback adapters now require bound capability before legacy snapshot or rollback handler observation; engine rejects unbound rollback before backend/execute. Bound evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 6ec90024; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
