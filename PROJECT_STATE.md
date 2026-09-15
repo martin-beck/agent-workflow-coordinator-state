@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #253 | `feature/ar0007-context-schema-b252@e0c7476ff66a` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject unknown keys from mapping context adapters |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34944048729 | `e0c7476ff66a` | pull_request | Verify | in_progress:- |
 | 34943468272 | `b52ba552de6c` | push | Verify | completed:success |
 | 34943314106 | `6a0818a367c5` | pull_request | Verify | completed:success |
 | 34942955397 | `c15174a031cd` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34941636617 | `965ae278fc54` | push | Verify | completed:success |
 | 34941365998 | `9f415146eb6c` | pull_request | Verify | completed:success |
 | 34941009931 | `e4e4f887cfd9` | push | Verify | completed:success |
-| 34940941815 | `7c174f33b7f7` | pull_request | Verify | completed:success |
