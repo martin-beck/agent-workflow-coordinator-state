@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #273 merged f22ec9c from signed 85388ed; post-merge Verify 34955853177 green with attestation 10391880084 and TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94. Fresh worker now successfully reacquires unchanged real scope after child abort; WAL/SHM or descriptor replacement remains unproven. | Implement the next separately reviewed lifecycle slice: WAL/SHM sidecar or descriptor identity replacement after abort, with trusted reread immediately before use, stale rejection before CAS/backend, zero backend calls, and mutation/dispatch/apply/rollback disabled. | codex-awc-ar0007-next-20260915b |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #273 merged f22ec9c with green Verify 34955853177. Published signed PR #274 at eff59ac: after child os._exit() in real SQLite scope, replacing the authority descriptor is rejected by trusted descriptor reread before binding backend/CAS; lock ownership is released. Successful fresh-worker reacquisition and stale durable-identity rejection remain covered; focused 46 tests plus 12 subtests and local gates green. | Obtain independent exact-head review and merge PR #274 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Next gap is WAL/SHM sidecar replacement evidence; keep mutation/dispatch/apply/rollback unreachable. | codex-awc-ar0007-next-20260915b |
 
 ## Open
 
