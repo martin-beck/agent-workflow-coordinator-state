@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #146 published from exact merged head 287bda12 at signed DCO commit ed77f94. Test-only fresh-process trusted reread now rejects the old lease and confirms lock cleanup. | Independently review PR #146 exact head ed77f94; merge after focused/full tests, coverage >=95%, quality, and formal evidence. Keep production routes unreachable; do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #146 merged as ade2f774. Verify 34911999039 succeeded: TLC 121472/90752 main, 110/94 small; attestation artifact 10374781157. Fresh-process stale-lease rejection remains test-only and fail-closed. | AR-0007 remains open: next bounded gap is independently reviewed fresh-process retry with explicit repeated trusted reread and stale-lease rejection. Keep production routes unreachable; do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #146 exact signed head ed77f94 against 287bda12. Test-only forked fresh process rereads durable authority-retry state after child crash, attempts old authority-1 lease admission, rejects fail-closed, and confirms ownership release. Focused tests pass 11 tests and 4 subtests; AWQ/scope/smoke green, Verify skipped. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
