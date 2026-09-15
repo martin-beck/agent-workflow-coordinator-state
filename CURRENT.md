@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR286 merged at 60453e7: real snapshot_bound + concrete LockDomainScope now has subprocess abort cleanup, fresh-worker reacquisition, and stale durable-session rejection before Git with zero backend calls; post-merge Verify is green. | Implement the next read-only durable-transition slice: replace direct-row stale-session test manipulation with typed durable invalidation/recovery and prove fresh snapshot_bound rejects/reacquires through the supported transition API; retain mutation/dispatch/execute/apply/rollback disabled and require independent exact-head review plus post-merge Verify/TLC. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR287 published at signed head cddd028: typed ambiguous/replacement session transitions now drive fresh real snapshot_bound rejection and reacquisition; scope separates lease identity revision from durable CAS revision. | Obtain independent exact-head review and public PR287 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
