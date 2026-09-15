@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #229 | `ar0007-validated-bytes-barrier@a430cc195fbd` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject bytes durable barriers before lock acquisition |
+| #229 | `ar0007-validated-bytes-barrier@a430cc195fbd` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject bytes durable barriers before lock acquisition |
 
 ## Recent workflows
 
