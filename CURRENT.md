@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR290 merged as be92ec8; post-merge Verify 34970037796 green at 95% coverage (5805 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10397435592. snapshot_bound now validates/copies complete backend context before trusted scope entry. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main be92ec8; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR291 merged as f2d87cc; post-merge Verify 34971229497 green at 95% coverage (5805 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10396569390. Formal upgrade evidence now binds exact implementation/model revisions across evidence.json and v10-refinement-contract.json with bounded recovery correspondence. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main f2d87cc; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
