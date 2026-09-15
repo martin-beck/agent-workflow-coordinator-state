@@ -14,11 +14,13 @@ Generated from local Git and GitHub. Do not edit.
 | #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
+| #322 | `fix/ar0019-event-tier@138ac4fb5346` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(ci): use fast tier for push validation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35033173139 | `138ac4fb5346` | pull_request | Verify | in_progress:- |
 | 35032618355 | `4631bfc22f59` | push | Verify | completed:cancelled |
 | 35030537899 | `63342f11bfcb` | pull_request | Verify | completed:success |
 | 35030154482 | `97cfb1b4c91d` | pull_request | Verify | completed:failure |
@@ -30,4 +32,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35027421352 | `2680dd19b7c4` | pull_request | Verify | completed:failure |
 | 35025833203 | `ae6f1ecfeeab` | push | Verify | completed:failure |
 | 35024077568 | `16a3549dc276` | pull_request | Verify | completed:success |
-| 35023746333 | `5a9ba29eade3` | push | Verify | completed:failure |
