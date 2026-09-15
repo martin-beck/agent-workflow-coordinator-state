@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `f22ec9c306aebb8ede337bbfb40f6bd95c7f974b`
+- Product remote main: `ecadfb9a6b46e7eca3c2f2f6d1eb3241b1fc1dcb`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,13 +11,12 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #274 | `feature/ar0007-abort-authority-replacement@e6beb78c3727` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject replaced authority after abort |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34956446701 | `e6beb78c3727` | pull_request | Verify | in_progress:- |
+| 34956446701 | `e6beb78c3727` | pull_request | Verify | completed:success |
 | 34955853177 | `f22ec9c306ae` | push | Verify | completed:success |
 | 34955727766 | `85388edc3a4d` | pull_request | Verify | completed:success |
 | 34955394591 | `1a40544565a4` | push | Verify | completed:success |
