@@ -8,16 +8,16 @@
     "AR-0015"
   ],
   "id": "AR-0016",
-  "next_action": "Require rerun 35003972069 full-exhaustive success; merge PR #315 only after all gates, then require exact post-merge Verify before closing AR-0016.",
+  "next_action": "Wait for terminal Verify 35003972069; if green, merge PR #315 and require exact post-merge verification.",
   "owner": "codex-awc-ar0016-release-gate-20260915",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
   "status": "in_progress",
-  "summary": "PR #314 merged as a5f9105; initial post-merge Verify 35000601242 failed on large TLC model due 1200-second timeout. Repair PR #315 exact head 067ba1c passed independent review; run 35003972069 was orphaned on the runner, then failed when the runner was safely restarted and has been rerun. AR-0007 Verify 35005629097 is now executing after runner recovery.",
-  "task_revision": 27,
+  "summary": "PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge.",
+  "task_revision": 28,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T18:23:28+00:00",
+  "updated_at": "2026-09-15T19:06:35+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -105,3 +105,7 @@ the distinction and no release/tag is published by this AR.
 - 2026-09-15T18:23:28+00:00: Runner diagnostics confirmed assigned formal child vanished while
   GitHub reported in_progress; restarted runner and reran failed formal job. This is classified as
   infrastructure recovery, not product pass evidence.
+
+- 2026-09-15T19:06:35+00:00: Recorded dispatch of replacement Verify 35003972069 at 19:04:52Z;
+  runner command confirms RuntimeMaxSec=6000 and active full-exhaustive TLC. No pass or merge
+  claimed.
