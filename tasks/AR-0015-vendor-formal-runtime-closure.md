@@ -15,7 +15,7 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published.",
-  "task_revision": 14,
+  "task_revision": 15,
   "title": "Complete formal runtime vendor closure",
   "updated_at": "2026-09-15T16:47:41+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
@@ -72,3 +72,6 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 - 2026-09-15T16:47:41+00:00: 2026-09-15T16:47:00+00:00: Exact post-merge Verify 34997001352 failed
   test_upgrade_formal_evidence.test_recorded_model_and_implementation_hashes_match with expected
   3fb63c... vs actual 97d709... for tools/handoffctl.py. No release/tag action taken.
+
+- 2026-09-15T16:47:41+00:00: Recorded command exit 0; command argv SHA-256
+  015166e259bb8e0f98fb000a7ffdda1087bd4ecaefb76625b6b73e4d2fcc0b34.
