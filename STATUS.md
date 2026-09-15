@@ -111,7 +111,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #318 published at signed exact head a25ea66 from merged base 7bf4501. Local focused tests (18 TLC runner, 5 evidence), Ruff/format/diff, DCO, and signature pass; AWQ/scope pass and Verify 35015342502 is queued. Await exact-head formal result before merge. | Wait for PR #318 Verify 35015342502; independently inspect all checks, merge only if green, then require post-merge exact-head verification. |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #318 exact signed head a25ea66 passed independent review, local gates, AWQ/scope; Verify 35015342502 is now actively running with the 4 GiB heap/6 GiB containment profile after PR #315 OOM failure. | Wait for terminal PR #318 Verify; independently inspect all checks, merge only if green, then require post-merge exact-head verification. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. |
 
 ### Open (2)
