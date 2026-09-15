@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #180 | `ar0007-validated-mapping-revision@cbaa62e45a1e` | `main` | UNSTABLE | QUEUED:, QUEUED: | test: reject mapping state revisions before lock acquisition |
+| #180 | `ar0007-validated-mapping-revision@cbaa62e45a1e` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject mapping state revisions before lock acquisition |
 
 ## Recent workflows
 
