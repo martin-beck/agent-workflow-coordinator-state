@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #207 | `ar0007-validated-bool-authority@1992d4413811` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject boolean authority revisions before lock acquisition |
+| #207 | `ar0007-validated-bool-authority@1992d4413811` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject boolean authority revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34930701111 | `1992d4413811` | pull_request | Verify | in_progress:- |
+| 34930701111 | `1992d4413811` | pull_request | Verify | completed:success |
 | 34930549770 | `dd851b106d9c` | push | Verify | completed:success |
 | 34930492270 | `cb43b0d863a6` | pull_request | Verify | completed:success |
 | 34930315228 | `907d1309aa28` | push | Verify | completed:success |
