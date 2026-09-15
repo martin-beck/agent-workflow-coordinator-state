@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | Independent review blocks PR #276 head 1d1726e: reachable ancestor refs are rejected by equality and final HEAD/ref commits are not reread after reachability. Caller worker is repairing the integrated read-only Git authority seam; no merge or mutation wiring. | Repair PR #276 again: remove ref==HEAD restriction and add final HEAD/requested-ref commit reread after reachability; obtain independent exact-head PASS before merge. Keep CAS/backend mutation, dispatch, apply, rollback, and production integration disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #275 merged d449585 with green Verify 34957039341. PR #276 repaired signed head 7bffe81: read_git_authority_snapshot now accepts reachable ancestor heads/tags, enforces explicit refs/heads and refs/tags, --end-of-options, merge-base reachability, and final branch/HEAD/ref commit+name reread after owner-safe root/.git identity reread. Positive ancestor-tag coverage and hostile dirty/detached/invalid-ref tests pass; no mutation/execute path. | Obtain independent exact-head review and merge repaired PR #276 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Keep CAS/backend mutation, dispatch, apply, rollback, and production integration disabled. |
 
 ### Open (2)
 
