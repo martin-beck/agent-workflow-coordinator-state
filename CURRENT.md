@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #150 from 0b037fcf, signed c823ce9: repeated fresh rejection crashes then final retry cleanup. | Review PR #150; keep routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #150 merged as 1be785ca; post-merge Verify 34913618431 passed with TLC 121472/90752 main, 110/94 small, attestation 10375198536. Keep rejection-only routes. | Start the next bounded fresh-process rejection-recovery slice from 1be785ca; keep production routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34913618431 succeeded on 1be785ca (PR150): hosted TLC main 121,472 generated/90,752 distinct and small 110/94, plus tiny models, all no errors; attestation artifact 10375198536. Local TLC admission failed closed because systemd-run was unavailable. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
