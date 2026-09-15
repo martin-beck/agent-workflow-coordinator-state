@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #265 merged 488ad5f; Verify 34951409261 green with TLC tiers and attestation 10389064586. PR #266 published signed head d33ade4 for replaced project/session identity rejection before backend. | Obtain independent review and merge PR #266 through state-owned handoffctl; monitor exact-head Verify, then continue justified lifecycle/backend-equivalence coverage. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #265 merged 488ad5f; Verify 34951409261 green, attestation 10389064586. PR #266 rebased onto current main with signed head 24550a3 for replaced project/session identity rejection; public gates restarted. | Await PR #266 independent review and public gates; merge through state-owned handoffctl, monitor exact-head Verify, then continue justified lifecycle/backend-equivalence coverage. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR #265 exact head 8a064b8 narrow PASS: replaced authority_revision drift is rejected before backend/CAS; hostile test confirms backend untouched, signed DCO, mergeable, AWQ/scope/smoke green. No mutation/refinement claim. | Review the next AR-0007 lifecycle/backend-equivalence slice for trusted durable session identity, stale/replaced descriptor and authority revision, crash cleanup, zero-mutation reachability, exact gates and bounded TLC; retain refinement not-proven. |
 
 ### Open (1)
