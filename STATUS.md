@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**16 ARs tracked** across 3 active status categories.
+**16 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 6 |
 | **Future** | Deferred roadmap work | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - Open"]:::status_open
+        AR_0007["AR-0007 - In progress"]:::status_in_progress
         AR_0008["AR-0008 - Open"]:::status_open
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -104,11 +104,16 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (3)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | PR302 merged as 6ec90024; post-merge Verify 34985568817 green at 95&#37; coverage (5911 statements), 506 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10403835401. Concrete Git/SQLite rollback adapters now require bound capability before legacy snapshot or rollback handler observation; engine rejects unbound rollback before backend/execute. Bound evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 6ec90024; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR302 merged as 6ec90024; post-merge Verify 34985568817 green at 95&#37; coverage (5911 statements), 506 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10403835401. Concrete Git/SQLite rollback adapters now require bound capability before legacy snapshot or rollback handler observation; engine rejects unbound rollback before backend/execute. Bound evidence remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 6ec90024; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+
+### Open (2)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | PR267 merge e1f5ff5 post-merge Verify 34952538380 succeeded: TLC 121472/90752 main, 516/232 intermediate, 146/81 and 110/94 small; all no-error; attestation artifact 10390155786. Durable-barrier identity drift rejection accepted as bounded caller-owned evidence. | Remain active for next trusted-session/backend-equivalence slice. Require descriptor/authority/session identity reread, stale/replaced rejection, crash/process-death cleanup, zero backend/mutation reachability, exact signed/public gates and admitted TLC; retain implementation_refinement=not-proven and AR-0012 unpromoted. |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 
