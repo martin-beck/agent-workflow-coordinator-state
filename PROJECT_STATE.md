@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #159 | `ar0007-validated-context-type@2d33fcd977e1` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: reject typed caller context drift |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34917573595 | `2d33fcd977e1` | pull_request | Verify | completed:success |
 | 34917373742 | `964b50c5e20c` | push | Verify | completed:success |
 | 34917199883 | `254bf590492d` | pull_request | Verify | completed:success |
 | 34916940596 | `794db11da7b8` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34915653174 | `605a7584f954` | push | Verify | completed:success |
 | 34915547980 | `9979977163e8` | pull_request | Verify | completed:success |
 | 34915285598 | `56f56c1f7aa7` | push | Verify | completed:success |
-| 34914905690 | `20fbad0598bd` | pull_request | Verify | completed:success |
