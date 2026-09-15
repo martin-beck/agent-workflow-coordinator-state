@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #168 | `ar0007-validated-empty-barrier@2dd8abd36d30` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject empty durable barriers before lock acquisition |
+| #168 | `ar0007-validated-empty-barrier@2dd8abd36d30` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject empty durable barriers before lock acquisition |
 
 ## Recent workflows
 
