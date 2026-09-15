@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #166 | `ar0007-validated-empty-fence@7db9752e466c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject empty caller fencing token |
+| #166 | `ar0007-validated-empty-fence@7db9752e466c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject empty caller fencing token |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34919986799 | `7db9752e466c` | pull_request | Verify | in_progress:- |
+| 34919986799 | `7db9752e466c` | pull_request | Verify | completed:success |
 | 34919667174 | `627838577683` | push | Verify | completed:success |
 | 34919571806 | `c11a2c77f877` | pull_request | Verify | completed:success |
 | 34919380489 | `a5bd6bd4af7c` | push | Verify | completed:success |
