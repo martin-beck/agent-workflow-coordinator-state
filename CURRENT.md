@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Full exact-head formal gate passed on merged b097c757; six models succeeded. Executable mutation/refinement remains explicitly unproven. | Preserve non-claims; define a separately reviewed mutation/refinement contract before any rollback execution work. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #324 merged as 509906c with real Git/SQLite bound-inspection coverage; post-merge fast run 35036896561 failed only coverage at 94% versus 95% gate. | Repair coverage regression with focused tests without weakening the 95% gate; rerun fast post-merge validation and preserve non-authorizing rollback/refinement nonclaims. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
