@@ -11,12 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #267 | `feature/ar0007-binding-barrier-replaced@e1cf80f4cb12` | `main` | DIRTY | - | test: reject replaced barrier before backend |
+| #267 | `feature/ar0007-binding-barrier-replaced@df83e3818a29` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: reject replaced barrier before backend |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34952210948 | `df83e3818a29` | pull_request | Verify | queued:- |
 | 34951825368 | `053f90026c11` | push | Verify | completed:success |
 | 34951727763 | `24550a370042` | pull_request | Verify | completed:success |
 | 34951409261 | `488ad5f3bde4` | push | Verify | completed:success |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34950062496 | `06c6aa3bcaad` | pull_request | Verify | completed:success |
 | 34949710523 | `a8e8e148e6ae` | push | Verify | completed:success |
 | 34949544182 | `3138fc904a1e` | pull_request | Verify | completed:success |
-| 34949130944 | `0bc6be0b9311` | push | Verify | completed:success |
