@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #275 merged d449585 with green Verify 34957039341. PR #276 repaired signed head 7bffe81: read_git_authority_snapshot now accepts reachable ancestor heads/tags, enforces explicit refs/heads and refs/tags, --end-of-options, merge-base reachability, and final branch/HEAD/ref commit+name reread after owner-safe root/.git identity reread. Positive ancestor-tag coverage and hostile dirty/detached/invalid-ref tests pass; no mutation/execute path. | Obtain independent exact-head review and merge repaired PR #276 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Keep CAS/backend mutation, dispatch, apply, rollback, and production integration disabled. | codex-awc-ar0007-next-20260915b |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #276 merged as 1956a113 from independently reviewed signed head 7bffe814. It adds read-only Git authority observation with reachable ancestor/tag support, final HEAD/ref reread, owner-safe identity checks, and hostile tests. Push Verify 34958172000 is in progress; await full Verify/TLC/attestation before next slice. Mutation/refinement remain disabled. | After push Verify 34958172000 and its TLC/attestation complete, start the next trusted-session lifecycle/recheck slice in tools/git_authority_adapter.py. Bind immutable Git identity to trusted session context; keep execute/commit/apply/rollback and production dispatch disabled. | codex-awc-ar0007-next-20260915b |
 
 ## Open
 
