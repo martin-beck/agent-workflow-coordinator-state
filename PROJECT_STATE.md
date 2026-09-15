@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #186 | `ar0007-validated-neg-inf@d7910f5e6b67` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject negative infinite revisions before lock acquisition |
+| #186 | `ar0007-validated-neg-inf@d7910f5e6b67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject negative infinite revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34925372024 | `d7910f5e6b67` | pull_request | Verify | in_progress:- |
+| 34925372024 | `d7910f5e6b67` | pull_request | Verify | completed:success |
 | 34925210015 | `a850f55d7113` | push | Verify | completed:success |
 | 34925122437 | `372548f35d27` | pull_request | Verify | completed:success |
 | 34924892026 | `157b52cd49f4` | push | Verify | completed:success |
