@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR291 merged as f2d87cc; post-merge Verify 34971229497 green at 95&#37; coverage (5805 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10396569390. Formal upgrade evidence now binds exact implementation/model revisions across evidence.json and v10-refinement-contract.json with bounded recovery correspondence. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main f2d87cc; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | Next signed AR-0007 slice c608643 from exact main f2d87cc: real Git snapshot_bound rejects backend identity drift, unverified identity, and non-read-only results; 18 focused tests, 486 full tests, 95&#37; coverage, Ruff/mypy/format/headers/Lizard/examples/schema gates pass. | Publish PR for c608643 through this active lease, obtain independent exact-head review and public gates, then merge/post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
