@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR287 published at signed head cddd028: typed ambiguous/replacement session transitions now drive fresh real snapshot_bound rejection and reacquisition; scope separates lease identity revision from durable CAS revision. | Obtain independent exact-head review and public PR287 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 PR287 repaired at signed head bba9af2: generic session binding again rejects stale CAS-row revisions, while concrete reconciled scopes use explicit durable row revision. | Obtain independent exact-head review and public PR287 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
