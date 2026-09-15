@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | PR #318 Verify 35017494646 completed failure at 20:26:14Z in DCO certification: commit d7c52f9 author is martin.beck2@gmx.de but sign-off is martin.beck@huggingface.co. Formal tier did not publish attestation; no model counterexample is claimed. Repair commit identity/sign-off and rerun all gates. | Repair DCO sign-off on PR #318 with exact author identity, then rerun AWQ/scope/formal and require terminal green exact-head evidence before merge. | codex-awc-ar0017-tlc-capacity-20260915 |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | PR #318 exact head e3ad0ed repairs DCO identity and is under Verify 35019766718; AWQ and scope pass, smoke skipped, formal run remains in progress with no terminal result. | Await terminal Verify 35019766718; if green, perform independent exact-head review, merge PR #318, and require post-merge Verify before closure. | codex-awc-ar0017-tlc-capacity-20260915 |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. | codex-awc-ar0016-release-gate-20260915 |
 
 ## Open
