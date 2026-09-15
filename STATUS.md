@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #273 merged f22ec9c with green Verify 34955853177. Published signed PR #274 at eff59ac: after child os._exit() in real SQLite scope, replacing the authority descriptor is rejected by trusted descriptor reread before binding backend/CAS; lock ownership is released. Successful fresh-worker reacquisition and stale durable-identity rejection remain covered; focused 46 tests plus 12 subtests and local gates green. | Obtain independent exact-head review and merge PR #274 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Next gap is WAL/SHM sidecar replacement evidence; keep mutation/dispatch/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915b | PR #273 merged f22ec9c with green Verify 34955853177. Repaired PR #274 onto current main at signed head e6beb78: synchronized active control.sqlite-wal/control.sqlite-shm replacement inside the real SQLite connection is rejected by the existing sidecar identity guard before the scope can proceed; authority remains untouched. Focused 120 tests plus 61 subtests and local quality gates green; mutation/dispatch/apply/rollback untouched. | Obtain independent exact-head review and merge repaired PR #274 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation. Keep mutation/dispatch/apply/rollback unreachable; next gap is binding-level WAL-sidecar rejection integration if audit requires it. |
 
 ### Open (2)
 
