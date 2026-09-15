@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #245 merged d88c218; post-merge Verify 34939963285 failed in five vendor tests because PR #244 v0.3.7 runtime alignment left tests hard-coded to v0.3.6. No formal tier ran; mutation/dispatch remain unreachable. | Publish a corrective signed version-alignment PR that parameterizes vendor fixtures/expectations from the supported release metadata without weakening integrity checks; require full tests/coverage and post-merge Verify before resuming caller slices. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #245 merged d88c218; post-merge Verify 34939963285 failed in five vendor tests because PR #244 v0.3.7 runtime alignment left tests hard-coded to v0.3.6. Corrective PR #246 published signed head 7a6fcbd; full pytest 432 passed, 370 subtests, coverage 95%. | Obtain independent review and merge corrective PR #246 through state-owned handoffctl; monitor exact-head Verify and record green evidence before resuming caller-context slices. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #240 e31dc04 exact head from 6b8d635; memoryview fencing_token rejection is test-only and all focused/public gates pass. | Audit next caller/session rejection slice: require non-Mapping context to fail closed as LockDomainError before common-lock, and decide/enforce exact-schema rejection of unknown keys; preserve mutation disabled and implementation_refinement=not-proven. | codex-awc-ar0008-next-20260915 |
 
 ## Open
