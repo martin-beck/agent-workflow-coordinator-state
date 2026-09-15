@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #278 merged 52663863 with coverage at 95%; formatting-only PR #280 merged as abdc64c. Push Verify 34959860593 is queued; prior failure was Ruff formatting only. Await full green Verify/TLC/attestation before next AR-0007 slice. | Monitor push Verify 34959860593 on merge abdc64c; require full quality, 95% coverage, TLC publication tier, and exact-head attestation. If green, start trusted-session lifecycle/recheck slice; keep mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | AR-0007 publication gate is green after merge abdc64c: Verify 34959860593 succeeded with 95% coverage, TLC pr-publication tiers 516/232, 121472/90752, and 110/94, and exact-head attestation artifact 10392409412. Begin next read-only trusted-session lifecycle/recheck slice; formal refinement remains unproven. | Start the trusted-session lifecycle/recheck slice in tools/git_authority_adapter.py from main abdc64c. Bind immutable Git identity to trusted session context; add hostile replacement/revision/fence tests; keep mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
