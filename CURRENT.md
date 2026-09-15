@@ -7,13 +7,13 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #158 merged 964b50c5. Verify 34917373742 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376317775. | Start next bounded canonical lock-domain/session caller boundary from 964b50c5; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #158 exact signed head 254bf59 against 794db11d. Test-only adds missing caller-context rejection before common-lock acquisition, preserving zero lock calls and no session ownership; combined hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent review of the next caller-boundary slice; require process-death/replacement/WAL evidence, trusted reread plus second recheck and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #158 merged 964b50c5. Verify 34917373742 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376317775. | Start next bounded canonical lock-domain/session caller boundary from 964b50c5; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | - |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
 
 ## Planned
