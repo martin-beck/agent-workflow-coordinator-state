@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #255 merged 8194b0d; Verify 34945770581 green, attestation 10387302063. PR #256 rebased onto current main with signed head d4e3d2a for admitted-CAS scope release on store failure; public gates green. | Record exact PR256 Verify result, then obtain independent review and merge through state-owned handoffctl; continue justified barrier CAS/recheck lifecycle coverage. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #256 merged a79aa4d; Verify 34946216338 green, TLC 110/94, attestation 10387591927. Next stale identity/revision/fence rejection slice pending. | Implement and publish the next small rejection-only barrier CAS/recheck slice for stale identity, revision, or fence evidence; preserve mutation/dispatch/apply/rollback unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR256 post-merge exact formal PASS: merge a79aa4d, Verify 34946216338 green, TLC 110/94 no-error, attestation artifact 10387591927. Narrow store-failure lifecycle cleanup is accepted; test-only diff releases held scope after CAS/store exception and does not wire mutation/dispatch. | Remain active for next barrier CAS/recheck slice. Require exact signed head/base, immutable identity and allowed mutable schema, expected-revision/fencing CAS, lock order, pre/post recheck, crash/fault/cleanup evidence, public gates, admitted TLC attestation, and explicit no-refinement boundary. Keep AR-0012 unpromoted. |
 
 ### Open (1)
