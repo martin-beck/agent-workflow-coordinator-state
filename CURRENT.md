@@ -14,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR267 merge e1f5ff5 post-merge Verify 34952538380 succeeded: TLC 121472/90752 main, 516/232 intermediate, 146/81 and 110/94 small; all no-error; attestation artifact 10390155786. Durable-barrier identity drift rejection accepted as bounded caller-owned evidence. | Remain active for next trusted-session/backend-equivalence slice. Require descriptor/authority/session identity reread, stale/replaced rejection, crash/process-death cleanup, zero backend/mutation reachability, exact signed/public gates and admitted TLC; retain implementation_refinement=not-proven and AR-0012 unpromoted. | - |
+| P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Ensure every formal verifier runtime input and regression test is present in vendor snapshots. | Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it. | - |
 
 ## Planned
 
@@ -23,7 +24,6 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Promote only after AR-0007 is complete; then implement the accepted barrier, fencing, and fail-closed SQLite contract with exact-head tests and formal refinement evidence. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. | - |
-| P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Ensure every formal verifier runtime input and regression test is present in vendor snapshots. | Add the complete formal-runner/evidence closure to the vendor allowlist and prove downstream sync consumes it. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Prevent release preparation from bypassing full coordinator validation through path-based CI skipping. | Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify. | - |
 
 ## Done
