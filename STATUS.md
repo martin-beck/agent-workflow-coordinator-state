@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #150 merged as 1be785ca; post-merge Verify 34913618431 passed with TLC 121472/90752 main, 110/94 small, attestation 10375198536. Keep rejection-only routes. | Start the next bounded fresh-process rejection-recovery slice from 1be785ca; keep production routes unreachable and do not promote AR-0012. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #151 from 1be785ca, signed 920ba7e: fresh-process authority reread failure closes safely, then retry rejection cleanup. | Review PR #151; keep routes unreachable and do not promote AR-0012. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Monitoring the next AR-0007 fresh-process rejection-recovery slice from merged 1be785ca. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal limits remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process rejection recovery, stale-lease rejection and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
