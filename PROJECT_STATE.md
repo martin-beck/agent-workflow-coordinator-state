@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `abdc64c66b5473ec91dbcdf23db23920d5c2222c`
+- Product remote main: `2022b25b21b4635e951037484920c2e5d0a1a67b`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #277 | `feature/ar0007-git-readonly-snapshot@5135c2ff4a5a` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: add read-only git authority snapshot seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34960349321 | `2022b25b21b4` | push | Verify | in_progress:- |
+| 34960246457 | `8f79163b9250` | pull_request | Verify | completed:success |
 | 34959860593 | `abdc64c66b54` | push | Verify | completed:success |
 | 34959788567 | `92aebf99737a` | pull_request | Verify | completed:success |
 | 34959624736 | `52663863cfb0` | push | Verify | completed:failure |
@@ -27,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34957528585 | `5135c2ff4a5a` | pull_request | Verify | completed:success |
 | 34957462046 | `bb4ef22551b5` | pull_request | Verify | completed:success |
 | 34957039341 | `d4495850db26` | push | Verify | completed:success |
-| 34956924058 | `648aff41dc97` | pull_request | Verify | completed:success |
-| 34956548894 | `ecadfb9a6b46` | push | Verify | completed:success |
