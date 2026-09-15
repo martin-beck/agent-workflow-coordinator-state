@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | Next signed AR-0007 slice c608643 from exact main f2d87cc: real Git snapshot_bound rejects backend identity drift, unverified identity, and non-read-only results; 18 focused tests, 486 full tests, 95&#37; coverage, Ruff/mypy/format/headers/Lizard/examples/schema gates pass. | Publish PR for c608643 through this active lease, obtain independent exact-head review and public gates, then merge/post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR292 published at signed head c6086431 from exact main f2d87cc; real Git snapshot_bound rejects backend identity drift, unverified identity, and non-read-only results before trusted scope/Git. Local focused 18/18, full 486 tests, 95&#37; coverage, static gates pass; AWQ/scope/smoke green. | Obtain independent exact-head review of PR292, then merge only through handoffctl and require post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
