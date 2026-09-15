@@ -11,12 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #260 | `feature/ar0007-admitted-cas-backend-result@bcb8eb5b5cfd` | `main` | DIRTY | - | test: reject invalid admitted CAS backend results |
+| #260 | `feature/ar0007-admitted-cas-backend-result@597c437b3135` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject invalid admitted CAS backend results |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34948382270 | `597c437b3135` | pull_request | Verify | completed:success |
 | 34947964927 | `c3746e62bb80` | push | Verify | completed:success |
 | 34947827287 | `da390ac3319e` | pull_request | Verify | completed:success |
 | 34947378166 | `42dbb90ece9f` | push | Verify | completed:success |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34945770581 | `8194b0d59ff7` | push | Verify | completed:success |
 | 34945519805 | `b6665d1c544d` | pull_request | Verify | completed:success |
 | 34945056962 | `c1f12944e10d` | push | Verify | completed:success |
-| 34944797737 | `527ff0611810` | pull_request | Verify | completed:success |
