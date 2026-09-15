@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #221 | `ar0007-validated-tuple-owner@d52bfb8b7ea1` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject tuple fencing owners before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34933757353 | `d52bfb8b7ea1` | pull_request | Verify | completed:success |
 | 34933599065 | `570af2c9d637` | push | Verify | completed:success |
 | 34933557906 | `565a4362fbe4` | pull_request | Verify | completed:success |
 | 34933394558 | `3b3b4417bcf6` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34932732048 | `b55a414fea06` | push | Verify | completed:success |
 | 34932682325 | `7f50da598b41` | pull_request | Verify | completed:success |
 | 34932487177 | `1f6641b483a8` | push | Verify | completed:success |
-| 34932442064 | `568e27e49112` | pull_request | Verify | completed:success |
