@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR300 merged as 8d18e38; post-merge Verify 34982899119 green at 95% coverage (5907 statements), 501 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10402521191. Direct rollback-bound result-tampering matrices now reject phase/context/identity/cleanliness/integrity/FK/read-only claims with durable-state equality, lock release, operation ownership false, and execute unreachable. Rollback remains non-authorizing; implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 8d18e38; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR301 merged as 7f71997; post-merge Verify 34984107063 green at 95% coverage (5907 statements), 503 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10402354012. Bound rollback process-abort/fresh-worker recovery and authority/session, Git identity, and SQLite descriptor drift now preserve durable state, release locks, keep execute unreachable, and remain non-mutating. implementation_refinement remains not-proven. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 7f71997; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
