@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `2d9e7c5a4139bacc67c7160e057ee618124bf3ad`
+- Product remote main: `1e651dc5da6b68176c498f07d2bcc35cb5a0fcb6`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #233 | `ar0007-validated-map-fence@70c33b9bbf1a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject mapping fencing tokens before lock acquisition |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34936531458 | `1e651dc5da6b` | push | Verify | in_progress:- |
 | 34936459074 | `70c33b9bbf1a` | pull_request | Verify | completed:success |
 | 34936289749 | `2d9e7c5a4139` | push | Verify | completed:success |
 | 34936233419 | `9ca3672273d8` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34935539388 | `a430cc195fbd` | pull_request | Verify | completed:success |
 | 34935348853 | `f535d6d774c6` | push | Verify | completed:success |
 | 34935303407 | `8675c031fe7c` | pull_request | Verify | completed:success |
-| 34935129068 | `055f57180d71` | push | Verify | completed:success |
