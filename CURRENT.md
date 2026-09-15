@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #147 from ade2f774, signed 5f71278: fresh-process trusted rereads and repeated stale-lease rejection with cleanup. | Review PR #147; keep production routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #147 exact signed head 5f71278 against ade2f774. Test-only fresh process performs two trusted durable rereads and two stale-lease scope attempts; both remain rejected and ownership is released. Focused tests pass 11 tests and 4 subtests; AWQ/scope/smoke are green, Verify skipped. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Post-merge Verify 34912399386 succeeded on 845640fa (PR147): hosted TLC main 121,472 generated/90,752 distinct and small 110/94, plus tiny models, all no errors; attestation artifact 10374494786. Local TLC admission failed closed because systemd-run was unavailable. | Continue independent review of the next AR-0007 recovery seam; require durable reopen/WAL evidence and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
 
