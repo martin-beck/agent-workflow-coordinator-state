@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Post-merge Verify 34959624736 on merge 52663863 passed scope/AWQ and reached quality, but failed only Ruff format in three new test context managers. Coverage is fixed at 95%; TLC/attestation were not reached. | Apply Ruff formatting-only repair to tests/test_upgrade_authority.py, publish signed follow-up, and rerun full Verify 95% coverage/TLC/attestation. No behavior or mutation wiring changes. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #278 merged 52663863 with coverage at 95%; formatting-only PR #280 merged as abdc64c. Push Verify 34959860593 is queued; prior failure was Ruff formatting only. Await full green Verify/TLC/attestation before next AR-0007 slice. | Monitor push Verify 34959860593 on merge abdc64c; require full quality, 95% coverage, TLC publication tier, and exact-head attestation. If green, start trusted-session lifecycle/recheck slice; keep mutation/dispatch/execute/apply/rollback disabled. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
