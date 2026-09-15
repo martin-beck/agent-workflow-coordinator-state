@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #223 | `ar0007-validated-tuple-fence@6b6bc633cf85` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject tuple fencing tokens before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34934189590 | `6b6bc633cf85` | pull_request | Verify | completed:success |
 | 34934017738 | `6f41ce0ea424` | push | Verify | completed:success |
 | 34933959976 | `4cbacb98e577` | pull_request | Verify | completed:success |
 | 34933803463 | `27299259fa6c` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34933175870 | `6a88d5fed05f` | push | Verify | completed:success |
 | 34933125126 | `88103fc31c9b` | pull_request | Verify | completed:success |
 | 34932934104 | `94b471f1116e` | push | Verify | completed:success |
-| 34932888529 | `be29c723942e` | pull_request | Verify | completed:success |
