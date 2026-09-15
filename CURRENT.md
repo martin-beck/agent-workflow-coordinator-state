@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #252 merged b52ba552; exact-head Verify 34943468272 succeeded with TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752, 110/94 and attestation 10386242774. | Select and publish the next bounded rejection-only caller/session validation slice from b52ba552; preserve mutation, dispatch, upgrade, apply, and rollback unreachable. | codex-awc-ar0007-next-20260915 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #252 merged b52ba552; Verify 34943468272 green with TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10386242774. PR #253 published signed head e0c7476. | Obtain independent review and merge PR #253 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Independent post-PR252 audit: assert_context now rejects non-Mapping, unknown keys, key enumeration failures, value/get lookup failures, and equality exceptions before common-lock; custom Mapping side effects remain fail-closed because comparison/type errors are normalized. No new concrete correctness gap found in the next caller/session boundary. | Remain active from merge b52ba552; monitor next AR-0007 caller/session rejection PR. Review exact signed base/head, DCO, hostile pre-lock rejection with ownership false, public gates, and exact-head TLC attestation. Keep formal diagnostic-only, mutation/dispatch disabled, AR-0012 unpromoted. | codex-awc-ar0008-next-20260915b |
 
 ## Open
