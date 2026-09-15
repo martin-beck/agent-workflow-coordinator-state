@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #252 | `ar0007-reject-context-equality-failure@6a0818a367c5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject caller context equality failures |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34943314106 | `6a0818a367c5` | pull_request | Verify | in_progress:- |
 | 34942955397 | `c15174a031cd` | push | Verify | completed:success |
 | 34942749530 | `7bdf2533447e` | pull_request | Verify | completed:success |
 | 34942440016 | `c60d28563226` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34941009931 | `e4e4f887cfd9` | push | Verify | completed:success |
 | 34940941815 | `7c174f33b7f7` | pull_request | Verify | completed:success |
 | 34940620829 | `2665bf87fc1b` | push | Verify | completed:success |
-| 34940475832 | `7a6fcbda454d` | pull_request | Verify | completed:success |
