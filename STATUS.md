@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #250 merged c60d285; Verify 34942440016 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10386285759. PR #251 published signed head 7bdf253. | Obtain independent review and merge PR #251 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260915 | PR #251 merged c15174a; Verify 34942955397 succeeded, TLC 516/232, 121472/90752 + 110/94, attestation 10385533264. | Start next bounded rejection-only caller/session validation slice from exact merge c15174a; preserve mutation/dispatch/upgrade/apply/rollback unreachable. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260915b | PR251 remains open after successful public AWQ/scope/smoke; Verify skipped, no post-merge formal evidence yet. | Monitor PR251 merge/post-merge Verify, then audit next caller/session boundary from its exact merge; preserve bounded formal evidence and refinement not-proven. |
 
 ### Open (1)
