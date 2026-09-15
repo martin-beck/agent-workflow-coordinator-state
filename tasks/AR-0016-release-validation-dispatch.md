@@ -2,22 +2,22 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "2026-09-16T00:33:31+00:00",
+  "claim_expires": "",
   "depends_on": [
     "AR-0003",
     "AR-0015"
   ],
   "id": "AR-0016",
   "next_action": "Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria.",
-  "owner": "codex-awc-ar0016-closure-20260916",
+  "owner": "",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
-  "status": "in_progress",
+  "status": "done",
   "summary": "Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757.",
-  "task_revision": 35,
+  "task_revision": 36,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T23:33:36+00:00",
+  "updated_at": "2026-09-15T23:33:42+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -129,3 +129,7 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T23:33:36+00:00: Run 35034620809 succeeded; artifact 10422894651, full-exhaustive, six
   models, tree d73cf5ef, required 4096m/6G/6000s bounds.
+
+- 2026-09-15T23:33:42+00:00: AR-0016 acceptance satisfied by merged release-validation changes and
+  exact-head full run 35034620809; artifact 10422894651 validated against b097c757/tree d73cf5ef. No
+  release/tag was published.
