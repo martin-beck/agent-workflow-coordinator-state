@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #179 | `ar0007-validated-frozenset-revision@d6d3907ea7f3` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject frozenset state revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34923484669 | `d6d3907ea7f3` | pull_request | Verify | in_progress:- |
 | 34923315295 | `0461a91bced5` | push | Verify | completed:success |
 | 34923238494 | `7825e60d5ace` | pull_request | Verify | completed:success |
 | 34923028824 | `9fb176d66901` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34922163826 | `3ced05e3ee88` | push | Verify | completed:success |
 | 34922076882 | `09b446aaa207` | pull_request | Verify | completed:success |
 | 34921930180 | `2677170f2eeb` | push | Verify | completed:success |
-| 34921861681 | `9343c84a708b` | pull_request | Verify | completed:success |
