@@ -11,12 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #266 | `feature/ar0007-binding-project-replaced@d33ade42d2f1` | `main` | DIRTY | - | test: reject replaced project before backend |
+| #266 | `feature/ar0007-binding-project-replaced@24550a370042` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject replaced project before backend |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34951727763 | `24550a370042` | pull_request | Verify | in_progress:- |
 | 34951409261 | `488ad5f3bde4` | push | Verify | completed:success |
 | 34951277188 | `8a064b83a53c` | pull_request | Verify | completed:success |
 | 34950900732 | `0b18ad34dfc2` | push | Verify | completed:success |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34949544182 | `3138fc904a1e` | pull_request | Verify | completed:success |
 | 34949130944 | `0bc6be0b9311` | push | Verify | completed:success |
 | 34948955860 | `37131d958d48` | pull_request | Verify | completed:success |
-| 34948554666 | `5848d66c4098` | push | Verify | completed:success |
