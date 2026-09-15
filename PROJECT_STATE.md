@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #169 | `ar0007-validated-empty-project@63d8c4b19f45` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject empty project identifiers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34920713580 | `63d8c4b19f45` | pull_request | Verify | in_progress:- |
 | 34920568943 | `2a25fc71ee65` | push | Verify | completed:success |
 | 34920482716 | `2dd8abd36d30` | pull_request | Verify | completed:success |
 | 34920311736 | `e9a0e6679473` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34919380489 | `a5bd6bd4af7c` | push | Verify | completed:success |
 | 34919293734 | `51da9276e304` | pull_request | Verify | completed:success |
 | 34919142085 | `4a0c19dc324c` | push | Verify | completed:success |
-| 34919044231 | `825d2e392ef1` | pull_request | Verify | completed:success |
