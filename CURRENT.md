@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #250 merged c60d285; Verify 34942440016 succeeded, TLC 9/4, 4352/2728, 146/81, 516/232, 121472/90752 + 110/94, attestation 10386285759. PR #251 published signed head 7bdf253. | Obtain independent review and merge PR #251 through state-owned handoffctl; monitor exact-head Verify, then continue next bounded rejection-only slice from its merge. | codex-awc-ar0007-next-20260915 |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Current merged c60d285 includes hostile Mapping key/value lookup fail-closed fixes; no next AR-0007 PR is open. | Prepare next caller/session boundary review: adversarial mutable Mapping key/value consistency or durable-session recheck failure, only with explicit contract and zero ownership; preserve mutation disabled/refinement not-proven. | codex-awc-ar0008-next-20260915b |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR251 7bdf253 exact head from c60d285: test-only overridden Mapping.get failure rejection adds non-duplicate hostile coverage. | Continue next caller/session boundary review from merged c60d285; target mutable Mapping key/value consistency or durable-session recheck failure with explicit contract, zero ownership, and bounded formal evidence. | codex-awc-ar0008-next-20260915b |
 
 ## Open
 
