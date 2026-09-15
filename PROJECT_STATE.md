@@ -10,14 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #242 | `ar1194-status-sharding@160c4c7ab7d3` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | Fix oversized STATUS.md projections with deterministic shards |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #242 | `ar1194-status-sharding@160c4c7ab7d3` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | Fix oversized STATUS.md projections with deterministic shards |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34939118692 | `a75c3a4ba323` | push | Verify | queued:- |
+| 34939118692 | `a75c3a4ba323` | push | Verify | completed:success |
 | 34939065698 | `160c4c7ab7d3` | pull_request | Verify | completed:success |
 | 34939050809 | `bdf56240ed0d` | pull_request | Verify | completed:success |
 | 34938842313 | `70068863fb3e` | push | Verify | completed:success |
