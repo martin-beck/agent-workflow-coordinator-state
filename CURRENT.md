@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR293 merged as 5c20eba; post-merge Verify 34974446778 green at 95% coverage (5851 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10398638905. SQLite trusted snapshots now prove durable-state preservation, lock cleanup, execute nonreachability, and zero backend calls on invalid/stale/replaced admission. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main 5c20eba; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR294 merged as 811cb23; post-merge Verify 34975426943 green at 95% coverage (5851 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10399765363. Fresh-worker SQLite fencing now proves stale lease rejection before SQLite calls, valid replacement success, lock release, and unchanged durable state. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main 811cb23; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
