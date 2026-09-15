@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #251 | `ar0007-reject-context-get-override@7bdf2533447e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | test: reject caller context get failures |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34942749530 | `7bdf2533447e` | pull_request | Verify | queued:- |
 | 34942440016 | `c60d28563226` | push | Verify | completed:success |
 | 34942354709 | `a865961b6001` | pull_request | Verify | completed:success |
 | 34941957066 | `857ff0474bbe` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34940620829 | `2665bf87fc1b` | push | Verify | completed:success |
 | 34940475832 | `7a6fcbda454d` | pull_request | Verify | completed:success |
 | 34939963285 | `d88c218d71b2` | push | Verify | completed:failure |
-| 34939856166 | `58611bc61500` | pull_request | Verify | completed:success |
