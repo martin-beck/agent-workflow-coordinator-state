@@ -8,16 +8,16 @@
     "AR-0003"
   ],
   "id": "AR-0015",
-  "next_action": "Create and independently review a minimal v0.3.8 metadata bump from exact merge 7b487aa; merge it, run exact post-merge Verify, publish signed immutable v0.3.8 targeting that merge, and verify the GitHub release.",
+  "next_action": "Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge.",
   "owner": "codex-awc-ar0015-v037-20260915",
   "plan": "../plans/AR-0015.md",
   "priority": "P1",
   "schema_version": 1,
   "status": "in_progress",
-  "summary": "PR #307 merged at 7b487aa50f20d70cba8b860a66d006c2389fd58f; post-merge Verify 34996220200 green (512 tests, 95%, all formal tiers no-error, artifact 10407827035). Existing signed immutable tag v0.3.7 targets unrelated 550c014c and has no GitHub release, so publication provenance is invalid for this merge. Remediate with a new signed v0.3.8 release; do not move v0.3.7.",
-  "task_revision": 13,
+  "summary": "PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published.",
+  "task_revision": 14,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:45:25+00:00",
+  "updated_at": "2026-09-15T16:47:41+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -68,3 +68,7 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 
 - 2026-09-15T16:45:25+00:00: Recorded command exit 0; command argv SHA-256
   255a6819db9bde8dc1ce27cb19619a95ba269cc2e46d50764ca682d7b71bbf96.
+
+- 2026-09-15T16:47:41+00:00: 2026-09-15T16:47:00+00:00: Exact post-merge Verify 34997001352 failed
+  test_upgrade_formal_evidence.test_recorded_model_and_implementation_hashes_match with expected
+  3fb63c... vs actual 97d709... for tools/handoffctl.py. No release/tag action taken.
