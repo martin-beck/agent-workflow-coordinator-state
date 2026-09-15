@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #227 | `ar0007-validated-frozenset-authority@30c08d564b09` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject frozenset authority revisions before lock acquisition |
+| #227 | `ar0007-validated-frozenset-authority@30c08d564b09` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject frozenset authority revisions before lock acquisition |
 
 ## Recent workflows
 
