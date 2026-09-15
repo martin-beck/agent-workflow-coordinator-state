@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #222 | `ar0007-validated-list-fence@4cbacb98e577` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject list fencing tokens before lock acquisition |
+| #222 | `ar0007-validated-list-fence@4cbacb98e577` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject list fencing tokens before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34933959976 | `4cbacb98e577` | pull_request | Verify | in_progress:- |
+| 34933959976 | `4cbacb98e577` | pull_request | Verify | completed:success |
 | 34933803463 | `27299259fa6c` | push | Verify | completed:success |
 | 34933757353 | `d52bfb8b7ea1` | pull_request | Verify | completed:success |
 | 34933599065 | `570af2c9d637` | push | Verify | completed:success |
