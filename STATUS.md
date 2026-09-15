@@ -111,7 +111,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #319 rebased repair is now exact head 499e3e1 with parent e3ad0ed, preserving 4096m/6G preflight and adding 6000-second release-sensitive TLC timeout; checks are pending. | Let PR #319 full gates run; independently review exact head, then require terminal formal attestation/DCO before merge and post-merge Verify. |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | codex-awc-ar0017-tlc-capacity-20260915 | PR #319 head 499e3e1 includes e3ad0ed capacity/preflight and 6000-second release-sensitive timeout; independent review found README still states an inaccurate universal 1200-second PR deadline. | Correct README timeout contract, push signed exact head, then run and review full gates including terminal formal attestation/DCO. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile. | Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation. |
 
 ### Open (2)
