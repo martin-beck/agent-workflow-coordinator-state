@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR295 merged as 79ecc34; post-merge Verify 34976326663 green at 95% coverage (5851 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10398902985. Process-abort SQLite evidence now proves child termination cleanup, fresh-worker reacquisition, unchanged durable state, and mutation nonreachability. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main 79ecc34; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR296 merged as 71f7dc2; post-merge Verify 34977767361 green at 95% coverage (5867 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10399928189. Git/SQLite bound-result schemas now enforce exact allowed keys and strict types with exhaustive missing/extra/wrong-type rejection tests. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main 71f7dc2; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
