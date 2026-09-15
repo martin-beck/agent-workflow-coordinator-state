@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #276 | `feature/ar0007-git-authority-snapshot@bb4ef22551b5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat: add typed read-only Git authority snapshot |
+| #276 | `feature/ar0007-git-authority-snapshot@bb4ef22551b5` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: add typed read-only Git authority snapshot |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34957462046 | `bb4ef22551b5` | pull_request | Verify | in_progress:- |
+| 34957462046 | `bb4ef22551b5` | pull_request | Verify | completed:success |
 | 34957039341 | `d4495850db26` | push | Verify | completed:success |
 | 34956924058 | `648aff41dc97` | pull_request | Verify | completed:success |
 | 34956548894 | `ecadfb9a6b46` | push | Verify | completed:success |
