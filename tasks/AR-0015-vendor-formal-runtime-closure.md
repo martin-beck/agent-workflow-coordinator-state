@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "Ensure every formal verifier runtime input and regression test is present in vendor snapshots.",
-  "task_revision": 6,
+  "task_revision": 7,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:33:28+00:00",
+  "updated_at": "2026-09-15T16:34:03+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -46,3 +46,6 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 
 - 2026-09-15T16:33:28+00:00: Recorded command exit 0; command argv SHA-256
   1f290c2f11ff98c472cb05e7d52fa23d02ce7ec82a320af912f083e4eaf399d7.
+
+- 2026-09-15T16:34:03+00:00: Recorded command exit 0; command argv SHA-256
+  0d1695299686febd5fcd7788accec442284be32cb54451d99166ce04040036c8.
