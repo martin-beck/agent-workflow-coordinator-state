@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #273 | `feature/ar0007-fresh-worker-reacquire@85388edc3a4d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cover fresh worker scope reacquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34955727766 | `85388edc3a4d` | pull_request | Verify | completed:success |
 | 34955394591 | `1a40544565a4` | push | Verify | completed:success |
 | 34955236743 | `8e4421d02240` | pull_request | Verify | completed:success |
 | 34954872842 | `a7ca83a4627d` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34953212032 | `0f8495a764dc` | push | Verify | completed:success |
 | 34953088221 | `969ab37aed10` | pull_request | Verify | completed:success |
 | 34952538380 | `e1f5ff5230ca` | push | Verify | completed:success |
-| 34952210948 | `df83e3818a29` | pull_request | Verify | completed:success |
