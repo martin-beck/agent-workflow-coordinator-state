@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR #278 merged as 52663863 from independently reviewed signed head a759190a. Coverage repair adds hostile Git snapshot error/drift tests; 462 tests and local coverage 95&#37; pass. Await post-merge full Verify/TLC/attestation before next AR-0007 slice; mutation/refinement remain disabled. | Monitor push Verify 34959624736 on merge 52663863; require 95&#37; coverage, TLC publication tier, and exact-head attestation. After green evidence, start trusted-session lifecycle/recheck slice; keep mutation/dispatch/execute/apply/rollback disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | Post-merge Verify 34959624736 on merge 52663863 passed scope/AWQ and reached quality, but failed only Ruff format in three new test context managers. Coverage is fixed at 95&#37;; TLC/attestation were not reached. | Apply Ruff formatting-only repair to tests/test_upgrade_authority.py, publish signed follow-up, and rerun full Verify 95&#37; coverage/TLC/attestation. No behavior or mutation wiring changes. |
 
 ### Open (2)
 
