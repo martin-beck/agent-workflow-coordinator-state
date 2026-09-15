@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #178 merged 0461a91b; Verify 34923315295 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10378718743). | Create the next narrow rejection-only caller/session validation slice from 0461a91b; keep dispatch, mutation, upgrade, apply, and rollback unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #178 merged 0461a91b; Verify 34923315295 succeeded (TLC 121472/90752 main, 110/94 small, artifact 10378718743). PR #179 published at d6d3907. | Independently review PR #179 exact head d6d3907; merge only after awq/scope/smoke and full Verify pass, then record post-merge evidence. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Prepared independent acceptance criteria from merged head 0461a91b after PR178. Typed caller/session rejection evidence now covers broad scalar and container state_revision forms; next slice remains diagnostic-only. | Review the next exact-head caller/session PR from 0461a91b when published. Require exact signed provenance, typed project/authority/revision/fence/barrier equality validation before common-lock, zero ownership on malformed/missing/stale/replaced inputs, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
