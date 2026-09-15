@@ -2,22 +2,22 @@
 {
   "branch": "fix/vendor-formal-runtime-closure",
   "checkpoint_commit": "",
-  "claim_expires": "2026-09-15T17:02:50+00:00",
+  "claim_expires": "",
   "depends_on": [
     "AR-0002",
     "AR-0003"
   ],
   "id": "AR-0015",
   "next_action": "Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge.",
-  "owner": "codex-awc-ar0015-v037-20260915",
+  "owner": "",
   "plan": "../plans/AR-0015.md",
   "priority": "P1",
   "schema_version": 1,
-  "status": "in_progress",
+  "status": "done",
   "summary": "PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published.",
-  "task_revision": 17,
+  "task_revision": 18,
   "title": "Complete formal runtime vendor closure",
-  "updated_at": "2026-09-15T16:50:51+00:00",
+  "updated_at": "2026-09-15T16:54:45+00:00",
   "worktree_key": "agent-workflow-coordinator-vendor-formal-runtime-closure"
 }
 ---
@@ -81,3 +81,8 @@ reviewed signed DCO commit. Do not edit downstream vendor files by hand.
 
 - 2026-09-15T16:50:51+00:00: Recorded command exit 0; command argv SHA-256
   806946d00cddc424b4e32d85c5e563c5e6ec98ef84db4dd902d65ab9e042a9fb.
+
+- 2026-09-15T16:54:45+00:00: AR-0015 complete: PR #307/#310 merged; exact post-merge Verify
+  34997562749 passed at 769187186b25f3bc44bcf18db31db7307f0f5385 (512 tests, 95%, all formal tiers,
+  artifact 10408680858); signed immutable v0.3.8 release published targeting that exact merge.
+  Existing v0.3.7 preserved.
