@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #217 | `ar0007-validated-frozenset-project@be29c723942e` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject frozenset project identifiers before lock acquisition |
+| #217 | `ar0007-validated-frozenset-project@be29c723942e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject frozenset project identifiers before lock acquisition |
 
 ## Recent workflows
 
