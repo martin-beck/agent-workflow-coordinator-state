@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #148 merged as 785f3894. Verify 34912861644 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10374104864. Reread crash recovery remains test-only. | AR-0007 remains open: next bounded gap is independently reviewed fresh-process recovery after crash with repeated stale-lease rejection; keep production routes unreachable and do not promote AR-0012. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260914 | PR #149 from 785f3894, signed 09b8511: fresh process crashes during stale rejection; subsequent retry rejects and cleans up. | Review PR #149; keep production routes unreachable and do not promote AR-0012. |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260914 | Monitoring the next AR-0007 fresh-process crash-recovery/repeated stale-lease slice from merged 785f3894. No subsequent exact-head PR is currently published; only unrelated PR #85 is open. Fail-closed, lock cleanup, mutation and formal limits remain pending exact evidence. | Review the next published AR-0007 exact head for fresh-process crash recovery, repeated stale-lease rejection and lock cleanup. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. |
 
 ### Open (1)
