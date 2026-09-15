@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR #276 merged as 1956a113 from independently reviewed signed head 7bffe814. It adds read-only Git authority observation with reachable ancestor/tag support, final HEAD/ref reread, owner-safe identity checks, and hostile tests. Push Verify 34958172000 is in progress; await full Verify/TLC/attestation before next slice. Mutation/refinement remain disabled. | After push Verify 34958172000 and its TLC/attestation complete, start the next trusted-session lifecycle/recheck slice in tools/git_authority_adapter.py. Bind immutable Git identity to trusted session context; keep execute/commit/apply/rollback and production dispatch disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | PR #276 merged 1956a113; post-merge Verify 34958172000 exposed 94&#37; branch coverage from new Git snapshot paths. Published signed PR #278 at b86c1b1 (on repaired logic 7bffe81): focused hostile/error-path tests cover owner-safety, observation/reachability failures, identity reread/final drift, and reachable ancestor tags. Full 462-test unittest run passes; branch coverage is now 95&#37;; no mutation/dispatch/execute/apply/rollback wiring. | Obtain independent exact-head review and merge PR #278 through state-owned handoffctl; monitor exact-head Verify/TLC/attestation and confirm coverage gate. Keep production mutation/dispatch/execute/apply/rollback disabled. |
 
 ### Open (2)
 
