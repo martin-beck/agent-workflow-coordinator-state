@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `c15174a031cd8891af23567a86e27be988c32077`
+- Product remote main: `b52ba552de6c0ace6ac835c476f54c672b06af1c`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #252 | `ar0007-reject-context-equality-failure@6a0818a367c5` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject caller context equality failures |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34943468272 | `b52ba552de6c` | push | Verify | queued:- |
 | 34943314106 | `6a0818a367c5` | pull_request | Verify | completed:success |
 | 34942955397 | `c15174a031cd` | push | Verify | completed:success |
 | 34942749530 | `7bdf2533447e` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34941365998 | `9f415146eb6c` | pull_request | Verify | completed:success |
 | 34941009931 | `e4e4f887cfd9` | push | Verify | completed:success |
 | 34940941815 | `7c174f33b7f7` | pull_request | Verify | completed:success |
-| 34940620829 | `2665bf87fc1b` | push | Verify | completed:success |
