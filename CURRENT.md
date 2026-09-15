@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #164 merged a5bd6bd4. Verify 34919380489 succeeded: TLC 121472/90752 main, 110/94 small; artifact 10376724486. | Start next bounded canonical lock-domain/session caller boundary from a5bd6bd4; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable and do not promote AR-0012. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #165 published from a5bd6bd4 at signed c11a2c7: empty authority revision is rejected before common-lock acquisition. | Independently review PR #165 exact head c11a2c7; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Prepared independent acceptance criteria from merged head a5bd6bd4 after PR164. Next slice remains bounded typed caller validation: prove fail-closed rejection before common-lock with no ownership or mutation reachability. | Review the next exact-head caller-boundary PR from a5bd6bd4. Require exact signed base/head, typed project/authority/revision/fence/barrier identity equality before common-lock, zero ownership on rejection, process-death/replacement/WAL and trusted reread/second-recheck evidence, focused hostile tests plus public gates, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
