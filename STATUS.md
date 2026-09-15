@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR284 merged at bfb6ae7: GitAuthorityAdapter.snapshot_bound composes with concrete LockDomainScope and matching AdmissionRecheck, validates trusted session identity before read-only Git observation, and rejects stale/replaced/ambiguous sessions without backend calls; post-merge Verify is green. | Implement the next read-only hardening slice for ScopedBackendAdapter scope_context: prove the reduced six-field lease binding cannot weaken full backend context validation, add hostile API/type tests and process/fresh-worker cleanup where needed; retain mutation/dispatch/execute/apply/rollback disabled and require independent exact-head review plus post-merge Verify/TLC. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR285 published as signed head 7d184f1: ScopedBackendAdapter scope_context now requires the exact six-field typed admission identity before scope/backend entry, while GitAuthorityAdapter retains strict full backend schema/type validation. | Obtain independent exact-head review and public PR285 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. |
 
 ### Open (2)
 
