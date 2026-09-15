@@ -12,11 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 | #162 | `ar0007-validated-fence-type@6387d39dd329` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject non-text caller fencing token |
+| #163 | `ar0007-validated-owner-type@01258b4d3934` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject non-text caller fencing owner |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34918611254 | `01258b4d3934` | pull_request | Verify | in_progress:- |
 | 34918517154 | `6387d39dd329` | pull_request | Verify | completed:success |
 | 34918354674 | `72585a4758ac` | push | Verify | completed:success |
 | 34918210612 | `2d0503ad3c05` | pull_request | Verify | completed:success |
@@ -28,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34917199883 | `254bf590492d` | pull_request | Verify | completed:success |
 | 34916940596 | `794db11da7b8` | push | Verify | completed:success |
 | 34916824568 | `2fd572cb82fe` | pull_request | Verify | completed:success |
-| 34916301938 | `a7ad8e8f7695` | push | Verify | completed:success |
