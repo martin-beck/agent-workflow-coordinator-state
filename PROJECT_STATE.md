@@ -13,12 +13,13 @@ Generated from local Git and GitHub. Do not edit.
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 | #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
-| #318 | `feature/tlc-resource-bound-reliability@a25ea66b861c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): raise TLC capacity after host preflight |
+| #318 | `feature/tlc-resource-bound-reliability@d7c52f941573` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(formal): raise TLC capacity after host preflight |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35017494646 | `d7c52f941573` | pull_request | Verify | in_progress:- |
 | 35015342502 | `a25ea66b861c` | pull_request | Verify | completed:failure |
 | 35006681700 | `267efd9eb9ef` | pull_request | Verify | completed:failure |
 | 35006394562 | `99ca034de6cd` | pull_request | Verify | completed:cancelled |
@@ -30,4 +31,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35000601242 | `a5f9105164bc` | push | Verify | completed:failure |
 | 35000290602 | `ad011579fe87` | pull_request | Verify | completed:success |
 | 34999902591 | `fa047726b42e` | pull_request | Verify | completed:success |
-| 34999879189 | `4b4650167003` | pull_request | Verify | completed:success |
