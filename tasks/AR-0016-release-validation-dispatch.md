@@ -2,20 +2,20 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "",
+  "claim_expires": "2026-09-15T17:39:06+00:00",
   "depends_on": [
     "AR-0003",
     "AR-0015"
   ],
   "id": "AR-0016",
   "next_action": "Require a full release validation tier for vendor/runtime changes even when pull-request scope would skip Verify.",
-  "owner": "",
+  "owner": "codex-awc-ar0016-release-gate-20260915",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
-  "status": "open",
+  "status": "in_progress",
   "summary": "Prevent release preparation from bypassing full coordinator validation through path-based CI skipping.",
-  "task_revision": 2,
+  "task_revision": 3,
   "title": "Release validation dispatch gate",
   "updated_at": "2026-09-15T17:09:06+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
@@ -36,3 +36,5 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T17:09:06+00:00: Promote dependency-ready AR-0016 to enforce full release validation
   dispatch after AR-0015 v0.3.8 publication.
+
+- 2026-09-15T17:09:06+00:00: Claimed by codex-awc-ar0016-release-gate-20260915.
