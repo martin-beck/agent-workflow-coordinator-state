@@ -2,7 +2,7 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "2026-09-15T19:18:45+00:00",
+  "claim_expires": "2026-09-15T19:26:54+00:00",
   "depends_on": [
     "AR-0003",
     "AR-0015"
@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #314 merged as a5f9105 with release-sensitive full-exhaustive dispatch, but post-merge Verify run 35000601242 failed in the large Handoffctl TLC model because release-sensitive push retained a 1200-second timeout. Repair PR #315 at e4ab56a extends only release-sensitive formal runs to the documented 6000-second bound; independent review and exact-head CI are pending.",
-  "task_revision": 20,
+  "task_revision": 21,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T17:55:49+00:00",
+  "updated_at": "2026-09-15T17:56:54+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -87,3 +87,5 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T17:55:49+00:00: Recorded command exit 0; command argv SHA-256
   eaf2472e4b0ec29bac3303a6d46474c99be3c0ab077feca87b1c3650d4745e53.
+
+- 2026-09-15T17:56:54+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
