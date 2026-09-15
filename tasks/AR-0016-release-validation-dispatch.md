@@ -8,16 +8,16 @@
     "AR-0015"
   ],
   "id": "AR-0016",
-  "next_action": "Wait for Verify 35003972069; merge PR #315 only if all required checks pass, then require exact post-merge Verify success before closing AR-0016.",
+  "next_action": "Require rerun 35003972069 full-exhaustive success; merge PR #315 only after all gates, then require exact post-merge Verify before closing AR-0016.",
   "owner": "codex-awc-ar0016-release-gate-20260915",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
   "status": "in_progress",
-  "summary": "PR #314 merged as a5f9105; post-merge Verify 35000601242 failed because release-sensitive full-exhaustive push used a 1200-second timeout. Repair PR #315 is at 067ba1cc18c947080cd0eb79bc6a90fdfce1ae76 with fork-first 600-second timeout and release-sensitive 6000-second timeout. Independent review passed; exact-head Verify 35003972069 is running with AWQ and scope green.",
-  "task_revision": 26,
+  "summary": "PR #314 merged as a5f9105; initial post-merge Verify 35000601242 failed on large TLC model due 1200-second timeout. Repair PR #315 exact head 067ba1c passed independent review; run 35003972069 was orphaned on the runner, then failed when the runner was safely restarted and has been rerun. AR-0007 Verify 35005629097 is now executing after runner recovery.",
+  "task_revision": 27,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T18:22:38+00:00",
+  "updated_at": "2026-09-15T18:23:28+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -101,3 +101,7 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T18:22:38+00:00: Recorded command exit 0; command argv SHA-256
   a4a355f9930e27edc3de6a6e7c7ddb65e7a9598edc474345b14a47fc89e14105.
+
+- 2026-09-15T18:23:28+00:00: Runner diagnostics confirmed assigned formal child vanished while
+  GitHub reported in_progress; restarted runner and reran failed formal job. This is classified as
+  infrastructure recovery, not product pass evidence.
