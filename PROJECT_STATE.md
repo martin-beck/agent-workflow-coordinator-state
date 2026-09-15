@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #218 | `ar0007-validated-list-authority@88103fc31c9b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject list authority revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34933125126 | `88103fc31c9b` | pull_request | Verify | completed:success |
 | 34932934104 | `94b471f1116e` | push | Verify | completed:success |
 | 34932888529 | `be29c723942e` | pull_request | Verify | completed:success |
 | 34932732048 | `b55a414fea06` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34932054113 | `94e2a8b8f990` | push | Verify | completed:success |
 | 34932003548 | `def9c623213c` | pull_request | Verify | completed:success |
 | 34931847358 | `0c3ae5a75261` | push | Verify | completed:success |
-| 34931785549 | `dcad9fe6e9bc` | pull_request | Verify | completed:success |
