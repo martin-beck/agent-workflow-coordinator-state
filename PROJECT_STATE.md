@@ -11,7 +11,7 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #170 | `ar0007-validated-zero-revision@4ee359222044` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: reject zero state revisions before lock acquisition |
+| #170 | `ar0007-validated-zero-revision@4ee359222044` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject zero state revisions before lock acquisition |
 
 ## Recent workflows
 
