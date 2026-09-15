@@ -2,7 +2,7 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "2026-09-15T19:44:58+00:00",
+  "claim_expires": "2026-09-15T21:30:03+00:00",
   "depends_on": [
     "AR-0003",
     "AR-0015"
@@ -15,9 +15,9 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge.",
-  "task_revision": 29,
+  "task_revision": 30,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T19:06:36+00:00",
+  "updated_at": "2026-09-15T19:30:03+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -112,3 +112,5 @@ the distinction and no release/tag is published by this AR.
 
 - 2026-09-15T19:06:36+00:00: Recorded command exit 0; command argv SHA-256
   c6966c2ceeea0d87b539f84dc3381b1314d4c6296469a8be5f3106a71ac421bc.
+
+- 2026-09-15T19:30:03+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.

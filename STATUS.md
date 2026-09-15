@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**16 ARs tracked** across 3 active status categories.
+**17 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 3 |
 | **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 4 |
+| **Planned** | Defined work awaiting promotion or dependencies | 5 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 9 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -44,6 +44,7 @@ flowchart LR
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
         AR_0016["AR-0016 - In progress"]:::status_in_progress
+        AR_0017["AR-0017 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0002 --> AR_0003
@@ -67,10 +68,13 @@ flowchart LR
     AR_0007 --> AR_0010
     AR_0007 --> AR_0012
     AR_0007 --> AR_0013
+    AR_0007 --> AR_0017
     AR_0008 --> AR_0009
     AR_0008 --> AR_0010
     AR_0008 --> AR_0013
+    AR_0008 --> AR_0017
     AR_0015 --> AR_0016
+    AR_0016 --> AR_0017
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -91,8 +95,8 @@ flowchart LR
 | [AR-0004](tasks/AR-0004.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
 | [AR-0005](tasks/AR-0005.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
 | [AR-0006](tasks/AR-0006.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
-| [AR-0007](tasks/AR-0007.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0012](tasks/AR-0012.md), [AR-0013](tasks/AR-0013.md) |
-| [AR-0008](tasks/AR-0008.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0013](tasks/AR-0013.md) |
+| [AR-0007](tasks/AR-0007.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0012](tasks/AR-0012.md), [AR-0013](tasks/AR-0013.md), [AR-0017](tasks/AR-0017.md) |
+| [AR-0008](tasks/AR-0008.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0013](tasks/AR-0013.md), [AR-0017](tasks/AR-0017.md) |
 | [AR-0009](tasks/AR-0009.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0010](tasks/AR-0010.md) | [AR-0003](tasks/AR-0003.md), [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0011](tasks/AR-0011.md) | None | None |
@@ -100,7 +104,8 @@ flowchart LR
 | [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) | [AR-0002](tasks/AR-0002.md) | None |
 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | [AR-0002](tasks/AR-0002.md), [AR-0003](tasks/AR-0003.md) | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) |
-| [AR-0016](tasks/AR-0016-release-validation-dispatch.md) | [AR-0003](tasks/AR-0003.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | None |
+| [AR-0016](tasks/AR-0016-release-validation-dispatch.md) | [AR-0003](tasks/AR-0003.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | [AR-0017](tasks/AR-0017.md) |
+| [AR-0017](tasks/AR-0017.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md), [AR-0016](tasks/AR-0016-release-validation-dispatch.md) | None |
 
 ## Complete AR inventory
 
@@ -112,13 +117,14 @@ flowchart LR
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-rejection-invariant-20260915 | PR #317 repaired exact head 267efd9; Verify 35006681700 found no model error but failed at the 20-minute RuntimeMaxSec boundary during low-memory liveness checking after 30,663,299 distinct states. Formal pass remains unproven. | Create or select a reviewed formal-runtime remediation that permits this exact model to complete (longer containment and adequate heap), then rerun exact-head Verify before merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | codex-awc-ar0016-release-gate-20260915 | PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge. | Wait for terminal Verify 35003972069; if green, merge PR #315 and require exact post-merge verification. |
 
-### Planned (4)
+### Planned (5)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Promote only after AR-0007 is complete; then implement the accepted barrier, fencing, and fail-closed SQLite contract with exact-head tests and formal refinement evidence. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. |
+| P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Unclaimed | Make required formal publication/full runs complete reliably under explicit heap and cgroup capacity bounds without weakening models, invariants, liveness, or attestations. | Implement and independently review a capacity-safe TLC profile; preserve full model coverage and require exact-head formal evidence. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
 
 ### Done (9)
