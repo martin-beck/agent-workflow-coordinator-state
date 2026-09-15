@@ -11,13 +11,14 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #263 | `feature/ar0007-typed-control-binding@06c6aa3bcaad` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat: add typed admitted control binding seam |
+| #263 | `feature/ar0007-typed-control-binding@1016ed2fbd18` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat: add typed admitted control binding seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34950062496 | `06c6aa3bcaad` | pull_request | Verify | in_progress:- |
+| 34950269616 | `1016ed2fbd18` | pull_request | Verify | in_progress:- |
+| 34950062496 | `06c6aa3bcaad` | pull_request | Verify | completed:success |
 | 34949710523 | `a8e8e148e6ae` | push | Verify | completed:success |
 | 34949544182 | `3138fc904a1e` | pull_request | Verify | completed:success |
 | 34949130944 | `0bc6be0b9311` | push | Verify | completed:success |
@@ -28,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34947827287 | `da390ac3319e` | pull_request | Verify | completed:success |
 | 34947378166 | `42dbb90ece9f` | push | Verify | completed:success |
 | 34947234413 | `85ff298ded78` | pull_request | Verify | completed:success |
-| 34946828016 | `3589ed419367` | push | Verify | completed:success |
