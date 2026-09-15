@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 13 |
+| **Done** | Accepted, integrated, and durably verified | 14 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 0 |
 
@@ -35,7 +35,7 @@ flowchart LR
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - In progress"]:::status_in_progress
-        AR_0008["AR-0008 - In progress"]:::status_in_progress
+        AR_0008["AR-0008 - Done"]:::status_done
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
         AR_0011["AR-0011 - Done"]:::status_done
@@ -117,12 +117,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #316 merged as 7bf4501; post-merge Verify 35005629097 reached 28,432,589 distinct states but failed at the 20-minute RuntimeMaxSec boundary during liveness checking (exit 1), with TLC low-memory warning and no model error. Correctness remains unclosed pending a longer valid exact-head run. | Use the repaired longer formal timeout path or an explicitly approved rerun; then require terminal exact-head evidence before closure. |
-| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | codex-awc-ar0008-next-20260916 | PR #323 adds RollbackRequiresBackup invariant on exact main 143bdf6; hosted Verify is pending and local TLC was blocked by pthread_create EAGAIN. | Await exact-head Verify and artifact; independently review the result before merge. Preserve bounded-model and implementation-refinement nonclaims. |
 
 ### Open (1)
 
@@ -139,7 +138,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
 
-### Done (13)
+### Done (14)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -149,6 +148,7 @@ flowchart LR
 | P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Unclaimed | Prevent upgrades from starting unless the coordination system can remain safe and functional. | AR-0004 complete; PR #24 merged and post-merge main verification green. AR-0007 is now dependency-ready for phase-machine implementation. |
 | P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | Unclaimed | Back up and restore complete Git-backed coordination state without losing task history. | AR-0005 complete; PR #25 merged and post-merge main verification green. AR-0006 PR #26 remains open pending independent review and exact-head checks. |
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Unclaimed | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | AR-0006 complete; PR #26 merged and post-merge main verification green. AR-0004 remains blocked pending its correctness fixes and healthy exact-head rerun. |
+| P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | PR #323 adds RollbackRequiresBackup invariant on exact main 143bdf6; hosted Verify is pending and local TLC was blocked by pthread_create EAGAIN. | Await exact-head Verify and artifact; independently review the result before merge. Preserve bounded-model and implementation-refinement nonclaims. |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Unclaimed | Exact-head PR #22 formal publication gate independently reviewed green. | Await parent merge decision; retain full-exhaustive claims for successful scheduled/manual run and preserve merge-tree attestation provenance. |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Unclaimed | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
 | P0 | [AR-0017](tasks/AR-0017.md): TLC resource-bound reliability | Unclaimed | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. |
