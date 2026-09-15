@@ -15,7 +15,7 @@
   "schema_version": 1,
   "status": "in_progress",
   "summary": "PR #315 exact head 067ba1c passed independent review; replacement Verify 35003972069 is now actively running with TLC RuntimeMaxSec=6000. Await terminal formal result before merge.",
-  "task_revision": 30,
+  "task_revision": 31,
   "title": "Release validation dispatch gate",
   "updated_at": "2026-09-15T19:30:03+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
@@ -114,3 +114,6 @@ the distinction and no release/tag is published by this AR.
   c6966c2ceeea0d87b539f84dc3381b1314d4c6296469a8be5f3106a71ac421bc.
 
 - 2026-09-15T19:30:03+00:00: Heartbeat by codex-awc-ar0016-release-gate-20260915.
+
+- 2026-09-15T19:30:03+00:00: Recorded command exit 0; command argv SHA-256
+  4750a737225f01a4e5ad2d051aa593529835756c0af1212764a2162e28af2c81.
