@@ -11,11 +11,15 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #241 | `ar0007-validated-memoryview-owner@bdf56240ed0d` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject memoryview fencing owners |
+| #242 | `ar1194-status-sharding@160c4c7ab7d3` | `main` | CLEAN | - | Fix oversized STATUS.md projections with deterministic shards |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34939065698 | `160c4c7ab7d3` | pull_request | Verify | queued:- |
+| 34939050809 | `bdf56240ed0d` | pull_request | Verify | in_progress:- |
 | 34938842313 | `70068863fb3e` | push | Verify | completed:success |
 | 34938707579 | `e31dc04ab5d3` | pull_request | Verify | completed:success |
 | 34938471740 | `6b8d635cf7d2` | push | Verify | completed:success |
@@ -26,5 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34937554697 | `cf4836e8d6e5` | pull_request | Verify | completed:success |
 | 34937300322 | `286f83db8b94` | push | Verify | completed:success |
 | 34937245638 | `db417a258b72` | pull_request | Verify | completed:success |
-| 34937026073 | `f8a642df66ce` | push | Verify | completed:success |
-| 34936971381 | `937072733cc9` | pull_request | Verify | completed:success |
