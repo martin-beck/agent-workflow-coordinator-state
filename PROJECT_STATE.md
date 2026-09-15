@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `13caf521f8b182df325b6913e892f4bf5951e998`
+- Product remote main: `0b18ad34dfc2ddc8ddac313e63b32107ac80faa6`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,13 +11,12 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #264 | `feature/ar0007-binding-recheck-replaced@6458bb121d2c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject replaced binding recheck before backend |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34950788042 | `6458bb121d2c` | pull_request | Verify | in_progress:- |
+| 34950788042 | `6458bb121d2c` | pull_request | Verify | completed:success |
 | 34950419056 | `13caf521f8b1` | push | Verify | completed:success |
 | 34950269616 | `1016ed2fbd18` | pull_request | Verify | completed:success |
 | 34950062496 | `06c6aa3bcaad` | pull_request | Verify | completed:success |
