@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR295 published at signed head 815f644c from exact main 811cb23: process-abort/fresh-worker SQLite evidence proves child termination releases scope, fresh worker reacquires, durable state is unchanged, and mutation paths remain unreachable. Focused 17/17, full 493 tests, 95% coverage, static gates pass; AWQ/scope/smoke green. | Obtain independent exact-head review of PR295, then merge only through handoffctl and require post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR295 merged as 79ecc34; post-merge Verify 34976326663 green at 95% coverage (5851 statements) with TLC 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation 10398902985. Process-abort SQLite evidence now proves child termination cleanup, fresh-worker reacquisition, unchanged durable state, and mutation nonreachability. | Continue AR-0007 with the next trusted-session/backend-equivalence slice from exact main 79ecc34; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
