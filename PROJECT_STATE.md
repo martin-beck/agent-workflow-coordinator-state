@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #165 | `ar0007-validated-empty-authority@c11a2c77f877` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject empty caller authority revision |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34919571806 | `c11a2c77f877` | pull_request | Verify | in_progress:- |
 | 34919380489 | `a5bd6bd4af7c` | push | Verify | completed:success |
 | 34919293734 | `51da9276e304` | pull_request | Verify | completed:success |
 | 34919142085 | `4a0c19dc324c` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34918354674 | `72585a4758ac` | push | Verify | completed:success |
 | 34918210612 | `2d0503ad3c05` | pull_request | Verify | completed:success |
 | 34917946707 | `f9b871c220b0` | push | Verify | completed:success |
-| 34917834329 | `7cd30da12f60` | pull_request | Verify | completed:success |
