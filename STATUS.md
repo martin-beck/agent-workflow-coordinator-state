@@ -108,7 +108,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR287 repaired at signed head bba9af2: generic session binding again rejects stale CAS-row revisions, while concrete reconciled scopes use explicit durable row revision. | Obtain independent exact-head review and public PR287 gates; merge only through handoffctl after review. Keep mutation/dispatch/execute/apply/rollback unreachable. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-coverage-20260915c | AR-0007 PR287 merged at c9bfef1: typed mark_ambiguous/reconcile_ambiguous recovery now drives fresh real snapshot_bound workers; generic session binding still rejects stale CAS-row revisions while concrete scopes track row revision separately; post-merge Verify is green. | Implement the next read-only admission hardening slice: exercise typed recovery failure cases (stale CAS, reused token/barrier, authority mismatch, unresolved intent) through fresh snapshot_bound workers and prove fail-closed rejection/lock cleanup; retain mutation/dispatch/execute/apply/rollback disabled and require independent exact-head review plus post-merge Verify/TLC. |
 
 ### Open (2)
 
