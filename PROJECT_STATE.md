@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e62dfe923d39705920af96fc9133d7b25f9f600a`
+- Product remote main: `20296734a47b568eeec13df1c09dcb66484c65d8`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -11,12 +11,14 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #191 | `ar0007-validated-bytearray-revision@078d66f7b062` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject bytearray state revisions before lock acquisition |
+| #192 | `ar0007-validated-decimal-object@09c8a0cf223a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject decimal state revisions before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34926770807 | `09c8a0cf223a` | pull_request | Verify | completed:success |
+| 34926627111 | `20296734a47b` | push | Verify | completed:success |
 | 34926537282 | `078d66f7b062` | pull_request | Verify | completed:success |
 | 34926391971 | `e62dfe923d39` | push | Verify | completed:success |
 | 34926309073 | `2deb3eacdab3` | pull_request | Verify | completed:success |
@@ -27,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34925702977 | `dd615f01100f` | push | Verify | completed:success |
 | 34925624580 | `3686255ac594` | pull_request | Verify | completed:success |
 | 34925450606 | `340bee0e5200` | push | Verify | completed:success |
-| 34925372024 | `d7910f5e6b67` | pull_request | Verify | completed:success |
-| 34925210015 | `a850f55d7113` | push | Verify | completed:success |
