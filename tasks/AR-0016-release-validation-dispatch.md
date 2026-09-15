@@ -2,22 +2,22 @@
 {
   "branch": "fix/release-validation-dispatch",
   "checkpoint_commit": "",
-  "claim_expires": "",
+  "claim_expires": "2026-09-16T00:33:31+00:00",
   "depends_on": [
     "AR-0003",
     "AR-0015"
   ],
   "id": "AR-0016",
   "next_action": "Await PR #318 Verify 35015342502 resource-profile result; retain PR #315 unmerged and use OOM evidence to guide remediation.",
-  "owner": "",
+  "owner": "codex-awc-ar0016-closure-20260916",
   "plan": "../plans/AR-0016.md",
   "priority": "P1",
   "schema_version": 1,
-  "status": "open",
+  "status": "in_progress",
   "summary": "PR #315 Verify 35003972069 failed at 20:02:41Z with explicit Java OOM during liveness after ~58 minutes: 46,492,959 generated, 38,466,180 distinct, 10,738,716 queued; no invariant violation. Exact head 067ba1c remains unmergeable. PR #318 is now testing the larger resource profile.",
-  "task_revision": 33,
+  "task_revision": 34,
   "title": "Release validation dispatch gate",
-  "updated_at": "2026-09-15T22:26:15+00:00",
+  "updated_at": "2026-09-15T23:33:31+00:00",
   "worktree_key": "agent-workflow-coordinator-release-validation-dispatch"
 }
 ---
@@ -124,3 +124,5 @@ the distinction and no release/tag is published by this AR.
 - 2026-09-15T22:26:15+00:00: Recovered expired claim formerly owned by
   codex-awc-ar0016-release-gate-20260915. Recover abandoned expired claim before coordinator
   development-loop reconciliation; preserve task history.
+
+- 2026-09-15T23:33:31+00:00: Claimed by codex-awc-ar0016-closure-20260916.
