@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #215 | `ar0007-validated-bytes-project@568e27e49112` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: reject bytes project identifiers before lock acquisition |
+| #215 | `ar0007-validated-bytes-project@568e27e49112` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject bytes project identifiers before lock acquisition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 34932442064 | `568e27e49112` | pull_request | Verify | queued:- |
+| 34932442064 | `568e27e49112` | pull_request | Verify | in_progress:- |
 | 34932281807 | `4e9e57868af8` | push | Verify | completed:success |
 | 34932234771 | `e00704a01a12` | pull_request | Verify | completed:success |
 | 34932054113 | `94e2a8b8f990` | push | Verify | completed:success |
