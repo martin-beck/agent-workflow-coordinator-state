@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR304 merged as 5eca1d45; post-merge Verify 34988937078 green at 95% coverage (5944 statements), 510 tests, TLC no-error tiers 4352/2728, 146/81, 516/232, 121472/90752, 110/94; attestation artifact 10405245875. Typed identity-bound BoundRollbackCapability now invokes the concrete verifier, rejects plain/foreign/mismatched capabilities before journal/backend/handler, and forces diagnostic-only rollback evidence. No mutation or formal-refinement claim. | Start the next AR-0007 trusted-session/backend-equivalence slice from exact main 5eca1d45; require independent review, signed public gates, and post-merge Verify. Keep mutation/dispatch/execute/apply/rollback unreachable. | codex-awc-ar0007-coverage-20260915c |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #306 merged as 4526b22b182d0b674d765b4ea2b82a8401524122; post-merge Verify 34991547376 green: 512 tests, 95% coverage, all event-appropriate TLC tiers no-error; artifact 10405499029. Continue trusted-session/backend-equivalence work with mutation, dispatch, execute, apply, and rollback unreachable; implementation_refinement remains not-proven. | Start the next AR-0007 correctness slice from exact main 4526b22b182d0b674d765b4ea2b82a8401524122; require independent exact-head review, signed public gates, and post-merge Verify. | codex-awc-ar0007-coverage-20260915c |
 
 ## Open
 
