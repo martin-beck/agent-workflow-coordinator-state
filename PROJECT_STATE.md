@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `8a3cbf22023e97694751a68996d53c1feb1bd23b`
+- Product remote main: `647a844ff7e3bf817a5e7300e177ebdec0c879b3`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #224 | `ar0007-validated-list-barrier@622ff0671a57` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject list durable barriers before lock acquisition |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34934462904 | `647a844ff7e3` | push | Verify | in_progress:- |
 | 34934402530 | `622ff0671a57` | pull_request | Verify | completed:success |
 | 34934245370 | `8a3cbf22023e` | push | Verify | completed:success |
 | 34934189590 | `6b6bc633cf85` | pull_request | Verify | completed:success |
@@ -28,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34933557906 | `565a4362fbe4` | pull_request | Verify | completed:success |
 | 34933394558 | `3b3b4417bcf6` | push | Verify | completed:success |
 | 34933346643 | `8a4701a8a201` | pull_request | Verify | completed:success |
-| 34933175870 | `6a88d5fed05f` | push | Verify | completed:success |
