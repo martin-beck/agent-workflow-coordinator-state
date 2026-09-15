@@ -11,11 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #261 | `feature/ar0007-admitted-cas-backend-revision@37131d958d48` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject stale admitted CAS backend revisions |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34948955860 | `37131d958d48` | pull_request | Verify | in_progress:- |
 | 34948554666 | `5848d66c4098` | push | Verify | completed:success |
 | 34948382270 | `597c437b3135` | pull_request | Verify | completed:success |
 | 34947964927 | `c3746e62bb80` | push | Verify | completed:success |
@@ -27,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34946216338 | `a79aa4d63f03` | push | Verify | completed:success |
 | 34946090958 | `d4e3d2a81b42` | pull_request | Verify | completed:success |
 | 34945770581 | `8194b0d59ff7` | push | Verify | completed:success |
-| 34945519805 | `b6665d1c544d` | pull_request | Verify | completed:success |
