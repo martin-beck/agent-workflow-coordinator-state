@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #162 published from 72585a47 at signed 6387d39: non-text fencing token is rejected before common-lock acquisition. | Independently review PR #162 exact head 6387d39; require full Verify/coverage before merge; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #163 published from 72585a47 at signed 01258b4: non-text fencing owner is rejected before common-lock acquisition. | Review/merge PR #162 first, then independently review PR #163; keep all production mutation/dispatch/upgrade/apply/rollback routes unreachable. | codex-awc-ar0007-next-20260914 |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Reviewed PR #162 exact signed head 6387d39 against 72585a47. Test-only rejects non-text fencing_token before common-lock; focused hostile/session/lock suite passes 45 tests and 18 subtests. AWQ/scope/smoke green; Verify skipped. | Continue independent exact-head review of the next caller-boundary slice. Require project/authority/revision/fence type and equality validation before common-lock, process-death/replacement/WAL evidence, trusted reread plus second recheck, and admitted TLC before stronger claims. Preserve implementation_refinement=not-proven, mutation disabled, and do not promote AR-0012. | codex-awc-ar0008-next-20260914 |
 
 ## Open
