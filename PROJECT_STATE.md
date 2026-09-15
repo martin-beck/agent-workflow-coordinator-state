@@ -11,12 +11,14 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #311 | `ar0008-bound-rollback-evidence-20260915@f027fe89a40d` | `main` | UNKNOWN | - | docs(formal): map typed rollback rejection evidence |
+| #311 | `ar0008-bound-rollback-evidence-20260915@f027fe89a40d` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, IN_PROGRESS:, COMPLETED:SKIPPED, COMPLETED:SKIPPED | docs(formal): map typed rollback rejection evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 34998625647 | `f027fe89a40d` | pull_request | Verify | queued:- |
+| 34998546090 | `f027fe89a40d` | pull_request | Verify | in_progress:- |
 | 34997562749 | `769187186b25` | push | Verify | completed:success |
 | 34997353586 | `250a907067ef` | pull_request | Verify | completed:success |
 | 34997001352 | `6332f032b744` | push | Verify | completed:failure |
@@ -27,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 34995752049 | `2c8469087864` | pull_request | Verify | completed:success |
 | 34995711554 | `2c8469087864` | pull_request | Verify | completed:success |
 | 34991547376 | `4526b22b182d` | push | Verify | completed:success |
-| 34991411958 | `67d238ada9b8` | pull_request | Verify | completed:success |
-| 34990844070 | `d54e8de1d620` | push | Verify | completed:failure |
