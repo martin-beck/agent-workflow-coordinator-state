@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR383 merged; post-merge main verification queued; concrete SQLite executor boundary published | Verify post-merge main, then add durable lock/journal integration and injected executor-failure tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Executor binding needs concrete JournalSnapshot value type first | Add frozen JournalSnapshot around UpgradeEngine validated schema with strict from_mapping/as_mapping and tamper tests; defer cross-component binding. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
