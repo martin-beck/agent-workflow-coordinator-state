@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR431 merged as 5481d27; post-merge Verify 35092190086 passed pr-fast (9 generated/4 distinct/0 queued); PR432 rebasing | Obtain corrected PR432 based on exact main 5481d27; independent review and hosted gates |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR431 merged as 5481d27; post-merge Verify 35092190086 passed pr-fast; PR432 closed as duplicate | Implement next distinct bounded AR-0007 restore/rollback identity slice from exact main 5481d27; publish only with independent review and checks |
 
 ### Planned (4)
 
