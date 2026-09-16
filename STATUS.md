@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR337 is open but not merge-ready: exact hosted Verify is running and local evidence reports 94&#37; branch coverage; repair also needs rebase onto current main. | Continue meaningful coverage tests until full suite reaches &gt;=95&#37;; rebase formal hash/test repair onto current main 0418a6e or later, obtain independent exact-head PASS and hosted Verify green, then merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR337 coverage-test update is blocked by hosted mypy fixture error at tests/test_upgrade_engine.py:203 (None assigned to str); coverage not reached. | Fix test fixture typing without production weakening, run full mypy and coverage &gt;=95, then obtain exact-head independent review and hosted Verify green before merge. |
 
 ### Planned (4)
 
