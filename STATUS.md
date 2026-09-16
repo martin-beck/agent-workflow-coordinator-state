@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR434 published from exact 233fdc6; valid authority SHM removal race; hosted checks in progress | Independent exact-head review PR434 base 233fdc6, head a0cc1d4; await AWQ/scope/smoke before merge |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR434 merged as 5c1f97a; post-merge Verify 35093226853 queued | Confirm post-merge fast Verify 35093226853 on 5c1f97a; then release next distinct AR-0007 slice |
 
 ### Planned (4)
 
