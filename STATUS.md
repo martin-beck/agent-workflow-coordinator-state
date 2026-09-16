@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR405 published from exact main be5b46a; regular-file parent rejection test | Obtain independent exact-head review and green hosted gates for PR405; merge then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR405 merged as bb3f8da; post-merge Verify queued | Confirm post-merge fast Verify for bb3f8da; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
