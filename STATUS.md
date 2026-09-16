@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 merged as f04fa2a; bounded read-only evidence slice complete, post-merge verification pending. | Verify exact merge-head post-merge fast run; then select next AR-0007 authorization/integration seam. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 merged, but post-merge Verify 35044218842 failed mypy on typed SQLite rereader fixture. | Repair test fixture with AuthorityRuntimeRereader type; rerun exact merge-head fast gates and independent review before next AR. |
 
 ### Planned (4)
 
