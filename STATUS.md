@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Executor contract requires concrete SQLite implementation; generic protocol would be forgeable | Implement concrete adapter-owned SQLite executor object with durable lock/journal integration and injected failure tests; defer Git/phase dispatch. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | SQLite executor commit exists but is unpublished; new PR required | Open new current-main PR for executor commit 61e64ae, then add durable lock/journal integration and injected failure tests. |
 
 ### Planned (4)
 
