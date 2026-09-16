@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR382 smoke green; review rejects SQLite ownership and missing hostile tests | Enforce invoking-adapter ownership in SQLite session checks; add positive/foreign/race tests and legacy non-authority contract; rerun hosted gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR382 smoke green; ownership repair lacks SQLite hostile-test evidence | Add positive/foreign/race SQLite wrapper tests and explicit legacy non-authority contract; rerun hosted gates. |
 
 ### Planned (4)
 
