@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #328 merged; postmerge 35039880678 failed coverage at 94% vs 95%. | Add focused authorization-branch tests; rerun full postmerge fast gate. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR329 merged; postmerge 35040265898 green at 95%. | Begin next safe rollback-boundary slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
