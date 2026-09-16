@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 binds SQLite CAS reread, descriptor stat and artifact observation under one lock; review pending. | Review exact cec18e4; verify race/failure cleanup, full tests and explicit non-authorizing boundary. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 merged as f04fa2a; bounded read-only evidence slice complete, post-merge verification pending. | Verify exact merge-head post-merge fast run; then select next AR-0007 authorization/integration seam. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
