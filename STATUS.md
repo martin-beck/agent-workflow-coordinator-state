@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR403 merged as 998c2b4; post-merge Verify queued | Confirm post-merge fast Verify for 998c2b4; then release next bounded AR-0007 slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR403 post-merge Verify pr-fast green on 998c2b4 | Implement and publish next bounded AR-0007 transaction/effect slice from verified main 998c2b4. |
 
 ### Planned (4)
 
