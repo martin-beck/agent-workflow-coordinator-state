@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Coverage and fast-tier publication gates green; next slice is bound Git preflight observation | Implement preflight_git using snapshot_bound_reread under real scope/lease/recheck, bound GitRollbackArtifactBinding, and GitBackupObservation.from_adapter; add real valid/tamper/foreign/path tests with no mutation or authorization. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Coverage gates green; preflight integration requires a protocol seam because preflight is currently SQLite-only | First add a distinct instance-bound Git rollback observation capability or safely generalize the preflight protocol (currently SQLite-only), preserving concrete adapter identity; then chain snapshot_bound_reread, artifact binding, verifier, and non-mutating tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
