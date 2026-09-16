@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Await hosted Verify for exact head 5a4340195de86600f71c66b9b4c76d8b4f52760b and independent review. If both pass, merge this bounded slice with explicit full-AR nonclaims, then continue remaining concurrency/barrier/formal AR-0012 work. | codex-awc-ar0012-fixture-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Continue AR-0012 with multiprocess concurrency, durable barrier ambiguity and recovery, process-death durability, and formal implementation-refinement evidence; require independent exact-head review and green hosted/post-merge Verify for each bounded slice. | codex-awc-ar0012-fixture-20260916 |
 
 ## Open
 
