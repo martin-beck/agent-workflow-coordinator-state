@@ -20,7 +20,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35045939681 | `a1fa9b3c9e09` | push | Verify | in_progress:- |
+| 35045939681 | `a1fa9b3c9e09` | push | Verify | completed:success |
 | 35045769071 | `4024fd5f5412` | pull_request | Verify | completed:success |
 | 35045659978 | `b239b140f2f1` | pull_request | Verify | completed:failure |
 | 35045574499 | `212f2b61cb26` | pull_request | Verify | completed:failure |
