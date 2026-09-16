@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR330 review failed: descriptor-only backup digest. | Bind immutable backup evidence; add tamper tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR330 review failed: caller-supplied digests. | Bind typed evidence from real observations. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
