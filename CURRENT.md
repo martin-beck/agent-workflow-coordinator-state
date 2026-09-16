@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR392 post-merge Verify green on 8d332c2; next transaction/effect slice released | Implement and publish next bounded read-only transaction/effect slice from verified main 8d332c2 with final reread, lock cleanup, and hostile failure tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR393 journal-disappearance failure test published; hosted smoke in progress, review pending | Complete exact-head review and smoke for PR393; merge only after PASS and green, then post-merge Verify. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
