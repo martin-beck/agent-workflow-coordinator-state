@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR363 merged; postmerge Verify queued | Check postmerge fast Verify, then select next lifecycle slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR363 merged; postmerge pr-fast green | Implement Git backup directory identity verification slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
