@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
+| #450 | `ar0012-sqlite-observer@4dcb6119680c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: bind SQLite backend to durable session |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35100655421 | `4dcb6119680c` | pull_request | Verify | completed:success |
 | 35099843707 | `90a0b1a5efd0` | push | Verify | completed:success |
 | 35099756852 | `1b6c851cfd4d` | pull_request | Verify | completed:success |
 | 35099429237 | `78ba8ba5d46b` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35097602396 | `df9e1a6f6677` | pull_request | Verify | completed:success |
 | 35097498819 | `7d2e82510ecf` | pull_request | Verify | completed:success |
 | 35097216422 | `4789936344c9` | pull_request | Verify | completed:success |
-| 35097197445 | `8c49fca47cfc` | pull_request | Verify | completed:failure |
