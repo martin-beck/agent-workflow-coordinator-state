@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR382 smoke green; race test hits earlier identity guard, not final reread | Correct synchronized race test to exercise final session reread or document earlier guard and add explicit final-reread injection test; rerun hosted gates. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR382 merged; post-merge main verification queued; Git and SQLite session seams accepted | Verify post-merge main, then integrate both adapter session seams into upgrade engine phase boundaries and crash/fault evidence. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
