@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #324 merged as 509906c; PR #325 coverage repair merged as 977f561. Post-merge Verify 35037516193 passed with pr-fast and artifact 10424121055. | Advance the non-authorizing engine-level Git/SQLite hostile rejection evidence slice; preserve byte-for-byte state, lock cleanup, and formal/refinement nonclaims. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #326 merged; post-merge 35038329224 green pr-fast. | Implement next reviewed non-authorizing rollback boundary; preserve failure safety. |
 
 ### Planned (4)
 
