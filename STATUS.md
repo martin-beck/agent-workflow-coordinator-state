@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 hostile artifact coverage passes; identity reread/stat race and read-only failure cleanup remain. | Bind descriptor capture to same lock or recheck atomically; add hostile race and stat-failure lock-release tests; keep auth nonclaim explicit. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 atomically rechecks backup artifacts, but SQLite CAS identity still crosses lock boundary. | Capture SQLite descriptor identity under the same lock or perform bound CAS recheck; add direct observation replacement and stat-failure cleanup tests. |
 
 ### Planned (4)
 
