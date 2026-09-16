@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 review failed: correspondence is documentation-only | Repair PR380 with executable trace/action/phase/invariant mapping and exact model/config provenance; obtain independent PASS and hosted Verify. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 correction failed header and correspondence provenance gates | Repair formal correspondence with canonical header, real lifecycle traces, authoritative model/config hashes, invariant validation, and exact artifact provenance; rerun hosted Verify. |
 
 ### Planned (4)
 
