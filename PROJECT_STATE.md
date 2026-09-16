@@ -16,11 +16,13 @@ Generated from local Git and GitHub. Do not edit.
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
+| #338 | `ar0007-coverage-repair-current@d891fe9bda5b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add typed Git rollback session reread |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35049167484 | `d891fe9bda5b` | pull_request | Verify | completed:success |
 | 35048662713 | `5c00f73a012b` | push | Verify | completed:success |
 | 35048499218 | `b92d1cfce6fc` | pull_request | Verify | completed:success |
 | 35048301182 | `c4a730132c3a` | pull_request | Verify | completed:failure |
@@ -32,4 +34,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35047207456 | `212e17547b2e` | pull_request | Verify | completed:success |
 | 35047034062 | `28a24db5566d` | pull_request | Verify | completed:success |
 | 35046781053 | `10dd546af33a` | pull_request | Verify | completed:success |
-| 35046692592 | `a39c9551df4f` | pull_request | Verify | completed:success |
