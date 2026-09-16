@@ -19,11 +19,13 @@ Generated from local Git and GitHub. Do not edit.
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
+| #428 | `ar0007-executor-restore-control-sidecar@3b557f9afc3b` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject restore control sidecar failure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35090971290 | `3b557f9afc3b` | pull_request | Verify | in_progress:- |
 | 35090457010 | `4ffa2c8f6873` | push | Verify | completed:success |
 | 35090332842 | `02f5ded6b180` | pull_request | Verify | completed:success |
 | 35089934751 | `75ebcc155760` | pull_request | Verify | completed:success |
@@ -35,4 +37,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35088674541 | `80ccb5ad7a69` | pull_request | Verify | completed:success |
 | 35088339196 | `65abf08ac135` | push | Verify | completed:success |
 | 35088126804 | `7cb7e905f7f9` | pull_request | Verify | completed:success |
-| 35087825045 | `4d4347542d23` | push | Verify | completed:success |
