@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR433 merged as 233fdc6; post-merge Verify 35092922130 running | Confirm post-merge fast Verify 35092922130 on 233fdc6; then release next distinct AR-0007 slice |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR433 merged as 233fdc6; post-merge Verify 35092922130 passed pr-fast | Release next distinct AR-0007 slice from exact main 233fdc6; publish, independently review, and gate |
 
 ### Planned (4)
 
