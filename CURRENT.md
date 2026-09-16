@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR392 authority inode replacement failure test published; hosted smoke queued, review pending | Complete exact-head review and smoke for PR392; merge only after PASS and green, then post-merge Verify. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR392 merged as 8d332c2; post-merge fast Verify running; next transaction boundary queued | Confirm post-merge Verify for 8d332c2; implement next bounded read-only transaction/effect slice from verified main with hostile failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
