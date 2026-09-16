@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR410 merged as be0d17e; post-merge Verify queued | Confirm post-merge fast Verify for be0d17e; then release next bounded AR-0007 slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR410 post-merge Verify pr-fast green on be0d17e | Implement and publish next bounded journal-deletion failure/effect slice from verified main be0d17e. |
 
 ### Planned (4)
 
