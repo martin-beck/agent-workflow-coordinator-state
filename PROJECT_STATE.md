@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #455 | `ar0012-ambiguity-recovery@17231d52a4b5` | `main` | UNKNOWN | - | fix: recover interrupted barrier ambiguity |
+| #455 | `ar0012-ambiguity-recovery@17231d52a4b5` | `main` | UNSTABLE | COMPLETED:SUCCESS, QUEUED: | fix: recover interrupted barrier ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35121593446 | `17231d52a4b5` | pull_request | Verify | queued:- |
 | 35120450121 | `5381378c33b7` | push | Verify | completed:success |
 | 35120180038 | `fea575668c01` | pull_request | Verify | completed:success |
 | 35117157636 | `14a9f7d76cf0` | push | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35107602598 | `e0b5bc688a9c` | pull_request | Verify | completed:failure |
 | 35107481468 | `e45626e62f28` | pull_request | Verify | completed:cancelled |
 | 35106796596 | `a6f6e09676d0` | pull_request | Verify | completed:failure |
-| 35106634030 | `3dcf75096d85` | pull_request | Verify | completed:cancelled |
