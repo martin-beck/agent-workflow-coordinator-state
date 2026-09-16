@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 typed-test correction passes local mypy/Ruff; hosted Verify pending. | Verify exact 4024fd5 hosted coverage and formal hash gates; independent review then merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 merged as a1fa9b3; exact post-merge fast Verify is running. | Verify exact merge-head run a1fa9b3; then select next AR-0007 authorization/integration seam. |
 
 ### Planned (4)
 
