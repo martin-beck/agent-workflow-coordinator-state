@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR426 review failed: control-store same-content symlink replacement is not identity-bound | Correct PR426 by binding control-store inode identity in snapshot/recheck and asserting specific identity rejection; retain cleanup/no-publication; rerun independent review | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Corrective PR427 published from exact 86abcea; independent re-review and hosted checks pending | Re-review and merge PR427 only after exact-head PASS and all hosted checks green; then verify post-merge pr-fast | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
