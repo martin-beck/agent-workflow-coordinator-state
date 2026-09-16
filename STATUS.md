@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 remains open after repair but independent review still fails: factory accepts caller CAS identity/revision and preflight accepts caller reread mapping, so evidence can be forged. | Repair PR334 or superseding slice so CAS identity/revision and reread facts come from the bound adapter/control store; add forged identity/revision and foreign backend/session tests, obtain exact-head independent PASS and green CI. Do not merge as-is. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 remains open after repair but independent review still fails: factory accepts caller CAS identity/revision and preflight accepts caller reread mapping, so evidence can be forged. | Implement provider-based preflight: bound adapter/control-store observes CAS identity/revision under operation lock; add Git/SQLite positive and forged/foreign/tamper/replacement tests; exact-head independent review and green CI required. Do not merge as-is. |
 
 ### Planned (4)
 
