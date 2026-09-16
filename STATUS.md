@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
@@ -36,7 +36,7 @@ flowchart LR
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - Done"]:::status_done
         AR_0008["AR-0008 - Done"]:::status_done
-        AR_0009["AR-0009 - Open"]:::status_open
+        AR_0009["AR-0009 - In progress"]:::status_in_progress
         AR_0010["AR-0010 - Planned"]:::status_planned
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Planned"]:::status_planned
@@ -117,11 +117,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (1)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-release-20260916 | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Add release CI generation, publication evidence, and the first independently reviewed upgrade campaign. |
 
 ### Planned (3)
 
