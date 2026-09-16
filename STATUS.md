@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Add and validate real SIGKILL boundaries: held owner persistence/reacquisition, precommit rollback/no residue, ambiguous recovery with new fence and verified release. Then run full static/coverage/formal gates, signed DCO push, and independent exact-head review. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Run full static/coverage/formal gates on subprocess durability slice; refresh exact evidence digest, sign/push PR, and obtain independent review/hosted pr-fast. Preserve full-AR nonclaims until formal implementation correspondence is complete. |
 
 ### Open (1)
 
