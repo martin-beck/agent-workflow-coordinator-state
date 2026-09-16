@@ -15,11 +15,13 @@ Generated from local Git and GitHub. Do not edit.
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
+| #332 | `ar0007-typed-observation-mypy@877252b1013e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(test): use typed authority rereader fixture |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35044472197 | `877252b1013e` | pull_request | Verify | completed:success |
 | 35044218842 | `f04fa2a4fc00` | push | Verify | completed:failure |
 | 35044107625 | `cec18e4671b9` | pull_request | Verify | completed:success |
 | 35043941042 | `7ab19e78af14` | pull_request | Verify | completed:success |
@@ -31,4 +33,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35043026755 | `2db0970bcf5b` | pull_request | Verify | completed:success |
 | 35042762076 | `385d41f1c7c0` | pull_request | Verify | completed:success |
 | 35042560552 | `2ccb0940c282` | pull_request | Verify | completed:success |
-| 35042280923 | `74b3df8f020b` | pull_request | Verify | completed:success |
