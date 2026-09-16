@@ -16,11 +16,13 @@ Generated from local Git and GitHub. Do not edit.
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
+| #363 | `ar0007-verify-sidecars@f903771a4263` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind SQLite backup during verification |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35058572118 | `f903771a4263` | pull_request | Verify | completed:success |
 | 35058255021 | `117f94a36a36` | push | Verify | completed:success |
 | 35058118541 | `767abc088803` | pull_request | Verify | completed:success |
 | 35058029745 | `8eb129980a7d` | push | Verify | completed:success |
@@ -32,4 +34,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35057575986 | `e5ba07ba7256` | push | Verify | completed:success |
 | 35057537726 | `d0d0cabeee60` | pull_request | Verify | completed:success |
 | 35057428414 | `37370c46ec7e` | pull_request | Verify | completed:success |
-| 35057331953 | `7d3a95df2ac2` | push | Verify | completed:success |
