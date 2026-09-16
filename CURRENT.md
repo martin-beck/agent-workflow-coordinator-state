@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git preflight capability seam merged and post-merge verified; next work is remaining backup/restore lifecycle correctness | Advance beyond Git observation preflight: implement actual verified backup/restore and rollback authorization lifecycle only after concrete crash/concurrency and formal contracts are covered; preserve fail-closed no-mutation behavior on all failures. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git preflight and failure-cleanup slices merged and post-merge verified; next lifecycle boundary is backup/restore equivalence and crash safety | Implement the next verified backup/restore lifecycle boundary: concrete artifact creation/restore equivalence and crash/concurrency failure handling, with formal contract evidence; preserve fail-closed no-mutation behavior until authorization gates are proven. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
