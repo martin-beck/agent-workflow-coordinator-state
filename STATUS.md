@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 review still fails: CAS/inode tests pass, but atomic binding, sidecars, read-only failures and real manifests remain. | Add observation-after-replacement, sidecar and lock-release tests; bind reread/stat atomically; use real Git/SQLite backup verification or record dependent seam. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 CAS/sidecar failure paths pass, but backup manifest authenticity and atomic identity binding remain unproven. | Use real Git/SQLite backup verification fixtures; prove atomic reread plus descriptor/sidecar binding; preserve explicit non-authorizing seam. |
 
 ### Planned (4)
 
