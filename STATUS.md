@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR332 merged as 85755e9; post-merge fast verification is running. | Verify exact merge-head run 85755e9; then select next AR-0007 authorization/integration seam. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Post-merge Verify 35044579671 failed formal hash for rollback_control_store.py; repair PR needed. | Regenerate authoritative formal implementation hash from merge 85755e9; rerun full fast gates and independent review. |
 
 ### Planned (4)
 
