@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 review failed: adapter CAS binding and authorization seam remain incomplete. | Add initialized SQLite CAS identity/revision tests, atomic identity binding, and explicit non-authorizing integration boundary. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds real SQLite CAS observation test; hostile identity and auth-boundary review pending. | Complete stale/replaced-row, inode, read-only and explicit non-authorizing boundary coverage; obtain independent review. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
