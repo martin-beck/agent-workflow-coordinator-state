@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Coverage repair remains unpublished: full local run is 535 tests with stale-hash failure unless f7211c is applied, and genuine branch coverage remains 94&#37; after one targeted test. | Add broader meaningful tests across newly reachable upgrade_engine and rollback_control_store branches; apply formal hash repair in test base, achieve &gt;=95&#37; without exclusions/threshold changes, then publish signed repair PR and obtain independent/hosted gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR337 is open but not merge-ready: exact hosted Verify is running and local evidence reports 94&#37; branch coverage; repair also needs rebase onto current main. | Continue meaningful coverage tests until full suite reaches &gt;=95&#37;; rebase formal hash/test repair onto current main 0418a6e or later, obtain independent exact-head PASS and hosted Verify green, then merge. |
 
 ### Planned (4)
 
