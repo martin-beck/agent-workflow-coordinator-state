@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #458 | `ar0009-upgrade-campaign@304e1c252e5c` | `main` | UNKNOWN | - | test(upgrade): exercise generated fixture recovery campaign |
+| #458 | `ar0009-upgrade-campaign@304e1c252e5c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(upgrade): exercise generated fixture recovery campaign |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35130654485 | `304e1c252e5c` | pull_request | Verify | completed:success |
 | 35128507415 | `2f53b81ec15a` | push | Verify | completed:success |
 | 35128392137 | `a796941ac470` | pull_request | Verify | completed:success |
 | 35126317389 | `64a172df3e8d` | push | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35123816728 | `cee7ae4b3c34` | pull_request | Verify | completed:failure |
 | 35121898393 | `e00dc5b1654d` | push | Verify | completed:success |
 | 35121593446 | `17231d52a4b5` | pull_request | Verify | completed:success |
-| 35120450121 | `5381378c33b7` | push | Verify | completed:success |
