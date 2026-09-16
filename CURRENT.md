@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Bounded typed v10 barrier admission and independent-process SQLite concurrency/SIGKILL evidence are published in PR #453; full AR remains in progress. | Obtain independent exact-head review and hosted pr-fast success for PR #453 at 09bb43840fdfe049a63c9b717eadb66cef385c16, merge and verify main, then continue WAL/SHM fault injection, remaining lifecycle ambiguity/process-death boundaries, and implementation/formal refinement without claiming full AR completion. | codex-awc-ar0012-fixture-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged and post-merge-verified a bounded typed v10 barrier admission plus independent-process SQLite concurrency/SIGKILL slice in PR #453; full AR remains in progress. | Continue WAL/SHM fault injection, uncovered process-death and lifecycle ambiguity boundaries, and implementation-to-formal refinement on current main 14a9f7d76cf072898de35185c2a5b76f4997f0fe; preserve fail-closed admission and do not claim full AR completion. | codex-awc-ar0012-fixture-20260916 |
 
 ## Open
 
