@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR415 merged as 33e5862; post-merge Verify 35085321373 passed pr-fast with 9 generated and 4 distinct states | Implement and publish next bounded AR-0007 slice from 33e5862: continue control-lock disappearance coverage and fail-closed cleanup invariants |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR416 published from exact 33e5862; independent review and AWQ pending | Review and merge PR416 after exact-head PASS and all hosted checks green; then verify post-merge pr-fast |
 
 ### Planned (4)
 
