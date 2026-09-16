@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR436 published from exact f79b52b; authority SHM hard-link rejection; awq/scope green, smoke running | Independent exact-head review PR436 base f79b52b, head 9d6204c; await smoke before merge | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR436 merged as 250af40; post-merge Verify 35093712759 running | Confirm post-merge fast Verify 35093712759 on 250af40; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
