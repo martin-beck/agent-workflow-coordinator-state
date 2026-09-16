@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR430 corrected publication from exact ea730ca; PR429 stale dirty superseded; hosted awq/scope in progress | Independent exact-head review PR430 base ea730ca, head a2fd939, tree 6f843b6; await hosted checks before merge |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR430 merged as 9c34628; post-merge Verify 35091749290 queued | Confirm post-merge fast Verify 35091749290 on 9c34628; then release next bounded AR-0007 slice |
 
 ### Planned (4)
 
