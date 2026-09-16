@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | DIRTY | - | test: reject restore control SHM sidecar |
+| #430 | `ar0007-executor-restore-control-shm-live@a2fd93993b48` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control SHM sidecar |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35091611581 | `a2fd93993b48` | pull_request | Verify | completed:success |
 | 35091119727 | `ea730ca34202` | push | Verify | completed:success |
 | 35090971290 | `3b557f9afc3b` | pull_request | Verify | completed:success |
 | 35090457010 | `4ffa2c8f6873` | push | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35089087897 | `b1a47fffcb1e` | pull_request | Verify | completed:success |
 | 35088770575 | `92fc9a4cfacb` | push | Verify | completed:success |
 | 35088674541 | `80ccb5ad7a69` | pull_request | Verify | completed:success |
-| 35088339196 | `65abf08ac135` | push | Verify | completed:success |
