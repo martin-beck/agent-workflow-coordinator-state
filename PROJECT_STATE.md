@@ -18,11 +18,13 @@ Generated from local Git and GitHub. Do not edit.
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
+| #421 | `ar0007-executor-restore-unsafe-lock@d83976955ce6` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject unsafe restore lock after failure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35087742936 | `d83976955ce6` | pull_request | Verify | completed:success |
 | 35087382676 | `af6c958f1363` | push | Verify | completed:success |
 | 35087288776 | `5c3425e77f4c` | pull_request | Verify | completed:success |
 | 35086991767 | `4dd136c4cb12` | push | Verify | completed:success |
@@ -34,4 +36,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35085812956 | `64d530c1964a` | push | Verify | completed:success |
 | 35085726055 | `b48a15cd6f26` | pull_request | Verify | completed:success |
 | 35085321373 | `33e5862b3309` | push | Verify | completed:success |
-| 35085197283 | `1aa0f3645ac5` | pull_request | Verify | completed:success |
