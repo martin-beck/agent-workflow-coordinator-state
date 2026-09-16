@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Repair PR332 fixes post-merge mypy fixture typing; exact fast verification and review pending. | Review exact PR332 head; merge only after independent review and hosted gates, then verify post-merge fast run. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR332 merged as 85755e9; post-merge fast verification is running. | Verify exact merge-head run 85755e9; then select next AR-0007 authorization/integration seam. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
