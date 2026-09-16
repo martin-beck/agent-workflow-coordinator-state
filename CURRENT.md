@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR380 runtime correspondence still synthetic; review failed | Instrument real lifecycle state/lock observations and bind runtime provenance to committed attestation; rerun hosted checks and independent review. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR380 session seam review failed identity enforcement | Enforce adapter-owned session-bound identity assertion/re-read under lock/context; add real replacement tests and hosted checks. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
