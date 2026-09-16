@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git restore interruption, collision, and parent-path symlink safety merged; post-merge pr-fast verification passed | Implement the next bounded AR-0007 lifecycle boundary selected from the plan, retaining fail-closed restore and explicit distinction between implementation evidence and formal correspondence. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git and SQLite restore/backup path safety merged; post-merge pr-fast verification is running | After post-merge verification, implement the next bounded AR-0007 lifecycle boundary selected from the plan, retaining fail-closed restore and explicit distinction between implementation evidence and formal correspondence. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
