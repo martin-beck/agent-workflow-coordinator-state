@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR377 merged; post-merge pr-fast Verify 35063495449 passed 95&#37; and TLC | Implement integrated Git/SQLite lifecycle fault-injection slice with fresh-destination equivalence, no mutation/residue, and durable outcome evidence. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR378 integrated SQLite lifecycle slice; exact-head Verify 35063867299 active | Complete exact-head Verify and independent review for PR378; merge only with 95&#37; coverage and successful pr-fast TLC, then continue lifecycle/fault gaps. |
 
 ### Planned (4)
 
