@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR396 merged as aac8ada; post-merge Verify pr-fast running | Confirm post-merge fast Verify for aac8ada; after terminal success release next bounded AR-0007 transaction/effect slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR396 merged as aac8ada; post-merge Verify pr-fast green | Implement and publish next bounded AR-0007 transaction/effect correctness slice from verified main aac8ada with hostile failure tests. |
 
 ### Planned (4)
 

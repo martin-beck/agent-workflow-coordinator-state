@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR396 merged as aac8ada; post-merge Verify pr-fast running | Confirm post-merge fast Verify for aac8ada; after terminal success release next bounded AR-0007 transaction/effect slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR396 merged as aac8ada; post-merge Verify pr-fast green | Implement and publish next bounded AR-0007 transaction/effect correctness slice from verified main aac8ada with hostile failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
