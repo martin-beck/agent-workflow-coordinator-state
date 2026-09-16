@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR413 merged as a35efd8; post-merge Verify 35084072789 passed pr-fast with 9 generated and 4 distinct states | Release next bounded AR-0007 slice: replace the bound control-store lock file during a failed effect; then independently review and publish |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR414 merged as feadf7c; post-merge Verify 35084829443 running | Confirm post-merge fast Verify for feadf7c; then release next bounded AR-0007 slice |
 
 ### Planned (4)
 
