@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #452 | `ar0012-sqlite-binding-fence@e0b5bc688a9c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: fence bound SQLite mutations |
+| #452 | `ar0012-sqlite-binding-fence@611fd7458df4` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat: fence bound SQLite mutations |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35111167082 | `611fd7458df4` | pull_request | Verify | in_progress:- |
 | 35107602598 | `e0b5bc688a9c` | pull_request | Verify | completed:failure |
 | 35107481468 | `e45626e62f28` | pull_request | Verify | completed:cancelled |
 | 35106796596 | `a6f6e09676d0` | pull_request | Verify | completed:failure |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35104445061 | `ad445d0e7c7e` | pull_request | Verify | completed:failure |
 | 35104206797 | `fb5b4254bca7` | pull_request | Verify | completed:cancelled |
 | 35103838648 | `d9e3dcf4c0a9` | pull_request | Verify | completed:failure |
-| 35103589729 | `051c6e28df73` | pull_request | Verify | completed:success |
