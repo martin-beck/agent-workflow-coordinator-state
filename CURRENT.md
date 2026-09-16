@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR431 published from exact 9c34628; authority WAL sidecar rejection; awq green, scope queued | Independent exact-head review PR431 base 9c34628, head a6ba65e; await scope/smoke and review before merge | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR431 merged as 5481d27; post-merge Verify 35092190086 queued; PR432 requires rebase | Confirm post-merge fast Verify 35092190086; then rebase PR432 onto exact 5481d27 and review | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
