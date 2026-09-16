@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Implement next bounded production SQLite lifecycle slice: atomic selector visibility or session binding under durable barrier; preserve fail-closed rollback/apply and add hostile tests/evidence. | codex-awc-ar0009-release-integration-20260916 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Implement next bounded production SQLite lifecycle slice toward executable session/barrier transaction and atomic selector publication; preserve fail-closed rollback/apply with hostile tests and evidence. | codex-awc-ar0009-release-integration-20260916 |
 
 ## Open
 
