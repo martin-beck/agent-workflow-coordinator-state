@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR409 published from exact main eceebc3; mutated control-state effect failure test | Obtain independent exact-head review and green hosted gates for PR409; merge then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR409 merged as 5622953; post-merge Verify queued | Confirm post-merge fast Verify for 5622953; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
