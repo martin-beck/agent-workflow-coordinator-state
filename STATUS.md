@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 atomically rechecks backup artifacts, but SQLite CAS identity still crosses lock boundary. | Capture SQLite descriptor identity under the same lock or perform bound CAS recheck; add direct observation replacement and stat-failure cleanup tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 binds SQLite CAS reread, descriptor stat and artifact observation under one lock; review pending. | Review exact cec18e4; verify race/failure cleanup, full tests and explicit non-authorizing boundary. |
 
 ### Planned (4)
 
