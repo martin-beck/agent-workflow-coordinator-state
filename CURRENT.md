@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR384 deep immutable JournalSnapshot repair reviewed PASS; hosted AWQ/scope/smoke green | Merge PR384 after final hosted gate confirmation; then implement concrete durable SQLite control-store snapshot binding with hostile tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR385 typed durable SQLite control-store snapshot published; hosted smoke pending and independent review pending | Complete exact-head review and hosted smoke for PR385; merge only after both pass, then bind snapshot to concrete executor. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
