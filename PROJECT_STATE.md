@@ -21,7 +21,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35057872704 | `73230eaac1dd` | push | Verify | queued:- |
+| 35057872704 | `73230eaac1dd` | push | Verify | in_progress:- |
 | 35057812250 | `01fd13a60076` | pull_request | Verify | completed:success |
 | 35057723435 | `7583aa1a107e` | push | Verify | completed:success |
 | 35057664545 | `a698cab23fa9` | pull_request | Verify | completed:success |
