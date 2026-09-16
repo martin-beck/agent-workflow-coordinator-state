@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR389 merged as c4aef3f; post-merge fast Verify running; next effect boundary queued | Confirm post-merge Verify for c4aef3f; implement next bounded executor operation/effect boundary from verified main, then fresh PR and independent review. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR389 post-merge Verify green on c4aef3f; next executor effect boundary released | Implement and publish next bounded read-only executor effect boundary from verified main c4aef3f, with final reread, lock cleanup, and hostile failure-path tests. |
 
 ### Planned (4)
 
