@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 now includes real initialized SQLite bound-preflight coverage at 212e175; hosted gates pending smoke and independent exact-head review. | Complete hosted smoke and exact-head independent review of 212e175; if PASS, merge PR334 and run post-merge pr-fast. Keep Git follow-up and rollback authorization disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 merged as cec53dc, but post-merge Verify 35047295016 failed at mypy before TLC due new adapter Any return and stale negative-test fixture types. | Publish signed typing/test repair PR, obtain hosted AWQ/scope/fast Verify green at exact head, then continue AR-0007 Git/provider and rollback execution work. |
 
 ### Planned (4)
 
