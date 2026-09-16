@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #456 | `ar0012-reconcile-crash-formal@a4e8a9c17462` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: recover interrupted barrier reconciliation |
+| #456 | `ar0012-reconcile-crash-formal@dfdfac8ee8bb` | `main` | CLEAN | QUEUED:, QUEUED: | fix: recover interrupted barrier reconciliation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35126045636 | `dfdfac8ee8bb` | pull_request | Verify | queued:- |
 | 35125763477 | `a4e8a9c17462` | pull_request | Verify | completed:failure |
 | 35125364144 | `3cf1583f08fc` | pull_request | Verify | completed:failure |
 | 35125084988 | `52af9868ec30` | pull_request | Verify | completed:failure |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35120180038 | `fea575668c01` | pull_request | Verify | completed:success |
 | 35117157636 | `14a9f7d76cf0` | push | Verify | completed:success |
 | 35116851414 | `09bb43840fdf` | pull_request | Verify | completed:success |
-| 35116632473 | `5c8ea6bddd0b` | pull_request | Verify | completed:success |
