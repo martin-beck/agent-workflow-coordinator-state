@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR421 merged as 4d43475; post-merge Verify 35087825045 passed pr-fast with 9 generated and 4 distinct states | Implement and publish next bounded AR-0007 slice from 4d43475; then independently review and merge | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR422 published from exact 4d43475; hosted checks and independent review pending | Review and merge PR422 after exact-head PASS and all hosted checks green; then verify post-merge pr-fast | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
