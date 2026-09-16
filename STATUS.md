@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR385 merged; post-merge Verify failed on stale rollback_control_store formal hash | Repair authoritative formal evidence hash for PR385 change, publish exact-head repair, and rerun full post-merge fast Verify before executor binding. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR386 formal evidence hash repair published; hosted Verify running | Complete exact-head review and hosted Verify for PR386; merge only when green, then resume concrete executor binding. |
 
 ### Planned (4)
 
