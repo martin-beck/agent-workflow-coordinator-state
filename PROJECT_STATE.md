@@ -19,11 +19,13 @@ Generated from local Git and GitHub. Do not edit.
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
+| #427 | `ar0007-control-store-identity-binding@02f5ded6b180` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind control-store identity across lifecycle effects |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35090332842 | `02f5ded6b180` | pull_request | Verify | completed:success |
 | 35089934751 | `75ebcc155760` | pull_request | Verify | completed:success |
 | 35089611538 | `86abcea47e75` | push | Verify | completed:success |
 | 35089521503 | `9ff09a362943` | pull_request | Verify | completed:success |
@@ -35,4 +37,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35088126804 | `7cb7e905f7f9` | pull_request | Verify | completed:success |
 | 35087825045 | `4d4347542d23` | push | Verify | completed:success |
 | 35087742936 | `d83976955ce6` | pull_request | Verify | completed:success |
-| 35087382676 | `af6c958f1363` | push | Verify | completed:success |
