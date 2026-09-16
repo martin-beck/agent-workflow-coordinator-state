@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Merged PR #457 and post-merge verified immutable release identity/path verification; remaining AR-0009 work is the isolated Git/SQLite upgrade campaign and generated release-step execution. | Implement the next atomic AR-0009 slice: fresh Git/SQLite upgrade fixture with generated ordered release steps and failure-path rollback/reopen functional-state checks; preserve exact release identity, backup, fencing, and formal evidence. | codex-awc-ar0009-release-integration-20260916 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | After PR #458 merge and post-merge Verify, implement the production adapter/session slice: bind generated operations to the durable barrier/fencing protocol, atomic Git selector visibility, and executable rollback only after exact formal/refinement evidence. | codex-awc-ar0009-release-integration-20260916 |
 
 ## Open
 
