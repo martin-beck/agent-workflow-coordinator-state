@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR425 merged as 86abcea; post-merge Verify 35089611538 running | Confirm post-merge fast Verify for 86abcea; then release next bounded AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR425 merged as 86abcea; post-merge Verify 35089611538 passed pr-fast with 9 generated and 4 distinct states | Implement and publish next bounded AR-0007 slice from 86abcea; then independently review and merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
