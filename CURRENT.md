@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR330 fail: no backend provenance. | Wire adapter-owned evidence. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR330 blocked: adapters lack typed observation API. | Add read-only Git/SQLite observation APIs. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
