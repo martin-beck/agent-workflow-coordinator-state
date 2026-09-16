@@ -3,11 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
+## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 review failed: CAS facts not adapter-bound. | Bind control-store reread and integrate observation. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 review failed: CAS facts not adapter-bound. | Bind control-store reread and integrate observation. | - |
 
 ## Planned
 
