@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR399 merged as c7e760f; post-merge Verify queued | Confirm post-merge fast Verify for c7e760f; then release next bounded AR-0007 slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR399 post-merge Verify pr-fast green on c7e760f | Implement and publish next bounded AR-0007 transaction/effect slice from verified main c7e760f. |
 
 ### Planned (4)
 
