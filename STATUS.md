@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 coverage tests remain meaningful but hosted Verify fails three mypy typing errors. | Correct Path/boolean fixture types and remove unused ignore; rerun hosted Verify and independent review. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 typed-test correction passes local mypy/Ruff; hosted Verify pending. | Verify exact 4024fd5 hosted coverage and formal hash gates; independent review then merge. |
 
 ### Planned (4)
 
