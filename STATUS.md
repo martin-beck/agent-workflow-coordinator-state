@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 provider seam is still independently rejected: runtime-checkable structural provider permits hostile self-attested observations. | Replace structural provider acceptance with concrete adapter-owned or opaque capability bound to expected backend/session/control store; reject foreign and malicious providers with tests, then exact-head independent PASS and green CI. Do not merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 now has opaque provider binding repair at 10dd546; hosted AWQ/scope/smoke green and verify skipped. Awaiting exact-head independent review. | Obtain independent exact-head review of 10dd546 and confirm hostile provider rejection plus adapter/session binding; if PASS, merge PR334 and verify post-merge pr-fast. Keep rollback authorization disabled. |
 
 ### Planned (4)
 
