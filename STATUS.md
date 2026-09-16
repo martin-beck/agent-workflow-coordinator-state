@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR376 published; post-merge pr-fast Verify 35062156494 passed | Independently review and merge PR376; then implement integrated lifecycle/fresh-clone rollback and formal correspondence slices. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR376 review failed; corrective revision required | Repair PR376 with real index equivalence, synchronized archive mutation race coverage, and explicit cleanup assertions; obtain independent PASS before merge. |
 
 ### Planned (4)
 

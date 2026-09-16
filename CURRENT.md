@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR376 published; post-merge pr-fast Verify 35062156494 passed | Independently review and merge PR376; then implement integrated lifecycle/fresh-clone rollback and formal correspondence slices. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR376 review failed; corrective revision required | Repair PR376 with real index equivalence, synchronized archive mutation race coverage, and explicit cleanup assertions; obtain independent PASS before merge. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
