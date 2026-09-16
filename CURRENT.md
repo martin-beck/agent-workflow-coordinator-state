@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR445 merged as d521ad0; post-merge Verify 35096212760 passed; worker auditing remaining AR-0007 rollback/restore gaps | Identify next non-duplicate AR-0007 contract gap beyond control-store identity tests; publish only after focused validation and independent review | codex-awc-ar0007-next-20260916 |
-
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
@@ -28,6 +22,7 @@ Never edit this file directly.
 | P0 | [AR-0004](tasks/AR-0004.md): Quiescence and upgrade preflight | Prevent upgrades from starting unless the coordination system can remain safe and functional. | AR-0004 complete; PR #24 merged and post-merge main verification green. AR-0007 is now dependency-ready for phase-machine implementation. | - |
 | P0 | [AR-0005](tasks/AR-0005.md): Git-backend backup and restore | Back up and restore complete Git-backed coordination state without losing task history. | AR-0005 complete; PR #25 merged and post-merge main verification green. AR-0006 PR #26 remains open pending independent review and exact-head checks. | - |
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | AR-0006 complete; PR #26 merged and post-merge main verification green. AR-0004 remains blocked pending its correctness fixes and healthy exact-head rerun. | - |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR445 merged as d521ad0; post-merge Verify 35096212760 passed; worker auditing remaining AR-0007 rollback/restore gaps | Identify next non-duplicate AR-0007 contract gap beyond control-store identity tests; publish only after focused validation and independent review | - |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | PR #323 adds RollbackRequiresBackup invariant on exact main 143bdf6; hosted Verify is pending and local TLC was blocked by pthread_create EAGAIN. | Await exact-head Verify and artifact; independently review the result before merge. Preserve bounded-model and implementation-refinement nonclaims. | - |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Exact-head PR #22 formal publication gate independently reviewed green. | Await parent merge decision; retain full-exhaustive claims for successful scheduled/manual run and preserve merge-tree attestation provenance. | - |
 | P0 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md): Verified supersession dependency readiness | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. | - |
