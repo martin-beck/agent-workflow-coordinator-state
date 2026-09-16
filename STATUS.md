@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 review failed: CAS facts not adapter-bound. | Bind control-store reread and integrate observation. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 review failed: adapter CAS binding and authorization seam remain incomplete. | Add initialized SQLite CAS identity/revision tests, atomic identity binding, and explicit non-authorizing integration boundary. |
 
 ### Planned (4)
 
