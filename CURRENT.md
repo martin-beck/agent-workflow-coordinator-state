@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR382 smoke green; ownership repair lacks SQLite hostile-test evidence | Add positive/foreign/race SQLite wrapper tests and explicit legacy non-authority contract; rerun hosted gates. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR382 smoke pending; review requires synchronized final-reread race test | Add synchronized backup replacement/symlink race at final pre-install reread and legacy non-authority contract; rerun hosted gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
