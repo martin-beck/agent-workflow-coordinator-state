@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR408 post-merge Verify pr-fast green on eceebc3 | Implement and publish next bounded control-revision mutation failure/effect slice from verified main eceebc3. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR409 published from exact main eceebc3; mutated control-state effect failure test | Obtain independent exact-head review and green hosted gates for PR409; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
