@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR439 merged as afca669; post-merge Verify 35094570917 running | Confirm post-merge fast Verify 35094570917 on afca669; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR440 published from exact afca669; authority descriptor mode drift rejection; hosted checks running | Independent exact-head review PR440 base afca669, head 889ef79; await AWQ/scope/smoke before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
