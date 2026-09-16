@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR361 merged; Verify running | After Verify, select next slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR362 merged; postmerge pr-fast green | Select next SQLite lifecycle boundary slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
