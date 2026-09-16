@@ -7,13 +7,8 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. | codex-awc-ar0009-release-integration-20260916 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Continue next atomic process-death durability/formal-correspondence slice from verified main 64a172df3e8dccc6c3cc3b53713bdae6f1204e35; preserve exact history, identity, newer-fence, and write-closed ambiguity invariants; do not claim full AR completion. | codex-awc-ar0012-wal-faults-20260916 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. | - |
 
 ## Planned
 
