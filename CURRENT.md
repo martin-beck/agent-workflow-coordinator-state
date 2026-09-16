@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR398 merged as 99a832e; post-merge Verify pr-fast running | Confirm post-merge fast Verify for 99a832e; then release next bounded AR-0007 slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR398 post-merge Verify pr-fast green on 99a832e | Implement and publish next bounded AR-0007 transaction/effect slice from verified main 99a832e. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
