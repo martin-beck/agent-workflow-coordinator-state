@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR405 post-merge Verify pr-fast green on bb3f8da | Implement and publish next bounded AR-0007 transaction/effect slice from verified main bb3f8da. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR406 published from exact main bb3f8da; next journal identity failure slice | Obtain independent exact-head review and green hosted gates for PR406; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
