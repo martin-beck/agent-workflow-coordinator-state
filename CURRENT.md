@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR391 barrier revision-drift failure test published; hosted smoke queued, review pending | Complete exact-head review and hosted smoke for PR391; merge only after PASS and green, then post-merge Verify. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR391 merged as 8e8a462; post-merge fast Verify running; next executor effect boundary queued | Confirm post-merge Verify for 8e8a462; implement next bounded read-only executor effect/transaction slice from verified main with hostile failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
