@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #327 merged; post-merge 35039237207 green pr-fast. | Advance next reviewed non-authorizing rollback boundary; preserve failure safety. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #328 review failed; strict capability evidence validation repair required. | Repair PR #328 evidence type/identity/backend/phase/backup validation; rerun review. |
 
 ### Planned (4)
 
