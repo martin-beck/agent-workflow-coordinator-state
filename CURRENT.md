@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR394 unbound executor refusal coverage published; hosted gates green, review pending | Complete exact-head review for PR394; merge after PASS and green hosted gates, then post-merge Verify. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR394 merged as 5d4d736; post-merge fast Verify running; next transaction/effect slice queued | Confirm post-merge Verify for 5d4d736; implement next bounded read-only transaction/effect slice from verified main with hostile failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
