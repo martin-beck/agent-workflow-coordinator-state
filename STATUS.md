@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR396 merged as aac8ada; post-merge Verify pr-fast green | Implement and publish next bounded AR-0007 transaction/effect correctness slice from verified main aac8ada with hostile failure tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Next symlink-substitution hostile test validated; publication briefly blocked by full /srv/data | Commit and publish preserved symlink-substitution test from aac8ada now that generated venv space has been reclaimed; obtain exact-head review and green CI. |
 
 ### Planned (4)
 
