@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR381 smoke green; review rejects convention-only issuance and missing final rereads/hostile tests | Capability-protect session issuance, enforce final restore reread before clone, add hostile wrapper tests and legacy non-authority contract. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR381 merged; post-merge fast Verify pending; Git adapter wrapper seam accepted | Verify post-merge main, then thread adapter-owned LifecycleSession into SQLite backup/restore with real ownership and final rereads. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
