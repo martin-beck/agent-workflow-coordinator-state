@@ -16,13 +16,14 @@ Generated from local Git and GitHub. Do not edit.
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
-| #337 | `ar0007-coverage-repair-current@f948daabe17c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(upgrade): cover observation capability branches |
+| #337 | `ar0007-coverage-repair-current@c4a730132c3a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(upgrade): cover observation capability branches |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35048207557 | `f948daabe17c` | pull_request | Verify | in_progress:- |
+| 35048301182 | `c4a730132c3a` | pull_request | Verify | completed:failure |
+| 35048207557 | `f948daabe17c` | pull_request | Verify | completed:cancelled |
 | 35047696702 | `f7211c189999` | pull_request | Verify | completed:failure |
 | 35047476795 | `0418a6ecdc18` | push | Verify | completed:failure |
 | 35047431539 | `c6edeeeb3597` | pull_request | Verify | completed:success |
@@ -33,4 +34,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35046692592 | `a39c9551df4f` | pull_request | Verify | completed:success |
 | 35046471584 | `01d16015c245` | pull_request | Verify | completed:success |
 | 35046285213 | `4528810dc5f1` | pull_request | Verify | completed:success |
-| 35045939681 | `a1fa9b3c9e09` | push | Verify | completed:success |
