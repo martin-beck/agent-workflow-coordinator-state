@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR385 merged as 1e5797f; post-merge fast Verify running; next executor binding slice queued | Confirm post-merge Verify for 1e5797f; implement concrete executor binding to typed control/journal snapshots with real failure-path tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR385 merged; post-merge Verify failed on stale rollback_control_store formal hash | Repair authoritative formal evidence hash for PR385 change, publish exact-head repair, and rerun full post-merge fast Verify before executor binding. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
