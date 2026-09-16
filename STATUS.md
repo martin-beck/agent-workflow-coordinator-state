@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-wal-faults-20260916 | Merged and post-merge-verified bounded interrupted ambiguity-recovery slice in PR #455 at merge e00dc5b1654d6b542ca65c06eb69d4ed20bad286; sidecar fencing and earlier concurrency slices also merged; full AR remains in progress. | Continue next atomic lifecycle/formal slice from verified main e00dc5b1654d6b542ca65c06eb69d4ed20bad286: remaining process-death durability boundaries and implementation-to-formal correspondence. Preserve durable write-closed ambiguity and do not claim full AR completion. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-wal-faults-20260916 | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Continue next atomic process-death durability/formal-correspondence slice from verified main 64a172df3e8dccc6c3cc3b53713bdae6f1204e35; preserve exact history, identity, newer-fence, and write-closed ambiguity invariants; do not claim full AR completion. |
 
 ### Open (1)
 
