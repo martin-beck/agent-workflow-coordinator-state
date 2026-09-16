@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Implement typed barrier_session row decoder/reuse in MutationFence, reject malformed identity/digest/revision/children before status admission, add forged released-row test asserting unchanged task/body/events. Rerun all focused/static/formal/full gates, then signed push and independent review. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Bounded typed v10 barrier admission and independent-process SQLite concurrency/SIGKILL evidence are published in PR #453; full AR remains in progress. | Obtain independent exact-head review and hosted pr-fast success for PR #453, merge and verify main, then continue WAL/SHM fault injection, remaining lifecycle ambiguity/process-death boundaries, and implementation/formal refinement without claiming full AR completion. |
 
 ### Open (1)
 
