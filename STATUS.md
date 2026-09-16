@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR376 amended; review requires deterministic archive-race completion barrier | Add completion barrier/event to archive mutation test, rerun focused checks, and obtain independent exact-head PASS. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR376 merged; post-merge pr-fast Verify 35062662899 active | Record post-merge Verify success, then address integrated lifecycle/fresh-clone rollback and formal correspondence gaps. |
 
 ### Planned (4)
 
