@@ -15,12 +15,13 @@ Generated from local Git and GitHub. Do not edit.
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
-| #331 | `ar0007-typed-observations@2ccb0940c282` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add typed backup observations |
+| #331 | `ar0007-typed-observations@385d41f1c7c0` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add typed backup observations |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35042762076 | `385d41f1c7c0` | pull_request | Verify | completed:success |
 | 35042560552 | `2ccb0940c282` | pull_request | Verify | completed:success |
 | 35042280923 | `74b3df8f020b` | pull_request | Verify | completed:success |
 | 35042033331 | `7203ae19aa9c` | pull_request | Verify | completed:success |
@@ -32,4 +33,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35039237207 | `6080f3bc9e02` | push | Verify | completed:success |
 | 35039065987 | `fe1f61803672` | pull_request | Verify | completed:success |
 | 35038329224 | `b1c304f3543f` | push | Verify | completed:success |
-| 35038072093 | `12dff0fa847f` | pull_request | Verify | completed:success |
