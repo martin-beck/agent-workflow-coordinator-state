@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 coverage repair targets identified: rollback evidence errors and SQLite stat/revision failure branches. | Add meaningful tests for rollback_evidence lines 37,72-74 and control_store lines 362-367; rerun coverage and publish signed repair PR. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 adds rollback observation failure tests; exact hosted coverage and review pending. | Verify PR333 head 212f2b6 reaches 95&#37; without exclusions; obtain independent review, then merge and verify post-merge. |
 
 ### Planned (4)
 
