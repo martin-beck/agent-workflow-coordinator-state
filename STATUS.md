@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 adds rollback observation failure tests; exact hosted coverage and review pending. | Verify PR333 head 212f2b6 reaches 95&#37; without exclusions; obtain independent review, then merge and verify post-merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 formatted coverage repair reaches 95&#37; locally; hosted Verify and independent review pending. | Verify exact head b239b14 hosted gates; merge PR333 only after review, then verify post-merge fast run. |
 
 ### Planned (4)
 
