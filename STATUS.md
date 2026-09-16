@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git preflight and failure-cleanup slices merged and post-merge verified; next lifecycle boundary is backup/restore equivalence and crash safety | Implement the next verified backup/restore lifecycle boundary: concrete artifact creation/restore equivalence and crash/concurrency failure handling, with formal contract evidence; preserve fail-closed no-mutation behavior until authorization gates are proven. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git backup/restore equivalence merged; formatting repair merged; post-merge bounded verification is running | Implement the next verified failure-safe Git restore staging boundary: fault-injected interruption before publication and concurrent destination collision, proving unchanged/absent destination, intact backup, safe retry, and fail-closed ownership; add bounded formal evidence without claiming correspondence. |
 
 ### Planned (4)
 
