@@ -3,11 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## Open
+## In Progress
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git backup/restore equivalence and formatting repair merged; post-merge Verify is green on pr-fast | Implement the next verified failure-safe Git restore staging boundary: fault-injected interruption before publication and concurrent destination collision, proving unchanged/absent destination, intact backup, safe retry, and fail-closed ownership; add bounded formal evidence without claiming correspondence. | - |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git backup/restore equivalence and formatting repair merged; post-merge Verify is green on pr-fast | Implement the next verified failure-safe Git restore staging boundary: fault-injected interruption before publication and concurrent destination collision, proving unchanged/absent destination, intact backup, safe retry, and fail-closed ownership; add bounded formal evidence without claiming correspondence. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
