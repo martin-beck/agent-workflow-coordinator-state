@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR441 published from exact 779bfed; foreign authority-parent symlink replacement; hosted checks running | Independent exact-head review PR441 base 779bfed, head 3d78829; await AWQ/scope/smoke before merge |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR441 merged as 54e69dc; post-merge Verify 35095292623 pending | Confirm post-merge fast Verify 35095292623 on 54e69dc; then release next distinct AR-0007 slice |
 
 ### Planned (4)
 
