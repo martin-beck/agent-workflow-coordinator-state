@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #467 | `ar0013-selector-publication-adapter@94d3d93486af` | `main` | UNKNOWN | - | feat(runtime): add stable selector bootstrap resolver |
+| #467 | `ar0013-selector-publication-adapter@94d3d93486af` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): add stable selector bootstrap resolver |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35161809174 | `94d3d93486af` | pull_request | Verify | completed:success |
 | 35138545839 | `ecd9b58d40d4` | push | Verify | completed:success |
 | 35138472037 | `3913a0544749` | pull_request | Verify | completed:success |
 | 35138295641 | `131374a7661d` | pull_request | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35136393830 | `440e00d8cbc4` | push | Verify | completed:success |
 | 35136260907 | `d8a2c842c2c5` | pull_request | Verify | completed:success |
 | 35135840303 | `2283be673912` | push | Verify | completed:success |
-| 35135728964 | `0d9928651304` | pull_request | Verify | completed:success |
