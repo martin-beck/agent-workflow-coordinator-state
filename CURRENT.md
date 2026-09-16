@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR382 merged; post-merge main verification queued; Git and SQLite session seams accepted | Verify post-merge main, then integrate both adapter session seams into upgrade engine phase boundaries and crash/fault evidence. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR382 merged; direct phase wiring unsafe; executor contract slice next | Add adapter-backed phase executor contract exposing bound backup/restore plus session evidence; test failure, journal preservation, and lock reacquisition. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
