@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR336 hash repair is correct but Verify 35047696702 fails unchanged coverage gate: 535 tests pass, total branch coverage 94% below required 95%; TLC not reached. | Add targeted tests to restore genuine >=95% branch coverage without threshold/exclusion changes, publish signed repair PR, obtain exact-head independent review and hosted AWQ/scope/pr-fast green. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Coverage repair remains unpublished: full local run is 535 tests with stale-hash failure unless f7211c is applied, and genuine branch coverage remains 94% after one targeted test. | Add broader meaningful tests across newly reachable upgrade_engine and rollback_control_store branches; apply formal hash repair in test base, achieve >=95% without exclusions/threshold changes, then publish signed repair PR and obtain independent/hosted gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
