@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR331 merged, but post-merge Verify 35044218842 failed mypy on typed SQLite rereader fixture. | Repair test fixture with AuthorityRuntimeRereader type; rerun exact merge-head fast gates and independent review before next AR. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Repair PR332 fixes post-merge mypy fixture typing; exact fast verification and review pending. | Review exact PR332 head; merge only after independent review and hosted gates, then verify post-merge fast run. |
 
 ### Planned (4)
 
