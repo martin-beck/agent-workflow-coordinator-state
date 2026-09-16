@@ -15,13 +15,13 @@ Generated from local Git and GitHub. Do not edit.
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
-| #334 | `ar0007-authorization-preflight@01d16015c245` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(upgrade): add typed rollback authorization preflight |
+| #334 | `ar0007-authorization-preflight@01d16015c245` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): add typed rollback authorization preflight |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35046471584 | `01d16015c245` | pull_request | Verify | in_progress:- |
+| 35046471584 | `01d16015c245` | pull_request | Verify | completed:success |
 | 35046285213 | `4528810dc5f1` | pull_request | Verify | completed:success |
 | 35045939681 | `a1fa9b3c9e09` | push | Verify | completed:success |
 | 35045769071 | `4024fd5f5412` | pull_request | Verify | completed:success |
