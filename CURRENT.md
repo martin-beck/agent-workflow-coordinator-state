@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds backend verifiers, but tests do not exercise real artifacts; atomic binding and auth boundary remain incomplete. | Add real Git/SQLite fixture calls through adapter APIs and prove observation-sidecar race/atomic binding; retain non-authorizing boundary. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds real Git/SQLite verifier fixtures; atomic binding and independent review pending. | Review exact 3d5ebce; prove atomic descriptor/sidecar binding and explicit non-authorizing boundary. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
