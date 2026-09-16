@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git capability remains unimplemented; review confirms snapshot_bound plus exact adapter/scope/lease/recheck/branch/head binding is the trusted session primitive. | Implement GitRollbackObservationCapability capturing exact adapter, PhaseContext, LockDomainScope, AdmissionLease, AdmissionRecheck, expected branch/head; invoke snapshot_bound and real git_backup verification; add drift/tamper/foreign tests and publish signed PR. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR338 typed Git session reread is published but independent review fails for mock-only coverage; no real initialized Git binding/drift/lock tests yet. | Add initialized real Git fixture tests through snapshot_bound_reread, including branch/head/lease/session drift, artifact tamper, foreign capability, lock cleanup and no mutation; obtain exact-head independent PASS and hosted gates. |
 
 ### Planned (4)
 
