@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR413 published from exact main 8f3990f; bound control-store replacement effect test | Obtain independent exact-head review and green hosted gates for PR413; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR413 merged as a35efd8; post-merge Verify queued | Confirm post-merge fast Verify for a35efd8; then release next bounded AR-0007 slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
