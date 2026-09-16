@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR387 concrete SQLite lifecycle snapshot seam published; hosted smoke green, review pending | Complete independent exact-head review of PR387; merge only after PASS and hosted green, then proceed to executor operation binding. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR387 review FAIL: executor bind accepts foreign session store/authority identity | Add adapter/session/control identity enforcement and initialized foreign-store rejection tests to PR387; rerun exact-head review and hosted gates. |
 
 ### Planned (4)
 
