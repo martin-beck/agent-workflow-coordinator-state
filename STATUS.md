@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR417 published from exact 64d530c; hosted checks and independent review pending | Review and merge PR417 after exact-head PASS and all hosted checks green; then verify post-merge pr-fast |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR417 merged as 5c34897; post-merge Verify 35086222982 queued | Confirm post-merge fast Verify for 5c34897; then release next bounded AR-0007 slice |
 
 ### Planned (4)
 
