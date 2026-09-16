@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR424 published from exact 92fc9a4; hosted checks and independent review pending | Review and merge PR424 after exact-head PASS and all hosted checks green; then verify post-merge pr-fast | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR424 merged as f31859f; post-merge Verify 35089197656 queued | Confirm post-merge fast Verify for f31859f; then release next bounded AR-0007 slice | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
