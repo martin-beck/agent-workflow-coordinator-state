@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git backup verification remains unimplemented; implementation worker declined full slice safely. Next bounded artifact is immutable GitBackupObservation requiring verified session state and git_backup result. | Publish immutable GitBackupObservation type with private provenance factory requiring verified GitRollbackSessionState plus git_backup.verify_backup result; add forged/missing-field tests, then integrate preflight_git. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #340 GitBackupObservation merged; coverage repair PR #342 pending hosted gates | Review and merge PR #342 only after exact-head review and &gt;=95&#37; post-merge coverage; then integrate preflight_git with real verified Git backup, tamper/foreign-session rejection, and no mutation path. |
 
 ### Planned (4)
 
