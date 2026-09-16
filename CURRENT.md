@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR407 merged as 854cd86; post-merge Verify queued | Confirm post-merge fast Verify for 854cd86; then release next bounded AR-0007 slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR407 post-merge Verify pr-fast green on 854cd86 | Implement and publish next bounded mutated-journal failure/effect slice from verified main 854cd86. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
