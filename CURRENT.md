@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR377 merged; exact-head Verify 35063322869 passed 95% and pr-fast TLC | Verify post-merge run 35063495449; then implement integrated SQLite/Git lifecycle and fault-injection slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR377 merged; post-merge pr-fast Verify 35063495449 passed 95% and TLC | Implement integrated Git/SQLite lifecycle fault-injection slice with fresh-destination equivalence, no mutation/residue, and durable outcome evidence. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
