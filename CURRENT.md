@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR338 typed Git session reread is published but independent review fails for mock-only coverage; no real initialized Git binding/drift/lock tests yet. | Add initialized real Git fixture tests through snapshot_bound_reread, including branch/head/lease/session drift, artifact tamper, foreign capability, lock cleanup and no mutation; obtain exact-head independent PASS and hosted gates. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR338 merged as c21068b; post-merge Verify 35049397738 green with 539 tests, 95% coverage, and pr-fast TLC. AR-0007 advances to Git backup-artifact binding. | Implement GitRollbackObservationCapability composing bound snapshot_bound_reread with real git_backup verification and immutable artifact/manifest evidence; add branch/head/lease/session drift, replacement/tamper, foreign capability, lock cleanup and no-mutation tests. Obtain independent exact-head review and hosted gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
