@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR362 merged; postmerge pr-fast green | Select next SQLite lifecycle boundary slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR363 review hold: symlink identity gap | Amend PR363 with final regular-file recheck and symlink race test. |
 
 ### Planned (4)
 
