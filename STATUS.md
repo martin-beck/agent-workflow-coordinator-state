@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #344 preflight integration published but independent review found canonical manifest/root substitution risk | Repair PR #344 canonical Git backup binding: require manifest to be the regular file at bound backup root/manifest.json and reject foreign valid root/manifest mismatch; add two-backup tamper/mismatch test, rerun full gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Bound Git preflight inspection merged and post-merge fast verification green; broader upgrade contracts remain | Extend the bound Git preflight contract beyond inspection: reconcile the existing SQLite-only preflight protocol with a distinct Git capability or safe generalization, preserve session/lease/root/verifier provenance, and add formal/refinement and failure-path evidence without mutation. |
 
 ### Planned (4)
 
