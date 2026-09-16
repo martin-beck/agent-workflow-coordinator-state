@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR410 post-merge Verify pr-fast green on be0d17e | Implement and publish next bounded journal-deletion failure/effect slice from verified main be0d17e. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR411 published from exact main be0d17e; deleted journal effect failure test | Obtain independent exact-head review and green hosted gates for PR411; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
