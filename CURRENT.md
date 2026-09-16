@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR403 published from exact main 1f199ac; missing control session failure test | Obtain independent exact-head review and green hosted gates for PR403; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR403 merged as 998c2b4; post-merge Verify queued | Confirm post-merge fast Verify for 998c2b4; then release next bounded AR-0007 slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
