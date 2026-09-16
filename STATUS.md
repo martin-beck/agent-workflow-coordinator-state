@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR409 merged as 5622953; post-merge Verify queued | Confirm post-merge fast Verify for 5622953; then release next bounded AR-0007 slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR409 post-merge Verify pr-fast green on 5622953 | Implement and publish next bounded deleted-control-session failure/effect slice from verified main 5622953. |
 
 ### Planned (4)
 
