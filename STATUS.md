@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR390 post-merge Verify rerun green on c5477ac; next executor transaction boundary released | Implement and publish next bounded read-only executor transaction/effect boundary from verified main c5477ac, with final reread, lock cleanup, and hostile failure tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR391 barrier revision-drift failure test published; hosted smoke queued, review pending | Complete exact-head review and hosted smoke for PR391; merge only after PASS and green, then post-merge Verify. |
 
 ### Planned (4)
 
