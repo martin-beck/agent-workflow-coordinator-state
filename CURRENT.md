@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR438 merged as af88cf1; post-merge Verify 35094250777 running | Confirm post-merge fast Verify 35094250777 on af88cf1; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR438 merged as af88cf1; post-merge Verify 35094250777 passed pr-fast; PR439 published | Independent exact-head review PR439 base af88cf1, head 2762186; await AWQ/scope/smoke before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
