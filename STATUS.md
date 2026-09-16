@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR395 post-merge Verify green on e9f372b; next transaction/effect slice released | Implement and publish next bounded read-only transaction/effect slice from verified main e9f372b with final reread, lock cleanup, and hostile failure tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR396 published from exact main e9f372b; hosted AWQ/scope green and portable smoke running | Obtain independent exact-head review for PR396; wait smoke terminal; merge only after PASS and green checks, then verify post-merge fast gate. |
 
 ### Planned (4)
 
