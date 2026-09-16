@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR378 merged; post-merge pr-fast Verify 35064055475 passed | Implement integrated cross-backend Git+SQLite lifecycle correspondence and failure-injection slice with durable lock/reconciliation evidence. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR379 cross-backend lifecycle test; exact-head Verify 35064434311 queued | Complete exact-head Verify and merge PR379; then continue formal correspondence and lifecycle fault-boundary coverage. |
 
 ### Planned (4)
 
