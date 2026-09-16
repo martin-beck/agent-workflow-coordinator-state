@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR408 published from exact main 854cd86; mutated journal failure/effect fence | Obtain independent exact-head review and green hosted gates for PR408; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR408 merged as eceebc3; post-merge Verify queued | Confirm post-merge fast Verify for eceebc3; then release next bounded AR-0007 slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
