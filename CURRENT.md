@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR391 post-merge Verify green on 8e8a462; next executor transaction slice released | Implement and publish next bounded read-only executor transaction/effect slice from verified main 8e8a462 with final reread, lock cleanup, and hostile failure tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR392 authority inode replacement failure test published; hosted smoke queued, review pending | Complete exact-head review and smoke for PR392; merge only after PASS and green, then post-merge Verify. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
