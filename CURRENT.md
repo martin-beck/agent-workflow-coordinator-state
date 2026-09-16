@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds real SQLite CAS observation test; hostile identity and auth-boundary review pending. | Complete stale/replaced-row, inode, read-only and explicit non-authorizing boundary coverage; obtain independent review. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 review still fails: positive CAS test only; hostile identity and boundary coverage missing. | Add stale/replaced CAS, inode/WAL/SHM, atomic binding and read-only failure tests; retain explicit non-authorizing boundary. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
