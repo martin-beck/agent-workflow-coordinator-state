@@ -15,12 +15,13 @@ Generated from local Git and GitHub. Do not edit.
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
-| #333 | `ar0007-formal-hash-repair@212f2b61cb26` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store evidence hash |
+| #333 | `ar0007-formal-hash-repair@b239b140f2f1` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store evidence hash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35045659978 | `b239b140f2f1` | pull_request | Verify | completed:failure |
 | 35045574499 | `212f2b61cb26` | pull_request | Verify | completed:failure |
 | 35044971180 | `c5ad02ac4d71` | pull_request | Verify | completed:failure |
 | 35044579671 | `85755e933083` | push | Verify | completed:failure |
@@ -32,4 +33,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35043652392 | `3d5ebce87520` | pull_request | Verify | completed:success |
 | 35043467489 | `942282c129d4` | pull_request | Verify | completed:success |
 | 35043263934 | `812623238445` | pull_request | Verify | completed:success |
-| 35043130505 | `a96e68040ac2` | pull_request | Verify | completed:success |
