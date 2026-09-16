@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | SQLite executor commit exists but is unpublished; new PR required | Open new current-main PR for executor commit 61e64ae, then add durable lock/journal integration and injected failure tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR383 merged; post-merge main verification queued; concrete SQLite executor boundary published | Verify post-merge main, then add durable lock/journal integration and injected executor-failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
