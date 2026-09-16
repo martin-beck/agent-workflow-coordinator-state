@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR388 fresh final-reread repair published from cfcd28d; hosted smoke queued, review pending | Complete independent exact-head review and hosted smoke for PR388; merge only when both pass, then post-merge Verify and next executor operation slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR388 merged as 94388bf; post-merge fast Verify running; next executor effect boundary queued | Confirm post-merge Verify for 94388bf; implement next bounded executor effect boundary only after final reread/lock evidence, then fresh PR and independent review. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
