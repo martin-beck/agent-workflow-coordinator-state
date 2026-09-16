@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR339 merged as c0ef7dd; post-merge Verify 35049903986 green with 540 tests, 95&#37; coverage, and pr-fast TLC. Next is Git backup verification. | Implement GitBackupObservation/preflight_git using bound session reread and GitRollbackArtifactBinding; invoke real git_backup.verify_backup, bind immutable artifact/manifest digests, add hostile tamper/replacement/foreign tests, then independent review and hosted gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git backup verification remains unimplemented; implementation worker declined full slice safely. Next bounded artifact is immutable GitBackupObservation requiring verified session state and git_backup result. | Publish immutable GitBackupObservation type with private provenance factory requiring verified GitRollbackSessionState plus git_backup.verify_backup result; add forged/missing-field tests, then integrate preflight_git. |
 
 ### Planned (4)
 
