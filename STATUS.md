@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
@@ -34,7 +34,7 @@ flowchart LR
         AR_0004["AR-0004 - Done"]:::status_done
         AR_0005["AR-0005 - Done"]:::status_done
         AR_0006["AR-0006 - Done"]:::status_done
-        AR_0007["AR-0007 - Open"]:::status_open
+        AR_0007["AR-0007 - In progress"]:::status_in_progress
         AR_0008["AR-0008 - Done"]:::status_done
         AR_0009["AR-0009 - Planned"]:::status_planned
         AR_0010["AR-0010 - Planned"]:::status_planned
@@ -117,11 +117,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (1)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | Git backup verification remains unimplemented; implementation worker declined full slice safely. Next bounded artifact is immutable GitBackupObservation requiring verified session state and git_backup result. | Publish immutable GitBackupObservation type with private provenance factory requiring verified GitRollbackSessionState plus git_backup.verify_backup result; add forged/missing-field tests, then integrate preflight_git. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git backup verification remains unimplemented; implementation worker declined full slice safely. Next bounded artifact is immutable GitBackupObservation requiring verified session state and git_backup result. | Publish immutable GitBackupObservation type with private provenance factory requiring verified GitRollbackSessionState plus git_backup.verify_backup result; add forged/missing-field tests, then integrate preflight_git. |
 
 ### Planned (4)
 
