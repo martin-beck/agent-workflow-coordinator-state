@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | After PR #458 merge and post-merge Verify, implement the production adapter/session slice: bind generated operations to the durable barrier/fencing protocol, atomic Git selector visibility, and executable rollback only after exact formal/refinement evidence. | codex-awc-ar0009-release-integration-20260916 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Implement production SQLite adapter/session/barrier slice: bind generated operations to durable fencing, atomic selector visibility, executable rollback, and exact formal evidence. | codex-awc-ar0009-release-integration-20260916 |
 
 ## Open
 
