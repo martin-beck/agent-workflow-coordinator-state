@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR428 merged as ea730ca; post-merge Verify 35091119727 running | Confirm post-merge fast Verify 35091119727 on ea730ca; then release next bounded AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR428 merged as ea730ca; post-merge Verify 35091119727 passed pr-fast (9 generated/4 distinct/0 queued) | Release next bounded AR-0007 implementation slice from exact main ea730ca; publish only after independent review and checks | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
