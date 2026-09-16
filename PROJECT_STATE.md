@@ -20,13 +20,14 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #469 | `ar0013-selector-publication-adapter@5eb284485922` | `main` | UNKNOWN | - | feat(runtime): verify staged runtime manifest digest |
+| #469 | `ar0013-selector-publication-adapter@5eb284485922` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): verify staged runtime manifest digest |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35162270964 | `93ae87d02bfa` | push | Verify | in_progress:- |
+| 35162364125 | `5eb284485922` | pull_request | Verify | completed:success |
+| 35162270964 | `93ae87d02bfa` | push | Verify | completed:success |
 | 35162176403 | `04a9919e21e1` | pull_request | Verify | completed:success |
 | 35161980814 | `f848ce1bb1d9` | push | Verify | completed:success |
 | 35161902783 | `6473eaf7be8f` | pull_request | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35137735684 | `a52c93ac5138` | push | Verify | completed:success |
 | 35137513131 | `e825ca947007` | pull_request | Verify | completed:success |
 | 35137092018 | `e09e5d7567a2` | push | Verify | completed:success |
-| 35136973833 | `0fecbd268b11` | pull_request | Verify | completed:success |
