@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR389 post-merge Verify green on c4aef3f; next executor effect boundary released | Implement and publish next bounded read-only executor effect boundary from verified main c4aef3f, with final reread, lock cleanup, and hostile failure-path tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR390 baseline binding repair published; hosted checks running, exact review pending | Complete exact-head review and hosted gates for PR390; merge only after PASS and green, then post-merge Verify. |
 
 ### Planned (4)
 
