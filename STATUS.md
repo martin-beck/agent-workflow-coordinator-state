@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Bound Git preflight inspection merged and post-merge fast verification green; broader upgrade contracts remain | Extend the bound Git preflight contract beyond inspection: reconcile the existing SQLite-only preflight protocol with a distinct Git capability or safe generalization, preserve session/lease/root/verifier provenance, and add formal/refinement and failure-path evidence without mutation. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #345 Git capability seam published but valid Git preflight hits missing has_provenance contract | Repair PR #345 provenance contract: ensure GitBackupObservation satisfies backend-neutral has_provenance/auth preflight contract; add real successful Git preflight asserting non-authorization and unchanged state, rerun full gates. |
 
 ### Planned (4)
 
