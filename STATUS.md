@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR443 published from exact 8556c6e; bound authority descriptor unlink rejection; hosted checks running | Independent exact-head review PR443 base 8556c6e, head 254ed2e; await AWQ/scope/smoke before merge |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR443 merged as 7e8b92f; post-merge Verify 35095748855 running | Confirm post-merge fast Verify 35095748855 on 7e8b92f; then release next distinct AR-0007 slice |
 
 ### Planned (4)
 
