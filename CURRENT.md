@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Executor binding needs concrete JournalSnapshot value type first | Add frozen JournalSnapshot around UpgradeEngine validated schema with strict from_mapping/as_mapping and tamper tests; defer cross-component binding. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR384 smoke green; review rejects shallow JournalSnapshot immutability and missing tests | Make JournalSnapshot deeply immutable; add mutation/roundtrip/malformed-input tests; keep durable integration deferred. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
