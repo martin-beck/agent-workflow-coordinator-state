@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Next symlink-substitution hostile test validated; publication briefly blocked by full /srv/data | Commit and publish preserved symlink-substitution test from aac8ada now that generated venv space has been reclaimed; obtain exact-head review and green CI. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR397 published from exact main aac8ada; 115 focused tests green | Obtain independent exact-head review and hosted AWQ/scope/smoke for PR397; merge only after PASS and green, then verify post-merge pr-fast. |
 
 ### Planned (4)
 
