@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR384 smoke green; review rejects shallow JournalSnapshot immutability and missing tests | Make JournalSnapshot deeply immutable; add mutation/roundtrip/malformed-input tests; keep durable integration deferred. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR384 deep immutable JournalSnapshot repair reviewed PASS; hosted AWQ/scope/smoke green | Merge PR384 after final hosted gate confirmation; then implement concrete durable SQLite control-store snapshot binding with hostile tests. |
 
 ### Planned (4)
 
