@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR330 review failed: caller-supplied digests. | Bind typed evidence from real observations. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR330 review failed: typed evidence lacks provenance. | Require provenance-bearing evidence and real adapter observations. |
 
 ### Planned (4)
 
