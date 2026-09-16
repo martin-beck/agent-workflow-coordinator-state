@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Implement descriptor-backed canonical manifest schema and selector/runtime identity binding with hostile replacement/duplicate/forged identity tests; publish only after independent review. | codex-awc-ar0013-runtime-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Repair PR #470 identity-binding gaps, rerun exact-head review and gates. | codex-awc-ar0013-runtime-20260917 |
 
 ## Open
 
