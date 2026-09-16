@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. | codex-awc-ar0009-release-20260916 |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Substantively rework PR #452: adapter-owned trusted mutation scope with common-control-authority lock order and durable barrier admission; fence all real SQLite routes and add held/releasing/ambiguous, rollback, concurrency, and process-failure tests; include sqlite_storage.py in formal scope. | codex-awc-ar0007-next-slice-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Repair PR #452 evidence digest, then substantively integrate adapter-owned trusted mutation scope with common-control-authority lock order and durable barrier admission; cover every SQLite route and held/releasing/ambiguous, rollback, concurrency, process-failure cases; rerun exact pr-fast Verify and independent review. | codex-awc-ar0007-next-slice-20260916 |
 
 ## Planned
 
