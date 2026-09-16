@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR333 and post-merge merge a1fa9b3 are green; next slice is read-only typed authorization preflight. | Implement adapter-owned non-authorizing preflight consuming validated BackupObservation and bound CAS reread; reject stale/replaced/tampered evidence before mutation. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR334 is open but independent review failed: preflight accepts caller-forged BackupObservation and reread pairs; repair requires adapter-owned provenance and real Git/SQLite hostile tests. | Repair PR334 or superseding slice with adapter-owned provenance-bearing BackupObservation and bound adapter/control-store reread; reject forged/foreign evidence before any mutation, then obtain exact-head independent review and green CI. Do not merge PR334 as-is. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
