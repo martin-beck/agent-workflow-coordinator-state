@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR404 merged as be5b46a; post-merge Verify queued | Confirm post-merge fast Verify for be5b46a; then release next bounded AR-0007 slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR404 post-merge Verify pr-fast green on be5b46a | Implement and publish next bounded AR-0007 transaction/effect slice from verified main be5b46a. |
 
 ### Planned (4)
 
