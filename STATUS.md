@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR424 merged as f31859f; post-merge Verify 35089197656 queued | Confirm post-merge fast Verify for f31859f; then release next bounded AR-0007 slice |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR424 merged as f31859f; post-merge Verify 35089197656 passed pr-fast with 9 generated and 4 distinct states | Implement and publish next bounded AR-0007 slice from f31859f; then independently review and merge |
 
 ### Planned (4)
 
