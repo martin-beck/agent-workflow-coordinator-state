@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR441 merged as 54e69dc; post-merge Verify 35095292623 pending | Confirm post-merge fast Verify 35095292623 on 54e69dc; then release next distinct AR-0007 slice |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR442 published from exact 54e69dc; authority parent disappearance rejection; hosted checks running | Independent exact-head review PR442 base 54e69dc, head 5b44896; await AWQ/scope/smoke before merge |
 
 ### Planned (4)
 
