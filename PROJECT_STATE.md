@@ -14,11 +14,13 @@ Generated from local Git and GitHub. Do not edit.
 | #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
+| #328 | `ar0007-authorized-contract@8f3bb64bda1b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): define rollback authorization boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35039543075 | `8f3bb64bda1b` | pull_request | Verify | completed:success |
 | 35039237207 | `6080f3bc9e02` | push | Verify | completed:success |
 | 35039065987 | `fe1f61803672` | pull_request | Verify | completed:success |
 | 35038329224 | `b1c304f3543f` | push | Verify | completed:success |
@@ -30,4 +32,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35036511874 | `05023d77431e` | pull_request | Verify | completed:success |
 | 35036299793 | `d9bc6af60007` | pull_request | Verify | completed:success |
 | 35034620809 | `b097c757a3ba` | workflow_dispatch | Verify | completed:success |
-| 35034400803 | `b097c757a3ba` | push | Verify | completed:success |
