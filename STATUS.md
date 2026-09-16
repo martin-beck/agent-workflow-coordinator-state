@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR428 merged as ea730ca; post-merge Verify 35091119727 passed pr-fast (9 generated/4 distinct/0 queued) | Release next bounded AR-0007 implementation slice from exact main ea730ca; publish only after independent review and checks |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR429 published from exact ea730ca; restore control SHM sidecar rejection; hosted checks pending | Independent exact-head review PR429 base ea730ca, head 5a497c0; await review and hosted checks before merge |
 
 ### Planned (4)
 
