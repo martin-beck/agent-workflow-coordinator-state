@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 exact-head fast gate green at 5cf29d6; rebase required | Rebase PR380 onto current main, rerun exact-head pr-fast, then continue adapter-session integration. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 merged; post-merge pr-fast Verify running; AR integration remains open | After post-merge pr-fast passes, implement adapter-session consumption for real CAS/lock observations and runtime provenance. |
 
 ### Planned (4)
 
