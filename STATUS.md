@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR400 post-merge Verify pr-fast green on b8e043c | Implement and publish next bounded AR-0007 transaction/effect slice from verified main b8e043c. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR401 published from exact main b8e043c; malformed journal-shape fail-closed test | Obtain independent exact-head review and green hosted gates for PR401; merge then verify post-merge pr-fast. |
 
 ### Planned (4)
 
