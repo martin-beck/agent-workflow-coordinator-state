@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR389 read-only executor stability boundary published; hosted smoke queued, review pending | Complete exact-head review and hosted smoke for PR389; merge only when PASS and green, then post-merge Verify and next bounded effect slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR389 merged as c4aef3f; post-merge fast Verify running; next effect boundary queued | Confirm post-merge Verify for c4aef3f; implement next bounded executor operation/effect boundary from verified main, then fresh PR and independent review. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
