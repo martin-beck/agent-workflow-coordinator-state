@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR437 merged as 48a4507; post-merge Verify 35093980419 running | Confirm post-merge fast Verify 35093980419 on 48a4507; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR438 published from exact 48a4507; lstat symlink substitution rejection; hosted checks running | Independent exact-head review PR438 base 48a4507, head ab466ae; await AWQ/scope/smoke before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
