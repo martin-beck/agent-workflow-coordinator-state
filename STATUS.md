@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR398 published from exact main 43e1208; hard-link journal identity rejection | Obtain independent exact-head review and green AWQ/scope/smoke for PR398; merge only after PASS, then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR398 merged as 99a832e; post-merge Verify pr-fast running | Confirm post-merge fast Verify for 99a832e; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
