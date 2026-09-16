@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR371 merged; hosted coverage 95&#37; | Check postmerge Verify, then resume next feature slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR372 merged; post-merge pr-fast Verify 35061190613 passed | Start next highest-priority unblocked artifact-binding slice in AR-0007; obtain independent exact-head review. |
 
 ### Planned (4)
 

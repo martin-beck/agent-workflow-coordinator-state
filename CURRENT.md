@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR371 merged; hosted coverage 95% | Check postmerge Verify, then resume next feature slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR372 merged; post-merge pr-fast Verify 35061190613 passed | Start next highest-priority unblocked artifact-binding slice in AR-0007; obtain independent exact-head review. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
