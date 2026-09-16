@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. | codex-awc-ar0009-release-integration-20260916 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Merged PR #457 and post-merge verified immutable release identity/path verification; remaining AR-0009 work is the isolated Git/SQLite upgrade campaign and generated release-step execution. | Implement the next atomic AR-0009 slice: fresh Git/SQLite upgrade fixture with generated ordered release steps and failure-path rollback/reopen functional-state checks; preserve exact release identity, backup, fencing, and formal evidence. | codex-awc-ar0009-release-integration-20260916 |
 
 ## Open
 
