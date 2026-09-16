@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git backup/restore equivalence and formatting repair merged; post-merge Verify is green on pr-fast | Implement the next verified failure-safe Git restore staging boundary: fault-injected interruption before publication and concurrent destination collision, proving unchanged/absent destination, intact backup, safe retry, and fail-closed ownership; add bounded formal evidence without claiming correspondence. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git restore interruption and concurrent collision safety tests merged; post-merge pr-fast verification is running | After post-merge verification, implement the next bounded AR-0007 lifecycle boundary selected from the plan, retaining fail-closed restore and explicit distinction between implementation evidence and formal correspondence. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
