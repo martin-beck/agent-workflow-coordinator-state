@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. | codex-awc-ar0009-release-20260916 |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Gate PR #452 exact head fb5b4254: obtain hosted pr-fast Verify and independent review; if accepted, continue real SQLite mutation-route/failure/concurrency/barrier-state fencing before merge. | codex-awc-ar0007-next-slice-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Close PR #452 constructor bypass: require non-forgeable adapter-issued admission capability or factory-only bound construction; retain explicit legacy unbound path. Add real SQLite mutation-route, failure/rollback, concurrency, held/releasing/ambiguous, lock-order and formal-correspondence evidence, then rerun pr-fast Verify/review. | codex-awc-ar0007-next-slice-20260916 |
 
 ## Planned
 
