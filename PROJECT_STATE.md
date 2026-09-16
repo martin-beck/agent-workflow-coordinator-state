@@ -17,13 +17,13 @@ Generated from local Git and GitHub. Do not edit.
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
-| #397 | `ar0007-sqlite-journal-symlink-reject@2b8a6486f0de` | `main` | UNSTABLE | QUEUED:, QUEUED: | test: reject journal symlink substitution |
+| #397 | `ar0007-sqlite-journal-symlink-reject@2b8a6486f0de` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: reject journal symlink substitution |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35077261532 | `2b8a6486f0de` | pull_request | Verify | queued:- |
+| 35077261532 | `2b8a6486f0de` | pull_request | Verify | in_progress:- |
 | 35076785453 | `aac8ada35549` | push | Verify | completed:success |
 | 35076727607 | `23abeb4f40ef` | pull_request | Verify | completed:success |
 | 35076238704 | `e9f372bfae4c` | push | Verify | completed:success |
