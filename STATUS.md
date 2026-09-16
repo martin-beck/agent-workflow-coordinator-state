@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR390 merged as c5477ac; post-merge fast Verify running; next executor effect slice queued | Confirm post-merge Verify for c5477ac; implement next bounded executor effect/transaction boundary from verified main with final reread and hostile failure tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR390 post-merge Verify product/formal checks passed; artifact finalization 403, failed job rerun queued | Confirm rerun of post-merge Verify 35074060776 reaches terminal success; then release next executor transaction-boundary slice. |
 
 ### Planned (4)
 
