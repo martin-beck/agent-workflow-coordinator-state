@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR329 merged; postmerge 35040265898 green at 95%. | Begin next safe rollback-boundary slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | x | x | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
