@@ -122,7 +122,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-release-20260916 | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0007-next-slice-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Implement separate adapter/factory integration slice: adapter-owned common-control-authority admission capability, durable barrier verification before SQLite transactions, stable fail-closed held/releasing/ambiguous rejection, and real mutation-route/failure/concurrency tests. PR #452 digest repaired but architecture remains insufficient. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0007-next-slice-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Review PR #452 trusted bind_sqlite_backend factory at exact head d9e3dcf4c0a9d8c3a36e783c18b5d66bebb40151; require hosted pr-fast Verify and independent proof, then continue all-route barrier/failure/concurrency fencing before merge. |
 
 ### Planned (2)
 
