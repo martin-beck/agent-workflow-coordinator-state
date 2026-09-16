@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR414 merged as feadf7c; post-merge Verify 35084829443 running | Confirm post-merge fast Verify for feadf7c; then release next bounded AR-0007 slice |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR414 merged as feadf7c; post-merge Verify 35084829443 passed pr-fast with 9 generated and 4 distinct states | Implement and publish next bounded AR-0007 slice from feadf7c: delete bound control-lock during failed effect and require fail-closed reread, cleanup, and no publication |
 
 ### Planned (4)
 
