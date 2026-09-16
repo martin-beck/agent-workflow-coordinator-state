@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR440 published from exact afca669; authority descriptor mode drift rejection; hosted checks running | Independent exact-head review PR440 base afca669, head 889ef79; await AWQ/scope/smoke before merge |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR440 merged as 779bfed; post-merge Verify 35095031202 pending | Confirm post-merge fast Verify 35095031202 on 779bfed; then release next distinct AR-0007 slice |
 
 ### Planned (4)
 
