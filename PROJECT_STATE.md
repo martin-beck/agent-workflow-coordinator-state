@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
+| #468 | `ar0013-selector-publication-adapter@04a9919e21e1` | `main` | UNKNOWN | - | feat(runtime): require authenticity verifier at bootstrap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35161980814 | `f848ce1bb1d9` | push | Verify | in_progress:- |
+| 35161980814 | `f848ce1bb1d9` | push | Verify | completed:success |
 | 35161902783 | `6473eaf7be8f` | pull_request | Verify | completed:success |
 | 35161809174 | `94d3d93486af` | pull_request | Verify | completed:success |
 | 35138545839 | `ecd9b58d40d4` | push | Verify | completed:success |
