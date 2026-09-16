@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR407 post-merge Verify pr-fast green on 854cd86 | Implement and publish next bounded mutated-journal failure/effect slice from verified main 854cd86. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR408 published from exact main 854cd86; mutated journal failure/effect fence | Obtain independent exact-head review and green hosted gates for PR408; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
