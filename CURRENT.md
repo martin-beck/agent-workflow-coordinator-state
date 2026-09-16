@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR378 integrated SQLite lifecycle slice; exact-head Verify 35063867299 active | Complete exact-head Verify and independent review for PR378; merge only with 95% coverage and successful pr-fast TLC, then continue lifecycle/fault gaps. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR378 merged; exact-head Verify 35063867299 passed 95% and pr-fast TLC | Verify post-merge run 35064055475; then continue integrated Git/SQLite failure-injection and executable phase-machine evidence. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
