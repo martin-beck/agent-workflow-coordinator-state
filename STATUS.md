@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR411 merged as 8f3990f; post-merge Verify queued | Confirm post-merge fast Verify for 8f3990f; then release next bounded AR-0007 slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR411 post-merge Verify pr-fast green on 8f3990f | Implement and publish next bound control-store replacement failure/effect slice from verified main 8f3990f. |
 
 ### Planned (4)
 
