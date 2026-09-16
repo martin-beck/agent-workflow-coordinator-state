@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR330 review failed: backup/barrier digest conflation. | Add distinct backup digest validation and tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR330 review failed: descriptor-only backup digest. | Bind immutable backup evidence; add tamper tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 

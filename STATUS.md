@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR330 review failed: backup/barrier digest conflation. | Add distinct backup digest validation and tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR330 review failed: descriptor-only backup digest. | Bind immutable backup evidence; add tamper tests. |
 
 ### Planned (4)
 
