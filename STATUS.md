@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR399 published from exact main 99a832e; journal parent identity rejection | Obtain independent exact-head review and green hosted gates for PR399; merge then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR399 merged as c7e760f; post-merge Verify queued | Confirm post-merge fast Verify for c7e760f; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
