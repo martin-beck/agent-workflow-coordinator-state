@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 now has opaque instance-bound SQLiteRollbackObservationCapability at 28a24db; hosted gates pending smoke and independent exact-head review. | Complete hosted smoke and exact-head independent review of 28a24db; if PASS, merge PR334 and verify post-merge pr-fast. Keep Git capability follow-up and rollback authorization disabled. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 capability is opaque and adapter-identity bound, but independent review fails for missing positive initialized SQLite and context/session hostile tests. | Add initialized SQLiteControlStoreAdapter positive capability/preflight test plus foreign adapter, context, session, stale CAS and no-mutation assertions; exact-head independent PASS and green CI required before merge. |
 
 ### Planned (4)
 
