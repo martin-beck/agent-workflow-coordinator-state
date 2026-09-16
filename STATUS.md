@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-runtime-20260917 | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Design and implement the stable bootstrap, authenticated versioned runtime store, selector publication, and validation-to-exec binding only after AR-0007 and AR-0008 provide accepted executable contracts. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-runtime-20260917 | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Review and integrate PR #468 exact-head authenticity-verifier fail-closed slice; keep runtime execution and upgrade/rollback mutation disabled. |
 
 ### Open (2)
 
