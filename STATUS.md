@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR337 coverage-test update is blocked by hosted mypy fixture error at tests/test_upgrade_engine.py:203 (None assigned to str); coverage not reached. | Fix test fixture typing without production weakening, run full mypy and coverage &gt;=95, then obtain exact-head independent review and hosted Verify green before merge. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR337 merged as 5c00f73; post-merge Verify 35048662713 is green with 537 tests, 95&#37; branch coverage, and pr-fast TLC. AR-0007 advances to Git-side bound observation integration. | Implement constructor/session-bound Git rollback observation capability analogous to SQLite, with real Git positive path and hostile foreign-session/identity/artifact tests; preserve diagnostic-only authorization and no mutation. Obtain independent exact-head review and hosted gates. |
 
 ### Planned (4)
 
