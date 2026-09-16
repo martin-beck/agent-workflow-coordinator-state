@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR379 cross-backend lifecycle test; exact-head Verify 35064434311 queued | Complete exact-head Verify and merge PR379; then continue formal correspondence and lifecycle fault-boundary coverage. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR379 merged; exact-head Verify 35064434311 passed 95&#37; and pr-fast TLC | Verify post-merge run 35064605481; then continue lifecycle fault-boundary and formal correspondence coverage. |
 
 ### Planned (4)
 
