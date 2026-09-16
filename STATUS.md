@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Finish Ruff import-order fix, rerun full Ruff/mypy and 32-test durability suite, then fresh coverage/formal gates; signed push and independent exact-head review only after all pass. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Close malformed barrier_session bypass: validate typed row identity digest, revision, attempt/fence, schema and status before admission; add forged released-row hostile test with no SQL mutation. Preserve SIGKILL/ambiguity tests, rerun full gates, then signed push and exact-head review. |
 
 ### Open (1)
 
