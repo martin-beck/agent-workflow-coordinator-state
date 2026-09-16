@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #449 | `ar0012-barrier-fence-contract@692c60b41ddc` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: emit bound lifecycle scope events |
+| #449 | `ar0012-barrier-fence-contract@78ba8ba5d46b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: emit bound lifecycle scope events |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35099429237 | `78ba8ba5d46b` | pull_request | Verify | completed:success |
 | 35099224063 | `692c60b41ddc` | pull_request | Verify | completed:success |
 | 35099054597 | `c141b0871087` | pull_request | Verify | completed:success |
 | 35098271646 | `0bd445dc26cb` | push | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35097197445 | `8c49fca47cfc` | pull_request | Verify | completed:failure |
 | 35096212760 | `d521ad0f7199` | push | Verify | completed:success |
 | 35096104046 | `b6ac7a2a37b9` | pull_request | Verify | completed:success |
-| 35096006791 | `1c125d719ab6` | push | Verify | completed:success |
