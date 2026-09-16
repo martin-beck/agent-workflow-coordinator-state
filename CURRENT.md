@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR333 merged as a1fa9b3; exact post-merge fast Verify is running. | Verify exact merge-head run a1fa9b3; then select next AR-0007 authorization/integration seam. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR333 and post-merge merge a1fa9b3 are green; next slice is read-only typed authorization preflight. | Implement adapter-owned non-authorizing preflight consuming validated BackupObservation and bound CAS reread; reject stale/replaced/tampered evidence before mutation. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
