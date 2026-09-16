@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #466 | `ar0012-reconcile-crash-formal@131374a7661d` | `main` | UNKNOWN | - | test(formal): classify process-death outcome recovery |
+| #466 | `ar0012-reconcile-crash-formal@131374a7661d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(formal): classify process-death outcome recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35138295641 | `131374a7661d` | pull_request | Verify | completed:success |
 | 35137735684 | `a52c93ac5138` | push | Verify | completed:success |
 | 35137513131 | `e825ca947007` | pull_request | Verify | completed:success |
 | 35137092018 | `e09e5d7567a2` | push | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35135728964 | `0d9928651304` | pull_request | Verify | completed:success |
 | 35135526894 | `c94f35717b34` | pull_request | Verify | completed:success |
 | 35135074758 | `8807cb16c9cc` | push | Verify | completed:success |
-| 35134935505 | `743ba218d702` | pull_request | Verify | completed:success |
