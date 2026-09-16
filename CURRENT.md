@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR429 published from exact ea730ca; restore control SHM sidecar rejection; hosted checks pending | Independent exact-head review PR429 base ea730ca, head 5a497c0; await review and hosted checks before merge | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR430 corrected publication from exact ea730ca; PR429 stale dirty superseded; hosted awq/scope in progress | Independent exact-head review PR430 base ea730ca, head a2fd939, tree 6f843b6; await hosted checks before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
