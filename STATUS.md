@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR372 merged; post-merge pr-fast Verify 35061190613 passed | Start next highest-priority unblocked artifact-binding slice in AR-0007; obtain independent exact-head review. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR374 merged; post-merge pr-fast Verify 35061834357 in progress | After Verify, implement manifest.json filesystem-identity binding; then address E2E rollback/formal correspondence gaps. |
 
 ### Planned (4)
 
