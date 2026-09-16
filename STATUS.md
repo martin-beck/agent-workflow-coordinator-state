@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR338 merged as c21068b; post-merge Verify 35049397738 green with 539 tests, 95&#37; coverage, and pr-fast TLC. AR-0007 advances to Git backup-artifact binding. | Implement GitRollbackObservationCapability composing bound snapshot_bound_reread with real git_backup verification and immutable artifact/manifest evidence; add branch/head/lease/session drift, replacement/tamper, foreign capability, lock cleanup and no-mutation tests. Obtain independent exact-head review and hosted gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git session reread PR338 merged; next capability must use a Git-specific observation type because BackupObservation control_store fields cannot represent Git identity. | Implement immutable GitBackupObservation and GitRollbackObservationCapability/preflight_git bound to exact adapter/scope/lease/recheck/branch/head; compose real git_backup verification and hostile tamper/foreign tests. Preserve SQLite path and no mutation. |
 
 ### Planned (4)
 
