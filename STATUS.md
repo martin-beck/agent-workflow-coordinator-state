@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 hash exact, but Verify 35044971180 failed 94&#37; coverage after 531 passing tests. | Add meaningful branch tests for coverage, rerun PR333 gates, independent review, then merge hash plus repair. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 coverage repair targets identified: rollback evidence errors and SQLite stat/revision failure branches. | Add meaningful tests for rollback_evidence lines 37,72-74 and control_store lines 362-367; rerun coverage and publish signed repair PR. |
 
 ### Planned (4)
 
