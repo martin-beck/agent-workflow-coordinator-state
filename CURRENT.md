@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR433 merged as 233fdc6; post-merge Verify 35092922130 passed pr-fast | Release next distinct AR-0007 slice from exact main 233fdc6; publish, independently review, and gate | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR434 published from exact 233fdc6; valid authority SHM removal race; hosted checks in progress | Independent exact-head review PR434 base 233fdc6, head a0cc1d4; await AWQ/scope/smoke before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
