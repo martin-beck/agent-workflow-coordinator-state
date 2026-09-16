@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR444 merged as 1c125d7; post-merge Verify 35096006791 queued | Confirm post-merge fast Verify 35096006791 on 1c125d7; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR445 published from exact 1c125d7; reject same-target authority-parent symlinks; hosted checks running | Independent exact-head review PR445 base 1c125d7, head b6ac7a2; await AWQ/scope/smoke before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
