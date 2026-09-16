@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Published bounded SQLite authority DB/WAL/SHM identity-fencing slice as PR #454 at signed exact head fea575668c01175148d7cafd5669029997b81cdd; local focused, full 95.02% coverage, static, evidence, and pr-fast gates pass; full AR remains in progress. | Require independent exact-head review and hosted pr-fast success for PR #454 before merge; then post-merge Verify. Remaining AR-0012 work includes uncovered process-death and lifecycle ambiguity boundaries plus implementation-to-formal refinement; do not claim full completion. | codex-awc-ar0012-wal-faults-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged and post-merge-verified bounded SQLite authority DB/WAL/SHM identity fencing in PR #454 at merge 5381378c33b7bc65098b8dbd138e65ce0d8e64cb; prior typed barrier/concurrency slice also merged; full AR remains in progress. | Continue next atomic lifecycle/formal slice from verified main 5381378c33b7bc65098b8dbd138e65ce0d8e64cb: process death at remaining durability boundaries, durable ambiguous-state recovery/admission behavior, and implementation-to-formal correspondence. Preserve fail-closed behavior and do not claim full AR completion. | codex-awc-ar0012-wal-faults-20260916 |
 
 ## Open
 
