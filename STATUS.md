@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR334 merged as cec53dc, but post-merge Verify 35047295016 failed at mypy before TLC due new adapter Any return and stale negative-test fixture types. | Publish signed typing/test repair PR, obtain hosted AWQ/scope/fast Verify green at exact head, then continue AR-0007 Git/provider and rollback execution work. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR335 typing repair merged as 0418a6e and mypy is fixed, but post-merge pr-fast 35047476795 failed formal evidence hash for tools/rollback_control_store.py before TLC. | Refresh formal/tier-evidence.json through the generator/contract process for the committed rollback_control_store.py change, publish signed repair PR, pass exact-head independent review and hosted AWQ/scope/pr-fast, then continue AR-0007. |
 
 ### Planned (4)
 
