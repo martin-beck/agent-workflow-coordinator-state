@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR395 merged as e9f372b; post-merge fast Verify running; next transaction boundary queued | Confirm post-merge Verify for e9f372b; implement next bounded read-only transaction/effect slice from verified main with hostile failure tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR395 post-merge Verify green on e9f372b; next transaction/effect slice released | Implement and publish next bounded read-only transaction/effect slice from verified main e9f372b with final reread, lock cleanup, and hostile failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
