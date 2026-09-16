@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR382 merged; direct phase wiring unsafe; executor contract slice next | Add adapter-backed phase executor contract exposing bound backup/restore plus session evidence; test failure, journal preservation, and lock reacquisition. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Executor contract requires concrete SQLite implementation; generic protocol would be forgeable | Implement concrete adapter-owned SQLite executor object with durable lock/journal integration and injected failure tests; defer Git/phase dispatch. |
 
 ### Planned (4)
 
