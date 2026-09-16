@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR381 smoke green but review rejected ownership and final-reread gaps | Repair Git session seam: enforce adapter ownership, final pre-publication reread, mandatory/bounded session contract, and hostile replacement tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR381 wrapper review found invalid restore session context | Correct restore wrapper identity context; add valid/foreign/replacement/final-reread tests and rerun hosted gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
