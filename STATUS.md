@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR385 typed durable SQLite control-store snapshot published; hosted smoke pending and independent review pending | Complete exact-head review and hosted smoke for PR385; merge only after both pass, then bind snapshot to concrete executor. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR385 merged as 1e5797f; post-merge fast Verify running; next executor binding slice queued | Confirm post-merge Verify for 1e5797f; implement concrete executor binding to typed control/journal snapshots with real failure-path tests. |
 
 ### Planned (4)
 
