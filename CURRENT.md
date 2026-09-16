@@ -8,12 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Implement next bounded production SQLite lifecycle slice toward executable session/barrier transaction and atomic selector publication; preserve fail-closed rollback/apply with hostile tests and evidence. | codex-awc-ar0009-release-integration-20260916 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Continue next atomic process-death durability/formal-correspondence slice from verified main 64a172df3e8dccc6c3cc3b53713bdae6f1204e35; preserve exact history, identity, newer-fence, and write-closed ambiguity invariants; do not claim full AR completion. | - |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Continue next atomic process-death durability/formal-correspondence slice from verified main 64a172df3e8dccc6c3cc3b53713bdae6f1204e35; preserve exact history, identity, newer-fence, and write-closed ambiguity invariants; do not claim full AR completion. | codex-awc-ar0012-process-death-20260916 |
 
 ## Planned
 
