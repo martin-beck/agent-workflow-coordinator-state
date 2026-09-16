@@ -3,11 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## Open
+## In Progress
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR355 merged; Verify running | Select next slice after Verify. | - |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR355 merged; Verify running | Select next slice after Verify. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
