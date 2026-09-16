@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Run full static/coverage/formal gates on subprocess durability slice; refresh exact evidence digest, sign/push PR, and obtain independent review/hosted pr-fast. Preserve full-AR nonclaims until formal implementation correspondence is complete. | codex-awc-ar0012-fixture-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Finish Ruff import-order fix, rerun full Ruff/mypy and 32-test durability suite, then fresh coverage/formal gates; signed push and independent exact-head review only after all pass. | codex-awc-ar0012-fixture-20260916 |
 
 ## Open
 
