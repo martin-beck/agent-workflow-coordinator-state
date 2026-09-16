@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR386 post-merge Verify green on 816491d; executor-binding implementation in progress | Publish concrete executor binding from current main with typed adapter-owned lock/journal snapshots and hostile failure-path tests; then exact-head review and hosted gates. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR387 concrete SQLite lifecycle snapshot seam published; hosted smoke green, review pending | Complete independent exact-head review of PR387; merge only after PASS and hosted green, then proceed to executor operation binding. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
