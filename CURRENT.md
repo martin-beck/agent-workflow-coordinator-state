@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #326 merged; post-merge 35038329224 green pr-fast. | Implement next reviewed non-authorizing rollback boundary; preserve failure safety. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #327 merged; post-merge 35039237207 green pr-fast. | Advance next reviewed non-authorizing rollback boundary; preserve failure safety. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
