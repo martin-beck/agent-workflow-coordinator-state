@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR399 post-merge Verify pr-fast green on c7e760f | Implement and publish next bounded AR-0007 transaction/effect slice from verified main c7e760f. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR400 published from exact main c7e760f; parent identity drift test | Obtain exact-head review and green hosted gates for PR400; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
