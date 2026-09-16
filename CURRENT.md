@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR334 capability is opaque and adapter-identity bound, but independent review fails for missing positive initialized SQLite and context/session hostile tests. | Add initialized SQLiteControlStoreAdapter positive capability/preflight test plus foreign adapter, context, session, stale CAS and no-mutation assertions; exact-head independent PASS and green CI required before merge. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR334 now includes real initialized SQLite bound-preflight coverage at 212e175; hosted gates pending smoke and independent exact-head review. | Complete hosted smoke and exact-head independent review of 212e175; if PASS, merge PR334 and run post-merge pr-fast. Keep Git follow-up and rollback authorization disabled. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
