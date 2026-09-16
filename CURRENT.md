@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 review still fails: positive CAS test only; hostile identity and boundary coverage missing. | Add stale/replaced CAS, inode/WAL/SHM, atomic binding and read-only failure tests; retain explicit non-authorizing boundary. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds stale CAS and inode replacement rejection; atomic/read-only and manifest coverage review pending. | Review exact a96e680; add atomic identity, sidecar, read-only and real manifest verification where required. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
