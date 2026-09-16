@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR366 merged; postmerge Verify queued | Check postmerge pr-fast Verify, then select next boundary slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR367 held: wrong restore boundary | Amend PR367 for restore destination absence TOCTOU. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 

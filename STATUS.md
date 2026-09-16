@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR366 merged; postmerge Verify queued | Check postmerge pr-fast Verify, then select next boundary slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR367 held: wrong restore boundary | Amend PR367 for restore destination absence TOCTOU. |
 
 ### Planned (4)
 
