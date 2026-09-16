@@ -122,7 +122,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-release-20260916 | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Implement initialized production-compatible authority schema/factory and real four-route lifecycle tests; use them to cover sqlite_storage and strict factory branches, then rerun hosted pr-fast. Do not merge until route/failure/concurrency/formal evidence and independent review are complete. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Fix bound-route ordering defect: avoid re-entering non-reentrant control-store lock during scope.hold while preserving common→control→authority ordering; add valid mutate and replacement rejection tests, then run gates and push signed head. |
 
 ### Planned (2)
 
