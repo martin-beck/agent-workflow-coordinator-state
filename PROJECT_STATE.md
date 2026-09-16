@@ -17,12 +17,13 @@ Generated from local Git and GitHub. Do not edit.
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
-| #382 | `ar0007-sqlite-thread-session@718edb39129d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: thread SQLite backup lifecycle sessions |
+| #382 | `ar0007-sqlite-thread-session@1cc299966e98` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: thread SQLite backup lifecycle sessions |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35069242342 | `1cc299966e98` | pull_request | Verify | completed:success |
 | 35069023574 | `718edb39129d` | pull_request | Verify | completed:success |
 | 35068719670 | `49ec28c53797` | pull_request | Verify | completed:success |
 | 35068563726 | `700b3d92cec1` | push | Verify | completed:success |
@@ -34,4 +35,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35067351951 | `03db9e479c7a` | push | Verify | completed:success |
 | 35067132381 | `aabc7de2f8ba` | pull_request | Verify | completed:success |
 | 35066939710 | `5cf29d6c5a1b` | workflow_dispatch | Verify | completed:success |
-| 35066479420 | `523c193d78d8` | workflow_dispatch | Verify | completed:failure |
