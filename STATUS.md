@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Repair PR333 refreshes rollback_control_store formal hash; exact Verify pending, independent hash review passes. | Merge PR333 after hosted Verify succeeds; verify exact post-merge run, then select next AR seam. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR333 hash exact, but Verify 35044971180 failed 94&#37; coverage after 531 passing tests. | Add meaningful branch tests for coverage, rerun PR333 gates, independent review, then merge hash plus repair. |
 
 ### Planned (4)
 
