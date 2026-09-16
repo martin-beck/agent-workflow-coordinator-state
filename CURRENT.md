@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR393 journal-disappearance failure test published; hosted smoke in progress, review pending | Complete exact-head review and smoke for PR393; merge only after PASS and green, then post-merge Verify. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR393 merged as 94c6d30; post-merge fast Verify running; next executor slice queued | Confirm post-merge Verify for 94c6d30; implement next bounded read-only transaction/effect slice from verified main with hostile failure tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
