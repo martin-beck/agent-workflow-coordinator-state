@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git restore interruption and concurrent collision safety tests merged; post-merge pr-fast verification is running | After post-merge verification, implement the next bounded AR-0007 lifecycle boundary selected from the plan, retaining fail-closed restore and explicit distinction between implementation evidence and formal correspondence. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git restore interruption and concurrent collision safety tests merged; post-merge pr-fast verification passed | Implement the next bounded AR-0007 lifecycle boundary selected from the plan, retaining fail-closed restore and explicit distinction between implementation evidence and formal correspondence. |
 
 ### Planned (4)
 
