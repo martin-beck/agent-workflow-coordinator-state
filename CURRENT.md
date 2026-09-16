@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR386 merged as 816491d; post-merge fast Verify running; executor slice resumes after green | Confirm post-merge Verify for 816491d; resume concrete executor binding from current main with real lock/journal failure-path tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR386 post-merge Verify green on 816491d; executor-binding implementation in progress | Publish concrete executor binding from current main with typed adapter-owned lock/journal snapshots and hostile failure-path tests; then exact-head review and hosted gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 

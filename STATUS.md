@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR386 merged as 816491d; post-merge fast Verify running; executor slice resumes after green | Confirm post-merge Verify for 816491d; resume concrete executor binding from current main with real lock/journal failure-path tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR386 post-merge Verify green on 816491d; executor-binding implementation in progress | Publish concrete executor binding from current main with typed adapter-owned lock/journal snapshots and hostile failure-path tests; then exact-head review and hosted gates. |
 
 ### Planned (4)
 
