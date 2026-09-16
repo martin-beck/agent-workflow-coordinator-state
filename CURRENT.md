@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR387 final-reread commit force-pushed to closed PR; fresh PR required | Create fresh PR from current main cfcd28d carrying final-reread change 24ff612; obtain exact-head review and hosted gates before merge. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR388 fresh final-reread repair published from cfcd28d; hosted smoke queued, review pending | Complete independent exact-head review and hosted smoke for PR388; merge only when both pass, then post-merge Verify and next executor operation slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
