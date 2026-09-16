@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR406 published from exact main bb3f8da; next journal identity failure slice | Obtain independent exact-head review and green hosted gates for PR406; merge then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR406 merged as 101eaa1; post-merge Verify queued | Confirm post-merge fast Verify for 101eaa1; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
