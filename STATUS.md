@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 merged; post-merge pr-fast passed; next helper refactor for session integration | Extract backup/restore pre-publication checks into helpers, then thread adapter-owned sessions for real CAS/lock observations. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR381 smoke green but review rejected ownership and final-reread gaps | Repair Git session seam: enforce adapter ownership, final pre-publication reread, mandatory/bounded session contract, and hostile replacement tests. |
 
 ### Planned (4)
 
