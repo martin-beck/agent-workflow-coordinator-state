@@ -122,7 +122,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-release-20260916 | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Add final bounded SQLite negative-path tests for remaining foreign bind, mount/version, inactive transaction, translated load error, and FK integrity branches; rerun full coverage to &gt;=95&#37;, then static/formal gates, signed commit/push, and independent exact-head review. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Await hosted AWQ/scope/Verify pr-fast for exact head 611fd7458df4a7215970e6aeb895f72240e0b4b6; complete independent exact-head review. If all required checks and route evidence pass, merge and perform post-merge verification; otherwise repair exact failure. |
 
 ### Planned (2)
 
