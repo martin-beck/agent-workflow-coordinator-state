@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #462 | `ar0009-release-integration@c94f35717b34` | `main` | UNKNOWN | - | feat(upgrade): hold SQLite selector visibility scope |
+| #462 | `ar0009-release-integration@c94f35717b34` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(upgrade): hold SQLite selector visibility scope |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35135526894 | `c94f35717b34` | pull_request | Verify | completed:success |
 | 35135074758 | `8807cb16c9cc` | push | Verify | completed:success |
 | 35134935505 | `743ba218d702` | pull_request | Verify | completed:success |
 | 35134540609 | `2311d226f5b4` | push | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35128507415 | `2f53b81ec15a` | push | Verify | completed:success |
 | 35128392137 | `a796941ac470` | pull_request | Verify | completed:success |
 | 35126317389 | `64a172df3e8d` | push | Verify | completed:success |
-| 35126045636 | `dfdfac8ee8bb` | pull_request | Verify | completed:success |
