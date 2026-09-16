@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR335 typing repair merged as 0418a6e and mypy is fixed, but post-merge pr-fast 35047476795 failed formal evidence hash for tools/rollback_control_store.py before TLC. | Refresh formal/tier-evidence.json through the generator/contract process for the committed rollback_control_store.py change, publish signed repair PR, pass exact-head independent review and hosted AWQ/scope/pr-fast, then continue AR-0007. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR336 hash repair is correct but Verify 35047696702 fails unchanged coverage gate: 535 tests pass, total branch coverage 94% below required 95%; TLC not reached. | Add targeted tests to restore genuine >=95% branch coverage without threshold/exclusion changes, publish signed repair PR, obtain exact-head independent review and hosted AWQ/scope/pr-fast green. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
