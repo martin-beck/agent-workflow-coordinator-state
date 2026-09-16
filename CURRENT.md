@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds stale CAS and inode replacement rejection; atomic/read-only and manifest coverage review pending. | Review exact a96e680; add atomic identity, sidecar, read-only and real manifest verification where required. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 review still fails: CAS/inode tests pass, but atomic binding, sidecars, read-only failures and real manifests remain. | Add observation-after-replacement, sidecar and lock-release tests; bind reread/stat atomically; use real Git/SQLite backup verification or record dependent seam. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
