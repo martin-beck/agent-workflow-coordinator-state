@@ -17,13 +17,13 @@ Generated from local Git and GitHub. Do not edit.
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
-| #377 | `ar0007-fresh-clone-lifecycle@ec1654a8c0a8` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | test: prove fresh clone rollback lifecycle |
+| #377 | `ar0007-fresh-clone-lifecycle@ec1654a8c0a8` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: prove fresh clone rollback lifecycle |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35062798477 | `ec1654a8c0a8` | pull_request | Verify | in_progress:- |
+| 35062798477 | `ec1654a8c0a8` | pull_request | Verify | completed:success |
 | 35062662899 | `a04aac991271` | push | Verify | completed:failure |
 | 35062588683 | `cde0db16cc4c` | pull_request | Verify | completed:success |
 | 35062489983 | `576f4b460bed` | pull_request | Verify | completed:success |
