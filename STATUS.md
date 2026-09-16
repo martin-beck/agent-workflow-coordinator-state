@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR411 published from exact main be0d17e; deleted journal effect failure test | Obtain independent exact-head review and green hosted gates for PR411; merge then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR411 merged as 8f3990f; post-merge Verify queued | Confirm post-merge fast Verify for 8f3990f; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
