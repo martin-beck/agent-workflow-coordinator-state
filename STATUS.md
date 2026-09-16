@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR406 post-merge Verify pr-fast green on 101eaa1 | Implement and publish next bounded AR-0007 executor failure/effect slice from verified main 101eaa1. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR407 published from exact main 101eaa1; locked before/after executor reread failure tests | Obtain independent exact-head review and green hosted gates for PR407; merge then verify post-merge pr-fast. |
 
 ### Planned (4)
 
