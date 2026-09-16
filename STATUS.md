@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR376 merged but post-merge Verify failed 94&#37; coverage | Repair coverage with genuine tests for PR376 branches; rerun full coverage and hosted Verify before any next slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR377 review PASS; held pending coverage repair for main 94&#37; gate | Publish coverage-repair PR with real Git equivalence/error-path tests; require exact-head hosted Verify &gt;=95 before merge. |
 
 ### Planned (4)
 
