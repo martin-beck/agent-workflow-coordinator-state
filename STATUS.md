@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR378 merged; exact-head Verify 35063867299 passed 95&#37; and pr-fast TLC | Verify post-merge run 35064055475; then continue integrated Git/SQLite failure-injection and executable phase-machine evidence. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR378 merged; post-merge pr-fast Verify 35064055475 passed | Implement integrated cross-backend Git+SQLite lifecycle correspondence and failure-injection slice with durable lock/reconciliation evidence. |
 
 ### Planned (4)
 
