@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR387 review still FAIL: public executor constructor bypasses bind identity checks | Enforce adapter/session/control identity in SQLiteLifecycleExecutor constructor or make injection private; add direct-constructor hostile test, rerun review and hosted gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR387 constructor identity repair published; hosted gates running, review pending | Complete exact-head review and hosted checks for PR387 head 3e84a4a; merge only after PASS, then post-merge Verify and next executor operation slice. |
 
 ### Planned (4)
 
