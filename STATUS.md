@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR #345 Git capability seam published but valid Git preflight hits missing has_provenance contract | Repair PR #345 provenance contract: ensure GitBackupObservation satisfies backend-neutral has_provenance/auth preflight contract; add real successful Git preflight asserting non-authorization and unchanged state, rerun full gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git preflight capability seam merged and post-merge verified; next work is remaining backup/restore lifecycle correctness | Advance beyond Git observation preflight: implement actual verified backup/restore and rollback authorization lifecycle only after concrete crash/concurrency and formal contracts are covered; preserve fail-closed no-mutation behavior on all failures. |
 
 ### Planned (4)
 
