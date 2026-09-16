@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR376 merged; post-merge pr-fast Verify 35062662899 active | Record post-merge Verify success, then address integrated lifecycle/fresh-clone rollback and formal correspondence gaps. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR376 merged but post-merge Verify failed 94% coverage | Repair coverage with genuine tests for PR376 branches; rerun full coverage and hosted Verify before any next slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
