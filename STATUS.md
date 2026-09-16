@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR402 published from exact main 59a2c53; missing initial journal failure test | Obtain independent exact-head review and green hosted gates for PR402; merge then verify post-merge pr-fast. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR402 merged as 1f199ac; post-merge Verify queued | Confirm post-merge fast Verify for 1f199ac; then release next bounded AR-0007 slice. |
 
 ### Planned (4)
 
