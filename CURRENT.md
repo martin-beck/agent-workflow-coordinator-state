@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Coverage gates green; preflight integration requires a protocol seam because preflight is currently SQLite-only | First add a distinct instance-bound Git rollback observation capability or safely generalize the preflight protocol (currently SQLite-only), preserving concrete adapter identity; then chain snapshot_bound_reread, artifact binding, verifier, and non-mutating tests. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #344 preflight integration published but independent review found canonical manifest/root substitution risk | Repair PR #344 canonical Git backup binding: require manifest to be the regular file at bound backup root/manifest.json and reject foreign valid root/manifest mismatch; add two-backup tamper/mismatch test, rerun full gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
