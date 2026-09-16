@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR440 merged as 779bfed; post-merge Verify 35095031202 pending | Confirm post-merge fast Verify 35095031202 on 779bfed; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR441 published from exact 779bfed; foreign authority-parent symlink replacement; hosted checks running | Independent exact-head review PR441 base 779bfed, head 3d78829; await AWQ/scope/smoke before merge | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
