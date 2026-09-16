@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Close malformed barrier_session bypass: validate typed row identity digest, revision, attempt/fence, schema and status before admission; add forged released-row hostile test with no SQL mutation. Preserve SIGKILL/ambiguity tests, rerun full gates, then signed push and exact-head review. | codex-awc-ar0012-fixture-20260916 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Durably fence upgrade admission and every SQLite authority mutation under one project barrier. | Implement typed barrier_session row decoder/reuse in MutationFence, reject malformed identity/digest/revision/children before status admission, add forged released-row test asserting unchanged task/body/events. Rerun all focused/static/formal/full gates, then signed push and independent review. | codex-awc-ar0012-fixture-20260916 |
 
 ## Open
 
