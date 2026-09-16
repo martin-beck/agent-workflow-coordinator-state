@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR397 published from exact main aac8ada; 115 focused tests green | Obtain independent exact-head review and hosted AWQ/scope/smoke for PR397; merge only after PASS and green, then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR397 merged as 43e1208; post-merge Verify queued | Confirm post-merge fast Verify for 43e1208; then release next bounded AR-0007 slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
