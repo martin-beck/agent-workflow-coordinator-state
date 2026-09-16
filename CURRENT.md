@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR388 merged as 94388bf; post-merge fast Verify running; next executor effect boundary queued | Confirm post-merge Verify for 94388bf; implement next bounded executor effect boundary only after final reread/lock evidence, then fresh PR and independent review. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR388 post-merge Verify green on 94388bf; next executor effect boundary released | Implement and publish next read-only executor effect boundary from verified main 94388bf, with final reread, lock cleanup, and hostile failure-path tests. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
