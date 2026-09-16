@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 comprehensive amendment rejected: synthetic traces and unbound invariants | Capture real lifecycle traces, evaluate invariant semantics over runtime state, bind provenance to committed formal attestation, and rerun hosted checks. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR380 runtime correspondence still synthetic; review failed | Instrument real lifecycle state/lock observations and bind runtime provenance to committed attestation; rerun hosted checks and independent review. |
 
 ### Planned (4)
 
