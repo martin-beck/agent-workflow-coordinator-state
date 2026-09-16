@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR391 merged as 8e8a462; post-merge fast Verify running; next executor effect boundary queued | Confirm post-merge Verify for 8e8a462; implement next bounded read-only executor effect/transaction slice from verified main with hostile failure tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR391 post-merge Verify green on 8e8a462; next executor transaction slice released | Implement and publish next bounded read-only executor transaction/effect slice from verified main 8e8a462 with final reread, lock cleanup, and hostile failure tests. |
 
 ### Planned (4)
 
