@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR339 adds Git-specific artifact-root binding prerequisite at 00ba993; hosted gates pending and independent review required. | Review and verify PR339 path confinement beneath bound artifact_root with no SQLite semantic reuse; then implement GitBackupObservation/preflight_git using bound session reread plus real git_backup verification. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR339 merged as c0ef7dd; post-merge Verify 35049903986 green with 540 tests, 95% coverage, and pr-fast TLC. Next is Git backup verification. | Implement GitBackupObservation/preflight_git using bound session reread and GitRollbackArtifactBinding; invoke real git_backup.verify_backup, bind immutable artifact/manifest digests, add hostile tamper/replacement/foreign tests, then independent review and hosted gates. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
