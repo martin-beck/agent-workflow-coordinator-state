@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | SQLite parent identity race hardening merged; post-merge pr-fast Verify running | After Verify, select next bounded AR-0007 lifecycle slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR354 merged; Verify running | Select next slice after Verify. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 

@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | SQLite parent identity race hardening merged; post-merge pr-fast Verify running | After Verify, select next bounded AR-0007 lifecycle slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR354 merged; Verify running | Select next slice after Verify. |
 
 ### Planned (4)
 
