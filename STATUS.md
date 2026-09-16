@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR427 merged as 4ffa2c8; post-merge Verify 35090457010 passed pr-fast (9 generated/4 distinct/0 queued) | Release next bounded AR-0007 implementation slice from exact main 4ffa2c8; publish only after independent review and applicable checks |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR428 published from exact 4ffa2c8; hostile foreign control-store WAL sidecar rejection; hosted awq/scope in progress | Independent exact-head review PR428 (base 4ffa2c8, head 3b557f9, tree 4c46842); await review and hosted checks before merge |
 
 ### Planned (4)
 
