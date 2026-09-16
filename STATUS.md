@@ -122,7 +122,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-runtime-20260917 | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. |
-| P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | codex-awc-ar0010-runbooks-20260917 | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Complete extra-file rejection repair, rerun local/hosted gates, obtain exact-head independent approval, then merge. |
+| P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | codex-awc-ar0010-runbooks-20260917 | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Wait hosted Verify 35164150243 terminal success, then merge PR #473 via state audit. |
 
 ### Open (2)
 
