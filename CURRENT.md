@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Git session reread PR338 merged; next capability must use a Git-specific observation type because BackupObservation control_store fields cannot represent Git identity. | Implement immutable GitBackupObservation and GitRollbackObservationCapability/preflight_git bound to exact adapter/scope/lease/recheck/branch/head; compose real git_backup verification and hostile tamper/foreign tests. Preserve SQLite path and no mutation. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR339 adds Git-specific artifact-root binding prerequisite at 00ba993; hosted gates pending and independent review required. | Review and verify PR339 path confinement beneath bound artifact_root with no SQLite semantic reuse; then implement GitBackupObservation/preflight_git using bound session reread plus real git_backup verification. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
