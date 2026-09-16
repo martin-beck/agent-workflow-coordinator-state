@@ -17,11 +17,13 @@ Generated from local Git and GitHub. Do not edit.
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
+| #384 | `ar0007-journal-snapshot-contract@56034d17289c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat: add immutable journal snapshot contract |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35070542869 | `56034d17289c` | pull_request | Verify | completed:success |
 | 35070246639 | `c26362d4608d` | push | Verify | completed:success |
 | 35070149248 | `61e64ae71000` | pull_request | Verify | completed:success |
 | 35069717685 | `63791da74368` | push | Verify | completed:success |
@@ -33,4 +35,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35068473369 | `4107cbf1aa4a` | pull_request | Verify | completed:success |
 | 35068323183 | `796696505be3` | pull_request | Verify | completed:success |
 | 35068147281 | `77e61db09bb9` | pull_request | Verify | completed:success |
-| 35067881919 | `6a7fc1050a34` | pull_request | Verify | completed:success |
