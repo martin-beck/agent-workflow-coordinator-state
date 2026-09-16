@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**20 ARs tracked** across 4 active status categories.
+**20 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 1 |
+| **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 16 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -37,7 +37,7 @@ flowchart LR
         AR_0007["AR-0007 - Done"]:::status_done
         AR_0008["AR-0008 - Done"]:::status_done
         AR_0009["AR-0009 - Open"]:::status_open
-        AR_0010["AR-0010 - Planned"]:::status_planned
+        AR_0010["AR-0010 - Open"]:::status_open
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Open"]:::status_open
         AR_0013["AR-0013 - In progress"]:::status_in_progress
@@ -123,17 +123,12 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-runtime-20260917 | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Repair PR #470 identity-binding gaps, rerun exact-head review and gates. |
 
-### Open (2)
+### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Implement next bounded production SQLite lifecycle slice toward executable session/barrier transaction and atomic selector publication; preserve fail-closed rollback/apply with hostile tests and evidence. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Implement next bounded AR-0012 process-death/durability correspondence slice only when represented by the model; preserve exact history, newer-fence, and write-closed ambiguity invariants. |
-
-### Planned (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Generate release-specific operator and agent upgrade/rollback runbooks and privacy-test them. |
 
 ### Done (16)
