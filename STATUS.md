@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR436 merged as 250af40; post-merge Verify 35093712759 running | Confirm post-merge fast Verify 35093712759 on 250af40; then release next distinct AR-0007 slice |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR437 published from exact 250af40; authority parent mode/ownership recheck; hosted checks running | Independent exact-head review PR437 base 250af40, head cf47c03; await AWQ/scope/smoke before merge |
 
 ### Planned (4)
 
