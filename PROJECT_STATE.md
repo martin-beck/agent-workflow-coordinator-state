@@ -20,13 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #454 | `ar0012-wal-fault-recovery@fea575668c01` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix: fence SQLite WAL sidecar identities |
+| #454 | `ar0012-wal-fault-recovery@fea575668c01` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence SQLite WAL sidecar identities |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35120180038 | `fea575668c01` | pull_request | Verify | in_progress:- |
+| 35120180038 | `fea575668c01` | pull_request | Verify | completed:success |
 | 35117157636 | `14a9f7d76cf0` | push | Verify | completed:success |
 | 35116851414 | `09bb43840fdf` | pull_request | Verify | completed:success |
 | 35116632473 | `5c8ea6bddd0b` | pull_request | Verify | completed:success |
