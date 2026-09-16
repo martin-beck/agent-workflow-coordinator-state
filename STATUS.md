@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR364 merged; postmerge Verify queued | Check postmerge pr-fast Verify, then select next Git lifecycle slice. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR364 merged; postmerge pr-fast green | Continue with next Git lifecycle boundary slice. |
 
 ### Planned (4)
 
