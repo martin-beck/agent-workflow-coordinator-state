@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR387 merged as cfcd28d; post-merge fast Verify running; next executor operation slice queued | Confirm post-merge Verify for cfcd28d; implement bounded executor operation binding with final durable rereads and hostile failure-path tests. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR387 final-reread commit force-pushed to closed PR; fresh PR required | Create fresh PR from current main cfcd28d carrying final-reread change 24ff612; obtain exact-head review and hosted gates before merge. |
 
 ### Planned (4)
 
