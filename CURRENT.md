@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR409 post-merge Verify pr-fast green on 5622953 | Implement and publish next bounded deleted-control-session failure/effect slice from verified main 5622953. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR410 published from exact main 5622953; deleted control-session effect failure test | Obtain independent exact-head review and green hosted gates for PR410; merge then verify post-merge pr-fast. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
