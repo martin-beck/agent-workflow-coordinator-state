@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 CAS/sidecar failure paths pass, but backup manifest authenticity and atomic identity binding remain unproven. | Use real Git/SQLite backup verification fixtures; prove atomic reread plus descriptor/sidecar binding; preserve explicit non-authorizing seam. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR331 adds backend verifiers, but tests do not exercise real artifacts; atomic binding and auth boundary remain incomplete. | Add real Git/SQLite fixture calls through adapter APIs and prove observation-sidecar race/atomic binding; retain non-authorizing boundary. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
