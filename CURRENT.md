@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR379 merged; post-merge pr-fast Verify 35064605481 passed 95% and TLC | Implement bounded formal correspondence slice mapping tested Git/SQLite lifecycle outcomes to TLA actions/states with trace validation. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR380 review failed: correspondence is documentation-only | Repair PR380 with executable trace/action/phase/invariant mapping and exact model/config provenance; obtain independent PASS and hosted Verify. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
