@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**20 ARs tracked** across 4 active status categories.
+**20 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -39,7 +39,7 @@ flowchart LR
         AR_0009["AR-0009 - Open"]:::status_open
         AR_0010["AR-0010 - Planned"]:::status_planned
         AR_0011["AR-0011 - Done"]:::status_done
-        AR_0012["AR-0012 - In progress"]:::status_in_progress
+        AR_0012["AR-0012 - Open"]:::status_open
         AR_0013["AR-0013 - Planned"]:::status_planned
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
@@ -117,17 +117,12 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fixture-20260916 | Merged and post-merge-verified a bounded typed v10 barrier admission plus independent-process SQLite concurrency/SIGKILL slice in PR #453; full AR remains in progress. | Continue WAL/SHM fault injection, uncovered process-death and lifecycle ambiguity boundaries, and implementation-to-formal refinement on current main 14a9f7d76cf072898de35185c2a5b76f4997f0fe; preserve fail-closed admission and do not claim full AR completion. |
-
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Publish and exercise generated upgrade paths for every release without sacrificing recoverability. | Resume isolated Git/SQLite upgrade campaign after AR-0012 provides executable barrier/fencing and mutation lifecycle; preserve fresh-state evidence. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Merged and post-merge-verified a bounded typed v10 barrier admission plus independent-process SQLite concurrency/SIGKILL slice in PR #453; full AR remains in progress. | Continue WAL/SHM fault injection, uncovered process-death and lifecycle ambiguity boundaries, and implementation-to-formal refinement on current main 14a9f7d76cf072898de35185c2a5b76f4997f0fe; preserve fail-closed admission and do not claim full AR completion. |
 
 ### Planned (2)
 
