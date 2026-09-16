@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | SQLite manifest path guard merged; Verify running | Select next bounded AR-0007 slice after Verify. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | SQLite path safety merged; post-merge pr-fast Verify passed | Implement next bounded SQLite parent-identity replacement race slice. |
 
 ### Planned (4)
 
