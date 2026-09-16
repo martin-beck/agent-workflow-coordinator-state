@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git backup/restore equivalence merged; formatting repair merged; post-merge bounded verification is running | Implement the next verified failure-safe Git restore staging boundary: fault-injected interruption before publication and concurrent destination collision, proving unchanged/absent destination, intact backup, safe retry, and fail-closed ownership; add bounded formal evidence without claiming correspondence. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | Git backup/restore equivalence and formatting repair merged; post-merge Verify is green on pr-fast | Implement the next verified failure-safe Git restore staging boundary: fault-injected interruption before publication and concurrent destination collision, proving unchanged/absent destination, intact backup, safe retry, and fail-closed ownership; add bounded formal evidence without claiming correspondence. |
 
 ### Planned (4)
 
