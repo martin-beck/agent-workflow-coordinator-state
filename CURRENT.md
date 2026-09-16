@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Fix PR #469 manifest validation-to-read race with descriptor-bound hashing and hostile replacement test; rerun exact-head review and gates. | codex-awc-ar0013-runtime-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Repair PR #469 short-read handling with bounded read-until-EOF and hostile test, then re-run exact-head review. | codex-awc-ar0013-runtime-20260917 |
 
 ## Open
 
