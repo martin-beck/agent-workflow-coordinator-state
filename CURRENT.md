@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #340 GitBackupObservation merged; coverage repair PR #342 pending hosted gates | Review and merge PR #342 only after exact-head review and >=95% post-merge coverage; then integrate preflight_git with real verified Git backup, tamper/foreign-session rejection, and no mutation path. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR #342 merged but post-merge coverage remains below 95%; follow-up repair active | Add meaningful tests sufficient to raise total branch coverage from 94% (6220 statements, 2234 branches) to required 95%; publish and verify follow-up before integrating preflight_git. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
