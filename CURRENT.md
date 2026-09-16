@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR364 merged; postmerge pr-fast green | Continue with next Git lifecycle boundary slice. | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR365 merged; postmerge Verify queued | Check postmerge pr-fast Verify, then select next Git lifecycle slice. | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
