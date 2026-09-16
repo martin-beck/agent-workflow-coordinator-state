@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR381 smoke green; review rejects public session issuance and missing wrapper hostile tests | Make LifecycleSession issuance adapter-private/capability-protected; add foreign/replacement/final-reread wrapper tests and rerun hosted gates. |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | codex-awc-ar0007-next-20260916 | PR381 smoke green; review rejects convention-only issuance and missing final rereads/hostile tests | Capability-protect session issuance, enforce final restore reread before clone, add hostile wrapper tests and legacy non-authority contract. |
 
 ### Planned (4)
 
