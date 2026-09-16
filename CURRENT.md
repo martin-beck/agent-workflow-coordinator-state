@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR434 merged as 5c1f97a; post-merge Verify 35093226853 queued | Confirm post-merge fast Verify 35093226853 on 5c1f97a; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
+| P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | PR435 merged as f79b52b; post-merge Verify 35093466341 queued | Confirm post-merge fast Verify 35093466341 on f79b52b; then release next distinct AR-0007 slice | codex-awc-ar0007-next-20260916 |
 
 ## Planned
 
