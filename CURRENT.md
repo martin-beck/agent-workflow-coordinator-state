@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next16 formal seam implemented locally: terminal contract requires explicit CompleteReopen releasing branch with hostile missing-branch coverage; signed commit d8c1f59. | Run full discovery/formal evidence for local next16 commit d8c1f59, binding CompleteReopen/sessionStatus=releasing model branch; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next16-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next16 CompleteReopen model-branch binding published as PR #534; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #534 published at exact head 9e8b25fc; exact-head fast Verify 35200651786 dispatched, scope green and AWQ in progress. Await terminal success and independent review. Mutation remains disabled. | codex-awc-ar0012-next16-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #533 descriptor-bound ResolvedRuntime handle published at f899f91; full 776 tests and 95% branch coverage pass. | Obtain independent exact-head review of PR #533, dispatch hosted exact-head Verify, and address findings before merge. | codex-awc-ar0013-bootstrap-20260917 |
 
 ## Open
