@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #503 merged as 60d111f5; combined post-merge Verify 35180641280 passed on main f39b673e after PR504. Next slice is digest manifest verification, local focused gate passed, signed head 65cbd3d pending publication. | Publish the digest-manifest verification slice after full suite; obtain independent exact-head review and Verify before merge. Keep upgrade mutation disabled. | codex-awc-ar0009-next2-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #503 merged as 60d111f5; combined post-merge Verify 35180641280 passed on main f39b673e after PR504. Next slice PR #505 at 65cbd3d verifies the generated SHA-256 evidence manifest with sha256sum --check --strict before upload; full local suite 756 passed. | Obtain independent exact-head review for PR #505 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. | codex-awc-ar0009-next2-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. | codex-awc-ar0012-next10-20260917 |
 
 ## Open
