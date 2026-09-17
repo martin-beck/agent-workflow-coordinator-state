@@ -24,13 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #625 | `ar0022-formal-repair@68128fd57117` | `main` | UNSTABLE | QUEUED:, QUEUED: | fix(formal): admit reachable oracle gate lifecycle |
+| #625 | `ar0022-formal-repair@68128fd57117` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix(formal): admit reachable oracle gate lifecycle |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35251075067 | `68128fd57117` | pull_request | Verify | queued:- |
+| 35251075067 | `68128fd57117` | pull_request | Verify | in_progress:- |
 | 35249581336 | `9fb4b51cc97b` | push | Verify | completed:success |
 | 35249086623 | `b9d8bf1dffef` | workflow_dispatch | Verify | completed:success |
 | 35249070472 | `b9d8bf1dffef` | pull_request | Verify | completed:success |
