@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #540 merged 368a3ccf; exact Verify 35203688204 and authoritative post-merge Verify 35204076599 succeeded on 503074bf. Descriptor3 follow-up PR #542 is published at 9c398ac. | Obtain independent exact-head review of PR #542, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor4-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #542 merged 43b8c7d1; exact Verify 35204602729 and authoritative post-merge Verify 35204995362 succeeded on 9059876c. | Implement descriptor4 continuity boundary: ensure admission cleanup and retained-handle lifecycle remain fail-closed across explicit close/reuse paths; add hostile lifecycle tests before publication. | codex-awc-ar0013-next-descriptor4-20260917 |
 
 ## Open
 
