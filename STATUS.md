@@ -148,7 +148,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918 | PR #632 merged as 2e9662c; exact Verify 35280046300 and post-merge Verify 35280170156 succeeded. Queue audit found no other non-terminal dependency-safe AR; open PRs belong to completed/stale records. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918 | PR #632 merged as 2e9662c; exact Verify 35280046300 and post-merge Verify 35280170156 succeeded. Fresh detached exact-main local release workflow contract tests passed 4/4. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. |
 
 ### Done (28)
 
