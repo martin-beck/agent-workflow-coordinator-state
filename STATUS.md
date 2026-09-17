@@ -149,7 +149,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next52-20260917 | Next52 PR #612 published at signed head 334c57d on repaired main: UpgradeRecovery validator requires FunctionalAvailability theorem admission marker with hostile missing-theorem coverage. Focused 36 tests and Ruff pass; mutation disabled. | Await PR #612 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then verify authoritative postmerge before releasing next52. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor37-20260917 | Descriptor36 PR #609 merged e8d06c9; exact Verify 35240588427 succeeded on 7f81c97; authoritative current-main Verify 35241888312 succeeded on b142359. Descriptor37 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor37-20260917 | Descriptor36 PR #609 merged e8d06c9; exact Verify 35240588427 and authoritative current-main Verify 35241888312 succeeded on b142359. Descriptor37 PR #613 published at signed head 1d282163; focused Ruff/mypy and 52 runtime-bootstrap tests pass; hosted checks pending. | Obtain independent exact-head review and terminal pr-fast Verify for PR #613; merge only when green, then authoritative postmerge Verify and reconcile descriptor37. |
 
 ### Open (1)
 
