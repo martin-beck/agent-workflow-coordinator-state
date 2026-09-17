@@ -22,12 +22,13 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@56677042f523` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #528 | `ar0012-terminal-outcome@5c39b0aaf40a` | `main` | DIRTY | - | feat(formal): validate terminal lifecycle outcomes |
+| #528 | `ar0012-terminal-outcome@1dd63ee5c117` | `main` | CLEAN | - | feat(formal): validate terminal lifecycle outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35196610058 | `1dd63ee5c117` | pull_request | Verify | queued:- |
 | 35196158352 | `5c39b0aaf40a` | workflow_dispatch | Verify | completed:success |
 | 35195751739 | `56677042f523` | workflow_dispatch | Verify | completed:failure |
 | 35195733094 | `56677042f523` | pull_request | Verify | completed:success |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35194103670 | `d27d81e8af15` | workflow_dispatch | Verify | completed:failure |
 | 35194089738 | `d27d81e8af15` | pull_request | Verify | completed:failure |
 | 35193938843 | `6e61fed8188a` | push | Verify | completed:success |
-| 35193664092 | `2a7e16449a25` | workflow_dispatch | Verify | completed:success |
