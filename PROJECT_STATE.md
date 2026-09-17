@@ -25,14 +25,16 @@ Generated from local Git and GitHub. Do not edit.
 | #615 | `ar0012-backup-theorem@497ea6de7837` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require backup theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #622 | `ar0024-ar0023-stacked@299900e37f3f` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | chore: stack AR-0023 quality and AR-0024 compatibility repairs |
+| #622 | `ar0024-ar0023-stacked@81f0b99c4f82` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | chore: stack AR-0023 quality and AR-0024 compatibility repairs |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35247611032 | `299900e37f3f` | workflow_dispatch | Verify | queued:- |
-| 35247608228 | `299900e37f3f` | pull_request | Verify | in_progress:- |
+| 35247781004 | `81f0b99c4f82` | workflow_dispatch | Verify | pending:- |
+| 35247671339 | `81f0b99c4f82` | pull_request | Verify | completed:success |
+| 35247611032 | `299900e37f3f` | workflow_dispatch | Verify | in_progress:- |
+| 35247608228 | `299900e37f3f` | pull_request | Verify | completed:success |
 | 35247328284 | `ccdda64314d6` | workflow_dispatch | Verify | completed:failure |
 | 35247323590 | `ccdda64314d6` | pull_request | Verify | completed:success |
 | 35246765923 | `bd14fffd5c77` | push | Verify | completed:failure |
@@ -41,5 +43,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35246312387 | `1e8068a5edc6` | pull_request | Verify | completed:success |
 | 35246091856 | `161de1094237` | workflow_dispatch | Verify | completed:failure |
 | 35246028981 | `161de1094237` | pull_request | Verify | completed:success |
-| 35245944574 | `f29b28738d55` | push | Verify | completed:failure |
-| 35245866912 | `55b1758cd41f` | pull_request | Verify | completed:success |
