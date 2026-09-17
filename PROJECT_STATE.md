@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `c086a1b6df6b3870462a2aa9eb68e6594b62a104`
+- Product remote main: `d0d6b70243531f7b723cf5a05fdc426d979e7c0d`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -22,12 +22,15 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #599 | `ar0022-oracle-gates@18b7581bf7fc` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
+| #607 | `ar0013-dispatch-revalidation@57eac4015834` | `main` | UNKNOWN | - | fix(runtime): preserve authority errors during cleanup |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35238375247 | `c086a1b6df6b` | push | Verify | in_progress:- |
+| 35239199280 | `d0d6b7024353` | push | Verify | queued:- |
+| 35238856692 | `8b4a84af5ba6` | pull_request | Verify | completed:success |
+| 35238375247 | `c086a1b6df6b` | push | Verify | completed:success |
 | 35237922171 | `e68468ac6d67` | push | Verify | completed:success |
 | 35237856002 | `a576511401b4` | pull_request | Verify | completed:success |
 | 35237779742 | `18b7581bf7fc` | pull_request | Verify | completed:failure |
@@ -37,5 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35236962495 | `845e59d8ce25` | pull_request | Verify | completed:failure |
 | 35236766627 | `885ecbbdf9e4` | pull_request | Verify | completed:failure |
 | 35236576604 | `76258be6f60c` | pull_request | Verify | completed:success |
-| 35236521249 | `f392c44a308e` | push | Verify | completed:success |
-| 35236002874 | `013beb7713c9` | pull_request | Verify | completed:success |
