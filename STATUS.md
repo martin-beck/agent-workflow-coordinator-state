@@ -148,7 +148,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next47-20260917 | Next47 PR #601 published at signed head 55286a6; validator requires THEOREM Spec =&gt; &#91;&#93;ChildIdentityStable. Focused 49-test and full 737-test 95&#37; gates pass. | Monitor PR #601 AWQ/scope and exact-head pr-fast Verify; independently review, guarded merge on green, then authoritative postmerge Verify and reconcile. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next47-20260917 | Next47 PR #601 signed head 55286a6 merged as 0c6208dd; exact Verify 35234577972 succeeded. Authoritative postmerge Verify 35235059072 is queued. | Monitor authoritative postmerge 35235059072 on 0c6208dd to terminal success; then release next47, claim next48, and implement next bounded seam. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor32-20260917 | Descriptor31 PR #597 merged 9dc3d38; exact Verify 35232928828 succeeded on 501ec86; authoritative latest-main Verify 35233743767 succeeded on 9e6fb8ea. Descriptor32 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
 
 ### Open (1)
