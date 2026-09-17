@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next35-20260917 | PR #573 merged b7e5f92; authoritative postmerge Verify 35220535460 succeeded. Next35 implementation signed a0c2cc4 is locally complete with focused 49-test and full 737-test 95&#37; gates. | Release completed next34, then claim next35 and publish signed a0c2cc4 as PR with exact hosted Verify. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next35-20260917 | Next35 rebased signed commit 93ccfd8 adds fail-closed terminalTarget = NoTarget entry invariant; focused 49-test and full 737-test 95&#37; local gates pass. | Publish signed 93ccfd8 as PR; dispatch exact-head pr-fast Verify, obtain independent review, then guarded merge/postmerge and reconcile. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor19-20260917 | Descriptor18 PR #572 merged ed2769d7; exact Verify 35220061241 succeeded. Latest-main postmerge Verify 35220535460 succeeded on b7e5f92 after PR573 merge; descriptor19 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. |
 
 ### Open (1)
