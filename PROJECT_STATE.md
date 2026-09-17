@@ -21,15 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #599 | `ar0022-oracle-gates@3e570cc3b679` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
-| #603 | `ar0012-single-session-theorem@76258be6f60c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | test(formal): require single active session theorem |
+| #599 | `ar0022-oracle-gates@885ecbbdf9e4` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
+| #603 | `ar0012-single-session-theorem@76258be6f60c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): require single active session theorem |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35236576604 | `76258be6f60c` | pull_request | Verify | queued:- |
-| 35236521249 | `f392c44a308e` | push | Verify | in_progress:- |
+| 35236766627 | `885ecbbdf9e4` | pull_request | Verify | queued:- |
+| 35236576604 | `76258be6f60c` | pull_request | Verify | in_progress:- |
+| 35236521249 | `f392c44a308e` | push | Verify | completed:success |
 | 35236002874 | `013beb7713c9` | pull_request | Verify | completed:success |
 | 35235749319 | `3e570cc3b679` | pull_request | Verify | completed:failure |
 | 35235059072 | `0c6208dd3439` | push | Verify | completed:success |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35234542099 | `c4f4143875df` | pull_request | Verify | completed:failure |
 | 35234480805 | `5ab8ac2eabdb` | pull_request | Verify | completed:success |
 | 35234222268 | `7fe507c0264f` | pull_request | Verify | completed:failure |
-| 35233829266 | `1f413a479b1b` | pull_request | Verify | completed:failure |
