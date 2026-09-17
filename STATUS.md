@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #500 merged as 6656f2c3; post-merge Verify 35178153231 passed all AWQ/scope/verify gates. Release evidence now binds exact source SHA and artifact digests; upgrade mutation remains disabled. | Release this completed checkpoint, reclaim AR-0009, and select the next dependency-safe release-integration failure boundary; preserve fail-closed behavior and do not enable upgrade mutation without complete evidence. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #500 merged as 6656f2c3; post-merge Verify 35178153231 passed. Next bounded slice PR #501 at 19d57a0 adds fail-closed validation that GITHUB_SHA is a lowercase 40-hex source identity before release evidence publication. | Obtain independent exact-head review for PR #501 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next8-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. |
 
 ### Open (1)
