@@ -21,11 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
+| #550 | `ar0013-dispatch-revalidation@d4e8fb72c63e` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | feat(runtime): bind admission to expected identity |
+| #551 | `ar0012-terminal-verifier-definition@321c6e3b501e` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind terminal verifier definition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35208887215 | `321c6e3b501e` | pull_request | Verify | queued:- |
+| 35208880911 | `d4e8fb72c63e` | pull_request | Verify | queued:- |
 | 35208461126 | `13bfb85a70b6` | push | Verify | completed:success |
 | 35208298069 | `93953dad8022` | pull_request | Verify | completed:success |
 | 35207880552 | `6a9c1fb12a60` | push | Verify | completed:failure |
@@ -36,5 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35206491485 | `4443891085db` | workflow_dispatch | Verify | completed:success |
 | 35206475116 | `f2379bc98c0a` | pull_request | Verify | completed:success |
 | 35206364659 | `4443891085db` | pull_request | Verify | completed:success |
-| 35205981301 | `df655a6c83d2` | push | Verify | completed:success |
-| 35205758180 | `1b51f963713f` | push | Verify | completed:cancelled |
