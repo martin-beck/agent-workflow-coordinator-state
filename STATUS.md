@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next18-20260917 | Next18 formal seam implemented locally: terminal contract now requires NoUnheldRollbackGap invariant; signed commit 754382e, focused gates green. | Run full discovery/formal evidence for local next18 commit 754382e, binding NoUnheldRollbackGap invariant; publish only after green gates. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next18-20260917 | Next18 NoUnheldRollbackGap invariant binding published as PR #539; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #539 published at exact head 7a4deea; await AWQ, exact-head fast Verify, and independent review before merge. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor-20260917 | PR #536 merged c812eea7; exact Verify 35201959344 and replacement post-merge Verify 35202420105 succeeded on d78be041. Next descriptor-continuity slice is PR #538 at 6641913. | Obtain independent exact-head review of PR #538, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
 
 ### Open (1)
