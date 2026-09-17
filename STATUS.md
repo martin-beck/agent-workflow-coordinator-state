@@ -125,7 +125,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next17-20260917 | Next17 FreshRuntimeRead model-branch binding published as PR #537; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #537 published at exact head de524997; await AWQ, exact-head fast Verify, and independent review before merge. Mutation remains disabled. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-continuity-20260917 | PR #535 merged at 58b6243e; exact Verify 35200960921 and post-merge Verify 35201229361 succeeded. Next slice implemented locally as PR #536 combined retained descriptor and manifest revalidation gate at bbabd1c. | Run independent exact-head review of PR #536, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-continuity-20260917 | PR #536 merged as c812eea7; exact Verify 35201959344 succeeded at bbabd1c. Post-merge fast Verify is required and pending. | Monitor authoritative post-merge Verify for merge c812eea7; after terminal success reconcile evidence, release AR-0013, and claim the next dependency-safe descriptor continuity boundary. |
 
 ### Open (1)
 
