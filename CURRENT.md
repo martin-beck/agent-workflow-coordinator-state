@@ -8,12 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #501 merged as 52695e39; post-merge Verify 35179905028 passed. PR #503 at 1ac902f adds fail-closed validation that the uploaded SHA-256 evidence manifest has exactly three canonical artifact entries; full local suite 755 passed. | Obtain independent exact-head review for PR #503 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. | codex-awc-ar0009-next2-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. | codex-awc-ar0012-next9-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. | - |
 
 ## Done
