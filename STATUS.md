@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #514 merged as d5287f9; combined post-merge Verify 35186101330 passed after PR515 merge a094f5cd. Next slice pins LC_ALL=C for deterministic artifact-set ordering and digest manifest generation; signed head 811c402 pending publication. | Publish locale-determinism slice after full local suite; obtain independent exact-head review and Verify. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #514 merged as d5287f9 and PR #515 merged as a094f5cd; combined post-merge Verify 35186101330 passed. PR #516 at 811c402 pins LC_ALL=C for deterministic artifact ordering and SHA-256 manifest generation; full local suite 762 passed. | Obtain independent exact-head review for PR #516 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next11-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. |
 
 ### Open (1)
