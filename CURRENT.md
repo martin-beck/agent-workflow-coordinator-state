@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #512 merged as a2062c06; post-merge Verify 35184757153 passed. Next bounded slice validates source-commit evidence is exactly one non-empty line matching GITHUB_SHA before upload; upgrade mutation remains disabled. | Implement and publish source-commit attestation validation with focused tests; obtain independent exact-head review and Verify. | codex-awc-ar0009-next3-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #512 merged as a2062c06 and PR #513 merged as e9e6ca3b; post-merge Verify 35185264155 passed. Next bounded slice validates source-commit evidence is exactly one non-empty line matching GITHUB_SHA before upload; signed head be79dfd pending publication. | Publish source-commit attestation validation after confirming full local suite; obtain independent exact-head review and Verify. | codex-awc-ar0009-next3-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
