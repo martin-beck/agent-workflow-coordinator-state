@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -39,7 +39,7 @@ flowchart LR
         AR_0009["AR-0009 - In progress"]:::status_in_progress
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
-        AR_0012["AR-0012 - In progress"]:::status_in_progress
+        AR_0012["AR-0012 - Open"]:::status_open
         AR_0013["AR-0013 - Open"]:::status_open
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
@@ -117,17 +117,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | PR #484 published at exact head eb31577a; obtain independent review and green hosted Verify, then merge and post-merge verify. |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next-20260917b | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Replace PR #480 in-process fsync mock with a real child-process termination boundary after selector rename/before directory fsync; fresh-process verify exact old/new reconciliation and no residue, then republish/review. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Replace PR #480 in-process fsync mock with a real child-process termination boundary after selector rename/before directory fsync; fresh-process verify exact old/new reconciliation and no residue, then republish/review. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. |
 
 ### Done (17)
