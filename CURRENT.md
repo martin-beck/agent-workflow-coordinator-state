@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #525 exact head 1b4fdfe remains pending formal Verify due GitHub secondary throttling. Audited local signed a7e006e atop #525: bounds transition JSON input to 1 MiB with hostile oversized-file test; publication-ready but intentionally unpublished. | Wait for observable exact-head formal Verify for PR #525. After it is observable, publish the prepared a7e006e slice (rebased atop current main if needed), request independent review, and dispatch Verify. | codex-awc-ar0009-next4-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #525 exact head 1b4fdfe remains pending exact formal Verify; GitHub workflow dispatch continues secondary-limit 403. Local prepared a7e006e remains unpublished and fully validated. | Retry #525 exact-head formal Verify only after sensible cooldown; until observable, retain a7e006e unpublished and do not merge. | codex-awc-ar0009-next4-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
