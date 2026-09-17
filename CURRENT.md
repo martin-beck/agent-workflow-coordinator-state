@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #547 merged as 5edadd60 after independent APPROVE and exact Verify 35206475116 success; post-merge Verify 35206712332 is in progress. | Monitor post-merge Verify 35206712332 on merge head 5edadd60 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next22-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #546 merged 6fe412b4; exact Verify 35206491485 and authoritative post-merge Verify 35206855459 succeeded. | Implement descriptor6 retained-admission lifecycle boundary with hostile failure-path coverage; preserve fail-closed behavior and keep execution/selector mutation disabled. | codex-awc-ar0013-next-descriptor6-20260917 |
 
 ## Open
@@ -15,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #547 merged as 5edadd60 after independent APPROVE and exact Verify 35206475116 success; post-merge Verify 35206712332 is in progress. | Monitor post-merge Verify 35206712332 on merge head 5edadd60 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | - |
 
 ## Done
 
