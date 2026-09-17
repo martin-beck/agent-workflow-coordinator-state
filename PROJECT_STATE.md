@@ -30,7 +30,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35245608353 | `1c5849f7adcd` | push | Verify | in_progress:- |
+| 35245608353 | `1c5849f7adcd` | push | Verify | completed:failure |
 | 35245536398 | `d3ac461e07f0` | pull_request | Verify | completed:success |
 | 35245367899 | `cc87a9d22d67` | workflow_dispatch | Verify | completed:failure |
 | 35244986378 | `12562290b3e7` | workflow_dispatch | Verify | completed:failure |
