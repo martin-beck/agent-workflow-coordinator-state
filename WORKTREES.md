@@ -225,8 +225,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-session-replacement` | `ar0007-session-replacement` | `c9817f585502` | 0 | behind 760, ahead 0 |
 | `agent-workflow-coordinator-tlc-resource-bound` | `feature/tlc-resource-bound-reliability` | `e3ad0edb2318` | 0 | behind 441, ahead 0 |
 | `agent-workflow-coordinator-typed-admission-interfaces` | `feature/typed-admission-interfaces` | `6f627248586d` | 0 | behind 931, ahead 0 |
-| `agent-workflow-coordinator-upgrade-barrier` | `ar0012-lifecycle-identity` | `78f6c65fd5ac` | 2 | behind 9, ahead 0 |
-| changed files | - | - | - | `tests/test_lock_domain_scope.py`, `tools/lifecycle_trace.py` |
+| `agent-workflow-coordinator-upgrade-barrier` | `ar0012-lifecycle-identity` | `2658ff4902e8` | 0 | behind 9, ahead 1 |
 | `agent-workflow-coordinator-upgrade-engine` | `feature/upgrade-engine` | `abde59c89178` | 0 | behind 963, ahead 1 |
 | `agent-workflow-coordinator-upgrade-git-backup` | `feature/upgrade-git-backup` | `2fc058d5b60a` | 0 | behind 1092, ahead 0 |
 | `agent-workflow-coordinator-upgrade-quiescence` | `feature/upgrade-quiescence` | `22d72310cdd7` | 0 | behind 1125, ahead 0 |
@@ -362,7 +361,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0008-evidence-IjeiV7` | `DETACHED` | `acc064aa7cdf` | 0 | behind 495, ahead 1 |
 | `awc-ar0008-final-QrHRCw` | `ar0008-formal-evidence-integrity` | `9e14a040295d` | 0 | behind 492, ahead 0 |
 | `awc-ar0008-formal-BvUuj4` | `ar0008-reject-rollback-admission` | `267efd9eb9ef` | 0 | behind 442, ahead 1 |
-| `awc-ar0009-evidence.mpu1s5` | `ar0009-poll-deadline-test-repair` | `db72211a5e0a` | 0 | behind 0, ahead 1 |
+| `awc-ar0009-evidence.mpu1s5` | `DETACHED` | `0d8201630ebd` | 0 | behind 0, ahead 2 |
 | `awc-ar0009-freshclone.xFEtzm` | `DETACHED` | `d01e8cfa6ecc` | 0 | behind 43, ahead 0 |
 | `awc-ar0009-next` | `ar0009-next-recovery` | `1b571690de95` | 0 | behind 51, ahead 0 |
 | `awc-ar0009-publication` | `ar0009-publication-recovery` | `c73176a2cffb` | 0 | behind 71, ahead 0 |
