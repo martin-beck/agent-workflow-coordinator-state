@@ -7,14 +7,14 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next35 PR #575 signed head 93ccfd8 merged as 0b91f065; exact Verify 35221451125 succeeded. Authoritative latest-main postmerge Verify 35222021976 succeeded on ff8f6493. | Release completed next35, then claim next36 and implement next bounded fail-closed durability seam. | codex-awc-ar0012-next36-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor19 PR #574 merged 2892f832; exact Verify 35220934406 and authoritative post-merge Verify 35221194853 succeeded through formal tier and attestation. Descriptor20 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | codex-awc-ar0013-next-descriptor20-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next35 PR #575 published at signed head 93ccfd8; clean terminal entry requires terminalTarget = NoTarget. Focused 49-test and full 737-test 95% local gates pass. | Monitor PR #575 hosted AWQ/scope and exact-head pr-fast Verify; independently review, guarded merge on green, then authoritative postmerge Verify and state reconciliation. | codex-awc-ar0012-next35-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor19 PR #574 merged 2892f832; exact Verify 35220934406 and authoritative post-merge Verify 35221194853 succeeded through formal tier and attestation. Descriptor20 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | - |
 
 ## Done
 
