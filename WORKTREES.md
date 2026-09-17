@@ -11,5 +11,6 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0026` | `ar0026-tui-session` | `d3ac461e07f0` | 0 | behind 5, ahead 0 |
 | `agent-workflow-coordinator-ar0027` | `ar0027-tui-batching` | `55b1758cd41f` | 0 | behind 3, ahead 0 |
 | `agent-workflow-coordinator-ar0028` | `ar0028-safe-exit` | `1e8068a5edc6` | 0 | behind 1, ahead 0 |
+| `agent-workflow-coordinator-ar0029` | `ar0029-tui-integration` | `cf80d1369f4e` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-oracle-gates` | `ar0022-oracle-gates` | `6630dfa5bed4` | 0 | behind 34, ahead 0 |
 | `agent-workflow-coordinator-terminology` | `feat/canonical-terminology` | `9b041d0df13d` | 0 | behind 208, ahead 3 |
