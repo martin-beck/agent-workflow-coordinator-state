@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next22-20260917 | PR #545 merged as 1b51f963 after independent APPROVE and exact Verify success; post-merge Verify 35205758180 is in progress. | Monitor post-merge Verify 35205758180 on merge head 1b51f963 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next22-20260917 | Next22 formal seam implemented locally: terminal contract requires exact terminalVerified&#x27; = TRUE transition binding; signed commit c6d095a, focused gates green. | Run full discovery/formal evidence for local next22 commit c6d095a, binding exact terminalVerified&#x27; = TRUE transition; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor5-20260917 | PR #544 merged df655a6c; exact Verify 35205552338 and authoritative post-merge Verify 35205981301 succeeded. | Implement descriptor5 retained-admission lifecycle boundary with hostile failure-path tests; preserve fail-closed behavior and keep execution/selector mutation disabled. |
 
 ### Open (1)
