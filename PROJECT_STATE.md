@@ -22,12 +22,14 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #542 | `ar0013-dispatch-revalidation@9c398ac1c2ca` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(runtime): close stale dispatch admission on failure |
+| #543 | `ar0012-terminal-fresh-read-definition@fc68791775a6` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind fresh runtime read definition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35204602729 | `9c398ac1c2ca` | workflow_dispatch | Verify | queued:- |
+| 35204613421 | `fc68791775a6` | pull_request | Verify | queued:- |
+| 35204602729 | `9c398ac1c2ca` | workflow_dispatch | Verify | in_progress:- |
 | 35204486575 | `9c398ac1c2ca` | pull_request | Verify | completed:success |
 | 35204076599 | `503074bfdc17` | push | Verify | completed:success |
 | 35203896834 | `368a3ccfa605` | push | Verify | completed:cancelled |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35203078226 | `5a06af4f219d` | push | Verify | completed:cancelled |
 | 35202894561 | `7a4deeae6172` | pull_request | Verify | completed:success |
 | 35202873992 | `66419139189b` | workflow_dispatch | Verify | completed:success |
-| 35202822004 | `66419139189b` | pull_request | Verify | completed:success |
