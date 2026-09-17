@@ -21,13 +21,17 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #498 | `ar0009-release-fresh-clone@86fad8b9b698` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate contracts from fresh clone |
+| #498 | `ar0009-release-fresh-clone@d01e8cfa6ecc` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate contracts from fresh clone |
+| #499 | `ar0012-reconcile-crash-formal@239494f293bb` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(selector): recover after final parent recheck crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35176900568 | `86fad8b9b698` | workflow_dispatch | Verify | queued:- |
+| 35177147057 | `d01e8cfa6ecc` | workflow_dispatch | Verify | queued:- |
+| 35177143236 | `239494f293bb` | pull_request | Verify | in_progress:- |
+| 35177090730 | `d01e8cfa6ecc` | pull_request | Verify | completed:success |
+| 35176900568 | `86fad8b9b698` | workflow_dispatch | Verify | completed:success |
 | 35176710222 | `3a7e534f0434` | push | Verify | completed:success |
 | 35176557336 | `86fad8b9b698` | pull_request | Verify | completed:success |
 | 35176549600 | `1dfbab6aa8bd` | workflow_dispatch | Verify | completed:success |
@@ -36,6 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35176099970 | `c0b8b850a2cb` | push | Verify | completed:cancelled |
 | 35176043350 | `d61a70f85981` | workflow_dispatch | Verify | completed:success |
 | 35175954407 | `d61a70f85981` | pull_request | Verify | completed:success |
-| 35175891632 | `d22d238c6a6a` | workflow_dispatch | Verify | completed:success |
-| 35175844257 | `d22d238c6a6a` | pull_request | Verify | completed:success |
-| 35175483821 | `54a9251a9ffa` | push | Verify | completed:success |
