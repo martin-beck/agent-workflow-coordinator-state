@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next25 exact terminal target-domain binding merged PR #555 as 36d58ac2; post-merge Verify 35211477729 succeeded. | Release next25 and claim next26; inspect remaining formal/durability correspondence seams and implement one bounded fail-closed slice. | codex-awc-ar0012-next26-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor13 PR #561 merged fa508f5; exact Verify 35214396152 succeeded at repaired DCO head 24c28d7; postmerge Verify 35214687729 succeeded. Descriptor14 claim active. | Implement descriptor14 next bounded fail-closed runtime admission boundary with hostile failure-path tests; preserve retained descriptor identity checks, execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor14-20260917 |
 
 ## Open
@@ -15,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next25 exact terminal target-domain binding merged PR #555 as 36d58ac2; post-merge Verify 35211477729 succeeded. | Release next25 and claim next26; inspect remaining formal/durability correspondence seams and implement one bounded fail-closed slice. | - |
 
 ## Done
 
