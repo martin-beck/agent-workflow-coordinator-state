@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #523/#525 merged; post-merge Verify 35193187336 passed. Prepared oversized-input slice rebased cleanly onto main 6edaa11c as signed head 83f44a65. | Publish PR for signed head 83f44a65, obtain independent exact-head review, dispatch manual pr-fast Verify, and merge only after all gates pass. | codex-awc-ar0009-next4-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #526 published at signed head 83f44a65: bound release transition input to 1 MiB before parsing; hostile oversized-file test included. Relevant 55-test suite and static gates pass. | Obtain independent exact-head review for PR #526; await PR gates and manual pr-fast Verify, then merge only after approval and all gates pass. | codex-awc-ar0009-next4-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
