@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 4 active status categories.
+**29 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 23 |
+| **Done** | Accepted, integrated, and durably verified | 24 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 0 |
 
@@ -54,7 +54,7 @@ flowchart LR
         AR_0024["AR-0024 - Done"]:::status_done
         AR_0025["AR-0025 - Done"]:::status_done
         AR_0026["AR-0026 - Done"]:::status_done
-        AR_0027["AR-0027 - In progress"]:::status_in_progress
+        AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Planned"]:::status_planned
         AR_0029["AR-0029 - Planned"]:::status_planned
     end
@@ -144,12 +144,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0027](tasks/AR-0027.md): Batched TUI packet and navigation binding | codex-ar0027-batch-navigation-20260917 | Persist TUI navigation and batch-point state without cross-point authorization. | Bind batched discussion packets, per-point response state, active UI anchors, and optional re-ask markers to task revisions. |
-
 ### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -165,7 +159,7 @@ flowchart LR
 | P0 | [AR-0028](tasks/AR-0028.md): TUI safe exit and future-discussion persistence | Unclaimed | Ensure TUI sessions cannot lose decisions or future discussion requests. | Implement atomic safe-exit, resume, re-ask, and future-discussion AR mapping events for TUI sessions. |
 | P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Unclaimed | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
 
-### Done (23)
+### Done (24)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -186,6 +180,7 @@ flowchart LR
 | P0 | [AR-0023](tasks/AR-0023.md): Versioned planning and design artifact binding | Unclaimed | Make before/after project artifacts durable and revision-bound around user discussions. | Bind versioned work-plan, design-document, dependency-graph, AR-manifest, and formal-specification snapshots to Coordinator task revisions. |
 | P0 | [AR-0024](tasks/AR-0024.md): Discussion pause and reconciliation enforcement | Unclaimed | Prevent unresolved or contradictory user guidance from authorizing Coordinator continuation. | Enforce pause, user disposition, contradiction reopen, and repeated-discussion transitions before autonomous continuation. |
 | P0 | [AR-0026](tasks/AR-0026.md): Discussion TUI session and task-event binding | Unclaimed | Bind the reusable discussion TUI session to Coordinator task state. | Define revision-bound discussion-session events for TUI entry, active point, document anchor, user response, and unresolved status. |
+| P0 | [AR-0027](tasks/AR-0027.md): Batched TUI packet and navigation binding | Unclaimed | Persist TUI navigation and batch-point state without cross-point authorization. | Bind batched discussion packets, per-point response state, active UI anchors, and optional re-ask markers to task revisions. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
