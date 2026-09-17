@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 8 |
 | **Future** | Deferred roadmap work | 0 |
@@ -40,7 +40,7 @@ flowchart LR
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - In progress"]:::status_in_progress
-        AR_0013["AR-0013 - Open"]:::status_open
+        AR_0013["AR-0013 - In progress"]:::status_in_progress
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
         AR_0016["AR-0016 - Done"]:::status_done
@@ -144,18 +144,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next47-20260917 | Next47 PR #601 signed head 55286a6 merged as 0c6208dd; exact Verify 35234577972 succeeded. Authoritative postmerge Verify 35235059072 is queued. | Monitor authoritative postmerge 35235059072 on 0c6208dd to terminal success; then release next47, claim next48, and implement next bounded seam. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor33-20260917 | Descriptor31 PR #597 merged 9dc3d38; exact Verify 35232928828 succeeded on 501ec86; authoritative latest-main Verify 35233743767 succeeded on 9e6fb8ea. Descriptor32 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Descriptor31 PR #597 merged 9dc3d38; exact Verify 35232928828 succeeded on 501ec86; authoritative latest-main Verify 35233743767 succeeded on 9e6fb8ea. Descriptor32 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
 
 ### Planned (8)
 
