@@ -31,7 +31,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35246390465 | `cf80d1369f4e` | push | Verify | in_progress:- |
+| 35246390465 | `cf80d1369f4e` | push | Verify | completed:failure |
 | 35246312387 | `1e8068a5edc6` | pull_request | Verify | completed:success |
 | 35246091856 | `161de1094237` | workflow_dispatch | Verify | completed:failure |
 | 35246028981 | `161de1094237` | pull_request | Verify | completed:success |
