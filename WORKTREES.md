@@ -84,7 +84,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0009-release-contract` | `ar0009-release-contract` | `4789936344c9` | 0 | behind 190, ahead 1 |
 | `agent-workflow-coordinator-ar0013-selector-adapter-fix` | `ar0013-selector-adapter-fix` | `7fd6bb418a6e` | 3 | behind 949, ahead 0 |
 | changed files | - | - | - | `docs/SQLITE_MUTATION_ROUTE_INVENTORY.md`, `tests/test_upgrade_authority.py`, `tools/upgrade_authority.py` |
-| `agent-workflow-coordinator-ar0013-selector-publication-adapter` | `ar0013-selector-publication-adapter` | `b4b4012322db` | 0 | behind 125, ahead 3 |
+| `agent-workflow-coordinator-ar0013-selector-publication-adapter` | `ar0013-selector-publication-adapter` | `56677042f523` | 0 | behind 125, ahead 3 |
 | `agent-workflow-coordinator-ar0017-timeout` | `ar0017-timeout` | `16a3549dc276` | 0 | behind 454, ahead 0 |
 | `agent-workflow-coordinator-ar0018` | `fix/formal-attestation-resource-bounds` | `847c30248a0d` | 0 | behind 453, ahead 5 |
 | `agent-workflow-coordinator-ar0019` | `feat/fast-merge-formal-tier` | `63342f11bfcb` | 0 | behind 449, ahead 0 |
@@ -225,7 +225,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-session-replacement` | `ar0007-session-replacement` | `c9817f585502` | 0 | behind 776, ahead 0 |
 | `agent-workflow-coordinator-tlc-resource-bound` | `feature/tlc-resource-bound-reliability` | `e3ad0edb2318` | 0 | behind 457, ahead 0 |
 | `agent-workflow-coordinator-typed-admission-interfaces` | `feature/typed-admission-interfaces` | `6f627248586d` | 0 | behind 947, ahead 0 |
-| `agent-workflow-coordinator-upgrade-barrier` | `ar0012-terminal-recovery-local` | `9484737b4c48` | 0 | behind 2, ahead 3 |
+| `agent-workflow-coordinator-upgrade-barrier` | `ar0012-terminal-recovery-local` | `5c39b0aaf40a` | 0 | behind 2, ahead 4 |
 | `agent-workflow-coordinator-upgrade-engine` | `feature/upgrade-engine` | `abde59c89178` | 0 | behind 979, ahead 1 |
 | `agent-workflow-coordinator-upgrade-git-backup` | `feature/upgrade-git-backup` | `2fc058d5b60a` | 0 | behind 1108, ahead 0 |
 | `agent-workflow-coordinator-upgrade-quiescence` | `feature/upgrade-quiescence` | `22d72310cdd7` | 0 | behind 1141, ahead 0 |

@@ -20,14 +20,16 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #470 | `ar0013-selector-publication-adapter@b4b4012322db` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #470 | `ar0013-selector-publication-adapter@56677042f523` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(runtime): bind selector to canonical manifest identity |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35195479024 | `b4b4012322db` | workflow_dispatch | Verify | queued:- |
+| 35195751739 | `56677042f523` | workflow_dispatch | Verify | in_progress:- |
+| 35195733094 | `56677042f523` | pull_request | Verify | in_progress:- |
+| 35195479024 | `b4b4012322db` | workflow_dispatch | Verify | completed:failure |
 | 35194828161 | `b717cb972f95` | push | Verify | completed:success |
 | 35194710242 | `b4b4012322db` | pull_request | Verify | completed:success |
 | 35194415670 | `9484737b4c48` | workflow_dispatch | Verify | completed:success |
@@ -37,5 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35193938843 | `6e61fed8188a` | push | Verify | completed:success |
 | 35193664092 | `2a7e16449a25` | workflow_dispatch | Verify | completed:success |
 | 35193650517 | `2a7e16449a25` | pull_request | Verify | completed:success |
-| 35193554428 | `83f44a65b1dc` | workflow_dispatch | Verify | completed:success |
-| 35193531700 | `83f44a65b1dc` | pull_request | Verify | completed:success |
