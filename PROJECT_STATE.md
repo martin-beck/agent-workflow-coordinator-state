@@ -22,11 +22,13 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #529 | `ar0009-release-integration@77fbbdc14887` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(runbooks): reject aliased output ancestors |
+| #530 | `ar0012-terminal-metadata@ef27e385352b` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): reject terminal target metadata drift |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35197675513 | `ef27e385352b` | pull_request | Verify | queued:- |
 | 35197634079 | `77fbbdc14887` | workflow_dispatch | Verify | in_progress:- |
 | 35197557940 | `77fbbdc14887` | pull_request | Verify | completed:success |
 | 35197143201 | `50765e70fb96` | push | Verify | completed:success |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35196158352 | `5c39b0aaf40a` | workflow_dispatch | Verify | completed:success |
 | 35195751739 | `56677042f523` | workflow_dispatch | Verify | completed:failure |
 | 35195733094 | `56677042f523` | pull_request | Verify | completed:success |
-| 35195479024 | `b4b4012322db` | workflow_dispatch | Verify | completed:failure |
