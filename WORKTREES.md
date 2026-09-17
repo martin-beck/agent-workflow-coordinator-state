@@ -225,7 +225,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-session-replacement` | `ar0007-session-replacement` | `c9817f585502` | 0 | behind 722, ahead 0 |
 | `agent-workflow-coordinator-tlc-resource-bound` | `feature/tlc-resource-bound-reliability` | `e3ad0edb2318` | 0 | behind 403, ahead 0 |
 | `agent-workflow-coordinator-typed-admission-interfaces` | `feature/typed-admission-interfaces` | `6f627248586d` | 0 | behind 893, ahead 0 |
-| `agent-workflow-coordinator-upgrade-barrier` | `main` | `2bf152cb73ca` | 0 | behind 0, ahead 1 |
+| `agent-workflow-coordinator-upgrade-barrier` | `ar0012-selector-identity-crash` | `2bf152cb73ca` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-upgrade-engine` | `feature/upgrade-engine` | `abde59c89178` | 0 | behind 925, ahead 1 |
 | `agent-workflow-coordinator-upgrade-git-backup` | `feature/upgrade-git-backup` | `2fc058d5b60a` | 0 | behind 1054, ahead 0 |
 | `agent-workflow-coordinator-upgrade-quiescence` | `feature/upgrade-quiescence` | `22d72310cdd7` | 0 | behind 1087, ahead 0 |

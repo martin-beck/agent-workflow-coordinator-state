@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #501 | `ar0009-release-source-identity@19d57a066713` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | ci(release): reject invalid source identity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35178358584 | `19d57a066713` | pull_request | Verify | in_progress:- |
 | 35178153231 | `6656f2c3cbbf` | push | Verify | completed:success |
 | 35177982225 | `21b2e5c168ca` | workflow_dispatch | Verify | completed:success |
 | 35177953091 | `21b2e5c168ca` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35177090730 | `d01e8cfa6ecc` | pull_request | Verify | completed:success |
 | 35176900568 | `86fad8b9b698` | workflow_dispatch | Verify | completed:success |
 | 35176710222 | `3a7e534f0434` | push | Verify | completed:success |
-| 35176557336 | `86fad8b9b698` | pull_request | Verify | completed:success |
