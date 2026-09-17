@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next20 exact FreshRuntimeRead(p) model binding published as PR #543; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #543 published at exact head fc687917; await AWQ, exact-head fast Verify, and independent review before merge. Mutation remains disabled. | codex-awc-ar0012-next20-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #543 merged as 9059876c after independent APPROVE and exact Verify 35204613421 success; post-merge Verify 35204995362 is pending. | Monitor post-merge Verify 35204995362 on merge head 9059876c to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next20-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #540 merged 368a3ccf; exact Verify 35203688204 and authoritative post-merge Verify 35204076599 succeeded on 503074bf. Descriptor3 follow-up PR #542 is published at 9c398ac. | Obtain independent exact-head review of PR #542, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor3-20260917 |
 
 ## Open
