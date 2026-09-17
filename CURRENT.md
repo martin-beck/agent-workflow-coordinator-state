@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next49 PR #606 published at signed head 8b4a84a: lifecycle validator now requires authoritative TypeOK theorem marker, with hostile fixture coverage. Focused 36 tests and Ruff pass; mutation disabled. | Await PR #606 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then verify authoritative postmerge before releasing next49. | codex-awc-ar0012-next49-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor33 PR #602 merged f392c44; exact Verify 35236002874 succeeded on 013beb7; authoritative postmerge Verify 35236521249 succeeded on f392c44. Descriptor34 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor35-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor33 PR #602 merged f392c44; exact Verify 35236002874 succeeded on 013beb7; authoritative postmerge Verify 35236521249 succeeded on f392c44. Descriptor34 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | - |
 
 ## Planned
 
