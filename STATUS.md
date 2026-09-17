@@ -125,7 +125,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | Bounded runbook output-integrity slice published as PR #529 at 77fbbdc; rejects symlinked ancestor paths. | Obtain independent exact-head review and hosted Verify for PR #529; do not merge without both. |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next14-20260917 | PR #530 merged as 81cd20d7 after exact Verify 35197758293 success and independent APPROVE; post-merge Verify 35198022149 is pending. | Monitor post-merge Verify 35198022149 on merge head 81cd20d7 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next14-20260917 | Next14 formal seam implemented locally: terminal contract now requires explicit new-target and rollback-child model branches, with hostile missing-branch regression coverage; signed commit 8fd2982. | Run full discovery/formal evidence for local next14 commit 8fd2982, which binds executable terminal target checks to both model branches; then prepare signed PR if green. Mutation remains disabled. |
 
 ### Open (1)
 
