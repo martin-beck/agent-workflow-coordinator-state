@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next20-20260917 | Next20 formal seam implemented locally: terminal contract requires exact FreshRuntimeRead(p) definition, not a loose marker; signed commit 68373aa, focused gates green. | Run full discovery/formal evidence for local next20 commit 68373aa, requiring exact FreshRuntimeRead(p) definition binding; publish only after green gates. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next20-20260917 | Next20 exact FreshRuntimeRead(p) model binding published as PR #543; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #543 published at exact head fc687917; await AWQ, exact-head fast Verify, and independent review before merge. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor3-20260917 | PR #540 merged 368a3ccf; exact Verify 35203688204 and authoritative post-merge Verify 35204076599 succeeded on 503074bf. Descriptor3 follow-up PR #542 is published at 9c398ac. | Obtain independent exact-head review of PR #542, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
 
 ### Open (1)
