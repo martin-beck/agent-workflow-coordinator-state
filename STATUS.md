@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 8 |
+| **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 18 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -49,7 +49,7 @@ flowchart LR
         AR_0019["AR-0019 - Done"]:::status_done
         AR_0020["AR-0020 - Done"]:::status_done
         AR_0021["AR-0021 - Done"]:::status_done
-        AR_0022["AR-0022 - Planned"]:::status_planned
+        AR_0022["AR-0022 - Open"]:::status_open
         AR_0023["AR-0023 - Planned"]:::status_planned
         AR_0024["AR-0024 - Planned"]:::status_planned
         AR_0025["AR-0025 - Planned"]:::status_planned
@@ -151,17 +151,17 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next45-20260917 | Next45 PR #596 published at signed head 92b5c29; validator requires THEOREM Spec =&gt; &#91;&#93;WriteFence. Focused 49-test and full 737-test 95&#37; gates pass. | Monitor PR #596 AWQ/scope and exact-head pr-fast Verify; independently review, guarded merge on green, then authoritative postmerge Verify and reconcile. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor30-20260917 | Descriptor29 PR #593 merged c4d6634; exact Verify 35230863594 succeeded on f0e27ef; authoritative latest-main Verify 35231345295 succeeded on 4070279. Descriptor30 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
+| P0 | [AR-0022](tasks/AR-0022.md): Mandatory oracle interaction-gate lifecycle | Unclaimed | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. |
 
-### Planned (8)
+### Planned (7)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0022](tasks/AR-0022.md): Mandatory oracle interaction-gate lifecycle | Unclaimed | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. |
 | P0 | [AR-0023](tasks/AR-0023.md): Versioned planning and design artifact binding | Unclaimed | Make before/after project artifacts durable and revision-bound around user discussions. | Bind versioned work-plan, design-document, dependency-graph, AR-manifest, and formal-specification snapshots to Coordinator task revisions. |
 | P0 | [AR-0024](tasks/AR-0024.md): Discussion pause and reconciliation enforcement | Unclaimed | Prevent unresolved or contradictory user guidance from authorizing Coordinator continuation. | Enforce pause, user disposition, contradiction reopen, and repeated-discussion transitions before autonomous continuation. |
 | P0 | [AR-0026](tasks/AR-0026.md): Discussion TUI session and task-event binding | Unclaimed | Bind the reusable discussion TUI session to Coordinator task state. | Define revision-bound discussion-session events for TUI entry, active point, document anchor, user response, and unresolved status. |
