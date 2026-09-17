@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #526 merged 6e61fed; post-merge Verify 35193938843 completed SUCCESS on exact merge head. Oversized transition-input boundary is complete. | Inspect next dependency-safe AR-0009 release-integrity boundary; claim a fresh slice only after selection and avoid AR-0012 overlap. | codex-awc-ar0009-next4-20260917 |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #528 merged as f0a06b41 after independent APPROVE and exact Verify 35196624168 success; post-merge Verify 35196959712 is in progress. | Monitor post-merge Verify 35196959712 on merge head f0a06b41 to terminal success, then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next13-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next13 terminal-outcome metadata integrity slice implemented locally: invalid and premature target metadata now have hostile regression coverage; signed commit c725735. | Run full suite/formal evidence for local next13 commit c725735 (terminal target metadata drift rejection); then independent review and publish only after evidence is green. Mutation remains disabled. | codex-awc-ar0012-next13-20260917 |
 
 ## Open
 
