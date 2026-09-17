@@ -3,8 +3,8 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `d78be0414c8ab0f1b28c43338e3001de9302b07c`
-- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
-- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
+- Local origin/main: `d78be0414c8ab0f1b28c43338e3001de9302b07c`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
@@ -22,13 +22,11 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #538 | `ar0013-dispatch-revalidation@66419139189b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind dispatch admission to retained handle |
-| #539 | `ar0012-terminal-rollback-gap@7a4deeae6172` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind rollback gap invariant |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35202894561 | `7a4deeae6172` | pull_request | Verify | queued:- |
 | 35202873992 | `66419139189b` | workflow_dispatch | Verify | queued:- |
 | 35202822004 | `66419139189b` | pull_request | Verify | completed:success |
 | 35202565985 | `d78be0414c8a` | workflow_dispatch | Verify | completed:success |
@@ -40,3 +38,4 @@ Generated from local Git and GitHub. Do not edit.
 | 35201229361 | `58b6243e1108` | push | Verify | completed:success |
 | 35201072497 | `3255c4ab76f3` | push | Verify | completed:cancelled |
 | 35200960921 | `83d9bfca569a` | workflow_dispatch | Verify | completed:success |
+| 35200902919 | `83d9bfca569a` | pull_request | Verify | completed:success |
