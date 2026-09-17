@@ -3,13 +3,18 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #540 merged 368a3ccf; exact Verify 35203688204 and authoritative post-merge Verify 35204076599 succeeded on 503074bf. Descriptor3 follow-up PR #542 is published at 9c398ac. | Obtain independent exact-head review of PR #542, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor4-20260917 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #543 merged as 9059876c after independent APPROVE and exact Verify 35204613421 success; post-merge Verify 35204995362 is pending. | Monitor post-merge Verify 35204995362 on merge head 9059876c to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | - |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #540 merged 368a3ccf; exact Verify 35203688204 and authoritative post-merge Verify 35204076599 succeeded on 503074bf. Descriptor3 follow-up PR #542 is published at 9c398ac. | Obtain independent exact-head review of PR #542, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | - |
 
 ## Done
 
