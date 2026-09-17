@@ -21,14 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #599 | `ar0022-oracle-gates@1f413a479b1b` | `main` | UNKNOWN | - | feat: enforce mandatory oracle interaction gates |
+| #599 | `ar0022-oracle-gates@1f413a479b1b` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35233743767 | `9e6fb8ea5b02` | push | Verify | pending:- |
-| 35233450060 | `9dc3d38a8cfd` | push | Verify | in_progress:- |
+| 35233829266 | `1f413a479b1b` | pull_request | Verify | completed:failure |
+| 35233743767 | `9e6fb8ea5b02` | push | Verify | completed:success |
+| 35233450060 | `9dc3d38a8cfd` | push | Verify | completed:cancelled |
 | 35233336122 | `13f58fa91382` | pull_request | Verify | completed:success |
 | 35232928828 | `501ec86b41f5` | pull_request | Verify | completed:success |
 | 35232381995 | `86f3f451f7ca` | push | Verify | completed:success |
@@ -38,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35231345295 | `4070279cf7c4` | push | Verify | completed:success |
 | 35231173231 | `c4d6634d7d84` | push | Verify | completed:cancelled |
 | 35230911063 | `cc73ad9f9514` | pull_request | Verify | completed:success |
-| 35230863594 | `f0e27ef441a9` | pull_request | Verify | completed:success |
