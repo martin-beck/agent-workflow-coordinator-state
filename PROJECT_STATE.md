@@ -22,13 +22,14 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #505 | `ar0009-release-digest-verify-2@65cbd3dcfd0d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): verify evidence digest manifest |
-| #506 | `ar0012-final-recheck-failure@da3f5d5c2ab8` | `main` | CLEAN | - | test(selector): cover final parent recheck failure |
+| #506 | `ar0012-final-recheck-failure@da3f5d5c2ab8` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(selector): cover final parent recheck failure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35181006852 | `da3f5d5c2ab8` | pull_request | Verify | queued:- |
+| 35181012265 | `65cbd3dcfd0d` | workflow_dispatch | Verify | queued:- |
+| 35181006852 | `da3f5d5c2ab8` | pull_request | Verify | in_progress:- |
 | 35181005869 | `da3f5d5c2ab8` | workflow_dispatch | Verify | queued:- |
 | 35180970487 | `65cbd3dcfd0d` | pull_request | Verify | completed:success |
 | 35180641280 | `f39b673ea891` | push | Verify | completed:success |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35180263389 | `1ac902f7d977` | workflow_dispatch | Verify | completed:success |
 | 35180206334 | `1ac902f7d977` | pull_request | Verify | completed:success |
 | 35179905028 | `52695e392d89` | push | Verify | completed:success |
-| 35179903589 | `18705744b5ad` | push | Verify | completed:cancelled |
