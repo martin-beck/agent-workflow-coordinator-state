@@ -21,11 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #483 | `ar0012-reconcile-crash-formal@a4ceb43e37aa` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(barrier): reopen releasing state in child process |
+| #484 | `ar0009-publication-recovery@eb31577a749a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(selector): recover abandoned staging files safely |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35171003594 | `eb31577a749a` | workflow_dispatch | Verify | queued:- |
+| 35170919632 | `eb31577a749a` | pull_request | Verify | completed:success |
+| 35170895606 | `a4ceb43e37aa` | pull_request | Verify | completed:success |
 | 35170677902 | `a250489d9731` | push | Verify | completed:success |
 | 35170508687 | `0bd2a0f97882` | pull_request | Verify | completed:success |
 | 35170295025 | `8e5678f03b82` | pull_request | Verify | completed:failure |
@@ -35,6 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35169577161 | `3aa49ab4de0c` | push | Verify | completed:success |
 | 35169480782 | `1dc37a2cf566` | pull_request | Verify | completed:success |
 | 35169313552 | `5854ae464bbe` | pull_request | Verify | completed:success |
-| 35169071825 | `1a4ac5e64227` | push | Verify | completed:success |
-| 35168847451 | `be8ce206746e` | workflow_dispatch | Verify | completed:success |
-| 35168811415 | `be8ce206746e` | pull_request | Verify | completed:success |
