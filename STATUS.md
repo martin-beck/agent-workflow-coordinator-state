@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next15-20260917 | Next15 fresh-runtime model-branch binding published as PR #532; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence checks passed. | PR #532 published at exact head b265723f; exact-head fast Verify 35199458466 dispatched, AWQ in progress and scope green. Await terminal success and independent review. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next15-20260917 | PR #532 merged as 4303e02d after independent APPROVE and exact Verify 35199458466 success; post-merge Verify 35199850429 is in progress. | Monitor post-merge Verify 35199850429 on merge head 4303e02d to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-20260917 | PR #533 descriptor-bound ResolvedRuntime handle published at f899f91; full 776 tests and 95&#37; branch coverage pass. | Obtain independent exact-head review of PR #533, dispatch hosted exact-head Verify, and address findings before merge. |
 
 ### Open (1)
