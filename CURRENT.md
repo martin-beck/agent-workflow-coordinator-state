@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #525 exact head 1b4fdfe still has AWQ/scope/smoke green but Verify skipped; no exact hosted formal evidence observable. Local a7e006e oversized-input slice remains signed, tested, and unpublished. | Continue local-only audit during cooldown; publish a7e006e only after #525 exact formal Verify becomes observable and #525 is accepted. | codex-awc-ar0009-next4-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Product main is 4ceda3a (PR #524 merged). PR #525 exact head 1b4fdfe has AWQ/scope/smoke green but Verify skipped; exact hosted formal gate remains unavailable. Local a7e006e remains signed/tested/unpublished. | Keep product unchanged and local-only audit; do not publish a7e006e or merge #525 until exact hosted formal Verify is observable and accepted. | codex-awc-ar0009-next4-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
