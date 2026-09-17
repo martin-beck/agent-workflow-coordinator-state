@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next38 PR #582 signed head e647397 merged b99e8546; exact Verify 35224742699 and authoritative postmerge 35225071511 succeeded. | Release completed next38, then claim next39 and implement next bounded fail-closed durability seam. | codex-awc-ar0012-next39-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next39 signed head 6bf2084 rebased onto current main b99e854; validator requires THEOREM Spec => []StaleCASRejected. Focused 49-test and full 737-test 95% gates pass. | Publish signed 6bf2084 as PR; monitor AWQ/scope and exact-head pr-fast Verify, independently review, guarded merge on green, then postmerge and reconcile. | codex-awc-ar0012-next39-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor23 PR #581 merged 478e594f; exact Verify 35224637220 and authoritative latest-main post-merge Verify 35225071511 succeeded with formal tier and attestation. Descriptor24 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | codex-awc-ar0013-next-descriptor24-20260917 |
 
 ## Open
