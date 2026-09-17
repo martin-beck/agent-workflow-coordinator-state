@@ -7,6 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next23 exact terminal verifier definition merged as PR #551 at 6e6a93e5; latest-main Verify 35209413243 succeeded on a95bcb52. | Release next23 and claim next24; inspect formal/durability plan for a genuinely uncovered seam, then implement one bounded fail-closed slice with hostile tests and synchronized evidence. | codex-awc-ar0012-next24-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #550 merged a95bcb52; exact Verify 35209064239 and authoritative post-merge Verify 35209413243 succeeded. | Implement descriptor8 dependency-safe admission continuity boundary with hostile failure-path tests; preserve fail-closed behavior and keep execution/selector mutation disabled. | codex-awc-ar0013-next-descriptor8-20260917 |
 
 ## Open
@@ -14,7 +15,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next23 exact terminal verifier definition merged as PR #551 at 6e6a93e5; latest-main Verify 35209413243 succeeded on a95bcb52. | Release next23 and claim next24; inspect formal/durability plan for a genuinely uncovered seam, then implement one bounded fail-closed slice with hostile tests and synchronized evidence. | - |
 
 ## Done
 
