@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
+| #532 | `ar0012-terminal-fresh-runtime@b265723f566e` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): require fresh runtime terminal branch |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35199436026 | `b265723f566e` | pull_request | Verify | queued:- |
 | 35198842861 | `296e2cd80ac1` | push | Verify | completed:success |
 | 35198621074 | `be4655e1bca5` | pull_request | Verify | completed:success |
 | 35198022149 | `81cd20d7e0d1` | push | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35197143201 | `50765e70fb96` | push | Verify | completed:success |
 | 35196959712 | `f0a06b413400` | push | Verify | completed:cancelled |
 | 35196770178 | `bd622a51ba88` | workflow_dispatch | Verify | completed:success |
-| 35196754598 | `bd622a51ba88` | pull_request | Verify | completed:success |
