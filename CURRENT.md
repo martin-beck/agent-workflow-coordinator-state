@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Add release workflow generation and fail-closed verification of sanitized operator/agent runbooks from each validated contract; test deterministic artifact publication without enabling upgrade mutation. | codex-awc-ar0009-next2-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #496 merged as 0a4258d; post-merge main Verify 35176242978 passed. Release CI now publishes verified sanitized runbooks; upgrade mutation remains disabled. | Reclaim AR-0009 and select the next dependency-safe release-integration correctness slice beyond runbook publication. | codex-awc-ar0009-next2-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Replace PR #480 in-process fsync mock with a real child-process termination boundary after selector rename/before directory fsync; fresh-process verify exact old/new reconciliation and no residue, then republish/review. | codex-awc-ar0012-next7-20260917 |
 
 ## Open
