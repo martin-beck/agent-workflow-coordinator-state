@@ -21,13 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #599 | `ar0022-oracle-gates@3e570cc3b679` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
+| #599 | `ar0022-oracle-gates@3e570cc3b679` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
+| #602 | `ar0013-dispatch-revalidation@013beb7713c9` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): bind verified identity objects exactly |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35235749319 | `3e570cc3b679` | pull_request | Verify | in_progress:- |
+| 35236002874 | `013beb7713c9` | pull_request | Verify | in_progress:- |
+| 35235749319 | `3e570cc3b679` | pull_request | Verify | completed:failure |
 | 35235059072 | `0c6208dd3439` | push | Verify | completed:success |
 | 35234914636 | `8cc898ec6cb1` | pull_request | Verify | completed:failure |
 | 35234800065 | `3fb3a14aa622` | push | Verify | completed:cancelled |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35233829266 | `1f413a479b1b` | pull_request | Verify | completed:failure |
 | 35233743767 | `9e6fb8ea5b02` | push | Verify | completed:success |
 | 35233450060 | `9dc3d38a8cfd` | push | Verify | completed:cancelled |
-| 35233336122 | `13f58fa91382` | pull_request | Verify | completed:success |
