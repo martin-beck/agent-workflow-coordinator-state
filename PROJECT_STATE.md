@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5a06af4f219d1d90e643e6c26d168d3b0b447f93`
-- Local origin/main: `d78be0414c8ab0f1b28c43338e3001de9302b07c`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Product remote main: `50ec18b193908b0c78d26cf6a1b32bc5d4fa6fe2`
+- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
 ## Open pull requests
 
@@ -21,14 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #539 | `ar0012-terminal-rollback-gap@7a4deeae6172` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind rollback gap invariant |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35203258793 | `50ec18b19390` | push | Verify | pending:- |
 | 35203078226 | `5a06af4f219d` | push | Verify | in_progress:- |
-| 35202894561 | `7a4deeae6172` | pull_request | Verify | in_progress:- |
+| 35202894561 | `7a4deeae6172` | pull_request | Verify | completed:success |
 | 35202873992 | `66419139189b` | workflow_dispatch | Verify | completed:success |
 | 35202822004 | `66419139189b` | pull_request | Verify | completed:success |
 | 35202565985 | `d78be0414c8a` | workflow_dispatch | Verify | completed:success |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35201959344 | `bbabd1c93b21` | workflow_dispatch | Verify | completed:success |
 | 35201707898 | `bbabd1c93b21` | pull_request | Verify | completed:success |
 | 35201229361 | `58b6243e1108` | push | Verify | completed:success |
-| 35201072497 | `3255c4ab76f3` | push | Verify | completed:cancelled |
