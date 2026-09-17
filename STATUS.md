@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 4 |
+| **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 22 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -53,7 +53,7 @@ flowchart LR
         AR_0023["AR-0023 - Done"]:::status_done
         AR_0024["AR-0024 - Done"]:::status_done
         AR_0025["AR-0025 - Done"]:::status_done
-        AR_0026["AR-0026 - Planned"]:::status_planned
+        AR_0026["AR-0026 - Open"]:::status_open
         AR_0027["AR-0027 - Planned"]:::status_planned
         AR_0028["AR-0028 - Planned"]:::status_planned
         AR_0029["AR-0029 - Planned"]:::status_planned
@@ -144,19 +144,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (3)
+### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next45 PR #596 published at signed head 92b5c29; validator requires THEOREM Spec =&gt; &#91;&#93;WriteFence. Focused 49-test and full 737-test 95&#37; gates pass. | Monitor PR #596 AWQ/scope and exact-head pr-fast Verify; independently review, guarded merge on green, then authoritative postmerge Verify and reconcile. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Descriptor29 PR #593 merged c4d6634; exact Verify 35230863594 succeeded on f0e27ef; authoritative latest-main Verify 35231345295 succeeded on 4070279. Descriptor30 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
+| P0 | [AR-0026](tasks/AR-0026.md): Discussion TUI session and task-event binding | Unclaimed | Bind the reusable discussion TUI session to Coordinator task state. | Define revision-bound discussion-session events for TUI entry, active point, document anchor, user response, and unresolved status. |
 
-### Planned (4)
+### Planned (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0026](tasks/AR-0026.md): Discussion TUI session and task-event binding | Unclaimed | Bind the reusable discussion TUI session to Coordinator task state. | Define revision-bound discussion-session events for TUI entry, active point, document anchor, user response, and unresolved status. |
 | P0 | [AR-0027](tasks/AR-0027.md): Batched TUI packet and navigation binding | Unclaimed | Persist TUI navigation and batch-point state without cross-point authorization. | Bind batched discussion packets, per-point response state, active UI anchors, and optional re-ask markers to task revisions. |
 | P0 | [AR-0028](tasks/AR-0028.md): TUI safe exit and future-discussion persistence | Unclaimed | Ensure TUI sessions cannot lose decisions or future discussion requests. | Implement atomic safe-exit, resume, re-ask, and future-discussion AR mapping events for TUI sessions. |
 | P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Unclaimed | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
