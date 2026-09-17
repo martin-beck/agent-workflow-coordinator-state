@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next42-20260917 | Next42 PR #590 signed head a838664 merged as 9db5d405; exact Verify 35228815810 succeeded. Authoritative postmerge Verify 35229075857 is in progress. | Monitor authoritative postmerge 35229075857 on 9db5d405 to terminal success; then release next42, claim next43, and implement next bounded seam. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next43-20260917 | Next43 signed head fe3a62f rebased onto current main 05fbc2c; validator requires THEOREM Spec =&gt; &#91;&#93;LockOrder. Focused 49-test and full 737-test 95&#37; gates pass. | Publish signed fe3a62f as PR; monitor AWQ/scope and exact-head pr-fast Verify, independently review, guarded merge on green, then postmerge and reconcile. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor28-20260917 | Descriptor27 PR #589 merged 05fbc2c5; corrected exact Verify 35228821645 and authoritative latest-main Verify 35229075857 succeeded on 9db5d405 with formal tier and attestation. Descriptor28 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. |
 
 ### Open (1)
