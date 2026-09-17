@@ -3,8 +3,8 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `f39b673ea891a70ed0175bf289c20b98047f3e17`
-- Local origin/main: `f39b673ea891a70ed0175bf289c20b98047f3e17`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
 ## Open pull requests
 
@@ -21,13 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #505 | `ar0009-release-digest-verify-2@65cbd3dcfd0d` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | ci(release): verify evidence digest manifest |
+| #505 | `ar0009-release-digest-verify-2@65cbd3dcfd0d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): verify evidence digest manifest |
+| #506 | `ar0012-final-recheck-failure@da3f5d5c2ab8` | `main` | CLEAN | - | test(selector): cover final parent recheck failure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35180970487 | `65cbd3dcfd0d` | pull_request | Verify | in_progress:- |
+| 35181006852 | `da3f5d5c2ab8` | pull_request | Verify | queued:- |
+| 35181005869 | `da3f5d5c2ab8` | workflow_dispatch | Verify | queued:- |
+| 35180970487 | `65cbd3dcfd0d` | pull_request | Verify | completed:success |
 | 35180641280 | `f39b673ea891` | push | Verify | completed:success |
 | 35180526569 | `60d111f51812` | push | Verify | completed:cancelled |
 | 35180481356 | `3946a8adc883` | workflow_dispatch | Verify | completed:success |
@@ -37,5 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35180206334 | `1ac902f7d977` | pull_request | Verify | completed:success |
 | 35179905028 | `52695e392d89` | push | Verify | completed:success |
 | 35179903589 | `18705744b5ad` | push | Verify | completed:cancelled |
-| 35179711850 | `2bf152cb73ca` | workflow_dispatch | Verify | completed:success |
-| 35179704268 | `2bf152cb73ca` | workflow_dispatch | Verify | completed:cancelled |
