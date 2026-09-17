@@ -22,7 +22,7 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #615 | `ar0012-backup-theorem@497ea6de7837` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require backup theorem admission |
+| #615 | `ar0012-backup-theorem@b9d8bf1dffef` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): require backup theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 
@@ -30,6 +30,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35249070472 | `b9d8bf1dffef` | pull_request | Verify | in_progress:- |
 | 35248447662 | `a385a43a8c0c` | push | Verify | completed:success |
 | 35247925161 | `81f0b99c4f82` | workflow_dispatch | Verify | completed:success |
 | 35247781004 | `81f0b99c4f82` | workflow_dispatch | Verify | completed:cancelled |
@@ -41,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35246765923 | `bd14fffd5c77` | push | Verify | completed:failure |
 | 35246696673 | `173495cb1020` | pull_request | Verify | completed:success |
 | 35246390465 | `cf80d1369f4e` | push | Verify | completed:failure |
-| 35246312387 | `1e8068a5edc6` | pull_request | Verify | completed:success |
