@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #505 merged as 89052a73 and PR #506 merged as ec6faf4b; combined post-merge Verify 35181521635 passed. Next slice PR #507 at 359c190 fails closed if checked-out Git HEAD differs from GITHUB_SHA before release evidence generation/upload; full local suite 757 passed. | Obtain independent exact-head review for PR #507 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. | codex-awc-ar0009-next3-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #507 merged as 4dd4ce45; post-merge Verify 35182029762 passed all AWQ/scope/verify gates. Release evidence now binds GITHUB_SHA, checked-out HEAD, and strict artifact digests; upgrade mutation remains disabled. | Release this completed checkpoint, reclaim AR-0009, and select the next dependency-safe release-integration failure boundary. | codex-awc-ar0009-next3-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
