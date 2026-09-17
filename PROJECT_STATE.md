@@ -3,8 +3,8 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `9059876c2230bdce6044f3ed2560bdf2e244628e`
-- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
-- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
+- Local origin/main: `9059876c2230bdce6044f3ed2560bdf2e244628e`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
@@ -22,13 +22,14 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #544 | `ar0013-dispatch-revalidation@319a8220f264` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(runtime): cover terminal admission cleanup |
-| #545 | `ar0012-terminal-target-domain@e9e685247f15` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind terminal target domain |
+| #545 | `ar0012-terminal-target-domain@e9e685247f15` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind terminal target domain |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35205510422 | `e9e685247f15` | pull_request | Verify | queued:- |
+| 35205552338 | `319a8220f264` | workflow_dispatch | Verify | in_progress:- |
+| 35205510422 | `e9e685247f15` | pull_request | Verify | in_progress:- |
 | 35205426289 | `319a8220f264` | pull_request | Verify | completed:success |
 | 35204995362 | `9059876c2230` | push | Verify | completed:success |
 | 35204804953 | `43b8c7d1f6b2` | push | Verify | completed:cancelled |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35203896834 | `368a3ccfa605` | push | Verify | completed:cancelled |
 | 35203746585 | `0e45e53d29ef` | pull_request | Verify | completed:success |
 | 35203688204 | `0b6818f2e1ea` | workflow_dispatch | Verify | completed:success |
-| 35203631557 | `0b6818f2e1ea` | pull_request | Verify | completed:success |
