@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #518 repaired at signed head 0d820163; test clock isolation plus refreshed formal evidence digest; focused rollback suite 79 and evidence tests 6 pass. Replacement Verify 35187811220 (PR event) queued and 35187824670 workflow_dispatch in progress. | Await replacement Verify 35187824670 and independent exact-head review for PR #518; merge only after both pass, then run full discovery in a clean environment. | codex-awc-ar0009-next4-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #518 DCO-repaired at signed head b09fb055; both commits author/signoff martin.beck@gmx.de. Test clock isolation and formal evidence digest preserved; focused 85 and full 762 tests pass. | Await PR-triggered Verify for b09fb055 and replacement manual Verify; obtain independent exact-head review, then merge only after both pass. | codex-awc-ar0009-next4-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
