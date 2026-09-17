@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next44 PR #594 signed head cc73ad9 merged 4070279c; exact Verify 35230911063 and authoritative postmerge Verify 35231345295 succeeded. | Release completed next44, then claim next45 and implement next bounded fail-closed durability seam. | codex-awc-ar0012-next45-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next45 signed head 92b5c29 rebased onto current main 4070279; validator requires THEOREM Spec => []WriteFence. Focused 49-test and full 737-test 95% gates pass. | Publish signed 92b5c29 as PR; monitor AWQ/scope and exact-head pr-fast Verify, independently review, guarded merge on green, then postmerge and reconcile. | codex-awc-ar0012-next45-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor29 PR #593 merged c4d6634; exact Verify 35230863594 succeeded on f0e27ef; authoritative latest-main Verify 35231345295 succeeded on 4070279. Descriptor30 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor30-20260917 |
 
 ## Open
