@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `938e4e2660f758eb587178160047bd065ea51c26`
+- Product remote main: `70a628b14dfcefa784d0c3f0f7c799847d1bcdee`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #484 | `ar0009-publication-recovery@c73176a2cffb` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(selector): recover abandoned staging files safely |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35171597360 | `938e4e2660f7` | push | Verify | queued:- |
+| 35171786818 | `70a628b14dfc` | push | Verify | queued:- |
+| 35171597360 | `938e4e2660f7` | push | Verify | completed:success |
 | 35171441628 | `c73176a2cffb` | workflow_dispatch | Verify | completed:success |
 | 35171377605 | `c73176a2cffb` | pull_request | Verify | completed:success |
 | 35171305011 | `d2f096906d96` | pull_request | Verify | completed:success |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35170677902 | `a250489d9731` | push | Verify | completed:success |
 | 35170508687 | `0bd2a0f97882` | pull_request | Verify | completed:success |
 | 35170295025 | `8e5678f03b82` | pull_request | Verify | completed:failure |
-| 35170064156 | `8950f4fbcd6b` | push | Verify | completed:failure |
