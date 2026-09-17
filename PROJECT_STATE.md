@@ -3,8 +3,8 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `b717cb972f95caee5472b917b1b4347daae0057c`
-- Local origin/main: `6e61fed8188ae52174a8adac6bfd2dcd5f12bf60`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
 ## Open pull requests
 
@@ -20,15 +20,15 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #470 | `ar0013-selector-publication-adapter@56677042f523` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS: | feat(runtime): bind selector to canonical manifest identity |
+| #470 | `ar0013-selector-publication-adapter@56677042f523` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35195751739 | `56677042f523` | workflow_dispatch | Verify | in_progress:- |
-| 35195733094 | `56677042f523` | pull_request | Verify | in_progress:- |
+| 35195751739 | `56677042f523` | workflow_dispatch | Verify | completed:failure |
+| 35195733094 | `56677042f523` | pull_request | Verify | completed:success |
 | 35195479024 | `b4b4012322db` | workflow_dispatch | Verify | completed:failure |
 | 35194828161 | `b717cb972f95` | push | Verify | completed:success |
 | 35194710242 | `b4b4012322db` | pull_request | Verify | completed:success |
