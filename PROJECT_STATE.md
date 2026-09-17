@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `573b3a8842dcab661a16a74d5b70b998d5236ac0`
+- Product remote main: `b724a404e4833aaa9484e1659011001b2bbfd38a`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,12 +21,12 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #517 | `ar0012-lifecycle-model-bind@78f6c65fd5ac` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | enforce-model-action-contract-during-trace-validation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35186797491 | `573b3a8842dc` | push | Verify | queued:- |
 | 35186537067 | `811c4020c600` | workflow_dispatch | Verify | completed:success |
 | 35186484637 | `78f6c65fd5ac` | workflow_dispatch | Verify | completed:success |
 | 35186478878 | `78f6c65fd5ac` | pull_request | Verify | completed:success |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35185657281 | `b8629e1ea396` | workflow_dispatch | Verify | completed:success |
 | 35185613136 | `b8629e1ea396` | pull_request | Verify | completed:success |
 | 35185264155 | `e9e6ca3b3f8e` | push | Verify | completed:success |
-| 35185075926 | `9c10b78b3a93` | pull_request | Verify | completed:success |
