@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 8 |
 | **Future** | Deferred roadmap work | 0 |
@@ -39,7 +39,7 @@ flowchart LR
         AR_0009["AR-0009 - Open"]:::status_open
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
-        AR_0012["AR-0012 - In progress"]:::status_in_progress
+        AR_0012["AR-0012 - Open"]:::status_open
         AR_0013["AR-0013 - In progress"]:::status_in_progress
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
@@ -144,18 +144,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next52-20260917 | Next52 PR #612 merged b1b2d8a; exact Verify 35242408512 SUCCESS on signed head 334c57d. Authoritative post-merge Verify 35242704878 is queued/in progress on exact merge head; next52 held. | Await authoritative post-merge Verify 35242704878 terminal SUCCESS on b1b2d8a; then release next52 and claim next53. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor37-20260917 | Descriptor37 PR #613 merged as 63135b from exact signed head 2a4a7045; exact Verify 35242973968 succeeded with AWQ/scope green. Authoritative postmerge Verify 35243408775 failed only unrelated AR-0023 formatting in tools/artifact_binding.py and tests/test_artifact_binding.py; descriptor37 behavior was not implicated and reconciliation is held pending green baseline. | Hold descriptor37 reconciliation/release until authoritative latest-main postmerge Verify is green after AR-0023 formatting repair; do not modify AR-0023 from this lane. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next52 PR #612 merged b1b2d8a; exact Verify 35242408512 SUCCESS on signed head 334c57d. Authoritative post-merge Verify 35242704878 is queued/in progress on exact merge head; next52 held. | Await authoritative post-merge Verify 35242704878 terminal SUCCESS on b1b2d8a; then release next52 and claim next53. |
 
 ### Planned (8)
 
