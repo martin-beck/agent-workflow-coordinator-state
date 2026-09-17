@@ -361,7 +361,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0008-evidence-IjeiV7` | `DETACHED` | `acc064aa7cdf` | 0 | behind 495, ahead 1 |
 | `awc-ar0008-final-QrHRCw` | `ar0008-formal-evidence-integrity` | `9e14a040295d` | 0 | behind 492, ahead 0 |
 | `awc-ar0008-formal-BvUuj4` | `ar0008-reject-rollback-admission` | `267efd9eb9ef` | 0 | behind 442, ahead 1 |
-| `awc-ar0009-evidence.mpu1s5` | `DETACHED` | `0d8201630ebd` | 0 | behind 0, ahead 2 |
+| `awc-ar0009-evidence.mpu1s5` | `DETACHED` | `b09fb055e4bd` | 0 | behind 0, ahead 2 |
 | `awc-ar0009-freshclone.xFEtzm` | `DETACHED` | `d01e8cfa6ecc` | 0 | behind 43, ahead 0 |
 | `awc-ar0009-next` | `ar0009-next-recovery` | `1b571690de95` | 0 | behind 51, ahead 0 |
 | `awc-ar0009-publication` | `ar0009-publication-recovery` | `c73176a2cffb` | 0 | behind 71, ahead 0 |
