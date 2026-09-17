@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next25 exact terminal target-domain binding implemented in signed b1e7a01; focused gates pass. | Run full discovery/formal evidence for b1e7a01; if green publish signed PR and exact pr-fast Verify. Mutation remains disabled. | codex-awc-ar0012-next25-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #552 merged d21ba1b; post-merge Verify 35210143617 succeeded. Descriptor9 PR #554 published at 9bd78d7. | Obtain independent exact-head review of PR #554, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor10-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #554 merged 413e4a5f; exact Verify 35210740268 and authoritative post-merge Verify 35210953261 succeeded. | Implement descriptor10 bounded fail-closed admission boundary with hostile failure-path tests; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor10-20260917 |
 
 ## Open
 
