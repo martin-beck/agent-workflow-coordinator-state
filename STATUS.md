@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next3-20260917 | PR #507 merged as 4dd4ce45; post-merge Verify 35182029762 passed. Next slice PR #508 at 0b9ed6e fails closed if the source checkout is dirty before release evidence generation/upload; full local suite 757 passed. | Obtain independent exact-head review for PR #508 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next3-20260917 | PR #508 merged as a174fc1; post-merge Verify is pending/was not yet recorded. Next bounded slice is artifact-type safety: reject missing, non-regular, or symlinked release evidence before hashing/upload. | Implement and publish the artifact-type fail-closed slice; obtain independent exact-head review and Verify. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next11-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. |
 
 ### Open (1)
