@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next52 PR #612 merged b1b2d8a; exact Verify 35242408512 SUCCESS on signed head 334c57d. Authoritative post-merge Verify 35242704878 is queued/in progress on exact merge head; next52 held. | Await authoritative post-merge Verify 35242704878 terminal SUCCESS on b1b2d8a; then release next52 and claim next53. | codex-awc-ar0012-next53-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next52 complete: PR #612 merged b1b2d8a; exact Verify 35242408512 and authoritative post-merge Verify 35242704878 SUCCESS. Next53 freshly claimed for next bounded fail-closed durability seam; mutation remains disabled. | Inspect next53 boundary, implement one bounded fail-closed slice with hostile tests, run local quality/formal gates, then publish signed PR. | codex-awc-ar0012-next53-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor37 PR #613 merged as 63135b from exact signed head 2a4a7045; exact Verify 35242973968 succeeded with AWQ/scope green. Authoritative postmerge Verify 35243408775 failed only unrelated AR-0023 formatting in tools/artifact_binding.py and tests/test_artifact_binding.py; descriptor37 behavior was not implicated and reconciliation is held pending green baseline. | Hold descriptor37 reconciliation/release until authoritative latest-main postmerge Verify is green after AR-0023 formatting repair; do not modify AR-0023 from this lane. | codex-awc-ar0013-next-descriptor37-20260917 |
 
 ## Open
