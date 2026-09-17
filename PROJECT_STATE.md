@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `6e6a93e5768286d5c3a151accd97bd5f8bbd70b4`
+- Product remote main: `a95bcb52d8751dd0cc8e52c957acf03c7c32eed8`
 - Local origin/main: `13bfb85a70b6bd50f89fd54bccc90268d4897f44`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -21,16 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #550 | `ar0013-dispatch-revalidation@ba522f8cbafc` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | feat(runtime): bind admission to expected identity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35209175451 | `ba522f8cbafc` | workflow_dispatch | Verify | pending:- |
-| 35209132839 | `6e6a93e57682` | push | Verify | queued:- |
-| 35209064239 | `ba522f8cbafc` | pull_request | Verify | queued:- |
-| 35208964553 | `d4e8fb72c63e` | workflow_dispatch | Verify | in_progress:- |
+| 35209175451 | `ba522f8cbafc` | workflow_dispatch | Verify | queued:- |
+| 35209132839 | `6e6a93e57682` | push | Verify | in_progress:- |
+| 35209064239 | `ba522f8cbafc` | pull_request | Verify | completed:success |
+| 35208964553 | `d4e8fb72c63e` | workflow_dispatch | Verify | completed:cancelled |
 | 35208887215 | `321c6e3b501e` | pull_request | Verify | completed:success |
 | 35208880911 | `d4e8fb72c63e` | pull_request | Verify | completed:success |
 | 35208461126 | `13bfb85a70b6` | push | Verify | completed:success |
