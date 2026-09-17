@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next14 formal seam implemented locally: terminal contract now requires explicit new-target and rollback-child model branches, with hostile missing-branch regression coverage; signed commit 8fd2982. | Run full discovery/formal evidence for local next14 commit 8fd2982, which binds executable terminal target checks to both model branches; then prepare signed PR if green. Mutation remains disabled. | codex-awc-ar0012-next14-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #470 merged as 50765e70; exact-head Verify 35196770178 succeeded; post-merge Verify queued. | Monitor post-merge Verify for main 50765e70 to terminal; then release/reclaim AR-0013 for the next dependency-safe slice. | codex-awc-ar0013-next-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #470 merged 50765e70; selector resolver identity binding complete. Next slice is descriptor-bound validation-to-exec continuity. | Implement a retained descriptor-bound runtime resolution seam and hostile validation-to-exec replacement test; keep dispatch/mutation disabled until the descriptor contract is complete. | codex-awc-ar0013-next-20260917 |
 
 ## Open
 
