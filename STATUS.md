@@ -125,7 +125,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next16-20260917 | Next16 CompleteReopen model-branch binding published as PR #534; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #534 published at exact head 9e8b25fc; exact-head fast Verify 35200651786 dispatched, scope green and AWQ in progress. Await terminal success and independent review. Mutation remains disabled. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-manifest-20260917 | PR #533 descriptor-bound ResolvedRuntime handle published at f899f91; full 776 tests and 95&#37; branch coverage pass. | Obtain independent exact-head review of PR #533, dispatch hosted exact-head Verify, and address findings before merge. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-manifest-20260917 | Manifest continuity slice local signed checkpoint 83d9bfc; full suite and 95&#37; branch coverage pass. | Publish PR for revalidate_manifest additive handle seam after exact local gates; request independent review and hosted Verify. |
 
 ### Open (1)
 
