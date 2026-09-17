@@ -8,12 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #505 merged as 89052a73 and PR #506 merged as ec6faf4b; combined post-merge Verify 35181521635 passed all AWQ/scope/verify gates. Release evidence digest generation and strict verification are merged; upgrade mutation remains disabled. | Release this completed checkpoint, reclaim AR-0009, and select the next dependency-safe release-integration failure boundary; preserve fail-closed behavior. | codex-awc-ar0009-next3-20260917 |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. | codex-awc-ar0012-next10-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. | - |
 
 ## Done
