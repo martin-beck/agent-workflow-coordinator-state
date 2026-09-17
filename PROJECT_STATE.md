@@ -22,12 +22,14 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #495 | `ar0012-reconcile-crash-formal@d22d238c6a6a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(selector): verify fresh recovery after rename crash |
+| #496 | `ar0009-release-runbooks@d61a70f85981` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): publish verified upgrade runbooks |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35175891632 | `d22d238c6a6a` | workflow_dispatch | Verify | queued:- |
+| 35175954407 | `d61a70f85981` | pull_request | Verify | completed:success |
+| 35175891632 | `d22d238c6a6a` | workflow_dispatch | Verify | completed:success |
 | 35175844257 | `d22d238c6a6a` | pull_request | Verify | completed:success |
 | 35175483821 | `54a9251a9ffa` | push | Verify | completed:success |
 | 35175419962 | `cd75987fdae7` | push | Verify | completed:cancelled |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35174497690 | `9e6fe04dfb41` | push | Verify | completed:success |
 | 35174414657 | `4da483fa37a4` | workflow_dispatch | Verify | completed:success |
 | 35174325960 | `4103b34753cd` | pull_request | Verify | completed:success |
-| 35174136213 | `4fd259d7ea67` | push | Verify | completed:success |
