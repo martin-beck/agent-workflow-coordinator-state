@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #518 merged e8352bb4 with DCO repair; PR #519 merged 98b1ddc9; combined postmerge Verify 35188742813 passed. Next slice adds fail-closed release artifact owner/mode validation. | Publish and independently review artifact ownership/mode validation PR; run exact-head Verify, then merge only after approval and green gates. | codex-awc-ar0009-next4-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #522 published at signed head 7a72e93: release artifacts now require runner ownership and no group/other write bits; workflow contract tests cover both checks. | Obtain independent exact-head review for PR #522, then dispatch/await manual Verify and PR gates; merge only after approval and all required checks pass. | codex-awc-ar0009-next4-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
