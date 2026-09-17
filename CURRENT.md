@@ -16,6 +16,15 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0022](tasks/AR-0022.md): Mandatory oracle interaction-gate lifecycle | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. | - |
+| P0 | [AR-0023](tasks/AR-0023.md): Versioned planning and design artifact binding | Make before/after project artifacts durable and revision-bound around user discussions. | Bind versioned work-plan, design-document, dependency-graph, AR-manifest, and formal-specification snapshots to Coordinator task revisions. | - |
+| P0 | [AR-0024](tasks/AR-0024.md): Discussion pause and reconciliation enforcement | Prevent unresolved or contradictory user guidance from authorizing Coordinator continuation. | Enforce pause, user disposition, contradiction reopen, and repeated-discussion transitions before autonomous continuation. | - |
+| P1 | [AR-0025](tasks/AR-0025.md): Cross-project oracle workflow integration | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
