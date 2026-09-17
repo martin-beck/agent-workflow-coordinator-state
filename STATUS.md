@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next41-20260917 | Next41 signed head 442fbd4 rebased onto current main 069727c; validator requires THEOREM Spec =&gt; &#91;&#93;AmbiguousIsWriteClosed. Focused 49-test and full 737-test 95&#37; gates pass. | Publish signed 442fbd4 as PR; monitor AWQ/scope and exact-head pr-fast Verify, independently review, guarded merge on green, then postmerge and reconcile. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next41-20260917 | Next41 PR #588 published at signed head 442fbd4; validator requires THEOREM Spec =&gt; &#91;&#93;AmbiguousIsWriteClosed. Focused 49-test and full 737-test 95&#37; gates pass. | Monitor PR #588 AWQ/scope and exact-head pr-fast Verify; independently review, guarded merge on green, then authoritative postmerge Verify and reconcile. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor26-20260917 | Descriptor25 PR #585 merged b4a045a; exact Verify 35226548172 and authoritative latest-main post-merge Verify 35226977082 succeeded on 069727c7 with formal tier and attestation. Descriptor26 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. |
 
 ### Open (1)
