@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `9db5d4057ca8c258aa9e300657b4a70c4f6be791`
+- Product remote main: `05fbc2c5a2830530cf2066e5ba5d25c8656fc721`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,14 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #589 | `ar0013-dispatch-revalidation@98ecc35bdc56` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): validate retained release |
+| #591 | `ar0013-dispatch-revalidation@103d72a6a798` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): validate retained identity shapes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35229075857 | `9db5d4057ca8` | push | Verify | queued:- |
-| 35228821645 | `98ecc35bdc56` | pull_request | Verify | in_progress:- |
+| 35229612275 | `05fbc2c5a283` | push | Verify | queued:- |
+| 35229583877 | `103d72a6a798` | pull_request | Verify | in_progress:- |
+| 35229075857 | `9db5d4057ca8` | push | Verify | completed:success |
+| 35228821645 | `98ecc35bdc56` | pull_request | Verify | completed:success |
 | 35228815810 | `a83866456ea4` | pull_request | Verify | completed:success |
 | 35228586895 | `a5606793188f` | pull_request | Verify | completed:failure |
 | 35228055439 | `67fc7b9713c7` | push | Verify | completed:success |
@@ -37,5 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35227421572 | `b76f2625a7a9` | pull_request | Verify | completed:success |
 | 35226977082 | `069727c7e72e` | push | Verify | completed:success |
 | 35226851040 | `b4a045a49814` | push | Verify | completed:cancelled |
-| 35226724657 | `a937160fa234` | pull_request | Verify | completed:success |
-| 35226548172 | `15244c8a3bfa` | pull_request | Verify | completed:success |
