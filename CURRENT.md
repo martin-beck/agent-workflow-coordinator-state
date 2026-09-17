@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Repair post-merge coverage failure from PR #478: add targeted sqlite_authority_adapter reconciliation/descriptor branch tests until full branch coverage is >=95, then publish and re-review exact head. | codex-awc-ar0009-atomic-20260917 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Raise full repository branch coverage from 94% to >=95% for PR #479; add targeted tests without exclusions, rerun full quality gates, then obtain exact-head review and merge only with post-merge green. | codex-awc-ar0009-atomic-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. | codex-awc-ar0013-runtime-20260917 |
 
 ## Open
