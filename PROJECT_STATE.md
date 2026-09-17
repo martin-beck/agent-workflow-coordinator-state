@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `3a7e534f0434e162daa7602f59d2b8806ddad9f2`
+- Product remote main: `3752c34f740b0cdb32b43cf252260d662aa5806e`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,14 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #498 | `ar0009-release-fresh-clone@d01e8cfa6ecc` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate contracts from fresh clone |
-| #499 | `ar0012-reconcile-crash-formal@239494f293bb` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(selector): recover after final parent recheck crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35177294085 | `239494f293bb` | workflow_dispatch | Verify | queued:- |
+| 35177508604 | `3752c34f740b` | push | Verify | completed:success |
+| 35177381877 | `21a1f93dac39` | push | Verify | completed:cancelled |
+| 35177294085 | `239494f293bb` | workflow_dispatch | Verify | completed:success |
 | 35177147057 | `d01e8cfa6ecc` | workflow_dispatch | Verify | completed:success |
 | 35177143236 | `239494f293bb` | pull_request | Verify | completed:success |
 | 35177090730 | `d01e8cfa6ecc` | pull_request | Verify | completed:success |
@@ -38,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35176549600 | `1dfbab6aa8bd` | workflow_dispatch | Verify | completed:success |
 | 35176497633 | `1dfbab6aa8bd` | pull_request | Verify | completed:success |
 | 35176242978 | `0a4258d4662a` | push | Verify | completed:success |
-| 35176099970 | `c0b8b850a2cb` | push | Verify | completed:cancelled |
-| 35176043350 | `d61a70f85981` | workflow_dispatch | Verify | completed:success |
