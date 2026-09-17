@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #478 | `ar0009-release-integration@abee229336ba` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | AR-0009: add fenced selector reconciliation seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35167852967 | `abee229336ba` | pull_request | Verify | completed:success |
 | 35167535965 | `985170a09229` | push | Verify | completed:success |
 | 35167453335 | `b0d99fd29b7f` | pull_request | Verify | completed:success |
 | 35167187851 | `ca0d771bd905` | push | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35165613824 | `607a429d3cc7` | push | Verify | completed:failure |
 | 35165525090 | `8a155d54db6e` | pull_request | Verify | completed:success |
 | 35164906797 | `cec9ffab104a` | push | Verify | completed:success |
-| 35164643019 | `074dd69ef4f6` | pull_request | Verify | completed:success |
