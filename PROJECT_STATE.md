@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0a4258d4662af75de49eae3002fe54712bc43442`
+- Product remote main: `3a7e534f0434e162daa7602f59d2b8806ddad9f2`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #497 | `ar0012-reconcile-crash-formal@1dfbab6aa8bd` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(selector): recover after directory fsync crash |
+| #498 | `ar0009-release-fresh-clone@86fad8b9b698` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate contracts from fresh clone |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35176549600 | `1dfbab6aa8bd` | workflow_dispatch | Verify | queued:- |
+| 35176900568 | `86fad8b9b698` | workflow_dispatch | Verify | queued:- |
+| 35176710222 | `3a7e534f0434` | push | Verify | completed:success |
+| 35176557336 | `86fad8b9b698` | pull_request | Verify | completed:success |
+| 35176549600 | `1dfbab6aa8bd` | workflow_dispatch | Verify | completed:success |
 | 35176497633 | `1dfbab6aa8bd` | pull_request | Verify | completed:success |
 | 35176242978 | `0a4258d4662a` | push | Verify | completed:success |
 | 35176099970 | `c0b8b850a2cb` | push | Verify | completed:cancelled |
@@ -36,6 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35175891632 | `d22d238c6a6a` | workflow_dispatch | Verify | completed:success |
 | 35175844257 | `d22d238c6a6a` | pull_request | Verify | completed:success |
 | 35175483821 | `54a9251a9ffa` | push | Verify | completed:success |
-| 35175419962 | `cd75987fdae7` | push | Verify | completed:cancelled |
-| 35175294496 | `9c1aa0cb21ff` | pull_request | Verify | completed:success |
-| 35175145671 | `1b571690de95` | workflow_dispatch | Verify | completed:success |
