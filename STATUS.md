@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #526 exact signed head 83f44a65 independently APPROVED: bounded 1 MiB transition input with hostile test; focused 55-test suite and static gates pass; Verify 35193554428 SUCCESS. | Merge PR #526 via handoffctl, then monitor terminal post-merge Verify and reconcile durable state. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #526 merged 6e61fed; post-merge Verify 35193938843 completed SUCCESS on exact merge head. Oversized transition-input boundary is complete. | Inspect next dependency-safe AR-0009 release-integrity boundary; claim a fresh slice only after selection and avoid AR-0012 overlap. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next11-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. |
 
 ### Open (1)
