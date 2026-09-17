@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #518 | `ar0009-poll-deadline-test-repair@0d8201630ebd` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(control): isolate polling deadline clock |
+| #518 | `ar0009-poll-deadline-test-repair@0d8201630ebd` | `main` | UNSTABLE | QUEUED:, COMPLETED:SUCCESS | test(control): isolate polling deadline clock |
 | #519 | `ar0012-model-backup-contract@2658ff4902e8` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | require-both-authoritative-backup-model-actions |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35187824670 | `0d8201630ebd` | workflow_dispatch | Verify | in_progress:- |
 | 35187811220 | `0d8201630ebd` | pull_request | Verify | queued:- |
 | 35187495209 | `db72211a5e0a` | workflow_dispatch | Verify | completed:failure |
 | 35187446465 | `2658ff4902e8` | workflow_dispatch | Verify | completed:success |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35186484637 | `78f6c65fd5ac` | workflow_dispatch | Verify | completed:success |
 | 35186478878 | `78f6c65fd5ac` | pull_request | Verify | completed:success |
 | 35186474108 | `811c4020c600` | pull_request | Verify | completed:success |
-| 35186101330 | `a094f5cd91e3` | push | Verify | completed:success |
