@@ -7,6 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next24 rollback terminal target aligned with model; PR #553 merged df150f3a; post-merge Verify 35210536843 succeeded. | Release next24 and claim next25; inspect remaining formal/durability correspondence seams and implement one bounded fail-closed slice with hostile tests/evidence. | codex-awc-ar0012-next25-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #552 merged d21ba1b; post-merge Verify 35210143617 succeeded. Descriptor9 PR #554 published at 9bd78d7. | Obtain independent exact-head review of PR #554, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor9-20260917 |
 
 ## Open
@@ -14,7 +15,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next24 rollback terminal target aligned with model; PR #553 merged df150f3a; post-merge Verify 35210536843 succeeded. | Release next24 and claim next25; inspect remaining formal/durability correspondence seams and implement one bounded fail-closed slice with hostile tests/evidence. | - |
 
 ## Done
 
