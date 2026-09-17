@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #539 merged as 50ec18b1 after independent APPROVE and exact Verify 35202894561 success; post-merge Verify 35203258793 is pending. | Monitor post-merge Verify 35203258793 on merge head 50ec18b1 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next18-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next19 formal seam implemented locally: terminal contract requires exact CompleteReopen(p) definition, not a loose marker; signed commit ee77c0e, focused gates green. | Run full discovery/formal evidence for local next19 commit ee77c0e, requiring exact CompleteReopen(p) definition binding; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next19-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #538 merged as 5a06af4; exact Verify 35202873992 and authoritative post-merge Verify 35203258793 succeeded on main 50ec18b. | Implement the next dependency-safe descriptor-continuity boundary with retained-handle admission evidence and hostile replacement coverage; keep execution and selector mutation disabled until a complete contract exists. | codex-awc-ar0013-next-descriptor2-20260917 |
 
 ## Open
