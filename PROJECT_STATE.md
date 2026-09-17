@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `3fb3a14aa622585c6c7f0d41fd3fb27c59305132`
+- Product remote main: `0c6208dd3439350d0ce55e10c446b9390f3d2a1e`
 - Local origin/main: `86f3f451f7ca2b3e027345a606fc2e02f6c85617`
 - Primary worktree head: `8cc898ec6cb1cc1cc37c604d404b778abbf957e5`
 
@@ -21,15 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #599 | `ar0022-oracle-gates@c4f4143875df` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
-| #601 | `ar0012-child-identity-theorem@55286a6a86d8` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): require child identity theorem |
+| #599 | `ar0022-oracle-gates@8cc898ec6cb1` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35234800065 | `3fb3a14aa622` | push | Verify | queued:- |
-| 35234577972 | `55286a6a86d8` | pull_request | Verify | in_progress:- |
+| 35235059072 | `0c6208dd3439` | push | Verify | in_progress:- |
+| 35234914636 | `8cc898ec6cb1` | pull_request | Verify | completed:failure |
+| 35234800065 | `3fb3a14aa622` | push | Verify | completed:cancelled |
+| 35234577972 | `55286a6a86d8` | pull_request | Verify | completed:success |
 | 35234542099 | `c4f4143875df` | pull_request | Verify | completed:failure |
 | 35234480805 | `5ab8ac2eabdb` | pull_request | Verify | completed:success |
 | 35234222268 | `7fe507c0264f` | pull_request | Verify | completed:failure |
@@ -38,5 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35233450060 | `9dc3d38a8cfd` | push | Verify | completed:cancelled |
 | 35233336122 | `13f58fa91382` | pull_request | Verify | completed:success |
 | 35232928828 | `501ec86b41f5` | pull_request | Verify | completed:success |
-| 35232381995 | `86f3f451f7ca` | push | Verify | completed:success |
-| 35232193795 | `97b79fc0a7fe` | push | Verify | completed:cancelled |
