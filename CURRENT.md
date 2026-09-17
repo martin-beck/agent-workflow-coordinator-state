@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next51 complete: selector precedence repair PR #611 merged b142359; authoritative post-merge Verify 35241888312 SUCCESS. Next52 freshly claimed for next bounded fail-closed durability seam; mutation remains disabled. | Inspect next52 boundary, implement one bounded fail-closed slice with hostile tests, run local quality/formal gates, then publish signed PR. | codex-awc-ar0012-next52-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next52 PR #612 published at signed head 334c57d on repaired main: UpgradeRecovery validator requires FunctionalAvailability theorem admission marker with hostile missing-theorem coverage. Focused 36 tests and Ruff pass; mutation disabled. | Await PR #612 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then verify authoritative postmerge before releasing next52. | codex-awc-ar0012-next52-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor36 PR #609 merged e8d06c9; exact Verify 35240588427 succeeded on 7f81c97; authoritative current-main Verify 35241888312 succeeded on b142359. Descriptor37 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor37-20260917 |
 
 ## Open
