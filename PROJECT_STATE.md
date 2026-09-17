@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #476 | `ar0009-release-integration@b8f5ae1f89b0` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | AR-0009: bind SQLite selector targets to lifecycle admission |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35166669191 | `b8f5ae1f89b0` | pull_request | Verify | completed:success |
 | 35166169067 | `e5f536908ec4` | push | Verify | completed:success |
 | 35166004440 | `6fbe61e15518` | pull_request | Verify | completed:success |
 | 35165613824 | `607a429d3cc7` | push | Verify | completed:failure |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35163909910 | `aa365c2eede1` | push | Verify | completed:success |
 | 35163850038 | `71b51b311335` | pull_request | Verify | completed:success |
 | 35163718585 | `8173b9d4f38e` | push | Verify | completed:success |
-| 35163639376 | `6b8d2c7b95f6` | pull_request | Verify | completed:success |
