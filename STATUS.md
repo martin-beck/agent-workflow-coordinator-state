@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #525 merged d94b472ff and PR #523 merged 6edaa11c5. Successor post-merge Verify 35193187336 on current main 6edaa11c5 passed; prior run 35193061709 was cancelled by superseding main activity. Local a7e006e is now dependency-ready but remains unpublished pending next-slice review. | Record merged #523/#525 and successful combined Verify 35193187336; then prepare/publish local a7e006e oversized-input slice under a fresh claim, with independent review and exact Verify. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #523/#525 merged; post-merge Verify 35193187336 passed. Prepared oversized-input slice rebased cleanly onto main 6edaa11c as signed head 83f44a65. | Publish PR for signed head 83f44a65, obtain independent exact-head review, dispatch manual pr-fast Verify, and merge only after all gates pass. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next11-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. |
 
 ### Open (1)
