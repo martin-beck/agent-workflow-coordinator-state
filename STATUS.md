@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next14-20260917 | Next14 formal target-branch binding published as PR #531: explicit forward new-target and rollback-child model branches with hostile missing-branch regression coverage; signed/DCO and local gates green. | PR #531 published at exact head be4655e1; await AWQ, exact-head fast Verify, and independent review before merge. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next14-20260917 | PR #531 merged as 296e2cd8 after independent APPROVE and exact Verify 35198621074 success; post-merge Verify 35198842861 is in progress. | Monitor post-merge Verify 35198842861 on merge head 296e2cd8 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-20260917 | PR #470 merged 50765e70; selector resolver identity binding complete. Next slice is descriptor-bound validation-to-exec continuity. | Implement a retained descriptor-bound runtime resolution seam and hostile validation-to-exec replacement test; keep dispatch/mutation disabled until the descriptor contract is complete. |
 
 ### Open (1)
