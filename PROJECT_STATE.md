@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
+| #568 | `ar0012-terminal-held-preconditions@4f3d8c29e781` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind held authority preconditions |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35217790531 | `4f3d8c29e781` | pull_request | Verify | queued:- |
 | 35217245479 | `f3dcb9530098` | push | Verify | completed:success |
 | 35216947871 | `67c73e1b0af4` | push | Verify | completed:cancelled |
 | 35216932410 | `edda7ef32e08` | workflow_dispatch | Verify | completed:cancelled |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35215505042 | `011709f5884e` | workflow_dispatch | Verify | completed:success |
 | 35215466226 | `011709f5884e` | pull_request | Verify | completed:cancelled |
 | 35215334868 | `024c50c24068` | push | Verify | completed:success |
-| 35215102453 | `11fbef518719` | pull_request | Verify | completed:success |
