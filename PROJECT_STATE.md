@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #490 | `ar0009-next2-recovery@4da483fa37a4` | `main` | DIRTY | - | fix(selector): recheck selector after recovery cleanup |
+| #490 | `ar0009-next2-recovery@1b571690de95` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(selector): recheck selector after recovery cleanup |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35174497690 | `9e6fe04dfb41` | push | Verify | in_progress:- |
+| 35174703739 | `1b571690de95` | pull_request | Verify | completed:success |
+| 35174497690 | `9e6fe04dfb41` | push | Verify | completed:success |
 | 35174414657 | `4da483fa37a4` | workflow_dispatch | Verify | completed:success |
 | 35174325960 | `4103b34753cd` | pull_request | Verify | completed:success |
 | 35174136213 | `4fd259d7ea67` | push | Verify | completed:success |
@@ -38,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35173193625 | `79f006bb63dc` | pull_request | Verify | completed:success |
 | 35172979852 | `cb68c9d5628c` | push | Verify | completed:success |
 | 35172794333 | `82a053ab8a74` | pull_request | Verify | completed:success |
-| 35172570570 | `92552872e14e` | push | Verify | completed:success |
