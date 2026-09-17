@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #479 | `ar0009-release-integration@682d48d151aa` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(sqlite): cover selector descriptor rejection paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35168589050 | `682d48d151aa` | pull_request | Verify | completed:success |
 | 35168226783 | `49bd930cfc70` | push | Verify | completed:failure |
 | 35168156659 | `80e3851a0e99` | pull_request | Verify | completed:success |
 | 35168017012 | `02de3b2584a6` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35166913365 | `d33f42f26466` | pull_request | Verify | completed:success |
 | 35166669191 | `b8f5ae1f89b0` | pull_request | Verify | completed:success |
 | 35166169067 | `e5f536908ec4` | push | Verify | completed:success |
-| 35166004440 | `6fbe61e15518` | pull_request | Verify | completed:success |
