@@ -124,8 +124,8 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next17-20260917 | PR #537 merged as d78be041 after independent APPROVE and exact Verify success; post-merge Verify 35202420105 is pending. | Monitor post-merge Verify 35202420105 on merge head d78be041 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor-20260917 | PR #536 merged as c812eea7; exact Verify 35201959344 succeeded at bbabd1c. Replacement post-merge Verify 35202420105 is in progress for current main d78be041; prior run 35202199863 was cancelled. | Monitor replacement post-merge Verify 35202420105 for merge d78be041; release AR-0013 and claim the next descriptor-continuity slice only after terminal success. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next18-20260917 | PR #537 merged as d78be041 after independent APPROVE and exact Verify success; post-merge Verify 35202420105 is pending. | Monitor post-merge Verify 35202420105 on merge head d78be041 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor-20260917 | PR #536 merged c812eea7; exact Verify 35201959344 and replacement post-merge Verify 35202420105 succeeded on main d78be041. | Implement the next dependency-safe descriptor continuity boundary: bind the retained handle to the eventual runtime dispatch admission API, preserving mutation-disabled and fail-closed behavior; add hostile replacement tests before any publication. |
 
 ### Open (1)
 
