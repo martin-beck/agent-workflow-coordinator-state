@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `63135b383afd5013b7e172854d4981b58250150b`
+- Product remote main: `f29b28738d55a40dc408208e407159c3d1cf2c31`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -22,20 +22,24 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #615 | `ar0012-backup-theorem@497ea6de7837` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require backup theorem admission |
+| #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
+| #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #622 | `ar0024-ar0023-stacked@161de1094237` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | chore: stack AR-0023 quality and AR-0024 compatibility repairs |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35243408775 | `63135b383afd` | push | Verify | completed:failure |
-| 35243171849 | `53590074c4c5` | push | Verify | completed:failure |
-| 35243092167 | `c25bebcafe49` | pull_request | Verify | completed:success |
-| 35242973968 | `2a4a704579c5` | pull_request | Verify | completed:success |
-| 35242945594 | `f50a0387b6c4` | pull_request | Verify | completed:cancelled |
-| 35242704878 | `b1b2d8ae7d07` | push | Verify | completed:success |
-| 35242564915 | `b9adde8247c8` | pull_request | Verify | completed:failure |
-| 35242408512 | `334c57dc8044` | pull_request | Verify | completed:success |
-| 35241888312 | `b142359e48dc` | push | Verify | completed:success |
-| 35241806275 | `73442334f402` | pull_request | Verify | completed:success |
-| 35241326451 | `14f27c440ba4` | push | Verify | completed:success |
-| 35241264329 | `70919dd660ae` | pull_request | Verify | completed:failure |
+| 35246091856 | `161de1094237` | workflow_dispatch | Verify | in_progress:- |
+| 35246028981 | `161de1094237` | pull_request | Verify | completed:success |
+| 35245944574 | `f29b28738d55` | push | Verify | completed:failure |
+| 35245866912 | `55b1758cd41f` | pull_request | Verify | completed:success |
+| 35245608353 | `1c5849f7adcd` | push | Verify | completed:failure |
+| 35245536398 | `d3ac461e07f0` | pull_request | Verify | completed:success |
+| 35245367899 | `cc87a9d22d67` | workflow_dispatch | Verify | completed:failure |
+| 35244986378 | `12562290b3e7` | workflow_dispatch | Verify | completed:failure |
+| 35244916166 | `9f618ed94d5c` | push | Verify | completed:failure |
+| 35244914474 | `12562290b3e7` | pull_request | Verify | completed:success |
+| 35244785767 | `ac21d5cd3e2b` | pull_request | Verify | completed:success |
+| 35244774396 | `cf09c5db0b48` | workflow_dispatch | Verify | completed:cancelled |
