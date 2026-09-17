@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
@@ -49,7 +49,7 @@ flowchart LR
         AR_0019["AR-0019 - Done"]:::status_done
         AR_0020["AR-0020 - Done"]:::status_done
         AR_0021["AR-0021 - Done"]:::status_done
-        AR_0022["AR-0022 - Open"]:::status_open
+        AR_0022["AR-0022 - In progress"]:::status_in_progress
         AR_0023["AR-0023 - Planned"]:::status_planned
         AR_0024["AR-0024 - Planned"]:::status_planned
         AR_0025["AR-0025 - Planned"]:::status_planned
@@ -144,18 +144,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor37-20260917 | Descriptor37 PR #613 merged as 63135b from exact signed head 2a4a7045; exact Verify 35242973968 succeeded with AWQ/scope green. Authoritative postmerge Verify 35243408775 failed only unrelated AR-0023 formatting in tools/artifact_binding.py and tests/test_artifact_binding.py; descriptor37 behavior was not implicated and reconciliation is held pending green baseline. | Hold descriptor37 reconciliation/release until authoritative latest-main postmerge Verify is green after AR-0023 formatting repair; do not modify AR-0023 from this lane. |
+| P0 | [AR-0022](tasks/AR-0022.md): Mandatory oracle interaction-gate lifecycle | codex-awc-ar0022-oracle-gates-20260917 | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
-| P0 | [AR-0022](tasks/AR-0022.md): Mandatory oracle interaction-gate lifecycle | Unclaimed | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. |
 
 ### Planned (7)
 
