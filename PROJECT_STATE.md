@@ -22,14 +22,14 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #599 | `ar0022-oracle-gates@885ecbbdf9e4` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
-| #604 | `ar0013-dispatch-revalidation@1597b2e6a886` | `main` | UNSTABLE | QUEUED:, QUEUED: | fix(runtime): close handles on verification failures |
+| #604 | `ar0013-dispatch-revalidation@1597b2e6a886` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): close handles on verification failures |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35237246905 | `1597b2e6a886` | pull_request | Verify | queued:- |
-| 35237013041 | `ef3a90775731` | push | Verify | in_progress:- |
+| 35237246905 | `1597b2e6a886` | pull_request | Verify | in_progress:- |
+| 35237013041 | `ef3a90775731` | push | Verify | completed:failure |
 | 35236962495 | `845e59d8ce25` | pull_request | Verify | completed:failure |
 | 35236766627 | `885ecbbdf9e4` | pull_request | Verify | completed:failure |
 | 35236576604 | `76258be6f60c` | pull_request | Verify | completed:success |
