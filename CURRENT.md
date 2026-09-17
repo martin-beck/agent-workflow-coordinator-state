@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next31 terminal release transition merged PR #566 67c73e1; authoritative latest-main Verify 35217245479 succeeded on f3dcb953. | Implement next32: inspect remaining formal/durability correspondence seam, add hostile fail-closed test, run full gates and publish signed PR. | codex-awc-ar0012-next32-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next32 held authority preconditions merged PR #568 d8886cef; post-merge Verify 35218048325 succeeded. | Release next32 and claim next33; inspect remaining formal/durability correspondence seam and implement one bounded fail-closed slice. | codex-awc-ar0012-next32-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor16 PR #569 hardens DispatchAdmission revalidation against malformed runtime handles and mutated identity evidence; local 792-test suite passes at 95% coverage. | Obtain independent exact-head review and terminal pr-fast Verify for PR #569 head fec95511e6faf3fc0565736f13b7107a34462920; merge only after both pass. | codex-awc-ar0013-next-descriptor16-20260917 |
 
 ## Open
