@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #480 | `ar0012-reconcile-crash-formal@5854ae464bbe` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(selector): prove fsync ambiguity leaves no residue |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35169313552 | `5854ae464bbe` | pull_request | Verify | completed:success |
 | 35169071825 | `1a4ac5e64227` | push | Verify | completed:success |
 | 35168847451 | `be8ce206746e` | workflow_dispatch | Verify | completed:success |
 | 35168811415 | `be8ce206746e` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35167535965 | `985170a09229` | push | Verify | completed:success |
 | 35167453335 | `b0d99fd29b7f` | pull_request | Verify | completed:success |
 | 35167187851 | `ca0d771bd905` | push | Verify | completed:success |
-| 35167113631 | `7e64bbe0edd1` | pull_request | Verify | completed:success |
