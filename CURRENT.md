@@ -8,12 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Bounded runbook output-integrity slice published as PR #529 at 77fbbdc; rejects symlinked ancestor paths. | Obtain independent exact-head review and hosted Verify for PR #529; do not merge without both. | codex-awc-ar0009-next4-20260917 |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #530 merged as 81cd20d7 after exact Verify 35197758293 success and independent APPROVE; post-merge Verify 35198022149 is pending. | Monitor post-merge Verify 35198022149 on merge head 81cd20d7 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next13-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #530 merged as 81cd20d7 after exact Verify 35197758293 success and independent APPROVE; post-merge Verify 35198022149 is pending. | Monitor post-merge Verify 35198022149 on merge head 81cd20d7 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #470 merged as 50765e70; exact-head Verify 35196770178 succeeded; post-merge Verify queued. | Monitor post-merge Verify for main 50765e70 to terminal; then release/reclaim AR-0013 for the next dependency-safe slice. | - |
 
 ## Done
