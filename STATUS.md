@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-20260917 | Resolver identity-binding slice published at b4b4012322dbdc45ee3c823c10bc6027bbc04f01 on PR #470. | Dispatch exact-head Verify for PR #470 and complete independent review; do not merge before hosted formal success. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-20260917 | PR #470 provenance repaired with tree-preserving signed/DCO history; exact head 5667704. | Complete replacement exact-head Verify and independent review; do not merge before all gates pass. |
 
 ### Open (2)
 
