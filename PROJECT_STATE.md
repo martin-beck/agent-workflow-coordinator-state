@@ -3,8 +3,8 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `b724a404e4833aaa9484e1659011001b2bbfd38a`
-- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
-- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
+- Local origin/main: `b724a404e4833aaa9484e1659011001b2bbfd38a`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
