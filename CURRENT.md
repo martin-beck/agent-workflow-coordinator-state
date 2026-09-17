@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0023](tasks/AR-0023.md): Versioned planning and design artifact binding | Make before/after project artifacts durable and revision-bound around user discussions. | Bind versioned work-plan, design-document, dependency-graph, AR-manifest, and formal-specification snapshots to Coordinator task revisions. | codex-awc-ar0023-oracle-artifacts-20260917 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -46,6 +40,7 @@ Never edit this file directly.
 | P0 | [AR-0018](tasks/AR-0018.md): Formal attestation resource-bound consistency | Align formal attestation resource_bounds with the actual workflow-enforced TLC profile; prevent publication of contradictory evidence. | Implement bound derivation in attest.py, add tier-specific regression tests, publish an exact-head PR, and require green post-merge Verify. | - |
 | P0 | [AR-0020](tasks/AR-0020.md): Correct formal tier policy for merge and advisory exhaustive runs | Correct post-merge and sustained formal verification tier policy without weakening release evidence. | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. | - |
 | P0 | [AR-0022](tasks/AR-0022.md): Mandatory oracle interaction-gate lifecycle | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. | - |
+| P0 | [AR-0023](tasks/AR-0023.md): Versioned planning and design artifact binding | Make before/after project artifacts durable and revision-bound around user discussions. | Bind versioned work-plan, design-document, dependency-graph, AR-manifest, and formal-specification snapshots to Coordinator task revisions. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
