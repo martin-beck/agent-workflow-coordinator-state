@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #545 merged as 1b51f963 after independent APPROVE and exact Verify success; post-merge Verify 35205758180 is in progress. | Monitor post-merge Verify 35205758180 on merge head 1b51f963 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next21-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next21 formal seam implemented locally: terminal contract requires explicit terminalTarget domain membership; signed commit fc97997, focused gates green. | Run full discovery/formal evidence for local next21 commit fc97997, binding terminalTarget \in Targets model domain; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next21-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #542 merged 43b8c7d1; exact Verify 35204602729 and authoritative post-merge Verify 35204995362 succeeded on 9059876c. Descriptor4 PR #544 is published at 319a822. | Obtain independent exact-head review of PR #544, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor4-20260917 |
 
 ## Open
