@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next23 formal seam implemented locally: terminal contract requires exact VerifyTerminal(p, target) definition; signed commit 41730d8, focused gates green. | Run full discovery/formal evidence for local next23 commit 41730d8, requiring exact VerifyTerminal(p, target) definition binding; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next23-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #548 merged 6a9c1fb; post-merge Verify 35207880552 failed on stale selector fixture expectation. Repair PR #549 is published at 93953da; production fail-closed behavior unchanged. | Obtain independent exact-head review of PR #549, run full relevant suite/formal gates, dispatch exact-head Verify, and merge only after all gates pass; do not claim descriptor7. | codex-awc-ar0013-next-descriptor7-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #548 merged 6a9c1fb; post-merge Verify 35207880552 failed on stale selector fixture expectation. Repair PR #549 is published at 93953da; production fail-closed behavior unchanged. | Obtain independent exact-head review of PR #549, run full relevant suite/formal gates, dispatch exact-head Verify, and merge only after all gates pass; do not claim descriptor7. | - |
 
 ## Done
 
