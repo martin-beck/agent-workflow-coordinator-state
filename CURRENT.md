@@ -7,14 +7,14 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next43 PR #592 signed head fe3a62f merged 91650195; exact Verify 35229804115 and authoritative postmerge Verify 35230164391 succeeded. | Release completed next43, then claim next44 and implement next bounded fail-closed durability seam. | codex-awc-ar0012-next44-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor27 PR #589 merged 05fbc2c5; corrected exact Verify 35228821645 and authoritative latest-main Verify 35229075857 succeeded on 9db5d405 with formal tier and attestation. Descriptor28 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | codex-awc-ar0013-next-descriptor28-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next43 PR #592 signed head fe3a62f merged as 91650195; exact Verify 35229804115 succeeded. Authoritative postmerge Verify 35230164391 is queued. | Monitor authoritative postmerge 35230164391 on 91650195 to terminal success; then release next43, claim next44, and implement next bounded seam. | codex-awc-ar0012-next43-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor27 PR #589 merged 05fbc2c5; corrected exact Verify 35228821645 and authoritative latest-main Verify 35229075857 succeeded on 9db5d405 with formal tier and attestation. Descriptor28 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | - |
 
 ## Planned
 
