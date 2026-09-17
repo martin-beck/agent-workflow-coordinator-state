@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | PR #484 published at exact head eb31577a; obtain independent review and green hosted Verify, then merge and post-merge verify. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #458 fixture-only campaign published; real coordinator-shaped Git/SQLite backup, generated operation dispatch, fault recovery, WAL/SIGKILL reopen, and fail-closed apply evidence complete. Production upgrade execution remains disabled. | Audit remaining AR-0009 release-integration gaps after PR #490 merge; select next dependency-safe production slice and publish exact-head evidence. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next7-20260917 | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Replace PR #480 in-process fsync mock with a real child-process termination boundary after selector rename/before directory fsync; fresh-process verify exact old/new reconciliation and no residue, then republish/review. |
 
 ### Open (1)
