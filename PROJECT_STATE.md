@@ -22,14 +22,15 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #498 | `ar0009-release-fresh-clone@d01e8cfa6ecc` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate contracts from fresh clone |
-| #499 | `ar0012-reconcile-crash-formal@239494f293bb` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(selector): recover after final parent recheck crash |
+| #499 | `ar0012-reconcile-crash-formal@239494f293bb` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(selector): recover after final parent recheck crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35177147057 | `d01e8cfa6ecc` | workflow_dispatch | Verify | queued:- |
-| 35177143236 | `239494f293bb` | pull_request | Verify | in_progress:- |
+| 35177294085 | `239494f293bb` | workflow_dispatch | Verify | queued:- |
+| 35177147057 | `d01e8cfa6ecc` | workflow_dispatch | Verify | completed:success |
+| 35177143236 | `239494f293bb` | pull_request | Verify | completed:success |
 | 35177090730 | `d01e8cfa6ecc` | pull_request | Verify | completed:success |
 | 35176900568 | `86fad8b9b698` | workflow_dispatch | Verify | completed:success |
 | 35176710222 | `3a7e534f0434` | push | Verify | completed:success |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35176242978 | `0a4258d4662a` | push | Verify | completed:success |
 | 35176099970 | `c0b8b850a2cb` | push | Verify | completed:cancelled |
 | 35176043350 | `d61a70f85981` | workflow_dispatch | Verify | completed:success |
-| 35175954407 | `d61a70f85981` | pull_request | Verify | completed:success |
