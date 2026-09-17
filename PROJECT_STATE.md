@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `2f584bbdfff33d66183aff233fd6ebf49c1654dd`
-- Local origin/main: `2f584bbdfff33d66183aff233fd6ebf49c1654dd`
+- Product remote main: `e9e6ca3b3f8eb7941a1fb870db38773118579225`
+- Local origin/main: `e9e6ca3b3f8eb7941a1fb870db38773118579225`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -21,21 +21,20 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #512 | `ar0009-release-artifact-set-3@0c91ce2134d3` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | ci(release): enforce exact evidence artifact set |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35184549144 | `0c91ce2134d3` | pull_request | Verify | in_progress:- |
+| 35185264155 | `e9e6ca3b3f8e` | push | Verify | completed:success |
+| 35185075926 | `9c10b78b3a93` | pull_request | Verify | completed:success |
+| 35185072656 | `9c10b78b3a93` | workflow_dispatch | Verify | completed:success |
+| 35184967716 | `58d4fe09b0e1` | pull_request | Verify | completed:success |
+| 35184967298 | `58d4fe09b0e1` | workflow_dispatch | Verify | completed:cancelled |
+| 35184757153 | `a2062c0628b3` | push | Verify | completed:success |
+| 35184590240 | `0c91ce2134d3` | workflow_dispatch | Verify | completed:success |
+| 35184549144 | `0c91ce2134d3` | pull_request | Verify | completed:success |
 | 35184234040 | `2f584bbdfff3` | push | Verify | completed:success |
 | 35184038547 | `557538b26b33` | workflow_dispatch | Verify | completed:success |
 | 35184033094 | `557538b26b33` | pull_request | Verify | completed:success |
 | 35183933943 | `223611a46d8a` | pull_request | Verify | completed:success |
-| 35183932682 | `223611a46d8a` | workflow_dispatch | Verify | completed:cancelled |
-| 35183705619 | `0063e6a1264e` | push | Verify | completed:success |
-| 35183511010 | `3e4810a1a906` | workflow_dispatch | Verify | completed:success |
-| 35183440668 | `3e4810a1a906` | pull_request | Verify | completed:success |
-| 35183114132 | `682f68f578bb` | push | Verify | completed:success |
-| 35182953263 | `aaaae820c4cf` | pull_request | Verify | completed:success |
-| 35182952781 | `aaaae820c4cf` | workflow_dispatch | Verify | completed:success |
