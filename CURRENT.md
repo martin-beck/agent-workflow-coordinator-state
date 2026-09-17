@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. | codex-awc-ar0029-integration-20260917 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -51,3 +45,4 @@ Never edit this file directly.
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
 | P1 | [AR-0019](tasks/AR-0019.md): Fast merge formal tier and weekly exhaustive run | Separate fast merge/commit formal checks from weekly full-exhaustive TLC without weakening release or publication evidence. | Specify and implement a bounded fast merge TLC tier, retain weekly full-exhaustive execution as advisory, and preserve release evidence requirements. | - |
 | P1 | [AR-0021](tasks/AR-0021.md): Reconcile issue #14 with verified AWQ adoption | Issue #14 reconciled: AR-0001 and PR #20 already delivered the requested artifacts and profiles using newer AWQ v0.32.0; no duplicate or downgrade was needed. | Closed issue #14 after verified supersession; retain AR-0001 as the implementation record. | - |
+| P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. | - |

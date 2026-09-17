@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 4 active status categories.
+**29 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 26 |
+| **Done** | Accepted, integrated, and durably verified | 27 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 0 |
 
@@ -56,7 +56,7 @@ flowchart LR
         AR_0026["AR-0026 - Done"]:::status_done
         AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Done"]:::status_done
-        AR_0029["AR-0029 - In progress"]:::status_in_progress
+        AR_0029["AR-0029 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -144,12 +144,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | codex-awc-ar0029-integration-20260917 | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
-
 ### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -162,7 +156,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0025](tasks/AR-0025.md): Cross-project oracle workflow integration | Unclaimed | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. |
 
-### Done (26)
+### Done (27)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -192,3 +186,4 @@ flowchart LR
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
 | P1 | [AR-0019](tasks/AR-0019.md): Fast merge formal tier and weekly exhaustive run | Unclaimed | Separate fast merge/commit formal checks from weekly full-exhaustive TLC without weakening release or publication evidence. | Specify and implement a bounded fast merge TLC tier, retain weekly full-exhaustive execution as advisory, and preserve release evidence requirements. |
 | P1 | [AR-0021](tasks/AR-0021.md): Reconcile issue #14 with verified AWQ adoption | Unclaimed | Issue #14 reconciled: AR-0001 and PR #20 already delivered the requested artifacts and profiles using newer AWQ v0.32.0; no duplicate or downgrade was needed. | Closed issue #14 after verified supersession; retain AR-0001 as the implementation record. |
+| P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Unclaimed | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
