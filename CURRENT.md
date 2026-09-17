@@ -7,13 +7,13 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #498 merged as 21a1f93; PR #499 merged as 3752c34; authoritative post-merge Verify 35177508604 passed. Release CI fresh-clone runbook validation is merged; upgrade mutation remains disabled. | Release completed AR-0009 claim and select the next dependency-safe release-integration correctness slice beyond fresh-clone runbook validation. | codex-awc-ar0009-next2-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Replace PR #480 in-process fsync mock with a real child-process termination boundary after selector rename/before directory fsync; fresh-process verify exact old/new reconciliation and no residue, then republish/review. | codex-awc-ar0012-next7-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #498 merged as 21a1f93; PR #499 merged as 3752c34; authoritative post-merge Verify 35177508604 passed. Release CI fresh-clone runbook validation is merged; upgrade mutation remains disabled. | Release completed AR-0009 claim and select the next dependency-safe release-integration correctness slice beyond fresh-clone runbook validation. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. | - |
 
 ## Done
