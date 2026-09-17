@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
+| #593 | `ar0013-dispatch-revalidation@f0e27ef441a9` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): validate retained directory identity shape |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35230863594 | `f0e27ef441a9` | pull_request | Verify | in_progress:- |
 | 35230164391 | `916501953d3e` | push | Verify | completed:success |
 | 35229863893 | `348a2de9514f` | push | Verify | completed:cancelled |
 | 35229804115 | `fe3a62fbbe14` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35228586895 | `a5606793188f` | pull_request | Verify | completed:failure |
 | 35228055439 | `67fc7b9713c7` | push | Verify | completed:success |
 | 35227729177 | `fd4e6a1dbaac` | push | Verify | completed:cancelled |
-| 35227696843 | `442fbd4b1dd4` | pull_request | Verify | completed:success |
