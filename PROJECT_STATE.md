@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `4070279cf7c4501ab89db022864a8a48d9d6028e`
+- Product remote main: `86f3f451f7ca2b3e027345a606fc2e02f6c85617`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #595 | `ar0013-dispatch-revalidation@ccd2a307913d` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): require retained runtime directory |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35231901310 | `ccd2a307913d` | pull_request | Verify | in_progress:- |
+| 35232381995 | `86f3f451f7ca` | push | Verify | pending:- |
+| 35232193795 | `97b79fc0a7fe` | push | Verify | in_progress:- |
+| 35232112237 | `92b5c29f8b3a` | pull_request | Verify | completed:success |
+| 35231901310 | `ccd2a307913d` | pull_request | Verify | completed:success |
 | 35231345295 | `4070279cf7c4` | push | Verify | completed:success |
 | 35231173231 | `c4d6634d7d84` | push | Verify | completed:cancelled |
 | 35230911063 | `cc73ad9f9514` | pull_request | Verify | completed:success |
@@ -36,6 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35229863893 | `348a2de9514f` | push | Verify | completed:cancelled |
 | 35229804115 | `fe3a62fbbe14` | pull_request | Verify | completed:success |
 | 35229612275 | `05fbc2c5a283` | push | Verify | completed:cancelled |
-| 35229583877 | `103d72a6a798` | pull_request | Verify | completed:success |
-| 35229075857 | `9db5d4057ca8` | push | Verify | completed:success |
-| 35228821645 | `98ecc35bdc56` | pull_request | Verify | completed:success |
