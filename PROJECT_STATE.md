@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #518 | `ar0009-poll-deadline-test-repair@db72211a5e0a` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(control): isolate polling deadline clock |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35187414121 | `db72211a5e0a` | pull_request | Verify | in_progress:- |
 | 35186806762 | `b724a404e483` | push | Verify | completed:failure |
 | 35186797491 | `573b3a8842dc` | push | Verify | completed:cancelled |
 | 35186537067 | `811c4020c600` | workflow_dispatch | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35185918960 | `82280ce72aca` | workflow_dispatch | Verify | completed:success |
 | 35185913594 | `82280ce72aca` | pull_request | Verify | completed:success |
 | 35185657281 | `b8629e1ea396` | workflow_dispatch | Verify | completed:success |
-| 35185613136 | `b8629e1ea396` | pull_request | Verify | completed:success |
