@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next51 PR #610 exact Verify failed due scoped selector error masking. Repair PR #611 published at signed head 7344233 with explicit operation-exception capture; targeted regression, 88 adapter tests, Ruff/mypy pass. Mutation disabled. | Await PR #611 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then rerun authoritative latest-main postmerge before releasing next51. | codex-awc-ar0012-next51-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor36 PR #609 published at 7f81c971; focused tests 51 passed, Ruff/mypy/diff clean. Hosted AWQ/scope green; Verify queued. Merge held pending AR-0012 authoritative baseline repair. | Hold merge until AR-0012 baseline is green; then obtain exact-head Verify for PR #609 and proceed through independent review/postmerge. | codex-awc-ar0013-next-descriptor37-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor36 PR #609 merged e8d06c9; exact Verify 35240588427 succeeded on 7f81c97; authoritative current-main Verify 35241888312 succeeded on b142359. Descriptor37 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor37-20260917 |
 
 ## Open
 
