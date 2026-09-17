@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #626 | `ar0009-release-signer-gate@2cd2dc0d3ab1` | `main` | UNSTABLE | QUEUED:, QUEUED: | ci(release): gate on external signer readiness |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35267722943 | `2cd2dc0d3ab1` | pull_request | Verify | queued:- |
 | 35253528451 | `728f917f7ab7` | push | Verify | completed:success |
 | 35253041501 | `2397eea1471f` | workflow_dispatch | Verify | completed:success |
 | 35253035397 | `2397eea1471f` | pull_request | Verify | completed:success |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35252249310 | `6f5f2b648dae` | pull_request | Verify | completed:cancelled |
 | 35252198283 | `5840d9d2e828` | workflow_dispatch | Verify | completed:failure |
 | 35252197671 | `5840d9d2e828` | pull_request | Verify | completed:cancelled |
-| 35252100106 | `3816d93e4b37` | pull_request | Verify | completed:cancelled |
