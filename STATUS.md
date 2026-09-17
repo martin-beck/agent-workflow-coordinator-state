@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next29-20260917 | Next25 exact terminal target-domain binding merged PR #555 as 36d58ac2; post-merge Verify 35211477729 succeeded. | Release next25 and claim next26; inspect remaining formal/durability correspondence seams and implement one bounded fail-closed slice. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next29-20260917 | Next28 BeginReopen binding merged PR #562 7aa1236c; authoritative post-merge Verify 35214687729 succeeded on fa508f5b. Next29 authority recheck prerequisite implemented in signed 11fbef5. | Run full discovery/formal evidence for 11fbef5; publish signed PR and exact pr-fast Verify if green. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor14-20260917 | Descriptor13 PR #561 merged fa508f5; exact Verify 35214396152 succeeded at repaired DCO head 24c28d7; postmerge Verify 35214687729 succeeded. Descriptor14 claim active. | Implement descriptor14 next bounded fail-closed runtime admission boundary with hostile failure-path tests; preserve retained descriptor identity checks, execution and selector mutation disabled. |
 
 ### Open (1)
