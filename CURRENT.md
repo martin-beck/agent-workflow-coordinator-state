@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next30 bounded terminal revision guard implemented in signed b730fd5; PR #565 published with AWQ/scope green and formal pending. | Complete exact-head formal Verify for PR #565 b730fd5; independent review and guarded merge only after success, then postmerge reconcile. | codex-awc-ar0012-next30-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor13 PR #561 merged fa508f5; exact Verify 35214396152 succeeded at repaired DCO head 24c28d7; postmerge Verify 35214687729 succeeded. Descriptor14 claim active. | Implement descriptor14 next bounded fail-closed runtime admission boundary with hostile failure-path tests; preserve retained descriptor identity checks, execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor15-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor13 PR #561 merged fa508f5; exact Verify 35214396152 succeeded at repaired DCO head 24c28d7; postmerge Verify 35214687729 succeeded. Descriptor14 claim active. | Implement descriptor14 next bounded fail-closed runtime admission boundary with hostile failure-path tests; preserve retained descriptor identity checks, execution and selector mutation disabled. | - |
 
 ## Done
 
