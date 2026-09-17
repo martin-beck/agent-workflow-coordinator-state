@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next49 PR #606 published at signed head 8b4a84a: lifecycle validator now requires authoritative TypeOK theorem marker, with hostile fixture coverage. Focused 36 tests and Ruff pass; mutation disabled. | Await PR #606 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then verify authoritative postmerge before releasing next49. | codex-awc-ar0012-next50-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next49 complete: PR #606 TypeOK theorem admission merged d0d6b70; exact Verify 35238856692 SUCCESS; authoritative post-merge Verify 35239199280 SUCCESS. Next50 freshly claimed for next bounded fail-closed durability seam; mutation remains disabled. | Inspect next50 boundary, implement one bounded fail-closed slice with hostile tests, run local quality/formal gates, then publish signed PR. | codex-awc-ar0012-next50-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor34 PR #604 merged c086a1b; exact Verify 35237246905 succeeded on 1597b2e; authoritative postmerge Verify 35238375247 succeeded on c086a1b. Descriptor35 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor35-20260917 |
 
 ## Open
