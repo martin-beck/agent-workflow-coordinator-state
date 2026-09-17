@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fsync-20260917 | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Implement next bounded AR-0012 process-death/durability correspondence slice only when represented by the model; preserve exact history, newer-fence, and write-closed ambiguity invariants. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-fsync-20260917 | Merged PR #456 and post-merge-verified interrupted barrier reconciliation with exact predecessor history and fail-closed forged-intent rejection; remaining AR-0012 process-death/formal correspondence slices remain open. | Replace PR #480 in-process fsync mock with a real child-process termination boundary after selector rename/before directory fsync; fresh-process verify exact old/new reconciliation and no residue, then republish/review. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-runtime-20260917 | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. |
 
 ### Open (1)
