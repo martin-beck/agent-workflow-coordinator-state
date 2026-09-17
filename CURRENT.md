@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | codex-awc-ar0009-loop-20260918 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #632 merged as 2e9662c; exact Verify 35280046300 and post-merge Verify 35280170156 succeeded. Privacy-safe rendered signer coverage is green. | Select and implement the next dependency-safe AR-0009 release-integrity slice; do not sign or publish without a real transition. | codex-awc-ar0009-loop-20260918 |
 
 ## Done
 
