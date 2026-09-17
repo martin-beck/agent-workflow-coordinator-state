@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `43b8c7d1f6b29ebad5693222a0bc7d9b74481138`
-- Local origin/main: `503074bfdc17df200e45a91f72a9c7979b20a50e`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Product remote main: `9059876c2230bdce6044f3ed2560bdf2e244628e`
+- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
 ## Open pull requests
 
@@ -21,14 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #543 | `ar0012-terminal-fresh-read-definition@fc68791775a6` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind fresh runtime read definition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35204995362 | `9059876c2230` | push | Verify | pending:- |
 | 35204804953 | `43b8c7d1f6b2` | push | Verify | in_progress:- |
-| 35204613421 | `fc68791775a6` | pull_request | Verify | in_progress:- |
+| 35204613421 | `fc68791775a6` | pull_request | Verify | completed:success |
 | 35204602729 | `9c398ac1c2ca` | workflow_dispatch | Verify | completed:success |
 | 35204486575 | `9c398ac1c2ca` | pull_request | Verify | completed:success |
 | 35204076599 | `503074bfdc17` | push | Verify | completed:success |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35203631557 | `0b6818f2e1ea` | pull_request | Verify | completed:success |
 | 35203258793 | `50ec18b19390` | push | Verify | completed:success |
 | 35203078226 | `5a06af4f219d` | push | Verify | completed:cancelled |
-| 35202894561 | `7a4deeae6172` | pull_request | Verify | completed:success |
