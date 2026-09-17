@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next50 complete: PR #608 TypeInvariant theorem admission merged b91a46f; exact Verify 35239652621 SUCCESS; authoritative post-merge Verify 35240363920 SUCCESS. Next51 freshly claimed for next bounded fail-closed durability seam; mutation remains disabled. | Inspect next51 boundary, implement one bounded fail-closed slice with hostile tests, run local quality/formal gates, then publish signed PR. | codex-awc-ar0012-next51-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next51 PR #610 published at signed head 70919dd: UpgradeRecovery validator now requires FunctionalAvailability theorem admission marker; hostile missing-theorem fixture, focused 36 tests and Ruff pass; mutation disabled. | Await PR #610 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then verify authoritative postmerge before releasing next51. | codex-awc-ar0012-next51-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor36 PR #609 published at 7f81c971; focused tests 51 passed, Ruff/mypy/diff clean. Hosted AWQ/scope green; Verify queued. Merge held pending AR-0012 authoritative baseline repair. | Hold merge until AR-0012 baseline is green; then obtain exact-head Verify for PR #609 and proceed through independent review/postmerge. | codex-awc-ar0013-next-descriptor36-20260917 |
 
 ## Open
