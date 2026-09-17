@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #537 merged as d78be041 after independent APPROVE and exact Verify success; post-merge Verify 35202420105 is pending. | Monitor post-merge Verify 35202420105 on merge head d78be041 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next18-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next18 formal seam implemented locally: terminal contract now requires NoUnheldRollbackGap invariant; signed commit 754382e, focused gates green. | Run full discovery/formal evidence for local next18 commit 754382e, binding NoUnheldRollbackGap invariant; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next18-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #536 merged c812eea7; exact Verify 35201959344 and replacement post-merge Verify 35202420105 succeeded on main d78be041. | Implement the next dependency-safe descriptor continuity boundary: bind the retained handle to the eventual runtime dispatch admission API, preserving mutation-disabled and fail-closed behavior; add hostile replacement tests before any publication. | codex-awc-ar0013-next-descriptor-20260917 |
 
 ## Open
