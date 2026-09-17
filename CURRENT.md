@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next18 NoUnheldRollbackGap invariant binding published as PR #539; signed/DCO, full discovery, focused 49 tests, Ruff, mypy and formal evidence passed. | PR #539 published at exact head 7a4deea; await AWQ, exact-head fast Verify, and independent review before merge. Mutation remains disabled. | codex-awc-ar0012-next18-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #539 merged as 50ec18b1 after independent APPROVE and exact Verify 35202894561 success; post-merge Verify 35203258793 is pending. | Monitor post-merge Verify 35203258793 on merge head 50ec18b1 to terminal success; then record release and reclaim next dependency-safe slice. Mutation remains disabled. | codex-awc-ar0012-next18-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #536 merged c812eea7; exact Verify 35201959344 and replacement post-merge Verify 35202420105 succeeded on d78be041. Next descriptor-continuity slice is PR #538 at 6641913. | Obtain independent exact-head review of PR #538, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor-20260917 |
 
 ## Open
