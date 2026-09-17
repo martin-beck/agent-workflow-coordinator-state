@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `4dd4ce45dbee35179706d99c83c6d0be56c41431`
-- Local origin/main: `4dd4ce45dbee35179706d99c83c6d0be56c41431`
+- Product remote main: `2f584bbdfff33d66183aff233fd6ebf49c1654dd`
+- Local origin/main: `2f584bbdfff33d66183aff233fd6ebf49c1654dd`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -21,21 +21,20 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #508 | `ar0009-release-clean-check@0b9ed6eba13b` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | ci(release): require clean source checkout |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35182489865 | `0b9ed6eba13b` | pull_request | Verify | in_progress:- |
-| 35182029762 | `4dd4ce45dbee` | push | Verify | completed:success |
-| 35181856104 | `359c190e61a4` | workflow_dispatch | Verify | completed:success |
-| 35181820000 | `359c190e61a4` | pull_request | Verify | completed:success |
-| 35181521635 | `ec6faf4b0273` | push | Verify | completed:success |
-| 35181508173 | `89052a737dc9` | push | Verify | completed:cancelled |
-| 35181330491 | `65cbd3dcfd0d` | workflow_dispatch | Verify | completed:success |
-| 35181012265 | `65cbd3dcfd0d` | workflow_dispatch | Verify | completed:failure |
-| 35181006852 | `da3f5d5c2ab8` | pull_request | Verify | completed:success |
-| 35181005869 | `da3f5d5c2ab8` | workflow_dispatch | Verify | completed:success |
-| 35180970487 | `65cbd3dcfd0d` | pull_request | Verify | completed:success |
-| 35180641280 | `f39b673ea891` | push | Verify | completed:success |
+| 35184234040 | `2f584bbdfff3` | push | Verify | completed:success |
+| 35184038547 | `557538b26b33` | workflow_dispatch | Verify | completed:success |
+| 35184033094 | `557538b26b33` | pull_request | Verify | completed:success |
+| 35183933943 | `223611a46d8a` | pull_request | Verify | completed:success |
+| 35183932682 | `223611a46d8a` | workflow_dispatch | Verify | completed:cancelled |
+| 35183705619 | `0063e6a1264e` | push | Verify | completed:success |
+| 35183511010 | `3e4810a1a906` | workflow_dispatch | Verify | completed:success |
+| 35183440668 | `3e4810a1a906` | pull_request | Verify | completed:success |
+| 35183114132 | `682f68f578bb` | push | Verify | completed:success |
+| 35182953263 | `aaaae820c4cf` | pull_request | Verify | completed:success |
+| 35182952781 | `aaaae820c4cf` | workflow_dispatch | Verify | completed:success |
+| 35182704558 | `a174fc1a033c` | push | Verify | completed:success |
