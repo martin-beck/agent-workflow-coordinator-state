@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next44 signed head cc73ad9 rebased onto current main 9165019; validator requires THEOREM Spec => []CasBounded. Focused 49-test and full 737-test 95% gates pass. | Publish signed cc73ad9 as PR; monitor AWQ/scope and exact-head pr-fast Verify, independently review, guarded merge on green, then postmerge and reconcile. | codex-awc-ar0012-next44-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next44 PR #594 published at signed head cc73ad9; validator requires THEOREM Spec => []CasBounded. Focused 49-test and full 737-test 95% gates pass. | Monitor PR #594 AWQ/scope and exact-head pr-fast Verify; independently review, guarded merge on green, then authoritative postmerge Verify and reconcile. | codex-awc-ar0012-next44-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor28 PR #591 merged 348a2de9514f7834d; exact Verify 35229583877 succeeded on 103d72a6; authoritative latest-main Verify 35230164391 succeeded on 916501953d3e67cdf26a61a53c796d72a9cb780c. Descriptor29 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor29-20260917 |
 
 ## Open
