@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next23 formal seam implemented locally: terminal contract requires exact VerifyTerminal(p, target) definition; signed commit 41730d8, focused gates green. | Run full discovery/formal evidence for local next23 commit 41730d8, requiring exact VerifyTerminal(p, target) definition binding; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next23-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #549 repair merged 13bfb85a; authoritative post-merge Verify 35208461126 succeeded with TLC_TIER=pr-fast. | Implement descriptor7 dependency-safe runtime admission boundary with hostile failure-path coverage; preserve fail-closed behavior and keep execution/selector mutation disabled. | codex-awc-ar0013-next-descriptor7-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #549 repair merged 13bfb85a; authoritative post-merge Verify 35208461126 succeeded with TLC_TIER=pr-fast. Descriptor7 PR #550 published at d4e8fb7. | Obtain independent exact-head review of PR #550, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor7-20260917 |
 
 ## Open
 
