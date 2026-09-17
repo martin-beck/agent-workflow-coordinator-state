@@ -21,12 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #490 | `ar0009-next2-recovery@64708c954319` | `main` | DIRTY | - | fix(selector): recheck selector after recovery cleanup |
+| #490 | `ar0009-next2-recovery@4da483fa37a4` | `main` | DIRTY | - | fix(selector): recheck selector after recovery cleanup |
+| #493 | `ar0012-reconcile-crash-formal@4103b34753cd` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(barrier): recover ambiguous fence in child process |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35174414657 | `4da483fa37a4` | workflow_dispatch | Verify | queued:- |
+| 35174325960 | `4103b34753cd` | pull_request | Verify | in_progress:- |
 | 35174136213 | `4fd259d7ea67` | push | Verify | completed:success |
 | 35173957070 | `4a83d871773e` | pull_request | Verify | completed:success |
 | 35173744925 | `096b633a0a09` | push | Verify | completed:success |
@@ -37,5 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35172794333 | `82a053ab8a74` | pull_request | Verify | completed:success |
 | 35172570570 | `92552872e14e` | push | Verify | completed:success |
 | 35172409155 | `20a2fed5306a` | workflow_dispatch | Verify | completed:success |
-| 35172359763 | `20a2fed5306a` | pull_request | Verify | completed:success |
-| 35172183242 | `736a3b13255f` | push | Verify | completed:success |
