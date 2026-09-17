@@ -125,7 +125,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next12-20260917 | PR #528 merged as f0a06b41 after independent APPROVE and exact Verify 35196624168 success; post-merge Verify 35196959712 is in progress. | Monitor post-merge Verify 35196959712 on merge head f0a06b41 to terminal success, then record release and reclaim next dependency-safe slice. Mutation remains disabled. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-20260917 | PR #470 coverage repair exact head bd622a51; full 733-test discovery passes at 95&#37; branch coverage. | Complete replacement exact-head Verify and independent review; do not merge before all gates pass. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-20260917 | PR #470 merged as 50765e70; exact-head Verify 35196770178 succeeded; post-merge Verify queued. | Monitor post-merge Verify for main 50765e70 to terminal; then release/reclaim AR-0013 for the next dependency-safe slice. |
 
 ### Open (1)
 
