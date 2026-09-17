@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next38 PR #582 signed head e647397 merged b99e8546; exact Verify 35224742699 and authoritative postmerge 35225071511 succeeded. | Release completed next38, then claim next39 and implement next bounded fail-closed durability seam. | codex-awc-ar0012-next38-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor22 PR #579 merged 68ba5158; exact Verify 35223712091 and authoritative post-merge Verify 35224060654 succeeded with formal tier and attestation. Descriptor23 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | codex-awc-ar0013-next-descriptor23-20260917 |
 
 ## Open
@@ -15,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next38 PR #582 signed head e647397 merged b99e8546; exact Verify 35224742699 and authoritative postmerge 35225071511 succeeded. | Release completed next38, then claim next39 and implement next bounded fail-closed durability seam. | - |
 
 ## Done
 
