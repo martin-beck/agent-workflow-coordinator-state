@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 8 |
 | **Future** | Deferred roadmap work | 0 |
@@ -40,7 +40,7 @@ flowchart LR
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - In progress"]:::status_in_progress
-        AR_0013["AR-0013 - In progress"]:::status_in_progress
+        AR_0013["AR-0013 - Open"]:::status_open
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
         AR_0016["AR-0016 - Done"]:::status_done
@@ -144,18 +144,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next52-20260917 | Next51 complete: selector precedence repair PR #611 merged b142359; authoritative post-merge Verify 35241888312 SUCCESS. Next52 freshly claimed for next bounded fail-closed durability seam; mutation remains disabled. | Inspect next52 boundary, implement one bounded fail-closed slice with hostile tests, run local quality/formal gates, then publish signed PR. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor36-20260917 | Descriptor36 PR #609 published at 7f81c971; focused tests 51 passed, Ruff/mypy/diff clean. Hosted AWQ/scope green; Verify queued. Merge held pending AR-0012 authoritative baseline repair. | Hold merge until AR-0012 baseline is green; then obtain exact-head Verify for PR #609 and proceed through independent review/postmerge. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next51-20260917 | Next51 PR #610 exact Verify failed due scoped selector error masking. Repair PR #611 published at signed head 7344233 with explicit operation-exception capture; targeted regression, 88 adapter tests, Ruff/mypy pass. Mutation disabled. | Await PR #611 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then rerun authoritative latest-main postmerge before releasing next51. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Descriptor36 PR #609 published at 7f81c971; focused tests 51 passed, Ruff/mypy/diff clean. Hosted AWQ/scope green; Verify queued. Merge held pending AR-0012 authoritative baseline repair. | Hold merge until AR-0012 baseline is green; then obtain exact-head Verify for PR #609 and proceed through independent review/postmerge. |
 
 ### Planned (8)
 

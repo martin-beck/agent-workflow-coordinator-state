@@ -7,14 +7,14 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next51 complete: selector precedence repair PR #611 merged b142359; authoritative post-merge Verify 35241888312 SUCCESS. Next52 freshly claimed for next bounded fail-closed durability seam; mutation remains disabled. | Inspect next52 boundary, implement one bounded fail-closed slice with hostile tests, run local quality/formal gates, then publish signed PR. | codex-awc-ar0012-next52-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor36 PR #609 published at 7f81c971; focused tests 51 passed, Ruff/mypy/diff clean. Hosted AWQ/scope green; Verify queued. Merge held pending AR-0012 authoritative baseline repair. | Hold merge until AR-0012 baseline is green; then obtain exact-head Verify for PR #609 and proceed through independent review/postmerge. | codex-awc-ar0013-next-descriptor36-20260917 |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next51 PR #610 exact Verify failed due scoped selector error masking. Repair PR #611 published at signed head 7344233 with explicit operation-exception capture; targeted regression, 88 adapter tests, Ruff/mypy pass. Mutation disabled. | Await PR #611 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then rerun authoritative latest-main postmerge before releasing next51. | codex-awc-ar0012-next51-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor36 PR #609 published at 7f81c971; focused tests 51 passed, Ruff/mypy/diff clean. Hosted AWQ/scope green; Verify queued. Merge held pending AR-0012 authoritative baseline repair. | Hold merge until AR-0012 baseline is green; then obtain exact-head Verify for PR #609 and proceed through independent review/postmerge. | - |
 
 ## Planned
 
