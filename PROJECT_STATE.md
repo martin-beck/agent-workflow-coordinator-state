@@ -21,13 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
+| #597 | `ar0013-dispatch-revalidation@501ec86b41f5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): require absolute retained runtime paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35232381995 | `86f3f451f7ca` | push | Verify | pending:- |
-| 35232193795 | `97b79fc0a7fe` | push | Verify | in_progress:- |
+| 35232928828 | `501ec86b41f5` | pull_request | Verify | in_progress:- |
+| 35232381995 | `86f3f451f7ca` | push | Verify | completed:success |
+| 35232193795 | `97b79fc0a7fe` | push | Verify | completed:cancelled |
 | 35232112237 | `92b5c29f8b3a` | pull_request | Verify | completed:success |
 | 35231901310 | `ccd2a307913d` | pull_request | Verify | completed:success |
 | 35231345295 | `4070279cf7c4` | push | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35230164391 | `916501953d3e` | push | Verify | completed:success |
 | 35229863893 | `348a2de9514f` | push | Verify | completed:cancelled |
 | 35229804115 | `fe3a62fbbe14` | pull_request | Verify | completed:success |
-| 35229612275 | `05fbc2c5a283` | push | Verify | completed:cancelled |
