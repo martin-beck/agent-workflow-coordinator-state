@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next30 terminal revision bound merged PR #565 3fadfce; post-merge Verify 35216129416 succeeded. | Release next30 and claim next31; inspect remaining formal/durability correspondence seam and implement one bounded fail-closed slice. | codex-awc-ar0012-next31-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor14 PR #564 merged 0f81e55; exact Verify 35215505042 and postmerge Verify 35215758885 succeeded. Descriptor15 claim active. | Implement descriptor15 next bounded fail-closed runtime admission boundary with hostile failure-path tests; preserve retained descriptor identity checks, execution and selector mutation disabled. | codex-awc-ar0013-next-descriptor15-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor15 PR #567 adds fail-closed malformed DispatchAdmission constructor validation; local focused/full gates pass. | Obtain independent exact-head review and terminal pr-fast Verify for PR #567 head edda7ef32e08765441f3520f7e444bff94061692; merge only after both pass. | codex-awc-ar0013-next-descriptor15-20260917 |
 
 ## Open
 
