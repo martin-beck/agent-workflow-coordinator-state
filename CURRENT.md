@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next31 terminal release transition merged PR #566 67c73e1; authoritative latest-main Verify 35217245479 succeeded on f3dcb953. | Implement next32: inspect remaining formal/durability correspondence seam, add hostile fail-closed test, run full gates and publish signed PR. | codex-awc-ar0012-next32-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor15 PR #567 adds fail-closed malformed DispatchAdmission constructor validation; local focused/full gates pass. | Obtain independent exact-head review and terminal pr-fast Verify for PR #567 head edda7ef32e08765441f3520f7e444bff94061692; merge only after both pass. | codex-awc-ar0013-next-descriptor15-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor15 PR #567 adds fail-closed malformed DispatchAdmission constructor validation; local focused/full gates pass. | Obtain independent exact-head review and terminal pr-fast Verify for PR #567 head edda7ef32e08765441f3520f7e444bff94061692; merge only after both pass. | - |
 
 ## Done
 
