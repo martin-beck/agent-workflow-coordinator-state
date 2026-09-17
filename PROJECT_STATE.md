@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e68468ac6d67844b59989ced698279e74016df6d`
+- Product remote main: `c086a1b6df6b3870462a2aa9eb68e6594b62a104`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,16 +21,16 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #599 | `ar0022-oracle-gates@18b7581bf7fc` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
-| #604 | `ar0013-dispatch-revalidation@1597b2e6a886` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(runtime): close handles on verification failures |
+| #599 | `ar0022-oracle-gates@18b7581bf7fc` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35237922171 | `e68468ac6d67` | push | Verify | queued:- |
+| 35238375247 | `c086a1b6df6b` | push | Verify | in_progress:- |
+| 35237922171 | `e68468ac6d67` | push | Verify | completed:success |
 | 35237856002 | `a576511401b4` | pull_request | Verify | completed:success |
-| 35237779742 | `18b7581bf7fc` | pull_request | Verify | in_progress:- |
+| 35237779742 | `18b7581bf7fc` | pull_request | Verify | completed:failure |
 | 35237490880 | `f131e78efd97` | pull_request | Verify | completed:cancelled |
 | 35237246905 | `1597b2e6a886` | pull_request | Verify | completed:success |
 | 35237013041 | `ef3a90775731` | push | Verify | completed:failure |
@@ -39,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35236576604 | `76258be6f60c` | pull_request | Verify | completed:success |
 | 35236521249 | `f392c44a308e` | push | Verify | completed:success |
 | 35236002874 | `013beb7713c9` | pull_request | Verify | completed:success |
-| 35235749319 | `3e570cc3b679` | pull_request | Verify | completed:failure |
