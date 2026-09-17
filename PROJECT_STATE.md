@@ -22,11 +22,13 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #540 | `ar0013-dispatch-revalidation@0b6818f2e1ea` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): revalidate dispatch admission before use |
+| #541 | `ar0012-terminal-reopen-definition@0e45e53d29ef` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind complete reopen definition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35203746585 | `0e45e53d29ef` | pull_request | Verify | queued:- |
 | 35203688204 | `0b6818f2e1ea` | workflow_dispatch | Verify | in_progress:- |
 | 35203631557 | `0b6818f2e1ea` | pull_request | Verify | completed:success |
 | 35203258793 | `50ec18b19390` | push | Verify | completed:success |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35202420105 | `d78be0414c8a` | push | Verify | completed:success |
 | 35202199863 | `c812eea7d290` | push | Verify | completed:cancelled |
 | 35202098895 | `de524997377c` | pull_request | Verify | completed:success |
-| 35201959344 | `bbabd1c93b21` | workflow_dispatch | Verify | completed:success |
