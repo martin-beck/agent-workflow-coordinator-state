@@ -7,13 +7,13 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #526 merged 6e61fed; post-merge Verify 35193938843 completed SUCCESS on exact merge head. Oversized transition-input boundary is complete. | Inspect next dependency-safe AR-0009 release-integrity boundary; claim a fresh slice only after selection and avoid AR-0012 overlap. | codex-awc-ar0009-next4-20260917 |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. | codex-awc-ar0012-next11-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #526 merged 6e61fed; post-merge Verify 35193938843 completed SUCCESS on exact merge head. Oversized transition-input boundary is complete. | Inspect next dependency-safe AR-0009 release-integrity boundary; claim a fresh slice only after selection and avoid AR-0012 overlap. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Bind an authenticated, selector-aware versioned coordinator runtime to safe upgrade and rollback execution. | Wire retained VerifiedManifest and ExpectedRuntimeIdentity into resolver; reject Path-only callback and prove replacement/cross-binding failures before re-review. | - |
 
 ## Done
