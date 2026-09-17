@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next16 formal seam implemented locally: terminal contract requires explicit CompleteReopen releasing branch with hostile missing-branch coverage; signed commit d8c1f59. | Run full discovery/formal evidence for local next16 commit d8c1f59, binding CompleteReopen/sessionStatus=releasing model branch; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next16-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #533 descriptor-bound ResolvedRuntime handle published at f899f91; full 776 tests and 95% branch coverage pass. | Obtain independent exact-head review of PR #533, dispatch hosted exact-head Verify, and address findings before merge. | codex-awc-ar0013-next-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #533 descriptor-bound ResolvedRuntime handle published at f899f91; full 776 tests and 95% branch coverage pass. | Obtain independent exact-head review of PR #533, dispatch hosted exact-head Verify, and address findings before merge. | - |
 
 ## Done
 
