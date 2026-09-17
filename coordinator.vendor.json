@@ -4,6 +4,10 @@
       "sha256": "7b469831c4813321163ee311f0cb969c6a2deaaa8545a6401816fc3409456df7",
       "source": "docs/PROJECT_GUIDE.md"
     },
+    "formal/evidence.json": {
+      "sha256": "bf64094a011d0830c9503354f8d11d4ce4a08f2a17395058ef9dd70255fccad5",
+      "source": "formal/evidence.json"
+    },
     "formal/handoffctl/Handoffctl.cfg": {
       "sha256": "24827d943b50298199a66614d0b625731f1abdd1e4e5f2af97b808dcc4d5456e",
       "source": "formal/handoffctl/Handoffctl.cfg"
@@ -28,6 +32,18 @@
       "sha256": "1bfeb403517828b9dc26dab23003c71fbd075f408a1f33c24d53fb33be9616e6",
       "source": "formal/handoffctl/HandoffctlLocks.tla"
     },
+    "formal/handoffctl/HandoffctlPR.cfg": {
+      "sha256": "e365391ea0a391692763f7da45b0154005fffd3e6c1018fb11c04182107c9952",
+      "source": "formal/handoffctl/HandoffctlPR.cfg"
+    },
+    "formal/handoffctl/HandoffctlRecovery.cfg": {
+      "sha256": "218dfc11282c91de1c5559b541b992f5317ae314aa7d272b57bf5a944013ff8a",
+      "source": "formal/handoffctl/HandoffctlRecovery.cfg"
+    },
+    "formal/handoffctl/HandoffctlRecovery.tla": {
+      "sha256": "3bf8c6055743a14b47a30b267ebc3acd7c4f3759f611c57fd76aaf95ae2dda4e",
+      "source": "formal/handoffctl/HandoffctlRecovery.tla"
+    },
     "formal/handoffctl/HandoffctlRun.cfg": {
       "sha256": "52036e211235cb09ee66128784ec9a52358f9d633bc81c2b74ba5edadba6d7f5",
       "source": "formal/handoffctl/HandoffctlRun.cfg"
@@ -48,9 +64,17 @@
       "sha256": "e887a7a8af3254d44142ef43d21feac1ff44d6d88223d6f6b8f98508140b3dea",
       "source": "formal/handoffctl/README.md"
     },
+    "formal/handoffctl/attest.py": {
+      "sha256": "396583cb19fa6c672a1f14d5bc3a095fbf0d49b24ef63ce764c3a361fcc4cde5",
+      "source": "formal/handoffctl/attest.py"
+    },
     "formal/handoffctl/verify.sh": {
       "sha256": "3b1af1591d456eaa6c425df9869be67dcd84ced086cecde24ba40a00abca1f37",
       "source": "formal/handoffctl/verify.sh"
+    },
+    "formal/tier-evidence.json": {
+      "sha256": "972344618e97da0d372434c30c647a0434d77b1493e8980849470ec1575dab38",
+      "source": "formal/tier-evidence.json"
     },
     "schema/handoffctl-backend-config.schema.json": {
       "sha256": "3a1d3b591b31bf6ede7a562433fe90886f5a0a16d4fcff2e5dab30de29558251",
@@ -63,6 +87,10 @@
     "schema/handoffctl-project-config.schema.json": {
       "sha256": "bb4052e0b0506b790fcb7fd696561f9b3fc3f1ca93a171259b06c5cac7f5c69c",
       "source": "schema/project-config.schema.json"
+    },
+    "schema/handoffctl-upgrade-contract.schema.json": {
+      "sha256": "6ef2362107a0c3ff895e6dc96e35899e19b367bebd549b6acee42a680d7a442b",
+      "source": "schema/upgrade-contract.schema.json"
     },
     "tests/test_handoffctl.py": {
       "sha256": "067e758276ef0192de8438ec9665301e3ec8ef4a95ef1533c24ae9ae84a7fa16",
@@ -84,6 +112,10 @@
       "sha256": "dcae7017d1adc4e02338c3359d282d36b1bd8dca337d076d104e682b67784043",
       "source": "tools/vendor.py"
     },
+    "tools/oracle_lifecycle.py": {
+      "sha256": "e4bd8017d0dea6bd9747261851478d8ede60ea2efa886314f7364bcb16336700",
+      "source": "tools/oracle_lifecycle.py"
+    },
     "tools/sqlite_storage.py": {
       "sha256": "96f4fcb45bb7ccc4936185dfc70192d27075232dca91029fe23295ef1e31e58b",
       "source": "tools/sqlite_storage.py"
@@ -91,6 +123,14 @@
     "tools/status_renderer.py": {
       "sha256": "6bc544c0fdf992fe193a26a72489e730e5ec853872db2649d1e4ccedb0ab1365",
       "source": "tools/status_renderer.py"
+    },
+    "tools/upgrade_commands.py": {
+      "sha256": "5b6360c39fa10979a77a0c6180968598593f56b9ea0c59de60b59c8017e37071",
+      "source": "tools/upgrade_commands.py"
+    },
+    "tools/upgrade_contract_runtime.py": {
+      "sha256": "caeb45260b790e7fdf8118ce370558bd26b04035407679df8e9845775e197119",
+      "source": "tools/upgrade_contract_runtime.py"
     },
     "vendor/agent-workflow-coordinator/LICENSE": {
       "sha256": "eff64380d625fe113a0f263f0111bc419ff5e19d429fb634cb6261b327851a11",
