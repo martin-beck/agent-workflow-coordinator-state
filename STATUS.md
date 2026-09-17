@@ -125,7 +125,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next24-20260917 | Next23 exact terminal verifier definition merged as PR #551 at 6e6a93e5; latest-main Verify 35209413243 succeeded on a95bcb52. | Release next23 and claim next24; inspect formal/durability plan for a genuinely uncovered seam, then implement one bounded fail-closed slice with hostile tests and synchronized evidence. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor9-20260917 | PR #550 CI-repaired merge a95bcb52; post-merge Verify 35209413243 succeeded. Descriptor8 PR #552 published at 6fb03cc. | Obtain independent exact-head review of PR #552, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor9-20260917 | PR #552 merged d21ba1b; exact Verify 35209880320 and authoritative post-merge Verify 35210143617 succeeded. | Implement descriptor9 bounded fail-closed admission boundary with hostile failure-path coverage; preserve execution and selector mutation disabled. |
 
 ### Open (1)
 
