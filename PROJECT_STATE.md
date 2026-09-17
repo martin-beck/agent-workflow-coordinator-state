@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0b91f065ec4ac99aadcfb40c988833d96bbb81c4`
-- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
-- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
+- Product remote main: `ff8f6493bb4dc1f621d0828b9f91b2093cfd0bcc`
+- Local origin/main: `0b91f065ec4ac99aadcfb40c988833d96bbb81c4`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
@@ -21,14 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #576 | `ar0013-dispatch-revalidation@8981d69e8417` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): make descriptor cleanup total |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35221859249 | `ff8f6493bb4d` | push | Verify | pending:- |
 | 35221691960 | `0b91f065ec4a` | push | Verify | in_progress:- |
-| 35221620483 | `8981d69e8417` | pull_request | Verify | in_progress:- |
+| 35221620483 | `8981d69e8417` | pull_request | Verify | completed:success |
 | 35221451125 | `93ccfd8b8d00` | pull_request | Verify | completed:success |
 | 35221194853 | `2892f8326190` | push | Verify | completed:success |
 | 35220934406 | `0df90c6adebd` | pull_request | Verify | completed:success |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35220309997 | `cffb5e711789` | pull_request | Verify | completed:success |
 | 35220061241 | `892ea6c53c52` | pull_request | Verify | completed:success |
 | 35219732715 | `6f7a5f660d3c` | workflow_dispatch | Verify | completed:success |
-| 35219518970 | `6f7a5f660d3c` | workflow_dispatch | Verify | completed:cancelled |
