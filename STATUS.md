@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #522 merged 530ba97b; combined postmerge Verify 35189340394 passed. Next slice adds owner-controlled transition input validation: release identity rejects group/other-writable or non-runner-owned transition files. | Publish and independently review transition ownership/mode validation PR; dispatch exact-head Verify and merge only after approval and green gates. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next4-20260917 | PR #524 published at signed head f4b82033: release transition input now must be owned by runner and not group/other writable; hostile mode test added. | Obtain independent exact-head review for PR #524, then await PR and manual Verify gates; merge only after approval and all required checks pass. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next11-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. |
 
 ### Open (1)
