@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `752dbc295a428903e0654dcee7f0a674a985b6ac`
+- Product remote main: `28a083a68b5756943ff2aedfbc8a52d014e79ef5`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,21 +24,20 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #627 | `ar0009-release-signer-format@bc2a5246f1b6` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(release): format signer workflow contract |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35272040491 | `bc2a5246f1b6` | pull_request | Verify | queued:- |
-| 35271920372 | `752dbc295a42` | push | Verify | completed:failure |
-| 35270982424 | `a2f8c45b654d` | pull_request | Verify | completed:success |
-| 35269427604 | `1b04ec84c6e4` | pull_request | Verify | completed:success |
-| 35269291912 | `434ad3f3863f` | pull_request | Verify | completed:success |
-| 35268971716 | `5abc6c475959` | pull_request | Verify | completed:success |
-| 35268950824 | `523d5cbb637f` | pull_request | Verify | completed:cancelled |
-| 35268735082 | `f263f1ce0eb8` | pull_request | Verify | completed:success |
-| 35268649497 | `3d4dbb4cf6b5` | pull_request | Verify | completed:cancelled |
-| 35268615204 | `dfcfc9223fda` | pull_request | Verify | completed:cancelled |
-| 35268535403 | `82f2a97c824f` | pull_request | Verify | completed:success |
-| 35268502447 | `619ddbbcf931` | pull_request | Verify | completed:cancelled |
+| 35277382215 | `28a083a68b57` | push | Verify | completed:success |
+| 35277318842 | `8d60c00f737a` | pull_request | Verify | completed:success |
+| 35276999060 | `2bce947877ee` | push | Verify | completed:success |
+| 35276947679 | `4e7c012d4f61` | pull_request | Verify | completed:success |
+| 35276634463 | `e6e3d0e76e14` | push | Verify | completed:success |
+| 35276577665 | `9c21701afbd0` | pull_request | Verify | completed:success |
+| 35276272883 | `15e5ea8b525c` | pull_request | Verify | completed:success |
+| 35275927403 | `7d75e6c562dd` | push | Verify | completed:success |
+| 35275860522 | `b00d144b7b11` | pull_request | Verify | completed:success |
+| 35275752581 | `217474a6aec5` | push | Verify | completed:failure |
+| 35275582458 | `11abf0e5e8e4` | pull_request | Verify | completed:success |
+| 35275361080 | `271762cdd389` | pull_request | Verify | completed:success |
