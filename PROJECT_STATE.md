@@ -22,11 +22,13 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #536 | `ar0013-dispatch-revalidation@bbabd1c93b21` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): expose combined dispatch revalidation gate |
+| #537 | `ar0012-terminal-fresh-read@de524997377c` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind fresh runtime read model branch |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35202098895 | `de524997377c` | pull_request | Verify | queued:- |
 | 35201959344 | `bbabd1c93b21` | workflow_dispatch | Verify | in_progress:- |
 | 35201707898 | `bbabd1c93b21` | pull_request | Verify | completed:success |
 | 35201229361 | `58b6243e1108` | push | Verify | completed:success |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35200087548 | `fe263922e9e1` | push | Verify | completed:success |
 | 35199850429 | `4303e02dc246` | push | Verify | completed:cancelled |
 | 35199836949 | `f899f91c3d4c` | workflow_dispatch | Verify | completed:success |
-| 35199747489 | `f899f91c3d4c` | pull_request | Verify | completed:success |
