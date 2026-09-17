@@ -25,12 +25,14 @@ Generated from local Git and GitHub. Do not edit.
 | #615 | `ar0012-backup-theorem@497ea6de7837` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require backup theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #622 | `ar0024-ar0023-stacked@161de1094237` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | chore: stack AR-0023 quality and AR-0024 compatibility repairs |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35245944574 | `f29b28738d55` | push | Verify | in_progress:- |
+| 35246028981 | `161de1094237` | pull_request | Verify | in_progress:- |
+| 35245944574 | `f29b28738d55` | push | Verify | completed:failure |
 | 35245866912 | `55b1758cd41f` | pull_request | Verify | completed:success |
 | 35245608353 | `1c5849f7adcd` | push | Verify | completed:failure |
 | 35245536398 | `d3ac461e07f0` | pull_request | Verify | completed:success |
@@ -41,4 +43,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35244785767 | `ac21d5cd3e2b` | pull_request | Verify | completed:success |
 | 35244774396 | `cf09c5db0b48` | workflow_dispatch | Verify | completed:cancelled |
 | 35244665983 | `cf09c5db0b48` | pull_request | Verify | completed:success |
-| 35244236987 | `d66f7b187076` | pull_request | Verify | completed:failure |
