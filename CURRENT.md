@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next25 exact terminal target-domain binding implemented in signed b1e7a01; focused gates pass. | Run full discovery/formal evidence for b1e7a01; if green publish signed PR and exact pr-fast Verify. Mutation remains disabled. | codex-awc-ar0012-next25-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #552 merged d21ba1b; post-merge Verify 35210143617 succeeded. Descriptor9 PR #554 published at 9bd78d7. | Obtain independent exact-head review of PR #554, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | codex-awc-ar0013-next-descriptor10-20260917 |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #552 merged d21ba1b; post-merge Verify 35210143617 succeeded. Descriptor9 PR #554 published at 9bd78d7. | Obtain independent exact-head review of PR #554, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | - |
 
 ## Done
 
