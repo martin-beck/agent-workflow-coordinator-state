@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #534 | `ar0012-terminal-reopen-completion@9e8b25fc7aa0` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(formal): bind reopen completion model branch |
+| #534 | `ar0012-terminal-reopen-completion@9e8b25fc7aa0` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | test(formal): bind reopen completion model branch |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35200637598 | `9e8b25fc7aa0` | pull_request | Verify | queued:- |
+| 35200651786 | `9e8b25fc7aa0` | workflow_dispatch | Verify | queued:- |
+| 35200637598 | `9e8b25fc7aa0` | pull_request | Verify | in_progress:- |
 | 35200087548 | `fe263922e9e1` | push | Verify | completed:success |
 | 35199850429 | `4303e02dc246` | push | Verify | completed:cancelled |
 | 35199836949 | `f899f91c3d4c` | workflow_dispatch | Verify | completed:success |
@@ -38,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35198621074 | `be4655e1bca5` | pull_request | Verify | completed:success |
 | 35198022149 | `81cd20d7e0d1` | push | Verify | completed:success |
 | 35197818217 | `7f50b294b05c` | push | Verify | completed:cancelled |
-| 35197758293 | `ef27e385352b` | workflow_dispatch | Verify | completed:success |
