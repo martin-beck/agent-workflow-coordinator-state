@@ -21,11 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #495 | `ar0012-reconcile-crash-formal@d22d238c6a6a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(selector): verify fresh recovery after rename crash |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35175891632 | `d22d238c6a6a` | workflow_dispatch | Verify | queued:- |
+| 35175844257 | `d22d238c6a6a` | pull_request | Verify | completed:success |
 | 35175483821 | `54a9251a9ffa` | push | Verify | completed:success |
 | 35175419962 | `cd75987fdae7` | push | Verify | completed:cancelled |
 | 35175294496 | `9c1aa0cb21ff` | pull_request | Verify | completed:success |
@@ -36,5 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35174414657 | `4da483fa37a4` | workflow_dispatch | Verify | completed:success |
 | 35174325960 | `4103b34753cd` | pull_request | Verify | completed:success |
 | 35174136213 | `4fd259d7ea67` | push | Verify | completed:success |
-| 35173957070 | `4a83d871773e` | pull_request | Verify | completed:success |
-| 35173744925 | `096b633a0a09` | push | Verify | completed:success |
