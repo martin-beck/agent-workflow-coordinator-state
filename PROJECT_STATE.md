@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
+| #482 | `ar0012-reconcile-crash-formal@8e5678f03b82` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | chore(formal): refresh upgrade evidence with generator |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35170295025 | `8e5678f03b82` | pull_request | Verify | completed:failure |
 | 35170064156 | `8950f4fbcd6b` | push | Verify | completed:failure |
 | 35170007348 | `c5e229a82c61` | pull_request | Verify | completed:success |
 | 35169910100 | `a8356792e0f6` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35168811415 | `be8ce206746e` | pull_request | Verify | completed:success |
 | 35168589050 | `682d48d151aa` | pull_request | Verify | completed:success |
 | 35168226783 | `49bd930cfc70` | push | Verify | completed:failure |
-| 35168156659 | `80e3851a0e99` | pull_request | Verify | completed:success |
