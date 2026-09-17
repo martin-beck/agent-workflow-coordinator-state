@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next15 formal seam implemented locally: terminal contract now requires explicit freshRuntimeVerified transition branch; signed commit 15dc197, focused gates green. | Run full discovery/formal evidence for local next15 commit 15dc197, adding explicit freshRuntimeVerified model-branch binding; publish only after green gates. Mutation remains disabled. | codex-awc-ar0012-next15-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #470 merged 50765e70; selector resolver identity binding complete. Next slice is descriptor-bound validation-to-exec continuity. | Implement a retained descriptor-bound runtime resolution seam and hostile validation-to-exec replacement test; keep dispatch/mutation disabled until the descriptor contract is complete. | codex-awc-ar0013-next-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Local descriptor-bound ResolvedRuntime handle checkpoint 9b6c724; 776 tests pass but coverage remains 94%, so publication is blocked pending added error-path coverage. | Add targeted coverage for ResolvedRuntime context/close/revalidation and retained-handle failure branches until full branch coverage reaches 95%; then rerun all gates before publication. | codex-awc-ar0013-next-20260917 |
 
 ## Open
 
