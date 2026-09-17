@@ -3,8 +3,8 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `52695e392d8935eb3473380f14c44a6e465f1a90`
-- Local origin/main: `52695e392d8935eb3473380f14c44a6e465f1a90`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
 ## Open pull requests
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #503 | `ar0009-release-digest-shape@1ac902f7d977` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | ci(release): validate evidence manifest shape |
+| #503 | `ar0009-release-digest-shape@1ac902f7d977` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate evidence manifest shape |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35180206334 | `1ac902f7d977` | pull_request | Verify | in_progress:- |
+| 35180263389 | `1ac902f7d977` | workflow_dispatch | Verify | queued:- |
+| 35180206334 | `1ac902f7d977` | pull_request | Verify | completed:success |
 | 35179905028 | `52695e392d89` | push | Verify | completed:success |
 | 35179903589 | `18705744b5ad` | push | Verify | completed:cancelled |
 | 35179711850 | `2bf152cb73ca` | workflow_dispatch | Verify | completed:success |
@@ -38,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35178369812 | `2bf152cb73ca` | pull_request | Verify | completed:success |
 | 35178358584 | `19d57a066713` | pull_request | Verify | completed:success |
 | 35178153231 | `6656f2c3cbbf` | push | Verify | completed:success |
-| 35177982225 | `21b2e5c168ca` | workflow_dispatch | Verify | completed:success |
