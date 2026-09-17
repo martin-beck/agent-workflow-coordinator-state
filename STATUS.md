@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next3-20260917 | PR #510 merged as 0063e6a1; post-merge Verify 35183705619 passed. Next bounded slice is artifact-set integrity: release-runbooks must contain exactly agent.md and operator.md before upload; upgrade mutation remains disabled. | Implement and publish exact artifact-set validation with focused tests; obtain independent exact-head review and Verify. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next3-20260917 | PR #510 merged as 0063e6a1; post-merge Verify 35183705619 passed. PR #512 at 0c91ce2 fails closed unless release-runbooks contains exactly agent.md and operator.md before hashing/upload; full local suite 759 passed. | Obtain independent exact-head review for PR #512 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next11-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Close the lifecycle correspondence seam: define a trusted store-owned lifecycle trace schema mapping acquire/quiesce/backup/stage/commit/validate/reopen and rollback transitions to UpgradeRecovery/UpgradeSessionIntent actions; add executable trace-to-model validation before claiming further durability coverage. Do not enable mutation. |
 
 ### Open (1)
