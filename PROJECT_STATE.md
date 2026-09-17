@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `3752c34f740b0cdb32b43cf252260d662aa5806e`
-- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
-- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
+- Product remote main: `6656f2c3cbbf797cf0716682b1834b9a4803b4b7`
+- Local origin/main: `3752c34f740b0cdb32b43cf252260d662aa5806e`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
@@ -21,13 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
-| #500 | `ar0009-release-evidence-digest@21b2e5c168ca` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): bind evidence digests to source |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35177982225 | `21b2e5c168ca` | workflow_dispatch | Verify | queued:- |
+| 35178153231 | `6656f2c3cbbf` | push | Verify | completed:success |
+| 35177982225 | `21b2e5c168ca` | workflow_dispatch | Verify | completed:success |
 | 35177953091 | `21b2e5c168ca` | pull_request | Verify | completed:success |
 | 35177508604 | `3752c34f740b` | push | Verify | completed:success |
 | 35177381877 | `21a1f93dac39` | push | Verify | completed:cancelled |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35176900568 | `86fad8b9b698` | workflow_dispatch | Verify | completed:success |
 | 35176710222 | `3a7e534f0434` | push | Verify | completed:success |
 | 35176557336 | `86fad8b9b698` | pull_request | Verify | completed:success |
-| 35176549600 | `1dfbab6aa8bd` | workflow_dispatch | Verify | completed:success |
