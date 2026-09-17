@@ -149,7 +149,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next50-20260917 | Next50 PR #608 published at signed head 2c51734: UpgradeRecovery validator now requires TypeInvariant theorem admission marker; focused 36 tests and Ruff pass; mutation disabled. | Await PR #608 exact-head AWQ/scope/pr-fast Verify; independently review and merge only on green, then verify authoritative postmerge before releasing next50. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor36-20260917 | Descriptor34 PR #604 merged c086a1b; exact Verify 35237246905 succeeded on 1597b2e; authoritative postmerge Verify 35238375247 succeeded on c086a1b. Descriptor35 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor36-20260917 | Descriptor35 PR #607 merged f256351; exact Verify 35239237344 succeeded on 0e44b25; authoritative postmerge Verify 35239740063 succeeded on f256351. Descriptor36 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
 
 ### Open (1)
 
