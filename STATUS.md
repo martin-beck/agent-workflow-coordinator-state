@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next34-20260917 | Next33 terminal attempt identity merged PR #571 6f7a5f66; replacement exact merge-head Verify 35219732715 succeeded on 6f7a5f66. | Release next33 and claim next34; inspect remaining formal/durability correspondence seam and implement one bounded fail-closed slice. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next34-20260917 | Next34 release revision advancement merged PR #573 b7e5f92; post-merge Verify 35220535460 succeeded. | Release next34 and claim next35; inspect remaining formal/durability correspondence seam and implement one bounded fail-closed slice. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor19-20260917 | Descriptor18 PR #572 merged ed2769d7; exact Verify 35220061241 succeeded. Latest-main postmerge sequence run 35220535460 is in progress after PR573 superseded prior run. Descriptor19 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. |
 
 ### Open (1)
