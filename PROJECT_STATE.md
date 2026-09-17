@@ -22,12 +22,16 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #503 | `ar0009-release-digest-shape@1ac902f7d977` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | ci(release): validate evidence manifest shape |
+| #504 | `ar0012-selector-fsync-failure@3946a8adc883` | `main` | UNSTABLE | QUEUED:, COMPLETED:SUCCESS | test(selector): cover directory fsync failure recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35180263389 | `1ac902f7d977` | workflow_dispatch | Verify | queued:- |
+| 35180481356 | `3946a8adc883` | workflow_dispatch | Verify | queued:- |
+| 35180464360 | `3946a8adc883` | workflow_dispatch | Verify | in_progress:- |
+| 35180458047 | `3946a8adc883` | pull_request | Verify | queued:- |
+| 35180263389 | `1ac902f7d977` | workflow_dispatch | Verify | completed:success |
 | 35180206334 | `1ac902f7d977` | pull_request | Verify | completed:success |
 | 35179905028 | `52695e392d89` | push | Verify | completed:success |
 | 35179903589 | `18705744b5ad` | push | Verify | completed:cancelled |
@@ -36,6 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35178422574 | `2bf152cb73ca` | workflow_dispatch | Verify | completed:success |
 | 35178416800 | `2bf152cb73ca` | workflow_dispatch | Verify | completed:cancelled |
 | 35178412386 | `19d57a066713` | workflow_dispatch | Verify | completed:success |
-| 35178369812 | `2bf152cb73ca` | pull_request | Verify | completed:success |
-| 35178358584 | `19d57a066713` | pull_request | Verify | completed:success |
-| 35178153231 | `6656f2c3cbbf` | push | Verify | completed:success |
