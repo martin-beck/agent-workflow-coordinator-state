@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #573 merged b7e5f92; authoritative postmerge Verify 35220535460 succeeded. Next35 implementation signed a0c2cc4 is locally complete with focused 49-test and full 737-test 95% gates. | Release completed next34, then claim next35 and publish signed a0c2cc4 as PR with exact hosted Verify. | codex-awc-ar0012-next34-20260917 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Descriptor18 PR #572 merged ed2769d7; exact Verify 35220061241 succeeded. Latest-main postmerge Verify 35220535460 succeeded on b7e5f92 after PR573 merge; descriptor19 claim active. | Inspect next distinct runtime admission/release integrity boundary; implement hostile fail-closed regression coverage without enabling execution or selector mutation. | codex-awc-ar0013-next-descriptor19-20260917 |
 
 ## Open
@@ -15,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #573 merged b7e5f92; authoritative postmerge Verify 35220535460 succeeded. Next35 implementation signed a0c2cc4 is locally complete with focused 49-test and full 737-test 95% gates. | Release completed next34, then claim next35 and publish signed a0c2cc4 as PR with exact hosted Verify. | - |
 
 ## Done
 
