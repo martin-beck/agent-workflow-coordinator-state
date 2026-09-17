@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `b142359e48dce24102ac10d4fd78355490d779c9`
+- Product remote main: `63135b383afd5013b7e172854d4981b58250150b`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,8 +10,8 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
 | #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
 | #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
 | #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
@@ -27,15 +27,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35243408775 | `63135b383afd` | push | Verify | completed:failure |
+| 35243171849 | `53590074c4c5` | push | Verify | completed:failure |
+| 35243092167 | `c25bebcafe49` | pull_request | Verify | completed:success |
+| 35242973968 | `2a4a704579c5` | pull_request | Verify | completed:success |
+| 35242945594 | `f50a0387b6c4` | pull_request | Verify | completed:cancelled |
+| 35242704878 | `b1b2d8ae7d07` | push | Verify | completed:success |
+| 35242564915 | `b9adde8247c8` | pull_request | Verify | completed:failure |
+| 35242408512 | `334c57dc8044` | pull_request | Verify | completed:success |
 | 35241888312 | `b142359e48dc` | push | Verify | completed:success |
 | 35241806275 | `73442334f402` | pull_request | Verify | completed:success |
 | 35241326451 | `14f27c440ba4` | push | Verify | completed:success |
 | 35241264329 | `70919dd660ae` | pull_request | Verify | completed:failure |
-| 35241031869 | `e8d06c984b5b` | push | Verify | completed:cancelled |
-| 35240904696 | `6630dfa5bed4` | pull_request | Verify | completed:success |
-| 35240588427 | `7f81c971a705` | pull_request | Verify | completed:success |
-| 35240363920 | `b91a46f87366` | push | Verify | completed:success |
-| 35240297145 | `8b7b3c401869` | pull_request | Verify | completed:failure |
-| 35239740063 | `f25635120850` | push | Verify | completed:success |
-| 35239652621 | `2c51734bf6f9` | pull_request | Verify | completed:success |
-| 35239237344 | `0e44b258c0fb` | pull_request | Verify | completed:success |
