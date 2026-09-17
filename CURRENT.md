@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next12 terminal-outcome correspondence rebased onto current main and republished as PR #528; signed/DCO and local focused gates green; hosted exact-head fast Verify queued. | PR #528 rebased/published at exact head 1dd63ee5; exact-head fast Verify 35196624168 is queued with AWQ/scope green. Await terminal formal success and independent review before guarded merge. Mutation remains disabled. | codex-awc-ar0012-next12-20260917 |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #470 provenance repaired with tree-preserving signed/DCO history; exact head 5667704. | Complete replacement exact-head Verify and independent review; do not merge before all gates pass. | codex-awc-ar0013-next-20260917 |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #470 coverage repair exact head bd622a51; full 733-test discovery passes at 95% branch coverage. | Complete replacement exact-head Verify and independent review; do not merge before all gates pass. | codex-awc-ar0013-next-20260917 |
 
 ## Open
 
