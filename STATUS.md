@@ -148,7 +148,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next48-20260917 | Next47 PR #601 signed head 55286a6 merged 0c6208dd; exact Verify 35234577972 and authoritative postmerge Verify 35235059072 succeeded. | Release completed next47, then claim next48 and implement next bounded fail-closed durability seam. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next48-20260917 | Next48 implemented: single-active-session terminal-recovery theorem admission marker at signed product commit 76258be; focused 49 tests and full 737-test/95&#37; coverage gate pass; mutation remains disabled. | Publish signed commit 76258be as bounded next48 PR, obtain independent exact-head review and hosted pr-fast Verify, then merge/postmerge before releasing next48. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor33-20260917 | Descriptor32 PR #600 merged 3fb3a14; exact Verify 35234480805 succeeded on 5ab8ac2; authoritative latest-main Verify 35235059072 succeeded on 0c6208dd. Descriptor33 claim active. | Implement next distinct runtime admission/release integrity boundary with hostile fail-closed regression coverage; preserve execution and selector mutation disabled. |
 
 ### Open (1)
