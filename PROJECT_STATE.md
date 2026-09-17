@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0c6208dd3439350d0ce55e10c446b9390f3d2a1e`
+- Product remote main: `f392c44a308eadc8c9db5249f417d872b2a54f20`
 - Local origin/main: `86f3f451f7ca2b3e027345a606fc2e02f6c85617`
 - Primary worktree head: `3e570cc3b679cafacfc4cdda1c35992641ca0761`
 
@@ -22,13 +22,15 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #599 | `ar0022-oracle-gates@3e570cc3b679` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat: enforce mandatory oracle interaction gates |
-| #602 | `ar0013-dispatch-revalidation@013beb7713c9` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): bind verified identity objects exactly |
+| #603 | `ar0012-single-session-theorem@76258be6f60c` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | test(formal): require single active session theorem |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35236002874 | `013beb7713c9` | pull_request | Verify | in_progress:- |
+| 35236576604 | `76258be6f60c` | pull_request | Verify | queued:- |
+| 35236521249 | `f392c44a308e` | push | Verify | in_progress:- |
+| 35236002874 | `013beb7713c9` | pull_request | Verify | completed:success |
 | 35235749319 | `3e570cc3b679` | pull_request | Verify | completed:failure |
 | 35235059072 | `0c6208dd3439` | push | Verify | completed:success |
 | 35234914636 | `8cc898ec6cb1` | pull_request | Verify | completed:failure |
@@ -38,5 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35234480805 | `5ab8ac2eabdb` | pull_request | Verify | completed:success |
 | 35234222268 | `7fe507c0264f` | pull_request | Verify | completed:failure |
 | 35233829266 | `1f413a479b1b` | pull_request | Verify | completed:failure |
-| 35233743767 | `9e6fb8ea5b02` | push | Verify | completed:success |
-| 35233450060 | `9dc3d38a8cfd` | push | Verify | completed:cancelled |
