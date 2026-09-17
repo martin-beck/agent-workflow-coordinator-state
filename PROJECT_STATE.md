@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `368a3ccfa605f141c24f248c823e06a1a6f948ef`
-- Local origin/main: `50ec18b193908b0c78d26cf6a1b32bc5d4fa6fe2`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Product remote main: `503074bfdc17df200e45a91f72a9c7979b20a50e`
+- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
+- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
 ## Open pull requests
 
@@ -21,14 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | UNKNOWN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
-| #541 | `ar0012-terminal-reopen-definition@0e45e53d29ef` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind complete reopen definition |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35203896834 | `368a3ccfa605` | push | Verify | queued:- |
-| 35203746585 | `0e45e53d29ef` | pull_request | Verify | in_progress:- |
+| 35204076599 | `503074bfdc17` | push | Verify | pending:- |
+| 35203896834 | `368a3ccfa605` | push | Verify | in_progress:- |
+| 35203746585 | `0e45e53d29ef` | pull_request | Verify | completed:success |
 | 35203688204 | `0b6818f2e1ea` | workflow_dispatch | Verify | completed:success |
 | 35203631557 | `0b6818f2e1ea` | pull_request | Verify | completed:success |
 | 35203258793 | `50ec18b19390` | push | Verify | completed:success |
@@ -38,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35202822004 | `66419139189b` | pull_request | Verify | completed:success |
 | 35202565985 | `d78be0414c8a` | workflow_dispatch | Verify | completed:success |
 | 35202420105 | `d78be0414c8a` | push | Verify | completed:success |
-| 35202199863 | `c812eea7d290` | push | Verify | completed:cancelled |
