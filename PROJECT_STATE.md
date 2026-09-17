@@ -22,6 +22,7 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #490 | `ar0009-next2-recovery@1b571690de95` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(selector): recheck selector after recovery cleanup |
+| #494 | `ar0012-reconcile-crash-formal@9c1aa0cb21ff` | `main` | UNKNOWN | - | test(barrier): recover ambiguous replacement after child death |
 
 ## Recent workflows
 
