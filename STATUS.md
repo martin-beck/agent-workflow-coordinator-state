@@ -121,7 +121,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #501 merged as 52695e39; post-merge Verify 35179905028 passed. PR #503 at 1ac902f adds fail-closed validation that the uploaded SHA-256 evidence manifest has exactly three canonical artifact entries; full local suite 755 passed. | Obtain independent exact-head review for PR #503 and exact-head Verify; merge only after approval and green gates, then record post-merge evidence. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-next2-20260917 | PR #503 merged as 60d111f5; combined post-merge Verify 35180641280 passed on main f39b673e after PR504. Next slice is digest manifest verification, local focused gate passed, signed head 65cbd3d pending publication. | Publish the digest-manifest verification slice after full suite; obtain independent exact-head review and Verify before merge. Keep upgrade mutation disabled. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next10-20260917 | PR #499 merged as 3752c34f; post-merge Verify 35177508604 passed on exact main SHA. Final-parent-recheck selector process-death slice complete; AR-0012 remains open. | Implement next bounded selector publication durability slice: child-process crash after publication identity validation but before directory fsync, then fresh-process reconciliation and residue checks; regenerate synchronized formal evidence for test changes. |
 
 ### Open (1)
