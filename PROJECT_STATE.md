@@ -22,12 +22,13 @@ Generated from local Git and GitHub. Do not edit.
 | #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #470 | `ar0013-selector-publication-adapter@a5408d05c716` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | feat(runtime): bind selector to canonical manifest identity |
 | #490 | `ar0009-next2-recovery@1b571690de95` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(selector): recheck selector after recovery cleanup |
-| #494 | `ar0012-reconcile-crash-formal@9c1aa0cb21ff` | `main` | UNKNOWN | - | test(barrier): recover ambiguous replacement after child death |
+| #494 | `ar0012-reconcile-crash-formal@9c1aa0cb21ff` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(barrier): recover ambiguous replacement after child death |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35175294496 | `9c1aa0cb21ff` | pull_request | Verify | in_progress:- |
 | 35175145671 | `1b571690de95` | workflow_dispatch | Verify | in_progress:- |
 | 35175090996 | `1b571690de95` | workflow_dispatch | Verify | completed:cancelled |
 | 35174703739 | `1b571690de95` | pull_request | Verify | completed:success |
@@ -39,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35173744925 | `096b633a0a09` | push | Verify | completed:success |
 | 35173585492 | `ebaf421e1491` | pull_request | Verify | completed:success |
 | 35173342503 | `cbd505a5d19d` | push | Verify | completed:success |
-| 35173193625 | `79f006bb63dc` | pull_request | Verify | completed:success |
