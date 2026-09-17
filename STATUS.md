@@ -124,7 +124,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next25-20260917 | Next25 exact terminal target-domain binding implemented in signed b1e7a01; focused gates pass. | Run full discovery/formal evidence for b1e7a01; if green publish signed PR and exact pr-fast Verify. Mutation remains disabled. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-next25-20260917 | Next25 exact terminal target-domain binding merged PR #555 as 36d58ac2; post-merge Verify 35211477729 succeeded. | Release next25 and claim next26; inspect remaining formal/durability correspondence seams and implement one bounded fail-closed slice. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-next-descriptor10-20260917 | PR #554 merged 413e4a5f; exact Verify 35210740268 and authoritative post-merge Verify 35210953261 succeeded. | Implement descriptor10 bounded fail-closed admission boundary with hostile failure-path tests; preserve execution and selector mutation disabled. |
 
 ### Open (1)
