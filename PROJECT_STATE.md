@@ -24,15 +24,16 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #682 | `ar-mandatory-decision-routing@9794f539dbcc` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
+| #682 | `ar-mandatory-decision-routing@6eb5265e142b` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
 | #683 | `ar0012-cas-bootstrap@aa81420a8e2a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35334729666 | `91a4b454ee50` | push | Verify | queued:- |
-| 35334685442 | `9794f539dbcc` | workflow_dispatch | Verify | in_progress:- |
+| 35334975470 | `6eb5265e142b` | workflow_dispatch | Verify | queued:- |
+| 35334729666 | `91a4b454ee50` | push | Verify | in_progress:- |
+| 35334685442 | `9794f539dbcc` | workflow_dispatch | Verify | completed:failure |
 | 35334669732 | `0a7ab4aac5a6` | pull_request | Verify | completed:success |
 | 35334606671 | `2d31e5b78019` | workflow_dispatch | Verify | completed:failure |
 | 35334463147 | `7fcd185a3316` | workflow_dispatch | Verify | completed:failure |
@@ -42,4 +43,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35333811995 | `811d518c9061` | pull_request | Verify | completed:failure |
 | 35333746366 | `7607efec2020` | workflow_dispatch | Verify | completed:failure |
 | 35333732080 | `4704b6979028` | push | Verify | completed:failure |
-| 35333659273 | `1e5983381e9b` | pull_request | Verify | completed:success |
