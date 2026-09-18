@@ -152,7 +152,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep AR-0009 open for final v0.3.20 transition provenance and release/tag readiness; no tag until fresh-clone provenance checks pass. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-reaudit-20260918d | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-reaudit-20260918d | Exact main eed0798 focused selector/runtime and release/upgrade suites pass 216 tests and 260 subtests; selector publication/recovery, process death, fsync/cleanup ambiguity, parent replacement, temporary safety, descriptor failures, reread drift, admission, runtime bootstrap, identity, engine, campaign, contract, runbook, and lock scope are covered. No new dependency-safe selector/runtime seam identified; mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
 
 ### Open (1)
 
