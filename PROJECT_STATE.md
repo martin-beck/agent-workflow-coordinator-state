@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #657 | `ar0012-process-fence@8664268d755f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: reread authority before fenced CAS writes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35317954743 | `8664268d755f` | pull_request | Verify | completed:success |
 | 35317455503 | `0b0beac85675` | push | Verify | completed:success |
 | 35317361553 | `5afdd7455069` | pull_request | Verify | completed:success |
 | 35317290412 | `258934a9896f` | pull_request | Verify | completed:success |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35315941420 | `354ed3086cee` | pull_request | Verify | completed:success |
 | 35315735452 | `c8d335047cb7` | pull_request | Verify | completed:failure |
 | 35315580527 | `fd8237be4bb7` | pull_request | Verify | completed:failure |
-| 35315286261 | `db63ef26a633` | push | Verify | completed:success |
