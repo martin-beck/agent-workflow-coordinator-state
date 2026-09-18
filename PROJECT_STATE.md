@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `05f06d72c684a3e1e71510ff574d16d62c98a0fd`
+- Product remote main: `faf002fbdb97130395197cd34ba20738ffca7664`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,20 +24,21 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #660 | `release-v0315@c555a0cc0ada` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | release: publish TUI session handoff support as v0.3.15 |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35320048807 | `c555a0cc0ada` | pull_request | Verify | completed:failure |
+| 35320013414 | `faf002fbdb97` | push | Verify | completed:failure |
+| 35319876397 | `422b4fe8a171` | pull_request | Verify | completed:failure |
+| 35319847297 | `ba56f6e25233` | push | Verify | completed:failure |
+| 35319812691 | `9463bec9999b` | pull_request | Verify | completed:success |
+| 35319799333 | `236e44f8b8ad` | pull_request | Verify | completed:success |
+| 35319360788 | `958861d10687` | pull_request | Verify | completed:success |
 | 35318582966 | `05f06d72c684` | push | Verify | completed:success |
 | 35318401938 | `feca98340d46` | pull_request | Verify | completed:success |
 | 35317954743 | `8664268d755f` | pull_request | Verify | completed:success |
 | 35317455503 | `0b0beac85675` | push | Verify | completed:success |
 | 35317361553 | `5afdd7455069` | pull_request | Verify | completed:success |
-| 35317290412 | `258934a9896f` | pull_request | Verify | completed:success |
-| 35317260811 | `4f7c94b1aae5` | pull_request | Verify | completed:success |
-| 35316830412 | `9f40b863a4ad` | push | Verify | completed:success |
-| 35316624587 | `1a9bf7daff78` | pull_request | Verify | completed:success |
-| 35316398472 | `06c1e6ec9af1` | pull_request | Verify | completed:failure |
-| 35316099480 | `6125e5542420` | push | Verify | completed:success |
-| 35315941420 | `354ed3086cee` | pull_request | Verify | completed:success |
