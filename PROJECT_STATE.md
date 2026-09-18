@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0b0beac856753c3174410a4e5ebdddc382eb09fe`
+- Product remote main: `05f06d72c684a3e1e71510ff574d16d62c98a0fd`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,13 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #657 | `ar0012-process-fence@feca98340d46` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix: reread authority before fenced CAS writes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35318401938 | `feca98340d46` | pull_request | Verify | in_progress:- |
+| 35318582966 | `05f06d72c684` | push | Verify | in_progress:- |
+| 35318401938 | `feca98340d46` | pull_request | Verify | completed:success |
 | 35317954743 | `8664268d755f` | pull_request | Verify | completed:success |
 | 35317455503 | `0b0beac85675` | push | Verify | completed:success |
 | 35317361553 | `5afdd7455069` | pull_request | Verify | completed:success |
@@ -41,4 +41,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35316398472 | `06c1e6ec9af1` | pull_request | Verify | completed:failure |
 | 35316099480 | `6125e5542420` | push | Verify | completed:success |
 | 35315941420 | `354ed3086cee` | pull_request | Verify | completed:success |
-| 35315735452 | `c8d335047cb7` | pull_request | Verify | completed:failure |
