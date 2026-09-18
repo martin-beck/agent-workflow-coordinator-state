@@ -156,7 +156,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-release-policy-20260918 | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Continue dependency-safe release integration with exact tag/source binding; no signer script or key is required. |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-mutation-20260918g | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Select the next smallest dependency-safe formal correspondence slice after PR #771; preserve mutation, outcome publication, apply, rollback, and Git dispatch fail-closed. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-mutation-20260918g | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the next bounded correspondence slice: machine-check that Next is defined before Spec references it in UpgradeRecovery.tla. Keep mutation, outcome publication, Git dispatch, apply, and rollback fail-closed. |
 
 ### Open (2)
 
