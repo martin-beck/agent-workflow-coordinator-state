@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #667 | `docs-v0317-changelog@2302a164f693` | `main` | CLEAN | - | docs: add v0.3.17 event journal notes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35323364968 | `2302a164f693` | pull_request | Verify | queued:- |
 | 35323106057 | `fe68c24335f7` | push | Verify | completed:failure |
 | 35322893838 | `0210b76d5fee` | pull_request | Verify | completed:failure |
 | 35322874408 | `0166a241494e` | push | Verify | completed:failure |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35321622756 | `c950fc914b32` | pull_request | Verify | completed:success |
 | 35321455020 | `64b9842763e8` | push | Verify | completed:success |
 | 35321263660 | `dc89385c037f` | pull_request | Verify | completed:success |
-| 35321222684 | `f4580710edaf` | pull_request | Verify | completed:cancelled |
