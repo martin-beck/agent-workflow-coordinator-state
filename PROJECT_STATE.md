@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `eed0798e99dff1d75734f4ba6020afc24d866d81`
+- Product remote main: `ae2a733045d11063ef20988368c0643b8ccbf65d`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,13 +24,16 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #726 | `ar0031-executable-backup@65d869d87f9a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(upgrade): exercise real SQLite backup campaign |
+| #727 | `ar0031-git-backup@37bfb9ef1c55` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(upgrade): harden Git backup failure cleanup |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35372623538 | `65d869d87f9a` | pull_request | Verify | in_progress:- |
+| 35373218447 | `37bfb9ef1c55` | pull_request | Verify | in_progress:- |
+| 35372768203 | `ae2a733045d1` | push | Verify | completed:success |
+| 35372768125 | `ae2a733045d1` | push | Formal | completed:success |
+| 35372623538 | `65d869d87f9a` | pull_request | Verify | completed:success |
 | 35369474248 | `eed0798e99df` | push | Formal | completed:success |
 | 35369474202 | `eed0798e99df` | push | Verify | completed:success |
 | 35369167730 | `5baebde3bead` | push | Verify | completed:success |
@@ -39,6 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35367468186 | `a85a58035c84` | pull_request | Verify | completed:success |
 | 35367333237 | `a85a58035c84` | pull_request | Verify | completed:success |
 | 35367218146 | `0fbb23d71b89` | pull_request | Verify | completed:failure |
-| 35364403181 | `8bd2e0e6d21c` | push | Verify | completed:success |
-| 35364085888 | `7670e52f2c84` | pull_request | Verify | completed:success |
-| 35362771550 | `fe70c08efa52` | push | Verify | completed:success |
