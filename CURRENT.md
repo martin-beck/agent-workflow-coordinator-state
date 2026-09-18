@@ -3,11 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
+## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #633 merged as a054b857; exact Verify 35282707804 and post-merge Verify 35282804560 succeeded. External awc-sign-release.sh digest options were validated by self-test; CI only emits the non-executing command. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. | codex-awc-ar0009-loop-20260918 |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #633 merged as a054b857; exact Verify 35282707804 and post-merge Verify 35282804560 succeeded. External awc-sign-release.sh digest options were validated by self-test; CI only emits the non-executing command. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. | - |
 
 ## Done
 

@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **In progress** | Claimed work with a live lease | 0 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -36,7 +36,7 @@ flowchart LR
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - Done"]:::status_done
         AR_0008["AR-0008 - Done"]:::status_done
-        AR_0009["AR-0009 - In progress"]:::status_in_progress
+        AR_0009["AR-0009 - Open"]:::status_open
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Done"]:::status_done
@@ -144,11 +144,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918 | PR #633 merged as a054b857; exact Verify 35282707804 and post-merge Verify 35282804560 succeeded. External awc-sign-release.sh digest options were validated by self-test; CI only emits the non-executing command. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #633 merged as a054b857; exact Verify 35282707804 and post-merge Verify 35282804560 succeeded. External awc-sign-release.sh digest options were validated by self-test; CI only emits the non-executing command. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. |
 
 ### Done (28)
 
