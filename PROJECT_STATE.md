@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5cb8100a07580ed46de2442e367089356b1b348f`
+- Product remote main: `d4df55135e206502ac3d440b1d9f6c6bb855cf48`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,14 +24,15 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #664 | `release-v0316@8e4ae6570c38` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | release: publish Markdown TUI handoff support as v0.3.16 |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35321714133 | `8e4ae6570c38` | pull_request | Verify | queued:- |
-| 35321695125 | `5cb8100a0758` | push | Verify | in_progress:- |
+| 35322025810 | `d4df55135e20` | push | Verify | completed:success |
+| 35322021790 | `060b4b618d0b` | pull_request | Verify | completed:success |
+| 35321714133 | `8e4ae6570c38` | pull_request | Verify | completed:success |
+| 35321695125 | `5cb8100a0758` | push | Verify | completed:success |
 | 35321622756 | `c950fc914b32` | pull_request | Verify | completed:success |
 | 35321455020 | `64b9842763e8` | push | Verify | completed:success |
 | 35321263660 | `dc89385c037f` | pull_request | Verify | completed:success |
@@ -40,5 +41,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35320871606 | `ca0a6dca9a1f` | pull_request | Verify | completed:failure |
 | 35320632217 | `18d641b63491` | pull_request | Verify | completed:failure |
 | 35320441109 | `a6b3fd9394dc` | pull_request | Verify | completed:failure |
-| 35320348177 | `830aa1caba54` | pull_request | Verify | completed:failure |
-| 35320250151 | `1abee4201502` | pull_request | Verify | completed:failure |
