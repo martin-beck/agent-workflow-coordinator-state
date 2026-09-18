@@ -148,7 +148,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918b | PR #633 merged as a054b857; exact Verify 35282707804 and post-merge Verify 35282804560 succeeded. External awc-sign-release.sh digest options were validated by self-test; CI only emits the non-executing command. | Hold AR-0009 for the next real release-integrity transition; no signing or publication is authorized without a genuine transition and release identity. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918b | PR #646 merged as d8a3f03: unsigned/lightweight tags accepted with exact tag/commit binding, optional annotated verification, and protected v* ruleset 23640240. PR #647 merged as bc5d96b and v0.3.13 published. PR #650 merged as 2666c9d; v0.3.14 published at the exact merge commit after Verify rerun 35313236526 passed with 876 tests and coverage gate. | Await authoritative post-merge Verify for v0.3.14, then run and record the first upgrade campaign with forced failures and verified functional recovery on isolated Git and SQLite fixtures. |
 
 ### Done (28)
 
