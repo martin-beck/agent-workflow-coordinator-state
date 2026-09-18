@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `fe68c24335f7fbdfa542b32fcf89081beeb65f98`
+- Product remote main: `170688c559a5205c69422cdc1e30035414ebc298`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,21 +24,20 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #667 | `docs-v0317-changelog@2302a164f693` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | docs: add v0.3.17 event journal notes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35323364968 | `2302a164f693` | pull_request | Verify | in_progress:- |
+| 35325429606 | `170688c559a5` | push | Verify | completed:success |
+| 35325110946 | `fe34d2a477c9` | pull_request | Verify | completed:success |
+| 35325049294 | `0dae6bf3906c` | push | Verify | completed:success |
+| 35324837584 | `60f965251dc3` | pull_request | Verify | completed:success |
+| 35324434720 | `f011a1724338` | pull_request | Verify | completed:failure |
+| 35323906620 | `5f79a3bbcbdc` | pull_request | Verify | completed:failure |
+| 35323474850 | `a5a576e6c7e4` | pull_request | Verify | completed:failure |
+| 35323364968 | `2302a164f693` | pull_request | Verify | completed:failure |
 | 35323106057 | `fe68c24335f7` | push | Verify | completed:failure |
 | 35322893838 | `0210b76d5fee` | pull_request | Verify | completed:failure |
 | 35322874408 | `0166a241494e` | push | Verify | completed:failure |
 | 35322803601 | `5efdb290e06e` | pull_request | Verify | completed:success |
-| 35322025810 | `d4df55135e20` | push | Verify | completed:success |
-| 35322021790 | `060b4b618d0b` | pull_request | Verify | completed:success |
-| 35321714133 | `8e4ae6570c38` | pull_request | Verify | completed:success |
-| 35321695125 | `5cb8100a0758` | push | Verify | completed:success |
-| 35321622756 | `c950fc914b32` | pull_request | Verify | completed:success |
-| 35321455020 | `64b9842763e8` | push | Verify | completed:success |
-| 35321263660 | `dc89385c037f` | pull_request | Verify | completed:success |
