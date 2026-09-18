@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `76bf8d1d210c197a96295675177337ecdc096ea9`
+- Product remote main: `86caa12584b040c6dc248e7db26a7f2644dbf173`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,13 +24,16 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #677 | `ar0009-release-integration@8de5bc47c97d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(runtime): bind manifest verifier open |
+| #678 | `ar0012-sidecar-regression@8ba5886a4d41` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | Test WAL and SHM sidecar fencing |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35331171282 | `76bf8d1d210c` | push | Verify | in_progress:- |
+| 35331958222 | `8ba5886a4d41` | pull_request | Verify | in_progress:- |
+| 35331551785 | `86caa12584b0` | push | Verify | completed:success |
+| 35331231457 | `5be808dcda80` | pull_request | Verify | completed:success |
+| 35331171282 | `76bf8d1d210c` | push | Verify | completed:success |
 | 35330986893 | `8de5bc47c97d` | pull_request | Verify | completed:success |
 | 35330815771 | `bbf246683516` | pull_request | Verify | completed:success |
 | 35330605515 | `4f22adfd87dd` | push | Verify | completed:success |
@@ -39,6 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35329323907 | `f761ca9c4fbb` | pull_request | Verify | completed:success |
 | 35328946814 | `e8149a2d046c` | push | Verify | completed:success |
 | 35328861676 | `a41f9f16b92b` | pull_request | Verify | completed:failure |
-| 35328712931 | `5ccc8543226f` | pull_request | Verify | completed:success |
-| 35328203854 | `94dc3ec76a5c` | push | Verify | completed:success |
-| 35327885888 | `c100bd95f6a6` | pull_request | Verify | completed:success |
