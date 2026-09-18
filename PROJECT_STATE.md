@@ -25,16 +25,16 @@ Generated from local Git and GitHub. Do not edit.
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 | #689 | `fix/topological-ar-document-generation@4d7bce602fc2` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
-| #690 | `fix/topological-ar-document-generation-gmx@d51148dffe50` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
+| #690 | `fix/topological-ar-document-generation-gmx@d51148dffe50` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
 | #691 | `ar0013-selector-hardlink@6a486fd11715` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(runtime): reject selector and manifest hard-link aliases |
-| #692 | `ar0012-cas-authority-rotation@e819e7617784` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | test(barrier): reject caller-owned CAS authority rotation |
+| #692 | `ar0012-cas-authority-rotation@e819e7617784` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(barrier): reject caller-owned CAS authority rotation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35342095423 | `d51148dffe50` | pull_request | Verify | queued:- |
-| 35341941887 | `e819e7617784` | pull_request | Verify | in_progress:- |
+| 35342095423 | `d51148dffe50` | pull_request | Verify | completed:failure |
+| 35341941887 | `e819e7617784` | pull_request | Verify | completed:success |
 | 35341939737 | `6a486fd11715` | pull_request | Verify | completed:success |
 | 35341884081 | `96656fce221f` | pull_request | Verify | completed:failure |
 | 35341697010 | `2bf6a0403b28` | pull_request | Verify | completed:failure |
