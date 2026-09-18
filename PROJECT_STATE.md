@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `966f4445bf5ae4e9a9804c03b13f42ecef5930c7`
+- Product remote main: `19d6b661cd36b2dfce3fff70f0a2c819613259f0`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -10,11 +10,11 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
-| #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
-| #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
-| #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
+| #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
+| #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
+| #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | UNKNOWN | - | test(upgrade): bind validated rollback backup identity |
 | #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
@@ -24,15 +24,16 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #689 | `fix/topological-ar-document-generation@4d7bce602fc2` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
-| #690 | `fix/topological-ar-document-generation-gmx@d51148dffe50` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
-| #691 | `ar0013-selector-hardlink@6a486fd11715` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test(runtime): reject selector and manifest hard-link aliases |
-| #692 | `ar0012-cas-authority-rotation@e819e7617784` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(barrier): reject caller-owned CAS authority rotation |
+| #689 | `fix/topological-ar-document-generation@4d7bce602fc2` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35342682956 | `19d6b661cd36` | push | Verify | completed:success |
+| 35342664835 | `42b151fe03f7` | push | Verify | completed:cancelled |
+| 35342611907 | `76830e42a4c6` | push | Verify | completed:cancelled |
+| 35342377096 | `f857b28ff528` | pull_request | Verify | completed:success |
 | 35342095423 | `d51148dffe50` | pull_request | Verify | completed:failure |
 | 35341941887 | `e819e7617784` | pull_request | Verify | completed:success |
 | 35341939737 | `6a486fd11715` | pull_request | Verify | completed:success |
@@ -41,7 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35336282013 | `4d7bce602fc2` | pull_request | Verify | completed:failure |
 | 35336153865 | `966f4445bf5a` | push | Verify | completed:success |
 | 35335878898 | `0a8226c1ca46` | pull_request | Verify | completed:success |
-| 35335594812 | `45d8686ae422` | push | Verify | completed:success |
-| 35335531462 | `9ec9201193be` | pull_request | Verify | completed:success |
-| 35335487272 | `da9da77204f6` | push | Verify | completed:cancelled |
-| 35335349727 | `54887bea36d3` | pull_request | Verify | completed:success |
