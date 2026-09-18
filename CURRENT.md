@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #646 merged as d8a3f03: unsigned/lightweight tags accepted with exact tag/commit binding, optional annotated verification, and protected v* ruleset 23640240. PR #647 merged as bc5d96b and v0.3.13 published. PR #650 merged as 2666c9d; v0.3.14 published at the exact merge commit after Verify rerun 35313236526 passed with 876 tests and coverage gate. | Await authoritative post-merge Verify for v0.3.14, then run and record the first upgrade campaign with forced failures and verified functional recovery on isolated Git and SQLite fixtures. | codex-awc-ar0009-loop-20260918b |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Release policy PR #646 merged as d8a3f03 with protected unsigned/lightweight v* tags and optional annotated verification. PR #647 merged as bc5d96b and v0.3.13 published. PR #650 merged as 2666c9d; v0.3.14 published and authoritative post-merge Verify 35313633671 passed AWQ, scope, Verify, and coverage. | Run and record the first supported upgrade campaign from v0.3.13 to v0.3.14 with forced failures at every phase and verified functional recovery on isolated Git and SQLite fixtures; do not close AR-0009 on release publication alone. | codex-awc-ar0009-loop-20260918b |
 
 ## Done
 
