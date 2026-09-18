@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Await DCO and hosted Verify for PR #735 at 0d0c880. Preserve upgrade/replace/rollback/selector mutation, outcome publication, and Git dispatch fail-closed; formal map does not claim refinement. | codex-awc-ar0009-loop-20260918e |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Await independent exact-head review and hosted gates for PR #736 at 1349c19. Preserve upgrade/replace/rollback/selector mutation, outcome publication, and Git dispatch fail-closed; this binds only the read-only SQLite snapshot model action. | codex-awc-ar0009-loop-20260918e |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Await independent exact-head review and hosted gates for PR #736 at 1349c19. Keep mutation, outcome publication, Git dispatch, apply, and rollback fail-closed; this binds only the read-only snapshot model action and does not claim full refinement. | codex-awc-ar0031-mutation-20260918d |
 
 ## Open
