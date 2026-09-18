@@ -141,6 +141,19 @@ rollback, concurrent mutation/reconciliation, revision fencing, ownership and
 generated-view behavior. The model and tests must both pass before a
 `handoffctl` change is accepted.
 
+## Human TUI handoff
+
+An AR may carry an `oracle_gate.human_session` record when a Guidance
+decision request is being presented through the human TUI. The record binds
+the session to the AR revision and contains the AWG request reference, the
+activation reason (`user-decision`, `user-detail-request`,
+`user-proposal-review`, `agent-uncertainty`, or `policy-required-approval`),
+and the TUI contract version. Opening a gate with partial session metadata is
+rejected. Resolving with an accepted disposition marks the session
+`resolved`; a clarification or other non-authorizing disposition remains
+`clarification_requested` and keeps the gate blocking autonomous lifecycle
+operations. Coordinator remains the only writer of the durable AR state.
+
 ## CI scope
 
 `.github/workflows/verify.yml` runs these models for coordinator changes. Downstream integrations

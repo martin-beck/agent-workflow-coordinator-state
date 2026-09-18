@@ -29,6 +29,12 @@ NON_AUTHORIZING_DISPOSITIONS = frozenset(
 )
 ACTIONS = frozenset({"open", "resolve", "reopen"})
 MAX_DISCUSSION_ROUNDS = 16
+SESSION_STATUSES = frozenset(
+    {"pending", "presenting", "in_progress", "clarification_requested", "resolved", "superseded", "cancelled"}
+)
+SESSION_ACTIVATIONS = frozenset(
+    {"user-decision", "user-detail-request", "user-proposal-review", "agent-uncertainty", "policy-required-approval"}
+)
 
 
 class GateStage(StrEnum):
@@ -176,6 +182,7 @@ def gate_errors(value: object) -> list[str]:  # noqa: C901
         "authorized",
         "discussion_rounds",
         "reconciliation_required",
+        "human_session",
     }:
         return ["oracle_gate fields are incomplete or unknown"]
     if value["required"] is not True:
@@ -193,6 +200,19 @@ def gate_errors(value: object) -> list[str]:  # noqa: C901
         return ["oracle_gate.authorized is invalid"]
     if not isinstance(value.get("reconciliation_required", False), bool):
         return ["oracle_gate.reconciliation_required is invalid"]
+    session = value.get("human_session")
+    if session is not None:
+        required_session = {"schema_version", "session_id", "request_ref", "activation", "status", "tui_contract_version", "opened_at"}
+        if not required_session.issubset(session) or set(session) - {*required_session, "closed_at"}:
+            return ["oracle_gate.human_session fields are incomplete or unknown"]
+        if session["schema_version"] != "1.0" or session["tui_contract_version"] != "1.0":
+            return ["oracle_gate.human_session contract version is unsupported"]
+        if not isinstance(session["session_id"], str) or not re.fullmatch(r"AWTUI-[A-Z0-9-]+", session["session_id"]):
+            return ["oracle_gate.human_session.session_id is invalid"]
+        if not isinstance(session["request_ref"], str) or not re.fullmatch(r"AWG-[A-Z0-9-]+", session["request_ref"]):
+            return ["oracle_gate.human_session.request_ref is invalid"]
+        if session["activation"] not in SESSION_ACTIVATIONS or session["status"] not in SESSION_STATUSES:
+            return ["oracle_gate.human_session activation or status is invalid"]
     events = value["events"]
     if not isinstance(events, list) or len(events) > 32:
         return ["oracle_gate.events is invalid or unbounded"]
