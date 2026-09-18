@@ -7,14 +7,9 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #720 published from e9083e7b with canonical formal evidence SHA repair; hosted exact-head gates pending. | Await independent review and hosted exact-head gates for PR #720; do not merge until green, then rerun post-merge Verify. | codex-awc-ar0009-loop-20260918d |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #718 merged at 51f69060 after exact-head independent review; post-merge Verify 35359668275 passed; mutation remains fail-closed. | Select and implement the next bounded barrier/fencing failure-path slice from merged main e9083e7b; preserve fail-closed upgrade and rollback mutation. | codex-awc-ar0012-barrier-20260918b |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Recovered AR-0013 after read-only audit; current main b6048246 includes merged release-identity and barrier slices; continue runtime correctness without enabling mutation or dispatch. | Re-audit and implement the next genuinely uncovered selector/runtime correctness slice from merged main b6048246; retain fail-closed upgrade and rollback dispatch. | codex-awc-ar0013-runtime-20260918b |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #720 published from e9083e7b with canonical formal evidence SHA repair; hosted exact-head gates pending. | Await independent review and hosted exact-head gates for PR #720; do not merge until green, then rerun post-merge Verify. | - |
 
 ## Done
 
