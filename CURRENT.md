@@ -8,6 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | v0.3.20 lightweight protected tag now points to eed0798. Transition provenance, post-tag Verify, and Formal are green; retain AR-0009 open for release artifact/fresh-clone follow-up. | Monitor v0.3.20 protected tag and release artifacts; no further source mutation unless post-tag artifact or fresh-clone evidence fails. | codex-awc-ar0009-loop-20260918d |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | The upgrade engine and authority adapters still fail closed for mutation; implement one bounded, formally reviewed mutation and rollback slice without weakening unsupported-phase safety. | Claim the AR and map the smallest executable mutation phase to existing admission, backup, fencing, selector, and rollback contracts before changing production behavior. | codex-awc-ar0031-mutation-20260918d |
 
 ## Open
 
@@ -15,7 +16,6 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main eed0798 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage remains complete across symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, rollback, and fencing failures. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main eed0798 focused selector/runtime and release/upgrade suites pass 216 tests and 260 subtests; selector publication/recovery, process death, fsync/cleanup ambiguity, parent replacement, temporary safety, descriptor failures, reread drift, admission, runtime bootstrap, identity, engine, campaign, contract, runbook, and lock scope are covered. No new dependency-safe selector/runtime seam identified; mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. | - |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | The upgrade engine and authority adapters still fail closed for mutation; implement one bounded, formally reviewed mutation and rollback slice without weakening unsupported-phase safety. | Claim the AR and map the smallest executable mutation phase to existing admission, backup, fencing, selector, and rollback contracts before changing production behavior. | - |
 
 ## Done
 
