@@ -32,7 +32,7 @@ Generated from local Git and GitHub. Do not edit.
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
 | 35334975470 | `6eb5265e142b` | workflow_dispatch | Verify | queued:- |
-| 35334729666 | `91a4b454ee50` | push | Verify | in_progress:- |
+| 35334729666 | `91a4b454ee50` | push | Verify | completed:success |
 | 35334685442 | `9794f539dbcc` | workflow_dispatch | Verify | completed:failure |
 | 35334669732 | `0a7ab4aac5a6` | pull_request | Verify | completed:success |
 | 35334606671 | `2d31e5b78019` | workflow_dispatch | Verify | completed:failure |
