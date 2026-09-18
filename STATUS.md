@@ -151,7 +151,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep AR-0009 open for final v0.3.20 transition provenance and release/tag readiness; no tag until fresh-clone provenance checks pass. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep v0.3.20 tag blocked until release authority approves durable transition metadata and vendor-manifest artifacts; transition checks are mechanically green from main eed0798. |
 
 ### Open (2)
 
