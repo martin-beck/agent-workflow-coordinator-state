@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #800 | `ar0031-check-config-invariants@fcf0010612f5` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | test(formal): validate per-transition refs |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35404481257 | `fcf0010612f5` | pull_request | Verify | completed:success |
 | 35404240272 | `08ecb8835db9` | push | Formal | completed:success |
 | 35404240217 | `08ecb8835db9` | push | Verify | completed:success |
 | 35404189791 | `fa509077d64d` | pull_request | Verify | completed:success |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35403600920 | `b5ed2f02d11e` | pull_request | Verify | completed:success |
 | 35403391087 | `74f670c86ab6` | push | Formal | completed:success |
 | 35403391011 | `74f670c86ab6` | push | Verify | completed:success |
-| 35403321215 | `0fb8c094e88c` | pull_request | Verify | completed:success |
