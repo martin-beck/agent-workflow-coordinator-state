@@ -148,7 +148,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918b | Release policy, unsigned protected tag publication, coverage repair, and exact-head post-merge Verify are complete through main b52fcbc. Authoritative audit confirms generated campaign tests and command-boundary tests pass, but production Git/SQLite execute paths remain intentionally fail-closed; no supported upgrade mutation has been performed. | Implement a real bound SQLite fixture adapter for backend.backup using durable control/journal identity and UpgradeEngine admission snapshots; keep commit/apply/rollback fail-closed. Add forced-failure campaign evidence for every phase, then independently review and publish the bounded slice before attempting production mutation. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918b | Release policy, unsigned protected tag publication, coverage repair, and exact-head post-merge Verify are complete through main b52fcbc. Authoritative audit confirms generated campaign tests and command-boundary tests pass, but production Git/SQLite execute paths remain intentionally fail-closed; no supported upgrade mutation has been performed. | Implement the dependency-ordered selector identity schema migration: add selector_ref to upgrade_identity authenticated envelopes/digests and strict validation; propagate it through PhaseContext/journaling and backend bindings; add forged/mismatched selector tests, then refresh formal correspondence evidence before enabling any production mutation. |
 
 ### Done (28)
 
