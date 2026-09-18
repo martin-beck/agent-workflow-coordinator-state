@@ -9,12 +9,7 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Release policy and unsigned protected tags are complete; v0.3.15 and v0.3.16 are published from merged main, with v0.3.16 at d4df551 and post-merge Verify 35322025810 success. Upgrade mutation remains disabled while AR-0012 and AR-0013 correctness prerequisites continue. | Advance the next dependency-ready AR-0012/AR-0013 correctness slice on v0.3.16 main; preserve fail-closed upgrade apply and rollback until barrier, selector, authenticity, and formal correspondence evidence are complete. | codex-awc-ar0009-loop-20260918b |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Reopened P0 barrier work remains incomplete after merged fencing slices #654-#657. v0.3.16 main is d4df551; no mutating upgrade path is enabled. Broader barrier/session, process-death, SQLite write-route, and formal proof obligations remain. | Select and implement the next bounded barrier/process-death or SQLite write-route fencing slice on v0.3.16 main with exact-head tests and independent review; do not enable mutating upgrade commands. | codex-awc-ar0012-barrier-20260918 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Selector identity migration and Markdown TUI handoff are merged in v0.3.16 main d4df551; PR #658 and release PR #664 passed exact-head review/gates, and post-merge Verify 35322025810 succeeded. Remaining selector-aware launcher, manifest authenticity, validation-to-exec, and formal correspondence work remains; mutation stays disabled. | Continue selector-aware runtime/launcher, manifest authenticity, validation-to-exec, and formal correspondence slices on v0.3.16 main; preserve fail-closed upgrade apply and rollback. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Selector identity migration and Markdown TUI handoff are merged in v0.3.16 main d4df551; PR #658 and release PR #664 passed exact-head review/gates, and post-merge Verify 35322025810 succeeded. Remaining selector-aware launcher, manifest authenticity, validation-to-exec, and formal correspondence work remains; mutation stays disabled. | Continue selector-aware runtime/launcher, manifest authenticity, validation-to-exec, and formal correspondence slices on v0.3.16 main; preserve fail-closed upgrade apply and rollback. | codex-awc-ar0013-runtime-20260918 |
 
 ## Done
 
