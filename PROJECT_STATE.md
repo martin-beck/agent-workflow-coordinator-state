@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5c9ec30f7aac23e34f1ff7718629e6b21dea6ba9`
+- Product remote main: `4f22adfd87dd10f3b81ff48b089c1c8cd3189963`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,12 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #675 | `ar0009-release-integration@e28fa478a67d` | `main` | UNKNOWN | - | fix(runtime): retain manifest identity through admission |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35330605515 | `4f22adfd87dd` | push | Verify | completed:success |
+| 35330271837 | `e28fa478a67d` | pull_request | Verify | completed:success |
 | 35329520486 | `5c9ec30f7aac` | push | Verify | completed:success |
 | 35329323907 | `f761ca9c4fbb` | pull_request | Verify | completed:success |
 | 35328946814 | `e8149a2d046c` | push | Verify | completed:success |
@@ -40,5 +41,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35327824777 | `93f7ba576016` | push | Verify | completed:success |
 | 35327374569 | `7d4594ae92d6` | pull_request | Verify | completed:success |
 | 35327169464 | `263f0ed34833` | pull_request | Verify | completed:success |
-| 35326768573 | `7fa058eaee80` | push | Verify | completed:success |
-| 35326552611 | `02b1d5080e3f` | pull_request | Verify | completed:success |
