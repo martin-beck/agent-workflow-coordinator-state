@@ -24,15 +24,15 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #683 | `ar0012-cas-bootstrap@9ec9201193be` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
+| #683 | `ar0012-cas-bootstrap@9ec9201193be` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35335594812 | `45d8686ae422` | push | Verify | pending:- |
-| 35335531462 | `9ec9201193be` | pull_request | Verify | queued:- |
-| 35335487272 | `da9da77204f6` | push | Verify | in_progress:- |
+| 35335594812 | `45d8686ae422` | push | Verify | queued:- |
+| 35335531462 | `9ec9201193be` | pull_request | Verify | in_progress:- |
+| 35335487272 | `da9da77204f6` | push | Verify | completed:cancelled |
 | 35335349727 | `54887bea36d3` | pull_request | Verify | completed:success |
 | 35335342000 | `6a816519b85c` | pull_request | Verify | completed:success |
 | 35335313731 | `1dd3b59da163` | pull_request | Verify | completed:failure |
