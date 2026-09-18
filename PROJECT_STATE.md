@@ -24,7 +24,7 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #682 | `ar-mandatory-decision-routing@8b97817644dd` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
+| #682 | `ar-mandatory-decision-routing@2ab6444f372b` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
 | #683 | `ar0012-cas-bootstrap@0ef3853812b2` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
 | #684 | `quality-format-680@3049ff947f31` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | Format decision routing quality baseline |
 
@@ -32,8 +32,9 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35333547013 | `2ab6444f372b` | workflow_dispatch | Verify | in_progress:- |
 | 35333383144 | `3049ff947f31` | pull_request | Verify | completed:success |
-| 35333357924 | `8b97817644dd` | workflow_dispatch | Verify | in_progress:- |
+| 35333357924 | `8b97817644dd` | workflow_dispatch | Verify | completed:failure |
 | 35333263642 | `539fe745507b` | workflow_dispatch | Verify | completed:failure |
 | 35333168267 | `e0c558f25ae4` | push | Verify | completed:failure |
 | 35333134964 | `6521f77c50a2` | pull_request | Verify | completed:failure |
@@ -43,4 +44,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35333016966 | `b234dd6b476e` | push | Verify | completed:failure |
 | 35332977781 | `c2e74800f91f` | pull_request | Verify | completed:success |
 | 35332919206 | `7543389d7bdb` | pull_request | Verify | completed:success |
-| 35332651123 | `2e524f8ad090` | push | Verify | completed:success |
