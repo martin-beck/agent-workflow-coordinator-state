@@ -1558,7 +1558,30 @@ def apply_gate(args: argparse.Namespace, meta: Meta) -> str:
             public_ref=str(args.public_ref),
             recorded_at=now(),
         )
-        return apply_event(meta, event)
+        note = apply_event(meta, event)
+        session_id = getattr(args, "session_id", None)
+        request_ref = getattr(args, "request_ref", None)
+        activation = getattr(args, "activation", None)
+        if event.action == "open" and any((session_id, request_ref, activation)):
+            if not all((session_id, request_ref, activation)):
+                raise RuntimeError("TUI session metadata requires --session-id, --request-ref, and --activation")
+            meta["oracle_gate"]["human_session"] = {
+                "schema_version": "1.0",
+                "session_id": session_id,
+                "request_ref": request_ref,
+                "activation": activation,
+                "status": "presenting",
+                "tui_contract_version": getattr(args, "tui_contract_version", "1.0"),
+                "opened_at": now(),
+            }
+            errors = gate_errors(meta["oracle_gate"])
+            if errors:
+                raise RuntimeError(errors[0])
+        elif event.action == "resolve" and isinstance(meta.get("oracle_gate", {}).get("human_session"), dict):
+            session = meta["oracle_gate"]["human_session"]
+            session["status"] = "resolved" if event.disposition == "accepted" else "clarification_requested"
+            session["closed_at"] = now()
+        return note
     except (GateError, ValueError) as error:
         raise RuntimeError(str(error)) from error
 
@@ -2197,6 +2220,10 @@ def main() -> int:
     item.add_argument("--before", action="append", default=[], required=True)
     item.add_argument("--after", action="append", default=[], required=True)
     item.add_argument("--public-ref", required=True)
+    item.add_argument("--session-id")
+    item.add_argument("--request-ref")
+    item.add_argument("--activation", choices=("user-decision", "user-detail-request", "user-proposal-review", "agent-uncertainty", "policy-required-approval"))
+    item.add_argument("--tui-contract-version", default="1.0")
     item = commands.add_parser("run")
     item.add_argument("task")
     item.add_argument("--owner", required=True)

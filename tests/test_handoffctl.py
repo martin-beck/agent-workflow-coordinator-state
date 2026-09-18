@@ -2416,6 +2416,35 @@ class HandoffTest(unittest.TestCase):
                 [],
             )
 
+    def test_tui_gate_records_session_and_resolution_status(self) -> None:
+        digest = "sha256:" + "a" * 64
+        meta: dict[str, Any] = {"id": "AR-0022", "task_revision": 1}
+        args = argparse.Namespace(
+            expected_revision=1, stage="intake", action="open", disposition="unresolved",
+            before=[f"plan/before={digest}"], after=[f"plan/after={'sha256:' + 'b' * 64}"],
+            public_ref="oracle/session-1", session_id="AWTUI-SESSION-1",
+            request_ref="AWG-SESSION-1", activation="user-proposal-review", tui_contract_version="1.0",
+        )
+        self.assertIn("Recorded open", CORE.apply_gate(args, meta))
+        session = meta["oracle_gate"]["human_session"]
+        self.assertEqual("presenting", session["status"])
+        self.assertEqual("AWG-SESSION-1", session["request_ref"])
+        args.action = "resolve"
+        args.disposition = "accepted"
+        self.assertIn("Recorded resolve", CORE.apply_gate(args, meta))
+        self.assertEqual("resolved", meta["oracle_gate"]["human_session"]["status"])
+
+    def test_tui_gate_rejects_partial_session_metadata(self) -> None:
+        digest = "sha256:" + "a" * 64
+        args = argparse.Namespace(
+            expected_revision=1, stage="intake", action="open", disposition="unresolved",
+            before=[f"plan/before={digest}"], after=[f"plan/after={'sha256:' + 'b' * 64}"],
+            public_ref="oracle/session-1", session_id="AWTUI-SESSION-1", request_ref=None,
+            activation="agent-uncertainty", tui_contract_version="1.0",
+        )
+        with self.assertRaisesRegex(RuntimeError, "requires --session-id"):
+            CORE.apply_gate(args, {"id": "AR-0022", "task_revision": 1})
+
 
 if __name__ == "__main__":
     unittest.main()
