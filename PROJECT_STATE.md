@@ -26,7 +26,7 @@ Generated from local Git and GitHub. Do not edit.
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 | #660 | `release-v0315@c555a0cc0ada` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | release: publish TUI session handoff support as v0.3.15 |
 | #661 | `feat/tui-runtime-session-states@c62e33c293d7` | `main` | DIRTY | - | style: format TUI bridge tests |
-| #662 | `repair-tui-format@5de2a8e782e5` | `main` | UNSTABLE | QUEUED:, QUEUED: | style: format TUI bridge tests |
+| #662 | `repair-tui-format@5de2a8e782e5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED: | style: format TUI bridge tests |
 
 ## Recent workflows
 
