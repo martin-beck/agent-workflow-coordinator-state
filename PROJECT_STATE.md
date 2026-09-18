@@ -24,14 +24,14 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #677 | `ar0009-release-integration@8de5bc47c97d` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): bind manifest verifier open |
+| #677 | `ar0009-release-integration@8de5bc47c97d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(runtime): bind manifest verifier open |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35331171282 | `76bf8d1d210c` | push | Verify | queued:- |
-| 35330986893 | `8de5bc47c97d` | pull_request | Verify | in_progress:- |
+| 35331171282 | `76bf8d1d210c` | push | Verify | in_progress:- |
+| 35330986893 | `8de5bc47c97d` | pull_request | Verify | completed:success |
 | 35330815771 | `bbf246683516` | pull_request | Verify | completed:success |
 | 35330605515 | `4f22adfd87dd` | push | Verify | completed:success |
 | 35330271837 | `e28fa478a67d` | pull_request | Verify | completed:success |
