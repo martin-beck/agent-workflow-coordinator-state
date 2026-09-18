@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -39,7 +39,7 @@ flowchart LR
         AR_0009["AR-0009 - In progress"]:::status_in_progress
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
-        AR_0012["AR-0012 - Open"]:::status_open
+        AR_0012["AR-0012 - In progress"]:::status_in_progress
         AR_0013["AR-0013 - Open"]:::status_open
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
@@ -147,17 +147,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep AR-0009 open for final v0.3.20 transition provenance and release/tag readiness; no tag until fresh-clone provenance checks pass. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-reaudit-20260918c | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
 
 ### Done (27)

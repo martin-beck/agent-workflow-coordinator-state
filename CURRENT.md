@@ -8,12 +8,12 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep AR-0009 open for final v0.3.20 transition provenance and release/tag readiness; no tag until fresh-clone provenance checks pass. | codex-awc-ar0009-loop-20260918d |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. | codex-awc-ar0012-reaudit-20260918c |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. | - |
 
 ## Done
