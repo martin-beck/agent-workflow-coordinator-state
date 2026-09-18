@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 2 active status categories.
+**29 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -36,7 +36,7 @@ flowchart LR
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - Done"]:::status_done
         AR_0008["AR-0008 - Done"]:::status_done
-        AR_0009["AR-0009 - Open"]:::status_open
+        AR_0009["AR-0009 - In progress"]:::status_in_progress
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Open"]:::status_open
@@ -144,11 +144,16 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (3)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Release policy and unsigned protected tags are complete; v0.3.15 and v0.3.16 are published from merged main, with v0.3.16 at d4df551 and post-merge Verify 35322025810 success. Upgrade mutation remains disabled while AR-0012 and AR-0013 correctness prerequisites continue. | Advance the next dependency-ready AR-0012/AR-0013 correctness slice on v0.3.16 main; preserve fail-closed upgrade apply and rollback until barrier, selector, authenticity, and formal correspondence evidence are complete. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918b | Release policy and unsigned protected tags are complete; v0.3.15 and v0.3.16 are published from merged main, with v0.3.16 at d4df551 and post-merge Verify 35322025810 success. Upgrade mutation remains disabled while AR-0012 and AR-0013 correctness prerequisites continue. | Advance the next dependency-ready AR-0012/AR-0013 correctness slice on v0.3.16 main; preserve fail-closed upgrade apply and rollback until barrier, selector, authenticity, and formal correspondence evidence are complete. |
+
+### Open (2)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Reopened P0 barrier work remains incomplete after merged fencing slices #654-#657. v0.3.16 main is d4df551; no mutating upgrade path is enabled. Broader barrier/session, process-death, SQLite write-route, and formal proof obligations remain. | Select and implement the next bounded barrier/process-death or SQLite write-route fencing slice on v0.3.16 main with exact-head tests and independent review; do not enable mutating upgrade commands. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Selector identity migration and Markdown TUI handoff are merged in v0.3.16 main d4df551; PR #658 and release PR #664 passed exact-head review/gates, and post-merge Verify 35322025810 succeeded. Remaining selector-aware launcher, manifest authenticity, validation-to-exec, and formal correspondence work remains; mutation stays disabled. | Continue selector-aware runtime/launcher, manifest authenticity, validation-to-exec, and formal correspondence slices on v0.3.16 main; preserve fail-closed upgrade apply and rollback. |
 
