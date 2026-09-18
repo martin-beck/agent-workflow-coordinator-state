@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | v0.3.20 lightweight protected tag now points to eed0798. Transition provenance, post-tag Verify, and Formal are green; retain AR-0009 open for release artifact/fresh-clone follow-up. | Monitor v0.3.20 protected tag and release artifacts; no further source mutation unless post-tag artifact or fresh-clone evidence fails. | codex-awc-ar0009-loop-20260918d |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | The upgrade engine and authority adapters still fail closed for mutation; implement one bounded, formally reviewed mutation and rollback slice without weakening unsupported-phase safety. | Claim the AR and map the smallest executable mutation phase to existing admission, backup, fencing, selector, and rollback contracts before changing production behavior. | codex-awc-ar0031-mutation-20260918d |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | UpgradeEngine requires all eight phases; Git/SQLite execute remain fail-closed. Existing real git_backup and sqlite_backup primitives are available, but only a bounded backend.backup slice can be enabled safely. | Create a fresh product worktree and implement only identity-bound backend.backup dispatch through the real admission session/barrier/journal; keep commit/replace/rollback and broad apply fail-closed. Baseline: 63 adapter/engine/scoped tests and 105 subtests pass. | codex-awc-ar0031-mutation-20260918d |
 
 ## Open
 
