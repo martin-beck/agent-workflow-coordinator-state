@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #722 merged as 8bd2e0e and post-merge Verify 35364403181 passed. v0.3.20 metadata is merged, but publication must wait for AR-0030 AWQ v0.35.0 trust/profile migration plus real transition provenance; no tag created. | Hold v0.3.20 tag; coordinate AR-0030 AWQ v0.35.0 migration, then regenerate transition provenance and rerun release/fresh-clone checks on final exact main. | codex-awc-ar0009-loop-20260918d |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep AR-0009 open for final v0.3.20 transition provenance and release/tag readiness; no tag until fresh-clone provenance checks pass. | codex-awc-ar0009-loop-20260918d |
 
 ## Open
 
