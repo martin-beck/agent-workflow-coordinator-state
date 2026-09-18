@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 3 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -39,7 +39,7 @@ flowchart LR
         AR_0009["AR-0009 - In progress"]:::status_in_progress
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
-        AR_0012["AR-0012 - In progress"]:::status_in_progress
+        AR_0012["AR-0012 - Open"]:::status_open
         AR_0013["AR-0013 - Open"]:::status_open
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
@@ -151,18 +151,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (3)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | v0.3.20 tag/provenance and post-tag Verify/Formal remain green. PR #726 merged as ae2a733 added real SQLite backend.backup campaign evidence; PR #727 merged with hostile Git backup cleanup evidence. AR-0031 remains open because generic durable Git barrier/session/journal binding is not yet available; executable upgrade/rollback is not complete. | Monitor release artifacts and continue AR-0031 dependency-safe implementation. Preserve all upgrade/replace/rollback/selector mutation fail-closed until the generic durable Git binding blocker is resolved and the full injected campaign passes. |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-baseline-20260918e | Exact main 95d27e9 focused baseline: 217 authority/engine/campaign tests passed and 231 runtime/admission/lock/control tests passed. No new safe mutation seam identified; preserve fail-closed upgrade and rollback mutation. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-mutation-20260918d | PR #727 merged with hostile Git backup cleanup evidence. Architecture audit confirms no safe generated Git executor yet: SQLiteLifecycleExecutor binds SQLiteBarrierSessionStore whose authority_path must equal the SQLite adapter path, while Git has only an opaque lifecycle session and no durable barrier/journal snapshot binding. Mutation remains fail-closed. | Keep AR-0031 in progress and do not create a speculative child. The next dependency-safe implementation requires a generic authority-neutral durable lifecycle/session binding (or an explicitly accepted Git control-store contract) before generated Git backend.backup dispatch can be implemented. Preserve broad apply, replace/commit, rollback, and selector dispatch as fail-closed. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main 95d27e9 focused baseline: 217 authority/engine/campaign tests passed and 231 runtime/admission/lock/control tests passed. No new safe mutation seam identified; preserve fail-closed upgrade and rollback mutation. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main eed0798 focused selector/runtime and release/upgrade suites pass 216 tests and 260 subtests; selector publication/recovery, process death, fsync/cleanup ambiguity, parent replacement, temporary safety, descriptor failures, reread drift, admission, runtime bootstrap, identity, engine, campaign, contract, runbook, and lock scope are covered. No new dependency-safe selector/runtime seam identified; mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
 
 ### Done (27)
