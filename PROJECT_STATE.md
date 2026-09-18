@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `60a5cb55c0c040a37d47443aee41c194f51ed238`
+- Product remote main: `6285eb0defd817dbd7186b0686cc0a1d2d6b364c`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,13 +24,14 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #804 | `ar0031-evidence-reference-shape@a9b89adc153f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(formal): validate evidence reference shapes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35405726636 | `a9b89adc153f` | pull_request | Verify | in_progress:- |
+| 35405792386 | `6285eb0defd8` | push | Formal | completed:success |
+| 35405792367 | `6285eb0defd8` | push | Verify | completed:success |
+| 35405726636 | `a9b89adc153f` | pull_request | Verify | completed:success |
 | 35405524899 | `60a5cb55c0c0` | push | Verify | completed:success |
 | 35405524855 | `60a5cb55c0c0` | push | Formal | completed:success |
 | 35405455266 | `e5c19bf5c571` | pull_request | Verify | completed:success |
@@ -40,5 +41,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35404906360 | `841de583a5cd` | push | Verify | completed:success |
 | 35404906354 | `841de583a5cd` | push | Formal | completed:success |
 | 35404831194 | `c4638e7662fb` | pull_request | Verify | completed:success |
-| 35404593370 | `48e33473d32a` | push | Verify | completed:success |
-| 35404593349 | `48e33473d32a` | push | Formal | completed:success |
