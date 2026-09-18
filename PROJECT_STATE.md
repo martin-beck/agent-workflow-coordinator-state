@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `da9da77204f6de89866f09f77b1517bd280fbf1a`
+- Product remote main: `45d8686ae42234f3712c18f46971f173046c3cc2`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -25,15 +25,14 @@ Generated from local Git and GitHub. Do not edit.
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 | #683 | `ar0012-cas-bootstrap@9ec9201193be` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
-| #688 | `ar-mandatory-decision-routing@54887bea36d3` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | release: publish Coordinator v0.3.18 with batch TUI bridge |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
 | 35335531462 | `9ec9201193be` | pull_request | Verify | queued:- |
-| 35335487272 | `da9da77204f6` | push | Verify | queued:- |
-| 35335349727 | `54887bea36d3` | pull_request | Verify | in_progress:- |
+| 35335487272 | `da9da77204f6` | push | Verify | in_progress:- |
+| 35335349727 | `54887bea36d3` | pull_request | Verify | completed:success |
 | 35335342000 | `6a816519b85c` | pull_request | Verify | completed:success |
 | 35335313731 | `1dd3b59da163` | pull_request | Verify | completed:failure |
 | 35334975470 | `6eb5265e142b` | workflow_dispatch | Verify | completed:failure |
