@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**30 ARs tracked** across 3 active status categories.
+**31 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -58,6 +58,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
+        AR_0031["AR-0031 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -83,9 +84,11 @@ flowchart LR
     AR_0007 --> AR_0010
     AR_0007 --> AR_0012
     AR_0007 --> AR_0013
+    AR_0007 --> AR_0031
     AR_0008 --> AR_0009
     AR_0008 --> AR_0010
     AR_0008 --> AR_0013
+    AR_0008 --> AR_0031
     AR_0011 --> AR_0017
     AR_0015 --> AR_0016
     AR_0017 --> AR_0018
@@ -120,8 +123,8 @@ flowchart LR
 | [AR-0004](tasks/AR-0004.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
 | [AR-0005](tasks/AR-0005.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
 | [AR-0006](tasks/AR-0006.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
-| [AR-0007](tasks/AR-0007.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0012](tasks/AR-0012.md), [AR-0013](tasks/AR-0013.md) |
-| [AR-0008](tasks/AR-0008.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0013](tasks/AR-0013.md) |
+| [AR-0007](tasks/AR-0007.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0012](tasks/AR-0012.md), [AR-0013](tasks/AR-0013.md), [AR-0031](tasks/AR-0031.md) |
+| [AR-0008](tasks/AR-0008.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md) | [AR-0009](tasks/AR-0009.md), [AR-0010](tasks/AR-0010.md), [AR-0013](tasks/AR-0013.md), [AR-0031](tasks/AR-0031.md) |
 | [AR-0009](tasks/AR-0009.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0010](tasks/AR-0010.md) | [AR-0003](tasks/AR-0003.md), [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0011](tasks/AR-0011.md) | None | [AR-0017](tasks/AR-0017.md) |
@@ -144,6 +147,7 @@ flowchart LR
 | [AR-0028](tasks/AR-0028.md) | [AR-0027](tasks/AR-0027.md) | [AR-0029](tasks/AR-0029.md) |
 | [AR-0029](tasks/AR-0029.md) | [AR-0028](tasks/AR-0028.md) | None |
 | [AR-0030](tasks/AR-0030.md) | [AR-0001](tasks/AR-0001.md) | None |
+| [AR-0031](tasks/AR-0031.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 
 ## Complete AR inventory
 
@@ -153,12 +157,13 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | v0.3.20 lightweight protected tag now points to eed0798. Transition provenance, post-tag Verify, and Formal are green; retain AR-0009 open for release artifact/fresh-clone follow-up. | Monitor v0.3.20 protected tag and release artifacts; no further source mutation unless post-tag artifact or fresh-clone evidence fails. |
 
-### Open (2)
+### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main eed0798 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage remains complete across symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, rollback, and fencing failures. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main eed0798 focused selector/runtime and release/upgrade suites pass 216 tests and 260 subtests; selector publication/recovery, process death, fsync/cleanup ambiguity, parent replacement, temporary safety, descriptor failures, reread drift, admission, runtime bootstrap, identity, engine, campaign, contract, runbook, and lock scope are covered. No new dependency-safe selector/runtime seam identified; mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | The upgrade engine and authority adapters still fail closed for mutation; implement one bounded, formally reviewed mutation and rollback slice without weakening unsupported-phase safety. | Claim the AR and map the smallest executable mutation phase to existing admission, backup, fencing, selector, and rollback contracts before changing production behavior. |
 
 ### Done (27)
 
