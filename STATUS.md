@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 3 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -57,7 +57,7 @@ flowchart LR
         AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
-        AR_0030["AR-0030 - Open"]:::status_open
+        AR_0030["AR-0030 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -147,19 +147,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #722 merged as 8bd2e0e and post-merge Verify 35364403181 passed. v0.3.20 metadata is merged, but publication must wait for AR-0030 AWQ v0.35.0 trust/profile migration plus real transition provenance; no tag created. | Hold v0.3.20 tag; coordinate AR-0030 AWQ v0.35.0 migration, then regenerate transition provenance and rerun release/fresh-clone checks on final exact main. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-barrier-20260918b | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. |
+| P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | codex-awc-ar0030-quality-20260918d | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Audit AWQ v0.35.0 trust and profile requirements, add workflow-trust policy and refreshed lock/profiles while retaining Coordinator-owned formal gates, then publish a focused PR. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
-| P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | Unclaimed | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Audit AWQ v0.35.0 trust and profile requirements, add workflow-trust policy and refreshed lock/profiles while retaining Coordinator-owned formal gates, then publish a focused PR. |
 
 ### Done (26)
 
