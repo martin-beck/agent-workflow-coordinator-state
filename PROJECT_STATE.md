@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `485e8ae86e145a6aa22fe244e3bcf7f71943914c`
+- Product remote main: `2e524f8ad090d638d71c26960eab1b2c1e98fd34`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,14 +24,15 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #679 | `ar0009-release-integration@d3c0760b5831` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | fix(runtime): invalidate failed admission |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35332235771 | `485e8ae86e14` | push | Verify | queued:- |
-| 35331988252 | `d3c0760b5831` | pull_request | Verify | in_progress:- |
+| 35332651123 | `2e524f8ad090` | push | Verify | completed:success |
+| 35332291217 | `87c7875226b9` | pull_request | Verify | completed:success |
+| 35332235771 | `485e8ae86e14` | push | Verify | completed:success |
+| 35331988252 | `d3c0760b5831` | pull_request | Verify | completed:cancelled |
 | 35331958222 | `8ba5886a4d41` | pull_request | Verify | completed:success |
 | 35331551785 | `86caa12584b0` | push | Verify | completed:success |
 | 35331231457 | `5be808dcda80` | pull_request | Verify | completed:success |
@@ -40,5 +41,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35330815771 | `bbf246683516` | pull_request | Verify | completed:success |
 | 35330605515 | `4f22adfd87dd` | push | Verify | completed:success |
 | 35330271837 | `e28fa478a67d` | pull_request | Verify | completed:success |
-| 35329520486 | `5c9ec30f7aac` | push | Verify | completed:success |
-| 35329323907 | `f761ca9c4fbb` | pull_request | Verify | completed:success |
