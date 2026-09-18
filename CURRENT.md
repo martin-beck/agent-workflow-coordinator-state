@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Release policy PR #646 merged as d8a3f03 with protected unsigned/lightweight v* tags and optional annotated verification. PR #647 merged as bc5d96b and v0.3.13 published. PR #650 merged as 2666c9d; v0.3.14 published and authoritative post-merge Verify 35313633671 passed AWQ, scope, Verify, and coverage. | Run and record the first supported upgrade campaign from v0.3.13 to v0.3.14 with forced failures at every phase and verified functional recovery on isolated Git and SQLite fixtures; do not close AR-0009 on release publication alone. | codex-awc-ar0009-loop-20260918b |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Release policy PR #646 merged as d8a3f03 with protected unsigned/lightweight v* tags and optional annotated verification. PR #647 merged as bc5d96b and v0.3.13 published. PR #650 merged as 2666c9d; v0.3.14 published and Verify 35313633671 passed. Coverage PR #651 merged as b0d4715; post-merge Verify 35313880826 exposed one mypy fixture annotation defect. Narrow PR #652 merged as b52fcbc; independent review approved exact head b973a767, and post-merge Verify 35314120931 passed AWQ, scope, fast formal Verify, and smoke policy. | Run and record the first supported upgrade campaign from v0.3.13 to v0.3.14 with forced failures at every phase and verified functional recovery on isolated Git and SQLite fixtures; do not close AR-0009 on release publication alone. | codex-awc-ar0009-loop-20260918b |
 
 ## Done
 
