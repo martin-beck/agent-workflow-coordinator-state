@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #650 | `chore/release-v0.3.14@b6b0dc58db4e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | chore: release Coordinator v0.3.14 |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35312763912 | `b6b0dc58db4e` | pull_request | Verify | queued:- |
 | 35312694086 | `f1ca49b5fa22` | push | Verify | in_progress:- |
 | 35312687077 | `0c01b214798c` | pull_request | Verify | completed:success |
 | 35312408089 | `0ba776b1804b` | push | Verify | completed:failure |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35310529716 | `bc53cb75bbcd` | pull_request | Verify | completed:success |
 | 35310354229 | `01f3d3c0844a` | pull_request | Verify | completed:failure |
 | 35310190036 | `3df72c871c33` | pull_request | Verify | completed:failure |
-| 35309985802 | `c3fd9f8913df` | pull_request | Verify | completed:cancelled |
