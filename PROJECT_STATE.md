@@ -26,12 +26,13 @@ Generated from local Git and GitHub. Do not edit.
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 | #682 | `ar-mandatory-decision-routing@2d31e5b78019` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
 | #683 | `ar0012-cas-bootstrap@aa81420a8e2a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
+| #686 | `ar0009-coverage-repair-e443@0a7ab4aac5a6` | `main` | UNKNOWN | - | test: restore repository coverage gate |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35334606671 | `2d31e5b78019` | workflow_dispatch | Verify | in_progress:- |
+| 35334606671 | `2d31e5b78019` | workflow_dispatch | Verify | completed:failure |
 | 35334463147 | `7fcd185a3316` | workflow_dispatch | Verify | completed:failure |
 | 35334121542 | `aa81420a8e2a` | pull_request | Verify | completed:failure |
 | 35334082918 | `e4431b8d278d` | push | Verify | completed:failure |
