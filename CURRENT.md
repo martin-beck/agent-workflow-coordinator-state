@@ -3,11 +3,16 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep v0.3.20 tag blocked until release authority approves durable transition metadata and vendor-manifest artifacts; transition checks are mechanically green from main eed0798. | codex-awc-ar0009-loop-20260918d |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep v0.3.20 tag blocked until release authority approves durable transition metadata and vendor-manifest artifacts; transition checks are mechanically green from main eed0798. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main eed0798 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage remains complete across symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, rollback, and fencing failures. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main eed0798 focused selector/runtime and release/upgrade suites pass 216 tests and 260 subtests; selector publication/recovery, process death, fsync/cleanup ambiguity, parent replacement, temporary safety, descriptor failures, reread drift, admission, runtime bootstrap, identity, engine, campaign, contract, runbook, and lock scope are covered. No new dependency-safe selector/runtime seam identified; mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. | - |
 
