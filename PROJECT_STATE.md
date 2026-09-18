@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #721 | `ar0009-next-release-slice@71775fe6f4f8` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: reject symlinked upgrade contract parents |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35361461140 | `71775fe6f4f8` | pull_request | Verify | completed:success |
 | 35360889746 | `21eeffaa9578` | push | Verify | completed:success |
 | 35360643711 | `fb8f1efa475f` | pull_request | Verify | completed:success |
 | 35360108170 | `e9083e7b41f8` | push | Verify | completed:failure |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35358364314 | `601015e267ee` | pull_request | Verify | completed:success |
 | 35357868840 | `9cb79ea316b9` | push | Verify | completed:success |
 | 35357722375 | `6332910fa290` | pull_request | Verify | completed:success |
-| 35357252233 | `ee23c2ff7866` | push | Verify | completed:success |
