@@ -9,12 +9,7 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Release integration advanced: PR #690 topological TUI generation, PR #691 hard-link alias hostile coverage, and PR #692 CAS authority-rotation coverage are merged. Final main head 19d6b661 passed post-merge Verify 35342682956; release tags remain unsigned/lightweight and protected. | Select and publish the next dependency-safe correctness slice after merged PRs #690, #691, and #692; keep upgrade mutation and dispatch disabled. | codex-awc-ar0009-loop-20260918b |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #698 merged at 7c72b4d7 after exact-head review of cb59143b; post-merge Verify 35346114551 passed; mutation remains fail-closed. | Select and implement the next bounded barrier/fencing failure-path slice from merged main 7c72b4d7; preserve fail-closed upgrade and rollback mutation. | codex-awc-ar0012-barrier-20260918 |
-
-## Open
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Main 3248b7b includes parent swaps, descriptor/fsync/cleanup failures, child death, ambiguous reconciliation, and selector recovery; focused audit found no additional safe slice. Mutation remains disabled. | Re-audit for a genuinely uncovered selector/runtime correctness slice after main 3248b7b; if none exists, retain fail-closed upgrade and rollback dispatch. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Main 3248b7b includes parent swaps, descriptor/fsync/cleanup failures, child death, ambiguous reconciliation, and selector recovery; focused audit found no additional safe slice. Mutation remains disabled. | Re-audit for a genuinely uncovered selector/runtime correctness slice after main 3248b7b; if none exists, retain fail-closed upgrade and rollback dispatch. | codex-awc-ar0013-runtime-20260918 |
 
 ## Done
 
