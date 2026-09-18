@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #725 unsigned release contract merged as 5baebde3; main now includes AWQ migration as eed0798. Post-merge Verify 35369167730 and final main Verify 35369474202 plus Formal 35369474248 passed. | Keep v0.3.20 tag blocked until release authority approves durable transition metadata and vendor-manifest artifacts; transition checks are mechanically green from main eed0798. | codex-awc-ar0009-loop-20260918d |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | v0.3.20 lightweight protected tag now points to eed0798. Transition provenance, post-tag Verify, and Formal are green; retain AR-0009 open for release artifact/fresh-clone follow-up. | Monitor v0.3.20 protected tag and release artifacts; no further source mutation unless post-tag artifact or fresh-clone evidence fails. | codex-awc-ar0009-loop-20260918d |
 
 ## Open
 
