@@ -24,12 +24,14 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #651 | `ar0009-coverage-repair@17a42a54a13c` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: cover hostile decision and TUI bridge paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35313633671 | `2666c9d7a56c` | push | Verify | in_progress:- |
+| 35313813657 | `17a42a54a13c` | pull_request | Verify | completed:success |
+| 35313633671 | `2666c9d7a56c` | push | Verify | completed:success |
 | 35313236526 | `2054ec605b2f` | pull_request | Verify | completed:success |
 | 35313043810 | `fb057f0e9d1d` | pull_request | Verify | completed:failure |
 | 35312863628 | `352db560be30` | pull_request | Verify | completed:failure |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35312401579 | `d028fdf21d3b` | pull_request | Verify | completed:success |
 | 35311409243 | `bc5d96b74a44` | push | Verify | completed:success |
 | 35311202424 | `f63c383c43d0` | pull_request | Verify | completed:success |
-| 35310923194 | `d8a3f037542a` | push | Verify | completed:success |
