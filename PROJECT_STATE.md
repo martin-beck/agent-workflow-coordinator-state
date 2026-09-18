@@ -24,13 +24,14 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #676 | `ar0012-process-recovery@bbf246683516` | `main` | UNSTABLE | QUEUED:, QUEUED: | Harden process-death barrier intent recovery |
+| #676 | `ar0012-process-recovery@bbf246683516` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | Harden process-death barrier intent recovery |
+| #677 | `ar0009-release-integration@fc2c42de9d43` | `main` | UNKNOWN | - | fix(runtime): bind manifest verifier open |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35330815771 | `bbf246683516` | pull_request | Verify | queued:- |
+| 35330815771 | `bbf246683516` | pull_request | Verify | in_progress:- |
 | 35330605515 | `4f22adfd87dd` | push | Verify | completed:success |
 | 35330271837 | `e28fa478a67d` | pull_request | Verify | completed:success |
 | 35329520486 | `5c9ec30f7aac` | push | Verify | completed:success |
