@@ -19,17 +19,19 @@ Generated from local Git and GitHub. Do not edit.
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
-| #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
-| #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
+| #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | BLOCKED | - | test: reject restore control SHM sidecar |
+| #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | BLOCKED | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
-| #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #616 | `ar0023-format-repair@12562290b3e7` | `main` | BLOCKED | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
+| #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | BLOCKED | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #689 | `fix/topological-ar-document-generation@4d7bce602fc2` | `main` | BLOCKED | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix: topologically order generated TUI documents |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35336153865 | `966f4445bf5a` | push | Verify | in_progress:- |
+| 35336282013 | `4d7bce602fc2` | pull_request | Verify | completed:failure |
+| 35336153865 | `966f4445bf5a` | push | Verify | completed:success |
 | 35335878898 | `0a8226c1ca46` | pull_request | Verify | completed:success |
 | 35335594812 | `45d8686ae422` | push | Verify | completed:success |
 | 35335531462 | `9ec9201193be` | pull_request | Verify | completed:success |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35334975470 | `6eb5265e142b` | workflow_dispatch | Verify | completed:failure |
 | 35334729666 | `91a4b454ee50` | push | Verify | completed:success |
 | 35334685442 | `9794f539dbcc` | workflow_dispatch | Verify | completed:failure |
-| 35334669732 | `0a7ab4aac5a6` | pull_request | Verify | completed:success |
