@@ -24,13 +24,14 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #678 | `ar0012-sidecar-regression@8ba5886a4d41` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | Test WAL and SHM sidecar fencing |
+| #678 | `ar0012-sidecar-regression@8ba5886a4d41` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | Test WAL and SHM sidecar fencing |
+| #679 | `ar0009-release-integration@d3c0760b5831` | `main` | UNKNOWN | - | fix(runtime): invalidate failed admission |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35331958222 | `8ba5886a4d41` | pull_request | Verify | in_progress:- |
+| 35331958222 | `8ba5886a4d41` | pull_request | Verify | queued:- |
 | 35331551785 | `86caa12584b0` | push | Verify | completed:success |
 | 35331231457 | `5be808dcda80` | pull_request | Verify | completed:success |
 | 35331171282 | `76bf8d1d210c` | push | Verify | completed:success |
