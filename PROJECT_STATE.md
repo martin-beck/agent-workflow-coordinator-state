@@ -24,13 +24,15 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #682 | `ar-mandatory-decision-routing@7607efec2020` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
+| #682 | `ar-mandatory-decision-routing@2d31e5b78019` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
 | #683 | `ar0012-cas-bootstrap@aa81420a8e2a` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35334606671 | `2d31e5b78019` | workflow_dispatch | Verify | in_progress:- |
+| 35334463147 | `7fcd185a3316` | workflow_dispatch | Verify | completed:failure |
 | 35334121542 | `aa81420a8e2a` | pull_request | Verify | completed:failure |
 | 35334082918 | `e4431b8d278d` | push | Verify | completed:failure |
 | 35333970504 | `a9a621984482` | pull_request | Verify | completed:success |
@@ -41,5 +43,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35333547013 | `2ab6444f372b` | workflow_dispatch | Verify | completed:failure |
 | 35333383144 | `3049ff947f31` | pull_request | Verify | completed:success |
 | 35333357924 | `8b97817644dd` | workflow_dispatch | Verify | completed:failure |
-| 35333263642 | `539fe745507b` | workflow_dispatch | Verify | completed:failure |
-| 35333168267 | `e0c558f25ae4` | push | Verify | completed:failure |
