@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `95d27e9c41c83dc5e5a53e7e25dfebca1a5c4106`
+- Product remote main: `9b21ef17f8dfca38a1a1207288c7d1738f1354c6`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,12 +24,15 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #728 | `ar0031-durable-binding@c794ac3ac140` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat(upgrade): add durable authority binding contract |
+| #729 | `ar0031-sqlite-session-snapshot@df2d4c1696ba` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat(upgrade): bind SQLite durable session snapshots |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35375153194 | `df2d4c1696ba` | pull_request | Verify | completed:success |
+| 35374739811 | `9b21ef17f8df` | push | Verify | completed:success |
+| 35374739789 | `9b21ef17f8df` | push | Formal | completed:success |
 | 35374555795 | `c794ac3ac140` | pull_request | Verify | completed:success |
 | 35373298719 | `95d27e9c41c8` | push | Formal | completed:success |
 | 35373298652 | `95d27e9c41c8` | push | Verify | completed:success |
@@ -39,6 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35372623538 | `65d869d87f9a` | pull_request | Verify | completed:success |
 | 35369474248 | `eed0798e99df` | push | Formal | completed:success |
 | 35369474202 | `eed0798e99df` | push | Verify | completed:success |
-| 35369167730 | `5baebde3bead` | push | Verify | completed:success |
-| 35368907851 | `46e1bdd89a0b` | pull_request | Verify | completed:success |
-| 35368297616 | `0db582e598c8` | pull_request | Verify | completed:failure |
