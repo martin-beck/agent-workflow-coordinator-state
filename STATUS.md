@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 3 active status categories.
+**30 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -57,9 +57,11 @@ flowchart LR
         AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
+        AR_0030["AR-0030 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
+    AR_0001 --> AR_0030
     AR_0002 --> AR_0003
     AR_0002 --> AR_0004
     AR_0002 --> AR_0005
@@ -112,7 +114,7 @@ flowchart LR
 
 | AR | Prerequisites | Dependents |
 | --- | --- | --- |
-| [AR-0001](tasks/AR-0001.md) | None | [AR-0002](tasks/AR-0002.md), [AR-0021](tasks/AR-0021.md) |
+| [AR-0001](tasks/AR-0001.md) | None | [AR-0002](tasks/AR-0002.md), [AR-0021](tasks/AR-0021.md), [AR-0030](tasks/AR-0030.md) |
 | [AR-0002](tasks/AR-0002.md) | [AR-0001](tasks/AR-0001.md) | [AR-0003](tasks/AR-0003.md), [AR-0004](tasks/AR-0004.md), [AR-0005](tasks/AR-0005.md), [AR-0006](tasks/AR-0006.md), [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) |
 | [AR-0003](tasks/AR-0003.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md), [AR-0010](tasks/AR-0010.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md), [AR-0016](tasks/AR-0016-release-validation-dispatch.md) |
 | [AR-0004](tasks/AR-0004.md) | [AR-0002](tasks/AR-0002.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) |
@@ -141,6 +143,7 @@ flowchart LR
 | [AR-0027](tasks/AR-0027.md) | [AR-0026](tasks/AR-0026.md) | [AR-0028](tasks/AR-0028.md) |
 | [AR-0028](tasks/AR-0028.md) | [AR-0027](tasks/AR-0027.md) | [AR-0029](tasks/AR-0029.md) |
 | [AR-0029](tasks/AR-0029.md) | [AR-0028](tasks/AR-0028.md) | None |
+| [AR-0030](tasks/AR-0030.md) | [AR-0001](tasks/AR-0001.md) | None |
 
 ## Complete AR inventory
 
@@ -151,11 +154,12 @@ flowchart LR
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #722 merged as 8bd2e0e; candidate and exact post-merge Verify 35364403181 passed. v0.3.20 metadata is merged, but release publication still lacks a committed transition manifest and authoritative trust/vendor provenance digests; no tag created. | Create and validate the real v0.3.19-to-v0.3.20 transition provenance from authoritative release metadata, then run release workflow/fresh-clone checks; do not tag until complete. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-barrier-20260918b | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
+| P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | Unclaimed | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Audit AWQ v0.35.0 trust and profile requirements, add workflow-trust policy and refreshed lock/profiles while retaining Coordinator-owned formal gates, then publish a focused PR. |
 
 ### Done (26)
 
