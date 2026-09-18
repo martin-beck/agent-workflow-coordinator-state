@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 2 active status categories.
+**29 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 3 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -40,7 +40,7 @@ flowchart LR
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - In progress"]:::status_in_progress
-        AR_0013["AR-0013 - In progress"]:::status_in_progress
+        AR_0013["AR-0013 - Open"]:::status_open
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
         AR_0016["AR-0016 - Done"]:::status_done
@@ -144,13 +144,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (3)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #722 merged as 8bd2e0e; candidate and exact post-merge Verify 35364403181 passed. v0.3.20 metadata is merged, but release publication still lacks a committed transition manifest and authoritative trust/vendor provenance digests; no tag created. | Create and validate the real v0.3.19-to-v0.3.20 transition provenance from authoritative release metadata, then run release workflow/fresh-clone checks; do not tag until complete. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-barrier-20260918b | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-awc-ar0013-runtime-20260918b | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
+
+### Open (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
 
 ### Done (26)
 
