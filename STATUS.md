@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 26 |
+| **Done** | Accepted, integrated, and durably verified | 27 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 0 |
 
@@ -57,7 +57,7 @@ flowchart LR
         AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
-        AR_0030["AR-0030 - In progress"]:::status_in_progress
+        AR_0030["AR-0030 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -147,12 +147,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918d | PR #722 merged as 8bd2e0e and post-merge Verify 35364403181 passed. v0.3.20 metadata is merged, but publication must wait for AR-0030 AWQ v0.35.0 trust/profile migration plus real transition provenance; no tag created. | Hold v0.3.20 tag; coordinate AR-0030 AWQ v0.35.0 migration, then regenerate transition provenance and rerun release/fresh-clone checks on final exact main. |
-| P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | codex-awc-ar0030-quality-20260918d | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Await independent exact-head review of PR #723 at a85a58035c843f67614f29059c364d506645987f; do not merge until review and hosted evidence are recorded. |
 
 ### Open (2)
 
@@ -161,7 +160,7 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main fe70c08 audit passed 267 focused SQLite/barrier/fencing tests and 105 subtests; existing hostile coverage includes symlinked contract parents, generated-outcome close retry, process death, WAL/SHM, selector, authority, journal, lock, and rollback failure paths. No additional concrete safe slice identified without enabling mutation or dispatch. | Keep AR-0012 open; re-audit after the next barrier/fencing merge for a genuinely uncovered failure boundary; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main fe70c08 focused selector/runtime and release/upgrade suites pass 167 tests and 181 subtests; no new dependency-safe selector/runtime seam identified. Mutation/dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
 
-### Done (26)
+### Done (27)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -184,6 +183,7 @@ flowchart LR
 | P0 | [AR-0026](tasks/AR-0026.md): Discussion TUI session and task-event binding | Unclaimed | Bind the reusable discussion TUI session to Coordinator task state. | Define revision-bound discussion-session events for TUI entry, active point, document anchor, user response, and unresolved status. |
 | P0 | [AR-0027](tasks/AR-0027.md): Batched TUI packet and navigation binding | Unclaimed | Persist TUI navigation and batch-point state without cross-point authorization. | Bind batched discussion packets, per-point response state, active UI anchors, and optional re-ask markers to task revisions. |
 | P0 | [AR-0028](tasks/AR-0028.md): TUI safe exit and future-discussion persistence | Unclaimed | Ensure TUI sessions cannot lose decisions or future discussion requests. | Implement atomic safe-exit, resume, re-ask, and future-discussion AR mapping events for TUI sessions. |
+| P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | Unclaimed | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Await independent exact-head review of PR #723 at a85a58035c843f67614f29059c364d506645987f; do not merge until review and hosted evidence are recorded. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
