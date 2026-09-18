@@ -8,8 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #717 merged at b6048246 after exact-head independent review; post-merge Verify 35358513352 passed; release tags remain unsigned/lightweight and protected; mutation remains disabled. | Select and implement the next dependency-safe correctness slice from merged main b6048246; preserve fail-closed upgrade/rollback mutation and dispatch disabled. | codex-awc-ar0009-loop-20260918c |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #715 merged at ee23c2ff after exact-head independent review; post-merge Verify 35357252233 passed; mutation remains fail-closed. | Select and implement the next bounded barrier/fencing failure-path slice from merged main ee23c2ff; preserve fail-closed upgrade and rollback mutation. | codex-awc-ar0012-barrier-20260918 |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Current main be3343c8 retains coverage for selector publication/recovery process death, fsync/cleanup ambiguity, parent replacement, temporary-file safety, descriptor failures, reread drift, and admission validation; focused audit found no additional safe slice. Mutation and dispatch remain disabled. | Re-audit for the next genuinely uncovered selector/runtime correctness slice after merged main be3343c8; retain fail-closed upgrade and rollback dispatch. | codex-awc-ar0013-runtime-20260918 |
+
+## Open
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | PR #715 merged at ee23c2ff after exact-head independent review; post-merge Verify 35357252233 passed; mutation remains fail-closed. | Select and implement the next bounded barrier/fencing failure-path slice from merged main ee23c2ff; preserve fail-closed upgrade and rollback mutation. | - |
 
 ## Done
 
