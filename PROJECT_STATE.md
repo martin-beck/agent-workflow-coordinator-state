@@ -24,11 +24,15 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #723 | `feature/awq-v035-integration@a85a58035c84` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SKIPPED | feat(quality): integrate AWQ v0.35 trust gates |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35367468186 | `a85a58035c84` | pull_request | Verify | completed:success |
+| 35367333237 | `a85a58035c84` | pull_request | Verify | completed:success |
+| 35367218146 | `0fbb23d71b89` | pull_request | Verify | completed:failure |
 | 35364403181 | `8bd2e0e6d21c` | push | Verify | completed:success |
 | 35364085888 | `7670e52f2c84` | pull_request | Verify | completed:success |
 | 35362771550 | `fe70c08efa52` | push | Verify | completed:success |
@@ -38,6 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35360643711 | `fb8f1efa475f` | pull_request | Verify | completed:success |
 | 35360108170 | `e9083e7b41f8` | push | Verify | completed:failure |
 | 35359684621 | `4bd9df3f8ab1` | pull_request | Verify | completed:success |
-| 35359668275 | `51f690608996` | push | Verify | completed:success |
-| 35359616255 | `b484c6089b99` | workflow_dispatch | Verify | completed:success |
-| 35359547118 | `b484c6089b99` | pull_request | Verify | completed:success |
