@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #728 | `ar0031-durable-binding@c794ac3ac140` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED:, QUEUED: | feat(upgrade): add durable authority binding contract |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35374555795 | `c794ac3ac140` | pull_request | Verify | queued:- |
 | 35373298719 | `95d27e9c41c8` | push | Formal | completed:success |
 | 35373298652 | `95d27e9c41c8` | push | Verify | completed:success |
 | 35373218447 | `37bfb9ef1c55` | pull_request | Verify | completed:success |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35369167730 | `5baebde3bead` | push | Verify | completed:success |
 | 35368907851 | `46e1bdd89a0b` | pull_request | Verify | completed:success |
 | 35368297616 | `0db582e598c8` | pull_request | Verify | completed:failure |
-| 35367468186 | `a85a58035c84` | pull_request | Verify | completed:success |
