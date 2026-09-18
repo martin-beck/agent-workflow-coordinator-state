@@ -25,11 +25,14 @@ Generated from local Git and GitHub. Do not edit.
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 | #660 | `release-v0315@c555a0cc0ada` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | release: publish TUI session handoff support as v0.3.15 |
+| #661 | `feat/tui-runtime-session-states@c62e33c293d7` | `main` | DIRTY | - | style: format TUI bridge tests |
+| #662 | `repair-tui-format@5de2a8e782e5` | `main` | UNSTABLE | QUEUED:, QUEUED: | style: format TUI bridge tests |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35320181715 | `5de2a8e782e5` | pull_request | Verify | queued:- |
 | 35320048807 | `c555a0cc0ada` | pull_request | Verify | completed:failure |
 | 35320013414 | `faf002fbdb97` | push | Verify | completed:failure |
 | 35319876397 | `422b4fe8a171` | pull_request | Verify | completed:failure |
@@ -41,4 +44,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35318401938 | `feca98340d46` | pull_request | Verify | completed:success |
 | 35317954743 | `8664268d755f` | pull_request | Verify | completed:success |
 | 35317455503 | `0b0beac85675` | push | Verify | completed:success |
-| 35317361553 | `5afdd7455069` | pull_request | Verify | completed:success |
