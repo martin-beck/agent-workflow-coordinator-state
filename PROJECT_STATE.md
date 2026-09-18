@@ -25,14 +25,14 @@ Generated from local Git and GitHub. Do not edit.
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 | #682 | `ar-mandatory-decision-routing@7607efec2020` | `main` | DIRTY | - | release: publish Coordinator v0.3.18 |
-| #683 | `ar0012-cas-bootstrap@811d518c9061` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
+| #683 | `ar0012-cas-bootstrap@811d518c9061` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SKIPPED | Reject caller-owned CAS bootstrap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35333811995 | `811d518c9061` | pull_request | Verify | queued:- |
-| 35333746366 | `7607efec2020` | workflow_dispatch | Verify | in_progress:- |
+| 35333811995 | `811d518c9061` | pull_request | Verify | in_progress:- |
+| 35333746366 | `7607efec2020` | workflow_dispatch | Verify | completed:failure |
 | 35333732080 | `4704b6979028` | push | Verify | completed:failure |
 | 35333659273 | `1e5983381e9b` | pull_request | Verify | completed:success |
 | 35333547013 | `2ab6444f372b` | workflow_dispatch | Verify | completed:failure |
