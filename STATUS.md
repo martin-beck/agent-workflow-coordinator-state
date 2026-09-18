@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 3 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -39,7 +39,7 @@ flowchart LR
         AR_0009["AR-0009 - In progress"]:::status_in_progress
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
-        AR_0012["AR-0012 - Open"]:::status_open
+        AR_0012["AR-0012 - In progress"]:::status_in_progress
         AR_0013["AR-0013 - Open"]:::status_open
         AR_0014["AR-0014 - Done"]:::status_done
         AR_0015["AR-0015 - Done"]:::status_done
@@ -151,18 +151,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-awc-ar0009-loop-20260918e | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Await independent exact-head review and hosted gates for PR #738 at b450272. Preserve upgrade/replace/rollback/selector mutation, outcome publication, and Git dispatch fail-closed; this binds only the ambiguous-fence Acquire rejection. |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | codex-awc-ar0012-current-audit-20260918f | Exact main 95d27e9 focused baseline: 217 authority/engine/campaign tests passed and 231 runtime/admission/lock/control tests passed. No new safe mutation seam identified; preserve fail-closed upgrade and rollback mutation. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-mutation-20260918e | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the next bounded correspondence slice: machine-check that declared model states, barriers, and configured constants in the SQLite map match UpgradeRecovery.tla/cfg exactly. Keep mutation, outcome publication, Git dispatch, apply, and rollback fail-closed. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main 95d27e9 focused baseline: 217 authority/engine/campaign tests passed and 231 runtime/admission/lock/control tests passed. No new safe mutation seam identified; preserve fail-closed upgrade and rollback mutation. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 95d27e9 focused baseline: 217 authority/engine/campaign tests passed and 231 runtime/admission/lock/control tests passed. No new safe selector/runtime seam identified; mutation and dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
 
 ### Done (27)
