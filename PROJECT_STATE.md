@@ -24,11 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
+| #704 | `ar0012-generated-replace-failure-47af@baad063263ed` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(sqlite): preserve journal on replace failure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35349885106 | `baad063263ed` | pull_request | Verify | in_progress:- |
 | 35349425899 | `47afd68af61f` | push | Verify | completed:success |
 | 35349339499 | `08fe2540ed07` | pull_request | Verify | completed:success |
 | 35348861458 | `e1fd032cc415` | push | Verify | completed:success |
@@ -40,4 +42,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35346933946 | `9ad7f1dae364` | pull_request | Verify | completed:success |
 | 35346561753 | `d0996e7f4a98` | push | Verify | completed:success |
 | 35346498651 | `e1fbc750a5fe` | pull_request | Verify | completed:success |
-| 35346114551 | `7c72b4d79f3a` | push | Verify | completed:success |
