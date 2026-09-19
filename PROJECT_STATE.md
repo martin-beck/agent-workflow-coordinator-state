@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5c8d9cfc84c9a3f11123408d923713db984883b8`
+- Product remote main: `9e7d782ab6e88d142ab061d3380d137cae98f598`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #834 | `ar0031-nonclaim-boundaries@b8bd2253fbb8` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): preserve nonclaim boundaries |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35414430000 | `b8bd2253fbb8` | pull_request | Verify | in_progress:- |
+| 35414520465 | `9e7d782ab6e8` | push | Formal | completed:success |
+| 35414520446 | `9e7d782ab6e8` | push | Verify | completed:success |
+| 35414430000 | `b8bd2253fbb8` | pull_request | Verify | completed:success |
 | 35414115361 | `5c8d9cfc84c9` | push | Verify | completed:success |
 | 35414115350 | `5c8d9cfc84c9` | push | Formal | completed:success |
 | 35413997054 | `ba1f1836a76a` | pull_request | Verify | completed:success |
@@ -37,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35413512360 | `96d2293b87d6` | push | Verify | completed:success |
 | 35413512333 | `96d2293b87d6` | push | Formal | completed:success |
 | 35413470809 | `fb5b87e91043` | pull_request | Verify | completed:success |
-| 35413292415 | `64a8f2d1b22c` | push | Verify | completed:success |
-| 35413292409 | `64a8f2d1b22c` | push | Formal | completed:success |
