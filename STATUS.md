@@ -155,7 +155,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-audit-20260919e | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Audit complete: no genuinely new dependency-safe seam exists across open AR-0009/0012/0013/0031 on exact main 0509105. Keep all mutation, outcome publication, Git dispatch, apply, rollback, and signing-policy boundaries unchanged; await a new contract obligation or runtime merge. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-audit-20260919e | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Concrete blocker: no safe bounded backup phase can be enabled yet. UpgradeEngine._apply_locked mandates all eight phases and each adapter execute() rejects mutation; existing bound backup primitives lack the generated operation/session journal contract. Await a design-approved partial campaign entrypoint plus formal/effect evidence; keep all mutation and dispatch fail-closed. |
 
 ### Open (3)
 
