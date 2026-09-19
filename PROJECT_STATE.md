@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `98f7f844fa0cc2c8f9b2035c851c89d2ab8a406d`
+- Product remote main: `4e9ea616539cd621f12a8539cd7eed7d3838f326`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #844 | `ar0031-implementation-unique@26a5df78210e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, IN_PROGRESS: | test(formal): reject duplicate mappings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35416722533 | `26a5df78210e` | pull_request | Verify | in_progress:- |
+| 35416764673 | `4e9ea616539c` | push | Formal | completed:success |
+| 35416764596 | `4e9ea616539c` | push | Verify | completed:success |
+| 35416722533 | `26a5df78210e` | pull_request | Verify | completed:success |
 | 35416564368 | `98f7f844fa0c` | push | Formal | completed:success |
 | 35416564350 | `98f7f844fa0c` | push | Verify | completed:success |
 | 35416526671 | `7cfef4fd2788` | pull_request | Verify | completed:success |
@@ -37,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35416144639 | `eb5d9ed0a051` | push | Formal | completed:success |
 | 35416144637 | `eb5d9ed0a051` | push | Verify | completed:success |
 | 35416109464 | `07dadeefab12` | pull_request | Verify | completed:success |
-| 35415933044 | `0f5267a5b645` | push | Verify | completed:success |
-| 35415933041 | `0f5267a5b645` | push | Formal | completed:success |
