@@ -21,15 +21,15 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #816 | `ar0031-kind-shape@6d93121670ec` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(formal): validate correspondence kind shape |
+| #816 | `ar0031-kind-shape@6d93121670ec` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | test(formal): validate correspondence kind shape |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35409766044 | `3f29725c2e9d` | push | Formal | in_progress:- |
-| 35409766014 | `3f29725c2e9d` | push | Verify | queued:- |
-| 35409752298 | `6d93121670ec` | pull_request | Verify | in_progress:- |
+| 35409766044 | `3f29725c2e9d` | push | Formal | completed:success |
+| 35409766014 | `3f29725c2e9d` | push | Verify | completed:success |
+| 35409752298 | `6d93121670ec` | pull_request | Verify | completed:success |
 | 35409598001 | `3f02105ff418` | pull_request | Verify | completed:success |
 | 35409416759 | `cec457897c30` | push | Verify | completed:success |
 | 35409416729 | `cec457897c30` | push | Formal | completed:success |
