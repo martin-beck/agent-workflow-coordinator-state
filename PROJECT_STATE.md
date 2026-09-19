@@ -22,11 +22,13 @@ Generated from local Git and GitHub. Do not edit.
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #815 | `ar0031-provenance-path-shapes@3f02105ff418` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | test(formal): validate provenance path shapes |
+| #816 | `ar0031-kind-shape@6d93121670ec` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(formal): validate correspondence kind shape |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35409752298 | `6d93121670ec` | pull_request | Verify | in_progress:- |
 | 35409598001 | `3f02105ff418` | pull_request | Verify | completed:success |
 | 35409416759 | `cec457897c30` | push | Verify | completed:success |
 | 35409416729 | `cec457897c30` | push | Formal | completed:success |
@@ -38,4 +40,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35408783292 | `0dc0ca9846cd` | push | Formal | completed:success |
 | 35408714500 | `d2589e8a5f34` | pull_request | Verify | completed:success |
 | 35408293121 | `88ee8bab9d1a` | push | Verify | completed:success |
-| 35408292359 | `88ee8bab9d1a` | push | Formal | completed:success |
