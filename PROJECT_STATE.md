@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `eb5d9ed0a0516e1d27304d87285b1f27aadb2a52`
+- Product remote main: `22f41bda9a26361832286e90bf89b83933f5da24`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #842 | `ar0031-evidence-reference-targets@06466aa0cd14` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): bind evidence references |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35416332951 | `06466aa0cd14` | pull_request | Verify | in_progress:- |
+| 35416374642 | `22f41bda9a26` | push | Formal | completed:success |
+| 35416374581 | `22f41bda9a26` | push | Verify | completed:success |
+| 35416332951 | `06466aa0cd14` | pull_request | Verify | completed:success |
 | 35416144639 | `eb5d9ed0a051` | push | Formal | completed:success |
 | 35416144637 | `eb5d9ed0a051` | push | Verify | completed:success |
 | 35416109464 | `07dadeefab12` | pull_request | Verify | completed:success |
@@ -37,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35415690161 | `7380399dd7a8` | push | Verify | completed:success |
 | 35415690136 | `7380399dd7a8` | push | Formal | completed:success |
 | 35415641019 | `e3fdb0226322` | pull_request | Verify | completed:success |
-| 35415464231 | `167728057585` | push | Verify | completed:success |
-| 35415463990 | `167728057585` | push | Formal | completed:success |
