@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Await independent exact-head review and hosted gates for PR #853 at 03a256f. Contract remains schema-only: mutation_enabled=false and dispatch_enabled=false; no execution or adapter wiring. Keep commit, rollback, apply, outcome publication, and Git dispatch fail-closed. | codex-awc-ar0031-contract-20260919f |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | PR #853 merged as 5c3e108 with post-merge AWQ, scope, formal-trusted, and Verify run 35419237195 successful; contract-only prerequisite is durable, but execution remains disabled. Await independent approval of a future session/journal implementation contract. | codex-awc-ar0031-contract-20260919f |
 
 ## Open
 
