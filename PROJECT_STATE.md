@@ -21,13 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #844 | `ar0031-implementation-unique@26a5df78210e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED:, QUEUED: | test(formal): reject duplicate mappings |
+| #844 | `ar0031-implementation-unique@26a5df78210e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(formal): reject duplicate mappings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35416722533 | `26a5df78210e` | pull_request | Verify | queued:- |
+| 35416722533 | `26a5df78210e` | pull_request | Verify | in_progress:- |
 | 35416564368 | `98f7f844fa0c` | push | Formal | completed:success |
 | 35416564350 | `98f7f844fa0c` | push | Verify | completed:success |
 | 35416526671 | `7cfef4fd2788` | pull_request | Verify | completed:success |
