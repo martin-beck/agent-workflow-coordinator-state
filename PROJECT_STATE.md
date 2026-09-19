@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `cec457897c300e6461705937b9161c0ce20c324f`
+- Product remote main: `3f29725c2e9d57f900e29628e5d1ad9473378c08`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #815 | `ar0031-provenance-path-shapes@3f02105ff418` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | test(formal): validate provenance path shapes |
-| #816 | `ar0031-kind-shape@6d93121670ec` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(formal): validate correspondence kind shape |
+| #816 | `ar0031-kind-shape@6d93121670ec` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(formal): validate correspondence kind shape |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35409766044 | `3f29725c2e9d` | push | Formal | in_progress:- |
+| 35409766014 | `3f29725c2e9d` | push | Verify | queued:- |
 | 35409752298 | `6d93121670ec` | pull_request | Verify | in_progress:- |
 | 35409598001 | `3f02105ff418` | pull_request | Verify | completed:success |
 | 35409416759 | `cec457897c30` | push | Verify | completed:success |
@@ -38,5 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35409057887 | `1cc7f970df7b` | pull_request | Verify | completed:success |
 | 35408783304 | `0dc0ca9846cd` | push | Verify | completed:success |
 | 35408783292 | `0dc0ca9846cd` | push | Formal | completed:success |
-| 35408714500 | `d2589e8a5f34` | pull_request | Verify | completed:success |
-| 35408293121 | `88ee8bab9d1a` | push | Verify | completed:success |
