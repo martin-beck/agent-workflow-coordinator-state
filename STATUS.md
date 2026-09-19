@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**31 ARs tracked** across 2 active status categories.
+**31 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 4 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -58,7 +58,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
-        AR_0031["AR-0031 - Open"]:::status_open
+        AR_0031["AR-0031 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -151,14 +151,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (4)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-contract-20260919f | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Design gap recorded: before implementation, approve a disabled-by-default BoundedBackupCampaign contract with generated backup opcode, DurableUpgradeSession capture/assert_current/journal outcome, explicit mutation_enabled=false admission, post-effect identity reread, atomic fsync outcome, and formal Crash/ambiguous mapping. Implement only after this contract and evidence obligations are accepted. |
+
+### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Continue release integration and upgrade readiness; do not add signing gates or signing prerequisites. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main e4bacb2 focused AR-0012 matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing hostile coverage remains complete; no new dependency-safe non-overlapping seam found without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 906460c focused selector/runtime matrix passed 216 tests and 260 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. No new dependency-safe non-overlapping selector/runtime seam found; mutation and dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Design gap recorded: before implementation, approve a disabled-by-default BoundedBackupCampaign contract with generated backup opcode, DurableUpgradeSession capture/assert_current/journal outcome, explicit mutation_enabled=false admission, post-effect identity reread, atomic fsync outcome, and formal Crash/ambiguous mapping. Implement only after this contract and evidence obligations are accepted. |
 
 ### Done (27)
 
