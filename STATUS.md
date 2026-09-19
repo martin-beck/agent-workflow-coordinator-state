@@ -155,7 +155,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-session-validator-20260919g | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | PR #854 merged as 130dd62 with post-merge AWQ, scope, formal-trusted, and Verify successful. Next safe seam is independently reviewed implementation of the durable session validator/record contract, still disabled by default; do not wire execution or mutation. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-session-validator-20260919g | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement pure disabled-by-default durable session validator/record contract: validate merged artifact, capture/assert_current fields, atomic outcome shape, and reject missing/foreign/replayed/ambiguous records. Keep mutation_enabled=false, dispatch_enabled=false, and all execution paths untouched. |
 
 ### Open (3)
 
