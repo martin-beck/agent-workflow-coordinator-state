@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `65ac8bfb4a27b66313a6e3fcb4e11860b38ff3cb`
+- Product remote main: `e89d0dfc7a4a673fe23a1d2faea838a3f9adff07`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -19,25 +19,22 @@ Generated from local Git and GitHub. Do not edit.
 | #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
-| #429 | `ar0007-executor-restore-control-shm@5a497c031ff5` | `main` | CLEAN | - | test: reject restore control SHM sidecar |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
-| #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35409160593 | `e89d0dfc7a4a` | push | Formal | completed:success |
+| 35409160592 | `e89d0dfc7a4a` | push | Verify | completed:success |
+| 35409057887 | `1cc7f970df7b` | pull_request | Verify | completed:success |
+| 35408783304 | `0dc0ca9846cd` | push | Verify | completed:success |
+| 35408783292 | `0dc0ca9846cd` | push | Formal | completed:success |
+| 35408714500 | `d2589e8a5f34` | pull_request | Verify | completed:success |
+| 35408293121 | `88ee8bab9d1a` | push | Verify | completed:success |
+| 35408292359 | `88ee8bab9d1a` | push | Formal | completed:success |
+| 35408135165 | `d0fb4677030d` | push | Verify | completed:success |
+| 35408135139 | `d0fb4677030d` | push | Formal | completed:success |
 | 35407881497 | `65ac8bfb4a27` | push | Formal | completed:success |
 | 35407881397 | `65ac8bfb4a27` | push | Verify | completed:success |
-| 35407606361 | `3f99a93cec67` | push | Verify | completed:success |
-| 35407606341 | `3f99a93cec67` | push | Formal | completed:success |
-| 35407538437 | `c3b7c002df1a` | pull_request | Verify | completed:success |
-| 35407387462 | `221df91ab786` | pull_request | Verify | completed:success |
-| 35407084049 | `cfba15ce5e01` | push | Verify | completed:success |
-| 35407083938 | `cfba15ce5e01` | push | Formal | completed:success |
-| 35407022578 | `0f66b2a2d771` | pull_request | Verify | completed:success |
-| 35406832620 | `f8f2d4232832` | push | Verify | completed:success |
-| 35406832581 | `f8f2d4232832` | push | Formal | completed:success |
-| 35406769551 | `305ccd36f9f7` | pull_request | Verify | completed:success |
