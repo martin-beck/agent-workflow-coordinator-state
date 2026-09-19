@@ -21,13 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #847 | `ar0031-evidence-regular-files@df4b576974e9` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): reject symlinked evidence files |
+| #847 | `ar0031-evidence-regular-files@df4b576974e9` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(formal): reject symlinked evidence files |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35417320282 | `df4b576974e9` | pull_request | Verify | in_progress:- |
+| 35417320282 | `df4b576974e9` | pull_request | Verify | queued:- |
 | 35417168437 | `a8d95e45b1bf` | push | Verify | completed:success |
 | 35417168415 | `a8d95e45b1bf` | push | Formal | completed:success |
 | 35417134523 | `6bad635cebaf` | pull_request | Verify | completed:success |
