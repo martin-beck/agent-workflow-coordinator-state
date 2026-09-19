@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #853 | `ar0031-backup-contract@4e7f1b14e09e` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | test(contract): specify disabled backup campaign |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35419004060 | `4e7f1b14e09e` | pull_request | Verify | in_progress:- |
 | 35418386194 | `0509105f7836` | push | Verify | completed:success |
 | 35418386189 | `0509105f7836` | push | Formal | completed:success |
 | 35418341685 | `1622a4d37f27` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35417943760 | `7ca8d2e14113` | pull_request | Verify | completed:success |
 | 35417790866 | `96cfcecf8378` | push | Verify | completed:success |
 | 35417790863 | `96cfcecf8378` | push | Formal | completed:success |
-| 35417748822 | `ef5716387869` | pull_request | Verify | completed:success |
