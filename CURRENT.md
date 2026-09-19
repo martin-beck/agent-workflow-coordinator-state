@@ -3,16 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Exact product main 30ed06f release-readiness audit: 45 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy is explicit and hostile-tested; workflow validates candidate identity, fresh-clone contract/runbook determinism, source binding, artifact ownership/digests, and emits non-publishing tag commands. No new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. | codex-awc-ar0009-audit-20260919a |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Exact product main 30ed06f release-readiness audit: 45 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy is explicit and hostile-tested; workflow validates candidate identity, fresh-clone contract/runbook determinism, source binding, artifact ownership/digests, and emits non-publishing tag commands. No new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main e4bacb2 focused AR-0012 matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing hostile coverage remains complete; no new dependency-safe non-overlapping seam found without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 906460c focused selector/runtime matrix passed 216 tests and 260 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. No new dependency-safe non-overlapping selector/runtime seam found; mutation and dispatch remain disabled. | Re-audit after the next relevant runtime merge; implement only a genuinely uncovered selector/versioned-runtime correctness slice. | - |
 
