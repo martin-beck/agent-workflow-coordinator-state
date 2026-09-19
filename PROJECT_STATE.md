@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5201869f73ce75502b5927ab945ba44a48659648`
+- Product remote main: `93700366243195e4517875e1853fd34d6e0726b1`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #848 | `ar0031-evidence-relative@06cf20f01813` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED:, QUEUED: | test(formal): constrain evidence paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35417521378 | `06cf20f01813` | pull_request | Verify | queued:- |
+| 35417590884 | `937003662431` | push | Formal | completed:success |
+| 35417590839 | `937003662431` | push | Verify | completed:success |
+| 35417521378 | `06cf20f01813` | pull_request | Verify | completed:success |
 | 35417365452 | `5201869f73ce` | push | Verify | completed:success |
 | 35417365443 | `5201869f73ce` | push | Formal | completed:success |
 | 35417320282 | `df4b576974e9` | pull_request | Verify | completed:success |
@@ -37,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35416977693 | `3fdc8a2a1816` | push | Formal | completed:success |
 | 35416977642 | `3fdc8a2a1816` | push | Verify | completed:success |
 | 35416945440 | `b9b60a2519bc` | pull_request | Verify | completed:success |
-| 35416764673 | `4e9ea616539c` | push | Formal | completed:success |
-| 35416764596 | `4e9ea616539c` | push | Verify | completed:success |
