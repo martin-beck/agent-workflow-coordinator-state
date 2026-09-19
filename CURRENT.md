@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Continue release integration and upgrade readiness; do not add signing gates or signing prerequisites. | codex-awc-ar0009-audit-20260919a |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #735 adds bounded formal correspondence scaffolding for SQLite snapshot/safe-mode transitions; implementation remains read-only and fail-closed. | Audit exact main 30ed06f release integration/readiness and unsigned-tag policy; preserve no-signing/no-mutation boundaries and avoid duplicate AR work. | codex-awc-ar0009-audit-20260919a |
 
 ## Open
 
