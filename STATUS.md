@@ -155,7 +155,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-chain-sequence-20260919v | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Audit exact main 30ed06f for one non-overlapping pure recovery-chain sequence invariant; if justified, add disabled-by-default validator/tests, otherwise record blocker and release claim. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-chain-sequence-20260919v | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Blocked pending a new journal/session identity model that permits multi-revision provenance; existing contract pins expected identity/revision and all pure chain/envelope/replay seams are covered. Do not add duplicate validators; keep mutation and dispatch disabled. |
 
 ### Open (3)
 
