@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #839 | `ar0031-implementation-mappings@e3fdb0226322` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, QUEUED:, QUEUED: | test(formal): validate implementation mappings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35415641019 | `e3fdb0226322` | pull_request | Verify | queued:- |
 | 35415464231 | `167728057585` | push | Verify | completed:success |
 | 35415463990 | `167728057585` | push | Formal | completed:success |
 | 35415416322 | `bd5f1451f875` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35414932392 | `f32f4e62178b` | pull_request | Verify | completed:success |
 | 35414762138 | `6ca370e35714` | push | Verify | completed:success |
 | 35414762111 | `6ca370e35714` | push | Formal | completed:success |
-| 35414713894 | `802a226fa463` | pull_request | Verify | completed:success |
