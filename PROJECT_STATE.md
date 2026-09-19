@@ -21,13 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #827 | `ar0031-model-outcome-domain@aa6b6e1cd616` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS, QUEUED:, QUEUED: | test(formal): constrain model outcomes |
+| #827 | `ar0031-model-outcome-domain@aa6b6e1cd616` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(formal): constrain model outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35412586192 | `aa6b6e1cd616` | pull_request | Verify | queued:- |
+| 35412586192 | `aa6b6e1cd616` | pull_request | Verify | in_progress:- |
 | 35412420563 | `fcbe014b368a` | push | Formal | completed:success |
 | 35412420460 | `fcbe014b368a` | push | Verify | completed:success |
 | 35412362974 | `29fa52999c23` | pull_request | Verify | completed:success |
