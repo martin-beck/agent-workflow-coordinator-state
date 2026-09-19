@@ -155,7 +155,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-contract-audit-20260919f | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Concrete blocker: no safe bounded backup phase can be enabled yet. UpgradeEngine._apply_locked mandates all eight phases and each adapter execute() rejects mutation; existing bound backup primitives lack the generated operation/session journal contract. Await a design-approved partial campaign entrypoint plus formal/effect evidence; keep all mutation and dispatch fail-closed. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-contract-audit-20260919f | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Design gap recorded: before implementation, approve a disabled-by-default BoundedBackupCampaign contract with generated backup opcode, DurableUpgradeSession capture/assert_current/journal outcome, explicit mutation_enabled=false admission, post-effect identity reread, atomic fsync outcome, and formal Crash/ambiguous mapping. Implement only after this contract and evidence obligations are accepted. |
 
 ### Open (3)
 
