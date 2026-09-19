@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `613d5067d2437d87efd655468dfde6c8ff4fe963`
+- Product remote main: `e4e62b10e5049f5167bfdeb81fe406c17258ddca`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #822 | `ar0031-nonclaims-shape@7f0d1a0e49ba` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | test(formal): validate nonclaim collection shape |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35411447439 | `7f0d1a0e49ba` | pull_request | Verify | in_progress:- |
+| 35411494719 | `e4e62b10e504` | push | Verify | completed:success |
+| 35411494715 | `e4e62b10e504` | push | Formal | completed:success |
+| 35411447439 | `7f0d1a0e49ba` | pull_request | Verify | completed:success |
 | 35411174307 | `613d5067d243` | push | Formal | completed:success |
 | 35411174296 | `613d5067d243` | push | Verify | completed:success |
 | 35411128243 | `ca8220057179` | pull_request | Verify | completed:success |
@@ -37,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35410674173 | `d46d019bfd63` | push | Verify | completed:success |
 | 35410674172 | `d46d019bfd63` | push | Formal | completed:success |
 | 35410606677 | `4532a2c107a0` | pull_request | Verify | completed:success |
-| 35410432265 | `726e8d49b072` | push | Formal | completed:success |
-| 35410432241 | `726e8d49b072` | push | Verify | completed:success |
