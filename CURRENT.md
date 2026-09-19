@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 906460c focused selector/runtime matrix passed 216 tests and 260 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. No new dependency-safe non-overlapping selector/runtime seam found; mutation and dispatch remain disabled. | Audit exact main 30ed06f for one non-overlapping selector/versioned-runtime correctness boundary after recovery-chain merges; preserve fail-closed mutation and dispatch. | codex-awc-ar0013-recovery-audit-20260919c |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | codex-awc-ar0013-recovery-audit-20260919c |
 
 ## Open
 
