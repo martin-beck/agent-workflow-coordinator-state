@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `3f99a93cec6751652dcb901dd1c6406b2d9025af`
+- Product remote main: `65ac8bfb4a27b66313a6e3fcb4e11860b38ff3cb`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -24,12 +24,13 @@ Generated from local Git and GitHub. Do not edit.
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 | #616 | `ar0023-format-repair@12562290b3e7` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | style: format artifact binding modules |
 | #618 | `ar0024-followup-legacy-gate@cc87a9d22d67` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: preserve legacy completed gate compatibility |
-| #810 | `ar0031-model-collections-shape@221df91ab786` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | test(formal): validate model collection shapes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35407881497 | `65ac8bfb4a27` | push | Formal | completed:success |
+| 35407881397 | `65ac8bfb4a27` | push | Verify | completed:success |
 | 35407606361 | `3f99a93cec67` | push | Verify | completed:success |
 | 35407606341 | `3f99a93cec67` | push | Formal | completed:success |
 | 35407538437 | `c3b7c002df1a` | pull_request | Verify | completed:success |
@@ -40,5 +41,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35406832620 | `f8f2d4232832` | push | Verify | completed:success |
 | 35406832581 | `f8f2d4232832` | push | Formal | completed:success |
 | 35406769551 | `305ccd36f9f7` | pull_request | Verify | completed:success |
-| 35406586874 | `502723e4a6a8` | push | Formal | completed:success |
-| 35406586863 | `502723e4a6a8` | push | Verify | completed:success |
