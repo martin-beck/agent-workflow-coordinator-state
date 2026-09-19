@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0509105f78368683e3434b884aa0c6aa22b1cf0d`
+- Product remote main: `5c3e10877e2db3ebf895aba90308114e0d5c0997`
 - Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
 - Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
 
@@ -21,13 +21,14 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #853 | `ar0031-backup-contract@03a256fded92` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(contract): specify disabled backup campaign |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35419144030 | `03a256fded92` | pull_request | Verify | in_progress:- |
+| 35419237208 | `5c3e10877e2d` | push | Formal | completed:success |
+| 35419237195 | `5c3e10877e2d` | push | Verify | completed:success |
+| 35419144030 | `03a256fded92` | pull_request | Verify | completed:success |
 | 35419004060 | `4e7f1b14e09e` | pull_request | Verify | completed:failure |
 | 35418386194 | `0509105f7836` | push | Verify | completed:success |
 | 35418386189 | `0509105f7836` | push | Formal | completed:success |
@@ -37,5 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35418143359 | `05f1bfa1795c` | pull_request | Verify | completed:success |
 | 35417988439 | `e490f0575745` | push | Verify | completed:success |
 | 35417988437 | `e490f0575745` | push | Formal | completed:success |
-| 35417943760 | `7ca8d2e14113` | pull_request | Verify | completed:success |
-| 35417790866 | `96cfcecf8378` | push | Verify | completed:success |
