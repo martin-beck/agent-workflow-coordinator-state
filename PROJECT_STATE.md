@@ -21,7 +21,7 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #850 | `ar0031-evidence-inventory-unique@7ca8d2e14113` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): ensure unique evidence inventory |
+| #850 | `ar0031-evidence-inventory-unique@7ca8d2e14113` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(formal): ensure unique evidence inventory |
 
 ## Recent workflows
 
