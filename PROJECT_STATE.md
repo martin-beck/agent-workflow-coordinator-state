@@ -21,11 +21,13 @@ Generated from local Git and GitHub. Do not edit.
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #520 | `feat/canonical-terminology@9b041d0df13d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(quality): enforce canonical coordinator terminology |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #849 | `ar0031-evidence-inventory@ef5716387869` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): bind evidence inventory |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35417748822 | `ef5716387869` | pull_request | Verify | in_progress:- |
 | 35417590884 | `937003662431` | push | Formal | completed:success |
 | 35417590839 | `937003662431` | push | Verify | completed:success |
 | 35417521378 | `06cf20f01813` | pull_request | Verify | completed:success |
@@ -37,4 +39,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35417134523 | `6bad635cebaf` | pull_request | Verify | completed:success |
 | 35416977693 | `3fdc8a2a1816` | push | Formal | completed:success |
 | 35416977642 | `3fdc8a2a1816` | push | Verify | completed:success |
-| 35416945440 | `b9b60a2519bc` | pull_request | Verify | completed:success |
