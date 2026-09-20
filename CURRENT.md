@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0034](tasks/AR-0034.md): Close SQLite barrier observation connections | Repair leaked SQLite connections observed during the AR-0012 hostile barrier matrix. | Close every SQLite connection opened by barrier/control-store observations and add regression checks with warnings treated as failures. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
