@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**37 ARs tracked** across 3 active status categories.
+**37 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 5 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -63,7 +63,7 @@ flowchart LR
         AR_0033["AR-0033 - Done"]:::status_done
         AR_0034["AR-0034 - Superseded"]:::status_superseded
         AR_0035["AR-0035 - Done"]:::status_done
-        AR_0036["AR-0036 - Open"]:::status_open
+        AR_0036["AR-0036 - In progress"]:::status_in_progress
         AR_0037["AR-0037 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
@@ -173,7 +173,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (5)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0036](tasks/AR-0036.md): Git backup-only executor parity | codex-root | Provide parity for the bounded backup-only executor on the Git authority backend. | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. |
+
+### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -181,7 +187,6 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. |
-| P0 | [AR-0036](tasks/AR-0036.md): Git backup-only executor parity | Unclaimed | Provide parity for the bounded backup-only executor on the Git authority backend. | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. |
 
 ### Done (31)
 
