@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0034](tasks/AR-0034.md): Close SQLite barrier observation connections | Repair leaked SQLite connections observed during the AR-0012 hostile barrier matrix. | Close every SQLite connection opened by barrier/control-store observations and add regression checks with warnings treated as failures. | codex-root |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -51,3 +45,9 @@ Never edit this file directly.
 | P1 | [AR-0021](tasks/AR-0021.md): Reconcile issue #14 with verified AWQ adoption | Issue #14 reconciled: AR-0001 and PR #20 already delivered the requested artifacts and profiles using newer AWQ v0.32.0; no duplicate or downgrade was needed. | Closed issue #14 after verified supersession; retain AR-0001 as the implementation record. | - |
 | P1 | [AR-0025](tasks/AR-0025.md): Cross-project oracle workflow integration | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. | - |
 | P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. | - |
+
+## Superseded
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0034](tasks/AR-0034.md): Close SQLite barrier observation connections | Repair leaked SQLite connections observed during the AR-0012 hostile barrier matrix. | Close every SQLite connection opened by barrier/control-store observations and add regression checks with warnings treated as failures. | - |
