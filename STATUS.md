@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**35 ARs tracked** across 4 active status categories.
+**35 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 29 |
+| **Done** | Accepted, integrated, and durably verified | 30 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -62,7 +62,7 @@ flowchart LR
         AR_0032["AR-0032 - Done"]:::status_done
         AR_0033["AR-0033 - Done"]:::status_done
         AR_0034["AR-0034 - Superseded"]:::status_superseded
-        AR_0035["AR-0035 - In progress"]:::status_in_progress
+        AR_0035["AR-0035 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -165,12 +165,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0035](tasks/AR-0035.md): Bounded backup-only executor seam | codex-root | First bounded executable upgrade slice: durable, fenced backup only, with no runtime replacement or dispatch. | Implement a backup-only generated operation behind the validated session/barrier seam; leave stage, commit, validate, reopen, rollback, and dispatch fail-closed. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -180,7 +174,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. |
 
-### Done (29)
+### Done (30)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -206,6 +200,7 @@ flowchart LR
 | P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | Unclaimed | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Await independent exact-head review of PR #723 at a85a58035c843f67614f29059c364d506645987f; do not merge until review and hosted evidence are recorded. |
 | P0 | [AR-0032](tasks/AR-0032.md): Multi-revision durable session identity contract | Unclaimed | Additive durable session identity and journal-chain contract required to unblock AR-0031 without weakening fail-closed upgrade behavior. | Implement and formally validate the additive multi-revision durable session and journal-chain contract before enabling any upgrade mutation or dispatch. |
 | P0 | [AR-0033](tasks/AR-0033.md): Integrate session chain with durable contract | Unclaimed | Wire AR-0032 chain validation into the durable session contract without enabling mutation or dispatch. | Integrate the validated multi-revision session chain with the existing durable session contract as a read-only admission seam. |
+| P0 | [AR-0035](tasks/AR-0035.md): Bounded backup-only executor seam | Unclaimed | First bounded executable upgrade slice: durable, fenced backup only, with no runtime replacement or dispatch. | Implement a backup-only generated operation behind the validated session/barrier seam; leave stage, commit, validate, reopen, rollback, and dispatch fail-closed. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
