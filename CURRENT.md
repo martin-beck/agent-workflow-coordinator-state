@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0039](tasks/AR-0039.md): Provision the SQLite barrier baseline | AR-0038 binds provisioned routes, but init and migration do not yet create the compatibility marker, control store, and released barrier baseline required for safe public SQLite writes. | Provision the SQLite authority/control marker and an auditable released baseline during init and Git-to-SQLite migration. | codex-root |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -48,6 +42,7 @@ Never edit this file directly.
 | P0 | [AR-0036](tasks/AR-0036.md): Git backup-only executor parity | Provide parity for the bounded backup-only executor on the Git authority backend. | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. | - |
 | P0 | [AR-0037](tasks/AR-0037.md): Restore branch coverage gate after Git executor merge | Repair the post-merge Verify coverage regression introduced by the Git backup executor and session-chain integration. | Raise exact-head branch coverage back above the 95% gate with behavior-focused tests for new Git executor and session-chain rejection branches. | - |
 | P0 | [AR-0038](tasks/AR-0038.md): Bind public SQLite mutation routes to the durable barrier | The durable SQLite mutation fence is implemented and hostile-tested, but handoffctl production routes still construct an unbound SQLiteBackend and bypass that fence. | Bind every production handoffctl SQLite mutation route to the provisioned common/control/authority fence without changing read-only or legacy Git behavior. | - |
+| P0 | [AR-0039](tasks/AR-0039.md): Provision the SQLite barrier baseline | AR-0038 binds provisioned routes, but init and migration do not yet create the compatibility marker, control store, and released barrier baseline required for safe public SQLite writes. | Provision the SQLite authority/control marker and an auditable released baseline during init and Git-to-SQLite migration. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
