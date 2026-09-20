@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**34 ARs tracked** across 3 active status categories.
+**34 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 4 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -58,7 +58,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
-        AR_0031["AR-0031 - Open"]:::status_open
+        AR_0031["AR-0031 - In progress"]:::status_in_progress
         AR_0032["AR-0032 - Done"]:::status_done
         AR_0033["AR-0033 - Done"]:::status_done
         AR_0034["AR-0034 - Superseded"]:::status_superseded
@@ -161,14 +161,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (4)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-root | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Blocked pending a new journal/session identity model that permits multi-revision provenance; existing contract pins expected identity/revision and all pure chain/envelope/replay seams are covered. Do not add duplicate validators; keep mutation and dispatch disabled. |
+
+### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Exact product main 30ed06f release-readiness audit: 45 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy is explicit and hostile-tested; workflow validates candidate identity, fresh-clone contract/runbook determinism, source binding, artifact ownership/digests, and emits non-publishing tag commands. No new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Blocked pending a new journal/session identity model that permits multi-revision provenance; existing contract pins expected identity/revision and all pure chain/envelope/replay seams are covered. Do not add duplicate validators; keep mutation and dispatch disabled. |
 
 ### Done (29)
 
