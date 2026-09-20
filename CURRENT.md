@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0039](tasks/AR-0039.md): Provision the SQLite barrier baseline | AR-0038 binds provisioned routes, but init and migration do not yet create the compatibility marker, control store, and released barrier baseline required for safe public SQLite writes. | Provision the SQLite authority/control marker and an auditable released baseline during init and Git-to-SQLite migration. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |

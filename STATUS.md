@@ -5,11 +5,11 @@
 
 ## Portfolio overview
 
-**38 ARs tracked** across 3 active status categories.
+**39 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
@@ -66,6 +66,7 @@ flowchart LR
         AR_0036["AR-0036 - Done"]:::status_done
         AR_0037["AR-0037 - Done"]:::status_done
         AR_0038["AR-0038 - Done"]:::status_done
+        AR_0039["AR-0039 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -121,6 +122,7 @@ flowchart LR
     AR_0033 --> AR_0037
     AR_0035 --> AR_0036
     AR_0035 --> AR_0038
+    AR_0038 --> AR_0039
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -172,9 +174,16 @@ flowchart LR
 | [AR-0035](tasks/AR-0035.md) | [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) | [AR-0036](tasks/AR-0036.md), [AR-0038](tasks/AR-0038.md) |
 | [AR-0036](tasks/AR-0036.md) | [AR-0035](tasks/AR-0035.md) | None |
 | [AR-0037](tasks/AR-0037.md) | [AR-0007](tasks/AR-0007.md), [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) | None |
-| [AR-0038](tasks/AR-0038.md) | [AR-0035](tasks/AR-0035.md) | None |
+| [AR-0038](tasks/AR-0038.md) | [AR-0035](tasks/AR-0035.md) | [AR-0039](tasks/AR-0039.md) |
+| [AR-0039](tasks/AR-0039.md) | [AR-0038](tasks/AR-0038.md) | None |
 
 ## Complete AR inventory
+
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0039](tasks/AR-0039.md): Provision the SQLite barrier baseline | codex-root | AR-0038 binds provisioned routes, but init and migration do not yet create the compatibility marker, control store, and released barrier baseline required for safe public SQLite writes. | Provision the SQLite authority/control marker and an auditable released baseline during init and Git-to-SQLite migration. |
 
 ### Open (4)
 
