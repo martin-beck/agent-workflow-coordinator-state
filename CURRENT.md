@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0041](tasks/AR-0041.md): Bind authenticated runtime admission to a fixed launcher entrypoint | Runtime selector resolution and retained identity validation exist, but no consumer binds the admitted runtime to a stable fixed entrypoint; subsequent invocations can still use the adjacent runtime. | Add a fixed-entrypoint dispatch-admission seam that consumes the authenticated retained runtime without allowing caller-selected paths. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
