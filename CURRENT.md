@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0033](tasks/AR-0033.md): Integrate session chain with durable contract | Wire AR-0032 chain validation into the durable session contract without enabling mutation or dispatch. | Integrate the validated multi-revision session chain with the existing durable session contract as a read-only admission seam. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -11,7 +17,6 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Keep AR-0012 open for a genuinely uncovered barrier/fencing failure boundary after future merges; preserve fail-closed upgrade and rollback mutation. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Blocked pending a new journal/session identity model that permits multi-revision provenance; existing contract pins expected identity/revision and all pure chain/envelope/replay seams are covered. Do not add duplicate validators; keep mutation and dispatch disabled. | - |
-| P0 | [AR-0033](tasks/AR-0033.md): Integrate session chain with durable contract | Wire AR-0032 chain validation into the durable session contract without enabling mutation or dispatch. | Integrate the validated multi-revision session chain with the existing durable session contract as a read-only admission seam. | - |
 
 ## Done
 
