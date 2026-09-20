@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0038](tasks/AR-0038.md): Bind public SQLite mutation routes to the durable barrier | The durable SQLite mutation fence is implemented and hostile-tested, but handoffctl production routes still construct an unbound SQLiteBackend and bypass that fence. | Bind every production handoffctl SQLite mutation route to the provisioned common/control/authority fence without changing read-only or legacy Git behavior. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |

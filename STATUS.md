@@ -5,11 +5,11 @@
 
 ## Portfolio overview
 
-**37 ARs tracked** across 3 active status categories.
+**38 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
@@ -65,6 +65,7 @@ flowchart LR
         AR_0035["AR-0035 - Done"]:::status_done
         AR_0036["AR-0036 - Done"]:::status_done
         AR_0037["AR-0037 - Done"]:::status_done
+        AR_0038["AR-0038 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -119,6 +120,7 @@ flowchart LR
     AR_0033 --> AR_0035
     AR_0033 --> AR_0037
     AR_0035 --> AR_0036
+    AR_0035 --> AR_0038
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -167,11 +169,18 @@ flowchart LR
 | [AR-0032](tasks/AR-0032.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0033](tasks/AR-0033.md), [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0033](tasks/AR-0033.md) | [AR-0032](tasks/AR-0032.md) | [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0034](tasks/AR-0034.md) | [AR-0007](tasks/AR-0007.md) | None |
-| [AR-0035](tasks/AR-0035.md) | [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) | [AR-0036](tasks/AR-0036.md) |
+| [AR-0035](tasks/AR-0035.md) | [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) | [AR-0036](tasks/AR-0036.md), [AR-0038](tasks/AR-0038.md) |
 | [AR-0036](tasks/AR-0036.md) | [AR-0035](tasks/AR-0035.md) | None |
 | [AR-0037](tasks/AR-0037.md) | [AR-0007](tasks/AR-0007.md), [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) | None |
+| [AR-0038](tasks/AR-0038.md) | [AR-0035](tasks/AR-0035.md) | None |
 
 ## Complete AR inventory
+
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0038](tasks/AR-0038.md): Bind public SQLite mutation routes to the durable barrier | codex-root | The durable SQLite mutation fence is implemented and hostile-tested, but handoffctl production routes still construct an unbound SQLiteBackend and bypass that fence. | Bind every production handoffctl SQLite mutation route to the provisioned common/control/authority fence without changing read-only or legacy Git behavior. |
 
 ### Open (4)
 
