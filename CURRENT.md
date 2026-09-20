@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0037](tasks/AR-0037.md): Restore branch coverage gate after Git executor merge | Repair the post-merge Verify coverage regression introduced by the Git backup executor and session-chain integration. | Raise exact-head branch coverage back above the 95% gate with behavior-focused tests for new Git executor and session-chain rejection branches. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
