@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0036](tasks/AR-0036.md): Git backup-only executor parity | Provide parity for the bounded backup-only executor on the Git authority backend. | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
