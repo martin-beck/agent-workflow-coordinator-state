@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0036](tasks/AR-0036.md): Git backup-only executor parity | Provide parity for the bounded backup-only executor on the Git authority backend. | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. | codex-root |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -45,6 +39,7 @@ Never edit this file directly.
 | P0 | [AR-0032](tasks/AR-0032.md): Multi-revision durable session identity contract | Additive durable session identity and journal-chain contract required to unblock AR-0031 without weakening fail-closed upgrade behavior. | Implement and formally validate the additive multi-revision durable session and journal-chain contract before enabling any upgrade mutation or dispatch. | - |
 | P0 | [AR-0033](tasks/AR-0033.md): Integrate session chain with durable contract | Wire AR-0032 chain validation into the durable session contract without enabling mutation or dispatch. | Integrate the validated multi-revision session chain with the existing durable session contract as a read-only admission seam. | - |
 | P0 | [AR-0035](tasks/AR-0035.md): Bounded backup-only executor seam | First bounded executable upgrade slice: durable, fenced backup only, with no runtime replacement or dispatch. | Implement a backup-only generated operation behind the validated session/barrier seam; leave stage, commit, validate, reopen, rollback, and dispatch fail-closed. | - |
+| P0 | [AR-0036](tasks/AR-0036.md): Git backup-only executor parity | Provide parity for the bounded backup-only executor on the Git authority backend. | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. | - |
 | P0 | [AR-0037](tasks/AR-0037.md): Restore branch coverage gate after Git executor merge | Repair the post-merge Verify coverage regression introduced by the Git backup executor and session-chain integration. | Raise exact-head branch coverage back above the 95% gate with behavior-focused tests for new Git executor and session-chain rejection branches. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
