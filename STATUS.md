@@ -189,7 +189,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0041](tasks/AR-0041.md): Bind authenticated runtime admission to a fixed launcher entrypoint | codex-root | Runtime selector resolution and retained identity validation exist, but no consumer binds the admitted runtime to a stable fixed entrypoint; subsequent invocations can still use the adjacent runtime. | Add a fixed-entrypoint dispatch-admission seam that consumes the authenticated retained runtime without allowing caller-selected paths. |
+| P0 | [AR-0041](tasks/AR-0041.md): Bind authenticated runtime admission to a fixed launcher entrypoint | codex-root | Runtime selector resolution and retained identity validation exist, but no consumer binds the admitted runtime to a stable fixed entrypoint; subsequent invocations can still use the adjacent runtime. | Monitor PR #878 hosted checks and independent review; repair any findings, merge only at exact reviewed head, then run post-merge Verify and reconcile state. |
 
 ### Open (4)
 
