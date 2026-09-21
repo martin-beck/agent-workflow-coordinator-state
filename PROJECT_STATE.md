@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #881 | `ar0044-authority-neutral-preflight-backup@bfc58d3f66fe` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(upgrade): add authority-neutral backup seam |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35547256267 | `bfc58d3f66fe` | pull_request | Verify | in_progress:- |
 | 35546908843 | `105251a9f9d4` | push | Verify | completed:success |
 | 35546908820 | `105251a9f9d4` | push | Formal | completed:success |
 | 35546715605 | `52ac721d57b0` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35546040652 | `f602e6bb615d` | pull_request | Verify | completed:success |
 | 35545570331 | `83187445d81f` | push | Formal | completed:success |
 | 35545570317 | `83187445d81f` | push | Verify | completed:success |
-| 35545477977 | `9de485ec7967` | pull_request | Verify | completed:success |
