@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. | codex-root |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -11,7 +17,6 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Bind the exact post-AR-0039 implementation route inventory and crash/recovery evidence to the v10 refinement contract; do not claim full Python refinement or enable upgrade apply/rollback. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. | - |
-| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. | - |
 
 ## Done
 
