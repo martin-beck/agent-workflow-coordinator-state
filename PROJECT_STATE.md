@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #882 | `ar0045-backup-seam-coverage-repair@f2c89466a598` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(upgrade): cover backup seam failure branches |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35547467477 | `f2c89466a598` | pull_request | Verify | in_progress:- |
 | 35547293075 | `d7d3a2aea235` | push | Verify | completed:failure |
 | 35547293056 | `d7d3a2aea235` | push | Formal | completed:success |
 | 35547256267 | `bfc58d3f66fe` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35546402637 | `7b415a613e16` | pull_request | Verify | completed:success |
 | 35546122213 | `30c02d9d4fd8` | push | Verify | completed:success |
 | 35546122177 | `30c02d9d4fd8` | push | Formal | completed:success |
-| 35546040652 | `f602e6bb615d` | pull_request | Verify | completed:success |
