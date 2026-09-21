@@ -192,7 +192,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0042](tasks/AR-0042.md): Bind fixed runtime dispatch to the production consumer | codex-root | AR-0041 provides a safe descriptor-backed command builder, but the coordinator upgrade/runtime call graph does not yet consume it. Bind one fixed consumer with subprocess descriptor inheritance, revalidation, and failure classification without enabling mutation. | Add one production consumer that obtains authenticated admission and executes only the descriptor-backed fixed launcher; keep upgrade apply and rollback rejection-only. |
+| P0 | [AR-0042](tasks/AR-0042.md): Bind fixed runtime dispatch to the production consumer | codex-root | AR-0041 provides a safe descriptor-backed command builder, but the coordinator upgrade/runtime call graph does not yet consume it. Bind one fixed consumer with subprocess descriptor inheritance, revalidation, and failure classification without enabling mutation. | Monitor PR #879 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
 
 ### Open (4)
 
