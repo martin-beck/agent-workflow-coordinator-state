@@ -135,7 +135,7 @@ flowchart LR
     AR_0041 --> AR_0042
     AR_0042 --> AR_0044
     AR_0043 --> AR_0044
-    AR_0044 --> AR_0045
+    AR_0043 --> AR_0045
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -192,9 +192,9 @@ flowchart LR
 | [AR-0040](tasks/AR-0040.md) | [AR-0039](tasks/AR-0039.md) | [AR-0041](tasks/AR-0041.md), [AR-0043](tasks/AR-0043.md) |
 | [AR-0041](tasks/AR-0041.md) | [AR-0040](tasks/AR-0040.md) | [AR-0042](tasks/AR-0042.md) |
 | [AR-0042](tasks/AR-0042.md) | [AR-0041](tasks/AR-0041.md) | [AR-0044](tasks/AR-0044.md) |
-| [AR-0043](tasks/AR-0043.md) | [AR-0040](tasks/AR-0040.md) | [AR-0044](tasks/AR-0044.md) |
-| [AR-0044](tasks/AR-0044.md) | [AR-0042](tasks/AR-0042.md), [AR-0043](tasks/AR-0043.md) | [AR-0045](tasks/AR-0045.md) |
-| [AR-0045](tasks/AR-0045.md) | [AR-0044](tasks/AR-0044.md) | None |
+| [AR-0043](tasks/AR-0043.md) | [AR-0040](tasks/AR-0040.md) | [AR-0044](tasks/AR-0044.md), [AR-0045](tasks/AR-0045.md) |
+| [AR-0044](tasks/AR-0044.md) | [AR-0042](tasks/AR-0042.md), [AR-0043](tasks/AR-0043.md) | None |
+| [AR-0045](tasks/AR-0045.md) | [AR-0043](tasks/AR-0043.md) | None |
 
 ## Complete AR inventory
 
