@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**41 ARs tracked** across 4 active status categories.
+**42 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 36 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -69,6 +69,7 @@ flowchart LR
         AR_0039["AR-0039 - Done"]:::status_done
         AR_0040["AR-0040 - Done"]:::status_done
         AR_0041["AR-0041 - Done"]:::status_done
+        AR_0042["AR-0042 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -104,6 +105,7 @@ flowchart LR
     AR_0008 --> AR_0031
     AR_0008 --> AR_0032
     AR_0011 --> AR_0017
+    AR_0013 --> AR_0042
     AR_0015 --> AR_0016
     AR_0017 --> AR_0018
     AR_0017 --> AR_0019
@@ -127,6 +129,7 @@ flowchart LR
     AR_0038 --> AR_0039
     AR_0039 --> AR_0040
     AR_0040 --> AR_0041
+    AR_0041 --> AR_0042
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -153,7 +156,7 @@ flowchart LR
 | [AR-0010](tasks/AR-0010.md) | [AR-0003](tasks/AR-0003.md), [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0011](tasks/AR-0011.md) | None | [AR-0017](tasks/AR-0017.md) |
 | [AR-0012](tasks/AR-0012.md) | [AR-0007](tasks/AR-0007.md) | None |
-| [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
+| [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0042](tasks/AR-0042.md) |
 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) | [AR-0002](tasks/AR-0002.md) | None |
 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | [AR-0002](tasks/AR-0002.md), [AR-0003](tasks/AR-0003.md) | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) |
 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) | [AR-0003](tasks/AR-0003.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | None |
@@ -181,7 +184,8 @@ flowchart LR
 | [AR-0038](tasks/AR-0038.md) | [AR-0035](tasks/AR-0035.md) | [AR-0039](tasks/AR-0039.md) |
 | [AR-0039](tasks/AR-0039.md) | [AR-0038](tasks/AR-0038.md) | [AR-0040](tasks/AR-0040.md) |
 | [AR-0040](tasks/AR-0040.md) | [AR-0039](tasks/AR-0039.md) | [AR-0041](tasks/AR-0041.md) |
-| [AR-0041](tasks/AR-0041.md) | [AR-0040](tasks/AR-0040.md) | None |
+| [AR-0041](tasks/AR-0041.md) | [AR-0040](tasks/AR-0040.md) | [AR-0042](tasks/AR-0042.md) |
+| [AR-0042](tasks/AR-0042.md) | [AR-0013](tasks/AR-0013.md), [AR-0041](tasks/AR-0041.md) | None |
 
 ## Complete AR inventory
 
@@ -198,6 +202,12 @@ flowchart LR
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Exact product main 30ed06f release-readiness audit: 45 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy is explicit and hostile-tested; workflow validates candidate identity, fresh-clone contract/runbook determinism, source binding, artifact ownership/digests, and emits non-publishing tag commands. No new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. |
+
+### Planned (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0042](tasks/AR-0042.md): Bind fixed runtime dispatch to the production consumer | Unclaimed | AR-0041 provides a safe descriptor-backed command builder, but the coordinator upgrade/runtime call graph does not yet consume it. Bind one fixed consumer with subprocess descriptor inheritance, revalidation, and failure classification without enabling mutation. | Add one production consumer that obtains authenticated admission and executes only the descriptor-backed fixed launcher; keep upgrade apply and rollback rejection-only. |
 
 ### Done (36)
 
