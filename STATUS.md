@@ -205,7 +205,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-root | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-root | Formal contract now maps the bounded UpgradeEngine backup binding to BindForward/ForwardFailure while mutation remains fail-closed. | Select and implement the next smallest authority-neutral pre-commit evidence seam; keep stage, selector publication, commit, apply, and rollback disabled until their independent contracts and formal mappings are complete. |
 
 ### Open (3)
 
