@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | SQLite mutation routes are inventoried, contract-bound, and independently reject held, releasing, ambiguous, forged/stale released barrier states, control-store replacement, authority replacement, active authority WAL/SHM replacement, and replaced released session identities in fresh processes; exact evidence digests are current. Timeout/re-entry/process-death reopen proof and production barrier completion remain. | Add independent-process tests for stale-owner races, timeout/re-entry, and reopen after process death; preserve write-closed recovery. | codex-root |
+| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | SQLite mutation routes are inventoried, contract-bound, and independently reject held, releasing, ambiguous, forged/stale released barrier states, control-store replacement, authority replacement, active authority WAL/SHM replacement, and replaced released session identities in fresh processes; long-lived fences bind the authenticated session identity and exact evidence digests are current. Timeout/re-entry/process-death reopen proof and production barrier completion remain. | Add independent-process tests for stale-owner races, timeout/re-entry, and reopen after process death; preserve write-closed recovery. | codex-root |
 
 ## Open
 
