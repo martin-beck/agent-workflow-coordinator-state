@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**45 ARs tracked** across 4 active status categories.
+**45 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 5 |
+| **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 1 |
+| **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 38 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -72,7 +72,7 @@ flowchart LR
         AR_0042["AR-0042 - Done"]:::status_done
         AR_0043["AR-0043 - Done"]:::status_done
         AR_0044["AR-0044 - Open"]:::status_open
-        AR_0045["AR-0045 - Planned"]:::status_planned
+        AR_0045["AR-0045 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -198,7 +198,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (5)
+### Open (6)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -207,11 +207,6 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. |
 | P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | Unclaimed | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
-
-### Planned (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
 | P0 | [AR-0045](tasks/AR-0045.md): Repair backup executor coverage gate regression | Unclaimed | AR-0044 post-merge Verify found no functional test failures, but its new authority_neutral_backup.py branches were under-tested and reduced total coverage below the mandatory 95&#37; gate. Add complete hostile branch coverage without changing behavior. | Publish a corrective coverage slice for the merged backup executor; cover all fail-closed branches and restore the &gt;=95&#37; hosted coverage gate. |
 
 ### Done (38)
