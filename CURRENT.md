@@ -12,6 +12,12 @@ Never edit this file directly.
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0049](tasks/AR-0049.md): Selector publication admission boundary | Validation is now a read-only production consumer. The next mutation gap is selector publication admission; define authenticated compare-and-swap evidence without publishing or replacing a runtime until independent barrier and formal contracts pass. | Specify and implement only the authority-neutral selector publication admission boundary; keep runtime replacement, commit, apply, and rollback fail-closed. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
