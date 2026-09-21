@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0058](tasks/AR-0058.md): Authenticated selector and runtime execution boundary | Complete the authenticated selector and versioned runtime boundary without replacing the stable bootstrap or dispatching unverified code. | Complete descriptor-bound authenticated selector/runtime execution and atomic publication recovery while keeping dispatch fail-closed. | codex-root |
+| P0 | [AR-0058](tasks/AR-0058.md): Authenticated selector and runtime execution boundary | Completed the authenticated selector and versioned runtime boundary on exact main: selector syntax and release identity, owner-only descriptor-bound manifest reads, source/tag/trust/vendor identity, no-follow path and ancestor checks, retained runtime descriptors, fixed-entrypoint dispatch admission, atomic selector publication, directory fsync ambiguity, subprocess death and recovery, and replacement rejection are covered by executable tests and formal evidence. Unverified code cannot dispatch; upgrade mutation remains disabled. | Claim dependency-ready AR-0059 and implement bounded executable mutation slices beginning with backup and durable outcome recording. | codex-root |
 
 ## Open
 
