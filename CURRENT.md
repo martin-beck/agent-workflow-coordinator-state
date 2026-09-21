@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0054](tasks/AR-0054.md): Formal refinement and mutation enablement gate | All bounded forward/recovery seams and the integrated rehearsal are merged. Mutation remains disabled because the formal model-to-implementation refinement and enablement decision are still unproven. | Bind the integrated rehearsal and all phase evidence to a trace-preserving formal refinement contract and produce an explicit fail-closed mutation enablement decision. | codex-root |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -63,6 +57,7 @@ Never edit this file directly.
 | P0 | [AR-0051](tasks/AR-0051.md): Commit authorization evidence boundary | Selector and runtime admission evidence are now independently bounded and read-only. The next gap is a typed commit authorization record that proves all prerequisites without dispatching an authority mutation. | Specify and implement only authority-neutral commit authorization evidence; keep commit, apply, selector publication, runtime replacement, and rollback fail-closed. | - |
 | P0 | [AR-0052](tasks/AR-0052.md): Recovery authorization evidence boundary | All forward prerequisite evidence is now bounded and read-only. The next gap is recovery authorization evidence that proves a known-good restore path without authorizing rollback mutation. | Specify and implement only authority-neutral recovery authorization evidence; keep rollback, apply, commit, selector publication, and runtime replacement fail-closed. | - |
 | P0 | [AR-0053](tasks/AR-0053.md): Integrated fail-closed transition rehearsal | Forward and recovery admission seams are individually bounded and merged. The remaining correctness gap is integrated ordering, process-death, ambiguity, and functional-availability evidence across the complete transition without enabling mutation. | Reconcile all bounded admission evidence into one fail-closed transition rehearsal and formal correspondence; do not enable mutation until the integrated failure matrix is complete. | - |
+| P0 | [AR-0054](tasks/AR-0054.md): Formal refinement and mutation enablement gate | All bounded forward/recovery seams and the integrated rehearsal are merged. Mutation remains disabled because the formal model-to-implementation refinement and enablement decision are still unproven. | Bind the integrated rehearsal and all phase evidence to a trace-preserving formal refinement contract and produce an explicit fail-closed mutation enablement decision. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |

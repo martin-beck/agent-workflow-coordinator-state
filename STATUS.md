@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**54 ARs tracked** across 4 active status categories.
+**54 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 48 |
+| **Done** | Accepted, integrated, and durably verified | 49 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -81,7 +81,7 @@ flowchart LR
         AR_0051["AR-0051 - Done"]:::status_done
         AR_0052["AR-0052 - Done"]:::status_done
         AR_0053["AR-0053 - Done"]:::status_done
-        AR_0054["AR-0054 - In progress"]:::status_in_progress
+        AR_0054["AR-0054 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -242,12 +242,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0054](tasks/AR-0054.md): Formal refinement and mutation enablement gate | codex-root | All bounded forward/recovery seams and the integrated rehearsal are merged. Mutation remains disabled because the formal model-to-implementation refinement and enablement decision are still unproven. | Bind the integrated rehearsal and all phase evidence to a trace-preserving formal refinement contract and produce an explicit fail-closed mutation enablement decision. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -257,7 +251,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 
-### Done (48)
+### Done (49)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -302,6 +296,7 @@ flowchart LR
 | P0 | [AR-0051](tasks/AR-0051.md): Commit authorization evidence boundary | Unclaimed | Selector and runtime admission evidence are now independently bounded and read-only. The next gap is a typed commit authorization record that proves all prerequisites without dispatching an authority mutation. | Specify and implement only authority-neutral commit authorization evidence; keep commit, apply, selector publication, runtime replacement, and rollback fail-closed. |
 | P0 | [AR-0052](tasks/AR-0052.md): Recovery authorization evidence boundary | Unclaimed | All forward prerequisite evidence is now bounded and read-only. The next gap is recovery authorization evidence that proves a known-good restore path without authorizing rollback mutation. | Specify and implement only authority-neutral recovery authorization evidence; keep rollback, apply, commit, selector publication, and runtime replacement fail-closed. |
 | P0 | [AR-0053](tasks/AR-0053.md): Integrated fail-closed transition rehearsal | Unclaimed | Forward and recovery admission seams are individually bounded and merged. The remaining correctness gap is integrated ordering, process-death, ambiguity, and functional-availability evidence across the complete transition without enabling mutation. | Reconcile all bounded admission evidence into one fail-closed transition rehearsal and formal correspondence; do not enable mutation until the integrated failure matrix is complete. |
+| P0 | [AR-0054](tasks/AR-0054.md): Formal refinement and mutation enablement gate | Unclaimed | All bounded forward/recovery seams and the integrated rehearsal are merged. Mutation remains disabled because the formal model-to-implementation refinement and enablement decision are still unproven. | Bind the integrated rehearsal and all phase evidence to a trace-preserving formal refinement contract and produce an explicit fail-closed mutation enablement decision. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
