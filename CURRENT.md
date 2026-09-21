@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Promote selector publication and runtime replacement only after descriptor-bound identity, durable outcomes, and failure recovery are proven. | Specify and independently verify the selector/runtime publication mutation gate; keep authority commit and rollback disabled. | codex-root |
+| P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. | codex-root |
 
 ## Open
 
