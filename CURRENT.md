@@ -18,6 +18,16 @@ Never edit this file directly.
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0056](tasks/AR-0056.md): Complete formal refinement proof gate | Complete the trace-preserving formal refinement and proof matrix needed before any live mutation can be enabled. | Bind the v10 model to exact merged implementation seams, enumerate unproven transitions, and keep the mutation gate deny until the proof matrix is complete. | - |
+| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | Complete durable upgrade barrier, lock ordering, fencing, and process-death recovery without enabling upgrade mutation. | Implement the trusted authority-neutral barrier/fencing factory and prove every SQLite mutation route remains rejection-only under uncertainty. | - |
+| P0 | [AR-0058](tasks/AR-0058.md): Authenticated selector and runtime execution boundary | Complete the authenticated selector and versioned runtime boundary without replacing the stable bootstrap or dispatching unverified code. | Complete descriptor-bound authenticated selector/runtime execution and atomic publication recovery while keeping dispatch fail-closed. | - |
+| P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Advance from read-only mutation evidence to independently proven bounded mutation phases with old/new runtime continuity on every failure path. | Enable and verify only the next bounded mutation phase, starting with backup/outcome recording, under the proven barrier and descriptor contract. | - |
+| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Complete first release integration and failure-injected upgrade/rollback campaigns with functional coordinator continuity. | Run the first fresh-clone upgrade campaign only after every preceding mutation gate is proven and independently reviewed. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
