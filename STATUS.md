@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**47 ARs tracked** across 4 active status categories.
+**47 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 41 |
+| **Done** | Accepted, integrated, and durably verified | 42 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -74,7 +74,7 @@ flowchart LR
         AR_0044["AR-0044 - Done"]:::status_done
         AR_0045["AR-0045 - Done"]:::status_done
         AR_0046["AR-0046 - Done"]:::status_done
-        AR_0047["AR-0047 - In progress"]:::status_in_progress
+        AR_0047["AR-0047 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -205,12 +205,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0047](tasks/AR-0047.md): Authority-neutral staged artifact verification | codex-root | The bounded backup phase is now executable, but UpgradeEngine still has no authority-neutral stage capability. Add only artifact identity/integrity verification; keep selector publication, replacement, commit, apply, and rollback disabled. | Define and implement a read-only staged-artifact verification capability for UpgradeEngine without selector publication or runtime replacement. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -220,7 +214,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Formal contract now maps the bounded UpgradeEngine backup binding to BindForward/ForwardFailure while mutation remains fail-closed. | Select and implement the next smallest authority-neutral pre-commit evidence seam; keep stage, selector publication, commit, apply, and rollback disabled until their independent contracts and formal mappings are complete. |
 
-### Done (41)
+### Done (42)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -258,6 +252,7 @@ flowchart LR
 | P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | Unclaimed | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
 | P0 | [AR-0045](tasks/AR-0045.md): Repair backup executor coverage gate regression | Unclaimed | AR-0044 post-merge Verify found no functional test failures, but its new authority_neutral_backup.py branches were under-tested and reduced total coverage below the mandatory 95&#37; gate. Add complete hostile branch coverage without changing behavior. | Monitor PR #882 checks/review; merge only after hosted coverage is &gt;=95&#37;, then verify and reconcile. |
 | P0 | [AR-0046](tasks/AR-0046.md): Wire verified backup into the upgrade engine | Unclaimed | AR-0044/0045 provide and verify a common backup seam, but it is currently an uncalled helper. Bind it to UpgradeEngine&#x27;s backup phase through immutable session context while preserving the rejection-only mutation gate. | Wire the verified backup-only executor into UpgradeEngine&#x27;s bounded backup phase without enabling commit, selector publication, apply, or rollback. |
+| P0 | [AR-0047](tasks/AR-0047.md): Authority-neutral staged artifact verification | Unclaimed | The bounded backup phase is now executable, but UpgradeEngine still has no authority-neutral stage capability. Add only artifact identity/integrity verification; keep selector publication, replacement, commit, apply, and rollback disabled. | Define and implement a read-only staged-artifact verification capability for UpgradeEngine without selector publication or runtime replacement. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
