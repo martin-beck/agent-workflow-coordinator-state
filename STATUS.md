@@ -105,7 +105,6 @@ flowchart LR
     AR_0008 --> AR_0031
     AR_0008 --> AR_0032
     AR_0011 --> AR_0017
-    AR_0013 --> AR_0042
     AR_0015 --> AR_0016
     AR_0017 --> AR_0018
     AR_0017 --> AR_0019
@@ -156,7 +155,7 @@ flowchart LR
 | [AR-0010](tasks/AR-0010.md) | [AR-0003](tasks/AR-0003.md), [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0011](tasks/AR-0011.md) | None | [AR-0017](tasks/AR-0017.md) |
 | [AR-0012](tasks/AR-0012.md) | [AR-0007](tasks/AR-0007.md) | None |
-| [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0042](tasks/AR-0042.md) |
+| [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) | [AR-0002](tasks/AR-0002.md) | None |
 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | [AR-0002](tasks/AR-0002.md), [AR-0003](tasks/AR-0003.md) | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) |
 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) | [AR-0003](tasks/AR-0003.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | None |
@@ -185,7 +184,7 @@ flowchart LR
 | [AR-0039](tasks/AR-0039.md) | [AR-0038](tasks/AR-0038.md) | [AR-0040](tasks/AR-0040.md) |
 | [AR-0040](tasks/AR-0040.md) | [AR-0039](tasks/AR-0039.md) | [AR-0041](tasks/AR-0041.md) |
 | [AR-0041](tasks/AR-0041.md) | [AR-0040](tasks/AR-0040.md) | [AR-0042](tasks/AR-0042.md) |
-| [AR-0042](tasks/AR-0042.md) | [AR-0013](tasks/AR-0013.md), [AR-0041](tasks/AR-0041.md) | None |
+| [AR-0042](tasks/AR-0042.md) | [AR-0041](tasks/AR-0041.md) | None |
 
 ## Complete AR inventory
 
