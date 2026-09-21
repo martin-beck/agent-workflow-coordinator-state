@@ -12,6 +12,12 @@ Never edit this file directly.
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Implement a durable authority-neutral preflight and verified-backup phase that cannot commit or publish a selector; add failure/cleanup tests. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
