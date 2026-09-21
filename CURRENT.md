@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0049](tasks/AR-0049.md): Selector publication admission boundary | Validation is now a read-only production consumer. The next mutation gap is selector publication admission; define authenticated compare-and-swap evidence without publishing or replacing a runtime until independent barrier and formal contracts pass. | Specify and implement only the authority-neutral selector publication admission boundary; keep runtime replacement, commit, apply, and rollback fail-closed. | codex-root |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -58,6 +52,7 @@ Never edit this file directly.
 | P0 | [AR-0046](tasks/AR-0046.md): Wire verified backup into the upgrade engine | AR-0044/0045 provide and verify a common backup seam, but it is currently an uncalled helper. Bind it to UpgradeEngine's backup phase through immutable session context while preserving the rejection-only mutation gate. | Wire the verified backup-only executor into UpgradeEngine's bounded backup phase without enabling commit, selector publication, apply, or rollback. | - |
 | P0 | [AR-0047](tasks/AR-0047.md): Authority-neutral staged artifact verification | The bounded backup phase is now executable, but UpgradeEngine still has no authority-neutral stage capability. Add only artifact identity/integrity verification; keep selector publication, replacement, commit, apply, and rollback disabled. | Define and implement a read-only staged-artifact verification capability for UpgradeEngine without selector publication or runtime replacement. | - |
 | P0 | [AR-0048](tasks/AR-0048.md): Selector/runtime readiness validation | Stage verification is merged, but UpgradeEngine validate still has no production consumer that revalidates the retained authenticated selector/runtime admission. Add only read-only readiness evidence; keep selector publication, replacement, commit, apply, and rollback disabled. | Bind retained selector/runtime admission revalidation to the read-only validate phase without selector publication or replacement. | - |
+| P0 | [AR-0049](tasks/AR-0049.md): Selector publication admission boundary | Validation is now a read-only production consumer. The next mutation gap is selector publication admission; define authenticated compare-and-swap evidence without publishing or replacing a runtime until independent barrier and formal contracts pass. | Specify and implement only the authority-neutral selector publication admission boundary; keep runtime replacement, commit, apply, and rollback fail-closed. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
