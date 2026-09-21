@@ -267,7 +267,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | codex-root | Advance from read-only mutation evidence to independently proven bounded mutation phases with old/new runtime continuity on every failure path. | Enable and verify only the next bounded mutation phase, starting with backup/outcome recording, under the proven barrier and descriptor contract. |
+| P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | codex-root | Completed the first bounded executable mutation slice: Git and SQLite backup paths enforce trusted session/authority identity, ordered barrier admission, destination containment, round-trip verification, durable outcome journaling, fsync/close uncertainty handling, process-death recovery, and retry/reopen evidence. Active coordinator state remains functional and unchanged by backup. Selector publication, runtime replacement, commit, apply, and rollback remain explicitly rejection-only for later independently reviewed gates. | Promote only the next separately reviewed selector/publication or runtime-replacement gate after exact formal correspondence; keep all unsupported mutation disabled. |
 
 ### Open (4)
 
