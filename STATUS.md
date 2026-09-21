@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 4 |
+| **Open** | Dependency-ready and available to claim | 5 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 2 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 53 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -86,7 +86,7 @@ flowchart LR
         AR_0056["AR-0056 - Done"]:::status_done
         AR_0057["AR-0057 - Done"]:::status_done
         AR_0058["AR-0058 - Done"]:::status_done
-        AR_0059["AR-0059 - Planned"]:::status_planned
+        AR_0059["AR-0059 - Open"]:::status_open
         AR_0060["AR-0060 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
@@ -263,7 +263,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (4)
+### Open (5)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -271,12 +271,12 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Bind the exact post-AR-0039 implementation route inventory and crash/recovery evidence to the v10 refinement contract; do not claim full Python refinement or enable upgrade apply/rollback. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
+| P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Unclaimed | Advance from read-only mutation evidence to independently proven bounded mutation phases with old/new runtime continuity on every failure path. | Enable and verify only the next bounded mutation phase, starting with backup/outcome recording, under the proven barrier and descriptor contract. |
 
-### Planned (2)
+### Planned (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Unclaimed | Advance from read-only mutation evidence to independently proven bounded mutation phases with old/new runtime continuity on every failure path. | Enable and verify only the next bounded mutation phase, starting with backup/outcome recording, under the proven barrier and descriptor contract. |
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | Complete first release integration and failure-injected upgrade/rollback campaigns with functional coordinator continuity. | Run the first fresh-clone upgrade campaign only after every preceding mutation gate is proven and independently reviewed. |
 
 ### Done (53)
