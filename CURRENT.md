@@ -17,6 +17,12 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Bind the exact post-AR-0039 implementation route inventory and crash/recovery evidence to the v10 refinement contract; do not claim full Python refinement or enable upgrade apply/rollback. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0047](tasks/AR-0047.md): Authority-neutral staged artifact verification | The bounded backup phase is now executable, but UpgradeEngine still has no authority-neutral stage capability. Add only artifact identity/integrity verification; keep selector publication, replacement, commit, apply, and rollback disabled. | Define and implement a read-only staged-artifact verification capability for UpgradeEngine without selector publication or runtime replacement. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
