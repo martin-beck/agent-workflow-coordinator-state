@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**63 ARs tracked** across 5 active status categories.
+**64 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 5 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 1 |
+| **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 55 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -91,6 +91,7 @@ flowchart LR
         AR_0061["AR-0061 - Done"]:::status_done
         AR_0062["AR-0062 - In progress"]:::status_in_progress
         AR_0063["AR-0063 - Planned"]:::status_planned
+        AR_0064["AR-0064 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -194,7 +195,9 @@ flowchart LR
     AR_0059 --> AR_0061
     AR_0060 --> AR_0063
     AR_0061 --> AR_0062
+    AR_0061 --> AR_0064
     AR_0062 --> AR_0063
+    AR_0062 --> AR_0064
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -269,9 +272,10 @@ flowchart LR
 | [AR-0058](tasks/AR-0058.md) | [AR-0056](tasks/AR-0056.md), [AR-0057](tasks/AR-0057.md) | [AR-0059](tasks/AR-0059.md), [AR-0061](tasks/AR-0061.md) |
 | [AR-0059](tasks/AR-0059.md) | [AR-0056](tasks/AR-0056.md), [AR-0057](tasks/AR-0057.md), [AR-0058](tasks/AR-0058.md) | [AR-0060](tasks/AR-0060.md), [AR-0061](tasks/AR-0061.md) |
 | [AR-0060](tasks/AR-0060.md) | [AR-0059](tasks/AR-0059.md) | [AR-0063](tasks/AR-0063.md) |
-| [AR-0061](tasks/AR-0061.md) | [AR-0056](tasks/AR-0056.md), [AR-0058](tasks/AR-0058.md), [AR-0059](tasks/AR-0059.md) | [AR-0062](tasks/AR-0062.md) |
-| [AR-0062](tasks/AR-0062.md) | [AR-0061](tasks/AR-0061.md) | [AR-0063](tasks/AR-0063.md) |
+| [AR-0061](tasks/AR-0061.md) | [AR-0056](tasks/AR-0056.md), [AR-0058](tasks/AR-0058.md), [AR-0059](tasks/AR-0059.md) | [AR-0062](tasks/AR-0062.md), [AR-0064](tasks/AR-0064.md) |
+| [AR-0062](tasks/AR-0062.md) | [AR-0061](tasks/AR-0061.md) | [AR-0063](tasks/AR-0063.md), [AR-0064](tasks/AR-0064.md) |
 | [AR-0063](tasks/AR-0063.md) | [AR-0060](tasks/AR-0060.md), [AR-0062](tasks/AR-0062.md) | None |
+| [AR-0064](tasks/AR-0064.md) | [AR-0061](tasks/AR-0061.md), [AR-0062](tasks/AR-0062.md) | None |
 
 ## Complete AR inventory
 
@@ -279,7 +283,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | codex-root | Promote authority commit/apply only after selector/runtime publication is proven and every failure preserves a functional coordinator. | Implement and verify the separately gated Git/SQLite authority commit and apply capability. |
+| P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | codex-root | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 
 ### Open (5)
 
@@ -291,11 +295,12 @@ flowchart LR
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
 
-### Planned (1)
+### Planned (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Define and implement the bound Git/SQLite authority mutation capability, then prove every failure boundary with exact-head tests and formal evidence. |
 
 ### Done (55)
 

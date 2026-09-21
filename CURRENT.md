@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Promote authority commit/apply only after selector/runtime publication is proven and every failure preserves a functional coordinator. | Implement and verify the separately gated Git/SQLite authority commit and apply capability. | codex-root |
+| P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. | codex-root |
 
 ## Open
 
@@ -24,6 +24,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. | - |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Define and implement the bound Git/SQLite authority mutation capability, then prove every failure boundary with exact-head tests and formal evidence. | - |
 
 ## Done
 
