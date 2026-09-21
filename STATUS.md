@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**63 ARs tracked** across 4 active status categories.
+**63 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 6 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 5 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -88,7 +88,7 @@ flowchart LR
         AR_0058["AR-0058 - Done"]:::status_done
         AR_0059["AR-0059 - Done"]:::status_done
         AR_0060["AR-0060 - Open"]:::status_open
-        AR_0061["AR-0061 - Open"]:::status_open
+        AR_0061["AR-0061 - In progress"]:::status_in_progress
         AR_0062["AR-0062 - Planned"]:::status_planned
         AR_0063["AR-0063 - Planned"]:::status_planned
     end
@@ -275,7 +275,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (6)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | codex-root | Promote selector publication and runtime replacement only after descriptor-bound identity, durable outcomes, and failure recovery are proven. | Specify and independently verify the selector/runtime publication mutation gate; keep authority commit and rollback disabled. |
+
+### Open (5)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -284,7 +290,6 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
-| P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Unclaimed | Promote selector publication and runtime replacement only after descriptor-bound identity, durable outcomes, and failure recovery are proven. | Specify and independently verify the selector/runtime publication mutation gate; keep authority commit and rollback disabled. |
 
 ### Planned (2)
 
