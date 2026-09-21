@@ -202,7 +202,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0045](tasks/AR-0045.md): Repair backup executor coverage gate regression | codex-root | AR-0044 post-merge Verify found no functional test failures, but its new authority_neutral_backup.py branches were under-tested and reduced total coverage below the mandatory 95&#37; gate. Add complete hostile branch coverage without changing behavior. | Publish a corrective coverage slice for the merged backup executor; cover all fail-closed branches and restore the &gt;=95&#37; hosted coverage gate. |
+| P0 | [AR-0045](tasks/AR-0045.md): Repair backup executor coverage gate regression | codex-root | AR-0044 post-merge Verify found no functional test failures, but its new authority_neutral_backup.py branches were under-tested and reduced total coverage below the mandatory 95&#37; gate. Add complete hostile branch coverage without changing behavior. | Monitor PR #882 checks/review; merge only after hosted coverage is &gt;=95&#37;, then verify and reconcile. |
 
 ### Open (5)
 
