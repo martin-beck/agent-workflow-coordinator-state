@@ -267,7 +267,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | codex-root | Complete durable upgrade barrier, lock ordering, fencing, and process-death recovery without enabling upgrade mutation. | Implement the trusted authority-neutral barrier/fencing factory and prove every SQLite mutation route remains rejection-only under uncertainty. |
+| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | codex-root | SQLite authoritative mutation routes are now explicitly inventoried and machine-checked through SQLiteBackend.transaction; durable barrier implementation and full route/refinement proof remain incomplete. | Bind the route inventory to the formal contract, then add independent-process coverage for every route under held, releasing, ambiguous, stale, and replaced authority states. |
 
 ### Open (4)
 
