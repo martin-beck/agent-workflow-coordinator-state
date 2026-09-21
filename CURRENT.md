@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0043](tasks/AR-0043.md): Bind process-death barrier evidence to the formal contract | AR-0012 has route and provisioning evidence, but the v10 contract still lacks exact process-death/refinement binding for every durable barrier transition. Add bounded hostile evidence without claiming mathematical Python/TLA refinement or enabling mutation. | Bind the existing independent-process barrier/crash tests to explicit model actions and add any missing durable process-death cases; preserve the not-proven refinement boundary. | codex-root |
+| P0 | [AR-0043](tasks/AR-0043.md): Bind process-death barrier evidence to the formal contract | AR-0012 has route and provisioning evidence, but the v10 contract still lacks exact process-death/refinement binding for every durable barrier transition. Add bounded hostile evidence without claiming mathematical Python/TLA refinement or enabling mutation. | Monitor PR #880 checks and exact-head review; merge only after gates, run post-merge Verify, then reconcile state. | codex-root |
 
 ## Open
 
