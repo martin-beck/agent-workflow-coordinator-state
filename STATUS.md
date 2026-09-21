@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**50 ARs tracked** across 4 active status categories.
+**50 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 44 |
+| **Done** | Accepted, integrated, and durably verified | 45 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -77,7 +77,7 @@ flowchart LR
         AR_0047["AR-0047 - Done"]:::status_done
         AR_0048["AR-0048 - Done"]:::status_done
         AR_0049["AR-0049 - Done"]:::status_done
-        AR_0050["AR-0050 - In progress"]:::status_in_progress
+        AR_0050["AR-0050 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -218,12 +218,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0050](tasks/AR-0050.md): Runtime replacement admission boundary | codex-root | Selector admission now proves a stable held visibility scope without mutation. The next gap is runtime replacement admission: bind the staged runtime and authenticated selector without switching the live runtime or authorizing commit. | Specify and implement only authority-neutral runtime replacement admission evidence; keep replacement, selector publication, commit, apply, and rollback fail-closed. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -233,7 +227,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 
-### Done (44)
+### Done (45)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -274,6 +268,7 @@ flowchart LR
 | P0 | [AR-0047](tasks/AR-0047.md): Authority-neutral staged artifact verification | Unclaimed | The bounded backup phase is now executable, but UpgradeEngine still has no authority-neutral stage capability. Add only artifact identity/integrity verification; keep selector publication, replacement, commit, apply, and rollback disabled. | Define and implement a read-only staged-artifact verification capability for UpgradeEngine without selector publication or runtime replacement. |
 | P0 | [AR-0048](tasks/AR-0048.md): Selector/runtime readiness validation | Unclaimed | Stage verification is merged, but UpgradeEngine validate still has no production consumer that revalidates the retained authenticated selector/runtime admission. Add only read-only readiness evidence; keep selector publication, replacement, commit, apply, and rollback disabled. | Bind retained selector/runtime admission revalidation to the read-only validate phase without selector publication or replacement. |
 | P0 | [AR-0049](tasks/AR-0049.md): Selector publication admission boundary | Unclaimed | Validation is now a read-only production consumer. The next mutation gap is selector publication admission; define authenticated compare-and-swap evidence without publishing or replacing a runtime until independent barrier and formal contracts pass. | Specify and implement only the authority-neutral selector publication admission boundary; keep runtime replacement, commit, apply, and rollback fail-closed. |
+| P0 | [AR-0050](tasks/AR-0050.md): Runtime replacement admission boundary | Unclaimed | Selector admission now proves a stable held visibility scope without mutation. The next gap is runtime replacement admission: bind the staged runtime and authenticated selector without switching the live runtime or authorizing commit. | Specify and implement only authority-neutral runtime replacement admission evidence; keep replacement, selector publication, commit, apply, and rollback fail-closed. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
