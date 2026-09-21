@@ -267,7 +267,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | codex-root | SQLite mutation routes are inventoried, contract-bound, and independently reject held, releasing, ambiguous, forged/stale released barrier states, control-store replacement, authority replacement, active authority WAL/SHM replacement, and replaced released session identities in fresh processes; long-lived fences bind the authenticated session identity and exact evidence digests are current. Timeout/re-entry/process-death reopen proof and production barrier completion remain. | Add independent-process tests for stale-owner races, timeout/re-entry, and reopen after process death; preserve write-closed recovery. |
+| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | codex-root | SQLite mutation routes are inventoried, contract-bound, and independently reject held, releasing, ambiguous, forged/stale released barrier states, control-store replacement, authority replacement, active authority WAL/SHM replacement, and replaced released session identities in fresh processes; long-lived fences bind the authenticated session identity; all four routes now have independent-process SIGKILL rollback coverage; exact evidence digests are current. Timeout/re-entry/stale-owner race proof and production barrier completion remain. | Add independent-process timeout/re-entry and stale-owner race coverage, then complete production barrier admission/recovery proof; preserve write-closed recovery. |
 
 ### Open (4)
 
