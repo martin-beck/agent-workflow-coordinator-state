@@ -199,7 +199,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | codex-root | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Implement a durable authority-neutral preflight and verified-backup phase that cannot commit or publish a selector; add failure/cleanup tests. |
+| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | codex-root | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
 
 ### Open (4)
 
