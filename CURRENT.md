@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | SQLite authoritative mutation routes are now explicitly inventoried and machine-checked through SQLiteBackend.transaction; durable barrier implementation and full route/refinement proof remain incomplete. | Bind the route inventory to the formal contract, then add independent-process coverage for every route under held, releasing, ambiguous, stale, and replaced authority states. | codex-root |
+| P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | SQLite authoritative mutation routes are inventoried, machine-checked, and now bound into the v10 RequestWrite correspondence. Durable barrier implementation and independent all-state route proof remain incomplete. | Add independent-process coverage for every inventoried route under held, releasing, ambiguous, stale, and replaced authority states; preserve rejection-only behavior. | codex-root |
 
 ## Open
 
