@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**45 ARs tracked** across 4 active status categories.
+**45 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 39 |
+| **Done** | Accepted, integrated, and durably verified | 40 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -71,7 +71,7 @@ flowchart LR
         AR_0041["AR-0041 - Done"]:::status_done
         AR_0042["AR-0042 - Done"]:::status_done
         AR_0043["AR-0043 - Done"]:::status_done
-        AR_0044["AR-0044 - In progress"]:::status_in_progress
+        AR_0044["AR-0044 - Done"]:::status_done
         AR_0045["AR-0045 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
@@ -198,12 +198,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | codex-root | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -213,7 +207,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | PR #735 adds bounded, machine-checked formal correspondence scaffolding for SQLite snapshot/identity reread, read-close uncertainty, and permanent ambiguous fencing. It preserves the rejection-only mutation gate. | Implement the first bounded authority-neutral executor seam using AR-0032/0033 validated chains; keep mutation and dispatch disabled until barrier, selector, hostile process-death, and formal gates pass. |
 
-### Done (39)
+### Done (40)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -248,6 +242,7 @@ flowchart LR
 | P0 | [AR-0041](tasks/AR-0041.md): Bind authenticated runtime admission to a fixed launcher entrypoint | Unclaimed | Runtime selector resolution and retained identity validation exist, but no consumer binds the admitted runtime to a stable fixed entrypoint; subsequent invocations can still use the adjacent runtime. | Monitor PR #878 hosted checks and independent review; repair any findings, merge only at exact reviewed head, then run post-merge Verify and reconcile state. |
 | P0 | [AR-0042](tasks/AR-0042.md): Bind fixed runtime dispatch to the production consumer | Unclaimed | AR-0041 provides a safe descriptor-backed command builder, but the coordinator upgrade/runtime call graph does not yet consume it. Bind one fixed consumer with subprocess descriptor inheritance, revalidation, and failure classification without enabling mutation. | Monitor PR #879 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
 | P0 | [AR-0043](tasks/AR-0043.md): Bind process-death barrier evidence to the formal contract | Unclaimed | AR-0012 has route and provisioning evidence, but the v10 contract still lacks exact process-death/refinement binding for every durable barrier transition. Add bounded hostile evidence without claiming mathematical Python/TLA refinement or enabling mutation. | Monitor PR #880 checks and exact-head review; merge only after gates, run post-merge Verify, then reconcile state. |
+| P0 | [AR-0044](tasks/AR-0044.md): Implement authority-neutral preflight and backup phase | Unclaimed | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
 | P0 | [AR-0045](tasks/AR-0045.md): Repair backup executor coverage gate regression | Unclaimed | AR-0044 post-merge Verify found no functional test failures, but its new authority_neutral_backup.py branches were under-tested and reduced total coverage below the mandatory 95&#37; gate. Add complete hostile branch coverage without changing behavior. | Monitor PR #882 checks/review; merge only after hosted coverage is &gt;=95&#37;, then verify and reconcile. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
