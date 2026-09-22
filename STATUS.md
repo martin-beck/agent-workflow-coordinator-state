@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**64 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 2 |
+| **Planned** | Defined work awaiting promotion or dependencies | 21 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 55 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -92,6 +92,25 @@ flowchart LR
         AR_0062["AR-0062 - Open"]:::status_open
         AR_0063["AR-0063 - Planned"]:::status_planned
         AR_0064["AR-0064 - Planned"]:::status_planned
+        AR_0065["AR-0065 - Planned"]:::status_planned
+        AR_0066["AR-0066 - Planned"]:::status_planned
+        AR_0067["AR-0067 - Planned"]:::status_planned
+        AR_0068["AR-0068 - Planned"]:::status_planned
+        AR_0069["AR-0069 - Planned"]:::status_planned
+        AR_0070["AR-0070 - Planned"]:::status_planned
+        AR_0071["AR-0071 - Planned"]:::status_planned
+        AR_0072["AR-0072 - Planned"]:::status_planned
+        AR_0073["AR-0073 - Planned"]:::status_planned
+        AR_0074["AR-0074 - Planned"]:::status_planned
+        AR_0075["AR-0075 - Planned"]:::status_planned
+        AR_0076["AR-0076 - Planned"]:::status_planned
+        AR_0077["AR-0077 - Planned"]:::status_planned
+        AR_0078["AR-0078 - Planned"]:::status_planned
+        AR_0079["AR-0079 - Planned"]:::status_planned
+        AR_0080["AR-0080 - Planned"]:::status_planned
+        AR_0081["AR-0081 - Planned"]:::status_planned
+        AR_0082["AR-0082 - Planned"]:::status_planned
+        AR_0083["AR-0083 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -197,7 +216,28 @@ flowchart LR
     AR_0061 --> AR_0062
     AR_0061 --> AR_0064
     AR_0062 --> AR_0063
-    AR_0062 --> AR_0064
+    AR_0065 --> AR_0066
+    AR_0065 --> AR_0067
+    AR_0065 --> AR_0070
+    AR_0065 --> AR_0075
+    AR_0066 --> AR_0068
+    AR_0066 --> AR_0073
+    AR_0067 --> AR_0073
+    AR_0068 --> AR_0069
+    AR_0070 --> AR_0071
+    AR_0070 --> AR_0083
+    AR_0071 --> AR_0074
+    AR_0072 --> AR_0075
+    AR_0072 --> AR_0082
+    AR_0072 --> AR_0083
+    AR_0073 --> AR_0074
+    AR_0075 --> AR_0082
+    AR_0076 --> AR_0077
+    AR_0076 --> AR_0083
+    AR_0077 --> AR_0078
+    AR_0079 --> AR_0080
+    AR_0079 --> AR_0083
+    AR_0081 --> AR_0083
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -273,9 +313,28 @@ flowchart LR
 | [AR-0059](tasks/AR-0059.md) | [AR-0056](tasks/AR-0056.md), [AR-0057](tasks/AR-0057.md), [AR-0058](tasks/AR-0058.md) | [AR-0060](tasks/AR-0060.md), [AR-0061](tasks/AR-0061.md) |
 | [AR-0060](tasks/AR-0060.md) | [AR-0059](tasks/AR-0059.md) | [AR-0063](tasks/AR-0063.md) |
 | [AR-0061](tasks/AR-0061.md) | [AR-0056](tasks/AR-0056.md), [AR-0058](tasks/AR-0058.md), [AR-0059](tasks/AR-0059.md) | [AR-0062](tasks/AR-0062.md), [AR-0064](tasks/AR-0064.md) |
-| [AR-0062](tasks/AR-0062.md) | [AR-0061](tasks/AR-0061.md) | [AR-0063](tasks/AR-0063.md), [AR-0064](tasks/AR-0064.md) |
+| [AR-0062](tasks/AR-0062.md) | [AR-0061](tasks/AR-0061.md) | [AR-0063](tasks/AR-0063.md) |
 | [AR-0063](tasks/AR-0063.md) | [AR-0060](tasks/AR-0060.md), [AR-0062](tasks/AR-0062.md) | None |
-| [AR-0064](tasks/AR-0064.md) | [AR-0061](tasks/AR-0061.md), [AR-0062](tasks/AR-0062.md) | None |
+| [AR-0064](tasks/AR-0064.md) | [AR-0061](tasks/AR-0061.md) | None |
+| [AR-0065](tasks/AR-0065.md) | None | [AR-0066](tasks/AR-0066.md), [AR-0067](tasks/AR-0067.md), [AR-0070](tasks/AR-0070.md), [AR-0075](tasks/AR-0075.md) |
+| [AR-0066](tasks/AR-0066.md) | [AR-0065](tasks/AR-0065.md) | [AR-0068](tasks/AR-0068.md), [AR-0073](tasks/AR-0073.md) |
+| [AR-0067](tasks/AR-0067.md) | [AR-0065](tasks/AR-0065.md) | [AR-0073](tasks/AR-0073.md) |
+| [AR-0068](tasks/AR-0068.md) | [AR-0066](tasks/AR-0066.md) | [AR-0069](tasks/AR-0069.md) |
+| [AR-0069](tasks/AR-0069.md) | [AR-0068](tasks/AR-0068.md) | None |
+| [AR-0070](tasks/AR-0070.md) | [AR-0065](tasks/AR-0065.md) | [AR-0071](tasks/AR-0071.md), [AR-0083](tasks/AR-0083.md) |
+| [AR-0071](tasks/AR-0071.md) | [AR-0070](tasks/AR-0070.md) | [AR-0074](tasks/AR-0074.md) |
+| [AR-0072](tasks/AR-0072.md) | None | [AR-0075](tasks/AR-0075.md), [AR-0082](tasks/AR-0082.md), [AR-0083](tasks/AR-0083.md) |
+| [AR-0073](tasks/AR-0073.md) | [AR-0066](tasks/AR-0066.md), [AR-0067](tasks/AR-0067.md) | [AR-0074](tasks/AR-0074.md) |
+| [AR-0074](tasks/AR-0074.md) | [AR-0071](tasks/AR-0071.md), [AR-0073](tasks/AR-0073.md) | None |
+| [AR-0075](tasks/AR-0075.md) | [AR-0065](tasks/AR-0065.md), [AR-0072](tasks/AR-0072.md) | [AR-0082](tasks/AR-0082.md) |
+| [AR-0076](tasks/AR-0076.md) | None | [AR-0077](tasks/AR-0077.md), [AR-0083](tasks/AR-0083.md) |
+| [AR-0077](tasks/AR-0077.md) | [AR-0076](tasks/AR-0076.md) | [AR-0078](tasks/AR-0078.md) |
+| [AR-0078](tasks/AR-0078.md) | [AR-0077](tasks/AR-0077.md) | None |
+| [AR-0079](tasks/AR-0079.md) | None | [AR-0080](tasks/AR-0080.md), [AR-0083](tasks/AR-0083.md) |
+| [AR-0080](tasks/AR-0080.md) | [AR-0079](tasks/AR-0079.md) | None |
+| [AR-0081](tasks/AR-0081.md) | None | [AR-0083](tasks/AR-0083.md) |
+| [AR-0082](tasks/AR-0082.md) | [AR-0072](tasks/AR-0072.md), [AR-0075](tasks/AR-0075.md) | None |
+| [AR-0083](tasks/AR-0083.md) | [AR-0070](tasks/AR-0070.md), [AR-0072](tasks/AR-0072.md), [AR-0076](tasks/AR-0076.md), [AR-0079](tasks/AR-0079.md), [AR-0081](tasks/AR-0081.md) | None |
 
 ## Complete AR inventory
 
@@ -290,12 +349,31 @@ flowchart LR
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 
-### Planned (2)
+### Planned (21)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Define and implement the bound Git/SQLite authority mutation capability, then prove every failure boundary with exact-head tests and formal evidence. |
+| P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
+| P0 | [AR-0066](tasks/AR-0066.md): Role assignment contract | Unclaimed | Add role-assignment.schema.json binding the coordinator owner identity to one or more roles with expiry and evidence of authorization. | Draft role-assignment.schema.json and fixtures, then open a review PR. |
+| P0 | [AR-0067](tasks/AR-0067.md): Capability matrix semantics and formal specification | Unclaimed | Formalize invariants (no mutation without role authorization, reviewer distinct from executor on one task, security tasks require the security role) in a TLA+ model mirroring coordinator transitions. | Draft the capability TLA+ model and invariant tests, then open a review PR. |
+| P0 | [AR-0068](tasks/AR-0068.md): Role management CLI | Unclaimed | Implement roles assign&#124;list&#124;check&#124;remove with exact-revision CAS, mirroring handoffctl dispatch and validation style, with byte-stable output. | Implement the roles CLI commands and negative-path tests, then open a review PR. |
+| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Prepare the release manifest and downstream lock, then publish the reviewed release. |
+| P0 | [AR-0070](tasks/AR-0070.md): Task-spec schema and task metadata fields | Unclaimed | Add task-spec.schema.json (acceptance predicates, Definition of Done, inputs/outputs, allowed and forbidden tools, required evidence classes, gate list) and task metadata fields spec_ref and spec_revision. | Draft the task-spec schema and metadata fields, then open a review PR. |
+| P0 | [AR-0071](tasks/AR-0071.md): Spec-gated done admission | Unclaimed | Admission of status done requires a resolved task spec and a passed acceptance check, mirroring the superseded_by chain admission pattern. | Implement spec-gated done admission and negative fixtures, then open a review PR. |
+| P0 | [AR-0073](tasks/AR-0073.md): Role authorization admission on claim, update, and run | Unclaimed | Extend claim/update/run admission to check role capability with fail-closed behavior for unknown or expired roles, extending the one-owner and one-active-task invariants to role scope. | Implement role admission checks and negative-path tests, then open a review PR. |
+| P0 | [AR-0076](tasks/AR-0076.md): Durable work-session snapshot record | Unclaimed | Add a session record type capturing agent context digest, step state, artifact refs, and next action, appended on update/run with bounded, content-minimized storage. | Implement the session record type and replay path, then open a review PR. |
+| P0 | [AR-0079](tasks/AR-0079.md): Checkpoint command for task state and artifacts | Unclaimed | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. | Implement the checkpoint command and doctor verification, then open a review PR. |
+| P0 | [AR-0080](tasks/AR-0080.md): Coordinated rollback to a verified checkpoint | Unclaimed | Add rollback --checkpoint REF restoring coordinator state with coordinated Git revert via reconcile, fail-closed on divergence, using the upgrade-barrier concurrency blueprint. | Implement coordinated rollback and its failure matrix, then open a review PR. |
+| P0 | [AR-0081](tasks/AR-0081.md): User directive record type | Unclaimed | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. | Implement the directive record type and precedence, then open a review PR. |
+| P0 | [AR-0083](tasks/AR-0083.md): Schema, migration, and doctor coverage for new record types | Unclaimed | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. | Extend migrations, doctor checks, and negative fixtures, then open a review PR. |
+| P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Unclaimed | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
+| P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | Unclaimed | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. |
+| P1 | [AR-0075](tasks/AR-0075.md): Hierarchical rollup projections | Unclaimed | Extend render_status_views with company overview, per-role, and per-task drill-down pages, byte-stable and privacy-safe, keeping status_view opt-in. | Extend status projections with hierarchy pages, then open a review PR. |
+| P1 | [AR-0077](tasks/AR-0077.md): Pause and resume commands with session reload | Unclaimed | Add pause (freeze session and lease) and resume --session REF (reload snapshot via exact-revision CAS blocked-&gt;open) with TLA+ coverage for crash-during-pause. | Implement pause/resume and crash-during-pause coverage, then open a review PR. |
+| P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
+| P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
 
 ### Done (55)
 
