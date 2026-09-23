@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement the next bounded recovery correspondence slice: fence commit uncertainty in prepared-session and prepared-authority-effect recovery, preserve the durable ambiguous snapshot, release operation locks, and add exact hostile commit-failure evidence; keep mutation, rollback, and release gates denied. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit and implement the next bounded recovery correspondence slice: cover process-death and uncertain outcome publication for the remaining authority-effect finish and session CAS recovery boundaries, with exact lock-release and durable-intent evidence; keep mutation, rollback, and release gates denied. | codex-awc-ar0064-20260923p |
 
 ## Open
 
