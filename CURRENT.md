@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue with stale-owner fencing and reopen/retry evidence for the real SQLite authority capability, then bind functional-availability and complete formal refinement; keep public mutation and release dispatch disabled. | codex-awc-ar0064-20260923g |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement and verify functional-availability plus reopen/retry evidence for the real SQLite authority capability, then complete formal refinement; keep public mutation, rollback, and release dispatch disabled. | codex-awc-ar0064-20260923g |
 
 ## Open
 
