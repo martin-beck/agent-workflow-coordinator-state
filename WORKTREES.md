@@ -106,7 +106,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-effect-process-death` | `ar0064-effect-process-death` | `284b15db98ce` | 0 | behind 47, ahead 0 |
 | `agent-workflow-coordinator-ar0064-formal-effect-correspondence` | `ar0064-formal-effect-correspondence` | `65104547c1b9` | 0 | behind 45, ahead 0 |
 | `agent-workflow-coordinator-ar0064-integrated-effect-finish-death` | `ar0064-integrated-effect-finish-death` | `986b55d8e596` | 0 | behind 42, ahead 0 |
-| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-receipt-journal-equivalence` | `5b02f2cf5081` | 0 | behind 3, ahead 4 |
+| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-receipt-journal-equivalence` | `e95a7ea3ad63` | 0 | behind 3, ahead 5 |
 | `agent-workflow-coordinator-ar0064-lock-admission-bind` | `ar0064-lock-admission-bind` | `daec4ed818f5` | 0 | behind 62, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-recovery-correspondence` | `ar0064-lock-recovery-correspondence` | `648d92cca766` | 0 | behind 59, ahead 0 |
 | `agent-workflow-coordinator-ar0064-process-death-reconcile` | `ar0064-process-death-reconcile` | `516743cf6659` | 0 | behind 53, ahead 0 |
