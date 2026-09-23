@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement the next bounded correspondence slice for ordered lock/admission and durable process-death/stale-owner recovery; add exact hostile evidence and independent review while keeping all mutation, rollback, and release gates denied. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement the next bounded ordered lock/admission correspondence slice: map LockDomainScope hold/recheck, lock release after process death, and stale-owner rejection to exact hostile tests and formal obligations; keep mutation, rollback, and release gates denied. | codex-awc-ar0064-20260923p |
 
 ## Open
 
