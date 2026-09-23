@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement the next bounded process-death correspondence slice for authority-effect finish: exercise death after committed and ambiguous effect outcome publication, prove recovery preserves the durable effect outcome and releases operation locks, and retain fail-closed mutation, rollback, and release gates. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit remaining authority-effect process-death boundaries before and after prepare/finish, then bind exact durable effect-intent evidence to formal correspondence; keep mutation, rollback, and release denied. | codex-awc-ar0064-20260923p |
 
 ## Open
 
