@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1014 | `ar0064-typed-rollback-evidence@86dd3ea4cbd8` | `main` | DIRTY | - | feat(mutation): compose durable backend effects |
 
 ## Recent workflows
 
