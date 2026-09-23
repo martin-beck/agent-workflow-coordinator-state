@@ -102,8 +102,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0031-sqlite-session-snapshot` | `ar0031-sqlite-session-snapshot` | `df2d4c1696ba` | 0 | behind 379, ahead 0 |
 | `agent-workflow-coordinator-authority-commit-apply-gate` | `ar0062-authority-commit-apply-gate` | `9ee93ec501f7` | 0 | behind 7, ahead 0 |
 | `agent-workflow-coordinator-authority-coverage` | `feature/upgrade-authority-coverage` | `bdef8c67057f` | 0 | behind 1718, ahead 0 |
-| `agent-workflow-coordinator-authority-mutation-formal-refinement` | `ar0064-authority-mutation-formal-refinement` | `c988ff440af9` | 4 | behind 0, ahead 1 |
-| changed files | - | - | - | `formal/upgrade/evidence.json`, `formal/upgrade/refinement-map.md`, `formal/upgrade/refinement-obligations.json`, `formal/upgrade/v10-refinement-contract.json` |
+| `agent-workflow-coordinator-authority-mutation-formal-refinement` | `ar0064-authority-mutation-formal-refinement` | `dd4ae87e5f40` | 0 | behind 0, ahead 2 |
 | `agent-workflow-coordinator-barrier-caller` | `feature/ar0007-sqlite-sidecar-faults` | `36cd3ed24087` | 1 | behind 1666, ahead 0 |
 | changed files | - | - | - | `tests/test_rollback_control_store.py` |
 | `agent-workflow-coordinator-canonical-scope` | `ar0007-canonical-scope-boundary` | `9979977163e8` | 0 | behind 1511, ahead 0 |
