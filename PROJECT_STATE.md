@@ -25,10 +25,10 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35900650953 | `85bf4c905660` | workflow_dispatch | Formal | in_progress:- |
-| 35900618842 | `85bf4c905660` | workflow_dispatch | Verify | in_progress:- |
+| 35900650953 | `85bf4c905660` | workflow_dispatch | Formal | completed:success |
+| 35900618842 | `85bf4c905660` | workflow_dispatch | Verify | completed:success |
 | 35900577404 | `85bf4c905660` | push | Formal | completed:success |
-| 35900577398 | `85bf4c905660` | push | Verify | in_progress:- |
+| 35900577398 | `85bf4c905660` | push | Verify | completed:success |
 | 35900361492 | `7cf76b725e95` | pull_request | Verify | completed:success |
 | 35899266940 | `c7696f601b30` | workflow_dispatch | Formal | completed:success |
 | 35899236343 | `c7696f601b30` | workflow_dispatch | Verify | completed:success |
