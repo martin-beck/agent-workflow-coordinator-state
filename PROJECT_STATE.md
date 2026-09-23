@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7c3c68fe3af4385037d2596000d35fb4ecaf20ba`
+- Product remote main: `225712c1960bb24489eac481b2baf378a4d49aa1`
 - Local origin/main: `7c3c68fe3af4385037d2596000d35fb4ecaf20ba`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1011 | `ar0064-typed-rollback-evidence@96f2065d3fa0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(formal): allow isolated TLC admission locks |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35930271617 | `96f2065d3fa0` | pull_request | Verify | in_progress:- |
+| 35930510253 | `225712c1960b` | push | Verify | in_progress:- |
+| 35930510221 | `225712c1960b` | push | Formal | in_progress:- |
+| 35930271617 | `96f2065d3fa0` | pull_request | Verify | completed:success |
 | 35929512465 | `7c3c68fe3af4` | push | Verify | completed:success |
 | 35929512454 | `7c3c68fe3af4` | push | Formal | completed:success |
 | 35929463279 | `063ba656821c` | pull_request | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35927336580 | `1d822bdb54c5` | push | Formal | completed:success |
 | 35927336509 | `1d822bdb54c5` | push | Verify | completed:failure |
 | 35927264038 | `c118ffcf9a96` | pull_request | Verify | completed:success |
-| 35926529919 | `21a73a3d10f6` | push | Formal | completed:success |
-| 35926529913 | `21a73a3d10f6` | push | Verify | completed:success |
