@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923k | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement and verify functional-availability plus reopen/retry evidence for the real SQLite authority capability, then complete formal refinement; keep public mutation, rollback, and release dispatch disabled. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923k | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Complete the remaining bounded implementation-to-model correspondence and independent formal review; enumerate any unproven transitions explicitly and keep the mutation, rollback, and release gates denied. |
 
 ### Open (6)
 
