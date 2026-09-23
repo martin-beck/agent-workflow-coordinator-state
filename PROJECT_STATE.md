@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #987 | `ar0064-receipt-journal-equivalence@e994f2d6f85c` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | docs(formal): map SQLite post-open fence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35907500796 | `e994f2d6f85c` | pull_request | Verify | in_progress:- |
 | 35906968059 | `4672ac674946` | push | Formal | completed:success |
 | 35906968007 | `4672ac674946` | push | Verify | completed:success |
 | 35906697190 | `1e6f458c981a` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35904427505 | `090b58d5d211` | pull_request | Verify | completed:success |
 | 35903744500 | `1b96508893de` | push | Formal | completed:success |
 | 35903744327 | `1b96508893de` | push | Verify | completed:success |
-| 35903497672 | `f716d78e9a65` | pull_request | Verify | completed:success |
