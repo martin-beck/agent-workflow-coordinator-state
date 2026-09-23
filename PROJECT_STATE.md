@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #986 | `ar0064-receipt-journal-equivalence@1e6f458c981a` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | docs(formal): bind authority boundary evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35906697190 | `1e6f458c981a` | pull_request | Verify | queued:- |
 | 35905540290 | `85d11e14a3a4` | push | Formal | completed:success |
 | 35905540193 | `85d11e14a3a4` | push | Verify | completed:success |
 | 35905305268 | `3db885192ffa` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35903497672 | `f716d78e9a65` | pull_request | Verify | completed:success |
 | 35903168574 | `48a379574f71` | pull_request | Verify | completed:failure |
 | 35902410810 | `62464cda6326` | push | Verify | completed:success |
-| 35902410409 | `62464cda6326` | push | Formal | completed:success |
