@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923p | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the next not-proven refinement obligation after integrated Git and SQLite rejection recovery; preserve mutation, rollback, and release denial. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923p | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the next not-proven refinement obligation after typed recovery rejection; prioritize the remaining SQLite write-fence or functional-availability evidence without enabling mutation, rollback, or release. |
 
 ### Open (6)
 
