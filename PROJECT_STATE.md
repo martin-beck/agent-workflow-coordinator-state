@@ -20,13 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #930 | `ar0064-authority-mutation-formal-refinement@9782fcaaa628` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat(authority): durably fence external effect outcomes |
+| #930 | `ar0064-authority-mutation-formal-refinement@9782fcaaa628` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat(authority): durably fence external effect outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35837913893 | `9782fcaaa628` | pull_request | Verify | queued:- |
+| 35837913893 | `9782fcaaa628` | pull_request | Verify | completed:failure |
 | 35837116463 | `62b2b07b9acb` | pull_request | Verify | completed:failure |
 | 35835189399 | `ae2c8824fdda` | push | Formal | completed:success |
 | 35835189347 | `ae2c8824fdda` | push | Verify | completed:success |
