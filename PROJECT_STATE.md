@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7376da27aad19c103b3d5c834928b2dc8bab3bf6`
+- Product remote main: `7d1b680956b9b342be657a72a231b3ab64761b4a`
 - Local origin/main: `7376da27aad19c103b3d5c834928b2dc8bab3bf6`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,22 +10,23 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
-| #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
-| #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
-| #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
-| #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | DIRTY | - | test(upgrade): bind validated rollback backup identity |
-| #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
-| #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
-| #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
-| #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
-| #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #993 | `ar0064-receipt-journal-equivalence@31eba8f3b96d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(sqlite): reject setup errors before effect |
+| #85 | `fix/vendor-formal-runtime-v037@73f855d7b71f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix(vendor): include complete formal runtime closure |
+| #315 | `ar0016-postmerge-repair@067ba1cc18c9` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(ci): honor release timeout for formal validation |
+| #317 | `ar0008-reject-rollback-admission@267efd9eb9ef` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | feat(formal): model rollback admission rejection |
+| #320 | `fix/formal-attestation-resource-bounds@847c30248a0d` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:CANCELLED, COMPLETED:SKIPPED | fix(formal): align attestation resource bounds with tiers |
+| #330 | `ar0007-authorized-contract@da1f7c7b558e` | `main` | UNKNOWN | - | test(upgrade): bind validated rollback backup identity |
+| #336 | `ar0007-tier-evidence-hash@f7211c189999` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | fix(formal): refresh rollback control store hash |
+| #367 | `ar0007-git-create-parent@b31a9160c0ca` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | fix: bind Git backup destination parent |
+| #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | UNKNOWN | - | test: reject control store replacement after effect failure |
+| #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
+| #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35912865292 | `7d1b680956b9` | push | Verify | in_progress:- |
+| 35912865246 | `7d1b680956b9` | push | Formal | in_progress:- |
 | 35912657141 | `31eba8f3b96d` | pull_request | Verify | completed:success |
 | 35912115137 | `7376da27aad1` | push | Formal | completed:success |
 | 35912115123 | `7376da27aad1` | push | Verify | completed:success |
@@ -36,5 +37,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35911082316 | `e4a59773bbba` | pull_request | Verify | completed:success |
 | 35910209759 | `873cb1bccba0` | push | Verify | completed:success |
 | 35910209704 | `873cb1bccba0` | push | Formal | completed:success |
-| 35909959252 | `6048e719f8b7` | pull_request | Verify | completed:success |
-| 35909350025 | `e8927765922a` | push | Formal | completed:success |
