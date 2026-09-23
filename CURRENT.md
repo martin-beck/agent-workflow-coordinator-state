@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit whether concrete Git and SQLite effect receipts should expose the full admission identity rather than only operation and fencing fields; add the smallest safe correspondence seam while keeping mutation, rollback, and release denied. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit receipt-to-journal outcome equivalence and process-death recovery for the full admission identity; add exact cross-backend evidence while keeping mutation, rollback, and release denied. | codex-awc-ar0064-20260923p |
 
 ## Open
 
