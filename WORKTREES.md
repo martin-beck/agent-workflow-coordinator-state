@@ -106,8 +106,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-effect-process-death` | `ar0064-effect-process-death` | `284b15db98ce` | 0 | behind 91, ahead 0 |
 | `agent-workflow-coordinator-ar0064-formal-effect-correspondence` | `ar0064-formal-effect-correspondence` | `65104547c1b9` | 0 | behind 89, ahead 0 |
 | `agent-workflow-coordinator-ar0064-integrated-effect-finish-death` | `ar0064-integrated-effect-finish-death` | `986b55d8e596` | 0 | behind 86, ahead 0 |
-| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-receipt-journal-equivalence` | `2020c0cf92ea` | 6 | behind 1, ahead 1 |
-| changed files | - | - | - | `formal/upgrade/evidence.json`, `formal/upgrade/refinement-map.md`, `formal/upgrade/refinement-obligations.json`, `formal/upgrade/v10-refinement-contract.json`, `tests/test_git_authority_mutation.py`, `tools/git_authority_mutation.py` |
+| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-receipt-journal-equivalence` | `55eb8fb9ccf9` | 0 | behind 1, ahead 2 |
 | `agent-workflow-coordinator-ar0064-lock-admission-bind` | `ar0064-lock-admission-bind` | `daec4ed818f5` | 0 | behind 106, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-recovery-correspondence` | `ar0064-lock-recovery-correspondence` | `648d92cca766` | 0 | behind 103, ahead 0 |
 | `agent-workflow-coordinator-ar0064-process-death-reconcile` | `ar0064-process-death-reconcile` | `516743cf6659` | 0 | behind 97, ahead 0 |
