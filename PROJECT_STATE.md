@@ -20,13 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #993 | `ar0064-receipt-journal-equivalence@31eba8f3b96d` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(sqlite): reject setup errors before effect |
+| #993 | `ar0064-receipt-journal-equivalence@31eba8f3b96d` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(sqlite): reject setup errors before effect |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35912657141 | `31eba8f3b96d` | pull_request | Verify | in_progress:- |
+| 35912657141 | `31eba8f3b96d` | pull_request | Verify | completed:success |
 | 35912115137 | `7376da27aad1` | push | Formal | completed:success |
 | 35912115123 | `7376da27aad1` | push | Verify | completed:success |
 | 35911900159 | `8ed70ec855ba` | pull_request | Verify | completed:success |
