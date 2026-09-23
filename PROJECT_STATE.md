@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1012 | `ar0064-typed-rollback-evidence@657d5f22a7b1` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(authority): bind isolated commit capabilities |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35931147193 | `657d5f22a7b1` | pull_request | Verify | in_progress:- |
 | 35930510253 | `225712c1960b` | push | Verify | completed:success |
 | 35930510221 | `225712c1960b` | push | Formal | completed:success |
 | 35930271617 | `96f2065d3fa0` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35927636197 | `5d4c6910c8a2` | pull_request | Verify | completed:success |
 | 35927336580 | `1d822bdb54c5` | push | Formal | completed:success |
 | 35927336509 | `1d822bdb54c5` | push | Verify | completed:failure |
-| 35927264038 | `c118ffcf9a96` | pull_request | Verify | completed:success |
