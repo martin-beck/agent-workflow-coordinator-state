@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Bind the abstract Backends parameter and fence variable to concrete Git/SQLite transition evidence, or document the exact remaining proof boundary; keep Dispatch, mutation, rollback, and release disabled until correspondence is proven. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement the separately gated Git and SQLite authority-mutation capability with immutable admission identity checks, complete process-death/fsync/close/stale-owner/reopen/ambiguity evidence, and keep public commit/apply/rollback/release/Dispatch disabled until exact refinement is proven. | codex-awc-ar0064-20260923p |
 
 ## Open
 
