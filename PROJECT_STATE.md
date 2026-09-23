@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #1003 | `ar0064-authority-ancestor-symlinks@4bcfd3e80d58` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): cover symlinked ancestor paths |
+| #1003 | `ar0064-authority-ancestor-symlinks@5815b1064352` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(authority): cover symlinked ancestor paths |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35922053954 | `5815b1064352` | pull_request | Verify | in_progress:- |
 | 35921884065 | `4bcfd3e80d58` | pull_request | Verify | completed:failure |
 | 35921197053 | `56cca6405687` | push | Verify | completed:success |
 | 35921196926 | `56cca6405687` | push | Formal | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35919704266 | `fd821cf64171` | push | Verify | completed:success |
 | 35919499758 | `cd6948a6b36b` | pull_request | Verify | completed:success |
 | 35918684097 | `4432e8d614d3` | push | Formal | completed:success |
-| 35918684087 | `4432e8d614d3` | push | Verify | completed:success |
