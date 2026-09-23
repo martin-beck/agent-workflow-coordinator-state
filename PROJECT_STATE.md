@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1013 | `ar0064-typed-rollback-evidence@169e83e44b16` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): reject invalid effects before journaling |
+| #1013 | `ar0064-typed-rollback-evidence@169e83e44b16` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): reject invalid effects before journaling |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35931750319 | `169e83e44b16` | pull_request | Verify | in_progress:- |
+| 35931750319 | `169e83e44b16` | pull_request | Verify | completed:failure |
 | 35931302406 | `d0bbb6d7ac97` | push | Formal | completed:success |
 | 35931302365 | `d0bbb6d7ac97` | push | Verify | completed:success |
 | 35931147193 | `657d5f22a7b1` | pull_request | Verify | completed:success |
