@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923p | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit exact admission-bundle identity binding into the durable journal across Git and SQLite effect paths, then add the smallest remaining correspondence evidence; keep mutation, rollback, and release denied. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923p | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit remaining admission identity fields and cross-backend Git/SQLite effect correspondence, then add the smallest exact evidence; keep mutation, rollback, and release denied. |
 
 ### Open (6)
 
