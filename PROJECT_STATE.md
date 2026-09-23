@@ -26,7 +26,7 @@ Generated from local Git and GitHub. Do not edit.
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
 | 35922267860 | `e286e86f1d39` | push | Formal | completed:success |
-| 35922267845 | `e286e86f1d39` | push | Verify | in_progress:- |
+| 35922267845 | `e286e86f1d39` | push | Verify | completed:success |
 | 35922053954 | `5815b1064352` | pull_request | Verify | completed:success |
 | 35921884065 | `4bcfd3e80d58` | pull_request | Verify | completed:failure |
 | 35921197053 | `56cca6405687` | push | Verify | completed:success |
