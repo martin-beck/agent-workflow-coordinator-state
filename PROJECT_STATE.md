@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1015 | `ar0064-typed-rollback-evidence@a05000fd21e5` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | test(mutation): exercise durable adapter factories |
+| #1015 | `ar0064-typed-rollback-evidence@a05000fd21e5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(mutation): exercise durable adapter factories |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35933820287 | `a05000fd21e5` | pull_request | Verify | queued:- |
+| 35933820287 | `a05000fd21e5` | pull_request | Verify | completed:failure |
 | 35933155354 | `51c84a2c3654` | push | Formal | completed:success |
 | 35933155317 | `51c84a2c3654` | push | Verify | completed:success |
 | 35932999297 | `295667cf5b31` | pull_request | Verify | completed:success |
