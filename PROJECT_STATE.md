@@ -25,6 +25,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35894359277 | `bd94595cb7cc` | workflow_dispatch | Formal | in_progress:- |
 | 35894323569 | `bd94595cb7cc` | workflow_dispatch | Verify | in_progress:- |
 | 35894282460 | `bd94595cb7cc` | push | Verify | in_progress:- |
 | 35894282458 | `bd94595cb7cc` | push | Formal | completed:success |
@@ -36,4 +37,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35893203618 | `55315135ee5a` | pull_request | Verify | completed:success |
 | 35892479132 | `ee14f43d4790` | workflow_dispatch | Verify | completed:success |
 | 35892479128 | `ee14f43d4790` | workflow_dispatch | Formal | completed:success |
-| 35892432070 | `ee14f43d4790` | push | Formal | completed:success |
