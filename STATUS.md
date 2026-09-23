@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923p | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the remaining ambiguous-recovery and functional-availability correspondence next; preserve write-closed recovery and keep mutation, rollback, and release disabled. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260923p | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit selector-to-execution binding and the remaining abstract backend/fence correspondence; preserve read-only validation and keep mutation, rollback, and release disabled. |
 
 ### Open (6)
 
