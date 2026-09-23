@@ -106,8 +106,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-effect-process-death` | `ar0064-effect-process-death` | `284b15db98ce` | 0 | behind 110, ahead 0 |
 | `agent-workflow-coordinator-ar0064-formal-effect-correspondence` | `ar0064-formal-effect-correspondence` | `65104547c1b9` | 0 | behind 108, ahead 0 |
 | `agent-workflow-coordinator-ar0064-integrated-effect-finish-death` | `ar0064-integrated-effect-finish-death` | `986b55d8e596` | 0 | behind 105, ahead 0 |
-| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `DETACHED` | `f34b234b7df9` | 5 | behind 0, ahead 0 |
-| changed files | - | - | - | `formal/upgrade/evidence.json`, `tests/test_git_authority_adapter.py`, `tests/test_sqlite_authority_adapter.py`, `tools/git_authority_adapter.py`, `tools/sqlite_authority_adapter.py` |
+| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-typed-rollback-evidence` | `5fd8b03d7916` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0064-lock-admission-bind` | `ar0064-lock-admission-bind` | `daec4ed818f5` | 0 | behind 125, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-recovery-correspondence` | `ar0064-lock-recovery-correspondence` | `648d92cca766` | 0 | behind 122, ahead 0 |
 | `agent-workflow-coordinator-ar0064-process-death-reconcile` | `ar0064-process-death-reconcile` | `516743cf6659` | 0 | behind 116, ahead 0 |
