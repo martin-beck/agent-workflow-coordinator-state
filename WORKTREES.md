@@ -441,7 +441,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0022` | `ar0022-oracle-gates` | `9618f20e2f70` | 1 | behind 552, ahead 1 |
 | changed files | - | - | - | `formal/oracle/OracleInteractionGates.tla` |
 | `awc-ar0023` | `ar0009-release-signer-format` | `8d60c00f737a` | 0 | behind 515, ahead 0 |
-| `awc-ar0064-clean` | `DETACHED` | `bd1f0ebe8494` | 0 | behind 0, ahead 0 |
+| `awc-ar0064-clean` | `DETACHED` | `f7bf490b5fd3` | 0 | behind 0, ahead 1 |
 | `awc-ar8-1b112a3` | `DETACHED` | `1b112a363ee4` | 0 | behind 1685, ahead 0 |
 | `awc-ar8-1f22acc` | `DETACHED` | `1f22acc0f527` | 0 | behind 1687, ahead 0 |
 | `awc-ar8-29eea5f` | `DETACHED` | `29eea5fc3996` | 0 | behind 1689, ahead 0 |
