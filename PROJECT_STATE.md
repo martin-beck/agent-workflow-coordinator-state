@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1011 | `ar0064-typed-rollback-evidence@96f2065d3fa0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(formal): allow isolated TLC admission locks |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35930271617 | `96f2065d3fa0` | pull_request | Verify | in_progress:- |
 | 35929512465 | `7c3c68fe3af4` | push | Verify | completed:success |
 | 35929512454 | `7c3c68fe3af4` | push | Formal | completed:success |
 | 35929463279 | `063ba656821c` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35927264038 | `c118ffcf9a96` | pull_request | Verify | completed:success |
 | 35926529919 | `21a73a3d10f6` | push | Formal | completed:success |
 | 35926529913 | `21a73a3d10f6` | push | Verify | completed:success |
-| 35926358011 | `352ea079ee01` | pull_request | Verify | completed:success |
