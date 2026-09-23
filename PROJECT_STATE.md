@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `2745e18b0d6ac8d183971f1b63bfb18530638185`
-- Local origin/main: `46fd7f59668722beb251ef9e270c7d9d8f421bb3`
-- Primary worktree head: `35ec43f98e524db767a308ff9c5ec0906c7f6574`
+- Product remote main: `37ae2eb1df3b947e06943221dcc9c09299772c4a`
+- Local origin/main: `37ae2eb1df3b947e06943221dcc9c09299772c4a`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
@@ -20,20 +20,21 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #922 | `ar0062-authority-commit-apply-gate@9ee93ec501f7` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(sqlite): classify post-commit identity drift |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35562704835 | `cc674f87f498` | pull_request | Verify | completed:success |
-| 35562701080 | `2745e18b0d6a` | push | Formal | completed:success |
-| 35562701051 | `2745e18b0d6a` | push | Verify | completed:success |
-| 35562686598 | `cc674f87f498` | workflow_dispatch | Formal | completed:skipped |
-| 35562575054 | `cc674f87f498` | workflow_dispatch | Verify | completed:success |
-| 35562324832 | `b8413fe1b4d2` | push | Verify | completed:failure |
-| 35562324820 | `b8413fe1b4d2` | push | Formal | completed:success |
-| 35562281346 | `81f0f77be230` | pull_request | Verify | completed:success |
-| 35562049385 | `b8825601c482` | push | Formal | completed:success |
-| 35562049333 | `b8825601c482` | push | Verify | completed:success |
-| 35561938462 | `d2c9a30bfc3e` | pull_request | Verify | completed:success |
-| 35561677071 | `6016785a090d` | push | Formal | completed:success |
+| 35829418394 | `9ee93ec501f7` | pull_request | Verify | in_progress:- |
+| 35824153673 | `37ae2eb1df3b` | push | Verify | completed:success |
+| 35824153648 | `37ae2eb1df3b` | push | Formal | completed:success |
+| 35824016397 | `95b7856c471b` | pull_request | Verify | completed:success |
+| 35823872913 | `d4d9b94786a0` | pull_request | Verify | completed:failure |
+| 35823651543 | `f1366fe8bece` | push | Formal | completed:success |
+| 35823651534 | `f1366fe8bece` | push | Verify | completed:success |
+| 35823616747 | `59721bff1267` | workflow_dispatch | Verify | completed:success |
+| 35823611900 | `59721bff1267` | pull_request | Verify | completed:success |
+| 35823550465 | `842fc5fa1fda` | push | Verify | completed:failure |
+| 35823550464 | `842fc5fa1fda` | push | Formal | completed:success |
+| 35823500462 | `15d110232e5a` | workflow_dispatch | Verify | completed:failure |
