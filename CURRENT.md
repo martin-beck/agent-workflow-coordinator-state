@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Implement the next bounded Python-to-TLA correspondence slice for FinishWrite and MarkAmbiguous: bind immutable receipt identity, journal outcome, and write-closed recovery to exact model-action assertions; keep mutation, rollback, and release denied. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Add bounded correspondence for rejection and ambiguous-recovery traces across direct and integrated journal paths, including stale-fence denial; keep mutation, rollback, and release denied. | codex-awc-ar0064-20260923p |
 
 ## Open
 
