@@ -20,12 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #989 | `ar0064-receipt-journal-equivalence@5c3ba059df9c` | `main` | DIRTY | - | fix(sqlite): fence filesystem ambiguity outcomes |
+| #989 | `ar0064-receipt-journal-equivalence@bd24fab56078` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(sqlite): fence filesystem ambiguity outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35909105478 | `bd24fab56078` | pull_request | Verify | in_progress:- |
 | 35908487451 | `caa603bba5dd` | push | Verify | completed:success |
 | 35908487441 | `caa603bba5dd` | push | Formal | completed:success |
 | 35908201376 | `47cb6f89d6b9` | pull_request | Verify | completed:success |
@@ -37,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35906697190 | `1e6f458c981a` | pull_request | Verify | completed:success |
 | 35905540290 | `85d11e14a3a4` | push | Formal | completed:success |
 | 35905540193 | `85d11e14a3a4` | push | Verify | completed:success |
-| 35905305268 | `3db885192ffa` | pull_request | Verify | completed:success |
