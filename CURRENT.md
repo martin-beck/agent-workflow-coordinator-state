@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the next not-proven refinement obligation after integrated recovery correspondence; prioritize the remaining lock/admission or Git mutation-boundary correspondence without enabling mutation, rollback, or release. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the next not-proven refinement obligation after lock-domain evidence correspondence; prioritize the remaining Git mutation-boundary correspondence without enabling mutation, rollback, or release. | codex-awc-ar0064-20260923p |
 
 ## Open
 
