@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #1008 | `ar0064-admission-type-fence@c118ffcf9a96` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix(auth): fail closed on malformed admission identities |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35927264038 | `c118ffcf9a96` | pull_request | Verify | in_progress:- |
 | 35926529919 | `21a73a3d10f6` | push | Formal | completed:success |
 | 35926529913 | `21a73a3d10f6` | push | Verify | completed:success |
 | 35926358011 | `352ea079ee01` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35924128874 | `1c36cd00e145` | pull_request | Verify | completed:success |
 | 35923155382 | `d6a40b030b46` | push | Formal | completed:success |
 | 35923155321 | `d6a40b030b46` | push | Verify | completed:success |
-| 35922950877 | `eb0471c4c625` | pull_request | Verify | completed:success |
