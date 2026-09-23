@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #1005 | `ar0064-receipt-outcome-ambiguity@1c36cd00e145` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | fix(mutation): classify drifted receipts as ambiguous |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35924128874 | `1c36cd00e145` | pull_request | Verify | queued:- |
 | 35923155382 | `d6a40b030b46` | push | Formal | completed:success |
 | 35923155321 | `d6a40b030b46` | push | Verify | completed:success |
 | 35922950877 | `eb0471c4c625` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35921196926 | `56cca6405687` | push | Formal | completed:success |
 | 35920998381 | `ba142ac4635b` | pull_request | Verify | completed:success |
 | 35920496185 | `5bd20840c9f9` | push | Formal | completed:success |
-| 35920496078 | `5bd20840c9f9` | push | Verify | completed:success |
