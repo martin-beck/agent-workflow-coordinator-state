@@ -20,13 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #998 | `ar0064-receipt-journal-equivalence@177037f86890` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | fix(git): reject repository path identity drift before effect |
+| #998 | `ar0064-receipt-journal-equivalence@177037f86890` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(git): reject repository path identity drift before effect |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35917188846 | `177037f86890` | pull_request | Verify | queued:- |
+| 35917188846 | `177037f86890` | pull_request | Verify | in_progress:- |
 | 35916636396 | `6c81f3173b68` | push | Verify | completed:success |
 | 35916636204 | `6c81f3173b68` | push | Formal | completed:success |
 | 35916402340 | `2020c0cf92ea` | pull_request | Verify | completed:success |
