@@ -20,13 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #995 | `ar0064-receipt-journal-equivalence@345934179f7a` | `main` | UNSTABLE | QUEUED:, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(sqlite): classify effect OSError as ambiguous |
+| #995 | `ar0064-receipt-journal-equivalence@345934179f7a` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SKIPPED | test(sqlite): classify effect OSError as ambiguous |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35914388151 | `345934179f7a` | pull_request | Verify | queued:- |
+| 35914388151 | `345934179f7a` | pull_request | Verify | completed:success |
 | 35913661969 | `8813eff99962` | push | Formal | completed:success |
 | 35913661780 | `8813eff99962` | push | Verify | completed:success |
 | 35913410466 | `345934179f7a` | pull_request | Verify | completed:success |
