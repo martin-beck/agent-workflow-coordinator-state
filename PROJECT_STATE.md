@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1013 | `ar0064-typed-rollback-evidence@169e83e44b16` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): reject invalid effects before journaling |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35931750319 | `169e83e44b16` | pull_request | Verify | in_progress:- |
 | 35931302406 | `d0bbb6d7ac97` | push | Formal | completed:success |
 | 35931302365 | `d0bbb6d7ac97` | push | Verify | completed:success |
 | 35931147193 | `657d5f22a7b1` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35929463279 | `063ba656821c` | pull_request | Verify | completed:success |
 | 35927826531 | `e4bb5538f0aa` | push | Verify | completed:success |
 | 35927826414 | `e4bb5538f0aa` | push | Formal | completed:success |
-| 35927636197 | `5d4c6910c8a2` | pull_request | Verify | completed:success |
