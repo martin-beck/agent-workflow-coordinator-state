@@ -20,13 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
-| #997 | `ar0064-receipt-journal-equivalence@2020c0cf92ea` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | fix(sqlite): reject symlinked authority paths before effect |
+| #997 | `ar0064-receipt-journal-equivalence@2020c0cf92ea` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(sqlite): reject symlinked authority paths before effect |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35916402340 | `2020c0cf92ea` | pull_request | Verify | queued:- |
+| 35916402340 | `2020c0cf92ea` | pull_request | Verify | completed:success |
 | 35915683427 | `33aa26163bd1` | push | Formal | completed:success |
 | 35915683271 | `33aa26163bd1` | push | Verify | completed:success |
 | 35915450405 | `293c00362f03` | pull_request | Verify | completed:success |
