@@ -20,11 +20,13 @@ Generated from local Git and GitHub. Do not edit.
 | #412 | `ar0007-executor-control-replacement@da98ee42ac2e` | `main` | DIRTY | - | test: reject control store replacement after effect failure |
 | #426 | `ar0007-executor-restore-control-symlink@75ebcc155760` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS | test: reject restore control symlink after failure |
 | #610 | `ar0012-availability-theorem@70919dd660ae` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SKIPPED | test(formal): require availability theorem admission |
+| #923 | `ar0064-authority-mutation-formal-refinement@a7751a610227` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | docs(formal): map SQLite authority mutation evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35830471787 | `a7751a610227` | pull_request | Verify | in_progress:- |
 | 35829565546 | `bd1f0ebe8494` | push | Formal | completed:success |
 | 35829565535 | `bd1f0ebe8494` | push | Verify | completed:success |
 | 35829418394 | `9ee93ec501f7` | pull_request | Verify | completed:success |
@@ -36,4 +38,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35823651534 | `f1366fe8bece` | push | Verify | completed:success |
 | 35823616747 | `59721bff1267` | workflow_dispatch | Verify | completed:success |
 | 35823611900 | `59721bff1267` | pull_request | Verify | completed:success |
-| 35823550465 | `842fc5fa1fda` | push | Verify | completed:failure |
