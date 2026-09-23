@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the remaining abstract backend/fence correspondence and any unbound dispatch model action; preserve read-only validation and keep mutation, rollback, and release disabled. | codex-awc-ar0064-20260923p |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit the remaining unbound Dispatch model action against the runtime bootstrap non-authorizing boundary; map only exact read-only evidence, otherwise keep Dispatch unproven and disabled, with mutation, rollback, and release disabled. | codex-awc-ar0064-20260923p |
 
 ## Open
 
