@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `514e1b7653848ea593256cb7dfd3ba80a43a2583`
+- Product remote main: `00b3c2fb325d802489e028ee0513d5bcae5af88a`
 - Local origin/main: `957adf09800eb9224870ab7dba89d7ae460ebb2c`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1028 | `ar0064-sqlite-effect-exception-fence@bc5c251df47e` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(git): classify termination runner failures as ambiguous |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35942778640 | `bc5c251df47e` | pull_request | Verify | in_progress:- |
+| 35942913704 | `00b3c2fb325d` | push | Verify | in_progress:- |
+| 35942913613 | `00b3c2fb325d` | push | Formal | in_progress:- |
+| 35942778640 | `bc5c251df47e` | pull_request | Verify | completed:success |
 | 35942452081 | `514e1b765384` | push | Verify | completed:success |
 | 35942452050 | `514e1b765384` | push | Formal | completed:success |
 | 35942312019 | `cd3df0e6c806` | workflow_dispatch | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35941403357 | `957adf09800e` | push | Verify | completed:success |
 | 35941250214 | `a72cee7f433f` | pull_request | Verify | completed:success |
 | 35940736365 | `df7ea69bb3aa` | push | Verify | completed:success |
-| 35940736361 | `df7ea69bb3aa` | push | Formal | completed:success |
-| 35940609912 | `41929d51db1f` | pull_request | Verify | completed:success |
