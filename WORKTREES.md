@@ -82,6 +82,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0008-backup-invariant` | `ar0008-rollback-backup-invariant` | `6bee19f1e94d` | 0 | behind 1480, ahead 0 |
 | `agent-workflow-coordinator-ar0008-selector-formal-audit` | `ar0008-selector-formal-audit` | `0545eb00b5ad` | 0 | behind 1981, ahead 0 |
 | `agent-workflow-coordinator-ar0009-release-contract` | `ar0009-release-contract` | `4789936344c9` | 0 | behind 1225, ahead 1 |
+| `agent-workflow-coordinator-ar0012-route-evidence-20260924q` | `ar0012-route-evidence-20260924q` | `f82467bfca14` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-ar0013-selector-adapter-fix` | `ar0013-selector-adapter-fix` | `7fd6bb418a6e` | 3 | behind 1984, ahead 0 |
 | changed files | - | - | - | `docs/SQLITE_MUTATION_ROUTE_INVENTORY.md`, `tests/test_upgrade_authority.py`, `tools/upgrade_authority.py` |
 | `agent-workflow-coordinator-ar0013-selector-publication-adapter` | `ar0013-dispatch-revalidation` | `2a4a704579c5` | 0 | behind 856, ahead 1 |
