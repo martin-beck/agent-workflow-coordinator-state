@@ -247,7 +247,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-reread-retry-next` | `ar0007-reread-second-failure` | `20fbad0598bd` | 0 | behind 1765, ahead 0 |
 | `agent-workflow-coordinator-retry-cleanup` | `ar0007-retry-cleanup` | `0df4b471c11a` | 0 | behind 1784, ahead 0 |
 | `agent-workflow-coordinator-role-assignment-contract` | `ar0066-role-assignment-contract` | `69b44fb8b26c` | 0 | behind 3, ahead 1 |
-| `agent-workflow-coordinator-role-management-cli` | `ar0068-role-management-cli` | `8d8078401404` | 0 | behind 0, ahead 1 |
+| `agent-workflow-coordinator-role-management-cli` | `ar0073-role-authorization-admission-on-claim,-update,-and-run` | `09ee64c455dc` | 0 | behind 0, ahead 2 |
 | `agent-workflow-coordinator-role-registry-schema-and-checker` | `main` | `4f65de0ad439` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-route-binding-audit` | `DETACHED` | `cf32d7e655ce` | 0 | behind 1968, ahead 1 |
 | `agent-workflow-coordinator-route-inventory-control` | `DETACHED` | `58b85ee4a11e` | 0 | behind 1971, ahead 1 |
