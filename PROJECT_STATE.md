@@ -10,7 +10,6 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1044 | `ar0064-authority-mutation-formal-refinement@c43cdbc25951` | `main` | DIRTY | - | fix(mutation): fence durable adapter binding |
 
 ## Recent workflows
 
