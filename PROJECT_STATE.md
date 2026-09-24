@@ -2,20 +2,21 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `741d274f8e719685461398f3c5edc64a373bf91e`
-- Local origin/main: `741d274f8e719685461398f3c5edc64a373bf91e`
+- Product remote main: `f7840ccbc5ecf767f4f1e742b4687aec828650b8`
+- Local origin/main: `f7840ccbc5ecf767f4f1e742b4687aec828650b8`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1037 | `ar0064-authority-mutation-formal-refinement@50a2b7460448` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence receipt inspection termination |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35949929160 | `f7840ccbc5ec` | push | Formal | in_progress:- |
+| 35949929147 | `f7840ccbc5ec` | push | Verify | in_progress:- |
 | 35949778919 | `50a2b7460448` | pull_request | Verify | completed:success |
 | 35949453304 | `741d274f8e71` | push | Formal | completed:success |
 | 35949453265 | `741d274f8e71` | push | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35948674876 | `389485aae524` | pull_request | Verify | completed:failure |
 | 35948583759 | `a7b482da35ed` | pull_request | Verify | completed:failure |
 | 35948124020 | `a50a5fc95646` | push | Formal | completed:success |
-| 35948123939 | `a50a5fc95646` | push | Verify | completed:success |
-| 35947979236 | `921b861257d5` | pull_request | Verify | completed:success |
