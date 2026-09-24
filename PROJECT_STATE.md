@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1059 | `ar0064-fresh-recovery-capability@3d955c89ec84` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(authority): require fresh capability after ambiguity |
+| #1059 | `ar0064-fresh-recovery-capability@3d955c89ec84` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): require fresh capability after ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35967304153 | `3d955c89ec84` | pull_request | Verify | in_progress:- |
+| 35967304153 | `3d955c89ec84` | pull_request | Verify | completed:success |
 | 35966501880 | `71c5baf494fb` | push | Verify | completed:success |
 | 35966501707 | `71c5baf494fb` | push | Formal | completed:success |
 | 35966333484 | `d36958a9afe8` | pull_request | Verify | completed:success |
