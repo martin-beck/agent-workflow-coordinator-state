@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `71c5baf494fb0531ad17366af38390ac3440df6b`
+- Product remote main: `7c200c335cad5cdeb1ccb4dc3747a577610fe09d`
 - Local origin/main: `71c5baf494fb0531ad17366af38390ac3440df6b`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1059 | `ar0064-fresh-recovery-capability@3d955c89ec84` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): require fresh capability after ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35967487467 | `7c200c335cad` | push | Formal | in_progress:- |
+| 35967487457 | `7c200c335cad` | push | Verify | in_progress:- |
 | 35967304153 | `3d955c89ec84` | pull_request | Verify | completed:success |
 | 35966501880 | `71c5baf494fb` | push | Verify | completed:success |
 | 35966501707 | `71c5baf494fb` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35965248642 | `2b94069bc924` | push | Verify | completed:success |
 | 35965248567 | `2b94069bc924` | push | Formal | completed:success |
 | 35965072633 | `d9ed55d68680` | pull_request | Verify | completed:success |
-| 35964859818 | `6fd668598a83` | pull_request | Verify | completed:failure |
-| 35964328569 | `736cf33bcc95` | push | Verify | completed:success |
