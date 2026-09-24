@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1060 | `ar0064-formal-provenance-current@0e9f7d1e4a0f` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix(formal): bind correspondence evidence to current revision |
+| #1060 | `ar0064-formal-provenance-current@0e9f7d1e4a0f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(formal): bind correspondence evidence to current revision |
 
 ## Recent workflows
 
