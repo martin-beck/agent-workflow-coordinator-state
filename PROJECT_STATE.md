@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1057 | `ar0064-independent-stale-owner@52a40d6a2315` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test(authority): cover independent stale-owner replacement |
+| #1057 | `ar0064-independent-stale-owner@52a40d6a2315` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): cover independent stale-owner replacement |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35965726875 | `52a40d6a2315` | pull_request | Verify | queued:- |
+| 35965726875 | `52a40d6a2315` | pull_request | Verify | completed:success |
 | 35965248642 | `2b94069bc924` | push | Verify | completed:success |
 | 35965248567 | `2b94069bc924` | push | Formal | completed:success |
 | 35965072633 | `d9ed55d68680` | pull_request | Verify | completed:success |
