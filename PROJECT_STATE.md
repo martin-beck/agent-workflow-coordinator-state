@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1033 | `ar0064-authority-mutation-formal-refinement@de329de6e077` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence Git identity command termination |
+| #1033 | `ar0064-authority-mutation-formal-refinement@de329de6e077` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence Git identity command termination |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35947082307 | `de329de6e077` | pull_request | Verify | in_progress:- |
+| 35947082307 | `de329de6e077` | pull_request | Verify | completed:success |
 | 35946614916 | `d9734fe51fdd` | push | Formal | completed:success |
 | 35946614912 | `d9734fe51fdd` | push | Verify | completed:success |
 | 35946398906 | `b07b489d25b1` | pull_request | Verify | completed:success |
