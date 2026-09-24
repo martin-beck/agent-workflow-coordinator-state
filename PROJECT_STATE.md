@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1043 | `ar0064-authority-mutation-formal-refinement@1111abfd4bb6` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence adapter capability binding |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35953839077 | `1111abfd4bb6` | pull_request | Verify | in_progress:- |
 | 35953162262 | `63b4250c04f9` | push | Verify | completed:success |
 | 35953162042 | `63b4250c04f9` | push | Formal | completed:success |
 | 35953027229 | `cabaccbb6ee0` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35951650519 | `135b12874542` | pull_request | Verify | completed:success |
 | 35951210740 | `a359cfe6cc78` | push | Formal | completed:success |
 | 35951210729 | `a359cfe6cc78` | push | Verify | completed:success |
-| 35951076714 | `f5b1f3ad2c11` | pull_request | Verify | completed:success |
