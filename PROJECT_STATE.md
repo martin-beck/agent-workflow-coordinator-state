@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1018 | `ar0064-format-repair@12117020a730` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | style(tests): satisfy formatter after adapter repair |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35936635533 | `12117020a730` | pull_request | Verify | in_progress:- |
 | 35936401458 | `fba390d142f1` | push | Verify | completed:failure |
 | 35936401446 | `fba390d142f1` | push | Formal | completed:success |
 | 35936290623 | `5fd8b03d7916` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35934085258 | `a33c5e26f282` | pull_request | Verify | completed:success |
 | 35933820287 | `a05000fd21e5` | pull_request | Verify | completed:failure |
 | 35933155354 | `51c84a2c3654` | push | Formal | completed:success |
-| 35933155317 | `51c84a2c3654` | push | Verify | completed:success |
