@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7c200c335cad5cdeb1ccb4dc3747a577610fe09d`
+- Product remote main: `967991a147aaab1f2079abd0efa1ab6beeded697`
 - Local origin/main: `7c200c335cad5cdeb1ccb4dc3747a577610fe09d`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1060 | `ar0064-formal-provenance-current@d153887f3185` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): bind correspondence evidence to current revision |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35968675849 | `967991a147aa` | push | Formal | in_progress:- |
+| 35968675765 | `967991a147aa` | push | Verify | in_progress:- |
 | 35968472848 | `d153887f3185` | pull_request | Verify | completed:success |
 | 35968301207 | `0e9f7d1e4a0f` | pull_request | Verify | completed:failure |
 | 35967487467 | `7c200c335cad` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35966333484 | `d36958a9afe8` | pull_request | Verify | completed:success |
 | 35965874995 | `30f1e77c1e67` | push | Verify | completed:success |
 | 35965874967 | `30f1e77c1e67` | push | Formal | completed:success |
-| 35965726875 | `52a40d6a2315` | pull_request | Verify | completed:success |
-| 35965248642 | `2b94069bc924` | push | Verify | completed:success |
