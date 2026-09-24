@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `415c069ede0ab7f6e3c48a434595db1c71e2896d`
+- Product remote main: `a625f8c61def3c2c95bb4f67c3f7041161e82326`
 - Local origin/main: `415c069ede0ab7f6e3c48a434595db1c71e2896d`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1049 | `ar0064-control-store-close-ambiguous@d3b59c25942b` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(control-store): classify close failures as ambiguous |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35957818162 | `a625f8c61def` | push | Verify | queued:- |
+| 35957818125 | `a625f8c61def` | push | Formal | in_progress:- |
 | 35957672287 | `d3b59c25942b` | pull_request | Verify | completed:success |
 | 35956560474 | `415c069ede0a` | push | Verify | completed:success |
 | 35956560469 | `415c069ede0a` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35953982832 | `76fba2a0fd2c` | push | Verify | completed:success |
 | 35953982825 | `76fba2a0fd2c` | push | Formal | completed:success |
 | 35953839077 | `1111abfd4bb6` | pull_request | Verify | completed:success |
-| 35953162262 | `63b4250c04f9` | push | Verify | completed:success |
-| 35953162042 | `63b4250c04f9` | push | Formal | completed:success |
