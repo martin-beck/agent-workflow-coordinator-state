@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `fdaa63c51f4e7323e3cc38257eb4bc01958f3cfe`
+- Product remote main: `dae7e3a47221419aea409f31ed7683d733c7ac0a`
 - Local origin/main: `fdaa63c51f4e7323e3cc38257eb4bc01958f3cfe`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1022 | `ar0064-prepare-evidence-map@55efbbfb6b06` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | chore(formal): bind journal preparation evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35938970254 | `55efbbfb6b06` | pull_request | Verify | in_progress:- |
+| 35939115793 | `dae7e3a47221` | push | Verify | in_progress:- |
+| 35939115719 | `dae7e3a47221` | push | Formal | in_progress:- |
+| 35938970254 | `55efbbfb6b06` | pull_request | Verify | completed:success |
 | 35938376544 | `fdaa63c51f4e` | push | Formal | completed:success |
 | 35938376395 | `fdaa63c51f4e` | push | Verify | completed:success |
 | 35938221402 | `80c1a6edff5b` | pull_request | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35937132536 | `e09277df110d` | push | Verify | completed:success |
 | 35937132505 | `e09277df110d` | push | Formal | completed:success |
 | 35936988553 | `6efcdd1a20ed` | pull_request | Verify | completed:success |
-| 35936695791 | `7156ae51637b` | push | Verify | completed:failure |
-| 35936695775 | `7156ae51637b` | push | Formal | completed:success |
