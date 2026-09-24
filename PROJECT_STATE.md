@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1055 | `ar0064-ambiguity-no-retry@d580bcff479e` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test(authority): prevent retries after ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35964170189 | `d580bcff479e` | pull_request | Verify | in_progress:- |
 | 35963676542 | `0f3087794168` | push | Verify | completed:success |
 | 35963676498 | `0f3087794168` | push | Formal | completed:success |
 | 35963507455 | `0007c3e2ff81` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35961708827 | `d9254da99485` | pull_request | Verify | completed:success |
 | 35960586313 | `649c61213f8f` | push | Formal | completed:success |
 | 35960586303 | `649c61213f8f` | push | Verify | completed:success |
-| 35960441009 | `3f564eea7bd7` | pull_request | Verify | completed:success |
