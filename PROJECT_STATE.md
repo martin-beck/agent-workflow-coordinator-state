@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1023 | `ar0064-journal-commit-boundary@f61c1ada401c` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence control-store preparation ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35939977510 | `f61c1ada401c` | pull_request | Verify | in_progress:- |
 | 35939115793 | `dae7e3a47221` | push | Verify | completed:success |
 | 35939115719 | `dae7e3a47221` | push | Formal | completed:success |
 | 35938970254 | `55efbbfb6b06` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35937637820 | `90d9d82f1a93` | pull_request | Verify | completed:success |
 | 35937132536 | `e09277df110d` | push | Verify | completed:success |
 | 35937132505 | `e09277df110d` | push | Formal | completed:success |
-| 35936988553 | `6efcdd1a20ed` | pull_request | Verify | completed:success |
