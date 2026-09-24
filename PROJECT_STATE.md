@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1060 | `ar0064-formal-provenance-current@0e9f7d1e4a0f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(formal): bind correspondence evidence to current revision |
+| #1060 | `ar0064-formal-provenance-current@0e9f7d1e4a0f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): bind correspondence evidence to current revision |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35968301207 | `0e9f7d1e4a0f` | pull_request | Verify | in_progress:- |
+| 35968301207 | `0e9f7d1e4a0f` | pull_request | Verify | completed:failure |
 | 35967487467 | `7c200c335cad` | push | Formal | completed:success |
 | 35967487457 | `7c200c335cad` | push | Verify | completed:success |
 | 35967304153 | `3d955c89ec84` | pull_request | Verify | completed:success |
