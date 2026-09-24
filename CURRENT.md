@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue AR-0064 with the remaining process-death, fsync/close, stale-owner, reopen/retry, and ambiguity refinement audit; keep public mutation/release/rollback/Dispatch disabled. | codex-awc-ar0064-20260924q |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit and repair the next concrete authority-effect boundary, prioritizing direct Git/SQLite durable-wrapper process-death and reopen evidence; keep public mutation/release/rollback/Dispatch disabled. | codex-awc-ar0064-20260924q |
 
 ## Open
 
