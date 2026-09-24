@@ -106,8 +106,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-effect-process-death` | `ar0064-effect-process-death` | `284b15db98ce` | 0 | behind 125, ahead 0 |
 | `agent-workflow-coordinator-ar0064-formal-effect-correspondence` | `ar0064-formal-effect-correspondence` | `65104547c1b9` | 0 | behind 123, ahead 0 |
 | `agent-workflow-coordinator-ar0064-integrated-effect-finish-death` | `ar0064-integrated-effect-finish-death` | `986b55d8e596` | 0 | behind 120, ahead 0 |
-| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-sqlite-effect-exception-fence` | `2f291de7a6d1` | 1 | behind 3, ahead 0 |
-| changed files | - | - | - | `formal/upgrade/v10-refinement-contract.json` |
+| `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-sqlite-effect-exception-fence` | `2f291de7a6d1` | 0 | behind 3, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-admission-bind` | `ar0064-lock-admission-bind` | `daec4ed818f5` | 0 | behind 140, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-recovery-correspondence` | `ar0064-lock-recovery-correspondence` | `648d92cca766` | 0 | behind 137, ahead 0 |
 | `agent-workflow-coordinator-ar0064-process-death-reconcile` | `ar0064-process-death-reconcile` | `516743cf6659` | 0 | behind 131, ahead 0 |
@@ -115,7 +114,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-stale-cas` | `ar0064-stale-cas-correspondence` | `16ef16608089` | 0 | behind 147, ahead 2 |
 | `agent-workflow-coordinator-authority-commit-apply-gate` | `ar0062-authority-commit-apply-gate` | `9ee93ec501f7` | 0 | behind 194, ahead 0 |
 | `agent-workflow-coordinator-authority-coverage` | `feature/upgrade-authority-coverage` | `bdef8c67057f` | 0 | behind 1905, ahead 0 |
-| `agent-workflow-coordinator-authority-mutation-formal-refinement` | `ar0064-authority-mutation-formal-refinement` | `7bed7fb32863` | 0 | behind 156, ahead 2 |
+| `agent-workflow-coordinator-authority-mutation-formal-refinement` | `ar0064-authority-mutation-formal-refinement` | `7bed7fb32863` | 39 | behind 156, ahead 2 |
+| changed files | - | - | - | `formal/handoffctl/attest.py`, `formal/upgrade/backend-fence-correspondence.json`, `formal/upgrade/evidence.json`, `formal/upgrade/refinement-map.md`, `formal/upgrade/refinement-obligations.json`, `formal/upgrade/v10-refinement-contract.json`, `tests/test_authority_effect_correspondence.py`, `tests/test_authority_mutation.py`, `tests/test_authority_neutral_commit.py`, `tests/test_authority_neutral_stage.py`, `tests/test_formal_evidence.py`, `tests/test_git_authority_adapter.py`, `tests/test_git_authority_mutation.py`, `tests/test_lock_domain_scope.py`, `tests/test_quality_edge_paths.py`, `tests/test_refinement_obligations.py`, `tests/test_rollback_control_store.py`, `tests/test_runtime_bootstrap.py`, `tests/test_sqlite_authority_adapter.py`, `tests/test_sqlite_authority_mutation.py`, `tests/test_sqlite_mutation_barrier.py`, `tests/test_tlc_runner.py`, `tests/test_upgrade_admission.py`, `tests/test_upgrade_engine.py`, `tests/test_upgrade_formal_evidence.py`, `tools/authority_effect_correspondence.py`, `tools/authority_mutation.py`, `tools/authority_neutral_commit.py`, `tools/git_authority_adapter.py`, `tools/git_authority_mutation.py`, `tools/lock_domain_correspondence.py`, `tools/lock_domain_scope.py`, `tools/rollback_control_store.py`, `tools/runtime_bootstrap.py`, `tools/sqlite_authority_adapter.py`, `tools/sqlite_authority_mutation.py`, `tools/tlc_runner.py`, `tools/upgrade_admission.py`, `tools/upgrade_engine.py` |
 | `agent-workflow-coordinator-barrier-caller` | `feature/ar0007-sqlite-sidecar-faults` | `36cd3ed24087` | 1 | behind 1853, ahead 0 |
 | changed files | - | - | - | `tests/test_rollback_control_store.py` |
 | `agent-workflow-coordinator-canonical-scope` | `ar0007-canonical-scope-boundary` | `9979977163e8` | 0 | behind 1698, ahead 0 |
