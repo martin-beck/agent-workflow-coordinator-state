@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1058 | `ar0064-pre-effect-process-death@d36958a9afe8` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(authority): cover pre-effect process death |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35966333484 | `d36958a9afe8` | pull_request | Verify | in_progress:- |
 | 35965874995 | `30f1e77c1e67` | push | Verify | completed:success |
 | 35965874967 | `30f1e77c1e67` | push | Formal | completed:success |
 | 35965726875 | `52a40d6a2315` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35964328553 | `736cf33bcc95` | push | Formal | completed:success |
 | 35964170189 | `d580bcff479e` | pull_request | Verify | completed:success |
 | 35963676542 | `0f3087794168` | push | Verify | completed:success |
-| 35963676498 | `0f3087794168` | push | Formal | completed:success |
