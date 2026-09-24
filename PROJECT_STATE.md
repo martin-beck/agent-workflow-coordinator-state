@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1051 | `ar0064-git-exact-head@8db59048106f` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | fix(git): require exact post-commit head identity |
+| #1051 | `ar0064-git-exact-head@8db59048106f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(git): require exact post-commit head identity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35960277204 | `8db59048106f` | pull_request | Verify | queued:- |
+| 35960277204 | `8db59048106f` | pull_request | Verify | completed:failure |
 | 35959780064 | `6246aaa173b0` | pull_request | Verify | completed:failure |
 | 35959581167 | `5f31b7ae1206` | pull_request | Verify | completed:failure |
 | 35958742604 | `1e14d4a8f1fe` | push | Formal | completed:success |
