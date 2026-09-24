@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 9 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
@@ -99,7 +99,7 @@ flowchart LR
         AR_0069["AR-0069 - Open"]:::status_open
         AR_0070["AR-0070 - Done"]:::status_done
         AR_0071["AR-0071 - Done"]:::status_done
-        AR_0072["AR-0072 - Open"]:::status_open
+        AR_0072["AR-0072 - In progress"]:::status_in_progress
         AR_0073["AR-0073 - Done"]:::status_done
         AR_0074["AR-0074 - Planned"]:::status_planned
         AR_0075["AR-0075 - Planned"]:::status_planned
@@ -338,7 +338,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (9)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | codex-awc-ar0072-20260924q | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
+
+### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -350,7 +356,6 @@ flowchart LR
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
-| P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Unclaimed | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
 
 ### Planned (7)
 
