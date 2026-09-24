@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. | codex-awc-ar0074-20260924q |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -104,6 +98,7 @@ Never edit this file directly.
 | P1 | [AR-0025](tasks/AR-0025.md): Cross-project oracle workflow integration | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. | - |
 | P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. | - |
 | P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. | - |
+| P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. | - |
 
 ## Superseded
 

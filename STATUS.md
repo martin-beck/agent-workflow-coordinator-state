@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 5 active status categories.
+**83 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 5 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 68 |
+| **Done** | Accepted, integrated, and durably verified | 69 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -101,7 +101,7 @@ flowchart LR
         AR_0071["AR-0071 - Done"]:::status_done
         AR_0072["AR-0072 - Done"]:::status_done
         AR_0073["AR-0073 - Done"]:::status_done
-        AR_0074["AR-0074 - In progress"]:::status_in_progress
+        AR_0074["AR-0074 - Done"]:::status_done
         AR_0075["AR-0075 - Planned"]:::status_planned
         AR_0076["AR-0076 - Done"]:::status_done
         AR_0077["AR-0077 - Planned"]:::status_planned
@@ -338,12 +338,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | codex-awc-ar0074-20260924q | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. |
-
 ### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -367,7 +361,7 @@ flowchart LR
 | P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
 | P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
 
-### Done (68)
+### Done (69)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -439,6 +433,7 @@ flowchart LR
 | P1 | [AR-0025](tasks/AR-0025.md): Cross-project oracle workflow integration | Unclaimed | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. |
 | P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Unclaimed | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
 | P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Unclaimed | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
+| P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | Unclaimed | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. |
 
 ### Superseded (1)
 
