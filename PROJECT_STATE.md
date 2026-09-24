@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1036 | `ar0064-authority-mutation-formal-refinement@6b931ad55a8c` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | fix(mutation): fence journal preparation termination |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35949318339 | `6b931ad55a8c` | pull_request | Verify | queued:- |
 | 35948990249 | `2fa6fc784087` | push | Verify | completed:success |
 | 35948990247 | `2fa6fc784087` | push | Formal | completed:success |
 | 35948838619 | `61644e65e15d` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35947758388 | `fefa81b6f538` | pull_request | Verify | completed:failure |
 | 35947248168 | `2fe6c4b9430b` | push | Verify | completed:success |
 | 35947248159 | `2fe6c4b9430b` | push | Formal | completed:success |
-| 35947082307 | `de329de6e077` | pull_request | Verify | completed:success |
