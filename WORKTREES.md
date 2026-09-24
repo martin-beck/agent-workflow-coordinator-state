@@ -109,6 +109,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-journal-identity-correspondence` | `ar0064-sqlite-effect-exception-fence` | `2f291de7a6d1` | 0 | behind 88, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-admission-bind` | `ar0064-lock-admission-bind` | `daec4ed818f5` | 0 | behind 225, ahead 0 |
 | `agent-workflow-coordinator-ar0064-lock-recovery-correspondence` | `ar0064-lock-recovery-correspondence` | `648d92cca766` | 0 | behind 222, ahead 0 |
+| `agent-workflow-coordinator-ar0064-post-effect-recovery-20260924q` | `ar0064-post-effect-recovery-20260924q` | `f82467bfca14` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-ar0064-process-death-reconcile` | `ar0064-process-death-reconcile` | `516743cf6659` | 0 | behind 216, ahead 0 |
 | `agent-workflow-coordinator-ar0064-reconcile-commit-fence` | `ar0064-reconcile-commit-fence` | `f6f91fdd8796` | 0 | behind 219, ahead 0 |
 | `agent-workflow-coordinator-ar0064-stale-cas` | `ar0064-stale-cas-correspondence` | `16ef16608089` | 0 | behind 232, ahead 2 |
