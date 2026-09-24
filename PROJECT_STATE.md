@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1019 | `ar0064-evidence-repair@6efcdd1a20ed` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | chore(formal): refresh upgrade evidence digest |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35936988553 | `6efcdd1a20ed` | pull_request | Verify | in_progress:- |
 | 35936695791 | `7156ae51637b` | push | Verify | completed:failure |
 | 35936695775 | `7156ae51637b` | push | Formal | completed:success |
 | 35936635533 | `12117020a730` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35934870119 | `254f6b500321` | pull_request | Verify | completed:success |
 | 35934251974 | `a01c4e888a0f` | push | Formal | completed:success |
 | 35934251912 | `a01c4e888a0f` | push | Verify | completed:success |
-| 35934085258 | `a33c5e26f282` | pull_request | Verify | completed:success |
