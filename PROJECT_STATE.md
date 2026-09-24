@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7f89ee4cb17ffd62a67df0cf02b0c898fabec007`
+- Product remote main: `caf389fbc56c0d4af6cba340f665e59dc179c26b`
 - Local origin/main: `7f89ee4cb17ffd62a67df0cf02b0c898fabec007`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1030 | `ar0064-authority-mutation-formal-refinement@156aedcd2dd0` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | docs(formal): reconcile authority refinement evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35945018195 | `caf389fbc56c` | push | Formal | in_progress:- |
+| 35945018194 | `caf389fbc56c` | push | Verify | in_progress:- |
 | 35944847711 | `156aedcd2dd0` | pull_request | Verify | completed:success |
 | 35944664166 | `7e05034a960b` | pull_request | Verify | completed:failure |
 | 35943514182 | `7f89ee4cb17f` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35942778640 | `bc5c251df47e` | pull_request | Verify | completed:success |
 | 35942452081 | `514e1b765384` | push | Verify | completed:success |
 | 35942452050 | `514e1b765384` | push | Formal | completed:success |
-| 35942312019 | `cd3df0e6c806` | workflow_dispatch | Verify | completed:success |
-| 35942298555 | `cd3df0e6c806` | pull_request | Verify | completed:success |
