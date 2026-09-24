@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `40e18b5f150cb9eb8bbfa6124ca48e104ac0cc24`
+- Product remote main: `de1d1001fb5c04157ef23de01f64e1b7004b7d51`
 - Local origin/main: `40e18b5f150cb9eb8bbfa6124ca48e104ac0cc24`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1062 | `ar0064-fresh-capability-formal-map@b2401f73fd81` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(formal): map fresh capability recovery evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35970422813 | `de1d1001fb5c` | push | Formal | in_progress:- |
+| 35970422764 | `de1d1001fb5c` | push | Verify | in_progress:- |
 | 35970226832 | `b2401f73fd81` | pull_request | Verify | completed:success |
 | 35969638118 | `40e18b5f150c` | push | Verify | completed:success |
 | 35969638095 | `40e18b5f150c` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35968301207 | `0e9f7d1e4a0f` | pull_request | Verify | completed:failure |
 | 35967487467 | `7c200c335cad` | push | Formal | completed:success |
 | 35967487457 | `7c200c335cad` | push | Verify | completed:success |
-| 35967304153 | `3d955c89ec84` | pull_request | Verify | completed:success |
-| 35966501880 | `71c5baf494fb` | push | Verify | completed:success |
