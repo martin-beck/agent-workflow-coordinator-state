@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 5 active status categories.
+**83 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 66 |
+| **Done** | Accepted, integrated, and durably verified | 67 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -99,7 +99,7 @@ flowchart LR
         AR_0069["AR-0069 - Open"]:::status_open
         AR_0070["AR-0070 - Done"]:::status_done
         AR_0071["AR-0071 - Done"]:::status_done
-        AR_0072["AR-0072 - In progress"]:::status_in_progress
+        AR_0072["AR-0072 - Done"]:::status_done
         AR_0073["AR-0073 - Done"]:::status_done
         AR_0074["AR-0074 - Planned"]:::status_planned
         AR_0075["AR-0075 - Planned"]:::status_planned
@@ -338,12 +338,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | codex-awc-ar0072-20260924q | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
-
 ### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -369,7 +363,7 @@ flowchart LR
 | P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
 | P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
 
-### Done (66)
+### Done (67)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -439,6 +433,7 @@ flowchart LR
 | P1 | [AR-0021](tasks/AR-0021.md): Reconcile issue #14 with verified AWQ adoption | Unclaimed | Issue #14 reconciled: AR-0001 and PR #20 already delivered the requested artifacts and profiles using newer AWQ v0.32.0; no duplicate or downgrade was needed. | Closed issue #14 after verified supersession; retain AR-0001 as the implementation record. |
 | P1 | [AR-0025](tasks/AR-0025.md): Cross-project oracle workflow integration | Unclaimed | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. |
 | P1 | [AR-0029](tasks/AR-0029.md): TUI cross-project integration acceptance | Unclaimed | Accept the reusable discussion TUI only through the three-project integration contract. | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
+| P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Unclaimed | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
 
 ### Superseded (1)
 
