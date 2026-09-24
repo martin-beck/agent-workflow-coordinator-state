@@ -10,7 +10,6 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1047 | `ar0064-durable-binding-rebased@7da020516dfc` | `main` | DIRTY | - | fix(sqlite): close post-commit verification connection |
 
 ## Recent workflows
 
