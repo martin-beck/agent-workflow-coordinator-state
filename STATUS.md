@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 9 |
+| **Planned** | Defined work awaiting promotion or dependencies | 8 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 65 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -108,7 +108,7 @@ flowchart LR
         AR_0078["AR-0078 - Planned"]:::status_planned
         AR_0079["AR-0079 - Done"]:::status_done
         AR_0080["AR-0080 - Done"]:::status_done
-        AR_0081["AR-0081 - Planned"]:::status_planned
+        AR_0081["AR-0081 - Open"]:::status_open
         AR_0082["AR-0082 - Planned"]:::status_planned
         AR_0083["AR-0083 - Planned"]:::status_planned
     end
@@ -338,7 +338,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -350,13 +350,13 @@ flowchart LR
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
+| P0 | [AR-0081](tasks/AR-0081.md): User directive record type | Unclaimed | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. | Implement the directive record type and precedence, then open a review PR. |
 
-### Planned (9)
+### Planned (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
-| P0 | [AR-0081](tasks/AR-0081.md): User directive record type | Unclaimed | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. | Implement the directive record type and precedence, then open a review PR. |
 | P0 | [AR-0083](tasks/AR-0083.md): Schema, migration, and doctor coverage for new record types | Unclaimed | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. | Extend migrations, doctor checks, and negative fixtures, then open a review PR. |
 | P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Unclaimed | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. |
 | P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | Unclaimed | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. |
