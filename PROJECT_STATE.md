@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1026 | `ar0064-sqlite-integrity-fence@869db893d783` | `main` | DIRTY | - | fix(sqlite): classify arbitrary effect failures as ambiguous |
 
 ## Recent workflows
 
