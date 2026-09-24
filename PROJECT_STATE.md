@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1035 | `ar0064-authority-mutation-formal-refinement@389485aae524` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence initial identity termination |
+| #1035 | `ar0064-authority-mutation-formal-refinement@61644e65e15d` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence initial identity termination |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35948838619 | `61644e65e15d` | pull_request | Verify | in_progress:- |
 | 35948674876 | `389485aae524` | pull_request | Verify | completed:failure |
 | 35948583759 | `a7b482da35ed` | pull_request | Verify | completed:failure |
 | 35948124020 | `a50a5fc95646` | push | Formal | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35947082307 | `de329de6e077` | pull_request | Verify | completed:success |
 | 35946614916 | `d9734fe51fdd` | push | Formal | completed:success |
 | 35946614912 | `d9734fe51fdd` | push | Verify | completed:success |
-| 35946398906 | `b07b489d25b1` | pull_request | Verify | completed:success |
