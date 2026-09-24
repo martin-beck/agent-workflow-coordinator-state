@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1025 | `ar0064-sqlite-integrity-fence@a72cee7f433f` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix(sqlite): fence post-commit integrity ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35941250214 | `a72cee7f433f` | pull_request | Verify | in_progress:- |
 | 35940736365 | `df7ea69bb3aa` | push | Verify | completed:success |
 | 35940736361 | `df7ea69bb3aa` | push | Formal | completed:success |
 | 35940609912 | `41929d51db1f` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35938970254 | `55efbbfb6b06` | pull_request | Verify | completed:success |
 | 35938376544 | `fdaa63c51f4e` | push | Formal | completed:success |
 | 35938376395 | `fdaa63c51f4e` | push | Verify | completed:success |
-| 35938221402 | `80c1a6edff5b` | pull_request | Verify | completed:success |
