@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1064 | `ar0064-lock-transition-semantics@5d1e0d2a30f0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): bind lock transitions to model semantics |
+| #1064 | `ar0064-lock-transition-semantics@5d1e0d2a30f0` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind lock transitions to model semantics |
 
 ## Recent workflows
 
