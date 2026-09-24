@@ -2,20 +2,21 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `30f1e77c1e67af8aad9d96aa9e22b797193fa837`
-- Local origin/main: `30f1e77c1e67af8aad9d96aa9e22b797193fa837`
+- Product remote main: `71c5baf494fb0531ad17366af38390ac3440df6b`
+- Local origin/main: `71c5baf494fb0531ad17366af38390ac3440df6b`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1058 | `ar0064-pre-effect-process-death@d36958a9afe8` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): cover pre-effect process death |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35966501880 | `71c5baf494fb` | push | Verify | in_progress:- |
+| 35966501707 | `71c5baf494fb` | push | Formal | in_progress:- |
 | 35966333484 | `d36958a9afe8` | pull_request | Verify | completed:success |
 | 35965874995 | `30f1e77c1e67` | push | Verify | completed:success |
 | 35965874967 | `30f1e77c1e67` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35964859818 | `6fd668598a83` | pull_request | Verify | completed:failure |
 | 35964328569 | `736cf33bcc95` | push | Verify | completed:success |
 | 35964328553 | `736cf33bcc95` | push | Formal | completed:success |
-| 35964170189 | `d580bcff479e` | pull_request | Verify | completed:success |
-| 35963676542 | `0f3087794168` | push | Verify | completed:success |
