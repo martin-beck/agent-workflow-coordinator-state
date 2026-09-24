@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0077](tasks/AR-0077.md): Pause and resume commands with session reload | Add pause (freeze session and lease) and resume --session REF (reload snapshot via exact-revision CAS blocked->open) with TLA+ coverage for crash-during-pause. | Implement pause/resume and crash-during-pause coverage, then open a review PR. | codex-awc-ar0077-20260924q |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -104,6 +98,7 @@ Never edit this file directly.
 | P1 | [AR-0072](tasks/AR-0072.md): Task hierarchy edges and rollup constraints | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. | Extend the task model with hierarchy edges and constraints, then open a review PR. | - |
 | P1 | [AR-0074](tasks/AR-0074.md): Stage-gate generalization in the gate command | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. | Generalize the gate command and extend negative tests, then open a review PR. | - |
 | P1 | [AR-0075](tasks/AR-0075.md): Hierarchical rollup projections | Extend render_status_views with company overview, per-role, and per-task drill-down pages, byte-stable and privacy-safe, keeping status_view opt-in. | Extend status projections with hierarchy pages, then open a review PR. | - |
+| P1 | [AR-0077](tasks/AR-0077.md): Pause and resume commands with session reload | Add pause (freeze session and lease) and resume --session REF (reload snapshot via exact-revision CAS blocked->open) with TLA+ coverage for crash-during-pause. | Implement pause/resume and crash-during-pause coverage, then open a review PR. | - |
 
 ## Superseded
 
