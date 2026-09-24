@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `0f3087794168c8569a900a6e9c178caa3b6beea5`
+- Product remote main: `736cf33bcc952ee0956fb68646f9a0c326df8186`
 - Local origin/main: `0f3087794168c8569a900a6e9c178caa3b6beea5`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1055 | `ar0064-ambiguity-no-retry@d580bcff479e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): prevent retries after ambiguity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35964328569 | `736cf33bcc95` | push | Verify | in_progress:- |
+| 35964328553 | `736cf33bcc95` | push | Formal | in_progress:- |
 | 35964170189 | `d580bcff479e` | pull_request | Verify | completed:success |
 | 35963676542 | `0f3087794168` | push | Verify | completed:success |
 | 35963676498 | `0f3087794168` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35961899035 | `a230664d0660` | push | Formal | completed:success |
 | 35961899031 | `a230664d0660` | push | Verify | completed:success |
 | 35961708827 | `d9254da99485` | pull_request | Verify | completed:success |
-| 35960586313 | `649c61213f8f` | push | Formal | completed:success |
-| 35960586303 | `649c61213f8f` | push | Verify | completed:success |
