@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1049 | `ar0064-control-store-close-ambiguous@c7f2cbf59128` | `main` | DIRTY | - | fix(control-store): classify close failures as ambiguous |
 
 ## Recent workflows
 
