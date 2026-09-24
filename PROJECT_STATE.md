@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1030 | `ar0064-authority-mutation-formal-refinement@7e05034a960b` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | docs(formal): reconcile authority refinement evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35944664166 | `7e05034a960b` | pull_request | Verify | queued:- |
 | 35943514182 | `7f89ee4cb17f` | push | Formal | completed:success |
 | 35943514177 | `7f89ee4cb17f` | push | Verify | completed:success |
 | 35943371288 | `2f291de7a6d1` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35942312019 | `cd3df0e6c806` | workflow_dispatch | Verify | completed:success |
 | 35942298555 | `cd3df0e6c806` | pull_request | Verify | completed:success |
 | 35942094842 | `869db893d783` | workflow_dispatch | Verify | completed:success |
-| 35941403364 | `957adf09800e` | push | Formal | completed:success |
