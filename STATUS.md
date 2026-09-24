@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 12 |
+| **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 62 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -103,7 +103,7 @@ flowchart LR
         AR_0073["AR-0073 - Done"]:::status_done
         AR_0074["AR-0074 - Planned"]:::status_planned
         AR_0075["AR-0075 - Planned"]:::status_planned
-        AR_0076["AR-0076 - Planned"]:::status_planned
+        AR_0076["AR-0076 - Open"]:::status_open
         AR_0077["AR-0077 - Planned"]:::status_planned
         AR_0078["AR-0078 - Planned"]:::status_planned
         AR_0079["AR-0079 - Planned"]:::status_planned
@@ -338,7 +338,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -350,13 +350,13 @@ flowchart LR
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
+| P0 | [AR-0076](tasks/AR-0076.md): Durable work-session snapshot record | Unclaimed | Add a session record type capturing agent context digest, step state, artifact refs, and next action, appended on update/run with bounded, content-minimized storage. | Implement the session record type and replay path, then open a review PR. |
 
-### Planned (12)
+### Planned (11)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
-| P0 | [AR-0076](tasks/AR-0076.md): Durable work-session snapshot record | Unclaimed | Add a session record type capturing agent context digest, step state, artifact refs, and next action, appended on update/run with bounded, content-minimized storage. | Implement the session record type and replay path, then open a review PR. |
 | P0 | [AR-0079](tasks/AR-0079.md): Checkpoint command for task state and artifacts | Unclaimed | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. | Implement the checkpoint command and doctor verification, then open a review PR. |
 | P0 | [AR-0080](tasks/AR-0080.md): Coordinated rollback to a verified checkpoint | Unclaimed | Add rollback --checkpoint REF restoring coordinator state with coordinated Git revert via reconcile, fail-closed on divergence, using the upgrade-barrier concurrency blueprint. | Implement coordinated rollback and its failure matrix, then open a review PR. |
 | P0 | [AR-0081](tasks/AR-0081.md): User directive record type | Unclaimed | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. | Implement the directive record type and precedence, then open a review PR. |
