@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1063 | `ar0064-lock-model-correspondence@2f3d06b6fee5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind lock traces to model actions |
+| #1063 | `ar0064-lock-model-correspondence@2f3d06b6fee5` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(formal): bind lock traces to model actions |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35971084648 | `2f3d06b6fee5` | pull_request | Verify | in_progress:- |
+| 35971084648 | `2f3d06b6fee5` | pull_request | Verify | completed:success |
 | 35970422813 | `de1d1001fb5c` | push | Formal | completed:success |
 | 35970422764 | `de1d1001fb5c` | push | Verify | completed:success |
 | 35970226832 | `b2401f73fd81` | pull_request | Verify | completed:success |
