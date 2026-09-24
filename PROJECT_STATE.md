@@ -2,20 +2,21 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `736cf33bcc952ee0956fb68646f9a0c326df8186`
-- Local origin/main: `736cf33bcc952ee0956fb68646f9a0c326df8186`
+- Product remote main: `2b94069bc9249684ab944d58d9b81b41db99f23a`
+- Local origin/main: `2b94069bc9249684ab944d58d9b81b41db99f23a`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1056 | `ar0064-post-effect-admission-fence@d9ed55d68680` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(authority): fence post-effect admission drift |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35965248642 | `2b94069bc924` | push | Verify | in_progress:- |
+| 35965248567 | `2b94069bc924` | push | Formal | in_progress:- |
 | 35965072633 | `d9ed55d68680` | pull_request | Verify | completed:success |
 | 35964859818 | `6fd668598a83` | pull_request | Verify | completed:failure |
 | 35964328569 | `736cf33bcc95` | push | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35963507455 | `0007c3e2ff81` | pull_request | Verify | completed:success |
 | 35962576836 | `06815e8af02b` | push | Formal | completed:success |
 | 35962576809 | `06815e8af02b` | push | Verify | completed:success |
-| 35962401890 | `1d7fa70a8624` | pull_request | Verify | completed:success |
-| 35961899035 | `a230664d0660` | push | Formal | completed:success |
