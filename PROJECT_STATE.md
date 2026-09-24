@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1024 | `ar0064-journal-reopen-fence@41929d51db1f` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | fix(recovery): fence journal reopen uncertainty |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35940609912 | `41929d51db1f` | pull_request | Verify | queued:- |
 | 35940112049 | `4e325719aa5a` | push | Verify | completed:success |
 | 35940111995 | `4e325719aa5a` | push | Formal | completed:success |
 | 35939977510 | `f61c1ada401c` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35938221402 | `80c1a6edff5b` | pull_request | Verify | completed:success |
 | 35937693026 | `e416d431c112` | push | Verify | completed:failure |
 | 35937692982 | `e416d431c112` | push | Formal | completed:success |
-| 35937637820 | `90d9d82f1a93` | pull_request | Verify | completed:success |
