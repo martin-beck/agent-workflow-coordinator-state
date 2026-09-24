@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1032 | `ar0064-authority-mutation-formal-refinement@b07b489d25b1` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence identity reread termination |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35946398906 | `b07b489d25b1` | pull_request | Verify | in_progress:- |
 | 35945894856 | `c2219af87e0d` | push | Verify | completed:success |
 | 35945894825 | `c2219af87e0d` | push | Formal | completed:success |
 | 35945725276 | `e071f61f3f33` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35943514177 | `7f89ee4cb17f` | push | Verify | completed:success |
 | 35943371288 | `2f291de7a6d1` | pull_request | Verify | completed:success |
 | 35942913704 | `00b3c2fb325d` | push | Verify | completed:success |
-| 35942913613 | `00b3c2fb325d` | push | Formal | completed:success |
