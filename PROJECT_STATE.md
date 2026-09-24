@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `a230664d066068511c3cddf278eab42dea0ba82b`
+- Product remote main: `06815e8af02b1675d8b0c23271975c0037f969e6`
 - Local origin/main: `a230664d066068511c3cddf278eab42dea0ba82b`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1053 | `ar0064-sqlite-process-death-reopen@1d7fa70a8624` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(sqlite): cover independent process death reopen |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35962576836 | `06815e8af02b` | push | Formal | in_progress:- |
+| 35962576809 | `06815e8af02b` | push | Verify | in_progress:- |
 | 35962401890 | `1d7fa70a8624` | pull_request | Verify | completed:success |
 | 35961899035 | `a230664d0660` | push | Formal | completed:success |
 | 35961899031 | `a230664d0660` | push | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35960277204 | `8db59048106f` | pull_request | Verify | completed:failure |
 | 35959780064 | `6246aaa173b0` | pull_request | Verify | completed:failure |
 | 35959581167 | `5f31b7ae1206` | pull_request | Verify | completed:failure |
-| 35958742604 | `1e14d4a8f1fe` | push | Formal | completed:success |
-| 35958742505 | `1e14d4a8f1fe` | push | Verify | completed:success |
