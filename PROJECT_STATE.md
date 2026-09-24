@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1042 | `ar0064-authority-mutation-formal-refinement@cabaccbb6ee0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence sqlite adapter binding identity |
+| #1042 | `ar0064-authority-mutation-formal-refinement@cabaccbb6ee0` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence sqlite adapter binding identity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35953027229 | `cabaccbb6ee0` | pull_request | Verify | in_progress:- |
+| 35953027229 | `cabaccbb6ee0` | pull_request | Verify | completed:success |
 | 35952421203 | `ed26d42e188a` | push | Verify | completed:success |
 | 35952421192 | `ed26d42e188a` | push | Formal | completed:success |
 | 35952286466 | `b7054dcc123b` | pull_request | Verify | completed:success |
