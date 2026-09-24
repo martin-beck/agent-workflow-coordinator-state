@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1052 | `ar0064-git-process-death-reopen@6a69e06aa790` | `main` | DIRTY | - | test(git): cover independent process death reopen |
 
 ## Recent workflows
 
