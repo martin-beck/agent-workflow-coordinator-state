@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1053 | `ar0064-sqlite-process-death-reopen@1d7fa70a8624` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(sqlite): cover independent process death reopen |
+| #1053 | `ar0064-sqlite-process-death-reopen@1d7fa70a8624` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(sqlite): cover independent process death reopen |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35962401890 | `1d7fa70a8624` | pull_request | Verify | in_progress:- |
+| 35962401890 | `1d7fa70a8624` | pull_request | Verify | completed:success |
 | 35961899035 | `a230664d0660` | push | Formal | completed:success |
 | 35961899031 | `a230664d0660` | push | Verify | completed:success |
 | 35961708827 | `d9254da99485` | pull_request | Verify | completed:success |
