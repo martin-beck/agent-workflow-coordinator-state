@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1062 | `ar0064-fresh-capability-formal-map@fcc6b55a130f` | `main` | DIRTY | - | test(formal): map fresh capability recovery evidence |
 
 ## Recent workflows
 
