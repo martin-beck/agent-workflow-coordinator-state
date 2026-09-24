@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1063 | `ar0064-lock-model-correspondence@2f3d06b6fee5` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): bind lock traces to model actions |
+| #1063 | `ar0064-lock-model-correspondence@2f3d06b6fee5` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | test(formal): bind lock traces to model actions |
 
 ## Recent workflows
 
