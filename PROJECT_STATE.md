@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1027 | `ar0064-sqlite-effect-exception-fence@869db893d783` | `main` | DIRTY | - | fix(sqlite): classify arbitrary effect failures as ambiguous |
 
 ## Recent workflows
 
