@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1021 | `ar0064-journal-error-narrowing@80c1a6edff5b` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): preserve typed journal rejections |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35938221402 | `80c1a6edff5b` | pull_request | Verify | in_progress:- |
 | 35937693026 | `e416d431c112` | push | Verify | completed:failure |
 | 35937692982 | `e416d431c112` | push | Formal | completed:success |
 | 35937637820 | `90d9d82f1a93` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35936635533 | `12117020a730` | pull_request | Verify | completed:success |
 | 35936401458 | `fba390d142f1` | push | Verify | completed:failure |
 | 35936401446 | `fba390d142f1` | push | Formal | completed:success |
-| 35936290623 | `5fd8b03d7916` | pull_request | Verify | completed:success |
