@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1051 | `ar0064-git-exact-head@8db59048106f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(git): require exact post-commit head identity |
+| #1051 | `ar0064-git-exact-head@3f564eea7bd7` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(git): require exact post-commit head identity |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35960441009 | `3f564eea7bd7` | pull_request | Verify | in_progress:- |
 | 35960277204 | `8db59048106f` | pull_request | Verify | completed:failure |
 | 35959780064 | `6246aaa173b0` | pull_request | Verify | completed:failure |
 | 35959581167 | `5f31b7ae1206` | pull_request | Verify | completed:failure |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35957672287 | `d3b59c25942b` | pull_request | Verify | completed:success |
 | 35956560474 | `415c069ede0a` | push | Verify | completed:success |
 | 35956560469 | `415c069ede0a` | push | Formal | completed:success |
-| 35956417731 | `40fe37f99117` | pull_request | Verify | completed:success |
