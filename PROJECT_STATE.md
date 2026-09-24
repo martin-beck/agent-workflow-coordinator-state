@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `58417040bb908ed803ba3fc6ab73afc9aacb5977`
-- Local origin/main: `bee767d580b1a25deea3ab0f7882a48bf4ef548f`
+- Product remote main: `6848ca5bc801821c26065601b5e9a5f1a9a846fc`
+- Local origin/main: `58417040bb908ed803ba3fc6ab73afc9aacb5977`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -15,6 +15,9 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35995663598 | `6848ca5bc801` | push | Verify | completed:success |
+| 35995663560 | `6848ca5bc801` | push | Formal | completed:success |
+| 35995476639 | `f81aaf605b9c` | pull_request | Verify | completed:success |
 | 35993685571 | `58417040bb90` | push | Verify | completed:success |
 | 35993685488 | `58417040bb90` | push | Formal | completed:success |
 | 35993493411 | `8d2af18895cf` | pull_request | Verify | completed:success |
@@ -24,6 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35988903472 | `bdf28b65e1b7` | push | Formal | completed:success |
 | 35988903276 | `bdf28b65e1b7` | push | Verify | completed:success |
 | 35988733458 | `8d8078401404` | pull_request | Verify | completed:success |
-| 35988528308 | `4d19357faf80` | pull_request | Verify | completed:failure |
-| 35988320863 | `846419f56fa2` | pull_request | Verify | completed:failure |
-| 35986327592 | `4f65de0ad439` | push | Verify | completed:success |
