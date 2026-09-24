@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1031 | `ar0064-authority-mutation-formal-refinement@e071f61f3f33` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): classify admission reread termination |
+| #1031 | `ar0064-authority-mutation-formal-refinement@e071f61f3f33` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): classify admission reread termination |
 
 ## Recent workflows
 
