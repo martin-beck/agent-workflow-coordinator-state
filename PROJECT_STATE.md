@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1063 | `ar0064-lock-model-correspondence@8ac793acdb17` | `main` | DIRTY | - | test(formal): bind lock traces to model actions |
+| #1063 | `ar0064-lock-model-correspondence@2f3d06b6fee5` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): bind lock traces to model actions |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35971084648 | `2f3d06b6fee5` | pull_request | Verify | in_progress:- |
 | 35970422813 | `de1d1001fb5c` | push | Formal | completed:success |
 | 35970422764 | `de1d1001fb5c` | push | Verify | completed:success |
 | 35970226832 | `b2401f73fd81` | pull_request | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35968472848 | `d153887f3185` | pull_request | Verify | completed:success |
 | 35968301207 | `0e9f7d1e4a0f` | pull_request | Verify | completed:failure |
 | 35967487467 | `7c200c335cad` | push | Formal | completed:success |
-| 35967487457 | `7c200c335cad` | push | Verify | completed:success |
