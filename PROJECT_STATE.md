@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1030 | `ar0064-authority-mutation-formal-refinement@156aedcd2dd0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | docs(formal): reconcile authority refinement evidence |
+| #1030 | `ar0064-authority-mutation-formal-refinement@156aedcd2dd0` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | docs(formal): reconcile authority refinement evidence |
 
 ## Recent workflows
 
