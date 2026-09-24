@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1048 | `ar0064-sqlite-verification-close-rebased@40fe37f99117` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(sqlite): close post-commit verification connection |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35956417731 | `40fe37f99117` | pull_request | Verify | in_progress:- |
 | 35955289481 | `578d6c84cbc2` | push | Formal | completed:success |
 | 35955289466 | `578d6c84cbc2` | push | Verify | completed:success |
 | 35955137423 | `ba5576471d53` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35953027229 | `cabaccbb6ee0` | pull_request | Verify | completed:success |
 | 35952421203 | `ed26d42e188a` | push | Verify | completed:success |
 | 35952421192 | `ed26d42e188a` | push | Formal | completed:success |
-| 35952286466 | `b7054dcc123b` | pull_request | Verify | completed:success |
