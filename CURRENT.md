@@ -3,11 +3,16 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Exact product main 30ed06f release-readiness audit: 45 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy is explicit and hostile-tested; workflow validates candidate identity, fresh-clone contract/runbook determinism, source binding, artifact ownership/digests, and emits non-publishing tag commands. No new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. | codex-awc-ar0009-current-20260924t |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Exact product main 30ed06f release-readiness audit: 45 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy is explicit and hostile-tested; workflow validates candidate identity, fresh-clone contract/runbook determinism, source binding, artifact ownership/digests, and emits non-publishing tag commands. No new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 validation passes 1436 tests; v10 refinement contract already binds the SQLite route inventory and crash/recovery evidence. No distinct dependency-safe barrier/refinement seam found without enabling mutation or dispatch. | Keep the exact route inventory and crash/recovery evidence bound to the v10 contract; do not claim Python refinement or enable upgrade apply/rollback. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact main 30ed06f recovery-chain selector/runtime matrix passed 227 tests and 265 subtests across runtime bootstrap, selector authority/recovery, admission, engine, identity, campaign, contract, runbook, and lock scope. Existing hostile coverage remains complete; no new dependency-safe non-overlapping selector/runtime seam found without enabling mutation or dispatch. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. | - |
