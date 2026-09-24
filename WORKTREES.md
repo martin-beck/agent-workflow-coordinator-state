@@ -255,6 +255,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-route-rejection` | `feature/ar0007-mutation-route-rejection` | `32ed4b3649d3` | 0 | behind 1802, ahead 0 |
 | `agent-workflow-coordinator-session-binding2` | `feature/ar0007-session-binding2` | `88adbcede965` | 0 | behind 1812, ahead 0 |
 | `agent-workflow-coordinator-session-replacement` | `ar0007-session-replacement` | `c9817f585502` | 0 | behind 1794, ahead 0 |
+| `agent-workflow-coordinator-task-spec-schema-and-task-metadata-fields` | `ar0070-task-spec-schema-and-task-metadata-fields` | `8d2af18895cf` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-tlc-resource-bound` | `feature/tlc-resource-bound-reliability` | `e3ad0edb2318` | 0 | behind 1475, ahead 0 |
 | `agent-workflow-coordinator-typed-admission-interfaces` | `feature/typed-admission-interfaces` | `6f627248586d` | 0 | behind 1965, ahead 0 |
 | `agent-workflow-coordinator-upgrade-barrier` | `ar0024-ar0023-stacked` | `6a816519b85c` | 0 | behind 816, ahead 1 |
