@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 17 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 57 |
+| **Done** | Accepted, integrated, and durably verified | 58 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -94,7 +94,7 @@ flowchart LR
         AR_0064["AR-0064 - In progress"]:::status_in_progress
         AR_0065["AR-0065 - Done"]:::status_done
         AR_0066["AR-0066 - Done"]:::status_done
-        AR_0067["AR-0067 - In progress"]:::status_in_progress
+        AR_0067["AR-0067 - Done"]:::status_done
         AR_0068["AR-0068 - Planned"]:::status_planned
         AR_0069["AR-0069 - Planned"]:::status_planned
         AR_0070["AR-0070 - Planned"]:::status_planned
@@ -338,12 +338,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260924q | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
-| P0 | [AR-0067](tasks/AR-0067.md): Capability matrix semantics and formal specification | codex-awc-ar0067-20260924q | Formalize invariants (no mutation without role authorization, reviewer distinct from executor on one task, security tasks require the security role) in a TLA+ model mirroring coordinator transitions. | Draft the capability TLA+ model and invariant tests, then open a review PR. |
 
 ### Open (6)
 
@@ -378,7 +377,7 @@ flowchart LR
 | P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
 | P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
 
-### Done (57)
+### Done (58)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -432,6 +431,7 @@ flowchart LR
 | P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Unclaimed | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. |
 | P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 | P0 | [AR-0066](tasks/AR-0066.md): Role assignment contract | Unclaimed | Add role-assignment.schema.json binding the coordinator owner identity to one or more roles with expiry and evidence of authorization. | Draft role-assignment.schema.json and fixtures, then open a review PR. |
+| P0 | [AR-0067](tasks/AR-0067.md): Capability matrix semantics and formal specification | Unclaimed | Formalize invariants (no mutation without role authorization, reviewer distinct from executor on one task, security tasks require the security role) in a TLA+ model mirroring coordinator transitions. | Draft the capability TLA+ model and invariant tests, then open a review PR. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
