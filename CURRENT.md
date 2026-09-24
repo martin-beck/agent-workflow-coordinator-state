@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact main 30ed06f recovery-chain hostile matrix passed 267 tests and 105 subtests across SQLite authority adapter, storage, rollback control store, lock scope, and upgrade authority. Existing failure coverage remains complete; no new dependency-safe barrier/fencing seam found without enabling mutation or dispatch. | Bind the exact post-AR-0039 implementation route inventory and crash/recovery evidence to the v10 refinement contract; do not claim full Python refinement or enable upgrade apply/rollback. | codex-awc-ar0012-current-evidence-20260924s |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 validation passes 1436 tests; v10 refinement contract already binds the SQLite route inventory and crash/recovery evidence. No distinct dependency-safe barrier/refinement seam found without enabling mutation or dispatch. | Keep the exact route inventory and crash/recovery evidence bound to the v10 contract; do not claim Python refinement or enable upgrade apply/rollback. | codex-awc-ar0012-current-evidence-20260924s |
 
 ## Open
 
