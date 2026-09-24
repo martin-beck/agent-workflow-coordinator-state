@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `00b3c2fb325d802489e028ee0513d5bcae5af88a`
+- Product remote main: `7f89ee4cb17ffd62a67df0cf02b0c898fabec007`
 - Local origin/main: `957adf09800eb9224870ab7dba89d7ae460ebb2c`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1029 | `ar0064-sqlite-effect-exception-fence@2f291de7a6d1` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence verification termination outcomes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35943371288 | `2f291de7a6d1` | pull_request | Verify | in_progress:- |
+| 35943514182 | `7f89ee4cb17f` | push | Formal | in_progress:- |
+| 35943514177 | `7f89ee4cb17f` | push | Verify | queued:- |
+| 35943371288 | `2f291de7a6d1` | pull_request | Verify | completed:success |
 | 35942913704 | `00b3c2fb325d` | push | Verify | completed:success |
 | 35942913613 | `00b3c2fb325d` | push | Formal | completed:success |
 | 35942778640 | `bc5c251df47e` | pull_request | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35942298555 | `cd3df0e6c806` | pull_request | Verify | completed:success |
 | 35942094842 | `869db893d783` | workflow_dispatch | Verify | completed:success |
 | 35941403364 | `957adf09800e` | push | Formal | completed:success |
-| 35941403357 | `957adf09800e` | push | Verify | completed:success |
-| 35941250214 | `a72cee7f433f` | pull_request | Verify | completed:success |
