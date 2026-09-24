@@ -114,7 +114,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0064-stale-cas` | `ar0064-stale-cas-correspondence` | `16ef16608089` | 0 | behind 163, ahead 2 |
 | `agent-workflow-coordinator-authority-commit-apply-gate` | `ar0062-authority-commit-apply-gate` | `9ee93ec501f7` | 0 | behind 210, ahead 0 |
 | `agent-workflow-coordinator-authority-coverage` | `feature/upgrade-authority-coverage` | `bdef8c67057f` | 0 | behind 1921, ahead 0 |
-| `agent-workflow-coordinator-authority-mutation-formal-refinement` | `main` | `741d274f8e71` | 0 | behind 0, ahead 0 |
+| `agent-workflow-coordinator-authority-mutation-formal-refinement` | `ar0064-authority-mutation-formal-refinement` | `6b931ad55a8c` | 0 | behind 1, ahead 0 |
 | `agent-workflow-coordinator-barrier-caller` | `feature/ar0007-sqlite-sidecar-faults` | `36cd3ed24087` | 1 | behind 1869, ahead 0 |
 | changed files | - | - | - | `tests/test_rollback_control_store.py` |
 | `agent-workflow-coordinator-canonical-scope` | `ar0007-canonical-scope-boundary` | `9979977163e8` | 0 | behind 1714, ahead 0 |
