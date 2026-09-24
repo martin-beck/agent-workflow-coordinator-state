@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 6 |
+| **Open** | Dependency-ready and available to claim | 7 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 20 |
+| **Planned** | Defined work awaiting promotion or dependencies | 19 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 55 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -92,7 +92,7 @@ flowchart LR
         AR_0062["AR-0062 - Open"]:::status_open
         AR_0063["AR-0063 - Planned"]:::status_planned
         AR_0064["AR-0064 - In progress"]:::status_in_progress
-        AR_0065["AR-0065 - Planned"]:::status_planned
+        AR_0065["AR-0065 - Open"]:::status_open
         AR_0066["AR-0066 - Planned"]:::status_planned
         AR_0067["AR-0067 - Planned"]:::status_planned
         AR_0068["AR-0068 - Planned"]:::status_planned
@@ -344,7 +344,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260924q | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 
-### Open (6)
+### Open (7)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -354,13 +354,13 @@ flowchart LR
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
+| P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 
-### Planned (20)
+### Planned (19)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
-| P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 | P0 | [AR-0066](tasks/AR-0066.md): Role assignment contract | Unclaimed | Add role-assignment.schema.json binding the coordinator owner identity to one or more roles with expiry and evidence of authorization. | Draft role-assignment.schema.json and fixtures, then open a review PR. |
 | P0 | [AR-0067](tasks/AR-0067.md): Capability matrix semantics and formal specification | Unclaimed | Formalize invariants (no mutation without role authorization, reviewer distinct from executor on one task, security tasks require the security role) in a TLA+ model mirroring coordinator transitions. | Draft the capability TLA+ model and invariant tests, then open a review PR. |
 | P0 | [AR-0068](tasks/AR-0068.md): Role management CLI | Unclaimed | Implement roles assign&#124;list&#124;check&#124;remove with exact-revision CAS, mirroring handoffctl dispatch and validation style, with byte-stable output. | Implement the roles CLI commands and negative-path tests, then open a review PR. |
