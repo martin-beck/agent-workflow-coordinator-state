@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0080](tasks/AR-0080.md): Coordinated rollback to a verified checkpoint | Add rollback --checkpoint REF restoring coordinator state with coordinated Git revert via reconcile, fail-closed on divergence, using the upgrade-barrier concurrency blueprint. | Implement coordinated rollback and its failure matrix, then open a review PR. | codex-awc-ar0080-20260924q |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -97,6 +91,7 @@ Never edit this file directly.
 | P0 | [AR-0073](tasks/AR-0073.md): Role authorization admission on claim, update, and run | Extend claim/update/run admission to check role capability with fail-closed behavior for unknown or expired roles, extending the one-owner and one-active-task invariants to role scope. | Implement role admission checks and negative-path tests, then open a review PR. | - |
 | P0 | [AR-0076](tasks/AR-0076.md): Durable work-session snapshot record | Add a session record type capturing agent context digest, step state, artifact refs, and next action, appended on update/run with bounded, content-minimized storage. | Implement the session record type and replay path, then open a review PR. | - |
 | P0 | [AR-0079](tasks/AR-0079.md): Checkpoint command for task state and artifacts | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. | Implement the checkpoint command and doctor verification, then open a review PR. | - |
+| P0 | [AR-0080](tasks/AR-0080.md): Coordinated rollback to a verified checkpoint | Add rollback --checkpoint REF restoring coordinator state with coordinated Git revert via reconcile, fail-closed on divergence, using the upgrade-barrier concurrency blueprint. | Implement coordinated rollback and its failure matrix, then open a review PR. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
