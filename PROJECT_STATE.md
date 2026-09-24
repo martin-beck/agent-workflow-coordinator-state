@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1063 | `ar0064-lock-model-correspondence@8ac793acdb17` | `main` | DIRTY | - | test(formal): bind lock traces to model actions |
 
 ## Recent workflows
 
