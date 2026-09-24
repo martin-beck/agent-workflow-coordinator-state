@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1060 | `ar0064-formal-provenance-current@0e9f7d1e4a0f` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix(formal): bind correspondence evidence to current revision |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35968301207 | `0e9f7d1e4a0f` | pull_request | Verify | in_progress:- |
 | 35967487467 | `7c200c335cad` | push | Formal | completed:success |
 | 35967487457 | `7c200c335cad` | push | Verify | completed:success |
 | 35967304153 | `3d955c89ec84` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35965726875 | `52a40d6a2315` | pull_request | Verify | completed:success |
 | 35965248642 | `2b94069bc924` | push | Verify | completed:success |
 | 35965248567 | `2b94069bc924` | push | Formal | completed:success |
-| 35965072633 | `d9ed55d68680` | pull_request | Verify | completed:success |
