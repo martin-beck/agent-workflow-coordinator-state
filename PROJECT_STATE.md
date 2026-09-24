@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1022 | `ar0064-prepare-evidence-map@55efbbfb6b06` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | chore(formal): bind journal preparation evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35938970254 | `55efbbfb6b06` | pull_request | Verify | in_progress:- |
 | 35938376544 | `fdaa63c51f4e` | push | Formal | completed:success |
 | 35938376395 | `fdaa63c51f4e` | push | Verify | completed:success |
 | 35938221402 | `80c1a6edff5b` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35936988553 | `6efcdd1a20ed` | pull_request | Verify | completed:success |
 | 35936695791 | `7156ae51637b` | push | Verify | completed:failure |
 | 35936695775 | `7156ae51637b` | push | Formal | completed:success |
-| 35936635533 | `12117020a730` | pull_request | Verify | completed:success |
