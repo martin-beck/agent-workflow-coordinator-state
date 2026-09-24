@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | codex-awc-ar0069-20260924q | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Prepare the release manifest and downstream lock, then publish the reviewed release. |
+| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | codex-awc-ar0069-20260924q | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 
 ### Open (7)
 
