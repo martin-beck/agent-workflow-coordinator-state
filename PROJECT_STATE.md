@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1046 | `ar0064-durable-binding-rebased@ba5576471d53` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(mutation): fence durable adapter binding |
+| #1046 | `ar0064-durable-binding-rebased@ba5576471d53` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence durable adapter binding |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35955137423 | `ba5576471d53` | pull_request | Verify | in_progress:- |
+| 35955137423 | `ba5576471d53` | pull_request | Verify | completed:success |
 | 35953982832 | `76fba2a0fd2c` | push | Verify | completed:success |
 | 35953982825 | `76fba2a0fd2c` | push | Formal | completed:success |
 | 35953839077 | `1111abfd4bb6` | pull_request | Verify | completed:success |
