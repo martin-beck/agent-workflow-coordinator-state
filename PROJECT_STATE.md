@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1020 | `ar0064-journal-prepare-boundary@90d9d82f1a93` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence ambiguous journal preparation |
+| #1020 | `ar0064-journal-prepare-boundary@90d9d82f1a93` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, QUEUED: | fix(mutation): fence ambiguous journal preparation |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35937637820 | `90d9d82f1a93` | pull_request | Verify | in_progress:- |
+| 35937637820 | `90d9d82f1a93` | pull_request | Verify | queued:- |
 | 35937132536 | `e09277df110d` | push | Verify | completed:success |
 | 35937132505 | `e09277df110d` | push | Formal | completed:success |
 | 35936988553 | `6efcdd1a20ed` | pull_request | Verify | completed:success |
