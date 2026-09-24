@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 19 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 55 |
+| **Done** | Accepted, integrated, and durably verified | 56 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -92,7 +92,7 @@ flowchart LR
         AR_0062["AR-0062 - Open"]:::status_open
         AR_0063["AR-0063 - Planned"]:::status_planned
         AR_0064["AR-0064 - In progress"]:::status_in_progress
-        AR_0065["AR-0065 - In progress"]:::status_in_progress
+        AR_0065["AR-0065 - Done"]:::status_done
         AR_0066["AR-0066 - Planned"]:::status_planned
         AR_0067["AR-0067 - Planned"]:::status_planned
         AR_0068["AR-0068 - Planned"]:::status_planned
@@ -338,12 +338,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260924q | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
-| P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | codex-awc-ar0065-20260924q | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 
 ### Open (6)
 
@@ -380,7 +379,7 @@ flowchart LR
 | P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
 | P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
 
-### Done (55)
+### Done (56)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -432,6 +431,7 @@ flowchart LR
 | P0 | [AR-0058](tasks/AR-0058.md): Authenticated selector and runtime execution boundary | Unclaimed | Completed the authenticated selector and versioned runtime boundary on exact main: selector syntax and release identity, owner-only descriptor-bound manifest reads, source/tag/trust/vendor identity, no-follow path and ancestor checks, retained runtime descriptors, fixed-entrypoint dispatch admission, atomic selector publication, directory fsync ambiguity, subprocess death and recovery, and replacement rejection are covered by executable tests and formal evidence. Unverified code cannot dispatch; upgrade mutation remains disabled. | Claim dependency-ready AR-0059 and implement bounded executable mutation slices beginning with backup and durable outcome recording. |
 | P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Unclaimed | Completed the first bounded executable mutation slice: Git and SQLite backup paths enforce trusted session/authority identity, ordered barrier admission, destination containment, round-trip verification, durable outcome journaling, fsync/close uncertainty handling, process-death recovery, and retry/reopen evidence. Active coordinator state remains functional and unchanged by backup. Selector publication, runtime replacement, commit, apply, and rollback remain explicitly rejection-only for later independently reviewed gates. | Promote only the next separately reviewed selector/publication or runtime-replacement gate after exact formal correspondence; keep all unsupported mutation disabled. |
 | P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Unclaimed | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. |
+| P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
