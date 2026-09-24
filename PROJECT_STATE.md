@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1054 | `ar0064-sqlite-full-sync-evidence@997a17a3e0fd` | `main` | DIRTY | - | test(sqlite): prove full synchronous authority effects |
 
 ## Recent workflows
 
