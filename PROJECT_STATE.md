@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1053 | `ar0064-sqlite-process-death-reopen@79a75489d46c` | `main` | DIRTY | - | test(sqlite): cover independent process death reopen |
 
 ## Recent workflows
 
