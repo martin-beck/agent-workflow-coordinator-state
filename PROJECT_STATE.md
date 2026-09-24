@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1061 | `ar0064-stable-formal-provenance@efe73ccf9096` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(formal): retain stable evidence provenance across squash merges |
+| #1061 | `ar0064-stable-formal-provenance@efe73ccf9096` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): retain stable evidence provenance across squash merges |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35969463131 | `efe73ccf9096` | pull_request | Verify | in_progress:- |
+| 35969463131 | `efe73ccf9096` | pull_request | Verify | completed:success |
 | 35968675849 | `967991a147aa` | push | Formal | completed:success |
 | 35968675765 | `967991a147aa` | push | Verify | completed:failure |
 | 35968472848 | `d153887f3185` | pull_request | Verify | completed:success |
