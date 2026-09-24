@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1064 | `ar0064-lock-transition-semantics@5d1e0d2a30f0` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test(formal): bind lock transitions to model semantics |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35971815845 | `5d1e0d2a30f0` | pull_request | Verify | in_progress:- |
 | 35971275309 | `5ea62e552b43` | push | Verify | completed:success |
 | 35971275303 | `5ea62e552b43` | push | Formal | completed:success |
 | 35971084648 | `2f3d06b6fee5` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35969463131 | `efe73ccf9096` | pull_request | Verify | completed:success |
 | 35968675849 | `967991a147aa` | push | Formal | completed:success |
 | 35968675765 | `967991a147aa` | push | Verify | completed:failure |
-| 35968472848 | `d153887f3185` | pull_request | Verify | completed:success |
