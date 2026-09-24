@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e416d431c112b5466c9d577083467c6c49cfee35`
+- Product remote main: `fdaa63c51f4e7323e3cc38257eb4bc01958f3cfe`
 - Local origin/main: `e416d431c112b5466c9d577083467c6c49cfee35`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1021 | `ar0064-journal-error-narrowing@80c1a6edff5b` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): preserve typed journal rejections |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35938221402 | `80c1a6edff5b` | pull_request | Verify | in_progress:- |
+| 35938376544 | `fdaa63c51f4e` | push | Formal | in_progress:- |
+| 35938376395 | `fdaa63c51f4e` | push | Verify | in_progress:- |
+| 35938221402 | `80c1a6edff5b` | pull_request | Verify | completed:success |
 | 35937693026 | `e416d431c112` | push | Verify | completed:failure |
 | 35937692982 | `e416d431c112` | push | Formal | completed:success |
 | 35937637820 | `90d9d82f1a93` | pull_request | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35936695791 | `7156ae51637b` | push | Verify | completed:failure |
 | 35936695775 | `7156ae51637b` | push | Formal | completed:success |
 | 35936635533 | `12117020a730` | pull_request | Verify | completed:success |
-| 35936401458 | `fba390d142f1` | push | Verify | completed:failure |
-| 35936401446 | `fba390d142f1` | push | Formal | completed:success |
