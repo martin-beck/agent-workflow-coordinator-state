@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `76fba2a0fd2cfde6703cd09dfae8342633eaf228`
+- Product remote main: `578d6c84cbc22b492b127d072ca4454e81b4c04d`
 - Local origin/main: `76fba2a0fd2cfde6703cd09dfae8342633eaf228`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1046 | `ar0064-durable-binding-rebased@ba5576471d53` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence durable adapter binding |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35955289481 | `578d6c84cbc2` | push | Formal | in_progress:- |
+| 35955289466 | `578d6c84cbc2` | push | Verify | in_progress:- |
 | 35955137423 | `ba5576471d53` | pull_request | Verify | completed:success |
 | 35953982832 | `76fba2a0fd2c` | push | Verify | completed:success |
 | 35953982825 | `76fba2a0fd2c` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35952421203 | `ed26d42e188a` | push | Verify | completed:success |
 | 35952421192 | `ed26d42e188a` | push | Formal | completed:success |
 | 35952286466 | `b7054dcc123b` | pull_request | Verify | completed:success |
-| 35951810391 | `13f53c7af1a8` | push | Verify | completed:success |
-| 35951810241 | `13f53c7af1a8` | push | Formal | completed:success |
