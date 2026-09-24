@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 5 |
+| **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 69 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -102,7 +102,7 @@ flowchart LR
         AR_0072["AR-0072 - Done"]:::status_done
         AR_0073["AR-0073 - Done"]:::status_done
         AR_0074["AR-0074 - Done"]:::status_done
-        AR_0075["AR-0075 - Planned"]:::status_planned
+        AR_0075["AR-0075 - Open"]:::status_open
         AR_0076["AR-0076 - Done"]:::status_done
         AR_0077["AR-0077 - Planned"]:::status_planned
         AR_0078["AR-0078 - Planned"]:::status_planned
@@ -338,7 +338,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -350,13 +350,13 @@ flowchart LR
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
+| P1 | [AR-0075](tasks/AR-0075.md): Hierarchical rollup projections | Unclaimed | Extend render_status_views with company overview, per-role, and per-task drill-down pages, byte-stable and privacy-safe, keeping status_view opt-in. | Extend status projections with hierarchy pages, then open a review PR. |
 
-### Planned (5)
+### Planned (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
-| P1 | [AR-0075](tasks/AR-0075.md): Hierarchical rollup projections | Unclaimed | Extend render_status_views with company overview, per-role, and per-task drill-down pages, byte-stable and privacy-safe, keeping status_view opt-in. | Extend status projections with hierarchy pages, then open a review PR. |
 | P1 | [AR-0077](tasks/AR-0077.md): Pause and resume commands with session reload | Unclaimed | Add pause (freeze session and lease) and resume --session REF (reload snapshot via exact-revision CAS blocked-&gt;open) with TLA+ coverage for crash-during-pause. | Implement pause/resume and crash-during-pause coverage, then open a review PR. |
 | P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
 | P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
