@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `2b94069bc9249684ab944d58d9b81b41db99f23a`
+- Product remote main: `30f1e77c1e67af8aad9d96aa9e22b797193fa837`
 - Local origin/main: `2b94069bc9249684ab944d58d9b81b41db99f23a`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1057 | `ar0064-independent-stale-owner@52a40d6a2315` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(authority): cover independent stale-owner replacement |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 35965874995 | `30f1e77c1e67` | push | Verify | in_progress:- |
+| 35965874967 | `30f1e77c1e67` | push | Formal | in_progress:- |
 | 35965726875 | `52a40d6a2315` | pull_request | Verify | completed:success |
 | 35965248642 | `2b94069bc924` | push | Verify | completed:success |
 | 35965248567 | `2b94069bc924` | push | Formal | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35964170189 | `d580bcff479e` | pull_request | Verify | completed:success |
 | 35963676542 | `0f3087794168` | push | Verify | completed:success |
 | 35963676498 | `0f3087794168` | push | Formal | completed:success |
-| 35963507455 | `0007c3e2ff81` | pull_request | Verify | completed:success |
-| 35962576836 | `06815e8af02b` | push | Formal | completed:success |
