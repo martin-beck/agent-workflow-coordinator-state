@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1040 | `ar0064-authority-mutation-formal-refinement@135b12874542` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | fix(mutation): fence authority path normalization |
+| #1040 | `ar0064-authority-mutation-formal-refinement@135b12874542` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence authority path normalization |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35951650519 | `135b12874542` | pull_request | Verify | queued:- |
+| 35951650519 | `135b12874542` | pull_request | Verify | completed:success |
 | 35951210740 | `a359cfe6cc78` | push | Formal | completed:success |
 | 35951210729 | `a359cfe6cc78` | push | Verify | completed:success |
 | 35951076714 | `f5b1f3ad2c11` | pull_request | Verify | completed:success |
