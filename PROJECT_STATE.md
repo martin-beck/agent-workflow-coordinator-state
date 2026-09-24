@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7156ae51637bb082771521c4b8a74c50d153851d`
+- Product remote main: `e09277df110d4d4a7655add2407c8ecdb074fa43`
 - Local origin/main: `7156ae51637bb082771521c4b8a74c50d153851d`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1019 | `ar0064-evidence-repair@6efcdd1a20ed` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | chore(formal): refresh upgrade evidence digest |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35936988553 | `6efcdd1a20ed` | pull_request | Verify | in_progress:- |
+| 35937132536 | `e09277df110d` | push | Verify | in_progress:- |
+| 35937132505 | `e09277df110d` | push | Formal | in_progress:- |
+| 35936988553 | `6efcdd1a20ed` | pull_request | Verify | completed:success |
 | 35936695791 | `7156ae51637b` | push | Verify | completed:failure |
 | 35936695775 | `7156ae51637b` | push | Formal | completed:success |
 | 35936635533 | `12117020a730` | pull_request | Verify | completed:success |
@@ -26,5 +27,3 @@ Generated from local Git and GitHub. Do not edit.
 | 35935020623 | `f34b234b7df9` | push | Formal | completed:success |
 | 35935020582 | `f34b234b7df9` | push | Verify | completed:success |
 | 35934870119 | `254f6b500321` | pull_request | Verify | completed:success |
-| 35934251974 | `a01c4e888a0f` | push | Formal | completed:success |
-| 35934251912 | `a01c4e888a0f` | push | Verify | completed:success |
