@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260924q | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Audit remaining AR-0064 authority-mutation refinement gaps and keep public commit/apply/rollback/release/Dispatch disabled; do not promote AR-0063 until AR-0064 is terminal. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-awc-ar0064-20260924q | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue AR-0064 with the remaining process-death, fsync/close, stale-owner, reopen/retry, and ambiguity refinement audit; keep public mutation/release/rollback/Dispatch disabled. |
 
 ### Open (6)
 
