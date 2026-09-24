@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1054 | `ar0064-sqlite-full-sync-evidence@0007c3e2ff81` | `main` | UNSTABLE | QUEUED:, QUEUED: | test(sqlite): prove full synchronous authority effects |
+| #1054 | `ar0064-sqlite-full-sync-evidence@0007c3e2ff81` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test(sqlite): prove full synchronous authority effects |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35963507455 | `0007c3e2ff81` | pull_request | Verify | queued:- |
+| 35963507455 | `0007c3e2ff81` | pull_request | Verify | completed:success |
 | 35962576836 | `06815e8af02b` | push | Formal | completed:success |
 | 35962576809 | `06815e8af02b` | push | Verify | completed:success |
 | 35962401890 | `1d7fa70a8624` | pull_request | Verify | completed:success |
