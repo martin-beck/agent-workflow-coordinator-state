@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1037 | `ar0064-authority-mutation-formal-refinement@50a2b7460448` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | fix(mutation): fence receipt inspection termination |
+| #1037 | `ar0064-authority-mutation-formal-refinement@50a2b7460448` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(mutation): fence receipt inspection termination |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35949778919 | `50a2b7460448` | pull_request | Verify | queued:- |
+| 35949778919 | `50a2b7460448` | pull_request | Verify | completed:success |
 | 35949453304 | `741d274f8e71` | push | Formal | completed:success |
 | 35949453265 | `741d274f8e71` | push | Verify | completed:success |
 | 35949318339 | `6b931ad55a8c` | pull_request | Verify | completed:success |
