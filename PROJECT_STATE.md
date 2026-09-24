@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1061 | `ar0064-stable-formal-provenance@a95789120dda` | `main` | DIRTY | - | fix(formal): retain stable evidence provenance across squash merges |
 
 ## Recent workflows
 
