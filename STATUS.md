@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 7 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 16 |
 | **Future** | Deferred roadmap work | 0 |
@@ -95,7 +95,7 @@ flowchart LR
         AR_0065["AR-0065 - Done"]:::status_done
         AR_0066["AR-0066 - Done"]:::status_done
         AR_0067["AR-0067 - Done"]:::status_done
-        AR_0068["AR-0068 - Open"]:::status_open
+        AR_0068["AR-0068 - In progress"]:::status_in_progress
         AR_0069["AR-0069 - Planned"]:::status_planned
         AR_0070["AR-0070 - Planned"]:::status_planned
         AR_0071["AR-0071 - Planned"]:::status_planned
@@ -338,7 +338,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (8)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0068](tasks/AR-0068.md): Role management CLI | codex-awc-ar0068-20260924q | Implement roles assign&#124;list&#124;check&#124;remove with exact-revision CAS, mirroring handoffctl dispatch and validation style, with byte-stable output. | Implement the roles CLI commands and negative-path tests, then open a review PR. |
+
+### Open (7)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -349,7 +355,6 @@ flowchart LR
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
-| P0 | [AR-0068](tasks/AR-0068.md): Role management CLI | Unclaimed | Implement roles assign&#124;list&#124;check&#124;remove with exact-revision CAS, mirroring handoffctl dispatch and validation style, with byte-stable output. | Implement the roles CLI commands and negative-path tests, then open a review PR. |
 
 ### Planned (16)
 
