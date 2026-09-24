@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 9 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
@@ -106,7 +106,7 @@ flowchart LR
         AR_0076["AR-0076 - Done"]:::status_done
         AR_0077["AR-0077 - Planned"]:::status_planned
         AR_0078["AR-0078 - Planned"]:::status_planned
-        AR_0079["AR-0079 - Open"]:::status_open
+        AR_0079["AR-0079 - In progress"]:::status_in_progress
         AR_0080["AR-0080 - Planned"]:::status_planned
         AR_0081["AR-0081 - Planned"]:::status_planned
         AR_0082["AR-0082 - Planned"]:::status_planned
@@ -338,7 +338,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (9)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0079](tasks/AR-0079.md): Checkpoint command for task state and artifacts | codex-awc-ar0079-20260924q | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. | Implement the checkpoint command and doctor verification, then open a review PR. |
+
+### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -350,7 +356,6 @@ flowchart LR
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
-| P0 | [AR-0079](tasks/AR-0079.md): Checkpoint command for task state and artifacts | Unclaimed | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. | Implement the checkpoint command and doctor verification, then open a review PR. |
 
 ### Planned (10)
 
