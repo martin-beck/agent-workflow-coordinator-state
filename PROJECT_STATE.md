@@ -10,6 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1056 | `ar0064-post-effect-admission-fence@c0af5fc2fb07` | `main` | DIRTY | - | fix(authority): fence post-effect admission drift |
 
 ## Recent workflows
 
