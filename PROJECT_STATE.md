@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1032 | `ar0064-authority-mutation-formal-refinement@b07b489d25b1` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence identity reread termination |
+| #1032 | `ar0064-authority-mutation-formal-refinement@b07b489d25b1` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(mutation): fence identity reread termination |
 
 ## Recent workflows
 
