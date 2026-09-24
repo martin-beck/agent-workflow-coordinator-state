@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1046 | `ar0064-durable-binding-rebased@ba5576471d53` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix(mutation): fence durable adapter binding |
+| #1046 | `ar0064-durable-binding-rebased@ba5576471d53` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(mutation): fence durable adapter binding |
 
 ## Recent workflows
 
