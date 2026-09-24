@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1056 | `ar0064-post-effect-admission-fence@d9ed55d68680` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | fix(authority): fence post-effect admission drift |
+| #1056 | `ar0064-post-effect-admission-fence@d9ed55d68680` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(authority): fence post-effect admission drift |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 35965072633 | `d9ed55d68680` | pull_request | Verify | in_progress:- |
+| 35965072633 | `d9ed55d68680` | pull_request | Verify | completed:success |
 | 35964859818 | `6fd668598a83` | pull_request | Verify | completed:failure |
 | 35964328569 | `736cf33bcc95` | push | Verify | completed:success |
 | 35964328553 | `736cf33bcc95` | push | Formal | completed:success |
