@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 14 |
+| **Planned** | Defined work awaiting promotion or dependencies | 13 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 60 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -97,7 +97,7 @@ flowchart LR
         AR_0067["AR-0067 - Done"]:::status_done
         AR_0068["AR-0068 - Done"]:::status_done
         AR_0069["AR-0069 - Open"]:::status_open
-        AR_0070["AR-0070 - Planned"]:::status_planned
+        AR_0070["AR-0070 - Open"]:::status_open
         AR_0071["AR-0071 - Planned"]:::status_planned
         AR_0072["AR-0072 - Planned"]:::status_planned
         AR_0073["AR-0073 - Done"]:::status_done
@@ -338,7 +338,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -350,13 +350,13 @@ flowchart LR
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters intentionally reject commit/apply today; this child supplies the missing implementation and formal refinement without weakening fail-closed behavior. | Continue durable post-effect recovery and formal implementation-refinement evidence; keep public mutation/release/rollback/Dispatch disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
+| P0 | [AR-0070](tasks/AR-0070.md): Task-spec schema and task metadata fields | Unclaimed | Add task-spec.schema.json (acceptance predicates, Definition of Done, inputs/outputs, allowed and forbidden tools, required evidence classes, gate list) and task metadata fields spec_ref and spec_revision. | Draft the task-spec schema and metadata fields, then open a review PR. |
 
-### Planned (14)
+### Planned (13)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
-| P0 | [AR-0070](tasks/AR-0070.md): Task-spec schema and task metadata fields | Unclaimed | Add task-spec.schema.json (acceptance predicates, Definition of Done, inputs/outputs, allowed and forbidden tools, required evidence classes, gate list) and task metadata fields spec_ref and spec_revision. | Draft the task-spec schema and metadata fields, then open a review PR. |
 | P0 | [AR-0071](tasks/AR-0071.md): Spec-gated done admission | Unclaimed | Admission of status done requires a resolved task spec and a passed acceptance check, mirroring the superseded_by chain admission pattern. | Implement spec-gated done admission and negative fixtures, then open a review PR. |
 | P0 | [AR-0076](tasks/AR-0076.md): Durable work-session snapshot record | Unclaimed | Add a session record type capturing agent context digest, step state, artifact refs, and next action, appended on update/run with bounded, content-minimized storage. | Implement the session record type and replay path, then open a review PR. |
 | P0 | [AR-0079](tasks/AR-0079.md): Checkpoint command for task state and artifacts | Unclaimed | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. | Implement the checkpoint command and doctor verification, then open a review PR. |
