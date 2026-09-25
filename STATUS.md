@@ -5,18 +5,18 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 75 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
-| **Superseded** | Replaced by another AR | 1 |
+| **Superseded** | Replaced by another AR | 2 |
 
 ## Dependency graph
 
@@ -96,7 +96,7 @@ flowchart LR
         AR_0066["AR-0066 - Done"]:::status_done
         AR_0067["AR-0067 - Done"]:::status_done
         AR_0068["AR-0068 - Done"]:::status_done
-        AR_0069["AR-0069 - In progress"]:::status_in_progress
+        AR_0069["AR-0069 - Superseded"]:::status_superseded
         AR_0070["AR-0070 - Done"]:::status_done
         AR_0071["AR-0071 - Done"]:::status_done
         AR_0072["AR-0072 - Done"]:::status_done
@@ -337,12 +337,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | codex-model-policy-20260925 | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
-
 ### Open (6)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -434,8 +428,9 @@ flowchart LR
 | P1 | [AR-0078](tasks/AR-0078.md): Session restore on expired lease recovery | Unclaimed | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. | Extend recover-expired with session restore, then open a review PR. |
 | P1 | [AR-0082](tasks/AR-0082.md): Company board and metrics commands | Unclaimed | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. | Implement board/metrics commands and drift tests, then open a review PR. |
 
-### Superseded (1)
+### Superseded (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P1 | [AR-0034](tasks/AR-0034.md): Close SQLite barrier observation connections | Unclaimed | Repair leaked SQLite connections observed during the AR-0012 hostile barrier matrix. | Close every SQLite connection opened by barrier/control-store observations and add regression checks with warnings treated as failures. |
