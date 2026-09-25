@@ -12,10 +12,10 @@ records the largest finite process, task, actor, project, worktree, and revision
 their checked configurations. Each `.cfg` file remains authoritative for the exact bound of its
 model.
 
-The correspondence classification is `not-proven`. Passing TLC establishes the invariants and
+The correspondence classification is `best-effort`. Passing TLC establishes the invariants and
 temporal properties below only for the tracked TLA+ specifications under those finite bounds and
 assumptions. The implementation tests are separate evidence that selected Python behavior
-corresponds to the abstractions; neither evidence source proves implementation refinement or the
+corresponds to the abstractions; neither evidence source claims or requires implementation refinement or the
 correctness of Python, Git, SQLite, operating-system, kernel, filesystem, or arbitrary wrapped
 commands. The explicit assumptions, non-claims, and limitations in `formal/evidence.json` are part
 of this contract and must remain aligned with the configurations and runner.
@@ -23,20 +23,24 @@ of this contract and must remain aligned with the configurations and runner.
 ## Transition contract
 
 Every accepted lifecycle command increments `task_revision` exactly once and validates the result.
+Task hierarchy edges are reciprocal and acyclic; the bounded lifecycle model includes one parent
+with one child and rejects `release --status done` while that child is non-terminal. The Python
+validator additionally checks arbitrary task graphs and migration preservation.
 For Git authority, the task and generated projections update under the same repository lock and a
 detected pre-commit failure restores them. For SQLite authority, one database transaction commits
 the task first and generated projections are recoverable output. A rejected command leaves
-authoritative revision, task state and owner unchanged.
+authoritative revision, task status and owner unchanged.
 
 | Command | Required source | Required actor/revision | Result |
 | --- | --- | --- | --- |
 | `promote` | `planned`, unowned, dependencies done | exact revision | `open` |
-| `resume` | `blocked`, unowned | exact revision | `open` |
+| `pause` | `in_progress`, owned | exact revision and owner | `blocked`, ownership and lease cleared |
+| `resume` | `blocked`, unowned, paused session | exact revision and session reference | `open` |
 | `claim` | `open`, dependencies done | owner has no active task | `in_progress`, lease set |
 | `heartbeat` | `in_progress` | current owner, positive lease | lease renewed |
 | `update` | `in_progress` | current owner, exact revision | active fields updated |
 | `release` | `in_progress` | current owner | chosen non-active state, owner and lease cleared |
-| `recover-expired` | expired `in_progress` | exact revision | `open`, ownership cleared |
+| `recover-expired` | expired `in_progress` with a valid session | exact revision | `open`, ownership cleared, session restored |
 | `run` record | `in_progress`, unexpired | owner and current revision | bounded result recorded |
 
 `release --status` currently accepts every schema status other than
@@ -85,6 +89,7 @@ readers, a competing writer, and bounded lock-wait timeout. TLC checks:
 - coherent ownership and at most one active task per actor;
 - no lost or duplicate accepted mutation through exact revision accounting;
 - atomic task/projection revision advancement and rollback;
+- reciprocal, bounded acyclic parent/child edges and done-rollup admission;
 - rejection of invalid source, owner, dependency, and revision combinations;
 - timeout without state mutation when another process holds the lock;
 - acceptance of eligible recovery despite simultaneous expiries and an unrelated repository
@@ -140,19 +145,6 @@ The focused implementation tests exercise the real `flock`, atomic replacement,
 rollback, concurrent mutation/reconciliation, revision fencing, ownership and
 generated-view behavior. The model and tests must both pass before a
 `handoffctl` change is accepted.
-
-## Human TUI handoff
-
-An AR may carry an `oracle_gate.human_session` record when a Guidance
-decision request is being presented through the human TUI. The record binds
-the session to the AR revision and contains the AWG request reference, the
-activation reason (`user-decision`, `user-detail-request`,
-`user-proposal-review`, `agent-uncertainty`, or `policy-required-approval`),
-and the TUI contract version. Opening a gate with partial session metadata is
-rejected. Resolving with an accepted disposition marks the session
-`resolved`; a clarification or other non-authorizing disposition remains
-`clarification_requested` and keeps the gate blocking autonomous lifecycle
-operations. Coordinator remains the only writer of the durable AR state.
 
 ## CI scope
 
