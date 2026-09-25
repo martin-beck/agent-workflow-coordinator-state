@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Published unsigned v0.3.23 and consumed it in canonical state. The vendor manifest pins exact merge 37138c3b4aa05c0fe798c0f92da0711db277f657; offline runtime imports, vendor verification, reconciliation, signed/DCO state publication, and doctor --live pass. Remaining acceptance is the post-publication process-death/stale-owner rollback matrix. | Run the canonical v0.3.23 vendored checkout through process-death and stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback; keep mutation dispatch fail-closed until those exact-head results are recorded. | codex-model-policy-20260925 |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Published unsigned v0.3.25 and consumed it in canonical state. The vendor manifest pins exact release commit b5dcd924e967d9f2ee67fecab0f9e43aff437f6b; canonical vendor verification, 139 state tests, offline runtime imports, signed/DCO state publication, and doctor --live pass. Independent exact-head review and hosted checks passed. Remaining acceptance is the post-publication process-death/stale-owner rollback matrix. | Run the canonical v0.3.25 vendored checkout through process-death and stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback; keep mutation dispatch fail-closed until those exact-head results are recorded. | codex-model-policy-20260925 |
 
 ## Open
 
