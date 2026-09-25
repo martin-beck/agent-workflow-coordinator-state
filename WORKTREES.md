@@ -134,7 +134,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-coordinated-rollback-to-a-verified-checkpoint` | `ar0080-coordinated-rollback-to-a-verified-checkpoint` | `5d01d521514d` | 0 | behind 17, ahead 3 |
 | `agent-workflow-coordinator-coverage-repair` | `feature/coverage-repair-79` | `a8ef7efd19a3` | 0 | behind 1931, ahead 0 |
 | `agent-workflow-coordinator-crash-recheck` | `feature/ar0007-crash-recheck` | `3c1030102f54` | 0 | behind 1822, ahead 0 |
-| `agent-workflow-coordinator-current-main-audit` | `ar0064-refresh-authority-evidence` | `df4cdf1622d9` | 0 | behind 1, ahead 1 |
+| `agent-workflow-coordinator-current-main-audit` | `DETACHED` | `586b51f89e45` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-durable-work-session-snapshot-record` | `ar0076-durable-work-session-snapshot-record` | `9158a9a1dfcc` | 0 | behind 19, ahead 1 |
 | `agent-workflow-coordinator-fast-tier-routing` | `ar0019-fast-tier-routing` | `28e76ae7a870` | 0 | behind 1429, ahead 0 |
 | `agent-workflow-coordinator-fix-vendor-version-alignment` | `ar0007-fix-vendor-version-alignment` | `7a6fcbda454d` | 0 | behind 1610, ahead 1 |
