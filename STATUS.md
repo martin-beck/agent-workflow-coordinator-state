@@ -341,7 +341,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the public rollback dispatcher around the existing bound engine/adapter capabilities; keep forward apply, selector/runtime replacement, and release publication fail-closed until their separate failure matrices pass. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Define and implement an explicit contract-to-runtime binding record for rollback dispatch, carrying project, authority, artifact, manifest, selector, runtime, barrier, and fencing identities; verify it independently before wiring public rollback, while keeping apply/release fail-closed. |
 
 ### Open (5)
 
