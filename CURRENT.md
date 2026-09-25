@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Run the fresh-clone v0.3.22-to-current candidate through the stable bootstrap with a provisioned state root, then add or run process-death/stale-owner cases at each journal, barrier, selector, backup, restore, validation, and reopen durability boundary; keep apply, rollback mutation, and release publication fail-closed. | codex-model-policy-20260925 |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Fresh local v0.3.23 candidate now has aligned release identity and a complete vendor closure. Clean state checkout imported runtime_bootstrap, upgrade_authority, and admission_lease offline after vendoring; generated state reconciliation and live doctor passed. Public immutable tag and end-to-end rollback continuity remain unproven and stay fail-closed. | After the operational gate permits publication, create the immutable v0.3.23 tag, refresh the canonical state snapshot from that exact tag, then run process-death/stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback. | codex-model-policy-20260925 |
 
 ## Open
 
