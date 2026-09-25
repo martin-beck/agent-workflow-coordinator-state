@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Run and independently verify the complete fresh-clone first-release campaign: generated prerequisites/runbooks, unsigned tag identity, old/new runtime continuity, reconciliation, rollback evidence, hosted exact-head gates, and live doctor; keep public mutation and release publication disabled until every acceptance item passes. | codex-model-policy-20260925 |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Independently review and reconcile the fresh-clone campaign evidence against the AR-0063 acceptance matrix; keep the campaign diagnostic and all public mutation/release routes fail-closed until an authorized released coordinator and complete runtime/rollback evidence exist. | codex-model-policy-20260925 |
 
 ## Open
 
