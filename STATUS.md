@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 5 active status categories.
+**83 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 74 |
+| **Done** | Accepted, integrated, and durably verified | 75 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -89,7 +89,7 @@ flowchart LR
         AR_0059["AR-0059 - Done"]:::status_done
         AR_0060["AR-0060 - Open"]:::status_open
         AR_0061["AR-0061 - Done"]:::status_done
-        AR_0062["AR-0062 - In progress"]:::status_in_progress
+        AR_0062["AR-0062 - Done"]:::status_done
         AR_0063["AR-0063 - Planned"]:::status_planned
         AR_0064["AR-0064 - Done"]:::status_done
         AR_0065["AR-0065 - Done"]:::status_done
@@ -338,12 +338,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | codex-model-policy-20260925 | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
-
 ### Open (6)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -361,7 +355,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify durable rollback, then execute the fresh-clone first release campaign. |
 
-### Done (74)
+### Done (75)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -413,6 +407,7 @@ flowchart LR
 | P0 | [AR-0058](tasks/AR-0058.md): Authenticated selector and runtime execution boundary | Unclaimed | Completed the authenticated selector and versioned runtime boundary on exact main: selector syntax and release identity, owner-only descriptor-bound manifest reads, source/tag/trust/vendor identity, no-follow path and ancestor checks, retained runtime descriptors, fixed-entrypoint dispatch admission, atomic selector publication, directory fsync ambiguity, subprocess death and recovery, and replacement rejection are covered by executable tests and formal evidence. Unverified code cannot dispatch; upgrade mutation remains disabled. | Claim dependency-ready AR-0059 and implement bounded executable mutation slices beginning with backup and durable outcome recording. |
 | P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Unclaimed | Completed the first bounded executable mutation slice: Git and SQLite backup paths enforce trusted session/authority identity, ordered barrier admission, destination containment, round-trip verification, durable outcome journaling, fsync/close uncertainty handling, process-death recovery, and retry/reopen evidence. Active coordinator state remains functional and unchanged by backup. Selector publication, runtime replacement, commit, apply, and rollback remain explicitly rejection-only for later independently reviewed gates. | Promote only the next separately reviewed selector/publication or runtime-replacement gate after exact formal correspondence; keep all unsupported mutation disabled. |
 | P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Unclaimed | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. |
+| P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. | Implement and independently verify the next smallest operational authority safety obligation from the v10 matrix, starting with exact Git/SQLite process-death, close/reopen, stale-owner, retry, and ambiguity evidence; keep public mutation, release, rollback, and Dispatch disabled. |
 | P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 | P0 | [AR-0066](tasks/AR-0066.md): Role assignment contract | Unclaimed | Add role-assignment.schema.json binding the coordinator owner identity to one or more roles with expiry and evidence of authorization. | Draft role-assignment.schema.json and fixtures, then open a review PR. |
