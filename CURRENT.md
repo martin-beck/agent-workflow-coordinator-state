@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. | Publish the best-effort model-correspondence policy change through a reviewed product PR; preserve rejection-only authority mutation until every operational safety obligation has exact-head executable evidence and independent review. | codex-model-policy-20260925 |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. | Await independent review and merge decision for PR #1096 at exact head 905ee3c; keep public mutation, release, rollback, and Dispatch disabled. | codex-model-policy-20260925 |
 
 ## Open
 
