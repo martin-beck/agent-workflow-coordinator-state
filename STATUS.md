@@ -341,7 +341,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Add released-coordinator end-to-end old/new runtime continuity and rollback evidence, including process-death and stale-owner rejection against the live LockDomainScope, AdmissionLease, and Git/SQLite adapters; keep apply, rollback mutation, and release publication fail-closed. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Run a fresh-clone campaign from an immutable released coordinator through selector/runtime continuity and rollback fault injection; add process-death and stale-owner evidence at each remaining durability boundary, and keep apply, rollback mutation, and release publication fail-closed. |
 
 ### Open (5)
 
