@@ -212,7 +212,6 @@ flowchart LR
     AR_0058 --> AR_0061
     AR_0059 --> AR_0060
     AR_0059 --> AR_0061
-    AR_0060 --> AR_0063
     AR_0061 --> AR_0062
     AR_0061 --> AR_0064
     AR_0062 --> AR_0063
@@ -311,10 +310,10 @@ flowchart LR
 | [AR-0057](tasks/AR-0057.md) | [AR-0056](tasks/AR-0056.md) | [AR-0058](tasks/AR-0058.md), [AR-0059](tasks/AR-0059.md) |
 | [AR-0058](tasks/AR-0058.md) | [AR-0056](tasks/AR-0056.md), [AR-0057](tasks/AR-0057.md) | [AR-0059](tasks/AR-0059.md), [AR-0061](tasks/AR-0061.md) |
 | [AR-0059](tasks/AR-0059.md) | [AR-0056](tasks/AR-0056.md), [AR-0057](tasks/AR-0057.md), [AR-0058](tasks/AR-0058.md) | [AR-0060](tasks/AR-0060.md), [AR-0061](tasks/AR-0061.md) |
-| [AR-0060](tasks/AR-0060.md) | [AR-0059](tasks/AR-0059.md) | [AR-0063](tasks/AR-0063.md) |
+| [AR-0060](tasks/AR-0060.md) | [AR-0059](tasks/AR-0059.md) | None |
 | [AR-0061](tasks/AR-0061.md) | [AR-0056](tasks/AR-0056.md), [AR-0058](tasks/AR-0058.md), [AR-0059](tasks/AR-0059.md) | [AR-0062](tasks/AR-0062.md), [AR-0064](tasks/AR-0064.md) |
 | [AR-0062](tasks/AR-0062.md) | [AR-0061](tasks/AR-0061.md) | [AR-0063](tasks/AR-0063.md) |
-| [AR-0063](tasks/AR-0063.md) | [AR-0060](tasks/AR-0060.md), [AR-0062](tasks/AR-0062.md) | None |
+| [AR-0063](tasks/AR-0063.md) | [AR-0062](tasks/AR-0062.md) | None |
 | [AR-0064](tasks/AR-0064.md) | [AR-0061](tasks/AR-0061.md) | None |
 | [AR-0065](tasks/AR-0065.md) | None | [AR-0066](tasks/AR-0066.md), [AR-0067](tasks/AR-0067.md), [AR-0070](tasks/AR-0070.md), [AR-0075](tasks/AR-0075.md) |
 | [AR-0066](tasks/AR-0066.md) | [AR-0065](tasks/AR-0065.md) | [AR-0068](tasks/AR-0068.md), [AR-0073](tasks/AR-0073.md) |
