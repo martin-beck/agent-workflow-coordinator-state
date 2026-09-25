@@ -341,7 +341,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Wire the validated contract-to-runtime binding into rollback dispatch only after exact session/backend evidence is independently verified; keep apply, release, and public mutation fail-closed. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Bind the validated rollback runtime envelope to the live durable barrier session and concrete Git/SQLite backend evidence, then test process-death and stale-owner rejection before any rollback mutation can be enabled; keep apply and release fail-closed. |
 
 ### Open (5)
 
