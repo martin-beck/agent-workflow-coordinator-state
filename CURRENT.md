@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Obtain authorized released-coordinator runtime and rollback evidence for the fresh-clone campaign; until then keep diagnostic campaign fixtures, public mutation dispatch, and release publication fail-closed. | codex-model-policy-20260925 |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Obtain released-coordinator runtime and rollback evidence for the fresh-clone campaign; until then keep diagnostic campaign fixtures, public mutation dispatch, and release publication fail-closed. | codex-model-policy-20260925 |
 
 ## Open
 
