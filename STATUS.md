@@ -341,7 +341,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | codex-model-policy-20260925 | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
+| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | codex-model-policy-20260925 | First release campaign remains an operational evidence task: generated prerequisites/runbooks and unsigned-tag checks exist, while selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only pending complete operational evidence. | Keep AR-0060 in progress while AR-0061, AR-0062, and AR-0063 provide selector/runtime, authority, rollback, and fresh-clone operational evidence. |
 
 ### Open (5)
 
