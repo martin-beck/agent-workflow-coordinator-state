@@ -341,7 +341,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Persist the selected forward/rollback reopen target in the durable barrier session so a process death between begin_reopen and complete_reopen cannot substitute a terminal child; cover restart, ambiguous fsync, stale target, and competing-owner rejection while keeping public rollback and release publication disabled. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Complete the remaining persisted-reopen fault matrix: ambiguous fsync recovery, stale-target rejection, and competing-owner rejection; then re-run the exact-head post-merge gates while keeping public rollback and release publication disabled. |
 
 ### Open (6)
 
