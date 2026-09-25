@@ -18,6 +18,1189 @@
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
+## Company hierarchy rollup
+
+This deterministic view contains task metadata only; raw logs, command output, and credentials are never rendered.
+
+| Metric | Value |
+| --- | ---: |
+| Tasks | 83 |
+| Parent tasks | 0 |
+| Child tasks | 0 |
+| Open or active | 6 |
+| Blocked | 0 |
+
+## Role and team rollup
+
+| Role | Team | Tasks | Open/active | Blocked | Done |
+| --- | --- | ---: | ---: | ---: | ---: |
+| unassigned | unassigned | 83 | 6 | 0 | 75 |
+
+## Task drill-down
+
+### AR-0001 — Integrate AWQ v0.32.0 into the coordinator
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Adopt AWQ v0.32.0 while retaining coordinator-native quality and formal gates. |
+| Next action | Merged PR #20 at merge commit 713761b; post-merge AWQ PR check passes; no coordinator release was published by this merge. |
+
+### AR-0002 — Correctness-first coordinator upgrade protocol
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Define a correctness-first coordinator release upgrade with verified backup and rollback. |
+| Next action | Merged PR #21 at bd070596729949a77cfb4fae7c4230055f3f4ece. Post-merge AWQ and focused contract verification pass; no coordinator release published. AR-0011 remains the next open child. |
+
+### AR-0003 — Release-upgrade contract and generator
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Generate and validate complete, bounded upgrade instructions for every release. |
+| Next action | PR #23 at 736d2e2 is published; await exact-head verify run 34784319165 and independent review before merge. |
+
+### AR-0004 — Quiescence and upgrade preflight
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Prevent upgrades from starting unless the coordination system can remain safe and functional. |
+| Next action | AR-0004 complete; PR #24 merged and post-merge main verification green. AR-0007 is now dependency-ready for phase-machine implementation. |
+
+### AR-0005 — Git-backend backup and restore
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Back up and restore complete Git-backed coordination state without losing task history. |
+| Next action | AR-0005 complete; PR #25 merged and post-merge main verification green. AR-0006 PR #26 remains open pending independent review and exact-head checks. |
+
+### AR-0006 — SQLite backup, migration, and restore
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. |
+| Next action | AR-0006 complete; PR #26 merged and post-merge main verification green. AR-0004 remains blocked pending its correctness fixes and healthy exact-head rerun. |
+
+### AR-0007 — Upgrade engine and rollback
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | PR445 merged as d521ad0; post-merge Verify 35096212760 passed; worker auditing remaining AR-0007 rollback/restore gaps |
+| Next action | Identify next non-duplicate AR-0007 contract gap beyond control-store identity tests; publish only after focused validation and independent review |
+
+### AR-0008 — Formal upgrade and recovery model
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | PR #323 adds RollbackRequiresBackup invariant on exact main 143bdf6; hosted Verify is pending and local TLC was blocked by pthread_create EAGAIN. |
+| Next action | Await exact-head Verify and artifact; independently review the result before merge. Preserve bounded-model and implementation-refinement nonclaims. |
+
+### AR-0009 — Release integration and first upgrade
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 release-readiness audit: 58 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy and hostile source/artifact/determinism checks remain explicit; no new dependency-safe release seam found. |
+| Next action | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
+
+### AR-0010 — Operational upgrade runbooks and generated release steps
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. |
+| Next action | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
+
+### AR-0011 — Bounded TLA+ execution and admission safety
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Exact-head PR #22 formal publication gate independently reviewed green. |
+| Next action | Await parent merge decision; retain full-exhaustive claims for successful scheduled/manual run and preserve merge-tree attestation provenance. |
+
+### AR-0012 — Durable upgrade barrier and SQLite write fencing
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 validation passes 1436 tests; v10 refinement contract already binds the SQLite route inventory and crash/recovery evidence. No distinct dependency-safe barrier/refinement seam found without enabling mutation or dispatch. |
+| Next action | Keep the exact route inventory and crash/recovery evidence bound to the v10 contract; do not claim Python refinement or enable upgrade apply/rollback. |
+
+### AR-0013 — Selector-aware authenticated versioned runtime
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 selector/runtime hostile matrix passed 192 tests across runtime bootstrap, selector authority/recovery, admission, engine, and identity. Injected publication failures remain fail-closed; no new dependency-safe non-overlapping seam found while mutation/dispatch stay disabled. |
+| Next action | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
+
+### AR-0014 — Verified supersession dependency readiness
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Make explicitly verified superseded tasks satisfy dependencies only through a completed successor. |
+| Next action | Coordinator v0.3.6 is published and signed at a1bc4459f884ce447e8ee2884df12ea3ff4b710b. Future supersession tests/features must be added through this canonical coordinator-state handoffctl path; downstream vendor synchronization is intentionally removed. |
+
+### AR-0015 — Complete formal runtime vendor closure
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. |
+| Next action | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
+
+### AR-0016 — Release validation dispatch gate
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. |
+| Next action | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
+
+### AR-0017 — TLC resource-bound reliability
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | PR #319 exact signed head 16a3549 includes capacity/preflight, timeout/doc repairs, and YAML syntax fix; Verify 35024077568 is running with AWQ/scope green and formal pending. |
+| Next action | Await terminal Verify 35024077568 including 6000-second release-sensitive TLC, attestation and DCO; then independently review and merge only with post-merge Verify. |
+
+### AR-0018 — Formal attestation resource-bound consistency
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Align formal attestation resource_bounds with the actual workflow-enforced TLC profile; prevent publication of contradictory evidence. |
+| Next action | Implement bound derivation in attest.py, add tier-specific regression tests, publish an exact-head PR, and require green post-merge Verify. |
+
+### AR-0019 — Fast merge formal tier and weekly exhaustive run
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Separate fast merge/commit formal checks from weekly full-exhaustive TLC without weakening release or publication evidence. |
+| Next action | Specify and implement a bounded fast merge TLC tier, retain weekly full-exhaustive execution as advisory, and preserve release evidence requirements. |
+
+### AR-0020 — Correct formal tier policy for merge and advisory exhaustive runs
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Correct post-merge and sustained formal verification tier policy without weakening release evidence. |
+| Next action | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. |
+
+### AR-0021 — Reconcile issue #14 with verified AWQ adoption
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Issue #14 reconciled: AR-0001 and PR #20 already delivered the requested artifacts and profiles using newer AWQ v0.32.0; no duplicate or downgrade was needed. |
+| Next action | Closed issue #14 after verified supersession; retain AR-0001 as the implementation record. |
+
+### AR-0022 — Mandatory oracle interaction-gate lifecycle
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Make user interaction gates first-class Coordinator task events and non-skippable lifecycle states. |
+| Next action | Add a typed Coordinator lifecycle for mandatory intake, discussion, specification-review, and reconciliation interaction gates. |
+
+### AR-0023 — Versioned planning and design artifact binding
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Make before/after project artifacts durable and revision-bound around user discussions. |
+| Next action | Bind versioned work-plan, design-document, dependency-graph, AR-manifest, and formal-specification snapshots to Coordinator task revisions. |
+
+### AR-0024 — Discussion pause and reconciliation enforcement
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Prevent unresolved or contradictory user guidance from authorizing Coordinator continuation. |
+| Next action | Enforce pause, user disposition, contradiction reopen, and repeated-discussion transitions before autonomous continuation. |
+
+### AR-0025 — Cross-project oracle workflow integration
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Prove the three-project oracle workflow integrates without duplicated authority or bypasses. |
+| Next action | Run the synthetic end-to-end Coordinator/AWG/AWQ workflow and publish the integration contract and evidence boundaries. |
+
+### AR-0026 — Discussion TUI session and task-event binding
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Bind the reusable discussion TUI session to Coordinator task state. |
+| Next action | Define revision-bound discussion-session events for TUI entry, active point, document anchor, user response, and unresolved status. |
+
+### AR-0027 — Batched TUI packet and navigation binding
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Persist TUI navigation and batch-point state without cross-point authorization. |
+| Next action | Bind batched discussion packets, per-point response state, active UI anchors, and optional re-ask markers to task revisions. |
+
+### AR-0028 — TUI safe exit and future-discussion persistence
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Ensure TUI sessions cannot lose decisions or future discussion requests. |
+| Next action | Implement atomic safe-exit, resume, re-ask, and future-discussion AR mapping events for TUI sessions. |
+
+### AR-0029 — TUI cross-project integration acceptance
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Accept the reusable discussion TUI only through the three-project integration contract. |
+| Next action | Run the complete AWG TUI session through Coordinator and AWQ contracts for both agent- and user-initiated discussions. |
+
+### AR-0030 — Integrate AWQ v0.35.0 trust and quality gates
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. |
+| Next action | Await independent exact-head review of PR #723 at a85a58035c843f67614f29059c364d506645987f; do not merge until review and hosted evidence are recorded. |
+
+### AR-0031 — Executable upgrade mutation and rollback boundary
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. |
+| Next action | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
+
+### AR-0032 — Multi-revision durable session identity contract
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Additive durable session identity and journal-chain contract required to unblock AR-0031 without weakening fail-closed upgrade behavior. |
+| Next action | Implement and formally validate the additive multi-revision durable session and journal-chain contract before enabling any upgrade mutation or dispatch. |
+
+### AR-0033 — Integrate session chain with durable contract
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Wire AR-0032 chain validation into the durable session contract without enabling mutation or dispatch. |
+| Next action | Integrate the validated multi-revision session chain with the existing durable session contract as a read-only admission seam. |
+
+### AR-0034 — Close SQLite barrier observation connections
+
+| Field | Value |
+| --- | --- |
+| Status | superseded |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Repair leaked SQLite connections observed during the AR-0012 hostile barrier matrix. |
+| Next action | Close every SQLite connection opened by barrier/control-store observations and add regression checks with warnings treated as failures. |
+
+### AR-0035 — Bounded backup-only executor seam
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | First bounded executable upgrade slice: durable, fenced backup only, with no runtime replacement or dispatch. |
+| Next action | Implement a backup-only generated operation behind the validated session/barrier seam; leave stage, commit, validate, reopen, rollback, and dispatch fail-closed. |
+
+### AR-0036 — Git backup-only executor parity
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Provide parity for the bounded backup-only executor on the Git authority backend. |
+| Next action | Add the Git equivalent of the bounded generated backup operation with owned lifecycle/session identity and fail-closed unsupported opcodes. |
+
+### AR-0037 — Restore branch coverage gate after Git executor merge
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Repair the post-merge Verify coverage regression introduced by the Git backup executor and session-chain integration. |
+| Next action | Raise exact-head branch coverage back above the 95&#37; gate with behavior-focused tests for new Git executor and session-chain rejection branches. |
+
+### AR-0038 — Bind public SQLite mutation routes to the durable barrier
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | The durable SQLite mutation fence is implemented and hostile-tested, but handoffctl production routes still construct an unbound SQLiteBackend and bypass that fence. |
+| Next action | Bind every production handoffctl SQLite mutation route to the provisioned common/control/authority fence without changing read-only or legacy Git behavior. |
+
+### AR-0039 — Provision the SQLite barrier baseline
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | AR-0038 binds provisioned routes, but init and migration do not yet create the compatibility marker, control store, and released barrier baseline required for safe public SQLite writes. |
+| Next action | Provision the SQLite authority/control marker and an auditable released baseline during init and Git-to-SQLite migration. |
+
+### AR-0040 — Bind SQLite barrier evidence to the refinement contract
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | The executable barrier and provisioning evidence is merged, but the formal contract still records implementation refinement as pending and does not enumerate the new public route binding and baseline provisioning. |
+| Next action | Bind the exact fenced SQLite route inventory and crash/recovery tests to the v10 refinement contract without claiming unproved Python equivalence. |
+
+### AR-0041 — Bind authenticated runtime admission to a fixed launcher entrypoint
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Runtime selector resolution and retained identity validation exist, but no consumer binds the admitted runtime to a stable fixed entrypoint; subsequent invocations can still use the adjacent runtime. |
+| Next action | Monitor PR #878 hosted checks and independent review; repair any findings, merge only at exact reviewed head, then run post-merge Verify and reconcile state. |
+
+### AR-0042 — Bind fixed runtime dispatch to the production consumer
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | AR-0041 provides a safe descriptor-backed command builder, but the coordinator upgrade/runtime call graph does not yet consume it. Bind one fixed consumer with subprocess descriptor inheritance, revalidation, and failure classification without enabling mutation. |
+| Next action | Monitor PR #879 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
+
+### AR-0043 — Bind process-death barrier evidence to the formal contract
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | AR-0012 has route and provisioning evidence, but the v10 contract still lacks exact process-death/refinement binding for every durable barrier transition. Add bounded hostile evidence without claiming mathematical Python/TLA refinement or enabling mutation. |
+| Next action | Monitor PR #880 checks and exact-head review; merge only after gates, run post-merge Verify, then reconcile state. |
+
+### AR-0044 — Implement authority-neutral preflight and backup phase
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | The runtime admission and process-death evidence are merged, but UpgradeEngine still has no production authority-neutral executor. Start with preflight plus independently verified backup only; commit, selector publication, and rollback remain disabled. |
+| Next action | Monitor PR #881 hosted checks and exact-head review; repair findings, merge, run post-merge Verify, then reconcile state. |
+
+### AR-0045 — Repair backup executor coverage gate regression
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | AR-0044 post-merge Verify found no functional test failures, but its new authority_neutral_backup.py branches were under-tested and reduced total coverage below the mandatory 95&#37; gate. Add complete hostile branch coverage without changing behavior. |
+| Next action | Monitor PR #882 checks/review; merge only after hosted coverage is &gt;=95&#37;, then verify and reconcile. |
+
+### AR-0046 — Wire verified backup into the upgrade engine
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | AR-0044/0045 provide and verify a common backup seam, but it is currently an uncalled helper. Bind it to UpgradeEngine&#x27;s backup phase through immutable session context while preserving the rejection-only mutation gate. |
+| Next action | Wire the verified backup-only executor into UpgradeEngine&#x27;s bounded backup phase without enabling commit, selector publication, apply, or rollback. |
+
+### AR-0047 — Authority-neutral staged artifact verification
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | The bounded backup phase is now executable, but UpgradeEngine still has no authority-neutral stage capability. Add only artifact identity/integrity verification; keep selector publication, replacement, commit, apply, and rollback disabled. |
+| Next action | Define and implement a read-only staged-artifact verification capability for UpgradeEngine without selector publication or runtime replacement. |
+
+### AR-0048 — Selector/runtime readiness validation
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Stage verification is merged, but UpgradeEngine validate still has no production consumer that revalidates the retained authenticated selector/runtime admission. Add only read-only readiness evidence; keep selector publication, replacement, commit, apply, and rollback disabled. |
+| Next action | Bind retained selector/runtime admission revalidation to the read-only validate phase without selector publication or replacement. |
+
+### AR-0049 — Selector publication admission boundary
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Validation is now a read-only production consumer. The next mutation gap is selector publication admission; define authenticated compare-and-swap evidence without publishing or replacing a runtime until independent barrier and formal contracts pass. |
+| Next action | Specify and implement only the authority-neutral selector publication admission boundary; keep runtime replacement, commit, apply, and rollback fail-closed. |
+
+### AR-0050 — Runtime replacement admission boundary
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Selector admission now proves a stable held visibility scope without mutation. The next gap is runtime replacement admission: bind the staged runtime and authenticated selector without switching the live runtime or authorizing commit. |
+| Next action | Specify and implement only authority-neutral runtime replacement admission evidence; keep replacement, selector publication, commit, apply, and rollback fail-closed. |
+
+### AR-0051 — Commit authorization evidence boundary
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Selector and runtime admission evidence are now independently bounded and read-only. The next gap is a typed commit authorization record that proves all prerequisites without dispatching an authority mutation. |
+| Next action | Specify and implement only authority-neutral commit authorization evidence; keep commit, apply, selector publication, runtime replacement, and rollback fail-closed. |
+
+### AR-0052 — Recovery authorization evidence boundary
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | All forward prerequisite evidence is now bounded and read-only. The next gap is recovery authorization evidence that proves a known-good restore path without authorizing rollback mutation. |
+| Next action | Specify and implement only authority-neutral recovery authorization evidence; keep rollback, apply, commit, selector publication, and runtime replacement fail-closed. |
+
+### AR-0053 — Integrated fail-closed transition rehearsal
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Forward and recovery admission seams are individually bounded and merged. The remaining correctness gap is integrated ordering, process-death, ambiguity, and functional-availability evidence across the complete transition without enabling mutation. |
+| Next action | Reconcile all bounded admission evidence into one fail-closed transition rehearsal and formal correspondence; do not enable mutation until the integrated failure matrix is complete. |
+
+### AR-0054 — Formal refinement and mutation enablement gate
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | All bounded forward/recovery seams and the integrated rehearsal are merged. Mutation remains disabled because the formal model-to-implementation refinement and enablement decision are still unproven. |
+| Next action | Bind the integrated rehearsal and all phase evidence to a trace-preserving formal refinement contract and produce an explicit fail-closed mutation enablement decision. |
+
+### AR-0055 — Legacy umbrella AR reconciliation
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | The recursive evidence slices and fail-closed mutation gate are merged. Legacy umbrella ARs remain open and must be reconciled explicitly; none may be closed solely because child evidence exists. |
+| Next action | Audit AR-0009, AR-0012, AR-0013, and AR-0031 against the merged evidence and classify each obligation as proven, superseded, or still requiring an independent mutation AR. |
+
+### AR-0056 — Complete formal refinement proof gate
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Complete the trace-preserving formal refinement and proof matrix needed before any live mutation can be enabled. |
+| Next action | Bind the v10 model to exact merged implementation seams, enumerate unproven transitions, and keep the mutation gate deny until the proof matrix is complete. |
+
+### AR-0057 — Production durable barrier and SQLite fencing
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Completed production durable barrier and SQLite fencing evidence: all inventoried mutation routes are contract-bound; held, releasing, ambiguous, forged/stale, replaced store/authority/WAL/SHM, and stale-owner sessions reject without mutation; long-lived and handoffctl-created writers bind trusted durable session identity; lock waits are bounded; independent-process crash, timeout, re-entry, competing-writer, replacement, reopen, and recovery tests pass; exact evidence, hosted quality/formal/Verify, post-merge checks, reconciliation, and live doctor are clean. Upgrade mutation and dispatch remain explicitly disabled pending later AR authorization. |
+| Next action | Claim dependency-ready AR-0058 and implement descriptor-bound authenticated selector/runtime execution with atomic publication and fail-closed recovery. |
+
+### AR-0058 — Authenticated selector and runtime execution boundary
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Completed the authenticated selector and versioned runtime boundary on exact main: selector syntax and release identity, owner-only descriptor-bound manifest reads, source/tag/trust/vendor identity, no-follow path and ancestor checks, retained runtime descriptors, fixed-entrypoint dispatch admission, atomic selector publication, directory fsync ambiguity, subprocess death and recovery, and replacement rejection are covered by executable tests and formal evidence. Unverified code cannot dispatch; upgrade mutation remains disabled. |
+| Next action | Claim dependency-ready AR-0059 and implement bounded executable mutation slices beginning with backup and durable outcome recording. |
+
+### AR-0059 — Bounded executable mutation and rollback slices
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Completed the first bounded executable mutation slice: Git and SQLite backup paths enforce trusted session/authority identity, ordered barrier admission, destination containment, round-trip verification, durable outcome journaling, fsync/close uncertainty handling, process-death recovery, and retry/reopen evidence. Active coordinator state remains functional and unchanged by backup. Selector publication, runtime replacement, commit, apply, and rollback remain explicitly rejection-only for later independently reviewed gates. |
+| Next action | Promote only the next separately reviewed selector/publication or runtime-replacement gate after exact formal correspondence; keep all unsupported mutation disabled. |
+
+### AR-0060 — First release integration and upgrade campaign
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | First release campaign remains an operational evidence task: generated prerequisites/runbooks and unsigned-tag checks exist, while selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only pending complete operational evidence. |
+| Next action | Keep AR-0060 in progress while AR-0061, AR-0062, and AR-0063 provide selector/runtime, authority, rollback, and fresh-clone operational evidence. |
+
+### AR-0061 — Selector and runtime publication mutation gate
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. |
+| Next action | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. |
+
+### AR-0062 — Authority commit and apply mutation gate
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. |
+| Next action | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
+
+### AR-0063 — Rollback and first release integration campaign
+
+| Field | Value |
+| --- | --- |
+| Status | in_progress |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | codex-model-policy-20260925 |
+| Parent | None |
+| Children | None |
+| Summary | Fresh local v0.3.23 candidate now has aligned release identity and a complete vendor closure. Clean state checkout imported runtime_bootstrap, upgrade_authority, and admission_lease offline after vendoring; generated state reconciliation and live doctor passed. Public immutable tag and end-to-end rollback continuity remain unproven and stay fail-closed. |
+| Next action | After the operational gate permits publication, create the immutable v0.3.23 tag, refresh the canonical state snapshot from that exact tag, then run process-death/stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback. |
+
+### AR-0064 — Authority mutation implementation and formal refinement
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. |
+| Next action | Implement and independently verify the next smallest operational authority safety obligation from the v10 matrix, starting with exact Git/SQLite process-death, close/reopen, stale-owner, retry, and ambiguity evidence; keep public mutation, release, rollback, and Dispatch disabled. |
+
+### AR-0065 — Role registry schema and checker
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. |
+| Next action | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
+
+### AR-0066 — Role assignment contract
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add role-assignment.schema.json binding the coordinator owner identity to one or more roles with expiry and evidence of authorization. |
+| Next action | Draft role-assignment.schema.json and fixtures, then open a review PR. |
+
+### AR-0067 — Capability matrix semantics and formal specification
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Formalize invariants (no mutation without role authorization, reviewer distinct from executor on one task, security tasks require the security role) in a TLA+ model mirroring coordinator transitions. |
+| Next action | Draft the capability TLA+ model and invariant tests, then open a review PR. |
+
+### AR-0068 — Role management CLI
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Implement roles assign&#124;list&#124;check&#124;remove with exact-revision CAS, mirroring handoffctl dispatch and validation style, with byte-stable output. |
+| Next action | Implement the roles CLI commands and negative-path tests, then open a review PR. |
+
+### AR-0069 — Roles release and downstream pinning
+
+| Field | Value |
+| --- | --- |
+| Status | superseded |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Superseded: role schemas, registry, assignments, CLI, and capability model are integrated and released in agent-workflow-coordinator; no separate agent-workflow-roles repository exists. |
+| Next action | No action: consume the integrated Coordinator role contracts from agent-workflow-coordinator. |
+
+### AR-0070 — Task-spec schema and task metadata fields
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add task-spec.schema.json (acceptance predicates, Definition of Done, inputs/outputs, allowed and forbidden tools, required evidence classes, gate list) and task metadata fields spec_ref and spec_revision. |
+| Next action | Draft the task-spec schema and metadata fields, then open a review PR. |
+
+### AR-0071 — Spec-gated done admission
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Admission of status done requires a resolved task spec and a passed acceptance check, mirroring the superseded_by chain admission pattern. |
+| Next action | Implement spec-gated done admission and negative fixtures, then open a review PR. |
+
+### AR-0072 — Task hierarchy edges and rollup constraints
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add parent_task_ref and children to the task model with rollup constraints (a parent cannot be done with open children; child revisions inherit the parent binding) and TLA+ updates. |
+| Next action | Extend the task model with hierarchy edges and constraints, then open a review PR. |
+
+### AR-0073 — Role authorization admission on claim, update, and run
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Extend claim/update/run admission to check role capability with fail-closed behavior for unknown or expired roles, extending the one-owner and one-active-task invariants to role scope. |
+| Next action | Implement role admission checks and negative-path tests, then open a review PR. |
+
+### AR-0074 — Stage-gate generalization in the gate command
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Generalize the gate command and oracle_gate task metadata into role, spec, and decision stage gates with fail-closed behavior on unknown stages. |
+| Next action | Generalize the gate command and extend negative tests, then open a review PR. |
+
+### AR-0075 — Hierarchical rollup projections
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Extend render_status_views with company overview, per-role, and per-task drill-down pages, byte-stable and privacy-safe, keeping status_view opt-in. |
+| Next action | Extend status projections with hierarchy pages, then open a review PR. |
+
+### AR-0076 — Durable work-session snapshot record
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add a session record type capturing agent context digest, step state, artifact refs, and next action, appended on update/run with bounded, content-minimized storage. |
+| Next action | Implement the session record type and replay path, then open a review PR. |
+
+### AR-0077 — Pause and resume commands with session reload
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add pause (freeze session and lease) and resume --session REF (reload snapshot via exact-revision CAS blocked-&gt;open) with TLA+ coverage for crash-during-pause. |
+| Next action | Implement pause/resume and crash-during-pause coverage, then open a review PR. |
+
+### AR-0078 — Session restore on expired lease recovery
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Extend recover-expired to restore the last session snapshot instead of forcing a cold restart, with extended negative tests. |
+| Next action | Extend recover-expired with session restore, then open a review PR. |
+
+### AR-0079 — Checkpoint command for task state and artifacts
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add checkpoint capturing task state, artifact refs, and the signed source commit, with journal-before-mutation ordering and a bounded per-task checkpoint list. |
+| Next action | Implement the checkpoint command and doctor verification, then open a review PR. |
+
+### AR-0080 — Coordinated rollback to a verified checkpoint
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add rollback --checkpoint REF restoring coordinator state with coordinated Git revert via reconcile, fail-closed on divergence, using the upgrade-barrier concurrency blueprint. |
+| Next action | Implement coordinated rollback and its failure matrix, then open a review PR. |
+
+### AR-0081 — User directive record type
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. |
+| Next action | Implement the directive record type and precedence, then open a review PR. |
+
+### AR-0082 — Company board and metrics commands
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add board/metrics commands deriving per-role progress, decision backlog, gate failures, blocked tasks, and evidence coverage from the SQLite authority with deterministic output. |
+| Next action | Implement board/metrics commands and drift tests, then open a review PR. |
+
+### AR-0083 — Schema, migration, and doctor coverage for new record types
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. |
+| Next action | Extend migrations, doctor checks, and negative fixtures, then open a review PR. |
+
+
 ## Dependency graph
 
 Arrows point from each prerequisite to the work that depends on it. Color is redundant
