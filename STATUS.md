@@ -342,7 +342,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-model-policy-20260925 | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. | Await independent review and merge decision for PR #1096 at exact head 905ee3c; keep public mutation, release, rollback, and Dispatch disabled. |
+| P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | codex-model-policy-20260925 | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. | Implement and independently verify the next smallest operational authority safety obligation from the v10 matrix, starting with exact Git/SQLite process-death, close/reopen, stale-owner, retry, and ambiguity evidence; keep public mutation, release, rollback, and Dispatch disabled. |
 
 ### Open (7)
 
