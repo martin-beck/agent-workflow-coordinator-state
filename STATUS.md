@@ -341,7 +341,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Execute the fresh-clone released v0.3.22 to candidate campaign through the stable bootstrap and runtime selector, then add or run process-death/stale-owner fault cases at each journal, barrier, selector, backup, restore, validation, and reopen durability boundary; keep apply, rollback mutation, and release publication fail-closed. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Run the fresh-clone v0.3.22-to-current candidate through the stable bootstrap with a provisioned state root, then add or run process-death/stale-owner cases at each journal, barrier, selector, backup, restore, validation, and reopen durability boundary; keep apply, rollback mutation, and release publication fail-closed. |
 
 ### Open (5)
 
