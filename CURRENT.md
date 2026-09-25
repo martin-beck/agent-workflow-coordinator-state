@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. | codex-model-policy-20260925 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -11,7 +17,6 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 validation passes 1436 tests; v10 refinement contract already binds the SQLite route inventory and crash/recovery evidence. No distinct dependency-safe barrier/refinement seam found without enabling mutation or dispatch. | Keep the exact route inventory and crash/recovery evidence bound to the v10 contract; do not claim Python refinement or enable upgrade apply/rollback. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 selector/runtime hostile matrix passed 192 tests across runtime bootstrap, selector authority/recovery, admission, engine, and identity. Injected publication failures remain fail-closed; no new dependency-safe non-overlapping seam found while mutation/dispatch stay disabled. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. | - |
-| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. | - |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Obtain released-coordinator runtime and rollback evidence for the fresh-clone campaign; until then keep diagnostic campaign fixtures, public mutation dispatch, and release publication fail-closed. | - |
 
 ## Done
@@ -98,5 +103,5 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
+| P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Superseded: role schemas, registry, assignments, CLI, and capability model are integrated and released in agent-workflow-coordinator; no separate agent-workflow-roles repository exists. | No action: consume the integrated Coordinator role contracts from agent-workflow-coordinator. | - |
 | P1 | [AR-0034](tasks/AR-0034.md): Close SQLite barrier observation connections | Repair leaked SQLite connections observed during the AR-0012 hostile barrier matrix. | Close every SQLite connection opened by barrier/control-store observations and add regression checks with warnings treated as failures. | - |
