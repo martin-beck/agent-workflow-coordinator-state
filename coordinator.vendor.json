@@ -104,13 +104,13 @@
       "sha256": "fa17e97c2a2f7a60b8cc22bfb1ecd6e3e088abced5d2f59d7a13c6959da66375",
       "source": "schema/session-record.schema.json"
     },
-    "schema/handoffctl-task-record.schema.json": {
-      "sha256": "ac370a9fe9b282fec488bf9c2edaeaec2fc87fa0322f2b4121796818e3d42743",
-      "source": "schema/task-record.schema.json"
-    },
     "schema/handoffctl-upgrade-contract.schema.json": {
       "sha256": "88c8aeab53b897129948bb5551e0b19ea1cb241a9f6521267c4a1042d01b838d",
       "source": "schema/upgrade-contract.schema.json"
+    },
+    "schema/task-record.schema.json": {
+      "sha256": "ac370a9fe9b282fec488bf9c2edaeaec2fc87fa0322f2b4121796818e3d42743",
+      "source": "schema/task-record.schema.json"
     },
     "tests/test_checkpoint_records.py": {
       "sha256": "1fb9d5276e58fc8f37ba29eca4dbad9eb007601d78a4a6e26ec90531649c1594",
@@ -136,6 +136,10 @@
       "sha256": "001db4806d57612688a0006c98c74a8d5ea0ce1b7e0769acb8be95f16662074f",
       "source": "tools/admission_lease.py"
     },
+    "tools/board_metrics.py": {
+      "sha256": "8ed9b5d0c422ad97bda4b21303485153a26700852e4d999ff824aa9d49eb8d97",
+      "source": "tools/board_metrics.py"
+    },
     "tools/checkpoint_records.py": {
       "sha256": "4a6455765fe9b00ece90c8c51e08794d5079b7de5daf217d7ff827386f3e64b0",
       "source": "tools/checkpoint_records.py"
@@ -149,20 +153,44 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "69edceb2bb6c5f42261a09214f3f5566d5bedde62ad2e5ef33eb2358357281d0",
+      "sha256": "c0c9dd7c249d96ed701d16b363384cb7ea7aaf6aa6708ceb848dd813896beb35",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
-      "sha256": "f7341b0f22ff021e8b2920d8f8bf44b6eca87f6057c7c07b4729b21374eb1e67",
+      "sha256": "a4e6eca3010488df6539abc5c832be6bb801f7b28f34fca3086a5e397367cf8e",
       "source": "tools/vendor.py"
     },
     "tools/hierarchy.py": {
       "sha256": "cbb9a2cfea40bb2b62b02567b2aed2d802de2d9fff5b3efa994ee969c055bf4f",
       "source": "tools/hierarchy.py"
     },
+    "tools/lifecycle_trace.py": {
+      "sha256": "e31d35c0e1c3af2b749e3ce22b3252b3ad44ca4e553436e4c23f98ddc364e092",
+      "source": "tools/lifecycle_trace.py"
+    },
+    "tools/lock_domain.py": {
+      "sha256": "4387c61bc3451fe92b5066c2df797ed3381ed83830a4e9cd796d15097eb5b07b",
+      "source": "tools/lock_domain.py"
+    },
+    "tools/lock_domain_scope.py": {
+      "sha256": "0886eb1d67a2dadfccd770fc2cb94c086000f1f99db95c0473f522bf14d3bc8f",
+      "source": "tools/lock_domain_scope.py"
+    },
+    "tools/mutation_fence.py": {
+      "sha256": "08ff8993ddc63d7622b2bdc22866f62340dbed6d7d648c845df74b06b28e5a21",
+      "source": "tools/mutation_fence.py"
+    },
     "tools/oracle_lifecycle.py": {
       "sha256": "8398a20d70e1c61e0fe5112277a73030a78416a66aabe04f8ec5939f11ef24bb",
       "source": "tools/oracle_lifecycle.py"
+    },
+    "tools/rollback_control_store.py": {
+      "sha256": "c4b34be3740b95b28436200dd333aa7e371f0291afef545cf7c1d090da36d88c",
+      "source": "tools/rollback_control_store.py"
+    },
+    "tools/rollback_evidence.py": {
+      "sha256": "397573b7163c1cf8d733470e86a46c2ee3c83a54b0d58ecf349aa42f24bbbad0",
+      "source": "tools/rollback_evidence.py"
     },
     "tools/rollback_records.py": {
       "sha256": "0dc58796276f30a446203a033955ab4719bfd4737c5a6e010f17eae43f079186",
@@ -215,8 +243,8 @@
   },
   "schema_version": 1,
   "upstream": {
-    "commit": "37138c3b4aa05c0fe798c0f92da0711db277f657",
+    "commit": "b5dcd924e967d9f2ee67fecab0f9e43aff437f6b",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "version": "v0.3.23"
+    "version": "v0.3.25"
   }
 }
