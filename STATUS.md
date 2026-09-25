@@ -917,8 +917,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-model-policy-20260925 |
 | Parent | None |
 | Children | None |
-| Summary | Fresh local v0.3.23 candidate now has aligned release identity and a complete vendor closure. Clean state checkout imported runtime_bootstrap, upgrade_authority, and admission_lease offline after vendoring; generated state reconciliation and live doctor passed. Public immutable tag and end-to-end rollback continuity remain unproven and stay fail-closed. |
-| Next action | After the operational gate permits publication, create the immutable v0.3.23 tag, refresh the canonical state snapshot from that exact tag, then run process-death/stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback. |
+| Summary | Published unsigned v0.3.23 and consumed it in canonical state. The vendor manifest pins exact merge 37138c3b4aa05c0fe798c0f92da0711db277f657; offline runtime imports, vendor verification, reconciliation, signed/DCO state publication, and doctor --live pass. Remaining acceptance is the post-publication process-death/stale-owner rollback matrix. |
+| Next action | Run the canonical v0.3.23 vendored checkout through process-death and stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback; keep mutation dispatch fail-closed until those exact-head results are recorded. |
 
 ### AR-0064 — Authority mutation implementation and formal refinement
 
@@ -1524,7 +1524,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Fresh local v0.3.23 candidate now has aligned release identity and a complete vendor closure. Clean state checkout imported runtime_bootstrap, upgrade_authority, and admission_lease offline after vendoring; generated state reconciliation and live doctor passed. Public immutable tag and end-to-end rollback continuity remain unproven and stay fail-closed. | After the operational gate permits publication, create the immutable v0.3.23 tag, refresh the canonical state snapshot from that exact tag, then run process-death/stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Published unsigned v0.3.23 and consumed it in canonical state. The vendor manifest pins exact merge 37138c3b4aa05c0fe798c0f92da0711db277f657; offline runtime imports, vendor verification, reconciliation, signed/DCO state publication, and doctor --live pass. Remaining acceptance is the post-publication process-death/stale-owner rollback matrix. | Run the canonical v0.3.23 vendored checkout through process-death and stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback; keep mutation dispatch fail-closed until those exact-head results are recorded. |
 
 ### Open (5)
 
