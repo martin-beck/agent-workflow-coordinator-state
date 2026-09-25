@@ -4,7 +4,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 
 | Worktree | Branch | Head | Dirty | vs origin/main |
 | --- | --- | --- | ---: | --- |
-| `agent-workflow-coordinator` | `ar0063-persist-reopen-target` | `7a6262ab95d8` | 0 | behind 2, ahead 4 |
+| `agent-workflow-coordinator` | `ar0063-persist-reopen-target` | `a1f40f88b092` | 0 | behind 2, ahead 5 |
 | `agent-workflow-coordinator-upgrade-formal` | `feature/upgrade-formal-recovery` | `a4d651f45658` | 0 | behind 2018, ahead 0 |
 | `agent-workflow-coordinator-adapter-session` | `feature/ar0007-adapter-session-entry` | `6324d7ca3137` | 0 | behind 1845, ahead 0 |
 | `agent-workflow-coordinator-admission-gaps` | `feature/document-admission-gaps` | `746426a58118` | 0 | behind 2008, ahead 0 |
