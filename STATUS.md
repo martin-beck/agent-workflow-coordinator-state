@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 5 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 75 |
+| **Done** | Accepted, integrated, and durably verified | 76 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 83 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 6 |
+| Open or active | 5 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 83 | 6 | 0 | 75 |
+| unassigned | unassigned | 83 | 5 | 0 | 76 |
 
 ## Task drill-down
 
@@ -910,11 +910,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-model-policy-20260925 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Completed the release-bound v0.3.23/v0.3.26 rollback and authority safety campaign. Exact public tags were 37138c3b4aa05c0fe798c0f92da0711db277f657 and 8008ae2324a152e3f2c4476da39d4b893a1ce53d. On exact v0.3.26, stale-owner replacement, pre-effect process death and fresh-capability reopen, stale admission rejection, Git/SQLite validation and reopen failure recovery, rollback sidecar fail-closed behavior, and competing-owner CAS rejection passed (15 targeted tests). An isolated state fixture vendored exact v0.3.23 and its released handoffctl doctor passed; v0.3.26 canonical state vendor verify, 139 state tests, offline imports, and doctor --live passed. Unsigned v0.3.26 is published and consumed at signed/DCO state head 2d700ae7. Mutation dispatch remains fail-closed. |
@@ -1273,7 +1273,7 @@ flowchart LR
         AR_0060["AR-0060 - Open"]:::status_open
         AR_0061["AR-0061 - Done"]:::status_done
         AR_0062["AR-0062 - Done"]:::status_done
-        AR_0063["AR-0063 - In progress"]:::status_in_progress
+        AR_0063["AR-0063 - Done"]:::status_done
         AR_0064["AR-0064 - Done"]:::status_done
         AR_0065["AR-0065 - Done"]:::status_done
         AR_0066["AR-0066 - Done"]:::status_done
@@ -1520,12 +1520,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Completed the release-bound v0.3.23/v0.3.26 rollback and authority safety campaign. Exact public tags were 37138c3b4aa05c0fe798c0f92da0711db277f657 and 8008ae2324a152e3f2c4476da39d4b893a1ce53d. On exact v0.3.26, stale-owner replacement, pre-effect process death and fresh-capability reopen, stale admission rejection, Git/SQLite validation and reopen failure recovery, rollback sidecar fail-closed behavior, and competing-owner CAS rejection passed (15 targeted tests). An isolated state fixture vendored exact v0.3.23 and its released handoffctl doctor passed; v0.3.26 canonical state vendor verify, 139 state tests, offline imports, and doctor --live passed. Unsigned v0.3.26 is published and consumed at signed/DCO state head 2d700ae7. Mutation dispatch remains fail-closed. | Select the next dependency-ready non-umbrella AR from the refreshed queue; preserve rejection-only mutation and best-effort model guidance. |
-
 ### Open (5)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -1536,7 +1530,7 @@ flowchart LR
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign remains an operational evidence task: generated prerequisites/runbooks and unsigned-tag checks exist, while selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only pending complete operational evidence. | Keep AR-0060 in progress while AR-0061, AR-0062, and AR-0063 provide selector/runtime, authority, rollback, and fresh-clone operational evidence. |
 
-### Done (75)
+### Done (76)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1589,6 +1583,7 @@ flowchart LR
 | P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Unclaimed | Completed the first bounded executable mutation slice: Git and SQLite backup paths enforce trusted session/authority identity, ordered barrier admission, destination containment, round-trip verification, durable outcome journaling, fsync/close uncertainty handling, process-death recovery, and retry/reopen evidence. Active coordinator state remains functional and unchanged by backup. Selector publication, runtime replacement, commit, apply, and rollback remain explicitly rejection-only for later independently reviewed gates. | Promote only the next separately reviewed selector/publication or runtime-replacement gate after exact formal correspondence; keep all unsupported mutation disabled. |
 | P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Unclaimed | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. |
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Completed the release-bound v0.3.23/v0.3.26 rollback and authority safety campaign. Exact public tags were 37138c3b4aa05c0fe798c0f92da0711db277f657 and 8008ae2324a152e3f2c4476da39d4b893a1ce53d. On exact v0.3.26, stale-owner replacement, pre-effect process death and fresh-capability reopen, stale admission rejection, Git/SQLite validation and reopen failure recovery, rollback sidecar fail-closed behavior, and competing-owner CAS rejection passed (15 targeted tests). An isolated state fixture vendored exact v0.3.23 and its released handoffctl doctor passed; v0.3.26 canonical state vendor verify, 139 state tests, offline imports, and doctor --live passed. Unsigned v0.3.26 is published and consumed at signed/DCO state head 2d700ae7. Mutation dispatch remains fail-closed. | Select the next dependency-ready non-umbrella AR from the refreshed queue; preserve rejection-only mutation and best-effort model guidance. |
 | P0 | [AR-0064](tasks/AR-0064.md): Authority mutation implementation and formal refinement | Unclaimed | Concrete authority adapters remain rejection-only; the formal model is AI-generated best-effort design guidance and no Python-to-TLA refinement proof is required. Independent executable safety evidence and exact-head review remain mandatory. | Implement and independently verify the next smallest operational authority safety obligation from the v10 matrix, starting with exact Git/SQLite process-death, close/reopen, stale-owner, retry, and ambiguity evidence; keep public mutation, release, rollback, and Dispatch disabled. |
 | P0 | [AR-0065](tasks/AR-0065.md): Role registry schema and checker | Unclaimed | Add role.schema.json and role-registry.schema.json (capability matrix, forbidden actions, tool/worktree policy, default AWQ profile refs) with positive and hostile fixtures and an autonomous checker. | Draft the role and role-registry schemas plus fixtures, then open a review PR. |
 | P0 | [AR-0066](tasks/AR-0066.md): Role assignment contract | Unclaimed | Add role-assignment.schema.json binding the coordinator owner identity to one or more roles with expiry and evidence of authorization. | Draft role-assignment.schema.json and fixtures, then open a review PR. |
