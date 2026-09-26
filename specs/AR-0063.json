@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0063.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "release-pair",
+      "description": "The exact public v0.3.23 and v0.3.26 release identities are consumed by the campaign."
+    },
+    {
+      "id": "fault-matrix",
+      "description": "Stale-owner, process-death, validation, reopen, rollback, and competing-owner paths fail closed or recover to a known-good state."
+    },
+    {
+      "id": "canonical-consumption",
+      "description": "The canonical state vendor snapshot, tests, imports, and live doctor pass for the published release."
+    }
+  ],
+  "definition_of_done": [
+    "Exact-head targeted campaign tests pass on the released v0.3.26 checkout.",
+    "The released v0.3.23 runtime passes its isolated state-fixture doctor check.",
+    "The unsigned release is consumed by canonical state and mutation dispatch remains fail-closed."
+  ],
+  "inputs": [
+    {
+      "id": "old-release",
+      "description": "Public v0.3.23 tag and source identity."
+    },
+    {
+      "id": "new-release",
+      "description": "Public v0.3.26 tag, hosted checks, and release identity."
+    },
+    {
+      "id": "state-repository",
+      "description": "Canonical vendored state checkout and live doctor."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "campaign-evidence",
+      "description": "Exact-head test, recovery, release, and canonical-consumption evidence."
+    },
+    {
+      "id": "state-update",
+      "description": "Signed and DCO-certified canonical state update."
+    }
+  ],
+  "allowed_tools": [
+    "git.read",
+    "github.read",
+    "handoffctl.run",
+    "test.run"
+  ],
+  "forbidden_tools": [],
+  "required_evidence_classes": [
+    "mechanical",
+    "contract-test",
+    "environmental"
+  ],
+  "gates": [
+    {
+      "id": "exact-head",
+      "description": "The exact public release heads and hosted checks are recorded."
+    },
+    {
+      "id": "fail-closed",
+      "description": "Mutation dispatch remains disabled after the campaign."
+    },
+    {
+      "id": "live-state",
+      "description": "Canonical vendor verification and doctor --live pass."
+    }
+  ]
+}
