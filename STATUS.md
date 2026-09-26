@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**83 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 76 |
+| **Done** | Accepted, integrated, and durably verified | 77 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 83 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 5 |
+| Open or active | 4 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 83 | 5 | 0 | 76 |
+| unassigned | unassigned | 83 | 4 | 0 | 77 |
 
 ## Task drill-down
 
@@ -868,11 +868,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-model-policy-20260926 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Completed the first-release integration campaign through the exact public v0.3.23/v0.3.26 pair. Generated phase and rollback contracts, Git/SQLite failure campaigns, stale-owner and competing-owner rejection, process-death recovery, validation/reopen safety, unsigned v0.3.26 publication, old-runtime doctor, canonical vendor verification, 139 state tests, offline imports, and doctor --live all pass. Unsupported selector publication, runtime replacement, authority commit/apply, rollback mutation, and Dispatch remain rejection-only. |
@@ -1270,7 +1270,7 @@ flowchart LR
         AR_0057["AR-0057 - Done"]:::status_done
         AR_0058["AR-0058 - Done"]:::status_done
         AR_0059["AR-0059 - Done"]:::status_done
-        AR_0060["AR-0060 - In progress"]:::status_in_progress
+        AR_0060["AR-0060 - Done"]:::status_done
         AR_0061["AR-0061 - Done"]:::status_done
         AR_0062["AR-0062 - Done"]:::status_done
         AR_0063["AR-0063 - Done"]:::status_done
@@ -1520,12 +1520,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | codex-model-policy-20260926 | Completed the first-release integration campaign through the exact public v0.3.23/v0.3.26 pair. Generated phase and rollback contracts, Git/SQLite failure campaigns, stale-owner and competing-owner rejection, process-death recovery, validation/reopen safety, unsigned v0.3.26 publication, old-runtime doctor, canonical vendor verification, 139 state tests, offline imports, and doctor --live all pass. Unsupported selector publication, runtime replacement, authority commit/apply, rollback mutation, and Dispatch remain rejection-only. | No further campaign action remains; retain all unsupported mutation and Dispatch routes fail-closed pending a separately reviewed implementation AR. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -1535,7 +1529,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 selector/runtime hostile matrix passed 192 tests across runtime bootstrap, selector authority/recovery, admission, engine, and identity. Injected publication failures remain fail-closed; no new dependency-safe non-overlapping seam found while mutation/dispatch stay disabled. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
 
-### Done (76)
+### Done (77)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1586,6 +1580,7 @@ flowchart LR
 | P0 | [AR-0057](tasks/AR-0057.md): Production durable barrier and SQLite fencing | Unclaimed | Completed production durable barrier and SQLite fencing evidence: all inventoried mutation routes are contract-bound; held, releasing, ambiguous, forged/stale, replaced store/authority/WAL/SHM, and stale-owner sessions reject without mutation; long-lived and handoffctl-created writers bind trusted durable session identity; lock waits are bounded; independent-process crash, timeout, re-entry, competing-writer, replacement, reopen, and recovery tests pass; exact evidence, hosted quality/formal/Verify, post-merge checks, reconciliation, and live doctor are clean. Upgrade mutation and dispatch remain explicitly disabled pending later AR authorization. | Claim dependency-ready AR-0058 and implement descriptor-bound authenticated selector/runtime execution with atomic publication and fail-closed recovery. |
 | P0 | [AR-0058](tasks/AR-0058.md): Authenticated selector and runtime execution boundary | Unclaimed | Completed the authenticated selector and versioned runtime boundary on exact main: selector syntax and release identity, owner-only descriptor-bound manifest reads, source/tag/trust/vendor identity, no-follow path and ancestor checks, retained runtime descriptors, fixed-entrypoint dispatch admission, atomic selector publication, directory fsync ambiguity, subprocess death and recovery, and replacement rejection are covered by executable tests and formal evidence. Unverified code cannot dispatch; upgrade mutation remains disabled. | Claim dependency-ready AR-0059 and implement bounded executable mutation slices beginning with backup and durable outcome recording. |
 | P0 | [AR-0059](tasks/AR-0059.md): Bounded executable mutation and rollback slices | Unclaimed | Completed the first bounded executable mutation slice: Git and SQLite backup paths enforce trusted session/authority identity, ordered barrier admission, destination containment, round-trip verification, durable outcome journaling, fsync/close uncertainty handling, process-death recovery, and retry/reopen evidence. Active coordinator state remains functional and unchanged by backup. Selector publication, runtime replacement, commit, apply, and rollback remain explicitly rejection-only for later independently reviewed gates. | Promote only the next separately reviewed selector/publication or runtime-replacement gate after exact formal correspondence; keep all unsupported mutation disabled. |
+| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | Completed the first-release integration campaign through the exact public v0.3.23/v0.3.26 pair. Generated phase and rollback contracts, Git/SQLite failure campaigns, stale-owner and competing-owner rejection, process-death recovery, validation/reopen safety, unsigned v0.3.26 publication, old-runtime doctor, canonical vendor verification, 139 state tests, offline imports, and doctor --live all pass. Unsupported selector publication, runtime replacement, authority commit/apply, rollback mutation, and Dispatch remain rejection-only. | No further campaign action remains; retain all unsupported mutation and Dispatch routes fail-closed pending a separately reviewed implementation AR. |
 | P0 | [AR-0061](tasks/AR-0061.md): Selector and runtime publication mutation gate | Unclaimed | Selector/runtime publication gate audit passed on exact main: descriptor-bound selector and manifest identity, no-follow path/ancestor and hard-link/symlink rejection, fixed-entrypoint retention, atomic replace, file and directory fsync ambiguity, close/process-death recovery, stale replacement rejection, and old-runtime continuity are covered by executable tests and formal non-claims. No unproven publication path is exposed; authority commit/apply and rollback remain disabled. | Claim AR-0062 and audit or implement the separately gated authority commit/apply capability; preserve rejection-only behavior until its complete failure matrix passes. |
 | P0 | [AR-0062](tasks/AR-0062.md): Authority commit and apply mutation gate | Unclaimed | Concrete Git and SQLite authority adapters remain intentionally rejection-only: commit/apply is not yet safe to enable. Existing engine admission and fail-closed journal tests pass, but implementation refinement and exact failure-boundary evidence are missing. | Work AR-0064: implement the bound Git/SQLite authority mutation capability and complete exact-head formal refinement; keep commit/apply/rollback/release disabled. |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Completed the release-bound v0.3.23/v0.3.26 rollback and authority safety campaign. Exact public tags were 37138c3b4aa05c0fe798c0f92da0711db277f657 and 8008ae2324a152e3f2c4476da39d4b893a1ce53d. On exact v0.3.26, stale-owner replacement, pre-effect process death and fresh-capability reopen, stale admission rejection, Git/SQLite validation and reopen failure recovery, rollback sidecar fail-closed behavior, and competing-owner CAS rejection passed (15 targeted tests). An isolated state fixture vendored exact v0.3.23 and its released handoffctl doctor passed; v0.3.26 canonical state vendor verify, 139 state tests, offline imports, and doctor --live passed. Unsigned v0.3.26 is published and consumed at signed/DCO state head 2d700ae7. Mutation dispatch remains fail-closed. | Select the next dependency-ready non-umbrella AR from the refreshed queue; preserve rejection-only mutation and best-effort model guidance. |
