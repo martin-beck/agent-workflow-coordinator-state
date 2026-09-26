@@ -917,8 +917,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-model-policy-20260925 |
 | Parent | None |
 | Children | None |
-| Summary | Published unsigned v0.3.25 and consumed it in canonical state. The vendor manifest pins exact release commit b5dcd924e967d9f2ee67fecab0f9e43aff437f6b; canonical vendor verification, 139 state tests, offline runtime imports, signed/DCO state publication, and doctor --live pass. Independent exact-head review and hosted checks passed. Remaining acceptance is the post-publication process-death/stale-owner rollback matrix. |
-| Next action | Run the canonical v0.3.25 vendored checkout through process-death and stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback; keep mutation dispatch fail-closed until those exact-head results are recorded. |
+| Summary | Published unsigned v0.3.25 and consumed it in canonical state. The vendor manifest pins exact release commit b5dcd924e967d9f2ee67fecab0f9e43aff437f6b; canonical vendor verification, 139 state tests, offline runtime imports, signed/DCO state publication, and doctor --live pass. The exact v0.3.25 checkout passed the hostile rollback/authority campaign suite (341 tests), including process-death, stale-owner, backup, restore, selector, validation, and reopen paths. Remaining acceptance is release-bound end-to-end old/new runtime continuity and rollback evidence. |
+| Next action | Build and run a release-bound continuity fixture using public v0.3.23 and v0.3.25 identities and the canonical vendored state; prove selector admission, backup, process-death/stale-owner rejection, validation, reopen, and rollback across the exact released pair. Keep mutation dispatch fail-closed until that exact-head evidence is recorded. |
 
 ### AR-0064 — Authority mutation implementation and formal refinement
 
@@ -1524,7 +1524,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Published unsigned v0.3.25 and consumed it in canonical state. The vendor manifest pins exact release commit b5dcd924e967d9f2ee67fecab0f9e43aff437f6b; canonical vendor verification, 139 state tests, offline runtime imports, signed/DCO state publication, and doctor --live pass. Independent exact-head review and hosted checks passed. Remaining acceptance is the post-publication process-death/stale-owner rollback matrix. | Run the canonical v0.3.25 vendored checkout through process-death and stale-owner cases across journal, barrier, selector, backup, restore, validation, reopen, and rollback; keep mutation dispatch fail-closed until those exact-head results are recorded. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Published unsigned v0.3.25 and consumed it in canonical state. The vendor manifest pins exact release commit b5dcd924e967d9f2ee67fecab0f9e43aff437f6b; canonical vendor verification, 139 state tests, offline runtime imports, signed/DCO state publication, and doctor --live pass. The exact v0.3.25 checkout passed the hostile rollback/authority campaign suite (341 tests), including process-death, stale-owner, backup, restore, selector, validation, and reopen paths. Remaining acceptance is release-bound end-to-end old/new runtime continuity and rollback evidence. | Build and run a release-bound continuity fixture using public v0.3.23 and v0.3.25 identities and the canonical vendored state; prove selector admission, backup, process-death/stale-owner rejection, validation, reopen, and rollback across the exact released pair. Keep mutation dispatch fail-closed until that exact-head evidence is recorded. |
 
 ### Open (5)
 
