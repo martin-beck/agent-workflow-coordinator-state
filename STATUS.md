@@ -161,8 +161,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-model-policy-20260926 |
 | Parent | None |
 | Children | None |
-| Summary | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 release-readiness audit: 58 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy and hostile source/artifact/determinism checks remain explicit; no new dependency-safe release seam found. |
-| Next action | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
+| Summary | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. |
+| Next action | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
 
 ### AR-0010 — Operational upgrade runbooks and generated release steps
 
@@ -1524,7 +1524,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-model-policy-20260926 | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 release-readiness audit: 58 release identity/workflow/runbook/contract/generator/command tests passed with 81 subtests. Unsigned lightweight tag policy and hostile source/artifact/determinism checks remain explicit; no new dependency-safe release seam found. | Keep AR-0009 open for a genuinely uncovered release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | codex-model-policy-20260926 | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
 
 ### Open (3)
 
