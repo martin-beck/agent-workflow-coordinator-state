@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0060.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "fresh-release",
+      "description": "A fresh state fixture consumes exact public release identities and the unsigned v0.3.26 tag."
+    },
+    {
+      "id": "failure-cross-product",
+      "description": "Generated upgrade phase failures and authority safety failures recover to a known-good state or fail closed."
+    },
+    {
+      "id": "canonical-state",
+      "description": "The published release is vendored into canonical state and live health checks pass."
+    }
+  ],
+  "definition_of_done": [
+    "Exact-head release-pair campaign tests pass for Git and SQLite continuity, rollback, reopen, stale-owner, and competing-owner cases.",
+    "Fresh-clone identity, old-runtime doctor, vendor verification, state tests, imports, and doctor --live pass.",
+    "Unsupported mutation and Dispatch remain rejection-only."
+  ],
+  "inputs": [
+    {
+      "id": "release-pair",
+      "description": "Public v0.3.23 and v0.3.26 release identities."
+    },
+    {
+      "id": "generated-contract",
+      "description": "Generated upgrade phases, rollback operation, and runbook evidence."
+    },
+    {
+      "id": "canonical-state",
+      "description": "Canonical coordinator state and live runtime configuration."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "campaign-result",
+      "description": "Public-safe release-pair campaign evidence."
+    },
+    {
+      "id": "state-consumption",
+      "description": "Signed and DCO-certified vendor/state consumption update."
+    }
+  ],
+  "allowed_tools": [
+    "git.read",
+    "github.read",
+    "handoffctl.run",
+    "test.run"
+  ],
+  "forbidden_tools": [],
+  "required_evidence_classes": [
+    "mechanical",
+    "contract-test",
+    "environmental"
+  ],
+  "gates": [
+    {
+      "id": "exact-release",
+      "description": "The exact public tag and hosted release checks are verified."
+    },
+    {
+      "id": "recovery",
+      "description": "Every tested failure path is known-good or fail-closed."
+    },
+    {
+      "id": "live-state",
+      "description": "Canonical state vendor verification and doctor --live pass."
+    }
+  ]
+}
