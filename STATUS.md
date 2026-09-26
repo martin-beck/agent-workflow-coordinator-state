@@ -875,8 +875,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-model-policy-20260926 |
 | Parent | None |
 | Children | None |
-| Summary | First release campaign remains an operational evidence task: generated prerequisites/runbooks and unsigned-tag checks exist, while selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only pending complete operational evidence. |
-| Next action | Keep AR-0060 in progress while AR-0061, AR-0062, and AR-0063 provide selector/runtime, authority, rollback, and fresh-clone operational evidence. |
+| Summary | Completed the first-release integration campaign through the exact public v0.3.23/v0.3.26 pair. Generated phase and rollback contracts, Git/SQLite failure campaigns, stale-owner and competing-owner rejection, process-death recovery, validation/reopen safety, unsigned v0.3.26 publication, old-runtime doctor, canonical vendor verification, 139 state tests, offline imports, and doctor --live all pass. Unsupported selector publication, runtime replacement, authority commit/apply, rollback mutation, and Dispatch remain rejection-only. |
+| Next action | No further campaign action remains; retain all unsupported mutation and Dispatch routes fail-closed pending a separately reviewed implementation AR. |
 
 ### AR-0061 — Selector and runtime publication mutation gate
 
@@ -1524,7 +1524,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | codex-model-policy-20260926 | First release campaign remains an operational evidence task: generated prerequisites/runbooks and unsigned-tag checks exist, while selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only pending complete operational evidence. | Keep AR-0060 in progress while AR-0061, AR-0062, and AR-0063 provide selector/runtime, authority, rollback, and fresh-clone operational evidence. |
+| P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | codex-model-policy-20260926 | Completed the first-release integration campaign through the exact public v0.3.23/v0.3.26 pair. Generated phase and rollback contracts, Git/SQLite failure campaigns, stale-owner and competing-owner rejection, process-death recovery, validation/reopen safety, unsigned v0.3.26 publication, old-runtime doctor, canonical vendor verification, 139 state tests, offline imports, and doctor --live all pass. Unsupported selector publication, runtime replacement, authority commit/apply, rollback mutation, and Dispatch remain rejection-only. | No further campaign action remains; retain all unsupported mutation and Dispatch routes fail-closed pending a separately reviewed implementation AR. |
 
 ### Open (4)
 
