@@ -3,18 +3,13 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. | codex-model-policy-20260926 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f barrier/write-fencing audit passed 422 tests with ResourceWarning treated as an error across SQLite mutation barriers, rollback control store, SQLite adapter, lock scope, admission/session, authority mutation, durable binding, and UpgradeEngine. The v10 route inventory and process-death evidence remain bound; no distinct safe implementation delta exists without enabling unsupported mutation or Dispatch. | Keep AR-0012 open only for a genuinely new barrier/write-fencing obligation; preserve best-effort model guidance and rejection-only upgrade apply/rollback. | - |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. | - |
 
 ## Done
