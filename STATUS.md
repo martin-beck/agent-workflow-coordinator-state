@@ -217,8 +217,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-model-policy-20260926 |
 | Parent | None |
 | Children | None |
-| Summary | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 selector/runtime hostile matrix passed 192 tests across runtime bootstrap, selector authority/recovery, admission, engine, and identity. Injected publication failures remain fail-closed; no new dependency-safe non-overlapping seam found while mutation/dispatch stay disabled. |
-| Next action | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
+| Summary | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. |
+| Next action | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. |
 
 ### AR-0014 — Verified supersession dependency readiness
 
@@ -1524,7 +1524,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-model-policy-20260926 | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 selector/runtime hostile matrix passed 192 tests across runtime bootstrap, selector authority/recovery, admission, engine, and identity. Injected publication failures remain fail-closed; no new dependency-safe non-overlapping seam found while mutation/dispatch stay disabled. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
+| P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | codex-model-policy-20260926 | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. |
 
 ### Open (3)
 
