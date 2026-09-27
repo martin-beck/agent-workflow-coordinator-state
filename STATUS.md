@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**86 ARs tracked** across 5 active status categories.
+**86 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 77 |
+| **Done** | Accepted, integrated, and durably verified | 78 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 86 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 5 |
+| Open or active | 4 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 86 | 5 | 0 | 77 |
+| unassigned | unassigned | 86 | 4 | 0 | 78 |
 
 ## Task drill-down
 
@@ -1204,14 +1204,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0084-20260927 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
-| Summary | Implement the missing isolated Git authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. |
+| Summary | Implemented the isolated Git authority effect entry point over the existing bound capability; public upgrade dispatch remains rejection-only. |
 | Next action | Claim the task, implement the isolated Git effect entry point, and open a review PR while keeping public dispatch disabled. |
 
 ### AR-0085 — Isolated SQLite authority effect
@@ -1336,7 +1336,7 @@ flowchart LR
         AR_0081["AR-0081 - Done"]:::status_done
         AR_0082["AR-0082 - Done"]:::status_done
         AR_0083["AR-0083 - Done"]:::status_done
-        AR_0084["AR-0084 - In progress"]:::status_in_progress
+        AR_0084["AR-0084 - Done"]:::status_done
         AR_0085["AR-0085 - Planned"]:::status_planned
         AR_0086["AR-0086 - Planned"]:::status_planned
     end
@@ -1572,12 +1572,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0084](tasks/AR-0084.md): Isolated Git authority effect | codex-awc-ar0084-20260927 | Implement the missing isolated Git authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. | Claim the task, implement the isolated Git effect entry point, and open a review PR while keeping public dispatch disabled. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -1594,7 +1588,7 @@ flowchart LR
 | P0 | [AR-0085](tasks/AR-0085.md): Isolated SQLite authority effect | Unclaimed | Implement the missing isolated SQLite authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. | Wait for AR-0084 completion, then claim the task and implement the isolated SQLite effect entry point while keeping public dispatch disabled. |
 | P0 | [AR-0086](tasks/AR-0086.md): Controlled upgrade dispatch boundary | Unclaimed | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. | Wait for AR-0084 and AR-0085 completion, then define the smallest evidence-gated apply dispatch change; keep rollback and unsupported operations rejected. |
 
-### Done (77)
+### Done (78)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1662,6 +1656,7 @@ flowchart LR
 | P0 | [AR-0080](tasks/AR-0080.md): Coordinated rollback to a verified checkpoint | Unclaimed | Add rollback --checkpoint REF restoring coordinator state with coordinated Git revert via reconcile, fail-closed on divergence, using the upgrade-barrier concurrency blueprint. | Implement coordinated rollback and its failure matrix, then open a review PR. |
 | P0 | [AR-0081](tasks/AR-0081.md): User directive record type | Unclaimed | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. | Implement the directive record type and precedence, then open a review PR. |
 | P0 | [AR-0083](tasks/AR-0083.md): Schema, migration, and doctor coverage for new record types | Unclaimed | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. | Extend migrations, doctor checks, and negative fixtures, then open a review PR. |
+| P0 | [AR-0084](tasks/AR-0084.md): Isolated Git authority effect | Unclaimed | Implemented the isolated Git authority effect entry point over the existing bound capability; public upgrade dispatch remains rejection-only. | Claim the task, implement the isolated Git effect entry point, and open a review PR while keeping public dispatch disabled. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
