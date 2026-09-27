@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0084.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "git-effect", "description": "A bound Git capability can execute one exact-head staged effect and return a verified receipt."},
+    {"id": "ambiguity", "description": "Process, identity, admission, and postcondition uncertainty is classified as rejection or ambiguity and is never reported as success."},
+    {"id": "boundary", "description": "The public upgrade dispatcher, rollback, release publication, and Dispatch remain rejection-only."}
+  ],
+  "definition_of_done": [
+    "Exact-head Git capability and durable-journal tests pass, including hostile identity and process-boundary cases.",
+    "Independent review and hosted Formal/Verify checks pass for the identical product revision.",
+    "No model-refinement proof or authorization prerequisite is added."
+  ],
+  "inputs": [
+    {"id": "git-capability", "description": "Existing immutable Git admission and commit capability."},
+    {"id": "journal", "description": "Existing durable authority-effect journal contract."}
+  ],
+  "outputs": [
+    {"id": "git-effect-api", "description": "Isolated Git effect entry point and executable evidence."},
+    {"id": "review-evidence", "description": "Independent review, hosted checks, and exact revision evidence."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["public-upgrade-dispatch", "rollback-dispatch", "model-refinement-proof"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "Hosted checks and review identify the same product revision."},
+    {"id": "fail-closed", "description": "Uncertain Git outcomes remain fenced and unretryable until recovery."},
+    {"id": "dispatch", "description": "Public apply, rollback, release, and Dispatch remain disabled."}
+  ]
+}

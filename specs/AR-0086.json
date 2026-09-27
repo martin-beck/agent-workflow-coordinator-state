@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0086.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "composition", "description": "Git and SQLite isolated effects share one immutable operation and recovery contract."},
+    {"id": "narrow-dispatch", "description": "Only the explicitly evidenced apply operation may be considered for dispatch; rollback and unsupported operations remain rejected."},
+    {"id": "evidence", "description": "Dispatch decisions are based on concrete exact-revision operational evidence and independent review."}
+  ],
+  "definition_of_done": [
+    "Exact-head cross-backend and recovery tests pass.",
+    "Independent review and hosted Formal/Verify checks pass for the identical product revision.",
+    "The formal model remains best-effort guidance and no authorization prerequisite is introduced."
+  ],
+  "inputs": [
+    {"id": "git-effect", "description": "Completed AR-0084 evidence."},
+    {"id": "sqlite-effect", "description": "Completed AR-0085 evidence."}
+  ],
+  "outputs": [
+    {"id": "dispatch-contract", "description": "A bounded dispatch decision and its recovery evidence."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence and hosted checks identify one product revision."},
+    {"id": "recovery", "description": "Every uncertain outcome is write-closed and requires recovery."},
+    {"id": "independent-review", "description": "A separate review worker passes before any public dispatch change."}
+  ]
+}
