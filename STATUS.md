@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 3 active status categories.
+**86 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 4 |
+| **Open** | Dependency-ready and available to claim | 5 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 77 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 83 |
+| Tasks | 86 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 4 |
+| Open or active | 5 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 83 | 4 | 0 | 77 |
+| unassigned | unassigned | 86 | 5 | 0 | 77 |
 
 ## Task drill-down
 
@@ -1200,6 +1200,48 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. |
 | Next action | Extend migrations, doctor checks, and negative fixtures, then open a review PR. |
 
+### AR-0084 — Isolated Git authority effect
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Implement the missing isolated Git authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. |
+| Next action | Claim the task, implement the isolated Git effect entry point, and open a review PR while keeping public dispatch disabled. |
+
+### AR-0085 — Isolated SQLite authority effect
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Implement the missing isolated SQLite authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. |
+| Next action | Wait for AR-0084 completion, then claim the task and implement the isolated SQLite effect entry point while keeping public dispatch disabled. |
+
+### AR-0086 — Controlled upgrade dispatch boundary
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. |
+| Next action | Wait for AR-0084 and AR-0085 completion, then define the smallest evidence-gated apply dispatch change; keep rollback and unsupported operations rejected. |
+
 
 ## Dependency graph
 
@@ -1294,6 +1336,9 @@ flowchart LR
         AR_0081["AR-0081 - Done"]:::status_done
         AR_0082["AR-0082 - Done"]:::status_done
         AR_0083["AR-0083 - Done"]:::status_done
+        AR_0084["AR-0084 - Open"]:::status_open
+        AR_0085["AR-0085 - Planned"]:::status_planned
+        AR_0086["AR-0086 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1398,6 +1443,7 @@ flowchart LR
     AR_0061 --> AR_0062
     AR_0061 --> AR_0064
     AR_0062 --> AR_0063
+    AR_0064 --> AR_0084
     AR_0065 --> AR_0066
     AR_0065 --> AR_0067
     AR_0065 --> AR_0070
@@ -1420,6 +1466,9 @@ flowchart LR
     AR_0079 --> AR_0080
     AR_0079 --> AR_0083
     AR_0081 --> AR_0083
+    AR_0084 --> AR_0085
+    AR_0084 --> AR_0086
+    AR_0085 --> AR_0086
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1497,7 +1546,7 @@ flowchart LR
 | [AR-0061](tasks/AR-0061.md) | [AR-0056](tasks/AR-0056.md), [AR-0058](tasks/AR-0058.md), [AR-0059](tasks/AR-0059.md) | [AR-0062](tasks/AR-0062.md), [AR-0064](tasks/AR-0064.md) |
 | [AR-0062](tasks/AR-0062.md) | [AR-0061](tasks/AR-0061.md) | [AR-0063](tasks/AR-0063.md) |
 | [AR-0063](tasks/AR-0063.md) | [AR-0062](tasks/AR-0062.md) | None |
-| [AR-0064](tasks/AR-0064.md) | [AR-0061](tasks/AR-0061.md) | None |
+| [AR-0064](tasks/AR-0064.md) | [AR-0061](tasks/AR-0061.md) | [AR-0084](tasks/AR-0084.md) |
 | [AR-0065](tasks/AR-0065.md) | None | [AR-0066](tasks/AR-0066.md), [AR-0067](tasks/AR-0067.md), [AR-0070](tasks/AR-0070.md), [AR-0075](tasks/AR-0075.md) |
 | [AR-0066](tasks/AR-0066.md) | [AR-0065](tasks/AR-0065.md) | [AR-0068](tasks/AR-0068.md), [AR-0073](tasks/AR-0073.md) |
 | [AR-0067](tasks/AR-0067.md) | [AR-0065](tasks/AR-0065.md) | [AR-0073](tasks/AR-0073.md) |
@@ -1517,10 +1566,13 @@ flowchart LR
 | [AR-0081](tasks/AR-0081.md) | None | [AR-0083](tasks/AR-0083.md) |
 | [AR-0082](tasks/AR-0082.md) | [AR-0072](tasks/AR-0072.md), [AR-0075](tasks/AR-0075.md) | None |
 | [AR-0083](tasks/AR-0083.md) | [AR-0070](tasks/AR-0070.md), [AR-0072](tasks/AR-0072.md), [AR-0076](tasks/AR-0076.md), [AR-0079](tasks/AR-0079.md), [AR-0081](tasks/AR-0081.md) | None |
+| [AR-0084](tasks/AR-0084.md) | [AR-0064](tasks/AR-0064.md) | [AR-0085](tasks/AR-0085.md), [AR-0086](tasks/AR-0086.md) |
+| [AR-0085](tasks/AR-0085.md) | [AR-0084](tasks/AR-0084.md) | [AR-0086](tasks/AR-0086.md) |
+| [AR-0086](tasks/AR-0086.md) | [AR-0084](tasks/AR-0084.md), [AR-0085](tasks/AR-0085.md) | None |
 
 ## Complete AR inventory
 
-### Open (4)
+### Open (5)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1528,6 +1580,14 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f barrier/write-fencing audit passed 422 tests with ResourceWarning treated as an error across SQLite mutation barriers, rollback control store, SQLite adapter, lock scope, admission/session, authority mutation, durable binding, and UpgradeEngine. The v10 route inventory and process-death evidence remain bound; no distinct safe implementation delta exists without enabling unsupported mutation or Dispatch. | Keep AR-0012 open only for a genuinely new barrier/write-fencing obligation; preserve best-effort model guidance and rejection-only upgrade apply/rollback. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
+| P0 | [AR-0084](tasks/AR-0084.md): Isolated Git authority effect | Unclaimed | Implement the missing isolated Git authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. | Claim the task, implement the isolated Git effect entry point, and open a review PR while keeping public dispatch disabled. |
+
+### Planned (2)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0085](tasks/AR-0085.md): Isolated SQLite authority effect | Unclaimed | Implement the missing isolated SQLite authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. | Wait for AR-0084 completion, then claim the task and implement the isolated SQLite effect entry point while keeping public dispatch disabled. |
+| P0 | [AR-0086](tasks/AR-0086.md): Controlled upgrade dispatch boundary | Unclaimed | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. | Wait for AR-0084 and AR-0085 completion, then define the smallest evidence-gated apply dispatch change; keep rollback and unsupported operations rejected. |
 
 ### Done (77)
 
