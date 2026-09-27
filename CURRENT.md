@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0085](tasks/AR-0085.md): Isolated SQLite authority effect | Implement the missing isolated SQLite authority effect entry point over the existing bound capability and durable journal without enabling public upgrade dispatch. | Wait for AR-0084 completion, then claim the task and implement the isolated SQLite effect entry point while keeping public dispatch disabled. | codex-awc-ar0085-20260927 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -93,6 +87,7 @@ Never edit this file directly.
 | P0 | [AR-0081](tasks/AR-0081.md): User directive record type | Add a directive AR variant carrying board authority, precedence over plans, scope (roles/tasks), and a lifecycle, reusing revision, lease, and CAS machinery. | Implement the directive record type and precedence, then open a review PR. | - |
 | P0 | [AR-0083](tasks/AR-0083.md): Schema, migration, and doctor coverage for new record types | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. | Extend migrations, doctor checks, and negative fixtures, then open a review PR. | - |
 | P0 | [AR-0084](tasks/AR-0084.md): Isolated Git authority effect | Implemented the isolated Git authority effect entry point over the existing bound capability; public upgrade dispatch remains rejection-only. | Claim the task, implement the isolated Git effect entry point, and open a review PR while keeping public dispatch disabled. | - |
+| P0 | [AR-0085](tasks/AR-0085.md): Isolated SQLite authority effect | Implemented the isolated SQLite authority effect entry point over the existing bound capability; public upgrade dispatch remains rejection-only. | Wait for AR-0084 completion, then claim the task and implement the isolated SQLite effect entry point while keeping public dispatch disabled. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
