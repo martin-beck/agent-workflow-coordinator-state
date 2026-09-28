@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0094](tasks/AR-0094.md): Typed SQLite control-store mutation fence | Bind the documented SQLite rollback-control and barrier-session write surface to a typed caller-owned mutation fence without enabling public upgrade mutation. | Audit and implement the smallest typed MutationFence adapter for SQLite rollback-control and barrier-session writes; preserve rejection-only public upgrade mutation and Dispatch. | codex-awc-ar0094-20260928 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -96,6 +90,7 @@ Never edit this file directly.
 | P0 | [AR-0091](tasks/AR-0091.md): SQLite coordination-write fencing | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. | Audit the remaining unbound SQLite coordination write routes and implement the next dependency-safe recovery/fencing slice with hostile process-death evidence; keep public upgrade mutation and Dispatch rejection-only. | - |
 | P0 | [AR-0092](tasks/AR-0092.md): Bound rollback effect capability | Add the next bounded internal rollback-effect seam after commit capability binding, without enabling public rollback, apply, release, or Dispatch. | Claim the task, bind one internal rollback-effect capability to exact session and backup evidence, and keep public rollback and Dispatch rejection-only. | - |
 | P0 | [AR-0093](tasks/AR-0093.md): Fresh-clone Git/SQLite restore equivalence campaign | Complete the remaining cross-backend restore-equivalence and fresh-clone campaign evidence without enabling public rollback, apply, release, or Dispatch. | Audit the Git and SQLite rollback/restore paths in a fresh clone, implement the smallest missing equivalence evidence slice, and keep public upgrade mutation and Dispatch rejection-only. | - |
+| P0 | [AR-0094](tasks/AR-0094.md): Typed SQLite control-store mutation fence | Bind the documented SQLite rollback-control and barrier-session write surface to a typed caller-owned mutation fence without enabling public upgrade mutation. | Audit and implement the smallest typed MutationFence adapter for SQLite rollback-control and barrier-session writes; preserve rejection-only public upgrade mutation and Dispatch. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
