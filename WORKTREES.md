@@ -385,6 +385,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0091` | `ar0091-sqlite-coordination-write-fencing` | `bccc6a66e566` | 0 | behind 4, ahead 4 |
 | `awc-ar0091-control-store` | `ar0091-control-store-fence` | `36cb087fc30b` | 0 | behind 2, ahead 4 |
 | `awc-ar0091-control-store-final` | `ar0091-control-store-final-clean` | `0803e7e2c7a5` | 0 | behind 1, ahead 3 |
+| `awc-ar0091-release-recovery-fencing` | `ar0091-release-recovery-fencing` | `ed115635abe5` | 0 | behind 0, ahead 2 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1924, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1922, ahead 0 |
 | `awc-pr118-review` | `DETACHED` | `519d9d3b34c1` | 0 | behind 1920, ahead 0 |
