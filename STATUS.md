@@ -1477,7 +1477,6 @@ flowchart LR
     AR_0026 --> AR_0027
     AR_0027 --> AR_0028
     AR_0028 --> AR_0029
-    AR_0031 --> AR_0092
     AR_0032 --> AR_0033
     AR_0032 --> AR_0035
     AR_0032 --> AR_0037
@@ -1611,7 +1610,7 @@ flowchart LR
 | [AR-0028](tasks/AR-0028.md) | [AR-0027](tasks/AR-0027.md) | [AR-0029](tasks/AR-0029.md) |
 | [AR-0029](tasks/AR-0029.md) | [AR-0028](tasks/AR-0028.md) | None |
 | [AR-0030](tasks/AR-0030.md) | [AR-0001](tasks/AR-0001.md) | None |
-| [AR-0031](tasks/AR-0031.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0092](tasks/AR-0092.md) |
+| [AR-0031](tasks/AR-0031.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0032](tasks/AR-0032.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0033](tasks/AR-0033.md), [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0033](tasks/AR-0033.md) | [AR-0032](tasks/AR-0032.md) | [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0034](tasks/AR-0034.md) | [AR-0007](tasks/AR-0007.md) | None |
@@ -1672,7 +1671,7 @@ flowchart LR
 | [AR-0089](tasks/AR-0089.md) | [AR-0088](tasks/AR-0088.md) | None |
 | [AR-0090](tasks/AR-0090.md) | [AR-0088](tasks/AR-0088.md) | [AR-0091](tasks/AR-0091.md) |
 | [AR-0091](tasks/AR-0091.md) | [AR-0088](tasks/AR-0088.md), [AR-0090](tasks/AR-0090.md) | [AR-0092](tasks/AR-0092.md) |
-| [AR-0092](tasks/AR-0092.md) | [AR-0031](tasks/AR-0031.md), [AR-0091](tasks/AR-0091.md) | None |
+| [AR-0092](tasks/AR-0092.md) | [AR-0091](tasks/AR-0091.md) | None |
 
 ## Complete AR inventory
 
