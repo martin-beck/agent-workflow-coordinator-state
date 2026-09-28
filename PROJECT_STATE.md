@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1145 | `ar0092-bound-rollback-effect-20260928@7274973557f0` | `main` | UNSTABLE | QUEUED:, QUEUED: | Bind internal rollback effect capability |
+| #1145 | `ar0092-bound-rollback-effect-20260928@7274973557f0` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Bind internal rollback effect capability |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36477800757 | `7274973557f0` | pull_request | Verify | queued:- |
+| 36477800757 | `7274973557f0` | pull_request | Verify | completed:success |
 | 36477196090 | `df346aa57a89` | pull_request | Verify | completed:failure |
 | 36476219128 | `ca320d362bde` | pull_request | Verify | completed:success |
 | 36475887680 | `5c0e2624e5fc` | pull_request | Verify | completed:failure |
