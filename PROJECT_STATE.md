@@ -2,29 +2,28 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `6eced72162b2f578448d665ab743d09a6e6065bd`
-- Local origin/main: `6eced72162b2f578448d665ab743d09a6e6065bd`
+- Product remote main: `3258caeb86fc2674a79c1747e0ae16c1bde5d220`
+- Local origin/main: `3258caeb86fc2674a79c1747e0ae16c1bde5d220`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1146 | `ar0093-fresh-clone-restore-equivalence@ded2504b0936` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test: prove SQLite fresh-clone restore equivalence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36483767502 | `ded2504b0936` | pull_request | Verify | queued:- |
+| 36485566754 | `3258caeb86fc` | push | Verify | completed:success |
+| 36485566725 | `3258caeb86fc` | push | Formal | completed:success |
+| 36485304808 | `d144de7c8df1` | pull_request | Verify | completed:success |
+| 36484846295 | `8ae156104046` | pull_request | Verify | completed:failure |
+| 36484474545 | `8e11345e4c30` | pull_request | Verify | completed:failure |
+| 36484177639 | `b4fd6948c319` | pull_request | Verify | completed:failure |
+| 36483767502 | `ded2504b0936` | pull_request | Verify | completed:failure |
 | 36481931592 | `6eced72162b2` | push | Verify | completed:success |
 | 36481930991 | `6eced72162b2` | push | Formal | completed:success |
 | 36481728967 | `23480fcd4889` | pull_request | Verify | completed:success |
 | 36481140962 | `3d97265f6b25` | pull_request | Verify | completed:failure |
 | 36480928650 | `b0f73e67cb11` | pull_request | Verify | completed:failure |
-| 36480320600 | `93f85ec48ef3` | pull_request | Verify | completed:failure |
-| 36479758143 | `f3e090216f8a` | pull_request | Verify | completed:failure |
-| 36479315397 | `a8b436d7438f` | pull_request | Verify | completed:failure |
-| 36477800757 | `7274973557f0` | pull_request | Verify | completed:success |
-| 36477196090 | `df346aa57a89` | pull_request | Verify | completed:failure |
-| 36476219128 | `ca320d362bde` | pull_request | Verify | completed:success |
