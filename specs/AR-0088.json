@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0088.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "acquire", "description": "A forward upgrade acquires one durable barrier before quiescence and binds its immutable session identity."},
+    {"id": "recheck", "description": "The same barrier identity is reread under the ordered scope before each later lifecycle admission."},
+    {"id": "reopen", "description": "Reopen durably transitions the forward barrier through releasing and released only after terminal validation."},
+    {"id": "uncertainty", "description": "Process death, stale identity, failed recheck, and uncertain release remain rejection or ambiguity without mutation."}
+  ],
+  "definition_of_done": [
+    "Exact hostile tests cover acquire, recheck, releasing, released, process-death, and uncertain-reopen paths.",
+    "Independent review and hosted quality/formal checks pass for one exact product revision.",
+    "Public apply, rollback, release, and Dispatch remain rejection-only; the formal model remains best-effort guidance."
+  ],
+  "inputs": [
+    {"id": "quiescence-admission", "description": "Completed AR-0087 barrier-before-quiescence admission boundary."},
+    {"id": "barrier-contract", "description": "Existing durable barrier session and ordered lock contracts."}
+  ],
+  "outputs": [
+    {"id": "forward-barrier-lifecycle", "description": "A separately reviewable acquire/recheck/reopen lifecycle contract and hostile evidence."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public mutation path is enabled by this AR."}
+  ]
+}
