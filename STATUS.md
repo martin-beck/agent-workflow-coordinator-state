@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**91 ARs tracked** across 4 active status categories.
+**92 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 91 |
+| Tasks | 92 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 2 |
+| Open or active | 3 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 91 | 2 | 0 | 87 |
+| unassigned | unassigned | 92 | 3 | 0 | 87 |
 
 ## Task drill-down
 
@@ -1312,6 +1312,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. |
 | Next action | Audit the remaining unbound SQLite coordination write routes and implement the next dependency-safe recovery/fencing slice with hostile process-death evidence; keep public upgrade mutation and Dispatch rejection-only. |
 
+### AR-0092 — Bound rollback effect capability
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add the next bounded internal rollback-effect seam after commit capability binding, without enabling public rollback, apply, release, or Dispatch. |
+| Next action | Claim the task, bind one internal rollback-effect capability to exact session and backup evidence, and keep public rollback and Dispatch rejection-only. |
+
 
 ## Dependency graph
 
@@ -1414,6 +1428,7 @@ flowchart LR
         AR_0089["AR-0089 - Done"]:::status_done
         AR_0090["AR-0090 - Done"]:::status_done
         AR_0091["AR-0091 - Done"]:::status_done
+        AR_0092["AR-0092 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1462,6 +1477,7 @@ flowchart LR
     AR_0026 --> AR_0027
     AR_0027 --> AR_0028
     AR_0028 --> AR_0029
+    AR_0031 --> AR_0092
     AR_0032 --> AR_0033
     AR_0032 --> AR_0035
     AR_0032 --> AR_0037
@@ -1550,6 +1566,7 @@ flowchart LR
     AR_0088 --> AR_0090
     AR_0088 --> AR_0091
     AR_0090 --> AR_0091
+    AR_0091 --> AR_0092
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1594,7 +1611,7 @@ flowchart LR
 | [AR-0028](tasks/AR-0028.md) | [AR-0027](tasks/AR-0027.md) | [AR-0029](tasks/AR-0029.md) |
 | [AR-0029](tasks/AR-0029.md) | [AR-0028](tasks/AR-0028.md) | None |
 | [AR-0030](tasks/AR-0030.md) | [AR-0001](tasks/AR-0001.md) | None |
-| [AR-0031](tasks/AR-0031.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
+| [AR-0031](tasks/AR-0031.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0092](tasks/AR-0092.md) |
 | [AR-0032](tasks/AR-0032.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0033](tasks/AR-0033.md), [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0033](tasks/AR-0033.md) | [AR-0032](tasks/AR-0032.md) | [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0034](tasks/AR-0034.md) | [AR-0007](tasks/AR-0007.md) | None |
@@ -1654,7 +1671,8 @@ flowchart LR
 | [AR-0088](tasks/AR-0088.md) | [AR-0087](tasks/AR-0087.md) | [AR-0089](tasks/AR-0089.md), [AR-0090](tasks/AR-0090.md), [AR-0091](tasks/AR-0091.md) |
 | [AR-0089](tasks/AR-0089.md) | [AR-0088](tasks/AR-0088.md) | None |
 | [AR-0090](tasks/AR-0090.md) | [AR-0088](tasks/AR-0088.md) | [AR-0091](tasks/AR-0091.md) |
-| [AR-0091](tasks/AR-0091.md) | [AR-0088](tasks/AR-0088.md), [AR-0090](tasks/AR-0090.md) | None |
+| [AR-0091](tasks/AR-0091.md) | [AR-0088](tasks/AR-0088.md), [AR-0090](tasks/AR-0090.md) | [AR-0092](tasks/AR-0092.md) |
+| [AR-0092](tasks/AR-0092.md) | [AR-0031](tasks/AR-0031.md), [AR-0091](tasks/AR-0091.md) | None |
 
 ## Complete AR inventory
 
@@ -1664,11 +1682,12 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-20260928 | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
+| P0 | [AR-0092](tasks/AR-0092.md): Bound rollback effect capability | Unclaimed | Add the next bounded internal rollback-effect seam after commit capability binding, without enabling public rollback, apply, release, or Dispatch. | Claim the task, bind one internal rollback-effect capability to exact session and backup evidence, and keep public rollback and Dispatch rejection-only. |
 
 ### Done (87)
 

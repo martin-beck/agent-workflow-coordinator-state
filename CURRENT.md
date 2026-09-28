@@ -14,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. | - |
+| P0 | [AR-0092](tasks/AR-0092.md): Bound rollback effect capability | Add the next bounded internal rollback-effect seam after commit capability binding, without enabling public rollback, apply, release, or Dispatch. | Claim the task, bind one internal rollback-effect capability to exact session and backup evidence, and keep public rollback and Dispatch rejection-only. | - |
 
 ## Done
 
