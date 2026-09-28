@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0096.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "lifecycle-record", "description": "A durable WAL/SHM lifecycle record binds stable authority/control identities, journal mode, state, generation, sidecar identities when present, and a canonical digest."},
+    {"id": "checkpoint-transitions", "description": "Absent, active, and clean_checkpointed sidecar transitions are explicit and reject impossible or torn transitions."},
+    {"id": "replacement-rejection", "description": "Sidecar replacement, deletion while active, stable-identity drift, and lifecycle-record corruption reject closed without admitting an authority mutation."},
+    {"id": "compatibility", "description": "Existing unprovisioned coordination remains usable while provisioned lifecycle corruption blocks mutation; public upgrade mutation and Dispatch remain rejection-only."}
+  ],
+  "definition_of_done": [
+    "Implement the smallest typed WAL/SHM lifecycle recorder and verifier under the existing owner-controlled fence.",
+    "Add hostile failure, checkpoint, replacement, corruption, and process-death/reconciliation tests with exact state evidence.",
+    "Pass independent review, hosted checks, post-merge Verify/Formal, and durable state reconciliation for one exact product revision.",
+    "The AI-generated model remains best-effort guidance; no source-to-model refinement proof or authorization prerequisite is required."
+  ],
+  "inputs": [
+    {"id": "control-fence", "description": "AR-0094 typed SQLite control-store fence and owner-controlled binding."},
+    {"id": "provisioning-contract", "description": "CONTROL_STORE_PROVISIONING.md lifecycle and sidecar identity contract."}
+  ],
+  "outputs": [
+    {"id": "wal-lifecycle", "description": "Durable, digest-bound WAL/SHM lifecycle state and typed transition/reconciliation boundary."},
+    {"id": "hostile-evidence", "description": "Executable tests for sidecar identity drift, impossible transitions, torn records, and process-death-safe rejection."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation", "network-required-startup"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "The slice does not enable public upgrade mutation or Dispatch."}
+  ]
+}
