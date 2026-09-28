@@ -382,7 +382,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0088` | `ar0088-forward-barrier-lifecycle` | `f6a16a69ae7c` | 0 | behind 3, ahead 1 |
 | `awc-ar0089` | `ar0089-target-identity-separation` | `36b7cc79c9b2` | 0 | behind 2, ahead 0 |
 | `awc-ar0090` | `ar0090-verified-launcher-consumer` | `da1cdfbb55f5` | 0 | behind 2, ahead 5 |
-| `awc-ar0091` | `ar0091-sqlite-coordination-write-fencing` | `92611b0748cd` | 0 | behind 1, ahead 2 |
+| `awc-ar0091` | `ar0091-sqlite-coordination-write-fencing` | `bccc6a66e566` | 0 | behind 1, ahead 4 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1921, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1919, ahead 0 |
 | `awc-pr118-review` | `DETACHED` | `519d9d3b34c1` | 0 | behind 1917, ahead 0 |
