@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0091.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "fenced-coordination-write", "description": "Every SQLite coordination write reads and validates the durable upgrade barrier under the prescribed lock order before opening its authority transaction."},
+    {"id": "safe-rejection", "description": "Held, releasing, ambiguous, stale, and missing control state reject without changing the SQLite authority or projections."},
+    {"id": "process-recovery", "description": "Independent-process and process-death tests prove durable safe-mode behavior and recovery only after independently verified release."}
+  ],
+  "definition_of_done": [
+    "The route inventory identifies every SQLite coordination write and each route is either fenced or explicitly read-only.",
+    "Hostile multi-process tests cover lock order, barrier state drift, control-store swaps, transaction timing, and process death.",
+    "Independent review and hosted checks pass at one exact product revision; public upgrade mutation remains rejection-only."
+  ],
+  "inputs": [
+    {"id": "barrier-lifecycle", "description": "AR-0088 durable barrier acquire/recheck/reopen lifecycle."},
+    {"id": "route-inventory", "description": "Existing SQLite mutation route and control-store evidence."}
+  ],
+  "outputs": [
+    {"id": "fenced-coordination-writes", "description": "A bounded, independently reviewed SQLite coordination-write fence seam."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public upgrade mutation path is enabled by this AR."}
+  ]
+}

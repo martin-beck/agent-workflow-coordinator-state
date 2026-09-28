@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0013.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "authenticated-selection", "description": "Selected runtime identity, path, descriptor, and permanent project binding are revalidated before read-only execution."},
+    {"id": "hostile-recovery", "description": "Bounded selector/runtime identity, replacement, publication-failure, and process-death tests reject unsafe outcomes."},
+    {"id": "rejection-boundary", "description": "Public upgrade and selector mutation remain rejection-only; the model is best-effort guidance."}
+  ],
+  "definition_of_done": [
+    "The selected-runtime consumer and its hostile evidence are present on one exact product revision.",
+    "Independent review and hosted checks pass at that exact revision.",
+    "No source-to-model refinement proof is required; unsupported mutation remains disabled."
+  ],
+  "inputs": [
+    {"id": "runtime-identity", "description": "Authenticated versioned-runtime and selector identity contracts."},
+    {"id": "barrier-boundary", "description": "Merged rejection-safe barrier and admission lifecycle."}
+  ],
+  "outputs": [
+    {"id": "selector-runtime-audit", "description": "An exact-head, independently reviewed, read-only selector/runtime audit."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before acceptance."},
+    {"id": "rejection-boundary", "description": "No public selector or upgrade mutation path is enabled."}
+  ]
+}

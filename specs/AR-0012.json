@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0012.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "durable-barrier", "description": "Barrier lifecycle and SQLite coordination writes reject uncertain, stale, or unsafe state under the prescribed lock order."},
+    {"id": "hostile-evidence", "description": "Bounded multi-process, process-death, identity, lock, and transaction tests cover the admitted coordination routes."},
+    {"id": "rejection-boundary", "description": "Public upgrade apply, rollback, release, and Dispatch remain rejection-only; the model is best-effort guidance."}
+  ],
+  "definition_of_done": [
+    "The route inventory identifies the accepted SQLite coordination writes and their bounded evidence.",
+    "Independent review and hosted checks pass at one exact product revision.",
+    "No source-to-model refinement proof is required; unsupported public mutation remains disabled."
+  ],
+  "inputs": [
+    {"id": "barrier-lifecycle", "description": "Merged barrier acquire, recheck, recovery, and reopen lifecycle evidence."},
+    {"id": "coordination-routes", "description": "Merged SQLite authority, control-store, session, and effect route evidence."}
+  ],
+  "outputs": [
+    {"id": "barrier-fencing-audit", "description": "An exact-head, independently reviewed, rejection-safe barrier and coordination-write audit."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before acceptance."},
+    {"id": "rejection-boundary", "description": "No public upgrade mutation path is enabled."}
+  ]
+}
