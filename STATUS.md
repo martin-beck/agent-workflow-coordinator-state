@@ -5,11 +5,11 @@
 
 ## Portfolio overview
 
-**86 ARs tracked** across 3 active status categories.
+**87 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 86 |
+| Tasks | 87 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 4 |
+| Open or active | 5 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 86 | 4 | 0 | 80 |
+| unassigned | unassigned | 87 | 5 | 0 | 80 |
 
 ## Task drill-down
 
@@ -1242,6 +1242,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. |
 | Next action | Promote the next uncovered lifecycle seam after auditing AR-0012, AR-0013, and AR-0031; keep public dispatch rejection-only. |
 
+### AR-0087 — Barrier-before-quiescence admission
+
+| Field | Value |
+| --- | --- |
+| Status | in_progress |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | codex-awc-ar0087-20260928 |
+| Parent | None |
+| Children | None |
+| Summary | New lifecycle-specific child of the AR-0012 barrier umbrella: ensure quiesced admission cannot precede durable barrier acquisition and identity verification, while public mutation remains disabled. |
+| Next action | Claim the task, map the existing barrier/quiescence seam on exact main, and implement only the smallest rejection-safe admission correction. |
+
 
 ## Dependency graph
 
@@ -1339,6 +1353,7 @@ flowchart LR
         AR_0084["AR-0084 - Done"]:::status_done
         AR_0085["AR-0085 - Done"]:::status_done
         AR_0086["AR-0086 - Done"]:::status_done
+        AR_0087["AR-0087 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1469,6 +1484,7 @@ flowchart LR
     AR_0084 --> AR_0085
     AR_0084 --> AR_0086
     AR_0085 --> AR_0086
+    AR_0086 --> AR_0087
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1568,9 +1584,16 @@ flowchart LR
 | [AR-0083](tasks/AR-0083.md) | [AR-0070](tasks/AR-0070.md), [AR-0072](tasks/AR-0072.md), [AR-0076](tasks/AR-0076.md), [AR-0079](tasks/AR-0079.md), [AR-0081](tasks/AR-0081.md) | None |
 | [AR-0084](tasks/AR-0084.md) | [AR-0064](tasks/AR-0064.md) | [AR-0085](tasks/AR-0085.md), [AR-0086](tasks/AR-0086.md) |
 | [AR-0085](tasks/AR-0085.md) | [AR-0084](tasks/AR-0084.md) | [AR-0086](tasks/AR-0086.md) |
-| [AR-0086](tasks/AR-0086.md) | [AR-0084](tasks/AR-0084.md), [AR-0085](tasks/AR-0085.md) | None |
+| [AR-0086](tasks/AR-0086.md) | [AR-0084](tasks/AR-0084.md), [AR-0085](tasks/AR-0085.md) | [AR-0087](tasks/AR-0087.md) |
+| [AR-0087](tasks/AR-0087.md) | [AR-0086](tasks/AR-0086.md) | None |
 
 ## Complete AR inventory
+
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0087](tasks/AR-0087.md): Barrier-before-quiescence admission | codex-awc-ar0087-20260928 | New lifecycle-specific child of the AR-0012 barrier umbrella: ensure quiesced admission cannot precede durable barrier acquisition and identity verification, while public mutation remains disabled. | Claim the task, map the existing barrier/quiescence seam on exact main, and implement only the smallest rejection-safe admission correction. |
 
 ### Open (4)
 
