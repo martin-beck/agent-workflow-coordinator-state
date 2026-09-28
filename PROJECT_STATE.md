@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1145 | `ar0092-bound-rollback-effect-20260928@c7a3c5c2004f` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | Bind internal rollback effect capability |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36473444598 | `c7a3c5c2004f` | pull_request | Verify | in_progress:- |
 | 36471586592 | `20b95cc1e6d0` | push | Formal | completed:success |
 | 36471586577 | `20b95cc1e6d0` | push | Verify | completed:success |
 | 36471281638 | `e2ccab026dc2` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36465720665 | `b71d185dcccb` | push | Formal | completed:success |
 | 36465720502 | `b71d185dcccb` | push | Verify | completed:success |
 | 36465458385 | `ef34c3e48b18` | pull_request | Verify | completed:success |
-| 36464198226 | `94729f23346e` | push | Formal | completed:success |
