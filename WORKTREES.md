@@ -377,6 +377,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-validated-zero-revision` | `ar0007-validated-zero-revision` | `4ee359222044` | 0 | behind 1856, ahead 0 |
 | `awc-ar0012-audit-20260928` | `DETACHED` | `bd14a7132d50` | 0 | behind 22, ahead 0 |
 | `awc-ar0031-mutation-20260928` | `ar0031-engine-commit-dispatch-20260928` | `e2ccab026dc2` | 0 | behind 19, ahead 0 |
+| `awc-ar0031-next-20260928` | `ar0031-next-internal-phase` | `3258caeb86fc` | 0 | behind 0, ahead 0 |
 | `awc-ar0084` | `ar0084-isolated-git-authority-effect` | `d9c1dd97a778` | 0 | behind 51, ahead 1 |
 | `awc-ar0085` | `ar0085-isolated-sqlite-authority-effect` | `956adc555496` | 0 | behind 50, ahead 1 |
 | `awc-ar0086` | `ar0086-controlled-upgrade-dispatch-boundary` | `af5c2d9ee593` | 0 | behind 49, ahead 3 |
