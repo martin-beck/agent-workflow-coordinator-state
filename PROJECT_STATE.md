@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1144 | `ar0031-engine-commit-dispatch-20260928@3518f089802f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat: bind reviewed commit capability to upgrade engine |
+| #1144 | `ar0031-engine-commit-dispatch-20260928@e2ccab026dc2` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat: bind reviewed commit capability to upgrade engine |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36471281638 | `e2ccab026dc2` | pull_request | Verify | queued:- |
 | 36470794507 | `3518f089802f` | pull_request | Verify | completed:success |
 | 36470263607 | `7ac148f1bd65` | pull_request | Verify | completed:success |
 | 36467014756 | `bd14a7132d50` | push | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36464198226 | `94729f23346e` | push | Formal | completed:success |
 | 36464198167 | `94729f23346e` | push | Verify | completed:success |
 | 36463954263 | `613d3681abea` | pull_request | Verify | completed:success |
-| 36462299346 | `a3a0bdc854bb` | push | Formal | completed:success |
