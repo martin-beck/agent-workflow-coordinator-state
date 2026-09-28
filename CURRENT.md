@@ -3,13 +3,18 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0096](tasks/AR-0096.md): Durable SQLite WAL/SHM lifecycle reconciliation | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. | Claim the task, audit the existing SQLite sidecar identity seams on exact main, and implement only the durable WAL/SHM lifecycle and rejection-safe reconciliation boundary. | codex-awc-ar0096-20260929 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. | - |
-| P0 | [AR-0096](tasks/AR-0096.md): Durable SQLite WAL/SHM lifecycle reconciliation | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. | Claim the task, audit the existing SQLite sidecar identity seams on exact main, and implement only the durable WAL/SHM lifecycle and rejection-safe reconciliation boundary. | - |
 
 ## Done
 

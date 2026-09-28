@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**96 ARs tracked** across 3 active status categories.
+**96 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1372,11 +1372,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0096-20260929 |
 | Parent | None |
 | Children | None |
 | Summary | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. |
@@ -1488,7 +1488,7 @@ flowchart LR
         AR_0093["AR-0093 - Done"]:::status_done
         AR_0094["AR-0094 - Done"]:::status_done
         AR_0095["AR-0095 - Done"]:::status_done
-        AR_0096["AR-0096 - Open"]:::status_open
+        AR_0096["AR-0096 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1746,13 +1746,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (3)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0096](tasks/AR-0096.md): Durable SQLite WAL/SHM lifecycle reconciliation | codex-awc-ar0096-20260929 | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. | Claim the task, audit the existing SQLite sidecar identity seams on exact main, and implement only the durable WAL/SHM lifecycle and rejection-safe reconciliation boundary. |
+
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
-| P0 | [AR-0096](tasks/AR-0096.md): Durable SQLite WAL/SHM lifecycle reconciliation | Unclaimed | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. | Claim the task, audit the existing SQLite sidecar identity seams on exact main, and implement only the durable WAL/SHM lifecycle and rejection-safe reconciliation boundary. |
 
 ### Done (91)
 
