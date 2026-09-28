@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0092.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "pre-effect-identity", "description": "A rollback effect is admitted only when operation, phase, backend, session, target, and verified backup identities match exactly before the effect."},
+    {"id": "single-use-outcome", "description": "The bound rollback capability is single-use and records committed, held, failed, or ambiguous outcomes without permitting uncertain continuation."},
+    {"id": "safe-boundary", "description": "Public rollback, apply, release, and Dispatch remain rejection-only and unsupported capability inputs fail closed."}
+  ],
+  "definition_of_done": [
+    "A typed internal rollback-effect capability and bounded consumer are implemented.",
+    "Hostile stale, replay, identity-drift, process-death, and ambiguous-outcome tests pass.",
+    "Independent review, exact-head hosted checks, post-merge Verify, and durable state reconciliation pass."
+  ],
+  "inputs": [
+    {"id": "commit-boundary", "description": "AR-0031 internal commit capability and parent session binding."},
+    {"id": "coordination-fence", "description": "AR-0091 typed coordination-write fencing and durable ambiguous-state handling."}
+  ],
+  "outputs": [
+    {"id": "rollback-effect-seam", "description": "A bounded internal rollback-effect capability that remains disconnected from public dispatch."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public rollback, apply, release, or Dispatch path is enabled by this AR."}
+  ]
+}

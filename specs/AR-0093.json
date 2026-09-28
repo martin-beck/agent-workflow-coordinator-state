@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0093.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "restore-equivalence", "description": "Git and SQLite restore observations are bound to exact backend, operation, backup, session, and authority identities before any conclusion is accepted."},
+    {"id": "fresh-clone-campaign", "description": "A fresh-clone campaign covers stale, replaced, process-dead, and ambiguous restore boundaries and records durable fail-closed outcomes."},
+    {"id": "safe-boundary", "description": "Public apply, rollback, release, and Dispatch remain rejection-only and unsupported capability inputs fail closed."}
+  ],
+  "definition_of_done": [
+    "The smallest missing Git/SQLite restore-equivalence contract or hostile test slice is implemented.",
+    "Fresh-clone and process-death evidence is recorded against one exact product revision.",
+    "Independent review, exact-head hosted checks, post-merge verification, and durable reconciliation pass."
+  ],
+  "inputs": [
+    {"id": "rollback-effect-seam", "description": "AR-0092 internal rollback-effect capability remains disconnected from public dispatch."},
+    {"id": "restore-contracts", "description": "Existing Git and SQLite backup, restore, reread, and control-store contracts."}
+  ],
+  "outputs": [
+    {"id": "restore-equivalence-evidence", "description": "Fresh-clone backend-specific restore-equivalence evidence with durable ambiguous-outcome boundaries."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public apply, rollback, release, or Dispatch path is enabled by this AR."}
+  ]
+}
