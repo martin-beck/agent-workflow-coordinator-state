@@ -383,8 +383,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0089` | `ar0089-target-identity-separation` | `36b7cc79c9b2` | 0 | behind 21, ahead 0 |
 | `awc-ar0090` | `ar0090-verified-launcher-consumer` | `da1cdfbb55f5` | 0 | behind 21, ahead 5 |
 | `awc-ar0091` | `ar0091-sqlite-coordination-write-fencing` | `bccc6a66e566` | 0 | behind 20, ahead 4 |
-| `awc-ar0091-control-recovery` | `ar0091-control-recovery` | `ef34c3e48b18` | 3 | behind 4, ahead 0 |
-| changed files | - | - | - | `docs/SQLITE_MUTATION_ROUTE_INVENTORY.md`, `formal/upgrade/evidence.json`, `tests/test_lock_domain_scope.py` |
+| `awc-ar0091-control-recovery` | `ar0091-control-recovery` | `5631400d9f6c` | 0 | behind 4, ahead 1 |
 | `awc-ar0091-control-store` | `ar0091-control-store-fence` | `36cb087fc30b` | 0 | behind 18, ahead 4 |
 | `awc-ar0091-control-store-final` | `ar0091-control-store-final-clean` | `0803e7e2c7a5` | 0 | behind 17, ahead 3 |
 | `awc-ar0091-fresh-fence-recovery` | `ar0091-fresh-fence-recovery` | `e305288a4cf7` | 0 | behind 11, ahead 0 |
