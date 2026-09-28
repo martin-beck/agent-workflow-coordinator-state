@@ -14,11 +14,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. | - |
-
-## Planned
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
 | P0 | [AR-0093](tasks/AR-0093.md): Fresh-clone Git/SQLite restore equivalence campaign | Complete the remaining cross-backend restore-equivalence and fresh-clone campaign evidence without enabling public rollback, apply, release, or Dispatch. | Audit the Git and SQLite rollback/restore paths in a fresh clone, implement the smallest missing equivalence evidence slice, and keep public upgrade mutation and Dispatch rejection-only. | - |
 
 ## Done
