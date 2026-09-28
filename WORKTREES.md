@@ -379,6 +379,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0085` | `ar0085-isolated-sqlite-authority-effect` | `956adc555496` | 0 | behind 4, ahead 1 |
 | `awc-ar0086` | `ar0086-controlled-upgrade-dispatch-boundary` | `af5c2d9ee593` | 0 | behind 3, ahead 3 |
 | `awc-ar0087` | `ar0087-barrier-before-quiescence-admission` | `86235e0fbb50` | 0 | behind 1, ahead 1 |
+| `awc-ar0088` | `ar0088-forward-barrier-lifecycle` | `f6a16a69ae7c` | 0 | behind 0, ahead 1 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1918, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1916, ahead 0 |
 | `awc-pr118-review` | `DETACHED` | `519d9d3b34c1` | 0 | behind 1914, ahead 0 |
