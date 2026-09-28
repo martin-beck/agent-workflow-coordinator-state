@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1147 | `ar0094-sqlite-control-store-fence@28a52a49e339` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test: close SQLite control-store fence evidence gap |
+| #1147 | `ar0094-sqlite-control-store-fence@5f8d55cad370` | `main` | UNSTABLE | QUEUED:, QUEUED: | test: close SQLite control-store fence evidence gap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36487924078 | `5f8d55cad370` | pull_request | Verify | queued:- |
 | 36487296202 | `28a52a49e339` | pull_request | Verify | completed:success |
 | 36485566754 | `3258caeb86fc` | push | Verify | completed:success |
 | 36485566725 | `3258caeb86fc` | push | Formal | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36481931592 | `6eced72162b2` | push | Verify | completed:success |
 | 36481930991 | `6eced72162b2` | push | Formal | completed:success |
 | 36481728967 | `23480fcd4889` | pull_request | Verify | completed:success |
-| 36481140962 | `3d97265f6b25` | pull_request | Verify | completed:failure |
