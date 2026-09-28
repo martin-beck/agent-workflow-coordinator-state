@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0095.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "versioned-store", "description": "Complete immutable runtime releases are staged only beneath the fixed owner-controlled versioned store."},
+    {"id": "trust-policy", "description": "Release admission uses a concrete trust-policy verifier for source/tag identity and authenticity evidence."},
+    {"id": "filesystem-boundary", "description": "Symlink, hard-link, ownership, mode, path-escape, unallowlisted-file, and identity-drift faults reject closed."},
+    {"id": "compatibility", "description": "Existing flat installations remain functional for normal use and remain ineligible for upgrade publication."}
+  ],
+  "definition_of_done": [
+    "Hostile staging and validation tests cover filesystem, manifest, trust-policy, and process/failure boundaries.",
+    "Independent review and hosted quality/formal checks pass for one exact product revision.",
+    "Public apply, rollback, release, and Dispatch remain rejection-only; no source-to-model refinement proof or authorization prerequisite is required."
+  ],
+  "inputs": [
+    {"id": "verified-consumer", "description": "AR-0090 fixed selected-runtime consumer and retained validation boundary."},
+    {"id": "selector-seam", "description": "Existing typed selector-admission seam and atomic selector/reconciliation primitives."}
+  ],
+  "outputs": [
+    {"id": "runtime-store", "description": "A separately reviewable versioned runtime staging and validation boundary."},
+    {"id": "trust-verifier", "description": "A concrete, testable release authenticity/trust-policy verifier."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation", "network-required-startup"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "The slice does not enable public upgrade mutation."}
+  ]
+}
