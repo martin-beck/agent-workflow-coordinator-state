@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1147 | `ar0094-sqlite-control-store-fence@28a52a49e339` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | test: close SQLite control-store fence evidence gap |
+| #1147 | `ar0094-sqlite-control-store-fence@28a52a49e339` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | test: close SQLite control-store fence evidence gap |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36487296202 | `28a52a49e339` | pull_request | Verify | in_progress:- |
+| 36487296202 | `28a52a49e339` | pull_request | Verify | completed:success |
 | 36485566754 | `3258caeb86fc` | push | Verify | completed:success |
 | 36485566725 | `3258caeb86fc` | push | Formal | completed:success |
 | 36485304808 | `d144de7c8df1` | pull_request | Verify | completed:success |
