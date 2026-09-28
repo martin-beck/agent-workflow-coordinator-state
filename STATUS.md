@@ -5,11 +5,11 @@
 
 ## Portfolio overview
 
-**87 ARs tracked** across 3 active status categories.
+**88 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 87 |
+| Tasks | 88 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 4 |
+| Open or active | 5 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 87 | 4 | 0 | 81 |
+| unassigned | unassigned | 88 | 5 | 0 | 81 |
 
 ## Task drill-down
 
@@ -1256,6 +1256,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | New lifecycle-specific child of the AR-0012 barrier umbrella: ensure quiesced admission cannot precede durable barrier acquisition and identity verification, while public mutation remains disabled. |
 | Next action | Promote the next uncovered barrier lifecycle seam; keep public mutation rejection-only. |
 
+### AR-0088 — Forward barrier acquire/recheck/reopen lifecycle
+
+| Field | Value |
+| --- | --- |
+| Status | in_progress |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | codex-awc-ar0088-20260928 |
+| Parent | None |
+| Children | None |
+| Summary | New lifecycle-specific child of the AR-0012 barrier umbrella: bind forward upgrade acquire, ordered identity rechecks, and terminal reopen transitions without enabling public mutation. |
+| Next action | Claim the task, map the existing barrier session lifecycle on exact main, and implement only the smallest rejection-safe acquire/recheck/reopen correction. |
+
 
 ## Dependency graph
 
@@ -1354,6 +1368,7 @@ flowchart LR
         AR_0085["AR-0085 - Done"]:::status_done
         AR_0086["AR-0086 - Done"]:::status_done
         AR_0087["AR-0087 - Done"]:::status_done
+        AR_0088["AR-0088 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1485,6 +1500,7 @@ flowchart LR
     AR_0084 --> AR_0086
     AR_0085 --> AR_0086
     AR_0086 --> AR_0087
+    AR_0087 --> AR_0088
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1585,9 +1601,16 @@ flowchart LR
 | [AR-0084](tasks/AR-0084.md) | [AR-0064](tasks/AR-0064.md) | [AR-0085](tasks/AR-0085.md), [AR-0086](tasks/AR-0086.md) |
 | [AR-0085](tasks/AR-0085.md) | [AR-0084](tasks/AR-0084.md) | [AR-0086](tasks/AR-0086.md) |
 | [AR-0086](tasks/AR-0086.md) | [AR-0084](tasks/AR-0084.md), [AR-0085](tasks/AR-0085.md) | [AR-0087](tasks/AR-0087.md) |
-| [AR-0087](tasks/AR-0087.md) | [AR-0086](tasks/AR-0086.md) | None |
+| [AR-0087](tasks/AR-0087.md) | [AR-0086](tasks/AR-0086.md) | [AR-0088](tasks/AR-0088.md) |
+| [AR-0088](tasks/AR-0088.md) | [AR-0087](tasks/AR-0087.md) | None |
 
 ## Complete AR inventory
+
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0088](tasks/AR-0088.md): Forward barrier acquire/recheck/reopen lifecycle | codex-awc-ar0088-20260928 | New lifecycle-specific child of the AR-0012 barrier umbrella: bind forward upgrade acquire, ordered identity rechecks, and terminal reopen transitions without enabling public mutation. | Claim the task, map the existing barrier session lifecycle on exact main, and implement only the smallest rejection-safe acquire/recheck/reopen correction. |
 
 ### Open (4)
 
