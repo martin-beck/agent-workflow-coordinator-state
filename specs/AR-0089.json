@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0089.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "target-identity", "description": "Forward and rollback child operations have distinct durable identities bound to one parent session."},
+    {"id": "immutable-binding", "description": "Target, operation, barrier, revision, and fencing identities cannot be substituted after admission."},
+    {"id": "recovery", "description": "Stale, competing, replayed, or ambiguous target identity rejects or enters durable recovery without mutation."}
+  ],
+  "definition_of_done": [
+    "Exact hostile tests cover forward/rollback identity collision, substitution, replay, and process-death recovery.",
+    "Independent review and hosted quality/formal checks pass for one exact product revision.",
+    "Public apply, rollback, release, and Dispatch remain rejection-only; the formal model remains best-effort guidance."
+  ],
+  "inputs": [
+    {"id": "barrier-lifecycle", "description": "Completed AR-0088 forward barrier lifecycle evidence."},
+    {"id": "child-bindings", "description": "Existing durable forward and rollback child binding contracts."}
+  ],
+  "outputs": [
+    {"id": "target-identity-contract", "description": "A separately reviewable non-conflicting target identity contract and hostile evidence."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public mutation path is enabled by this AR."}
+  ]
+}
