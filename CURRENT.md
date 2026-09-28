@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0091](tasks/AR-0091.md): SQLite coordination-write fencing | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. | Audit and fence the remaining recover_unknown/reconcile_ambiguous and cross-process SQLiteRollbackControlStore/SQLiteBarrierSessionStore write routes with typed scope methods and hostile process-death evidence; preserve compatible constructors and rejection-only public upgrade mutation. | codex-awc-ar0091-20260928 |
+| P0 | [AR-0091](tasks/AR-0091.md): SQLite coordination-write fencing | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. | Design and implement a separate fresh-fence recovery scope for SQLiteBarrierSessionStore.reconcile_ambiguous and related cross-process recovery writes; require durable ambiguous-state admission, newer identity, trusted authority reread, prescribed lock order, and hostile process-death evidence. | codex-awc-ar0091-20260928 |
 
 ## Open
 
