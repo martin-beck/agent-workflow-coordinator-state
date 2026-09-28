@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0091](tasks/AR-0091.md): SQLite coordination-write fencing | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. | Claim the task, audit every SQLite coordination-write route on exact origin/main, and implement only the smallest rejection-safe fence seam. | codex-awc-ar0091-20260928 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
