@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1144 | `ar0031-engine-commit-dispatch-20260928@3518f089802f` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat: bind reviewed commit capability to upgrade engine |
+| #1144 | `ar0031-engine-commit-dispatch-20260928@3518f089802f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | feat: bind reviewed commit capability to upgrade engine |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36470794507 | `3518f089802f` | pull_request | Verify | queued:- |
+| 36470794507 | `3518f089802f` | pull_request | Verify | completed:success |
 | 36470263607 | `7ac148f1bd65` | pull_request | Verify | completed:success |
 | 36467014756 | `bd14a7132d50` | push | Verify | completed:success |
 | 36467014509 | `bd14a7132d50` | push | Formal | completed:success |
