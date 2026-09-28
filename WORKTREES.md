@@ -391,8 +391,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0091-fresh-fence-recovery` | `ar0091-fresh-fence-recovery` | `e305288a4cf7` | 0 | behind 17, ahead 0 |
 | `awc-ar0091-recovery-fencing` | `ar0091-recovery-fencing` | `2e1d718d631a` | 0 | behind 21, ahead 2 |
 | `awc-ar0091-release-recovery-fencing` | `ar0091-release-recovery-fencing` | `ed115635abe5` | 0 | behind 22, ahead 2 |
-| `awc-ar0092-rollback-20260928` | `ar0092-bound-rollback-effect-20260928` | `ca320d362bde` | 7 | behind 0, ahead 4 |
-| changed files | - | - | - | `formal/upgrade/evidence.json`, `tests/test_authority_neutral_rollback_dispatch.py`, `tools/authority_neutral_commit.py`, `tools/authority_neutral_rollback_dispatch.py`, `tools/git_authority_adapter.py`, `tools/rollback_control_store.py`, `tools/sqlite_authority_adapter.py` |
+| `awc-ar0092-rollback-20260928` | `ar0092-bound-rollback-effect-20260928` | `df346aa57a89` | 0 | behind 0, ahead 5 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1946, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1944, ahead 0 |
 | `awc-pr118-review` | `DETACHED` | `519d9d3b34c1` | 0 | behind 1942, ahead 0 |
