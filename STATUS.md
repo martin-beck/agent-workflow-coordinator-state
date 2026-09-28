@@ -1310,7 +1310,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. |
-| Next action | Extend the typed authority fence to the SQLiteRollbackControlStore and SQLiteBarrierSessionStore write surfaces, preserving compatible constructors and rejection-only public upgrade mutation. |
+| Next action | Extend typed coordination fencing from CAS to the remaining SQLiteRollbackControlStore and SQLiteBarrierSessionStore write routes (release/recovery/child/reopen), preserving compatible constructors and rejection-only public upgrade mutation. |
 
 
 ## Dependency graph
@@ -1662,7 +1662,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0091](tasks/AR-0091.md): SQLite coordination-write fencing | codex-awc-ar0091-20260928 | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. | Extend the typed authority fence to the SQLiteRollbackControlStore and SQLiteBarrierSessionStore write surfaces, preserving compatible constructors and rejection-only public upgrade mutation. |
+| P0 | [AR-0091](tasks/AR-0091.md): SQLite coordination-write fencing | codex-awc-ar0091-20260928 | Next dependency-safe gap after verified launcher consumption: ensure SQLite coordination writes participate in the durable upgrade barrier without enabling public upgrade mutation. | Extend typed coordination fencing from CAS to the remaining SQLiteRollbackControlStore and SQLiteBarrierSessionStore write routes (release/recovery/child/reopen), preserving compatible constructors and rejection-only public upgrade mutation. |
 
 ### Open (4)
 
