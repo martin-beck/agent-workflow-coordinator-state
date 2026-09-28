@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**90 ARs tracked** across 4 active status categories.
+**90 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 83 |
+| **Done** | Accepted, integrated, and durably verified | 84 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 90 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 5 |
+| Open or active | 4 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 90 | 5 | 0 | 83 |
+| unassigned | unassigned | 90 | 4 | 0 | 84 |
 
 ## Task drill-down
 
@@ -1288,11 +1288,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0090-20260928 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Lifecycle-specific child for the remaining documented runtime gap: consume the authenticated selected runtime through the fixed launcher without enabling public mutation. |
@@ -1398,7 +1398,7 @@ flowchart LR
         AR_0087["AR-0087 - Done"]:::status_done
         AR_0088["AR-0088 - Done"]:::status_done
         AR_0089["AR-0089 - Done"]:::status_done
-        AR_0090["AR-0090 - In progress"]:::status_in_progress
+        AR_0090["AR-0090 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1640,12 +1640,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0090](tasks/AR-0090.md): Verified launcher consumption | codex-awc-ar0090-20260928 | Lifecycle-specific child for the remaining documented runtime gap: consume the authenticated selected runtime through the fixed launcher without enabling public mutation. | Claim the task, map the existing fixed launcher and selected-runtime call graph on exact main, and implement only the smallest rejection-safe consumer. |
-
 ### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -1655,7 +1649,7 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
 
-### Done (83)
+### Done (84)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1729,6 +1723,7 @@ flowchart LR
 | P0 | [AR-0087](tasks/AR-0087.md): Barrier-before-quiescence admission | Unclaimed | New lifecycle-specific child of the AR-0012 barrier umbrella: ensure quiesced admission cannot precede durable barrier acquisition and identity verification, while public mutation remains disabled. | Promote the next uncovered barrier lifecycle seam; keep public mutation rejection-only. |
 | P0 | [AR-0088](tasks/AR-0088.md): Forward barrier acquire/recheck/reopen lifecycle | Unclaimed | New lifecycle-specific child of the AR-0012 barrier umbrella: bind forward upgrade acquire, ordered identity rechecks, and terminal reopen transitions without enabling public mutation. | Promote the next uncovered target identity or verified-launcher seam; keep public mutation rejection-only. |
 | P0 | [AR-0089](tasks/AR-0089.md): Non-conflicting forward and rollback target identity | Unclaimed | Exact-main audit found the target identity obligation already satisfied: child bindings are session-digest-bound, forward and rollback targets are distinct, duplicate/replayed/stale/competing identities are rejected by the durable CAS contract and hostile tests; no duplicate code change was warranted. | Promote the next uncovered verified-launcher consumption seam; keep public mutation rejection-only. |
+| P0 | [AR-0090](tasks/AR-0090.md): Verified launcher consumption | Unclaimed | Lifecycle-specific child for the remaining documented runtime gap: consume the authenticated selected runtime through the fixed launcher without enabling public mutation. | Claim the task, map the existing fixed launcher and selected-runtime call graph on exact main, and implement only the smallest rejection-safe consumer. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
