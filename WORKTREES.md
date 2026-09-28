@@ -393,7 +393,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0091-release-recovery-fencing` | `ar0091-release-recovery-fencing` | `ed115635abe5` | 0 | behind 40, ahead 2 |
 | `awc-ar0092-rollback-20260928` | `ar0092-bound-rollback-effect-20260928` | `23480fcd4889` | 0 | behind 6, ahead 0 |
 | `awc-ar0093-restore-20260928` | `ar0093-fresh-clone-restore-equivalence` | `d144de7c8df1` | 0 | behind 1, ahead 0 |
-| `awc-ar0094-sqlite-fence-20260928` | `ar0094-sqlite-control-store-fence` | `3258caeb86fc` | 0 | behind 0, ahead 0 |
+| `awc-ar0094-sqlite-fence-20260928` | `ar0094-sqlite-control-store-fence` | `3258caeb86fc` | 4 | behind 0, ahead 0 |
+| changed files | - | - | - | `docs/SQLITE_BARRIER_ADMISSION_SEAM.md`, `docs/SQLITE_MUTATION_ROUTE_INVENTORY.md`, `formal/upgrade/evidence.json`, `tests/test_lock_domain_scope.py` |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1964, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1962, ahead 0 |
 | `awc-pr118-review` | `DETACHED` | `519d9d3b34c1` | 0 | behind 1960, ahead 0 |
