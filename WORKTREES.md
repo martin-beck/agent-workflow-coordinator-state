@@ -391,8 +391,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0091-fresh-fence-recovery` | `ar0091-fresh-fence-recovery` | `e305288a4cf7` | 0 | behind 17, ahead 0 |
 | `awc-ar0091-recovery-fencing` | `ar0091-recovery-fencing` | `2e1d718d631a` | 0 | behind 21, ahead 2 |
 | `awc-ar0091-release-recovery-fencing` | `ar0091-release-recovery-fencing` | `ed115635abe5` | 0 | behind 22, ahead 2 |
-| `awc-ar0092-rollback-20260928` | `ar0092-bound-rollback-effect-20260928` | `7274973557f0` | 11 | behind 0, ahead 6 |
-| changed files | - | - | - | `examples/upgrade/fixture-v0.3.8-to-v0.3.9.contract.json`, `formal/upgrade/evidence.json`, `schema/upgrade-contract.schema.json`, `tests/test_upgrade_contract.py`, `tests/test_upgrade_generator.py`, `tools/generate_upgrade_contract.py`, `tools/upgrade_binding.py`, `tools/upgrade_contract_runtime.py`, `tools/upgrade_engine.py`, `tools/upgrade_identity.py`, `tools/validate_upgrade_contract.py` |
+| `awc-ar0092-rollback-20260928` | `ar0092-bound-rollback-effect-20260928` | `a8b436d7438f` | 0 | behind 0, ahead 7 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1946, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1944, ahead 0 |
 | `awc-pr118-review` | `DETACHED` | `519d9d3b34c1` | 0 | behind 1942, ahead 0 |
