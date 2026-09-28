@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1146 | `ar0093-fresh-clone-restore-equivalence@ded2504b0936` | `main` | UNSTABLE | QUEUED:, IN_PROGRESS: | test: prove SQLite fresh-clone restore equivalence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36483767502 | `ded2504b0936` | pull_request | Verify | queued:- |
 | 36481931592 | `6eced72162b2` | push | Verify | completed:success |
 | 36481930991 | `6eced72162b2` | push | Formal | completed:success |
 | 36481728967 | `23480fcd4889` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36477800757 | `7274973557f0` | pull_request | Verify | completed:success |
 | 36477196090 | `df346aa57a89` | pull_request | Verify | completed:failure |
 | 36476219128 | `ca320d362bde` | pull_request | Verify | completed:success |
-| 36475887680 | `5c0e2624e5fc` | pull_request | Verify | completed:failure |
