@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1143 | `ar0091-control-recovery@5631400d9f6c` | `main` | UNSTABLE | QUEUED:, QUEUED: | Add typed effect process-death evidence |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36466763375 | `5631400d9f6c` | pull_request | Verify | queued:- |
 | 36465720665 | `b71d185dcccb` | push | Formal | completed:success |
 | 36465720502 | `b71d185dcccb` | push | Verify | completed:success |
 | 36465458385 | `ef34c3e48b18` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36462016350 | `9d84dd4e8792` | pull_request | Verify | completed:success |
 | 36461108736 | `5d6adab7cc5c` | push | Formal | completed:success |
 | 36461108730 | `5d6adab7cc5c` | push | Verify | completed:success |
-| 36460782103 | `9170e198958c` | pull_request | Verify | completed:success |
