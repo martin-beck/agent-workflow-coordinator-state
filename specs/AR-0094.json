@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0094.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "typed-fence", "description": "Every SQLite rollback-control and barrier-session write route uses a typed caller-owned mutation fence before opening its durable transaction."},
+    {"id": "hostile-boundary", "description": "Stale, replaced, process-dead, lock-reentrant, and ambiguous outcomes fail closed with durable identity evidence."},
+    {"id": "safe-boundary", "description": "Public apply, rollback, release, and Dispatch remain rejection-only; the model remains best-effort guidance."}
+  ],
+  "definition_of_done": [
+    "The smallest missing typed control-store fence adapter and hostile test slice is implemented.",
+    "All evidence is bound to one exact product revision with no source-to-model refinement proof.",
+    "Independent review, hosted checks, post-merge Verify/Formal, and durable reconciliation pass."
+  ],
+  "inputs": [
+    {"id": "sqlite-route-inventory", "description": "The documented unbound SQLite rollback-control and barrier-session write surface."},
+    {"id": "mutation-fence", "description": "The existing provisioned MutationFence and caller-owned lock-order contracts."},
+    {"id": "restore-release", "description": "AR-0093 merged restore-equivalence evidence and release boundary."}
+  ],
+  "outputs": [
+    {"id": "control-store-fence-evidence", "description": "Exact-head typed adapter and hostile durable-write evidence for SQLite control/session stores."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public apply, rollback, release, or Dispatch path is enabled by this AR."}
+  ]
+}
+
