@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0087.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "barrier-first", "description": "Quiesced admission is accepted only after the exact maintenance barrier is durably held."},
+    {"id": "identity", "description": "Barrier, owner, revision, fencing, and project identities are rechecked before and after quiescence admission."},
+    {"id": "fail-closed", "description": "Missing, stale, competing, or uncertain barrier state rejects admission without public mutation."}
+  ],
+  "definition_of_done": [
+    "Exact hostile tests cover barrier-before-admission ordering and stale/competing identity rejection.",
+    "Independent review and hosted quality/formal checks pass for one exact product revision.",
+    "Public apply, rollback, release, and Dispatch remain rejection-only; the formal model remains best-effort guidance."
+  ],
+  "inputs": [
+    {"id": "dispatch-boundary", "description": "Completed AR-0086 internal commit-phase boundary."},
+    {"id": "barrier-contract", "description": "The existing durable barrier and quiescence contracts documented by AR-0012."}
+  ],
+  "outputs": [
+    {"id": "quiescence-admission-contract", "description": "A separately reviewable barrier-before-quiescence admission seam and hostile evidence."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public mutation path is enabled by this AR."}
+  ]
+}
