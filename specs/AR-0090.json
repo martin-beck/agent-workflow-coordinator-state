@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0090.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "selected-consumer", "description": "The verified launcher consumes the selected runtime entrypoint produced by authenticated admission."},
+    {"id": "fixed-entrypoint", "description": "Caller input supplies arguments only; runtime and script paths remain descriptor-bound and immutable."},
+    {"id": "revalidation", "description": "Selector, manifest, runtime directory, and entrypoint identities are revalidated immediately before child execution."},
+    {"id": "failure-boundary", "description": "Replacement, path escape, identity drift, and child-process uncertainty reject without public mutation."}
+  ],
+  "definition_of_done": [
+    "Exact hostile subprocess tests prove the selected runtime is consumed and identity drift is rejected.",
+    "Independent review and hosted quality/formal checks pass for one exact product revision.",
+    "Public apply, rollback, release, and Dispatch remain rejection-only; the formal model remains best-effort guidance."
+  ],
+  "inputs": [
+    {"id": "runtime-admission", "description": "Existing authenticated selector/runtime admission and fixed launcher seams."},
+    {"id": "barrier-lifecycle", "description": "Completed AR-0088 lifecycle evidence."}
+  ],
+  "outputs": [
+    {"id": "verified-launcher-consumer", "description": "A separately reviewable production consumer bound to the selected runtime entrypoint."}
+  ],
+  "allowed_tools": ["git.read", "git.write", "github.read", "github.write", "handoffctl.run", "test.run"],
+  "forbidden_tools": ["model-refinement-proof", "unreviewed-public-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental", "bounded-model"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence identifies one product revision."},
+    {"id": "independent-review", "description": "A separate review worker passes before merge."},
+    {"id": "rejection-boundary", "description": "No public mutation path is enabled by this AR."}
+  ]
+}
