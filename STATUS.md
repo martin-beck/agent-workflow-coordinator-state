@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**86 ARs tracked** across 3 active status categories.
+**86 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 5 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1232,11 +1232,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0086-20260928 |
 | Parent | None |
 | Children | None |
 | Summary | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. |
@@ -1338,7 +1338,7 @@ flowchart LR
         AR_0083["AR-0083 - Done"]:::status_done
         AR_0084["AR-0084 - Done"]:::status_done
         AR_0085["AR-0085 - Done"]:::status_done
-        AR_0086["AR-0086 - Open"]:::status_open
+        AR_0086["AR-0086 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1572,7 +1572,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (5)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0086](tasks/AR-0086.md): Controlled upgrade dispatch boundary | codex-awc-ar0086-20260928 | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. | Wait for AR-0084 and AR-0085 completion, then define the smallest evidence-gated apply dispatch change; keep rollback and unsupported operations rejected. |
+
+### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1580,7 +1586,6 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f barrier/write-fencing audit passed 422 tests with ResourceWarning treated as an error across SQLite mutation barriers, rollback control store, SQLite adapter, lock scope, admission/session, authority mutation, durable binding, and UpgradeEngine. The v10 route inventory and process-death evidence remain bound; no distinct safe implementation delta exists without enabling unsupported mutation or Dispatch. | Keep AR-0012 open only for a genuinely new barrier/write-fencing obligation; preserve best-effort model guidance and rejection-only upgrade apply/rollback. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
-| P0 | [AR-0086](tasks/AR-0086.md): Controlled upgrade dispatch boundary | Unclaimed | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. | Wait for AR-0084 and AR-0085 completion, then define the smallest evidence-gated apply dispatch change; keep rollback and unsupported operations rejected. |
 
 ### Done (79)
 
