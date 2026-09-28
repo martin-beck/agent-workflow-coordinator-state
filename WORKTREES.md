@@ -421,4 +421,5 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-status-sharding` | `ar1194-status-sharding` | `160c4c7ab7d3` | 0 | behind 1696, ahead 0 |
 | `awc-ar0064-clean` | `DETACHED` | `f7bf490b5fd3` | 0 | behind 360, ahead 0 |
 | `awc-review-1144-1790622704` | `DETACHED` | `7ac148f1bd65` | 0 | behind 0, ahead 1 |
+| `awc-review-1144-e2-1790623132140986799` | `DETACHED` | `e2ccab026dc2` | 0 | behind 0, ahead 3 |
 | `awc-review-1144-new-1790622903` | `DETACHED` | `3518f089802f` | 0 | behind 0, ahead 2 |
