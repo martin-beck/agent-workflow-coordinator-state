@@ -10,12 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1145 | `ar0092-bound-rollback-effect-20260928@c7a3c5c2004f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind internal rollback effect capability |
+| #1145 | `ar0092-bound-rollback-effect-20260928@245f04d47c1d` | `main` | UNSTABLE | QUEUED:, QUEUED: | Bind internal rollback effect capability |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36474971627 | `245f04d47c1d` | pull_request | Verify | queued:- |
 | 36473444598 | `c7a3c5c2004f` | pull_request | Verify | completed:success |
 | 36471586592 | `20b95cc1e6d0` | push | Formal | completed:success |
 | 36471586577 | `20b95cc1e6d0` | push | Verify | completed:success |
@@ -27,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36466763375 | `5631400d9f6c` | pull_request | Verify | completed:success |
 | 36465720665 | `b71d185dcccb` | push | Formal | completed:success |
 | 36465720502 | `b71d185dcccb` | push | Verify | completed:success |
-| 36465458385 | `ef34c3e48b18` | pull_request | Verify | completed:success |
