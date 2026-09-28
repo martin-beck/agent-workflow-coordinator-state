@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0089](tasks/AR-0089.md): Non-conflicting forward and rollback target identity | New lifecycle-specific child for the documented non-conflicting target identity gap: separate forward and rollback durable child operations without enabling public mutation. | Claim the task, map forward/rollback child identity binding on exact main, and implement only the smallest rejection-safe correction. | codex-awc-ar0089-20260928 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -91,6 +85,7 @@ Never edit this file directly.
 | P0 | [AR-0086](tasks/AR-0086.md): Controlled upgrade dispatch boundary | Compose the isolated Git and SQLite effects behind a narrowly evidenced upgrade dispatch boundary without requiring model refinement. | Promote the next uncovered lifecycle seam after auditing AR-0012, AR-0013, and AR-0031; keep public dispatch rejection-only. | - |
 | P0 | [AR-0087](tasks/AR-0087.md): Barrier-before-quiescence admission | New lifecycle-specific child of the AR-0012 barrier umbrella: ensure quiesced admission cannot precede durable barrier acquisition and identity verification, while public mutation remains disabled. | Promote the next uncovered barrier lifecycle seam; keep public mutation rejection-only. | - |
 | P0 | [AR-0088](tasks/AR-0088.md): Forward barrier acquire/recheck/reopen lifecycle | New lifecycle-specific child of the AR-0012 barrier umbrella: bind forward upgrade acquire, ordered identity rechecks, and terminal reopen transitions without enabling public mutation. | Promote the next uncovered target identity or verified-launcher seam; keep public mutation rejection-only. | - |
+| P0 | [AR-0089](tasks/AR-0089.md): Non-conflicting forward and rollback target identity | Exact-main audit found the target identity obligation already satisfied: child bindings are session-digest-bound, forward and rollback targets are distinct, duplicate/replayed/stale/competing identities are rejected by the durable CAS contract and hostile tests; no duplicate code change was warranted. | Promote the next uncovered verified-launcher consumption seam; keep public mutation rejection-only. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
