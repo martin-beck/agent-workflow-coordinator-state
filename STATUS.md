@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**112 ARs tracked** across 4 active status categories.
+**114 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 2 |
+| **Planned** | Defined work awaiting promotion or dependencies | 4 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 102 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,9 +24,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 112 |
-| Parent tasks | 4 |
-| Child tasks | 16 |
+| Tasks | 114 |
+| Parent tasks | 5 |
+| Child tasks | 18 |
 | Open or active | 6 |
 | Blocked | 0 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 112 | 6 | 0 | 102 |
+| unassigned | unassigned | 114 | 6 | 0 | 102 |
 
 ## Task drill-down
 
@@ -1588,7 +1588,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0109 |
-| Children | None |
+| Children | AR-0113, AR-0114 |
 | Summary | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. |
 | Next action | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. |
 
@@ -1605,6 +1605,34 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Children | None |
 | Summary | Coverage gate repaired and independently qualified through merged PR #1172; AR-0111 remains for full production recovery qualification. |
 | Next action | No further AR-0112 action; continue AR-0111 full production sequencing and process-death qualification before closing AR-0109, AR-0102, AR-0031, or AR-0009. |
+
+### AR-0113 — Repair SQLite lifecycle binding
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0111 |
+| Children | None |
+| Summary | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. |
+| Next action | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. |
+
+### AR-0114 — Qualify full production phase readiness
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0111 |
+| Children | None |
+| Summary | Continuation qualification for the remaining full-engine phase and durable recovery evidence. |
+| Next action | Add admitted production readiness evidence for discover, preflight, quiesce, and reopen, then qualify complete Git and SQLite sequencing and injected process-death recovery. |
 
 
 ## Dependency graph
@@ -1732,6 +1760,8 @@ flowchart LR
         AR_0110["AR-0110 - Planned"]:::status_planned
         AR_0111["AR-0111 - Planned"]:::status_planned
         AR_0112["AR-0112 - Done"]:::status_done
+        AR_0113["AR-0113 - Planned"]:::status_planned
+        AR_0114["AR-0114 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1900,6 +1930,8 @@ flowchart LR
     AR_0105 --> AR_0108
     AR_0108 --> AR_0109
     AR_0109 --> AR_0110
+    AR_0112 --> AR_0113
+    AR_0113 --> AR_0114
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2025,7 +2057,9 @@ flowchart LR
 | [AR-0109](tasks/AR-0109.md) | [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
 | [AR-0110](tasks/AR-0110.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md) | None |
 | [AR-0111](tasks/AR-0111.md) | [AR-0102](tasks/AR-0102.md) | None |
-| [AR-0112](tasks/AR-0112.md) | None | None |
+| [AR-0112](tasks/AR-0112.md) | None | [AR-0113](tasks/AR-0113.md) |
+| [AR-0113](tasks/AR-0113.md) | [AR-0112](tasks/AR-0112.md) | [AR-0114](tasks/AR-0114.md) |
+| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | None |
 
 ## Complete AR inventory
 
@@ -2040,12 +2074,14 @@ flowchart LR
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Unclaimed | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
 
-### Planned (2)
+### Planned (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Unclaimed | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Unclaimed | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. |
+| P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | Unclaimed | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Unclaimed | Continuation qualification for the remaining full-engine phase and durable recovery evidence. | Add admitted production readiness evidence for discover, preflight, quiesce, and reopen, then qualify complete Git and SQLite sequencing and injected process-death recovery. |
 
 ### Done (102)
 

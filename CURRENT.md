@@ -20,6 +20,8 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. | - |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | - |
+| P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. | - |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Continuation qualification for the remaining full-engine phase and durable recovery evidence. | Add admitted production readiness evidence for discover, preflight, quiesce, and reopen, then qualify complete Git and SQLite sequencing and injected process-death recovery. | - |
 
 ## Done
 
