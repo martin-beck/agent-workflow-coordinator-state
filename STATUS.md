@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1442,11 +1442,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0101-20260929 |
 | Parent | AR-0009 |
 | Children | None |
 | Summary | Production integration continuation: bind upgrade commands to live durable sessions and concrete backend capabilities without synthetic authorization. |
@@ -1566,7 +1566,7 @@ flowchart LR
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
         AR_0100["AR-0100 - In progress"]:::status_in_progress
-        AR_0101["AR-0101 - Open"]:::status_open
+        AR_0101["AR-0101 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1836,19 +1836,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
+| P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | codex-awc-ar0101-20260929 | Production integration continuation: bind upgrade commands to live durable sessions and concrete backend capabilities without synthetic authorization. | Promote, claim, implement the live contract/session/backend binding, then independently verify exact Git and SQLite command paths. |
 
-### Open (3)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. |
-| P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Unclaimed | Production integration continuation: bind upgrade commands to live durable sessions and concrete backend capabilities without synthetic authorization. | Promote, claim, implement the live contract/session/backend binding, then independently verify exact Git and SQLite command paths. |
 
 ### Done (95)
 
