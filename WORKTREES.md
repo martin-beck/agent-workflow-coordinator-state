@@ -445,8 +445,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-release-v0327` | `release-v0327` | `d0816047e89b` | 0 | behind 170, ahead 3 |
 | `awc-release-v0349` | `DETACHED` | `18f1f85bfd0f` | 3 | behind 2, ahead 0 |
 | changed files | - | - | - | `release-contract.json`, `release-runbooks/`, `release.transition.json` |
-| `awc-release-v0350` | `DETACHED` | `d92516309f71` | 1 | behind 0, ahead 0 |
-| changed files | - | - | - | `release.transition.json` |
+| `awc-release-v0350` | `DETACHED` | `d92516309f71` | 2 | behind 0, ahead 0 |
+| changed files | - | - | - | `release.contract.json`, `release.transition.json` |
 | `awc-release-version` | `DETACHED` | `550c014c440c` | 0 | behind 1833, ahead 0 |
 | `awc-status-sharding` | `ar1194-status-sharding` | `160c4c7ab7d3` | 0 | behind 1840, ahead 0 |
 | `awc-ar0064-clean` | `DETACHED` | `f7bf490b5fd3` | 0 | behind 504, ahead 0 |
