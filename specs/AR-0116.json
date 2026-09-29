@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0116.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "fresh-process", "description": "A separate process can die at the admitted factory durable effect boundary for Git and SQLite without publishing false success."},
+    {"id": "recovery", "description": "Fresh durable state classifies the journal as ambiguous or safe-mode and records a bounded recovery decision before any retry."},
+    {"id": "identity", "description": "Recovery preserves backend, operation, barrier, fencing, session revision, and exact authority identity checks."},
+    {"id": "qualification", "description": "Independent exact-head review, hosted checks, post-merge checks, and state reconciliation pass."}
+  ],
+  "definition_of_done": [
+    "Git and SQLite admitted factory process-death campaigns are implemented and independently tested.",
+    "No death boundary is treated as successful or retryable without durable recovery evidence.",
+    "AR-0114, AR-0009, and AR-0031 can consume the evidence truthfully."
+  ],
+  "inputs": [
+    {"id": "ar0115", "description": "Completed admitted Git staging and eight-phase factory sequencing."},
+    {"id": "ar0109", "description": "Existing production phase wiring and durable effect boundaries."}
+  ],
+  "outputs": [{"id": "factory-recovery-evidence", "description": "Reproducible fresh-process Git/SQLite process-death and recovery evidence."}],
+  "required_evidence_classes": ["contract-test", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [
+    {"id": "durable", "description": "Intent is durable before the death injection and recovery is fail-closed."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact candidate head and hosted evidence."}
+  ]
+}

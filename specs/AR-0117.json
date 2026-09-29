@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0117.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "exact-release", "description": "The campaign records one exact unsigned release tag, merge SHA, and consumed source identity."},
+    {"id": "fresh-state", "description": "Git and SQLite campaigns start from fresh durable state and execute supported previous-to-new transitions."},
+    {"id": "failure-recovery", "description": "Each supported injected failure or process death yields verified old/new functionality or durable ambiguous safe mode."},
+    {"id": "unsupported-rejection", "description": "Unsupported mutation phases remain fail-closed."}
+  ],
+  "definition_of_done": ["AR-0102, AR-0109, and AR-0114 are complete.", "Fresh-state Git/SQLite campaign evidence is independently reviewed and hosted-qualified.", "Post-merge Verify/Formal and state reconciliation pass."],
+  "inputs": [{"id": "production-wiring", "description": "Completed admitted Git/SQLite phase wiring and recovery."}, {"id": "release", "description": "Exact unsigned release identity."}],
+  "outputs": [{"id": "campaign", "description": "Reproducible fresh-state upgrade and recovery evidence for AR-0110 and AR-0009."}],
+  "required_evidence_classes": ["environmental", "contract-test"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "fresh-state", "description": "The campaign uses newly initialized state stores and clean authority fixtures."}, {"id": "exact-identity", "description": "Every result is bound to the exact release and source identity."}, {"id": "independent", "description": "A distinct reviewer checks the exact campaign evidence."}]
+}
