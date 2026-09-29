@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**117 ARs tracked** across 5 active status categories.
+**117 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 109 |
+| **Done** | Accepted, integrated, and durably verified | 110 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 117 |
 | Parent tasks | 7 |
 | Child tasks | 21 |
-| Open or active | 4 |
+| Open or active | 3 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 117 | 4 | 0 | 109 |
+| unassigned | unassigned | 117 | 3 | 0 | 110 |
 
 ## Task drill-down
 
@@ -1456,11 +1456,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex |
+| Owner | Unclaimed |
 | Parent | AR-0031 |
 | Children | AR-0107, AR-0108, AR-0109 |
 | Summary | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. |
@@ -1791,7 +1791,7 @@ flowchart LR
         direction TB
         AR_0100["AR-0100 - Open"]:::status_open
         AR_0101["AR-0101 - Done"]:::status_done
-        AR_0102["AR-0102 - In progress"]:::status_in_progress
+        AR_0102["AR-0102 - Done"]:::status_done
         AR_0103["AR-0103 - Done"]:::status_done
         AR_0104["AR-0104 - Done"]:::status_done
         AR_0105["AR-0105 - Done"]:::status_done
@@ -2116,12 +2116,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | codex | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. |
-
 ### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2137,7 +2131,7 @@ flowchart LR
 | P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Unclaimed | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | Complete child AR-0117&#x27;s fresh-state Git/SQLite campaign against the exact unsigned release identity, then close AR-0110 and AR-0009 with reconciled evidence. |
 | P0 | [AR-0117](tasks/AR-0117.md): Execute fresh-state Git and SQLite release campaign | Unclaimed | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. |
 
-### Done (109)
+### Done (110)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2224,6 +2218,7 @@ flowchart LR
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Unclaimed | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. |
 | P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Unclaimed | Exact main already contains the bounded Git/SQLite commit and internal rollback dispatch seams; 329 tests and 260 subtests passed, while public mutation remains rejected. | No further AR-0099 action remains; retain public apply/rollback and unsupported phases rejection-only. |
 | P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Unclaimed | Completed through the reviewed live-binding admission and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
+| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. |
 | P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Unclaimed | Completed through reviewed live-binding admission enforcement and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
 | P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Unclaimed | Completed: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
 | P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Unclaimed | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |

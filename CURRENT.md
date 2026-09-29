@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -111,6 +105,7 @@ Never edit this file directly.
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. | - |
 | P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Exact main already contains the bounded Git/SQLite commit and internal rollback dispatch seams; 329 tests and 260 subtests passed, while public mutation remains rejected. | No further AR-0099 action remains; retain public apply/rollback and unsupported phases rejection-only. | - |
 | P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Completed through the reviewed live-binding admission and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. | - |
+| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. | - |
 | P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Completed through reviewed live-binding admission enforcement and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Completed: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. | - |
