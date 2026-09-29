@@ -22,7 +22,8 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0103, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
+| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
+| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Promote after AR-0103 review, implement the handoffctl runtime-state resolver for live SQLite/Git admission, and prove missing/released/stale/process-death rejection. | - |
 
 ## Done
 
