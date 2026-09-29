@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**98 ARs tracked** across 2 active status categories.
+**100 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 0 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 96 |
+| **Done** | Accepted, integrated, and durably verified | 94 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 98 |
-| Parent tasks | 0 |
-| Child tasks | 0 |
-| Open or active | 0 |
+| Tasks | 100 |
+| Parent tasks | 2 |
+| Child tasks | 4 |
+| Open or active | 2 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 98 | 0 | 0 | 96 |
+| unassigned | unassigned | 100 | 2 | 0 | 94 |
 
 ## Task drill-down
 
@@ -154,15 +154,15 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | done |
+| Status | open |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | None |
-| Children | None |
-| Summary | Reconciled by AR-0098: v0.3.46 at 74395bab passed release/upgrade and live-state evidence; no full executable upgrade is claimed and unsupported mutation remains fail-closed. |
-| Next action | No further AR-0009 action remains; future executable upgrade mutation requires a separate continuation AR. |
+| Children | AR-0098, AR-0100 |
+| Summary | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. |
+| Next action | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. |
 
 ### AR-0010 — Operational upgrade runbooks and generated release steps
 
@@ -462,15 +462,15 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | done |
+| Status | open |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | None |
-| Children | None |
-| Summary | Reconciled by AR-0097: exact main passed the bounded backup/rejection evidence; broad authority mutation, rollback, release, and Dispatch remain fail-closed. |
-| Next action | No further AR-0031 action remains; future authority mutation requires a separate continuation AR. |
+| Children | AR-0097, AR-0099 |
+| Summary | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. |
+| Next action | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. |
 
 ### AR-0032 — Multi-revision durable session identity contract
 
@@ -1391,7 +1391,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
-| Parent | None |
+| Parent | AR-0031 |
 | Children | None |
 | Summary | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. |
 | Next action | No further AR-0097 action remains; retain unsupported mutation rejection-only. |
@@ -1405,10 +1405,38 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
-| Parent | None |
+| Parent | AR-0009 |
 | Children | None |
 | Summary | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. |
 | Next action | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. |
+
+### AR-0099 — Bounded authority commit effect integration
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0031 |
+| Children | None |
+| Summary | Actual implementation continuation for the missing bounded Git/SQLite commit effect; preserve fail-closed unsupported phases. |
+| Next action | Promote, claim, implement, independently review, and merge the bounded Git/SQLite commit effect through the durable engine boundary. |
+
+### AR-0100 — Bounded rollback and first executable upgrade campaign
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0009 |
+| Children | None |
+| Summary | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. |
+| Next action | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. |
 
 
 ## Dependency graph
@@ -1429,7 +1457,7 @@ flowchart LR
         AR_0006["AR-0006 - Done"]:::status_done
         AR_0007["AR-0007 - Done"]:::status_done
         AR_0008["AR-0008 - Done"]:::status_done
-        AR_0009["AR-0009 - Done"]:::status_done
+        AR_0009["AR-0009 - Open"]:::status_open
         AR_0010["AR-0010 - Done"]:::status_done
         AR_0011["AR-0011 - Done"]:::status_done
         AR_0012["AR-0012 - Done"]:::status_done
@@ -1451,7 +1479,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
-        AR_0031["AR-0031 - Done"]:::status_done
+        AR_0031["AR-0031 - Open"]:::status_open
         AR_0032["AR-0032 - Done"]:::status_done
         AR_0033["AR-0033 - Done"]:::status_done
         AR_0034["AR-0034 - Superseded"]:::status_superseded
@@ -1519,6 +1547,11 @@ flowchart LR
         AR_0096["AR-0096 - Done"]:::status_done
         AR_0097["AR-0097 - Done"]:::status_done
         AR_0098["AR-0098 - Done"]:::status_done
+        AR_0099["AR-0099 - Planned"]:::status_planned
+    end
+    subgraph series_01["01 - Contracts and runtime"]
+        direction TB
+        AR_0100["AR-0100 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1665,6 +1698,9 @@ flowchart LR
     AR_0094 --> AR_0096
     AR_0096 --> AR_0097
     AR_0097 --> AR_0098
+    AR_0097 --> AR_0099
+    AR_0098 --> AR_0099
+    AR_0099 --> AR_0100
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1775,12 +1811,28 @@ flowchart LR
 | [AR-0094](tasks/AR-0094.md) | [AR-0013](tasks/AR-0013.md), [AR-0091](tasks/AR-0091.md), [AR-0093](tasks/AR-0093.md) | [AR-0096](tasks/AR-0096.md) |
 | [AR-0095](tasks/AR-0095.md) | [AR-0088](tasks/AR-0088.md), [AR-0090](tasks/AR-0090.md) | None |
 | [AR-0096](tasks/AR-0096.md) | [AR-0094](tasks/AR-0094.md) | [AR-0097](tasks/AR-0097.md) |
-| [AR-0097](tasks/AR-0097.md) | [AR-0096](tasks/AR-0096.md) | [AR-0098](tasks/AR-0098.md) |
-| [AR-0098](tasks/AR-0098.md) | [AR-0097](tasks/AR-0097.md) | None |
+| [AR-0097](tasks/AR-0097.md) | [AR-0096](tasks/AR-0096.md) | [AR-0098](tasks/AR-0098.md), [AR-0099](tasks/AR-0099.md) |
+| [AR-0098](tasks/AR-0098.md) | [AR-0097](tasks/AR-0097.md) | [AR-0099](tasks/AR-0099.md) |
+| [AR-0099](tasks/AR-0099.md) | [AR-0097](tasks/AR-0097.md), [AR-0098](tasks/AR-0098.md) | [AR-0100](tasks/AR-0100.md) |
+| [AR-0100](tasks/AR-0100.md) | [AR-0099](tasks/AR-0099.md) | None |
 
 ## Complete AR inventory
 
-### Done (96)
+### Open (2)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. |
+
+### Planned (2)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Unclaimed | Actual implementation continuation for the missing bounded Git/SQLite commit effect; preserve fail-closed unsupported phases. | Promote, claim, implement, independently review, and merge the bounded Git/SQLite commit effect through the durable engine boundary. |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Unclaimed | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. |
+
+### Done (94)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1792,7 +1844,6 @@ flowchart LR
 | P0 | [AR-0006](tasks/AR-0006.md): SQLite backup, migration, and restore | Unclaimed | Preserve SQLite authority and recoverability through coordinator upgrades and migrations. | AR-0006 complete; PR #26 merged and post-merge main verification green. AR-0004 remains blocked pending its correctness fixes and healthy exact-head rerun. |
 | P0 | [AR-0007](tasks/AR-0007.md): Upgrade engine and rollback | Unclaimed | PR445 merged as d521ad0; post-merge Verify 35096212760 passed; worker auditing remaining AR-0007 rollback/restore gaps | Identify next non-duplicate AR-0007 contract gap beyond control-store identity tests; publish only after focused validation and independent review |
 | P0 | [AR-0008](tasks/AR-0008.md): Formal upgrade and recovery model | Unclaimed | PR #323 adds RollbackRequiresBackup invariant on exact main 143bdf6; hosted Verify is pending and local TLC was blocked by pthread_create EAGAIN. | Await exact-head Verify and artifact; independently review the result before merge. Preserve bounded-model and implementation-refinement nonclaims. |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Reconciled by AR-0098: v0.3.46 at 74395bab passed release/upgrade and live-state evidence; no full executable upgrade is claimed and unsupported mutation remains fail-closed. | No further AR-0009 action remains; future executable upgrade mutation requires a separate continuation AR. |
 | P0 | [AR-0011](tasks/AR-0011.md): Bounded TLA+ execution and admission safety | Unclaimed | Exact-head PR #22 formal publication gate independently reviewed green. | Await parent merge decision; retain full-exhaustive claims for successful scheduled/manual run and preserve merge-tree attestation provenance. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f barrier/write-fencing audit passed 422 tests with ResourceWarning treated as an error across SQLite mutation barriers, rollback control store, SQLite adapter, lock scope, admission/session, authority mutation, durable binding, and UpgradeEngine. The v10 route inventory and process-death evidence remain bound; no distinct safe implementation delta exists without enabling unsupported mutation or Dispatch. | Keep AR-0012 open only for a genuinely new barrier/write-fencing obligation; preserve best-effort model guidance and rejection-only upgrade apply/rollback. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact current main e26b68ab8672d80570614949f8edbee77de14c9f selector/runtime audit passed 196 tests across runtime bootstrap, selector authority/recovery, upgrade identity/engine, admission leases, and authority-neutral runtime/selector paths. Injected publication failures remain fail-closed and retained admission revalidation is covered. No distinct dependency-safe implementation delta exists without enabling mutation or Dispatch. | Keep AR-0013 open only for a genuinely new selector/versioned-runtime correctness boundary; preserve rejection-only mutation and Dispatch. |
@@ -1807,7 +1858,6 @@ flowchart LR
 | P0 | [AR-0027](tasks/AR-0027.md): Batched TUI packet and navigation binding | Unclaimed | Persist TUI navigation and batch-point state without cross-point authorization. | Bind batched discussion packets, per-point response state, active UI anchors, and optional re-ask markers to task revisions. |
 | P0 | [AR-0028](tasks/AR-0028.md): TUI safe exit and future-discussion persistence | Unclaimed | Ensure TUI sessions cannot lose decisions or future discussion requests. | Implement atomic safe-exit, resume, re-ask, and future-discussion AR mapping events for TUI sessions. |
 | P0 | [AR-0030](tasks/AR-0030.md): Integrate AWQ v0.35.0 trust and quality gates | Unclaimed | Upgrade the Coordinator to the latest AWQ v0.35.0 release without dropping native formal or release-sensitive gates. | Await independent exact-head review of PR #723 at a85a58035c843f67614f29059c364d506645987f; do not merge until review and hosted evidence are recorded. |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Reconciled by AR-0097: exact main passed the bounded backup/rejection evidence; broad authority mutation, rollback, release, and Dispatch remain fail-closed. | No further AR-0031 action remains; future authority mutation requires a separate continuation AR. |
 | P0 | [AR-0032](tasks/AR-0032.md): Multi-revision durable session identity contract | Unclaimed | Additive durable session identity and journal-chain contract required to unblock AR-0031 without weakening fail-closed upgrade behavior. | Implement and formally validate the additive multi-revision durable session and journal-chain contract before enabling any upgrade mutation or dispatch. |
 | P0 | [AR-0033](tasks/AR-0033.md): Integrate session chain with durable contract | Unclaimed | Wire AR-0032 chain validation into the durable session contract without enabling mutation or dispatch. | Integrate the validated multi-revision session chain with the existing durable session contract as a read-only admission seam. |
 | P0 | [AR-0035](tasks/AR-0035.md): Bounded backup-only executor seam | Unclaimed | First bounded executable upgrade slice: durable, fenced backup only, with no runtime replacement or dispatch. | Implement a backup-only generated operation behind the validated session/barrier seam; leave stage, commit, validate, reopen, rollback, and dispatch fail-closed. |
