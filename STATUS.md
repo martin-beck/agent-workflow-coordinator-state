@@ -1477,8 +1477,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-awc-ar0103-20260929 |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Mutation command boundary now requires a concrete LiveUpgradeBinding and rejects runtime identity mismatch; 339 tests and 340 subtests pass, but real durable Git/SQLite integration and independent review remain open. |
-| Next action | Complete independent review and hosted checks for PR #1154, then add real durable scope/adapter integration evidence for stale, foreign, released, ambiguous, missing, and process-death state before closing AR-0103. |
+| Summary | Sealed LiveUpgradeBinding construction, enforce contract correspondence for apply/rollback, and added real durable SQLite/Git scope integration; commit 53bbb7f passes focused tests and Ruff, with fresh independent review pending. |
+| Next action | Finish fresh independent review and hosted checks for updated PR #1154; then cover stale, released, ambiguous, missing, and process-death rejection before considering AR-0103 complete. |
 
 
 ## Dependency graph
@@ -1878,7 +1878,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 | P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | codex-awc-ar0101-20260929 | Review-repaired binding helper and persisted identity cross-check pass focused tests, but independent review rejected production completion because the helper is not consumed by production admission and integration tests are synthetic. | Keep AR-0101 open as a partial continuation; promote AR-0103 to wire LiveUpgradeBinding into production admission and add real durable Git/SQLite integration, then re-review exact repaired head. |
-| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | codex-awc-ar0103-20260929 | Mutation command boundary now requires a concrete LiveUpgradeBinding and rejects runtime identity mismatch; 339 tests and 340 subtests pass, but real durable Git/SQLite integration and independent review remain open. | Complete independent review and hosted checks for PR #1154, then add real durable scope/adapter integration evidence for stale, foreign, released, ambiguous, missing, and process-death state before closing AR-0103. |
+| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | codex-awc-ar0103-20260929 | Sealed LiveUpgradeBinding construction, enforce contract correspondence for apply/rollback, and added real durable SQLite/Git scope integration; commit 53bbb7f passes focused tests and Ruff, with fresh independent review pending. | Finish fresh independent review and hosted checks for updated PR #1154; then cover stale, released, ambiguous, missing, and process-death rejection before considering AR-0103 complete. |
 
 ### Open (2)
 
