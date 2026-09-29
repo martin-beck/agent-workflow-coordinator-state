@@ -23,8 +23,9 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
-| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Keep open after fb45e09: hosted verification fails the repository-wide 95% branch gate at 94%; obtain exact-head independent review, repair the coverage qualification without weakening the gate, then merge and reconcile before promoting AR-0105. | - |
+| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Keep open after 31282b9: exact-head review accepts the unmocked SQLite fixture, but hosted verification still fails the repository-wide 95% branch gate at 94%; promote AR-0106 for behavioral coverage repair, then merge and reconcile before promoting AR-0105. | - |
 | P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Implement and independently verify the canonical Git authority revision reader and real cmd_upgrade resolver fixture; keep mutation fail-closed. | - |
+| P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Continuation: repair the repository branch-coverage qualification without weakening the gate. | Add behavioral coverage for the untested safety branches identified by the exact hosted report; preserve the 95% gate and rerun independent exact-head review. | - |
 
 ## Done
 
