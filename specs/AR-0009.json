@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0009.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "release-reconciled", "description": "Release integration evidence is reconciled at the current exact release head."},
+    {"id": "limitation-explicit", "description": "The record explicitly does not claim an executable full upgrade campaign."},
+    {"id": "continuation-complete", "description": "AR-0098 is done with passing release and live-state evidence."}
+  ],
+  "definition_of_done": ["AR-0098 is complete.", "v0.3.46 and its merge head are recorded.", "Unsupported full-upgrade mutation remains fail-closed."],
+  "inputs": [{"id": "continuation", "description": "Completed AR-0098 closure repair."}, {"id": "release", "description": "Exact v0.3.46 release identity."}],
+  "outputs": [{"id": "parent-closure", "description": "Reconciled AR-0009 closure record."}],
+  "allowed_tools": ["handoffctl", "git"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["environmental"],
+  "gates": [{"id": "exact-release", "description": "The exact merge and tag identity are recorded."}, {"id": "fail-closed", "description": "Unsupported upgrade mutation remains rejected."}]
+}

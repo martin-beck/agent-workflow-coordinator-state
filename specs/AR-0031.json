@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0031.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "boundary-reconciled", "description": "The bounded backup and unsupported mutation boundary are reconciled at exact main."},
+    {"id": "limitation-explicit", "description": "The record explicitly does not claim broad commit, apply, selector, or rollback mutation."},
+    {"id": "continuation-complete", "description": "AR-0097 is done with passing focused contract and rejection evidence."}
+  ],
+  "definition_of_done": ["AR-0097 is complete.", "The bounded backup seam is recorded as complete.", "Unsupported mutation remains fail-closed."],
+  "inputs": [{"id": "continuation", "description": "Completed AR-0097 closure repair."}, {"id": "product-head", "description": "Exact product main commit."}],
+  "outputs": [{"id": "parent-closure", "description": "Reconciled AR-0031 closure record."}],
+  "allowed_tools": ["handoffctl", "git"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test"],
+  "gates": [{"id": "exact-head", "description": "The exact reviewed main head is recorded."}, {"id": "fail-closed", "description": "Unsupported upgrade mutation remains rejected."}]
+}
