@@ -18,8 +18,9 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. | - |
+| P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | Complete child AR-0117's fresh-state Git/SQLite campaign against the exact unsigned release identity, then close AR-0110 and AR-0009 with reconciled evidence. | - |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | - |
+| P0 | [AR-0117](tasks/AR-0117.md): Execute fresh-state Git and SQLite release campaign | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. | - |
 
 ## Done
 

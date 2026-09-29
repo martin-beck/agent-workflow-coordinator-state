@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**116 ARs tracked** across 4 active status categories.
+**117 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 2 |
+| **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 106 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,9 +24,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 116 |
-| Parent tasks | 6 |
-| Child tasks | 20 |
+| Tasks | 117 |
+| Parent tasks | 7 |
+| Child tasks | 21 |
 | Open or active | 6 |
 | Blocked | 0 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 116 | 6 | 0 | 106 |
+| unassigned | unassigned | 117 | 6 | 0 | 106 |
 
 ## Task drill-down
 
@@ -1574,9 +1574,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0009 |
-| Children | None |
+| Children | AR-0117 |
 | Summary | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. |
-| Next action | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. |
+| Next action | Complete child AR-0117&#x27;s fresh-state Git/SQLite campaign against the exact unsigned release identity, then close AR-0110 and AR-0009 with reconciled evidence. |
 
 ### AR-0111 — Qualify production phase sequencing and recovery
 
@@ -1661,6 +1661,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Children | None |
 | Summary | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. |
 | Next action | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. |
+
+### AR-0117 — Execute fresh-state Git and SQLite release campaign
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0110 |
+| Children | None |
+| Summary | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. |
+| Next action | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. |
 
 
 ## Dependency graph
@@ -1792,6 +1806,7 @@ flowchart LR
         AR_0114["AR-0114 - Done"]:::status_done
         AR_0115["AR-0115 - Done"]:::status_done
         AR_0116["AR-0116 - Done"]:::status_done
+        AR_0117["AR-0117 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1948,6 +1963,7 @@ flowchart LR
     AR_0102 --> AR_0100
     AR_0102 --> AR_0110
     AR_0102 --> AR_0111
+    AR_0102 --> AR_0117
     AR_0103 --> AR_0102
     AR_0103 --> AR_0104
     AR_0104 --> AR_0102
@@ -1960,9 +1976,11 @@ flowchart LR
     AR_0105 --> AR_0108
     AR_0108 --> AR_0109
     AR_0109 --> AR_0110
+    AR_0109 --> AR_0117
     AR_0112 --> AR_0113
     AR_0113 --> AR_0114
     AR_0113 --> AR_0115
+    AR_0114 --> AR_0117
     AR_0115 --> AR_0116
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2079,21 +2097,22 @@ flowchart LR
 | [AR-0099](tasks/AR-0099.md) | [AR-0097](tasks/AR-0097.md), [AR-0098](tasks/AR-0098.md) | [AR-0100](tasks/AR-0100.md), [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md) |
 | [AR-0100](tasks/AR-0100.md) | [AR-0099](tasks/AR-0099.md), [AR-0101](tasks/AR-0101.md), [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0101](tasks/AR-0101.md) | [AR-0099](tasks/AR-0099.md) | [AR-0100](tasks/AR-0100.md), [AR-0102](tasks/AR-0102.md) |
-| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0110](tasks/AR-0110.md), [AR-0111](tasks/AR-0111.md) |
+| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0110](tasks/AR-0110.md), [AR-0111](tasks/AR-0111.md), [AR-0117](tasks/AR-0117.md) |
 | [AR-0103](tasks/AR-0103.md) | [AR-0099](tasks/AR-0099.md) | [AR-0102](tasks/AR-0102.md), [AR-0104](tasks/AR-0104.md) |
 | [AR-0104](tasks/AR-0104.md) | [AR-0103](tasks/AR-0103.md) | [AR-0102](tasks/AR-0102.md), [AR-0105](tasks/AR-0105.md), [AR-0106](tasks/AR-0106.md), [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) |
 | [AR-0105](tasks/AR-0105.md) | [AR-0104](tasks/AR-0104.md) | [AR-0102](tasks/AR-0102.md), [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) |
 | [AR-0106](tasks/AR-0106.md) | [AR-0104](tasks/AR-0104.md) | None |
 | [AR-0107](tasks/AR-0107.md) | [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | None |
 | [AR-0108](tasks/AR-0108.md) | [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0109](tasks/AR-0109.md) |
-| [AR-0109](tasks/AR-0109.md) | [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
+| [AR-0109](tasks/AR-0109.md) | [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md), [AR-0117](tasks/AR-0117.md) |
 | [AR-0110](tasks/AR-0110.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md) | None |
 | [AR-0111](tasks/AR-0111.md) | [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0112](tasks/AR-0112.md) | None | [AR-0113](tasks/AR-0113.md) |
 | [AR-0113](tasks/AR-0113.md) | [AR-0112](tasks/AR-0112.md) | [AR-0114](tasks/AR-0114.md), [AR-0115](tasks/AR-0115.md) |
-| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | None |
+| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | [AR-0117](tasks/AR-0117.md) |
 | [AR-0115](tasks/AR-0115.md) | [AR-0113](tasks/AR-0113.md) | [AR-0116](tasks/AR-0116.md) |
 | [AR-0116](tasks/AR-0116.md) | [AR-0115](tasks/AR-0115.md) | None |
+| [AR-0117](tasks/AR-0117.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md), [AR-0114](tasks/AR-0114.md) | None |
 
 ## Complete AR inventory
 
@@ -2108,12 +2127,13 @@ flowchart LR
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Unclaimed | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
 
-### Planned (2)
+### Planned (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Unclaimed | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. |
+| P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Unclaimed | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | Complete child AR-0117&#x27;s fresh-state Git/SQLite campaign against the exact unsigned release identity, then close AR-0110 and AR-0009 with reconciled evidence. |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Unclaimed | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. |
+| P0 | [AR-0117](tasks/AR-0117.md): Execute fresh-state Git and SQLite release campaign | Unclaimed | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. |
 
 ### Done (106)
 
