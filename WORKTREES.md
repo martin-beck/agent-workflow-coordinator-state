@@ -403,6 +403,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0103-live-binding-enforcement` | `ar0103-live-binding-enforcement` | `c61b17197d83` | 0 | behind 27, ahead 11 |
 | `awc-ar0104-production-binding-resolver` | `ar0104-production-binding-resolver` | `9a2ee9cfe2cf` | 0 | behind 27, ahead 18 |
 | `awc-ar0105-git-production-binding-resolver` | `ar0105-git-production-binding-resolver` | `b6026cd70e7f` | 0 | behind 1, ahead 0 |
+| `awc-ar0107-production-phase-capability-factory` | `ar0107-production-phase-capability-factory` | `6a59678225a1` | 0 | behind 0, ahead 0 |
 | `awc-baseline-audit` | `DETACHED` | `a361fc73e742` | 0 | behind 47, ahead 0 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 2014, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 2012, ahead 0 |
