@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0111.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "full-sequencing", "description": "The admitted factory drives the complete supported UpgradeEngine phase sequence for real Git and SQLite authorities."},
+    {"id": "durable-journal", "description": "Phase effects and outcomes use the real durable control-store journal, including reread and fsync boundaries."},
+    {"id": "process-death", "description": "Injected failure and process death produce durable failed or ambiguous safe-mode outcomes with no false success."},
+    {"id": "fail-closed", "description": "Unsupported phases and public mutation without a complete admitted capability set remain rejected."}
+  ],
+  "definition_of_done": ["AR-0102 and the PR #1171 implementation slice are merged and qualified.", "Real Git/SQLite sequencing and recovery evidence pass independent exact-head review and hosted checks.", "Post-merge Verify/Formal and state reconciliation pass."],
+  "inputs": [{"id": "phase-wiring", "description": "The merged production phase capability binding from AR-0109."}, {"id": "durable-state", "description": "The canonical control-store and authority fixtures."}],
+  "outputs": [{"id": "qualification", "description": "Reproducible production phase sequencing and recovery evidence."}],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "real-authorities", "description": "Git and SQLite effects are consumed through the admitted production factory."}, {"id": "durable-recovery", "description": "Process death and ambiguous outcomes are recorded in the real durable journal."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head and evidence."}]
+}

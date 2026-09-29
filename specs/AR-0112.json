@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0112.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "behavior-coverage", "description": "Tests exercise the production phase binding success, rejection, and capability-presence branches."},
+    {"id": "hosted-threshold", "description": "Hosted Verify passes the unchanged minimum 95% branch-coverage gate."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact repair head and hosted evidence."}
+  ],
+  "definition_of_done": ["The merged production wiring remains behaviorally unchanged except for justified repair code.", "Hosted Verify and Formal pass at the exact merge identity.", "State is reconciled and AR-0109 remains open until AR-0111 qualification is complete."],
+  "inputs": [{"id": "merged-wiring", "description": "PR #1171 merge commit 07c773c6d141f3704826dd811f2ed94de0c3c3fc."}],
+  "outputs": [{"id": "coverage-repair", "description": "Behavior-focused coverage repair restoring the hosted gate."}],
+  "required_evidence_classes": ["contract-test", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "no-weakening", "description": "No exclusion, pragma, or threshold weakening is used."}, {"id": "independent", "description": "Exact-head independent review is required."}]
+}
