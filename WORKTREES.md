@@ -399,6 +399,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0096-sqlite-wal-lifecycle` | `ar0096-sqlite-wal-lifecycle` | `07ea8bf0e512` | 0 | behind 1, ahead 0 |
 | `awc-ar0099-bounded-commit-effect` | `ar0099-bounded-commit-effect` | `74395bab727f` | 0 | behind 0, ahead 0 |
 | `awc-ar0101-production-upgrade-binding` | `ar0101-production-upgrade-binding` | `f26411e0db32` | 0 | behind 0, ahead 2 |
+| `awc-ar0103-live-binding-enforcement` | `ar0103-live-binding-enforcement` | `a85dfaa394b3` | 0 | behind 0, ahead 3 |
 | `awc-baseline-audit` | `DETACHED` | `a361fc73e742` | 0 | behind 20, ahead 0 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 1987, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 1985, ahead 0 |
