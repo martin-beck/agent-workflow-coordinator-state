@@ -1477,8 +1477,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-awc-ar0103-20260929 |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Repaired fresh-review P1s in 7962fdc: admission reruns concrete factory validation and Git bindings pin the expected repository; focused tests and lint pass, while production cmd_upgrade resolver remains AR-0104. |
-| Next action | Complete fresh independent review and hosted checks for 7962fdc; then merge only the validated gate and promote AR-0104 for canonical handoffctl binding construction. |
+| Summary | Added issuer provenance registry and exact foreign-adapter rejection in 0aa491d; full exact-head suite passes, with fresh independent review pending and production resolver tracked separately in AR-0104. |
+| Next action | Complete fresh review and hosted checks for 0aa491d; if approved, merge and reconcile AR-0103, then promote AR-0104 for canonical cmd_upgrade binding construction. |
 
 ### AR-0104 — Construct production live upgrade binding
 
@@ -1896,7 +1896,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 | P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | codex-awc-ar0101-20260929 | Review-repaired binding helper and persisted identity cross-check pass focused tests, but independent review rejected production completion because the helper is not consumed by production admission and integration tests are synthetic. | Keep AR-0101 open as a partial continuation; promote AR-0103 to wire LiveUpgradeBinding into production admission and add real durable Git/SQLite integration, then re-review exact repaired head. |
-| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | codex-awc-ar0103-20260929 | Repaired fresh-review P1s in 7962fdc: admission reruns concrete factory validation and Git bindings pin the expected repository; focused tests and lint pass, while production cmd_upgrade resolver remains AR-0104. | Complete fresh independent review and hosted checks for 7962fdc; then merge only the validated gate and promote AR-0104 for canonical handoffctl binding construction. |
+| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | codex-awc-ar0103-20260929 | Added issuer provenance registry and exact foreign-adapter rejection in 0aa491d; full exact-head suite passes, with fresh independent review pending and production resolver tracked separately in AR-0104. | Complete fresh review and hosted checks for 0aa491d; if approved, merge and reconcile AR-0103, then promote AR-0104 for canonical cmd_upgrade binding construction. |
 
 ### Open (2)
 
