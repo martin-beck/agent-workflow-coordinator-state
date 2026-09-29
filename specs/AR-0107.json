@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0107.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "identity-bound-context", "description": "PhaseContext and every generated operation are derived from one admitted LiveUpgradeBinding and reject identity drift."},
+    {"id": "ordered-engine-dispatch", "description": "The production seam dispatches the generated eight phases through UpgradeEngine in dependency order and records durable outcomes."},
+    {"id": "fail-closed-recovery", "description": "Missing capabilities, injected failures, process death, stale state, and ambiguous effects fail or enter safe mode without false success."},
+    {"id": "backend-parity", "description": "Git and SQLite use the same evidence and identity contract with concrete backend fixtures."}
+  ],
+  "definition_of_done": [
+    "A production phase-capability factory binds generated operations to an admitted Git or SQLite live binding.",
+    "UpgradeEngine remains the sole ordered journal/evidence boundary.",
+    "Git and SQLite injected-failure and process-death evidence passes independently.",
+    "Public mutation remains fail-closed if any required phase capability is absent.",
+    "Exact-head independent review, hosted checks, post-merge verification, and state reconciliation pass.",
+    "No source-to-model refinement proof or authorized prerequisite is required."
+  ],
+  "inputs": [
+    {"id": "live-binding", "description": "AR-0104 and AR-0105 admitted canonical Git/SQLite LiveUpgradeBinding."},
+    {"id": "engine", "description": "Existing UpgradeEngine journal, phase evidence, fencing, and recovery contract."},
+    {"id": "contract", "description": "Validated generated eight-phase upgrade contract and rollback operation."}
+  ],
+  "outputs": [{"id": "phase-capability-factory", "description": "Production factory and integration tests for identity-bound phase orchestration."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [
+    {"id": "exact-identity", "description": "All phase contexts and operations retain the admitted project, revision, fence, barrier, and backend identity."},
+    {"id": "recovery", "description": "Injected failure and process-death outcomes are durable and truthful."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact candidate head and hosted result."}
+  ]
+}
