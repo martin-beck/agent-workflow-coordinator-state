@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0115's durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. | codex |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Add and independently verify factory-level process-death recovery for the admitted Git and SQLite production factories, then use the evidence to finish AR-0009 and AR-0031. | codex |
 
 ## Open
 

@@ -1632,7 +1632,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | AR-0111 |
 | Children | AR-0115 |
 | Summary | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. |
-| Next action | Complete child AR-0115&#x27;s durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. |
+| Next action | Add and independently verify factory-level process-death recovery for the admitted Git and SQLite production factories, then use the evidence to finish AR-0009 and AR-0031. |
 
 ### AR-0115 — Bind durable Git staging for production sequencing
 
@@ -2084,7 +2084,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | codex | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0115&#x27;s durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | codex | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Add and independently verify factory-level process-death recovery for the admitted Git and SQLite production factories, then use the evidence to finish AR-0009 and AR-0031. |
 
 ### Open (6)
 
