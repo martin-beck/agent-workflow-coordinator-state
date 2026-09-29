@@ -124,8 +124,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-authority-mutation-formal-refinement` | `ar0064-barrier-safety-final2` | `6ccd5a178b1e` | 0 | behind 230, ahead 0 |
 | `agent-workflow-coordinator-barrier-caller` | `feature/ar0007-sqlite-sidecar-faults` | `36cd3ed24087` | 1 | behind 2160, ahead 0 |
 | changed files | - | - | - | `tests/test_rollback_control_store.py` |
-| `agent-workflow-coordinator-bounded-actionable-projection` | `DETACHED` | `5c86d3901c82` | 6 | behind 0, ahead 0 |
-| changed files | - | - | - | `docs/ARCHITECTURE.md`, `formal/upgrade/evidence.json`, `pyproject.toml`, `tests/test_handoffctl.py`, `tools/handoffctl.py`, `uv.lock` |
+| `agent-workflow-coordinator-bounded-actionable-projection` | `feature/bounded-actionable-state-projection` | `f3942c32325e` | 0 | behind 0, ahead 2 |
 | `agent-workflow-coordinator-canonical-scope` | `ar0007-canonical-scope-boundary` | `9979977163e8` | 0 | behind 2005, ahead 0 |
 | `agent-workflow-coordinator-capability-matrix-semantics-and-formal-specification` | `ar0067-capability-matrix-semantics-and-formal-specification` | `f28a7d8db0d2` | 0 | behind 244, ahead 0 |
 | `agent-workflow-coordinator-checkpoint-command-for-task-state-and-artifacts` | `ar0079-checkpoint-command-for-task-state-and-artifacts` | `704bf6311332` | 0 | behind 235, ahead 2 |
