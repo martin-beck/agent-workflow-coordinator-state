@@ -12,13 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1154 | `ar0103-live-binding-enforcement@c61b17197d83` | `ar0101-production-upgrade-binding` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Enforce live upgrade binding at mutation boundary |
-| #1155 | `ar0104-production-binding-resolver@9a2ee9cfe2cf` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, QUEUED:, QUEUED:, COMPLETED:SKIPPED | Construct production live upgrade binding |
+| #1155 | `ar0104-production-binding-resolver@9a2ee9cfe2cf` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Construct production live upgrade binding |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36537641464 | `9a2ee9cfe2cf` | pull_request | Verify | queued:- |
+| 36537641464 | `9a2ee9cfe2cf` | pull_request | Verify | in_progress:- |
 | 36536535416 | `31282b97b305` | pull_request | Verify | completed:failure |
 | 36536530243 | `31282b97b305` | workflow_dispatch | Verify | completed:failure |
 | 36535713717 | `fb45e09f920d` | pull_request | Verify | completed:failure |
