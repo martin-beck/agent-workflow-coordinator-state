@@ -9,12 +9,12 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. | - |
+| P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Actual implementation continuation for the missing bounded Git/SQLite commit effect; preserve fail-closed unsupported phases. | Promote, claim, implement, independently review, and merge the bounded Git/SQLite commit effect through the durable engine boundary. | - |
 
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Actual implementation continuation for the missing bounded Git/SQLite commit effect; preserve fail-closed unsupported phases. | Promote, claim, implement, independently review, and merge the bounded Git/SQLite commit effect through the durable engine boundary. | - |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. | - |
 
 ## Done
