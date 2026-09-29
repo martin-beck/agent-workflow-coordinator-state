@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0115.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "bound-staging", "description": "Git staging is an admitted, typed, identity-bound capability and is not reachable through public generic dispatch."},
+    {"id": "durable-recovery", "description": "The staging and commit boundary records intent before mutation and classifies injected staging or commit failure as failed or ambiguous-safe-mode without false success; factory-level process-death recovery remains AR-0114 scope."},
+    {"id": "full-git-sequence", "description": "A fresh real Git fixture completes all eight production phases through the admitted factory."},
+    {"id": "review", "description": "Independent exact-head review, hosted checks, post-merge checks, and state reconciliation pass."}
+  ],
+  "definition_of_done": ["The Git staging seam is implemented without weakening fail-closed public mutation dispatch.", "Real Git full-sequence evidence and lower-level durable failure tests pass independently; factory-level process-death recovery remains AR-0114 scope.", "AR-0114 can consume the evidence and proceed toward AR-0009 and AR-0031 closure."],
+  "inputs": [{"id": "git-commit-capability", "description": "Existing durable Git commit effect and admitted LiveUpgradeBinding."}, {"id": "production-factory", "description": "AR-0114 phase factory and readiness evidence."}],
+  "outputs": [{"id": "git-sequencing-qualification", "description": "Reproducible real Git eight-phase and recovery evidence."}],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "identity", "description": "Git path, branch, head, barrier, fencing, and session revision are rechecked before and during the effect."}, {"id": "durable-recovery", "description": "Fresh durable state proves failed or ambiguous outcomes after injected process death."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head and hosted evidence."}]
+}
