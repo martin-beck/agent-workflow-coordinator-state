@@ -251,8 +251,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-release-036` | `DETACHED` | `a1bc4459f884` | 0 | behind 2149, ahead 0 |
 | `agent-workflow-coordinator-release-037` | `chore/release-0.3.7-supersession` | `0a99db37fc9f` | 2 | behind 2154, ahead 0 |
 | changed files | - | - | - | `pyproject.toml`, `uv.lock` |
-| `agent-workflow-coordinator-release-metadata-v0350` | `fix/release-metadata-v0350` | `18f1f85bfd0f` | 4 | behind 0, ahead 0 |
-| changed files | - | - | - | `formal/upgrade/evidence.json`, `pyproject.toml`, `tools/handoffctl.py`, `uv.lock` |
+| `agent-workflow-coordinator-release-metadata-v0350` | `fix/release-metadata-v0350` | `783beb88c04f` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-release-v038` | `DETACHED` | `769187186b25` | 0 | behind 1724, ahead 0 |
 | `agent-workflow-coordinator-repeated-handoff` | `ar0007-repeated-handoff` | `55125dda2168` | 0 | behind 2032, ahead 0 |
 | `agent-workflow-coordinator-replaced-recheck` | `ar0007-replaced-recheck` | `26fc4c063d58` | 0 | behind 2038, ahead 0 |
