@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0113.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "sqlite-dispatch", "description": "Generated SQLite backup operations execute only through the admitted SQLiteLifecycleExecutor and real session store."},
+    {"id": "fail-closed", "description": "A SQLite production binding without a durable session store rejects generated dispatch."},
+    {"id": "evidence", "description": "Exact-head independent review and hosted/post-merge checks pass."}
+  ],
+  "definition_of_done": ["Repair is merged without weakening public mutation guards.", "Fresh tests prove real durable lifecycle binding and fail-closed absence handling.", "State is reconciled after hosted verification."],
+  "inputs": [{"id": "factory", "description": "AR-0111 production phase factory."}],
+  "outputs": [{"id": "repair", "description": "Reviewed production factory repair and evidence."}],
+  "required_evidence_classes": ["contract-test", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "durability", "description": "The real control-store lifecycle journal is used."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}

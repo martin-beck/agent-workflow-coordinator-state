@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0114.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "full-sequencing", "description": "The admitted factory completes discover, preflight, quiesce, backup, stage, commit, validate, and reopen for real Git and SQLite fixtures."},
+    {"id": "recovery", "description": "Injected failure and process death leave durable failed or ambiguous-safe-mode records with no false success."},
+    {"id": "review", "description": "Independent exact-head review and hosted/post-merge checks pass."}
+  ],
+  "definition_of_done": ["AR-0113 and the AR-0111 implementation prerequisites are merged.", "Real full-sequence and recovery evidence is independently reviewed.", "AR-0111 can be truthfully closed after state reconciliation."],
+  "inputs": [{"id": "lifecycle-repair", "description": "AR-0113 production factory repair."}, {"id": "durable-state", "description": "Canonical control-store and authority fixtures."}],
+  "outputs": [{"id": "qualification", "description": "Reproducible full-engine production qualification evidence."}],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "real-authorities", "description": "Both authority implementations are consumed through the admitted factory."}, {"id": "durable-recovery", "description": "Recovery evidence is read from fresh durable state."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
