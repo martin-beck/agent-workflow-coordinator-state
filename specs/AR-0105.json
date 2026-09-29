@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0105.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "git-revision", "description": "Git authority revision is derived from owner-safe repository identity and clean branch/head observations."},
+    {"id": "production-consumer", "description": "Production cmd_upgrade constructs the concrete Git live binding from durable state without an injected object."},
+    {"id": "hostile-rejection", "description": "Missing, released, stale, foreign, ambiguous, and process-death state rejects before any phase capability."},
+    {"id": "unsupported-rejection", "description": "Public mutation remains fail-closed until AR-0102 completes the separately reviewed phase boundary."}
+  ],
+  "definition_of_done": [
+    "Git authority revision is derived from owner-safe repository identity and clean branch/head observations.",
+    "Production cmd_upgrade constructs the concrete Git live binding from durable state without an injected object.",
+    "Missing, released, stale, foreign, ambiguous, and process-death state rejects before any phase capability.",
+    "The public mutation gate remains fail-closed until AR-0102 completes the separately reviewed phase boundary.",
+    "Exact-head independent review, hosted checks, post-merge verification, and state reconciliation pass.",
+    "No source-to-model refinement proof or authorized prerequisite is required."
+  ],
+  "inputs": [
+    {"id": "sqlite-resolver", "description": "AR-0104 canonical SQLite production resolver and lock-domain pattern."},
+    {"id": "git-authority", "description": "Owner-safe Git authority observation and repository identity contract."}
+  ],
+  "outputs": [{"id": "git-resolver", "description": "Production Git resolver and real handoffctl integration fixture."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [
+    {"id": "durable-state", "description": "The resolver reads current durable state under the canonical lock domain."},
+    {"id": "safe-mode", "description": "Ambiguous and process-death outcomes fail closed."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}
+  ]
+}

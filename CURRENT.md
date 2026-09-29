@@ -15,15 +15,16 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. | - |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. | - |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until AR-0102 completes the separately reviewed phase boundary and the Git/SQLite campaign plus injected-failure recovery are independently verified. | - |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 completes live Git/SQLite phase orchestration and the bounded commit/rollback failure-boundary evidence is independently verified. | - |
 
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
-| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Promote after AR-0103 review, implement the handoffctl runtime-state resolver for live SQLite/Git admission, and prove missing/released/stale/process-death rejection. | - |
+| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Promote after AR-0103 review, implement and verify the canonical SQLite handoffctl runtime-state resolver; AR-0105 carries the Git resolver continuation. | - |
+| P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Implement and independently verify the canonical Git authority revision reader and real cmd_upgrade resolver fixture; keep mutation fail-closed. | - |
 
 ## Done
 
