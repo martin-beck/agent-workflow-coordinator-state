@@ -1435,8 +1435,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-awc-ar0100-20260929 |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. |
-| Next action | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. |
+| Summary | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. |
+| Next action | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 
 ### AR-0101 — Production upgrade command and session binding
 
@@ -1840,7 +1840,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 
 ### Open (2)
 

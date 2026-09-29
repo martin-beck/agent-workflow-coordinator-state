@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. | codex-awc-ar0100-20260929 |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. | codex-awc-ar0100-20260929 |
 
 ## Open
 
