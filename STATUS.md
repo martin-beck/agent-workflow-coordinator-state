@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**111 ARs tracked** across 4 active status categories.
+**112 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 2 |
+| **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 101 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,9 +24,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 111 |
+| Tasks | 112 |
 | Parent tasks | 4 |
-| Child tasks | 15 |
+| Child tasks | 16 |
 | Open or active | 6 |
 | Blocked | 0 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 111 | 6 | 0 | 101 |
+| unassigned | unassigned | 112 | 6 | 0 | 101 |
 
 ## Task drill-down
 
@@ -1560,7 +1560,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0102 |
-| Children | AR-0111 |
+| Children | AR-0111, AR-0112 |
 | Summary | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. |
 | Next action | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
 
@@ -1591,6 +1591,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Children | None |
 | Summary | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. |
 | Next action | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. |
+
+### AR-0112 — Repair production phase coverage gate
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0109 |
+| Children | None |
+| Summary | Repair continuation for the hosted 95&#37; branch-coverage regression introduced by production phase wiring. |
+| Next action | Raise hosted branch coverage back to the required 95&#37; with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. |
 
 
 ## Dependency graph
@@ -1717,6 +1731,7 @@ flowchart LR
         AR_0109["AR-0109 - Open"]:::status_open
         AR_0110["AR-0110 - Planned"]:::status_planned
         AR_0111["AR-0111 - Planned"]:::status_planned
+        AR_0112["AR-0112 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1873,6 +1888,7 @@ flowchart LR
     AR_0102 --> AR_0100
     AR_0102 --> AR_0110
     AR_0102 --> AR_0111
+    AR_0102 --> AR_0112
     AR_0103 --> AR_0102
     AR_0103 --> AR_0104
     AR_0104 --> AR_0102
@@ -2000,7 +2016,7 @@ flowchart LR
 | [AR-0099](tasks/AR-0099.md) | [AR-0097](tasks/AR-0097.md), [AR-0098](tasks/AR-0098.md) | [AR-0100](tasks/AR-0100.md), [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md) |
 | [AR-0100](tasks/AR-0100.md) | [AR-0099](tasks/AR-0099.md), [AR-0101](tasks/AR-0101.md), [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0101](tasks/AR-0101.md) | [AR-0099](tasks/AR-0099.md) | [AR-0100](tasks/AR-0100.md), [AR-0102](tasks/AR-0102.md) |
-| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0110](tasks/AR-0110.md), [AR-0111](tasks/AR-0111.md) |
+| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0110](tasks/AR-0110.md), [AR-0111](tasks/AR-0111.md), [AR-0112](tasks/AR-0112.md) |
 | [AR-0103](tasks/AR-0103.md) | [AR-0099](tasks/AR-0099.md) | [AR-0102](tasks/AR-0102.md), [AR-0104](tasks/AR-0104.md) |
 | [AR-0104](tasks/AR-0104.md) | [AR-0103](tasks/AR-0103.md) | [AR-0102](tasks/AR-0102.md), [AR-0105](tasks/AR-0105.md), [AR-0106](tasks/AR-0106.md), [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) |
 | [AR-0105](tasks/AR-0105.md) | [AR-0104](tasks/AR-0104.md) | [AR-0102](tasks/AR-0102.md), [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) |
@@ -2010,6 +2026,7 @@ flowchart LR
 | [AR-0109](tasks/AR-0109.md) | [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
 | [AR-0110](tasks/AR-0110.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md) | None |
 | [AR-0111](tasks/AR-0111.md) | [AR-0102](tasks/AR-0102.md) | None |
+| [AR-0112](tasks/AR-0112.md) | [AR-0102](tasks/AR-0102.md) | None |
 
 ## Complete AR inventory
 
@@ -2024,12 +2041,13 @@ flowchart LR
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Unclaimed | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
 
-### Planned (2)
+### Planned (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Unclaimed | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Unclaimed | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. |
+| P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Unclaimed | Repair continuation for the hosted 95&#37; branch-coverage regression introduced by production phase wiring. | Raise hosted branch coverage back to the required 95&#37; with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. |
 
 ### Done (101)
 

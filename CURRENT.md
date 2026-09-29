@@ -20,6 +20,7 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. | - |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | - |
+| P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Repair continuation for the hosted 95% branch-coverage regression introduced by production phase wiring. | Raise hosted branch coverage back to the required 95% with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. | - |
 
 ## Done
 
