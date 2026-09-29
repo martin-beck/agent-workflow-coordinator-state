@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Continuation: exact effect composition and real SQLite/Git durable commit parity are independently qualified; production rollback and process-death recovery remain. | Implement or expose a concrete backend-owned rollback effect and qualify it for both Git and SQLite; then run injected-failure/process-death recovery and safe-mode reconciliation with fresh independent evidence. | codex-awc-ar0108-20260929 |
+| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95%. | Repair repository-wide 95% combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. | codex-awc-ar0108-20260929 |
 
 ## Open
 

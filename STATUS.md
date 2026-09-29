@@ -1547,8 +1547,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-awc-ar0108-20260929 |
 | Parent | AR-0102 |
 | Children | None |
-| Summary | Continuation: exact effect composition and real SQLite/Git durable commit parity are independently qualified; production rollback and process-death recovery remain. |
-| Next action | Implement or expose a concrete backend-owned rollback effect and qualify it for both Git and SQLite; then run injected-failure/process-death recovery and safe-mode reconciliation with fresh independent evidence. |
+| Summary | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95&#37;. |
+| Next action | Repair repository-wide 95&#37; combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. |
 
 
 ## Dependency graph
@@ -1965,7 +1965,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | codex-awc-ar0108-20260929 | Continuation: exact effect composition and real SQLite/Git durable commit parity are independently qualified; production rollback and process-death recovery remain. | Implement or expose a concrete backend-owned rollback effect and qualify it for both Git and SQLite; then run injected-failure/process-death recovery and safe-mode reconciliation with fresh independent evidence. |
+| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | codex-awc-ar0108-20260929 | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95&#37;. | Repair repository-wide 95&#37; combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. |
 
 ### Open (5)
 
