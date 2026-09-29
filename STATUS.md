@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**106 ARs tracked** across 5 active status categories.
+**106 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 1 |
+| **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 100 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 106 |
 | Parent tasks | 2 |
 | Child tasks | 10 |
-| Open or active | 3 |
+| Open or active | 4 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 106 | 3 | 0 | 100 |
+| unassigned | unassigned | 106 | 4 | 0 | 100 |
 
 ## Task drill-down
 
@@ -1456,7 +1456,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | open |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
@@ -1637,7 +1637,7 @@ flowchart LR
         direction TB
         AR_0100["AR-0100 - In progress"]:::status_in_progress
         AR_0101["AR-0101 - Done"]:::status_done
-        AR_0102["AR-0102 - Planned"]:::status_planned
+        AR_0102["AR-0102 - Open"]:::status_open
         AR_0103["AR-0103 - Done"]:::status_done
         AR_0104["AR-0104 - Done"]:::status_done
         AR_0105["AR-0105 - Done"]:::status_done
@@ -1931,17 +1931,12 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 
-### Open (2)
+### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until AR-0102 completes the separately reviewed phase boundary and the Git/SQLite campaign plus injected-failure recovery are independently verified. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 completes live Git/SQLite phase orchestration and the bounded commit/rollback failure-boundary evidence is independently verified. |
-
-### Planned (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. |
 
 ### Done (100)
