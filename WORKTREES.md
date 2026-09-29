@@ -404,6 +404,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0104-production-binding-resolver` | `ar0104-production-binding-resolver` | `9a2ee9cfe2cf` | 0 | behind 41, ahead 18 |
 | `awc-ar0105-git-production-binding-resolver` | `ar0105-git-production-binding-resolver` | `b6026cd70e7f` | 0 | behind 15, ahead 0 |
 | `awc-ar0107-production-phase-capability-factory` | `ar0107-coverage-repair` | `e5278ae57b9c` | 0 | behind 10, ahead 0 |
+| `awc-ar0108-concrete-rollback` | `ar0108-concrete-rollback` | `92cec6476e5b` | 0 | behind 0, ahead 4 |
 | `awc-ar0108-phase-effects` | `ar0108-phase-effects` | `ccba6288ec8f` | 0 | behind 3, ahead 1 |
 | `awc-ar0108-production-upgrade-recovery-and-effects` | `ar0108-production-upgrade-recovery-and-effects` | `ef3d6e25bc29` | 0 | behind 5, ahead 1 |
 | `awc-ar0108-real-backend-campaign` | `ar0108-real-backend-campaign` | `d725e0ff0d46` | 0 | behind 2, ahead 2 |
