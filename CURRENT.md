@@ -16,13 +16,13 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. | - |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. | - |
+| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Repair continuation: make live session/backend binding an enforced production admission prerequisite and add real durable integration evidence. | Promote after AR-0101 review repair, wire LiveUpgradeBinding into the production admission boundary, and prove real durable Git and SQLite scope rechecks. | - |
 
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0103, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
-| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Repair continuation: make live session/backend binding an enforced production admission prerequisite and add real durable integration evidence. | Promote after AR-0101 review repair, wire LiveUpgradeBinding into the production admission boundary, and prove real durable Git and SQLite scope rechecks. | - |
 
 ## Done
 
