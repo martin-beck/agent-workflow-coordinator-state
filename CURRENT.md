@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0115](tasks/AR-0115.md): Bind durable Git staging for production sequencing | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -122,6 +116,7 @@ Never edit this file directly.
 | P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95%. | Repair repository-wide 95% combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. | - |
 | P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Coverage gate repaired and independently qualified through merged PR #1172; AR-0111 remains for full production recovery qualification. | No further AR-0112 action; continue AR-0111 full production sequencing and process-death qualification before closing AR-0109, AR-0102, AR-0031, or AR-0009. | - |
 | P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. | - |
+| P0 | [AR-0115](tasks/AR-0115.md): Bind durable Git staging for production sequencing | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
