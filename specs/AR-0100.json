@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0100.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "rollback-wired", "description": "A bounded Git and SQLite rollback effect is reachable only after verified backup and recovery evidence."},
+    {"id": "fresh-campaign", "description": "A fresh state checkout executes the supported previous-to-new upgrade path for Git and SQLite."},
+    {"id": "failure-matrix", "description": "Injected failures at every supported step leave a verified functional old or new runtime."},
+    {"id": "release-identity", "description": "The campaign and release evidence are bound to one exact reviewed merge head."}
+  ],
+  "definition_of_done": [
+    "AR-0099 is complete.",
+    "Rollback, process-death, competing-owner, stale-identity, and restore-equivalence evidence passes for both backends.",
+    "Independent review, hosted checks, post-merge verification, and state reconciliation pass.",
+    "No source-to-model refinement proof or authorization prerequisite is required."
+  ],
+  "inputs": [{"id": "commit-effect", "description": "AR-0099 bounded commit implementation."}, {"id": "release-contract", "description": "Generated release and upgrade contracts."}],
+  "outputs": [{"id": "upgrade-campaign", "description": "Fresh-state Git/SQLite upgrade and recovery campaign."}, {"id": "parent-evidence", "description": "Evidence sufficient to close AR-0009 and AR-0031."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [{"id": "functional", "description": "Old or new runtime remains verified functional after every supported injected failure."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}, {"id": "fresh-state", "description": "Evidence comes from a fresh isolated state checkout."}]
+}

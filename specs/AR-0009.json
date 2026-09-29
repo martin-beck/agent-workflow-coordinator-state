@@ -3,11 +3,11 @@
   "spec_ref": "specs/AR-0009.json",
   "spec_revision": 1,
   "acceptance_predicates": [
-    {"id": "release-reconciled", "description": "Release integration evidence is reconciled at the current exact release head."},
-    {"id": "limitation-explicit", "description": "The record explicitly does not claim an executable full upgrade campaign."},
-    {"id": "continuation-complete", "description": "AR-0098 is done with passing release and live-state evidence."}
+    {"id": "upgrade-executed", "description": "A previous-to-new Git and SQLite upgrade executes from a fresh state checkout."},
+    {"id": "failure-recovery", "description": "Injected failures at every supported step recover to a verified functional old or new runtime."},
+    {"id": "continuation-complete", "description": "AR-0100 is done with independent and hosted evidence."}
   ],
-  "definition_of_done": ["AR-0098 is complete.", "v0.3.46 and its merge head are recorded.", "Unsupported full-upgrade mutation remains fail-closed."],
+  "definition_of_done": ["AR-0098 is complete.", "The executable Git/SQLite campaign passes from a fresh state checkout.", "Unsupported phases remain fail-closed until separately implemented."],
   "inputs": [{"id": "continuation", "description": "Completed AR-0098 closure repair."}, {"id": "release", "description": "Exact v0.3.46 release identity."}],
   "outputs": [{"id": "parent-closure", "description": "Reconciled AR-0009 closure record."}],
   "allowed_tools": ["handoffctl", "git"],

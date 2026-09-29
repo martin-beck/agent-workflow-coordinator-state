@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0099.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "git-commit-wired", "description": "One exact-session Git commit effect is reachable only through the bounded engine boundary."},
+    {"id": "sqlite-commit-wired", "description": "One exact-session SQLite commit effect is reachable only through the bounded engine boundary."},
+    {"id": "failure-classification", "description": "Pre-effect rejection, ambiguous outcome, identity drift, and process death are durably classified."},
+    {"id": "public-gate", "description": "Unsupported public phases and commands remain fail-closed."}
+  ],
+  "definition_of_done": [
+    "Product implementation and tests are merged at an exact reviewed head.",
+    "Git and SQLite hostile/process-death matrices pass independently.",
+    "Hosted Verify/Formal and post-merge checks pass on the exact merge head.",
+    "No source-to-model refinement proof or authorization prerequisite is required."
+  ],
+  "inputs": [{"id": "backup-slice", "description": "AR-0097 bounded backup evidence."}, {"id": "commit-capabilities", "description": "Existing isolated Git and SQLite commit capability seams."}],
+  "outputs": [{"id": "commit-effect", "description": "Bounded durable commit effect through the upgrade engine."}, {"id": "review-evidence", "description": "Independent review and hosted exact-head evidence."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [{"id": "identity", "description": "Exact authority/session identity is checked before and after the effect."}, {"id": "ambiguity", "description": "Uncertain outcomes remain recoverable and never appear successful."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
