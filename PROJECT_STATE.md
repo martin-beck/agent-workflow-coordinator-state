@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `9da4dbe0301944ac8bc3291faea8f131a8376b9e`
-- Local origin/main: `9da4dbe0301944ac8bc3291faea8f131a8376b9e`
+- Product remote main: `fa55095883d745cbaf0af97903f806faa1659f35`
+- Local origin/main: `608df17b137d14b13840bb891e8924f37fed56ae`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -16,15 +16,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36573075681 | `fa55095883d7` | push | Verify | in_progress:- |
+| 36573075539 | `fa55095883d7` | push | Formal | completed:success |
+| 36572951924 | `a5046617cd2c` | pull_request | Verify | completed:success |
+| 36572823670 | `608df17b137d` | push | Formal | completed:success |
+| 36572823662 | `608df17b137d` | push | Verify | completed:failure |
+| 36572731579 | `54ec39bc1718` | pull_request | Verify | completed:success |
+| 36572401808 | `03fd52276e43` | pull_request | Verify | completed:success |
+| 36572059972 | `f27f3e5ded0f` | pull_request | Verify | completed:success |
+| 36571682748 | `0c1a6d1d7259` | pull_request | Verify | completed:success |
 | 36569807646 | `9da4dbe03019` | push | Verify | completed:success |
 | 36569807489 | `9da4dbe03019` | push | Formal | completed:success |
 | 36568922573 | `ca22837ef226` | pull_request | Verify | completed:success |
-| 36567894433 | `b11db727a0ce` | pull_request | Verify | completed:success |
-| 36566665051 | `07c773c6d141` | push | Formal | completed:success |
-| 36566664914 | `07c773c6d141` | push | Verify | completed:failure |
-| 36565920708 | `94a9231ebe81` | pull_request | Verify | completed:success |
-| 36565235665 | `fc91dfc27bdd` | pull_request | Verify | completed:success |
-| 36564873460 | `9db7b129fcf5` | pull_request | Verify | completed:success |
-| 36564111988 | `38c8a7c10fc7` | pull_request | Verify | completed:success |
-| 36563626658 | `e23bf220eeff` | pull_request | Verify | completed:success |
-| 36561868147 | `7013ba225e89` | push | Formal | completed:success |
