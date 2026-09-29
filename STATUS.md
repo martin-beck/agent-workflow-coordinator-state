@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**98 ARs tracked** across 5 active status categories.
+**98 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 92 |
+| **Done** | Accepted, integrated, and durably verified | 93 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 98 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
-| Open or active | 3 |
+| Open or active | 2 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 98 | 3 | 0 | 92 |
+| unassigned | unassigned | 98 | 2 | 0 | 93 |
 
 ## Task drill-down
 
@@ -1386,15 +1386,15 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0097-20260929 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
-| Summary | Closure repair for AR-0031: record the bounded backup seam and preserve fail-closed unsupported mutation. |
-| Next action | Claim, run the exact-main bounded backup/rejection audit, record evidence, and release done or blocked truthfully. |
+| Summary | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. |
+| Next action | No further AR-0097 action remains; retain unsupported mutation rejection-only. |
 
 ### AR-0098 — AR-0009 release-integration closure repair
 
@@ -1517,7 +1517,7 @@ flowchart LR
         AR_0094["AR-0094 - Done"]:::status_done
         AR_0095["AR-0095 - Done"]:::status_done
         AR_0096["AR-0096 - Done"]:::status_done
-        AR_0097["AR-0097 - In progress"]:::status_in_progress
+        AR_0097["AR-0097 - Done"]:::status_done
         AR_0098["AR-0098 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
@@ -1780,12 +1780,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | codex-awc-ar0097-20260929 | Closure repair for AR-0031: record the bounded backup seam and preserve fail-closed unsupported mutation. | Claim, run the exact-main bounded backup/rejection audit, record evidence, and release done or blocked truthfully. |
-
 ### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -1799,7 +1793,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Unclaimed | Closure repair for AR-0009: reconcile release integration evidence without claiming an executable full upgrade. | Claim, run the exact release-readiness audit, record the unsupported-upgrade limitation, and release done or blocked truthfully. |
 
-### Done (92)
+### Done (93)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1882,6 +1876,7 @@ flowchart LR
 | P0 | [AR-0094](tasks/AR-0094.md): Typed SQLite control-store mutation fence | Unclaimed | Bind the documented SQLite rollback-control and barrier-session write surface to a typed caller-owned mutation fence without enabling public upgrade mutation. | Audit and implement the smallest typed MutationFence adapter for SQLite rollback-control and barrier-session writes; preserve rejection-only public upgrade mutation and Dispatch. |
 | P0 | [AR-0095](tasks/AR-0095.md): Versioned runtime store and trust policy | Unclaimed | Implemented the rejection-safe versioned runtime store and trust-policy verifier, restored the full coverage gate, repaired atomic no-overwrite publication, passed independent review and hosted post-merge Verify/Formal, and published unsigned v0.3.45. Public upgrade mutation remains fail-closed. | No further AR-0095 action remains; retain public apply, rollback, release, and Dispatch rejection-only. |
 | P0 | [AR-0096](tasks/AR-0096.md): Durable SQLite WAL/SHM lifecycle reconciliation | Unclaimed | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. | No further AR-0096 action remains; retain public apply, rollback, release, and Dispatch rejection-only. |
+| P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Unclaimed | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. | No further AR-0097 action remains; retain unsupported mutation rejection-only. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
