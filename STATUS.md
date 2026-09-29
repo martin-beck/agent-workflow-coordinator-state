@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**100 ARs tracked** across 3 active status categories.
+**100 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1428,11 +1428,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0100-20260929 |
 | Parent | AR-0009 |
 | Children | None |
 | Summary | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. |
@@ -1551,7 +1551,7 @@ flowchart LR
     end
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
-        AR_0100["AR-0100 - Open"]:::status_open
+        AR_0100["AR-0100 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1818,13 +1818,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (3)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. |
+
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until the executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery evidence are complete through AR-0100. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until the bounded commit/rollback effect and failure-boundary evidence are implemented and independently verified through AR-0099 and AR-0100. |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Unclaimed | Actual implementation and campaign continuation for bounded rollback and the first executable Git/SQLite upgrade path. | Promote, claim, implement rollback and run the fresh-state Git/SQLite upgrade failure campaign with independent exact-head verification. |
 
 ### Done (95)
 
