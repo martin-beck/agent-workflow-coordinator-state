@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 3 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 98 |
+| **Done** | Accepted, integrated, and durably verified | 100 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 106 |
 | Parent tasks | 2 |
 | Child tasks | 10 |
-| Open or active | 5 |
+| Open or active | 3 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 106 | 5 | 0 | 98 |
+| unassigned | unassigned | 106 | 3 | 0 | 100 |
 
 ## Task drill-down
 
@@ -1442,15 +1442,15 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0101-20260929 |
+| Owner | Unclaimed |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Review-repaired binding helper and persisted identity cross-check pass focused tests, but independent review rejected production completion because the helper is not consumed by production admission and integration tests are synthetic. |
-| Next action | Keep AR-0101 open as a partial continuation; promote AR-0103 to wire LiveUpgradeBinding into production admission and add real durable Git/SQLite integration, then re-review exact repaired head. |
+| Summary | Completed through the reviewed live-binding admission and canonical Git/SQLite resolver implementation merged by PR #1156. |
+| Next action | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
 
 ### AR-0102 — Production upgrade phase orchestration
 
@@ -1470,15 +1470,15 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0103-20260929 |
+| Owner | Unclaimed |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Added issuer provenance registry and exact foreign-adapter rejection in 0aa491d; full exact-head suite passes, with fresh independent review pending and production resolver tracked separately in AR-0104. |
-| Next action | Complete fresh review and hosted checks for 0aa491d; if approved, merge and reconcile AR-0103, then promote AR-0104 for canonical cmd_upgrade binding construction. |
+| Summary | Completed through reviewed live-binding admission enforcement and canonical Git/SQLite resolver implementation merged by PR #1156. |
+| Next action | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
 
 ### AR-0104 — Construct production live upgrade binding
 
@@ -1636,9 +1636,9 @@ flowchart LR
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
         AR_0100["AR-0100 - In progress"]:::status_in_progress
-        AR_0101["AR-0101 - In progress"]:::status_in_progress
+        AR_0101["AR-0101 - Done"]:::status_done
         AR_0102["AR-0102 - Planned"]:::status_planned
-        AR_0103["AR-0103 - In progress"]:::status_in_progress
+        AR_0103["AR-0103 - Done"]:::status_done
         AR_0104["AR-0104 - Done"]:::status_done
         AR_0105["AR-0105 - Done"]:::status_done
         AR_0106["AR-0106 - Done"]:::status_done
@@ -1925,13 +1925,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (3)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex-awc-ar0100-20260929 | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
-| P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | codex-awc-ar0101-20260929 | Review-repaired binding helper and persisted identity cross-check pass focused tests, but independent review rejected production completion because the helper is not consumed by production admission and integration tests are synthetic. | Keep AR-0101 open as a partial continuation; promote AR-0103 to wire LiveUpgradeBinding into production admission and add real durable Git/SQLite integration, then re-review exact repaired head. |
-| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | codex-awc-ar0103-20260929 | Added issuer provenance registry and exact foreign-adapter rejection in 0aa491d; full exact-head suite passes, with fresh independent review pending and production resolver tracked separately in AR-0104. | Complete fresh review and hosted checks for 0aa491d; if approved, merge and reconcile AR-0103, then promote AR-0104 for canonical cmd_upgrade binding construction. |
 
 ### Open (2)
 
@@ -1946,7 +1944,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. |
 
-### Done (98)
+### Done (100)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2032,6 +2030,8 @@ flowchart LR
 | P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Unclaimed | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. | No further AR-0097 action remains; retain unsupported mutation rejection-only. |
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Unclaimed | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. |
 | P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Unclaimed | Exact main already contains the bounded Git/SQLite commit and internal rollback dispatch seams; 329 tests and 260 subtests passed, while public mutation remains rejected. | No further AR-0099 action remains; retain public apply/rollback and unsupported phases rejection-only. |
+| P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Unclaimed | Completed through the reviewed live-binding admission and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
+| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Unclaimed | Completed through reviewed live-binding admission enforcement and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
 | P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Unclaimed | Completed: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
 | P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Unclaimed | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
 | P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Unclaimed | Completed: repair the repository branch-coverage qualification without weakening the gate. | Completed through merged PR #1156; no coverage gate weakening was used. Continue with AR-0102 phase orchestration. |
