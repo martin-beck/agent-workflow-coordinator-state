@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**114 ARs tracked** across 5 active status categories.
+**114 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 102 |
+| **Done** | Accepted, integrated, and durably verified | 103 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 114 |
 | Parent tasks | 5 |
 | Child tasks | 18 |
-| Open or active | 7 |
+| Open or active | 6 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 114 | 7 | 0 | 102 |
+| unassigned | unassigned | 114 | 6 | 0 | 103 |
 
 ## Task drill-down
 
@@ -1610,11 +1610,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex |
+| Owner | Unclaimed |
 | Parent | AR-0111 |
 | Children | None |
 | Summary | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. |
@@ -1760,7 +1760,7 @@ flowchart LR
         AR_0110["AR-0110 - Planned"]:::status_planned
         AR_0111["AR-0111 - Planned"]:::status_planned
         AR_0112["AR-0112 - Done"]:::status_done
-        AR_0113["AR-0113 - In progress"]:::status_in_progress
+        AR_0113["AR-0113 - Done"]:::status_done
         AR_0114["AR-0114 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
@@ -2063,12 +2063,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | codex | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. |
-
 ### Open (6)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2088,7 +2082,7 @@ flowchart LR
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Unclaimed | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. |
 | P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Unclaimed | Continuation qualification for the remaining full-engine phase and durable recovery evidence. | Add admitted production readiness evidence for discover, preflight, quiesce, and reopen, then qualify complete Git and SQLite sequencing and injected process-death recovery. |
 
-### Done (102)
+### Done (103)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2181,6 +2175,7 @@ flowchart LR
 | P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Unclaimed | Completed: repair the repository branch-coverage qualification without weakening the gate. | Completed through merged PR #1156; no coverage gate weakening was used. Continue with AR-0102 phase orchestration. |
 | P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Unclaimed | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95&#37;. | Repair repository-wide 95&#37; combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. |
 | P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Unclaimed | Coverage gate repaired and independently qualified through merged PR #1172; AR-0111 remains for full production recovery qualification. | No further AR-0112 action; continue AR-0111 full production sequencing and process-death qualification before closing AR-0109, AR-0102, AR-0031, or AR-0009. |
+| P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | Unclaimed | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
