@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -119,6 +113,7 @@ Never edit this file directly.
 | P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Completed: repair the repository branch-coverage qualification without weakening the gate. | Completed through merged PR #1156; no coverage gate weakening was used. Continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95%. | Repair repository-wide 95% combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. | - |
+| P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | - |
 | P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Coverage gate repaired and independently qualified through merged PR #1172; AR-0111 remains for full production recovery qualification. | No further AR-0112 action; continue AR-0111 full production sequencing and process-death qualification before closing AR-0109, AR-0102, AR-0031, or AR-0009. | - |
 | P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. | - |
 | P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0116's fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. | - |
