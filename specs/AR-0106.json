@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0106.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "coverage", "description": "The exact candidate head passes the repository branch-coverage gate at or above 95%."},
+    {"id": "behavioral", "description": "Coverage additions exercise real safety and production-binding branches without weakening or excluding the gate."},
+    {"id": "integrity", "description": "The exact reviewed source, hosted checks, and generated evidence refer to one identical commit."}
+  ],
+  "definition_of_done": [
+    "Hosted verification passes the 95% branch-coverage gate.",
+    "New tests cover meaningful untested safety behavior and preserve fail-closed mutation semantics.",
+    "Exact-head independent review, hosted checks, post-merge verification, and state reconciliation pass.",
+    "No source-to-model refinement proof or authorized prerequisite is required."
+  ],
+  "inputs": [
+    {"id": "ar0104", "description": "AR-0104 exact SQLite resolver candidate and hosted coverage report."},
+    {"id": "coverage-config", "description": "Repository branch-coverage configuration and existing test suite."}
+  ],
+  "outputs": [{"id": "qualified-head", "description": "A mergeable exact head whose hosted branch-coverage gate passes."}],
+  "allowed_tools": ["git", "pytest", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {"id": "no-gate-weakening", "description": "Do not lower, omit, or exclude code from the required coverage gate."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}
+  ]
+}
