@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0108.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "concrete-backend-parity", "description": "Git and SQLite phase effects use the same identity-bound operation and evidence contract."},
+    {"id": "durable-recovery", "description": "Injected failures and process death produce durable, truthful journal outcomes and safe recovery decisions."},
+    {"id": "ambiguous-fail-closed", "description": "Stale identity or ambiguous external results never become false success or unverified mutation."},
+    {"id": "independent-release-evidence", "description": "Exact-head review, hosted checks, post-merge checks, and state reconciliation pass."}
+  ],
+  "definition_of_done": [
+    "Concrete Git and SQLite phase capabilities are bound only from an admitted LiveUpgradeBinding.",
+    "Injected failure and process-death recovery evidence passes for both backends.",
+    "Public mutation remains fail-closed if any required phase capability is absent or ambiguous.",
+    "No handler can override backend evidence.",
+    "No source-to-model refinement proof or authorized prerequisite is required."
+  ],
+  "inputs": [
+    {"id": "phase-factory", "description": "AR-0107 production phase-capability factory and UpgradeEngine binding."},
+    {"id": "backend-adapters", "description": "Existing concrete Git and SQLite authority adapters and mutation seams."}
+  ],
+  "outputs": [{"id": "production-effects-recovery", "description": "Concrete phase effects, parity fixtures, and durable failure/process-death recovery tests."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [
+    {"id": "exact-identity", "description": "All effects retain admitted project, revision, fence, barrier, and backend identity."},
+    {"id": "recovery", "description": "Failure and process-death outcomes are durable and truthful."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact candidate head and hosted result."}
+  ]
+}
