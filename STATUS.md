@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**96 ARs tracked** across 3 active status categories.
+**98 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 92 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 96 |
+| Tasks | 98 |
 | Parent tasks | 0 |
 | Child tasks | 0 |
 | Open or active | 2 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 96 | 2 | 0 | 92 |
+| unassigned | unassigned | 98 | 2 | 0 | 92 |
 
 ## Task drill-down
 
@@ -1382,6 +1382,34 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. |
 | Next action | No further AR-0096 action remains; retain public apply, rollback, release, and Dispatch rejection-only. |
 
+### AR-0097 — AR-0031 bounded-mutation closure repair
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Closure repair for AR-0031: record the bounded backup seam and preserve fail-closed unsupported mutation. |
+| Next action | Claim, run the exact-main bounded backup/rejection audit, record evidence, and release done or blocked truthfully. |
+
+### AR-0098 — AR-0009 release-integration closure repair
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Closure repair for AR-0009: reconcile release integration evidence without claiming an executable full upgrade. |
+| Next action | Claim, run the exact release-readiness audit, record the unsupported-upgrade limitation, and release done or blocked truthfully. |
+
 
 ## Dependency graph
 
@@ -1489,6 +1517,8 @@ flowchart LR
         AR_0094["AR-0094 - Done"]:::status_done
         AR_0095["AR-0095 - Done"]:::status_done
         AR_0096["AR-0096 - Done"]:::status_done
+        AR_0097["AR-0097 - Planned"]:::status_planned
+        AR_0098["AR-0098 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1633,6 +1663,8 @@ flowchart LR
     AR_0092 --> AR_0093
     AR_0093 --> AR_0094
     AR_0094 --> AR_0096
+    AR_0096 --> AR_0097
+    AR_0097 --> AR_0098
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1742,7 +1774,9 @@ flowchart LR
 | [AR-0093](tasks/AR-0093.md) | [AR-0092](tasks/AR-0092.md) | [AR-0094](tasks/AR-0094.md) |
 | [AR-0094](tasks/AR-0094.md) | [AR-0013](tasks/AR-0013.md), [AR-0091](tasks/AR-0091.md), [AR-0093](tasks/AR-0093.md) | [AR-0096](tasks/AR-0096.md) |
 | [AR-0095](tasks/AR-0095.md) | [AR-0088](tasks/AR-0088.md), [AR-0090](tasks/AR-0090.md) | None |
-| [AR-0096](tasks/AR-0096.md) | [AR-0094](tasks/AR-0094.md) | None |
+| [AR-0096](tasks/AR-0096.md) | [AR-0094](tasks/AR-0094.md) | [AR-0097](tasks/AR-0097.md) |
+| [AR-0097](tasks/AR-0097.md) | [AR-0096](tasks/AR-0096.md) | [AR-0098](tasks/AR-0098.md) |
+| [AR-0098](tasks/AR-0098.md) | [AR-0097](tasks/AR-0097.md) | None |
 
 ## Complete AR inventory
 
@@ -1752,6 +1786,13 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Current v0.3.26 release-readiness audit passes 72 focused tests across release identity/workflow, upgrade identity/contract/generator/runbook/command surfaces, and the Git/SQLite upgrade campaign. Exact public tag 8008ae2324a152e3f2c4476da39d4b893a1ce53d, independent review, hosted gates, unsigned release policy, canonical consumption, and live doctor are verified. No distinct release-integration defect remains; mutation and Dispatch stay rejection-only. | Keep AR-0009 open only for a genuinely new release-integration/readiness boundary; do not add signing gates or signing prerequisites. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Current main already contains the bounded backup, stage, and retained selector/runtime readiness seams through merged AR-0047 and AR-0048; AR-0064 separately completed the exact Git/SQLite safety evidence. No distinct non-duplicate implementation delta is identified, and mutation, rollback, release, and Dispatch remain fail-closed. | Keep AR-0031 open for a genuinely new, dependency-safe mutation-boundary obligation; do not duplicate merged selector/readiness work or enable unsupported mutation. |
+
+### Planned (2)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Unclaimed | Closure repair for AR-0031: record the bounded backup seam and preserve fail-closed unsupported mutation. | Claim, run the exact-main bounded backup/rejection audit, record evidence, and release done or blocked truthfully. |
+| P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Unclaimed | Closure repair for AR-0009: reconcile release integration evidence without claiming an executable full upgrade. | Claim, run the exact release-readiness audit, record the unsupported-upgrade limitation, and release done or blocked truthfully. |
 
 ### Done (92)
 

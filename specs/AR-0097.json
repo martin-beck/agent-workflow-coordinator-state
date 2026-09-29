@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0097.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "parent-gap-classified", "description": "AR-0031 is compared with exact main and its remaining obligation is classified without inventing unsupported mutation."},
+    {"id": "bounded-evidence-recorded", "description": "The existing bounded backup execution and rejection matrix are recorded with immutable release and test references."},
+    {"id": "parent-closure-ready", "description": "A concise parent closure note states exactly what is complete and what remains fail-closed."}
+  ],
+  "definition_of_done": [
+    "Exact main audit is complete.",
+    "The bounded backup seam and unsupported mutation boundary are independently testable.",
+    "AR-0031 can be closed without claiming broad apply, selector, or rollback mutation."
+  ],
+  "inputs": [
+    {"id": "product-head", "description": "Exact product main commit under review."},
+    {"id": "parent-plan", "description": "AR-0031 plan and task history."}
+  ],
+  "outputs": [
+    {"id": "closure-record", "description": "Durable continuation evidence and parent closure note."},
+    {"id": "boundary-result", "description": "Recorded pass/fail result for bounded backup and fail-closed mutation checks."}
+  ],
+  "allowed_tools": ["git", "pytest", "handoffctl", "sha256sum"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "mechanical"],
+  "gates": [
+    {"id": "exact-head", "description": "All evidence names the exact reviewed product head."},
+    {"id": "no-overclaim", "description": "Unsupported mutation remains rejection-only and is not represented as complete."}
+  ]
+}

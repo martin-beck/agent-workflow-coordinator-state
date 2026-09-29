@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0098.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "release-gap-classified", "description": "AR-0009 is reconciled against the current fail-closed upgrade contract and release evidence."},
+    {"id": "release-evidence-complete", "description": "Exact tag, hosted checks, post-merge verification, and fresh-state consumption evidence are recorded."},
+    {"id": "parent-closure-ready", "description": "A concise parent closure note distinguishes release readiness from unsupported first-upgrade mutation."}
+  ],
+  "definition_of_done": [
+    "The release integration audit is reproducible from exact main.",
+    "The public command remains rejection-only for unsupported apply and rollback.",
+    "AR-0009 can be closed without claiming an executable full upgrade campaign."
+  ],
+  "inputs": [
+    {"id": "product-head", "description": "Exact product main commit under review."},
+    {"id": "release-record", "description": "Published unsigned release and hosted verification record."},
+    {"id": "parent-plan", "description": "AR-0009 plan and task history."}
+  ],
+  "outputs": [
+    {"id": "release-closure-record", "description": "Durable release-readiness continuation evidence."},
+    {"id": "scope-result", "description": "Recorded boundary between release integration and future executable upgrade work."}
+  ],
+  "allowed_tools": ["git", "pytest", "handoffctl", "sha256sum"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "environmental"],
+  "gates": [
+    {"id": "exact-release", "description": "Release evidence names the exact commit and public tag."},
+    {"id": "fail-closed", "description": "No unsupported mutation command is enabled by the closure."}
+  ]
+}
