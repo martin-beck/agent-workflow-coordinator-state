@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0117](tasks/AR-0117.md): Execute fresh-state Git and SQLite release campaign | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -124,6 +118,7 @@ Never edit this file directly.
 | P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0116's fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. | - |
 | P0 | [AR-0115](tasks/AR-0115.md): Bind durable Git staging for production sequencing | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. | - |
 | P0 | [AR-0116](tasks/AR-0116.md): Qualify admitted factory process-death recovery | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. | - |
+| P0 | [AR-0117](tasks/AR-0117.md): Execute fresh-state Git and SQLite release campaign | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
