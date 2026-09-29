@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**22 ARs tracked** across 2 active status categories.
+**23 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 19 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -50,6 +50,7 @@ flowchart LR
         AR_0020["AR-0020 - Done"]:::status_done
         AR_0021["AR-0021 - Done"]:::status_done
         AR_0022["AR-0022 - Done"]:::status_done
+        AR_0023["AR-0023 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -83,6 +84,7 @@ flowchart LR
     AR_0017 --> AR_0019
     AR_0018 --> AR_0019
     AR_0019 --> AR_0020
+    AR_0022 --> AR_0023
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -118,7 +120,8 @@ flowchart LR
 | [AR-0019](tasks/AR-0019.md) | [AR-0017](tasks/AR-0017.md), [AR-0018](tasks/AR-0018.md) | [AR-0020](tasks/AR-0020.md) |
 | [AR-0020](tasks/AR-0020.md) | [AR-0019](tasks/AR-0019.md) | None |
 | [AR-0021](tasks/AR-0021.md) | [AR-0001](tasks/AR-0001.md) | None |
-| [AR-0022](tasks/AR-0022.md) | None | None |
+| [AR-0022](tasks/AR-0022.md) | None | [AR-0023](tasks/AR-0023.md) |
+| [AR-0023](tasks/AR-0023.md) | [AR-0022](tasks/AR-0022.md) | None |
 
 ## Complete AR inventory
 
@@ -129,6 +132,12 @@ flowchart LR
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | PR #535 merged at 58b6243e; exact Verify 35200960921 and post-merge Verify 35201229361 succeeded. Next slice implemented locally as PR #536 combined retained descriptor and manifest revalidation gate at bbabd1c. | Run independent exact-head review of PR #536, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
+
+### Planned (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0023](tasks/AR-0023.md): Release metadata and vendor identity alignment | Unclaimed | Align coordinator runtime metadata with the next immutable tag so ASB vendor verification accepts the upstream release. | Promote and claim the metadata-alignment repair from exact coordinator main; update the release version consistently, refresh formal evidence, and publish immutable v0.3.50 only after all exact-head gates pass. |
 
 ### Done (19)
 
