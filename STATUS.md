@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**98 ARs tracked** across 3 active status categories.
+**98 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -462,11 +462,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0031-closure-20260929 |
 | Parent | None |
 | Children | None |
 | Summary | Reconciled by AR-0097: exact main passed the bounded backup/rejection evidence; broad authority mutation, rollback, release, and Dispatch remain fail-closed. |
@@ -1451,7 +1451,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
-        AR_0031["AR-0031 - Open"]:::status_open
+        AR_0031["AR-0031 - In progress"]:::status_in_progress
         AR_0032["AR-0032 - Done"]:::status_done
         AR_0033["AR-0033 - Done"]:::status_done
         AR_0034["AR-0034 - Superseded"]:::status_superseded
@@ -1780,12 +1780,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (2)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | codex-awc-ar0031-closure-20260929 | Reconciled by AR-0097: exact main passed the bounded backup/rejection evidence; broad authority mutation, rollback, release, and Dispatch remain fail-closed. | No further AR-0031 action remains; future authority mutation requires a separate continuation AR. |
+
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | Reconciled by AR-0098: v0.3.46 at 74395bab passed release/upgrade and live-state evidence; no full executable upgrade is claimed and unsupported mutation remains fail-closed. | No further AR-0009 action remains; future executable upgrade mutation requires a separate continuation AR. |
-| P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Reconciled by AR-0097: exact main passed the bounded backup/rejection evidence; broad authority mutation, rollback, release, and Dispatch remain fail-closed. | No further AR-0031 action remains; future authority mutation requires a separate continuation AR. |
 
 ### Done (94)
 
