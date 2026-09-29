@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `6a59678225a19a371c7fef5cb8d6bf53a0560e67`
-- Local origin/main: `6a59678225a19a371c7fef5cb8d6bf53a0560e67`
+- Product remote main: `ac50af100e84a574a742b12481b4afae00c86609`
+- Local origin/main: `38e7b7ea314f538855eab00b9f3feef1aa4895dc`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -16,15 +16,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36548062538 | `ac50af100e84` | push | Formal | completed:success |
+| 36548062514 | `ac50af100e84` | push | Verify | completed:success |
+| 36547768875 | `e5278ae57b9c` | pull_request | Verify | completed:success |
+| 36547290140 | `26655724acaa` | pull_request | Verify | completed:success |
+| 36546073290 | `41d9cbdcb3e6` | push | Verify | completed:failure |
+| 36546073159 | `41d9cbdcb3e6` | push | Formal | completed:success |
+| 36545935952 | `6cd9814879e3` | pull_request | Verify | completed:success |
+| 36545748664 | `38e7b7ea314f` | push | Verify | completed:failure |
+| 36545748660 | `38e7b7ea314f` | push | Formal | completed:success |
+| 36545399848 | `c4cd9a28efce` | pull_request | Verify | completed:success |
+| 36545242487 | `daa0b57dbd58` | pull_request | Verify | completed:success |
 | 36543261281 | `6a59678225a1` | push | Verify | completed:success |
-| 36543261266 | `6a59678225a1` | push | Formal | completed:success |
-| 36542920220 | `b6026cd70e7f` | pull_request | Verify | completed:success |
-| 36542559315 | `1a0c8c6d622d` | pull_request | Verify | completed:failure |
-| 36542122951 | `d12c8ceac432` | pull_request | Verify | completed:failure |
-| 36541573396 | `faf109663024` | pull_request | Verify | completed:failure |
-| 36539933938 | `d35636bef0ae` | pull_request | Verify | completed:failure |
-| 36539590543 | `cca26f755740` | pull_request | Verify | completed:failure |
-| 36539191231 | `b6e0d2c3820e` | pull_request | Verify | completed:failure |
-| 36538725029 | `208af683a417` | pull_request | Verify | completed:failure |
-| 36538498312 | `49c8b286894d` | pull_request | Verify | completed:failure |
-| 36538464722 | `49c8b286894d` | workflow_dispatch | Verify | completed:failure |
