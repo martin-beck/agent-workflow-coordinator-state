@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0110.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "fresh-state-campaign", "description": "A fresh state checkout executes the supported previous-to-new Git and SQLite upgrade campaign."},
+    {"id": "failure-recovery", "description": "Every supported injected failure recovers to a verified old/new runtime or durable ambiguous safe mode."},
+    {"id": "release-identity", "description": "The exact merge and unsigned release/tag identity consumed by the campaign are recorded."},
+    {"id": "unsupported-rejection", "description": "Unsupported phases remain fail-closed."}
+  ],
+  "definition_of_done": ["AR-0102 and AR-0109 are complete.", "Fresh-state Git/SQLite campaign evidence is independently reviewed and hosted-qualified.", "Post-merge Verify/Formal and state reconciliation pass."],
+  "inputs": [{"id": "phase-wiring", "description": "Completed production phase orchestration."}, {"id": "release", "description": "Exact unsigned release identity."}],
+  "outputs": [{"id": "campaign", "description": "Executable fresh-state upgrade and failure-recovery evidence for AR-0009."}],
+  "required_evidence_classes": ["environmental", "contract-test"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "exact-release", "description": "The exact merge and tag identity are recorded."}, {"id": "fresh-state", "description": "The campaign starts from a fresh state checkout."}, {"id": "independent", "description": "A distinct reviewer checks the exact campaign evidence."}]
+}

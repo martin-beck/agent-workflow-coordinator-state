@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0109.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "phase-adapters", "description": "Supported discover, preflight, quiesce, stage, validate, reopen, and recovery handlers consume current typed Git/SQLite evidence."},
+    {"id": "engine-wiring", "description": "The admitted production factory supplies immutable generated operations and live bindings to UpgradeEngine without public bypass."},
+    {"id": "recovery", "description": "Injected failure and process death produce durable failed or safe-mode outcomes with no false success."},
+    {"id": "unsupported-rejection", "description": "Unsupported mutation phases remain rejected and public dispatch remains fail-closed."}
+  ],
+  "definition_of_done": ["AR-0108 is complete.", "Git and SQLite phase wiring and recovery are independently reviewed and hosted-qualified.", "Exact post-merge Verify/Formal and state reconciliation pass."],
+  "inputs": [{"id": "phase-factory", "description": "AR-0107 production phase capability factory."}, {"id": "rollback", "description": "AR-0108 identity-bound rollback effects."}],
+  "outputs": [{"id": "phase-wiring", "description": "Supported phase orchestration with durable failure classification."}],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "gates": [{"id": "live-evidence", "description": "Every supported phase rereads durable state and concrete authority identity."}, {"id": "safe-mode", "description": "Ambiguous outcomes are durable and non-retryable."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
