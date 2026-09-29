@@ -11,22 +11,22 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1154 | `ar0103-live-binding-enforcement@22663b8cdd01` | `ar0101-production-upgrade-binding` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Enforce live upgrade binding at mutation boundary |
-| #1155 | `ar0104-production-binding-resolver@7e1e8de21b43` | `main` | UNSTABLE | COMPLETED:CANCELLED, COMPLETED:CANCELLED, COMPLETED:CANCELLED, COMPLETED:CANCELLED, COMPLETED:CANCELLED | Construct production live upgrade binding |
+| #1154 | `ar0103-live-binding-enforcement@c61b17197d83` | `ar0101-production-upgrade-binding` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Enforce live upgrade binding at mutation boundary |
+| #1155 | `ar0104-production-binding-resolver@fb45e09f920d` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Construct production live upgrade binding |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36535713717 | `fb45e09f920d` | pull_request | Verify | completed:failure |
+| 36535713610 | `fb45e09f920d` | workflow_dispatch | Verify | completed:failure |
+| 36534907697 | `c61b17197d83` | pull_request | Verify | completed:failure |
+| 36534240469 | `eb000504ceb9` | pull_request | Verify | completed:failure |
+| 36534236600 | `eb000504ceb9` | workflow_dispatch | Verify | completed:failure |
+| 36533841590 | `05832b54bf73` | pull_request | Verify | completed:failure |
+| 36533837348 | `05832b54bf73` | workflow_dispatch | Verify | completed:failure |
+| 36533402865 | `22663b8cdd01` | workflow_dispatch | Verify | completed:failure |
+| 36533389394 | `b6b48a06d4f1` | workflow_dispatch | Verify | completed:failure |
+| 36533383431 | `b6b48a06d4f1` | pull_request | Verify | completed:failure |
 | 36533010631 | `7e1e8de21b43` | workflow_dispatch | Verify | completed:failure |
 | 36532986463 | `7e1e8de21b43` | pull_request | Verify | completed:cancelled |
-| 36532870983 | `22663b8cdd01` | pull_request | Verify | completed:failure |
-| 36532696298 | `b74e356f187c` | pull_request | Verify | completed:failure |
-| 36532379527 | `39b38cec1551` | pull_request | Verify | completed:failure |
-| 36532104982 | `0986c618ee61` | pull_request | Verify | completed:failure |
-| 36531288150 | `0aa491dcccf4` | pull_request | Verify | completed:success |
-| 36530906766 | `7962fdced94c` | pull_request | Verify | completed:success |
-| 36530130066 | `0367e1d68751` | pull_request | Verify | completed:success |
-| 36529384364 | `53bbb7f1597d` | pull_request | Verify | completed:success |
-| 36529019185 | `d3bfeb04fb8b` | pull_request | Verify | completed:success |
-| 36528446216 | `a85dfaa394b3` | pull_request | Verify | completed:success |
