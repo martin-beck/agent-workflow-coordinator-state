@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `dd26657412f0c06549d1673f960d718efde743ad`
-- Local origin/main: `77f48b7c8c1f8fe4c4a2e95ab8b3929c0e5553b0`
+- Product remote main: `7013ba225e8968c8062462c031569d7b7dc0908c`
+- Local origin/main: `dac423d2b356baddbc4952fbaa63398bd8d24bf9`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -16,15 +16,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36561868147 | `7013ba225e89` | push | Formal | completed:success |
+| 36561868054 | `7013ba225e89` | push | Verify | completed:success |
+| 36561786519 | `6b8ffbe80ecb` | pull_request | Verify | completed:success |
+| 36561747185 | `9b11189475e0` | pull_request | Verify | completed:cancelled |
+| 36561710490 | `610f4a0b31cb` | pull_request | Verify | completed:cancelled |
+| 36561588817 | `dac423d2b356` | push | Formal | completed:success |
+| 36561588764 | `dac423d2b356` | push | Verify | completed:failure |
+| 36561460207 | `d44362b9c7eb` | pull_request | Verify | completed:success |
+| 36561069850 | `5eca41f12ac1` | pull_request | Verify | completed:success |
 | 36559940033 | `dd26657412f0` | push | Formal | completed:success |
 | 36559940016 | `dd26657412f0` | push | Verify | completed:failure |
 | 36559865506 | `92cec6476e5b` | pull_request | Verify | completed:success |
-| 36559343118 | `15df13f37dd4` | push | Formal | completed:success |
-| 36559343056 | `15df13f37dd4` | push | Verify | completed:failure |
-| 36559224714 | `c1c75a26f9b3` | pull_request | Verify | completed:success |
-| 36558923767 | `a7f5a657030b` | push | Formal | completed:success |
-| 36558923675 | `a7f5a657030b` | push | Verify | completed:failure |
-| 36558801009 | `f853dea34aed` | pull_request | Verify | completed:success |
-| 36558638708 | `696caa920e97` | push | Verify | completed:failure |
-| 36558638599 | `696caa920e97` | push | Formal | completed:success |
-| 36558089773 | `ddaa807dc369` | pull_request | Verify | completed:success |
