@@ -1506,7 +1506,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | AR-0009 |
 | Children | None |
 | Summary | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. |
-| Next action | Implement and independently verify the canonical Git authority revision reader and real cmd_upgrade resolver fixture; keep mutation fail-closed. |
+| Next action | Keep PR #1156 open at d35636b until AR-0106 raises hosted branch coverage to 95&#37;; exact-head review found no remaining Git identity defect. Then merge and reconcile before promoting AR-0102. |
 
 ### AR-0106 — Repair branch-coverage qualification
 
@@ -1946,7 +1946,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. |
 | P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Unclaimed | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Keep open after 9a2ee9c: exact-head review accepts the unmocked SQLite fixture, but the incremental coverage repair still leaves the repository-wide 95&#37; branch gate at 94&#37;; complete AR-0106 before merging and promoting AR-0105. |
-| P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Unclaimed | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Implement and independently verify the canonical Git authority revision reader and real cmd_upgrade resolver fixture; keep mutation fail-closed. |
+| P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Unclaimed | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Keep PR #1156 open at d35636b until AR-0106 raises hosted branch coverage to 95&#37;; exact-head review found no remaining Git identity defect. Then merge and reconcile before promoting AR-0102. |
 | P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Unclaimed | Continuation: repair the repository branch-coverage qualification without weakening the gate. | Continue behavioral coverage repair from product commit 9a2ee9c; the added rejection-path tests pass, but the full 1548-test run still reports 94&#37; branch coverage, so do not merge or lower the gate. |
 
 ### Done (95)
