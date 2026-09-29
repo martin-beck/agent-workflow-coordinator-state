@@ -410,7 +410,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-ar0108-real-backend-campaign` | `ar0108-real-backend-campaign` | `d725e0ff0d46` | 0 | behind 16, ahead 2 |
 | `awc-ar0108-real-git-campaign` | `ar0108-real-git-campaign` | `47e81cd441fc` | 0 | behind 15, ahead 2 |
 | `awc-ar0109-phase-wiring` | `ar0109-production-phase-wiring` | `94a9231ebe81` | 0 | behind 1, ahead 0 |
-| `awc-ar0112-production-phase-coverage-repair` | `ar0112-production-phase-coverage-repair` | `b11db727a0ce` | 0 | behind 0, ahead 1 |
+| `awc-ar0112-production-phase-coverage-repair` | `ar0112-production-phase-coverage-repair` | `ca22837ef226` | 0 | behind 0, ahead 2 |
 | `awc-baseline-audit` | `DETACHED` | `a361fc73e742` | 0 | behind 75, ahead 0 |
 | `awc-pr116-review` | `DETACHED` | `ce36ff058e69` | 0 | behind 2042, ahead 0 |
 | `awc-pr117-review` | `DETACHED` | `c0eb59eeb76d` | 0 | behind 2040, ahead 0 |
@@ -441,6 +441,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-release-version` | `DETACHED` | `550c014c440c` | 0 | behind 1789, ahead 0 |
 | `awc-status-sharding` | `ar1194-status-sharding` | `160c4c7ab7d3` | 0 | behind 1796, ahead 0 |
 | `awc-ar0064-clean` | `DETACHED` | `f7bf490b5fd3` | 0 | behind 460, ahead 0 |
+| `awc-pr1172-git` | `DETACHED` | `ca22837ef226` | 0 | behind 0, ahead 2 |
 | `awc-review-1144-1790622704` | `DETACHED` | `7ac148f1bd65` | 0 | behind 99, ahead 0 |
 | `awc-review-1144-e2-1790623132140986799` | `DETACHED` | `e2ccab026dc2` | 0 | behind 97, ahead 0 |
 | `awc-review-1144-new-1790622903` | `DETACHED` | `3518f089802f` | 0 | behind 98, ahead 0 |

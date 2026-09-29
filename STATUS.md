@@ -1888,7 +1888,6 @@ flowchart LR
     AR_0102 --> AR_0100
     AR_0102 --> AR_0110
     AR_0102 --> AR_0111
-    AR_0102 --> AR_0112
     AR_0103 --> AR_0102
     AR_0103 --> AR_0104
     AR_0104 --> AR_0102
@@ -2016,7 +2015,7 @@ flowchart LR
 | [AR-0099](tasks/AR-0099.md) | [AR-0097](tasks/AR-0097.md), [AR-0098](tasks/AR-0098.md) | [AR-0100](tasks/AR-0100.md), [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md) |
 | [AR-0100](tasks/AR-0100.md) | [AR-0099](tasks/AR-0099.md), [AR-0101](tasks/AR-0101.md), [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0101](tasks/AR-0101.md) | [AR-0099](tasks/AR-0099.md) | [AR-0100](tasks/AR-0100.md), [AR-0102](tasks/AR-0102.md) |
-| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0110](tasks/AR-0110.md), [AR-0111](tasks/AR-0111.md), [AR-0112](tasks/AR-0112.md) |
+| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0110](tasks/AR-0110.md), [AR-0111](tasks/AR-0111.md) |
 | [AR-0103](tasks/AR-0103.md) | [AR-0099](tasks/AR-0099.md) | [AR-0102](tasks/AR-0102.md), [AR-0104](tasks/AR-0104.md) |
 | [AR-0104](tasks/AR-0104.md) | [AR-0103](tasks/AR-0103.md) | [AR-0102](tasks/AR-0102.md), [AR-0105](tasks/AR-0105.md), [AR-0106](tasks/AR-0106.md), [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) |
 | [AR-0105](tasks/AR-0105.md) | [AR-0104](tasks/AR-0104.md) | [AR-0102](tasks/AR-0102.md), [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) |
@@ -2026,7 +2025,7 @@ flowchart LR
 | [AR-0109](tasks/AR-0109.md) | [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
 | [AR-0110](tasks/AR-0110.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md) | None |
 | [AR-0111](tasks/AR-0111.md) | [AR-0102](tasks/AR-0102.md) | None |
-| [AR-0112](tasks/AR-0112.md) | [AR-0102](tasks/AR-0102.md) | None |
+| [AR-0112](tasks/AR-0112.md) | None | None |
 
 ## Complete AR inventory
 
