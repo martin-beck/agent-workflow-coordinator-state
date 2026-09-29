@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0102.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "phase-adapters", "description": "Production discover, preflight, quiesce, stage, validate, reopen, and recovery handlers consume live typed evidence."},
+    {"id": "engine-wiring", "description": "UpgradeEngine receives only immutable live bindings and generated operations from the production command boundary."},
+    {"id": "failure-classification", "description": "Phase failure and process death leave durable failed or safe-mode state without false success."},
+    {"id": "unsupported-rejection", "description": "Unimplemented mutation phases remain rejected."}
+  ],
+  "definition_of_done": ["Git and SQLite production phase adapters pass hostile and process-death tests.", "Exact-head independent review, hosted checks, post-merge verification, and reconciliation pass.", "No source-to-model refinement proof or authorization prerequisite is required."],
+  "inputs": [{"id": "live-binding", "description": "AR-0101 live session/backend binding."}, {"id": "engine", "description": "Existing UpgradeEngine phase and journal contracts."}],
+  "outputs": [{"id": "phase-wiring", "description": "Production phase-to-engine orchestration for supported operations."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [{"id": "live-evidence", "description": "Every phase uses current durable state and concrete authority evidence."}, {"id": "safe-mode", "description": "Ambiguous phase outcomes are durable and non-retryable."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
