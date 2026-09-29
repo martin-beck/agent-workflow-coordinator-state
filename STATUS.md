@@ -1631,8 +1631,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex |
 | Parent | AR-0111 |
 | Children | None |
-| Summary | Continuation qualification for the remaining full-engine phase and durable recovery evidence. |
-| Next action | Implement and qualify complete admitted Git/SQLite eight-phase sequencing with durable effect journals and injected process-death recovery; PR #1175 readiness slice is merged at 1835c19c. |
+| Summary | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. |
+| Next action | Add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends; independently review and merge the remaining qualification. |
 
 
 ## Dependency graph
@@ -2067,7 +2067,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | codex | Continuation qualification for the remaining full-engine phase and durable recovery evidence. | Implement and qualify complete admitted Git/SQLite eight-phase sequencing with durable effect journals and injected process-death recovery; PR #1175 readiness slice is merged at 1835c19c. |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | codex | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends; independently review and merge the remaining qualification. |
 
 ### Open (6)
 
