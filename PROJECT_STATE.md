@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `5c86d3901c825dbce36f783961586b6053b3a98c`
+- Product remote main: `18f1f85bfd0f272e8bb0f30b72b71bd82186cfbe`
 - Local origin/main: `5c86d3901c825dbce36f783961586b6053b3a98c`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,13 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1185 | `feature/bounded-actionable-state-projection@f3942c32325e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: bound CURRENT projection to actionable tasks |
+| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36644952463 | `18f1f85bfd0f` | push | Verify | in_progress:- |
+| 36644952450 | `18f1f85bfd0f` | push | Formal | in_progress:- |
 | 36644698109 | `f3942c32325e` | pull_request | Verify | completed:success |
 | 36589097229 | `5c86d3901c82` | push | Verify | completed:success |
 | 36589097180 | `5c86d3901c82` | push | Formal | completed:success |
@@ -27,5 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36588416651 | `c297ddfe7ca2` | pull_request | Verify | completed:success |
 | 36586422630 | `3b9886fd25a3` | push | Formal | completed:success |
 | 36586422330 | `3b9886fd25a3` | push | Verify | completed:success |
-| 36586238698 | `bb777aed0bd6` | pull_request | Verify | completed:success |
-| 36585932707 | `273abd3cbf2f` | push | Formal | completed:success |
