@@ -12,9 +12,9 @@
 | **In progress** | Claimed work with a live lease | 3 |
 | **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 4 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 95 |
+| **Done** | Accepted, integrated, and durably verified | 98 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 106 | 5 | 0 | 95 |
+| unassigned | unassigned | 106 | 5 | 0 | 98 |
 
 ## Task drill-down
 
@@ -1484,43 +1484,43 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. |
-| Next action | Keep open after 9a2ee9c: exact-head review accepts the unmocked SQLite fixture, but the incremental coverage repair still leaves the repository-wide 95&#37; branch gate at 94&#37;; complete AR-0106 before merging and promoting AR-0105. |
+| Summary | Completed: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. |
+| Next action | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
 
 ### AR-0105 — Complete Git production live-binding resolver
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. |
-| Next action | Keep PR #1156 open at b6026cd until AR-0106 raises hosted branch coverage to 95&#37; and the independent review covers the repaired history; then merge and reconcile before promoting AR-0102. |
+| Summary | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. |
+| Next action | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
 
 ### AR-0106 — Repair branch-coverage qualification
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Continuation: repair the repository branch-coverage qualification without weakening the gate. |
-| Next action | Continue behavioral coverage repair from product commit b6026cd; hosted verification of the latest exact head is required, and the repository-wide 95&#37; gate is still not proven, so do not merge or lower it. |
+| Summary | Completed: repair the repository branch-coverage qualification without weakening the gate. |
+| Next action | Completed through merged PR #1156; no coverage gate weakening was used. Continue with AR-0102 phase orchestration. |
 
 
 ## Dependency graph
@@ -1639,9 +1639,9 @@ flowchart LR
         AR_0101["AR-0101 - In progress"]:::status_in_progress
         AR_0102["AR-0102 - Planned"]:::status_planned
         AR_0103["AR-0103 - In progress"]:::status_in_progress
-        AR_0104["AR-0104 - Planned"]:::status_planned
-        AR_0105["AR-0105 - Planned"]:::status_planned
-        AR_0106["AR-0106 - Planned"]:::status_planned
+        AR_0104["AR-0104 - Done"]:::status_done
+        AR_0105["AR-0105 - Done"]:::status_done
+        AR_0106["AR-0106 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1940,16 +1940,13 @@ flowchart LR
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until AR-0102 completes the separately reviewed phase boundary and the Git/SQLite campaign plus injected-failure recovery are independently verified. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 completes live Git/SQLite phase orchestration and the bounded commit/rollback failure-boundary evidence is independently verified. |
 
-### Planned (4)
+### Planned (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0104, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. |
-| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Unclaimed | Continuation: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Keep open after 9a2ee9c: exact-head review accepts the unmocked SQLite fixture, but the incremental coverage repair still leaves the repository-wide 95&#37; branch gate at 94&#37;; complete AR-0106 before merging and promoting AR-0105. |
-| P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Unclaimed | Continuation: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Keep PR #1156 open at b6026cd until AR-0106 raises hosted branch coverage to 95&#37; and the independent review covers the repaired history; then merge and reconcile before promoting AR-0102. |
-| P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Unclaimed | Continuation: repair the repository branch-coverage qualification without weakening the gate. | Continue behavioral coverage repair from product commit b6026cd; hosted verification of the latest exact head is required, and the repository-wide 95&#37; gate is still not proven, so do not merge or lower it. |
 
-### Done (95)
+### Done (98)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2035,6 +2032,9 @@ flowchart LR
 | P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Unclaimed | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. | No further AR-0097 action remains; retain unsupported mutation rejection-only. |
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Unclaimed | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. |
 | P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Unclaimed | Exact main already contains the bounded Git/SQLite commit and internal rollback dispatch seams; 329 tests and 260 subtests passed, while public mutation remains rejected. | No further AR-0099 action remains; retain public apply/rollback and unsupported phases rejection-only. |
+| P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Unclaimed | Completed: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
+| P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Unclaimed | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. |
+| P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Unclaimed | Completed: repair the repository branch-coverage qualification without weakening the gate. | Completed through merged PR #1156; no coverage gate weakening was used. Continue with AR-0102 phase orchestration. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |

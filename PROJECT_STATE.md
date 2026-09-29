@@ -2,23 +2,23 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `74395bab727f447bcc988e4a2543284f61328158`
-- Local origin/main: `74395bab727f447bcc988e4a2543284f61328158`
+- Product remote main: `6a59678225a19a371c7fef5cb8d6bf53a0560e67`
+- Local origin/main: `6a59678225a19a371c7fef5cb8d6bf53a0560e67`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
+| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1154 | `ar0103-live-binding-enforcement@c61b17197d83` | `ar0101-production-upgrade-binding` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Enforce live upgrade binding at mutation boundary |
-| #1155 | `ar0104-production-binding-resolver@9a2ee9cfe2cf` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Construct production live upgrade binding |
-| #1156 | `ar0105-git-production-binding-resolver@b6026cd70e7f` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Construct production Git live bindings |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36543261281 | `6a59678225a1` | push | Verify | completed:success |
+| 36543261266 | `6a59678225a1` | push | Formal | completed:success |
 | 36542920220 | `b6026cd70e7f` | pull_request | Verify | completed:success |
 | 36542559315 | `1a0c8c6d622d` | pull_request | Verify | completed:failure |
 | 36542122951 | `d12c8ceac432` | pull_request | Verify | completed:failure |
@@ -29,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 36538725029 | `208af683a417` | pull_request | Verify | completed:failure |
 | 36538498312 | `49c8b286894d` | pull_request | Verify | completed:failure |
 | 36538464722 | `49c8b286894d` | workflow_dispatch | Verify | completed:failure |
-| 36537800913 | `9a2ee9cfe2cf` | workflow_dispatch | Verify | completed:failure |
-| 36537641464 | `9a2ee9cfe2cf` | pull_request | Verify | completed:failure |
