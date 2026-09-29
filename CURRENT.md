@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0116](tasks/AR-0116.md): Qualify admitted factory process-death recovery | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. | codex |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -14,7 +20,6 @@ Never edit this file directly.
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | - |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. | - |
 | P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0116's fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. | - |
-| P0 | [AR-0116](tasks/AR-0116.md): Qualify admitted factory process-death recovery | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. | - |
 
 ## Planned
 
