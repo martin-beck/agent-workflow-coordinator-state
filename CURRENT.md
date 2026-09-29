@@ -21,7 +21,8 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0101, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
+| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Promote after AR-0103, implement live production phase adapters and engine wiring, then independently verify Git and SQLite failure boundaries. | - |
+| P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Repair continuation: make live session/backend binding an enforced production admission prerequisite and add real durable integration evidence. | Promote after AR-0101 review repair, wire LiveUpgradeBinding into the production admission boundary, and prove real durable Git and SQLite scope rechecks. | - |
 
 ## Done
 
