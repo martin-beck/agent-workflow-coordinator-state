@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1154 | `ar0103-live-binding-enforcement@7962fdced94c` | `ar0101-production-upgrade-binding` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, IN_PROGRESS: | Enforce live upgrade binding at mutation boundary |
+| #1154 | `ar0103-live-binding-enforcement@7962fdced94c` | `ar0101-production-upgrade-binding` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Enforce live upgrade binding at mutation boundary |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36530906766 | `7962fdced94c` | pull_request | Verify | in_progress:- |
+| 36530906766 | `7962fdced94c` | pull_request | Verify | completed:success |
 | 36530130066 | `0367e1d68751` | pull_request | Verify | completed:success |
 | 36529384364 | `53bbb7f1597d` | pull_request | Verify | completed:success |
 | 36529019185 | `d3bfeb04fb8b` | pull_request | Verify | completed:success |
