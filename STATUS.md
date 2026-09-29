@@ -1947,7 +1947,7 @@ flowchart LR
     AR_0109 --> AR_0110
     AR_0112 --> AR_0113
     AR_0113 --> AR_0114
-    AR_0114 --> AR_0115
+    AR_0113 --> AR_0115
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2074,9 +2074,9 @@ flowchart LR
 | [AR-0110](tasks/AR-0110.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md) | None |
 | [AR-0111](tasks/AR-0111.md) | [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0112](tasks/AR-0112.md) | None | [AR-0113](tasks/AR-0113.md) |
-| [AR-0113](tasks/AR-0113.md) | [AR-0112](tasks/AR-0112.md) | [AR-0114](tasks/AR-0114.md) |
-| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | [AR-0115](tasks/AR-0115.md) |
-| [AR-0115](tasks/AR-0115.md) | [AR-0114](tasks/AR-0114.md) | None |
+| [AR-0113](tasks/AR-0113.md) | [AR-0112](tasks/AR-0112.md) | [AR-0114](tasks/AR-0114.md), [AR-0115](tasks/AR-0115.md) |
+| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | None |
+| [AR-0115](tasks/AR-0115.md) | [AR-0113](tasks/AR-0113.md) | None |
 
 ## Complete AR inventory
 
