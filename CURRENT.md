@@ -3,11 +3,11 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## Open
+## In Progress
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Reconciled by AR-0098: v0.3.46 at 74395bab passed release/upgrade and live-state evidence; no full executable upgrade is claimed and unsupported mutation remains fail-closed. | No further AR-0009 action remains; future executable upgrade mutation requires a separate continuation AR. | - |
+| P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Reconciled by AR-0098: v0.3.46 at 74395bab passed release/upgrade and live-state evidence; no full executable upgrade is claimed and unsupported mutation remains fail-closed. | No further AR-0009 action remains; future executable upgrade mutation requires a separate continuation AR. | codex-awc-ar0009-closure-20260929 |
 
 ## Done
 
