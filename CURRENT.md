@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0022](tasks/AR-0022.md): Bounded actionable state projection | Signed+DCO upstream implementation 24d1b1d bounds CURRENT.md to actionable statuses, adds terminal-history regression coverage, docs, v0.3.26 metadata, and refreshed formal evidence digest; focused, full 1454-test, Ruff, format, and mypy gates pass. | Independently review the exact diff and publish the clean signed branch through the coordinator project review/CI workflow; merge and tag immutable v0.3.26 only after green exact-head hosted gates, then provide downstream vendor-sync evidence to ASB AR-1534. | codex-awc-ar0022-publication-20260930 |
+| P0 | [AR-0022](tasks/AR-0022.md): Bounded actionable state projection | Merged PR #1185 at 18f1f85; exact-head PR checks and post-merge Verify 36644952463 plus Formal 36644952450 passed. Immutable lightweight tag v0.3.49 points to 18f1f85; fresh clone release identity, contract, and runbook verification passed. | AR-0022 is complete. Downstream ASB AR-1534 may consume the exact coordinator v0.3.49 tag/source commit after independently rerunning vendor sync and all state gates. | codex-awc-ar0022-publication-20260930 |
 
 ## Open
 
