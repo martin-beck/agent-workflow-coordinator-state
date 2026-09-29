@@ -1562,7 +1562,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | AR-0102 |
 | Children | None |
 | Summary | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. |
-| Next action | Implement and independently qualify the remaining supported phase adapters and durable process-death recovery; keep unsupported public dispatch fail-closed. |
+| Next action | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
 
 ### AR-0110 — Fresh-state upgrade campaign and recovery
 
@@ -2000,7 +2000,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | codex-awc-ar0109-20260929 | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Implement and independently qualify the remaining supported phase adapters and durable process-death recovery; keep unsupported public dispatch fail-closed. |
+| P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | codex-awc-ar0109-20260929 | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
 
 ### Open (5)
 
