@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. | codex-awc-ar0100-20260929 |
-| P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Implemented immutable LiveUpgradeBinding for durable session, lock-domain scope, admission lease/recheck, and concrete Git/SQLite backend identity; focused and surrounding tests pass, but production command remains rejection-only until AR-0102 phase orchestration. | Independently review exact commit 88c30dc, run hosted checks, then promote AR-0102 for live phase orchestration; do not close AR-0101 until review and post-merge evidence are recorded. | codex-awc-ar0101-20260929 |
+| P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Review-repaired binding helper and persisted identity cross-check pass focused tests, but independent review rejected production completion because the helper is not consumed by production admission and integration tests are synthetic. | Keep AR-0101 open as a partial continuation; promote AR-0103 to wire LiveUpgradeBinding into production admission and add real durable Git/SQLite integration, then re-review exact repaired head. | codex-awc-ar0101-20260929 |
 
 ## Open
 
