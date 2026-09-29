@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0115's durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -19,6 +13,7 @@ Never edit this file directly.
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. | - |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | - |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. | - |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0115's durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. | - |
 | P0 | [AR-0115](tasks/AR-0115.md): Bind durable Git staging for production sequencing | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. | - |
 
 ## Planned
