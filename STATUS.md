@@ -1547,8 +1547,8 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-awc-ar0108-20260929 |
 | Parent | AR-0102 |
 | Children | None |
-| Summary | Continuation: production effects are now composed with generated commit/rollback operations and independently qualified; concrete live backend campaign and recovery evidence remain. |
-| Next action | Build and independently verify real Git/SQLite backend parity campaigns, injected-failure and process-death journal recovery, stale/ambiguous safe-mode reconciliation; keep public mutation fail-closed. |
+| Summary | Continuation: exact generated effect composition and a real SQLite durable commit round trip are independently qualified; Git parity, rollback, and process-death recovery remain. |
+| Next action | Qualify real Git parity and real rollback effects, then exercise injected failure/process death with durable journal recovery and truthful safe-mode reconciliation; keep public mutation fail-closed. |
 
 
 ## Dependency graph
@@ -1966,7 +1966,7 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | codex-awc-ar0102-20260929 | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0108: bind concrete Git/SQLite effects to the admitted phase engine and independently verify backend parity plus injected-failure/process-death recovery; retain fail-closed public dispatch. |
-| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | codex-awc-ar0108-20260929 | Continuation: production effects are now composed with generated commit/rollback operations and independently qualified; concrete live backend campaign and recovery evidence remain. | Build and independently verify real Git/SQLite backend parity campaigns, injected-failure and process-death journal recovery, stale/ambiguous safe-mode reconciliation; keep public mutation fail-closed. |
+| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | codex-awc-ar0108-20260929 | Continuation: exact generated effect composition and a real SQLite durable commit round trip are independently qualified; Git parity, rollback, and process-death recovery remain. | Qualify real Git parity and real rollback effects, then exercise injected failure/process death with durable journal recovery and truthful safe-mode reconciliation; keep public mutation fail-closed. |
 
 ### Open (4)
 

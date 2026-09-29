@@ -8,7 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0108: bind concrete Git/SQLite effects to the admitted phase engine and independently verify backend parity plus injected-failure/process-death recovery; retain fail-closed public dispatch. | codex-awc-ar0102-20260929 |
-| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Continuation: production effects are now composed with generated commit/rollback operations and independently qualified; concrete live backend campaign and recovery evidence remain. | Build and independently verify real Git/SQLite backend parity campaigns, injected-failure and process-death journal recovery, stale/ambiguous safe-mode reconciliation; keep public mutation fail-closed. | codex-awc-ar0108-20260929 |
+| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Continuation: exact generated effect composition and a real SQLite durable commit round trip are independently qualified; Git parity, rollback, and process-death recovery remain. | Qualify real Git parity and real rollback effects, then exercise injected failure/process death with durable journal recovery and truthful safe-mode reconciliation; keep public mutation fail-closed. | codex-awc-ar0108-20260929 |
 
 ## Open
 
