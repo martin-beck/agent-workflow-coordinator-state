@@ -11,13 +11,13 @@ Generated from local Git and GitHub. Do not edit.
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1185 | `feature/bounded-actionable-state-projection@f3942c32325e` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | fix: bound CURRENT projection to actionable tasks |
+| #1185 | `feature/bounded-actionable-state-projection@f3942c32325e` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: bound CURRENT projection to actionable tasks |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 36644698109 | `f3942c32325e` | pull_request | Verify | in_progress:- |
+| 36644698109 | `f3942c32325e` | pull_request | Verify | completed:success |
 | 36589097229 | `5c86d3901c82` | push | Verify | completed:success |
 | 36589097180 | `5c86d3901c82` | push | Formal | completed:success |
 | 36588962853 | `89e53ce9ae12` | pull_request | Verify | completed:success |
