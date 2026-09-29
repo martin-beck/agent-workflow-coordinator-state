@@ -1464,7 +1464,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | AR-0031 |
 | Children | AR-0107, AR-0108 |
 | Summary | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. |
-| Next action | Implement AR-0107: bind generated phase operations to the admitted Git/SQLite session and UpgradeEngine, then independently verify every failure boundary. |
+| Next action | Continue through AR-0108: bind concrete Git/SQLite effects to the admitted phase engine and independently verify backend parity plus injected-failure/process-death recovery; retain fail-closed public dispatch. |
 
 ### AR-0103 — Enforce live upgrade binding at production admission
 
@@ -1965,7 +1965,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | codex-awc-ar0102-20260929 | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Implement AR-0107: bind generated phase operations to the admitted Git/SQLite session and UpgradeEngine, then independently verify every failure boundary. |
+| P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | codex-awc-ar0102-20260929 | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0108: bind concrete Git/SQLite effects to the admitted phase engine and independently verify backend parity plus injected-failure/process-death recovery; retain fail-closed public dispatch. |
 | P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | codex-awc-ar0108-20260929 | Continuation: production effect binding qualification is repaired and independently reviewed; concrete Git/SQLite effects and durable recovery evidence remain. | Implement and independently verify concrete Git/SQLite phase effects, backend parity, and injected-failure/process-death recovery; keep public mutation fail-closed until every capability is bound. |
 
 ### Open (4)
