@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Continuation qualification for the remaining full-engine phase and durable recovery evidence. | Add admitted production readiness evidence for discover, preflight, quiesce, and reopen, then qualify complete Git and SQLite sequencing and injected process-death recovery. | codex |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Continuation qualification for the remaining full-engine phase and durable recovery evidence. | Implement and qualify complete admitted Git/SQLite eight-phase sequencing with durable effect journals and injected process-death recovery; PR #1175 readiness slice is merged at 1835c19c. | codex |
 
 ## Open
 
