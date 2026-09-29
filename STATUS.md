@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**115 ARs tracked** across 4 active status categories.
+**116 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 7 |
+| **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 115 |
+| Tasks | 116 |
 | Parent tasks | 6 |
-| Child tasks | 19 |
-| Open or active | 7 |
+| Child tasks | 20 |
+| Open or active | 8 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 115 | 7 | 0 | 104 |
+| unassigned | unassigned | 116 | 8 | 0 | 104 |
 
 ## Task drill-down
 
@@ -1630,9 +1630,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Team | unassigned |
 | Owner | Unclaimed |
 | Parent | AR-0111 |
-| Children | AR-0115 |
+| Children | AR-0115, AR-0116 |
 | Summary | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. |
-| Next action | Add and independently verify factory-level process-death recovery for the admitted Git and SQLite production factories, then use the evidence to finish AR-0009 and AR-0031. |
+| Next action | Complete child AR-0116&#x27;s fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. |
 
 ### AR-0115 — Bind durable Git staging for production sequencing
 
@@ -1647,6 +1647,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Children | None |
 | Summary | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. |
 | Next action | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. |
+
+### AR-0116 — Qualify admitted factory process-death recovery
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0114 |
+| Children | None |
+| Summary | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. |
+| Next action | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. |
 
 
 ## Dependency graph
@@ -1777,6 +1791,7 @@ flowchart LR
         AR_0113["AR-0113 - Done"]:::status_done
         AR_0114["AR-0114 - Open"]:::status_open
         AR_0115["AR-0115 - Done"]:::status_done
+        AR_0116["AR-0116 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1948,6 +1963,7 @@ flowchart LR
     AR_0112 --> AR_0113
     AR_0113 --> AR_0114
     AR_0113 --> AR_0115
+    AR_0115 --> AR_0116
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2076,11 +2092,12 @@ flowchart LR
 | [AR-0112](tasks/AR-0112.md) | None | [AR-0113](tasks/AR-0113.md) |
 | [AR-0113](tasks/AR-0113.md) | [AR-0112](tasks/AR-0112.md) | [AR-0114](tasks/AR-0114.md), [AR-0115](tasks/AR-0115.md) |
 | [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | None |
-| [AR-0115](tasks/AR-0115.md) | [AR-0113](tasks/AR-0113.md) | None |
+| [AR-0115](tasks/AR-0115.md) | [AR-0113](tasks/AR-0113.md) | [AR-0116](tasks/AR-0116.md) |
+| [AR-0116](tasks/AR-0116.md) | [AR-0115](tasks/AR-0115.md) | None |
 
 ## Complete AR inventory
 
-### Open (7)
+### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2090,7 +2107,8 @@ flowchart LR
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Unclaimed | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Unclaimed | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Add and independently verify factory-level process-death recovery for the admitted Git and SQLite production factories, then use the evidence to finish AR-0009 and AR-0031. |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | Unclaimed | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0116&#x27;s fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. |
+| P0 | [AR-0116](tasks/AR-0116.md): Qualify admitted factory process-death recovery | Unclaimed | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. |
 
 ### Planned (2)
 
