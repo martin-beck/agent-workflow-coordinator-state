@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**117 ARs tracked** across 3 active status categories.
+**117 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 4 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1568,11 +1568,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex |
 | Parent | AR-0009 |
 | Children | AR-0117 |
 | Summary | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. |
@@ -1799,7 +1799,7 @@ flowchart LR
         AR_0107["AR-0107 - Done"]:::status_done
         AR_0108["AR-0108 - Done"]:::status_done
         AR_0109["AR-0109 - Done"]:::status_done
-        AR_0110["AR-0110 - Open"]:::status_open
+        AR_0110["AR-0110 - In progress"]:::status_in_progress
         AR_0111["AR-0111 - Done"]:::status_done
         AR_0112["AR-0112 - Done"]:::status_done
         AR_0113["AR-0113 - Done"]:::status_done
@@ -2116,14 +2116,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (4)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | codex | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | Complete child AR-0117&#x27;s fresh-state Git/SQLite campaign against the exact unsigned release identity, then close AR-0110 and AR-0009 with reconciled evidence. |
+
+### Open (3)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until AR-0102 and continuation AR-0110 complete the fresh-state Git/SQLite campaign with injected-failure recovery and exact release evidence. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 and AR-0109 complete live Git/SQLite phase orchestration and bounded commit/rollback failure-boundary evidence. |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Unclaimed | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
-| P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Unclaimed | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | Complete child AR-0117&#x27;s fresh-state Git/SQLite campaign against the exact unsigned release identity, then close AR-0110 and AR-0009 with reconciled evidence. |
 
 ### Done (111)
 
