@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**22 ARs tracked** across 3 active status categories.
+**22 ARs tracked** across 2 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 3 |
+| **In progress** | Claimed work with a live lease | 0 |
+| **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -49,7 +49,7 @@ flowchart LR
         AR_0019["AR-0019 - Done"]:::status_done
         AR_0020["AR-0020 - Done"]:::status_done
         AR_0021["AR-0021 - Done"]:::status_done
-        AR_0022["AR-0022 - In progress"]:::status_in_progress
+        AR_0022["AR-0022 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -122,19 +122,14 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0022](tasks/AR-0022.md): Bounded actionable state projection | codex-awc-ar0022-bounded-projection-20260930 | Signed+DCO upstream implementation 24d1b1d bounds CURRENT.md to actionable statuses, adds terminal-history regression coverage, docs, v0.3.26 metadata, and refreshed formal evidence digest; focused, full 1454-test, Ruff, format, and mypy gates pass. | Independently review the exact diff and publish the clean signed branch through the coordinator project review/CI workflow; merge and tag immutable v0.3.26 only after green exact-head hosted gates, then provide downstream vendor-sync evidence to ASB AR-1534. |
-
-### Open (3)
+### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | PR #535 merged at 58b6243e; exact Verify 35200960921 and post-merge Verify 35201229361 succeeded. Next slice implemented locally as PR #536 combined retained descriptor and manifest revalidation gate at bbabd1c. | Run independent exact-head review of PR #536, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
+| P0 | [AR-0022](tasks/AR-0022.md): Bounded actionable state projection | Unclaimed | Signed+DCO upstream implementation 24d1b1d bounds CURRENT.md to actionable statuses, adds terminal-history regression coverage, docs, v0.3.26 metadata, and refreshed formal evidence digest; focused, full 1454-test, Ruff, format, and mypy gates pass. | Independently review the exact diff and publish the clean signed branch through the coordinator project review/CI workflow; merge and tag immutable v0.3.26 only after green exact-head hosted gates, then provide downstream vendor-sync evidence to ASB AR-1534. |
 
 ### Done (18)
 
