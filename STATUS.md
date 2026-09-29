@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**107 ARs tracked** across 4 active status categories.
+**108 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 100 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,9 +24,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 107 |
+| Tasks | 108 |
 | Parent tasks | 3 |
-| Child tasks | 11 |
+| Child tasks | 12 |
 | Open or active | 5 |
 | Blocked | 0 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 107 | 5 | 0 | 100 |
+| unassigned | unassigned | 108 | 5 | 0 | 100 |
 
 ## Task drill-down
 
@@ -1462,7 +1462,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Team | unassigned |
 | Owner | codex-awc-ar0102-20260929 |
 | Parent | AR-0031 |
-| Children | AR-0107 |
+| Children | AR-0107, AR-0108 |
 | Summary | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. |
 | Next action | Implement AR-0107: bind generated phase operations to the admitted Git/SQLite session and UpgradeEngine, then independently verify every failure boundary. |
 
@@ -1535,6 +1535,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Children | None |
 | Summary | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. |
 | Next action | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
+
+### AR-0108 — Complete production upgrade effects and recovery evidence
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0102 |
+| Children | None |
+| Summary | Continuation: complete concrete production phase effects, backend parity fixtures, and truthful failure/process-death recovery evidence. |
+| Next action | Implement the concrete Git/SQLite phase effects and durable injected-failure/process-death recovery evidence; preserve fail-closed public dispatch until every capability is bound. |
 
 
 ## Dependency graph
@@ -1657,6 +1671,7 @@ flowchart LR
         AR_0105["AR-0105 - Done"]:::status_done
         AR_0106["AR-0106 - Done"]:::status_done
         AR_0107["AR-0107 - Open"]:::status_open
+        AR_0108["AR-0108 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1811,6 +1826,7 @@ flowchart LR
     AR_0101 --> AR_0100
     AR_0101 --> AR_0102
     AR_0102 --> AR_0100
+    AR_0102 --> AR_0108
     AR_0103 --> AR_0102
     AR_0103 --> AR_0104
     AR_0104 --> AR_0102
@@ -1819,6 +1835,7 @@ flowchart LR
     AR_0104 --> AR_0107
     AR_0105 --> AR_0102
     AR_0105 --> AR_0107
+    AR_0107 --> AR_0108
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1934,12 +1951,13 @@ flowchart LR
 | [AR-0099](tasks/AR-0099.md) | [AR-0097](tasks/AR-0097.md), [AR-0098](tasks/AR-0098.md) | [AR-0100](tasks/AR-0100.md), [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md) |
 | [AR-0100](tasks/AR-0100.md) | [AR-0099](tasks/AR-0099.md), [AR-0101](tasks/AR-0101.md), [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0101](tasks/AR-0101.md) | [AR-0099](tasks/AR-0099.md) | [AR-0100](tasks/AR-0100.md), [AR-0102](tasks/AR-0102.md) |
-| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md) |
+| [AR-0102](tasks/AR-0102.md) | [AR-0101](tasks/AR-0101.md), [AR-0103](tasks/AR-0103.md), [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0108](tasks/AR-0108.md) |
 | [AR-0103](tasks/AR-0103.md) | [AR-0099](tasks/AR-0099.md) | [AR-0102](tasks/AR-0102.md), [AR-0104](tasks/AR-0104.md) |
 | [AR-0104](tasks/AR-0104.md) | [AR-0103](tasks/AR-0103.md) | [AR-0102](tasks/AR-0102.md), [AR-0105](tasks/AR-0105.md), [AR-0106](tasks/AR-0106.md), [AR-0107](tasks/AR-0107.md) |
 | [AR-0105](tasks/AR-0105.md) | [AR-0104](tasks/AR-0104.md) | [AR-0102](tasks/AR-0102.md), [AR-0107](tasks/AR-0107.md) |
 | [AR-0106](tasks/AR-0106.md) | [AR-0104](tasks/AR-0104.md) | None |
-| [AR-0107](tasks/AR-0107.md) | [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | None |
+| [AR-0107](tasks/AR-0107.md) | [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | [AR-0108](tasks/AR-0108.md) |
+| [AR-0108](tasks/AR-0108.md) | [AR-0102](tasks/AR-0102.md), [AR-0107](tasks/AR-0107.md) | None |
 
 ## Complete AR inventory
 
@@ -1957,6 +1975,12 @@ flowchart LR
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until AR-0102 completes the separately reviewed phase boundary and the Git/SQLite campaign plus injected-failure recovery are independently verified. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 completes live Git/SQLite phase orchestration and the bounded commit/rollback failure-boundary evidence is independently verified. |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
+
+### Planned (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Unclaimed | Continuation: complete concrete production phase effects, backend parity fixtures, and truthful failure/process-death recovery evidence. | Implement the concrete Git/SQLite phase effects and durable injected-failure/process-death recovery evidence; preserve fail-closed public dispatch until every capability is bound. |
 
 ### Done (100)
 

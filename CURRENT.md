@@ -18,6 +18,12 @@ Never edit this file directly.
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 completes live Git/SQLite phase orchestration and the bounded commit/rollback failure-boundary evidence is independently verified. | - |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Continuation: complete concrete production phase effects, backend parity fixtures, and truthful failure/process-death recovery evidence. | Implement the concrete Git/SQLite phase effects and durable injected-failure/process-death recovery evidence; preserve fail-closed public dispatch until every capability is bound. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
