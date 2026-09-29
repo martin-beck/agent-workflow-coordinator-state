@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Closure repair for AR-0009: reconcile release integration evidence without claiming an executable full upgrade. | Claim, run the exact release-readiness audit, record the unsupported-upgrade limitation, and release done or blocked truthfully. | codex-awc-ar0098-20260929 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -100,6 +94,7 @@ Never edit this file directly.
 | P0 | [AR-0095](tasks/AR-0095.md): Versioned runtime store and trust policy | Implemented the rejection-safe versioned runtime store and trust-policy verifier, restored the full coverage gate, repaired atomic no-overwrite publication, passed independent review and hosted post-merge Verify/Formal, and published unsigned v0.3.45. Public upgrade mutation remains fail-closed. | No further AR-0095 action remains; retain public apply, rollback, release, and Dispatch rejection-only. | - |
 | P0 | [AR-0096](tasks/AR-0096.md): Durable SQLite WAL/SHM lifecycle reconciliation | Concrete successor gap for issue #27: durable SQLite WAL/SHM lifecycle recording and crash-safe sidecar reconciliation beneath the existing typed control-store fence; public upgrade mutation remains fail-closed. | No further AR-0096 action remains; retain public apply, rollback, release, and Dispatch rejection-only. | - |
 | P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. | No further AR-0097 action remains; retain unsupported mutation rejection-only. | - |
+| P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
