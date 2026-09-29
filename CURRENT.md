@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. | codex-awc-ar0109-20260929 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -18,12 +12,14 @@ Never edit this file directly.
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. | - |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. | - |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | - |
+| P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. | - |
 
 ## Planned
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0110](tasks/AR-0110.md): Fresh-state upgrade campaign and recovery | Continuation for the executable fresh-state Git/SQLite upgrade campaign and complete injected-failure recovery evidence. | After AR-0102 and AR-0109 complete, execute and independently qualify the fresh-state Git/SQLite campaign against the exact unsigned release identity. | - |
+| P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | - |
 
 ## Done
 
