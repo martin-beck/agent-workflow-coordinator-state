@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0104.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "production-resolver", "description": "handoffctl constructs LiveUpgradeBinding from canonical durable runtime state before mutating command admission."},
+    {"id": "backend-binding", "description": "Concrete SQLite and Git adapters are bound to the real lock/session scope and current backend identity."},
+    {"id": "hostile-rejection", "description": "Missing, released, ambiguous, stale, foreign, and process-death state rejects before any phase capability."},
+    {"id": "unsupported-rejection", "description": "Path-only or caller-fabricated binding inputs remain rejected."}
+  ],
+  "definition_of_done": ["Production command tests consume the resolver and real durable integration passes.", "Exact-head independent review, hosted checks, post-merge verification, and reconciliation pass.", "No source-to-model refinement proof or authorization prerequisite is required."],
+  "inputs": [{"id": "sealed-binding", "description": "AR-0103 sealed live binding and reread contract."}, {"id": "handoffctl-state", "description": "Canonical coordinator backend, control store, fence, and lock paths."}],
+  "outputs": [{"id": "runtime-resolver", "description": "Production resolver that supplies only current, concrete live bindings."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [{"id": "durable-state", "description": "The resolver reads current durable state under the canonical lock domain."}, {"id": "safe-mode", "description": "Ambiguous and process-death outcomes fail closed."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
