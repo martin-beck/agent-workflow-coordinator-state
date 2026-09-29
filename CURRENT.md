@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -116,6 +110,7 @@ Never edit this file directly.
 | P0 | [AR-0104](tasks/AR-0104.md): Construct production live upgrade binding | Completed: construct LiveUpgradeBinding from canonical handoffctl durable runtime state instead of requiring an externally fabricated object. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0105](tasks/AR-0105.md): Complete Git production live-binding resolver | Completed: complete production live-binding construction for Git authority state and exercise the real handoffctl resolver path. | Completed through merged PR #1156; continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0106](tasks/AR-0106.md): Repair branch-coverage qualification | Completed: repair the repository branch-coverage qualification without weakening the gate. | Completed through merged PR #1156; no coverage gate weakening was used. Continue with AR-0102 phase orchestration. | - |
+| P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | - |
 | P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95%. | Repair repository-wide 95% combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. | - |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. | - |
 | P0 | [AR-0111](tasks/AR-0111.md): Qualify production phase sequencing and recovery | Repair continuation for the remaining full production phase and durable recovery qualification after the phase-capability wiring slice. | Qualify the merged production phase factory with full UpgradeEngine sequencing, real durable control-store journals, real Git and SQLite authority effects, and injected process-death recovery; obtain exact-head review and hosted/post-merge evidence. | - |
