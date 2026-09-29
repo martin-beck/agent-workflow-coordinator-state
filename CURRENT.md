@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -102,6 +96,7 @@ Never edit this file directly.
 | P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. | No further AR-0097 action remains; retain unsupported mutation rejection-only. | - |
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. | - |
 | P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Exact main already contains the bounded Git/SQLite commit and internal rollback dispatch seams; 329 tests and 260 subtests passed, while public mutation remains rejected. | No further AR-0099 action remains; retain public apply/rollback and unsupported phases rejection-only. | - |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Bounded rollback and fresh-state Git/SQLite campaign obligations are qualified through the admitted production factory and exact unsigned v0.3.48 campaign; public apply remains fail-closed for unsupported paths. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. | - |
 | P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Completed through the reviewed live-binding admission and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. | - |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. | - |
 | P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Completed through reviewed live-binding admission enforcement and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. | - |

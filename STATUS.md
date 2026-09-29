@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**117 ARs tracked** across 4 active status categories.
+**117 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 112 |
+| **Done** | Accepted, integrated, and durably verified | 113 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 2 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 117 |
 | Parent tasks | 7 |
 | Child tasks | 21 |
-| Open or active | 3 |
+| Open or active | 2 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 117 | 3 | 0 | 112 |
+| unassigned | unassigned | 117 | 2 | 0 | 113 |
 
 ## Task drill-down
 
@@ -1428,14 +1428,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex |
+| Owner | Unclaimed |
 | Parent | AR-0009 |
 | Children | None |
-| Summary | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. |
+| Summary | Bounded rollback and fresh-state Git/SQLite campaign obligations are qualified through the admitted production factory and exact unsigned v0.3.48 campaign; public apply remains fail-closed for unsupported paths. |
 | Next action | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 
 ### AR-0101 — Production upgrade command and session binding
@@ -1789,7 +1789,7 @@ flowchart LR
     end
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
-        AR_0100["AR-0100 - In progress"]:::status_in_progress
+        AR_0100["AR-0100 - Done"]:::status_done
         AR_0101["AR-0101 - Done"]:::status_done
         AR_0102["AR-0102 - Done"]:::status_done
         AR_0103["AR-0103 - Done"]:::status_done
@@ -2116,12 +2116,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | codex | Fixture campaign passed 15 tests and 70 subtests, but production handoffctl apply/rollback remains rejection-only; AR-0101 must bind live state before this campaign can satisfy the parent. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
-
 ### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2129,7 +2123,7 @@ flowchart LR
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | AR-0098 reconciled release readiness, but the original executable previous-to-new Git/SQLite upgrade campaign and injected-failure recovery remain incomplete. | Remain open until AR-0102 and continuation AR-0110 complete the fresh-state Git/SQLite campaign with injected-failure recovery and exact release evidence. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | AR-0097 completed the bounded backup/rejection slice, but commit/rollback effect integration and the required hostile/process-death evidence remain incomplete. | Remain open until AR-0102 and AR-0109 complete live Git/SQLite phase orchestration and bounded commit/rollback failure-boundary evidence. |
 
-### Done (112)
+### Done (113)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2215,6 +2209,7 @@ flowchart LR
 | P0 | [AR-0097](tasks/AR-0097.md): AR-0031 bounded-mutation closure repair | Unclaimed | Exact main 74395bab passed the bounded backup/rejection audit: 102 tests and 193 subtests; unsupported apply remains rejected. | No further AR-0097 action remains; retain unsupported mutation rejection-only. |
 | P0 | [AR-0098](tasks/AR-0098.md): AR-0009 release-integration closure repair | Unclaimed | v0.3.46 at 74395bab passed 55 release/upgrade tests and 99 subtests; tag identity and live state doctor passed, while full upgrade mutation remains unsupported. | No further AR-0098 action remains; retain unsupported full-upgrade mutation rejection-only. |
 | P0 | [AR-0099](tasks/AR-0099.md): Bounded authority commit effect integration | Unclaimed | Exact main already contains the bounded Git/SQLite commit and internal rollback dispatch seams; 329 tests and 260 subtests passed, while public mutation remains rejected. | No further AR-0099 action remains; retain public apply/rollback and unsupported phases rejection-only. |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded rollback and first executable upgrade campaign | Unclaimed | Bounded rollback and fresh-state Git/SQLite campaign obligations are qualified through the admitted production factory and exact unsigned v0.3.48 campaign; public apply remains fail-closed for unsupported paths. | Complete AR-0101 production binding, then replace fixture-only campaign evidence with fresh live Git/SQLite execution and failure recovery. |
 | P0 | [AR-0101](tasks/AR-0101.md): Production upgrade command and session binding | Unclaimed | Completed through the reviewed live-binding admission and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. |
 | P0 | [AR-0103](tasks/AR-0103.md): Enforce live upgrade binding at production admission | Unclaimed | Completed through reviewed live-binding admission enforcement and canonical Git/SQLite resolver implementation merged by PR #1156. | Completed through the reviewed live-binding admission and resolver implementation merged by PR #1156; continue with AR-0102 phase orchestration. |
