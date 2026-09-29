@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0101.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "binding-to-session", "description": "The public upgrade command obtains and validates a live durable session and concrete Git/SQLite authority binding from current coordinator state."},
+    {"id": "engine-dispatch", "description": "The validated contract constructs the engine with exact phase operations, backend capabilities, and durable journal bindings."},
+    {"id": "ambiguous-safe", "description": "Process death, stale binding, and uncertain effect outcomes remain durable safe-mode states requiring reconciliation."},
+    {"id": "unsupported-rejection", "description": "Unsupported phases and invalid bindings remain fail-closed."}
+  ],
+  "definition_of_done": ["The production handoffctl upgrade path is covered for Git and SQLite.", "No test-only callback or path-only authority identity is used.", "Exact-head independent review, hosted checks, post-merge verification, and state reconciliation pass.", "No source-to-model refinement proof or authorization prerequisite is required."],
+  "inputs": [{"id": "engine-seams", "description": "AR-0099 internal commit/rollback dispatch seams."}, {"id": "runtime-binding", "description": "Validated contract/runtime binding and durable session stores."}],
+  "outputs": [{"id": "production-dispatch", "description": "Production command-to-engine binding for supported upgrade phases."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [{"id": "live-binding", "description": "The command is bound to live durable state, not a synthetic fixture."}, {"id": "safe-mode", "description": "Ambiguity is durable and cannot be retried as success."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
