@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `1835c19cc8539c4f5ffaf1bc6c30556c67e64bdf`
-- Local origin/main: `1835c19cc8539c4f5ffaf1bc6c30556c67e64bdf`
+- Product remote main: `d220659cbf860545faa94a86cd00eb32984a888f`
+- Local origin/main: `d220659cbf860545faa94a86cd00eb32984a888f`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -16,15 +16,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 36578122347 | `d220659cbf86` | push | Formal | completed:success |
+| 36578122323 | `d220659cbf86` | push | Verify | completed:success |
+| 36578012425 | `33f6f010badd` | pull_request | Verify | completed:success |
+| 36577893950 | `58942c601064` | push | Formal | completed:success |
+| 36577893906 | `58942c601064` | push | Verify | completed:failure |
+| 36577797974 | `88dcf295508f` | pull_request | Verify | completed:success |
+| 36577665244 | `fbe31c103144` | push | Verify | completed:failure |
+| 36577665094 | `fbe31c103144` | push | Formal | completed:success |
+| 36576771861 | `9c9d5f213704` | pull_request | Verify | completed:success |
 | 36574173401 | `1835c19cc853` | push | Verify | completed:success |
 | 36574173396 | `1835c19cc853` | push | Formal | completed:success |
 | 36574035746 | `3529a14e7e7b` | pull_request | Verify | completed:success |
-| 36573812546 | `5a3b4a4875dd` | pull_request | Verify | completed:success |
-| 36573075681 | `fa55095883d7` | push | Verify | completed:success |
-| 36573075539 | `fa55095883d7` | push | Formal | completed:success |
-| 36572951924 | `a5046617cd2c` | pull_request | Verify | completed:success |
-| 36572823670 | `608df17b137d` | push | Formal | completed:success |
-| 36572823662 | `608df17b137d` | push | Verify | completed:failure |
-| 36572731579 | `54ec39bc1718` | pull_request | Verify | completed:success |
-| 36572401808 | `03fd52276e43` | pull_request | Verify | completed:success |
-| 36572059972 | `f27f3e5ded0f` | pull_request | Verify | completed:success |
