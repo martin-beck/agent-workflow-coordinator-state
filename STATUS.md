@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**112 ARs tracked** across 4 active status categories.
+**112 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 7 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 6 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1596,11 +1596,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0112-20260929 |
 | Parent | AR-0109 |
 | Children | None |
 | Summary | Repair continuation for the hosted 95&#37; branch-coverage regression introduced by production phase wiring. |
@@ -1731,7 +1731,7 @@ flowchart LR
         AR_0109["AR-0109 - Open"]:::status_open
         AR_0110["AR-0110 - Planned"]:::status_planned
         AR_0111["AR-0111 - Planned"]:::status_planned
-        AR_0112["AR-0112 - Open"]:::status_open
+        AR_0112["AR-0112 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2029,7 +2029,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (7)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | codex-awc-ar0112-20260929 | Repair continuation for the hosted 95&#37; branch-coverage regression introduced by production phase wiring. | Raise hosted branch coverage back to the required 95&#37; with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. |
+
+### Open (6)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2039,7 +2045,6 @@ flowchart LR
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Unclaimed | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
-| P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Unclaimed | Repair continuation for the hosted 95&#37; branch-coverage regression introduced by production phase wiring. | Raise hosted branch coverage back to the required 95&#37; with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. |
 
 ### Planned (2)
 

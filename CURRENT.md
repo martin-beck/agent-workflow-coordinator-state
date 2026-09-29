@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Repair continuation for the hosted 95% branch-coverage regression introduced by production phase wiring. | Raise hosted branch coverage back to the required 95% with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. | codex-awc-ar0112-20260929 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -13,7 +19,6 @@ Never edit this file directly.
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. | - |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. | - |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. | - |
-| P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Repair continuation for the hosted 95% branch-coverage regression introduced by production phase wiring. | Raise hosted branch coverage back to the required 95% with behavior-focused tests for the merged production phase wiring, then obtain exact-head independent review and passing hosted Verify/Formal. | - |
 
 ## Planned
 
