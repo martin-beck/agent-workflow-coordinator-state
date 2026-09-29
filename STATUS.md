@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**114 ARs tracked** across 5 active status categories.
+**115 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 6 |
+| **Open** | Dependency-ready and available to claim | 7 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 114 |
-| Parent tasks | 5 |
-| Child tasks | 18 |
-| Open or active | 7 |
+| Tasks | 115 |
+| Parent tasks | 6 |
+| Child tasks | 19 |
+| Open or active | 8 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 114 | 7 | 0 | 103 |
+| unassigned | unassigned | 115 | 8 | 0 | 103 |
 
 ## Task drill-down
 
@@ -1630,9 +1630,23 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Team | unassigned |
 | Owner | codex |
 | Parent | AR-0111 |
-| Children | None |
+| Children | AR-0115 |
 | Summary | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. |
-| Next action | Add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends; independently review and merge the remaining qualification. |
+| Next action | Complete child AR-0115&#x27;s durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. |
+
+### AR-0115 — Bind durable Git staging for production sequencing
+
+| Field | Value |
+| --- | --- |
+| Status | open |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0114 |
+| Children | None |
+| Summary | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. |
+| Next action | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. |
 
 
 ## Dependency graph
@@ -1762,6 +1776,7 @@ flowchart LR
         AR_0112["AR-0112 - Done"]:::status_done
         AR_0113["AR-0113 - Done"]:::status_done
         AR_0114["AR-0114 - In progress"]:::status_in_progress
+        AR_0115["AR-0115 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1932,6 +1947,7 @@ flowchart LR
     AR_0109 --> AR_0110
     AR_0112 --> AR_0113
     AR_0113 --> AR_0114
+    AR_0114 --> AR_0115
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2059,7 +2075,8 @@ flowchart LR
 | [AR-0111](tasks/AR-0111.md) | [AR-0102](tasks/AR-0102.md) | None |
 | [AR-0112](tasks/AR-0112.md) | None | [AR-0113](tasks/AR-0113.md) |
 | [AR-0113](tasks/AR-0113.md) | [AR-0112](tasks/AR-0112.md) | [AR-0114](tasks/AR-0114.md) |
-| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | None |
+| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | [AR-0115](tasks/AR-0115.md) |
+| [AR-0115](tasks/AR-0115.md) | [AR-0114](tasks/AR-0114.md) | None |
 
 ## Complete AR inventory
 
@@ -2067,9 +2084,9 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | codex | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends; independently review and merge the remaining qualification. |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | codex | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0115&#x27;s durable Git staging seam, then add real Git admitted-factory eight-phase evidence and injected process-death recovery for both backends. |
 
-### Open (6)
+### Open (7)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2079,6 +2096,7 @@ flowchart LR
 | P0 | [AR-0102](tasks/AR-0102.md): Production upgrade phase orchestration | Unclaimed | Production phase orchestration continuation between live binding and existing internal commit/rollback effects. | Continue through AR-0109: wire the supported phase adapters and durable failure classification into the admitted engine; retain fail-closed public dispatch. |
 | P0 | [AR-0107](tasks/AR-0107.md): Bind production phase capabilities to the upgrade engine | Unclaimed | Continuation: bind generated upgrade operations to an admitted Git/SQLite session and the durable UpgradeEngine without bypassing phase evidence. | Implement the production phase-capability factory and engine dispatch seam; keep public mutation fail-closed until all required phase evidence is bound. |
 | P0 | [AR-0109](tasks/AR-0109.md): Complete production phase wiring and recovery | Unclaimed | Continuation for the remaining production UpgradeEngine phase wiring and durable recovery evidence after AR-0108 rollback completion. | Bind generated backup, stage, validate, commit, and recovery capabilities into UpgradeEngine; then run hostile/process-death campaign and independent exact-head qualification while keeping unsupported public dispatch fail-closed. |
+| P0 | [AR-0115](tasks/AR-0115.md): Bind durable Git staging for production sequencing | Unclaimed | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. |
 
 ### Planned (2)
 
