@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0116's fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. | codex |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -121,6 +115,7 @@ Never edit this file directly.
 | P0 | [AR-0108](tasks/AR-0108.md): Complete production upgrade effects and recovery evidence | Concrete Git and SQLite rollback effects are implemented, identity-bound, independently approved, and merged; parent remains open pending repository-wide coverage qualification at 95%. | Repair repository-wide 95% combined line/branch coverage without weakening the gate, then rerun exact-main Verify/Formal and reconcile state; do not close AR-0108 or parent ARs yet. | - |
 | P0 | [AR-0112](tasks/AR-0112.md): Repair production phase coverage gate | Coverage gate repaired and independently qualified through merged PR #1172; AR-0111 remains for full production recovery qualification. | No further AR-0112 action; continue AR-0111 full production sequencing and process-death qualification before closing AR-0109, AR-0102, AR-0031, or AR-0009. | - |
 | P0 | [AR-0113](tasks/AR-0113.md): Repair SQLite lifecycle binding | Repair continuation for the missing SQLite lifecycle executor seam in the production phase factory. | Repair and independently qualify generated SQLite backup dispatch through the admitted production factory, including durable lifecycle journal binding and fail-closed rejection when the session store is absent. | - |
+| P0 | [AR-0114](tasks/AR-0114.md): Qualify full production phase readiness | SQLite full eight-phase admitted-factory sequencing is qualified; Git and process-death recovery remain. | Complete child AR-0116's fresh-process factory process-death recovery for admitted Git and SQLite factories, then use the evidence to finish AR-0009 and AR-0031. | - |
 | P0 | [AR-0115](tasks/AR-0115.md): Bind durable Git staging for production sequencing | Repair continuation for the missing identity-bound Git staging seam required by full admitted-factory sequencing. | Design and implement an admitted, durable Git staging capability that can feed the production commit effect without weakening clean-state, identity, or process-death gates; then qualify the full Git factory sequence. | - |
 | P0 | [AR-0116](tasks/AR-0116.md): Qualify admitted factory process-death recovery | Continuation for the missing factory-level process-death recovery evidence required by AR-0114, AR-0009, and AR-0031. | Implement fresh-process factory process-death campaigns for admitted Git and SQLite sequencing, prove safe-mode/recovery outcomes, and obtain independent exact-head qualification. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
