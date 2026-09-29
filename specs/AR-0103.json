@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0103.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "production-consumption", "description": "LiveUpgradeBinding is consumed by the production admission path before any phase capability is constructed."},
+    {"id": "persisted-cross-check", "description": "Persisted binding records reject internally inconsistent contract and runtime identities."},
+    {"id": "durable-integration", "description": "Real Git and SQLite durable scope and adapter integration covers stale, foreign, released, ambiguous, missing, and process-death boundaries."},
+    {"id": "unsupported-rejection", "description": "Synthetic callbacks and unsupported mutation paths remain rejected."}
+  ],
+  "definition_of_done": ["Production admission consumes the live binding and real durable integration tests pass.", "Exact-head independent review, hosted checks, post-merge verification, and reconciliation pass.", "No source-to-model refinement proof or authorization prerequisite is required."],
+  "inputs": [{"id": "live-binding", "description": "AR-0101 live session/backend binding."}, {"id": "production-command", "description": "Current production upgrade command and lock-domain state."}],
+  "outputs": [{"id": "enforced-binding", "description": "Production admission boundary that requires current durable session/backend identity."}],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "gates": [{"id": "live-binding", "description": "The production path is bound to live durable state, not a synthetic fixture."}, {"id": "safe-mode", "description": "Ambiguity is durable and cannot be retried as success."}, {"id": "independent", "description": "A distinct reviewer checks the exact candidate head."}]
+}
