@@ -289,7 +289,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-v0.3.5-clean` | `DETACHED` | `510817b93feb` | 0 | behind 2414, ahead 0 |
 | `agent-workflow-coordinator-v035-vendor` | `DETACHED` | `510817b93feb` | 0 | behind 2414, ahead 0 |
 | `agent-workflow-coordinator-v0351` | `release/v0351-state-worktree` | `905286716b94` | 0 | behind 1, ahead 3 |
-| `agent-workflow-coordinator-v0352` | `release/v0352-state-worktree` | `1d806fa2996b` | 0 | behind 0, ahead 0 |
+| `agent-workflow-coordinator-v0352` | `release/v0352-state-worktree` | `1d806fa2996b` | 2 | behind 0, ahead 0 |
+| changed files | - | - | - | `docs/PROJECT_GUIDE.md`, `tools/vendor.py` |
 | `agent-workflow-coordinator-v037` | `fix/vendor-formal-runtime-v037` | `73f855d7b71f` | 0 | behind 2151, ahead 3 |
 | `agent-workflow-coordinator-validated-authority-revision` | `ar0007-validated-authority-revision` | `ca5af73ba929` | 0 | behind 1932, ahead 0 |
 | `agent-workflow-coordinator-validated-barrier-type` | `ar0007-validated-barrier-type` | `51da9276e304` | 0 | behind 1992, ahead 0 |
