@@ -16,18 +16,13 @@ Never edit this file directly.
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #535 merged at 58b6243e; exact Verify 35200960921 and post-merge Verify 35201229361 succeeded. Next slice implemented locally as PR #536 combined retained descriptor and manifest revalidation gate at bbabd1c. | Run independent exact-head review of PR #536, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | - |
+| P0 | [AR-0026](tasks/AR-0026.md): Coordinator v0.3.51 state-worktree release | Publish the reviewed coordinator state-worktree repair as an immutable v0.3.51 release for ASB consumption. | Promote and claim; prepare the v0.3.51 transition from v0.3.50 to merged source 2f018d9e2335b9a7e0ae04cdbc36554bde8ef60d, run exact release-contract and fresh-clone gates, then publish only the immutable tag if every gate passes. | - |
 
 ## Blocked
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | - |
-
-## Planned
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0026](tasks/AR-0026.md): Coordinator v0.3.51 state-worktree release | Publish the reviewed coordinator state-worktree repair as an immutable v0.3.51 release for ASB consumption. | Promote and claim; prepare the v0.3.51 transition from v0.3.50 to merged source 2f018d9e2335b9a7e0ae04cdbc36554bde8ef60d, run exact release-contract and fresh-clone gates, then publish only the immutable tag if every gate passes. | - |
 
 ## Done
 
