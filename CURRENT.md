@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | Repair coordinator vendor snapshot atomicity and manifest self-consistency exposed by ASB AR-1534. | Promote after AR-0023; reproduce the v0.3.50 downstream vendor failure, repair the allowlisted snapshot/installer self-consistency, and publish a new immutable release only after exact-head gates pass. | codex-awc-ar0024-vendor-atomicity-20260930 |
+| P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | codex-awc-ar0024-vendor-atomicity-20260930 |
 
 ## Open
 
