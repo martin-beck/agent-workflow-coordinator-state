@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Promote and claim from exact coordinator main; restore bounded project_scan coverage for both the configured product repository and bound state repository, add regression tests, then publish only a reviewed immutable release. | coordinator-ar0025-worktree-20260930 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -10,7 +16,6 @@ Never edit this file directly.
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | - |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | PR #535 merged at 58b6243e; exact Verify 35200960921 and post-merge Verify 35201229361 succeeded. Next slice implemented locally as PR #536 combined retained descriptor and manifest revalidation gate at bbabd1c. | Run independent exact-head review of PR #536, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. | - |
-| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Promote and claim from exact coordinator main; restore bounded project_scan coverage for both the configured product repository and bound state repository, add regression tests, then publish only a reviewed immutable release. | - |
 
 ## Blocked
 
