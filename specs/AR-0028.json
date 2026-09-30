@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0028.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "boundary_allowlist", "description": "Coordinator vendor allowlist excludes downstream formal qualification artifacts."},
+    {"id": "hosted_checks", "description": "Exact-head hosted AWQ, scope, verify and formal checks are green."},
+    {"id": "release_consumption", "description": "The immutable v0.3.53 tag is verified and consumed by ASB."}
+  ],
+  "definition_of_done": [
+    "The reviewed boundary repair is merged with signed DCO history.",
+    "The full coordinator suite and hosted required checks pass.",
+    "A fresh immutable release is tagged and downstream verification passes."
+  ],
+  "inputs": [
+    {"id": "coordinator_source", "description": "Coordinator main and reviewed boundary PR."},
+    {"id": "asb_consumer", "description": "ASB vendor verifier and formal ownership contract."}
+  ],
+  "outputs": [
+    {"id": "release_tag", "description": "Immutable coordinator v0.3.53 release tag."},
+    {"id": "downstream_receipt", "description": "ASB vendor verification receipt."}
+  ],
+  "allowed_tools": ["git", "gh", "uv", "python", "tools/handoffctl"],
+  "forbidden_tools": [],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {"id": "exact_head", "description": "The reviewed PR head and merge are exact and clean."},
+    {"id": "hosted_ci", "description": "All required hosted checks pass on the exact head."},
+    {"id": "downstream_verify", "description": "ASB verifies the immutable release and manifest."}
+  ]
+}

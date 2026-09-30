@@ -1,0 +1,12 @@
+AR-0028 coordinator formal-boundary release receipt
+
+Boundary PR: #1189, merged at 707d279e609dd8f758741c2c9f3c1047163d1df4
+Release PR: #1190, merged at b476a61e93d777e163148d15490adec6e21fca41
+Release tag: v0.3.53
+Required hosted checks: AWQ, scope, verify and formal-portable PASS; smoke SKIPPED
+Coordinator full suite: 1612/1612 PASS from product root
+Vendor focused suite: 12/12 PASS
+Commit signatures/DCO: verified
+Downstream ASB vendor verifier: PASS at b476a61e93d777e163148d15490adec6e21fca41
+Boundary result: formal qualification artifacts are downstream-owned and excluded
+Qualification claim: none
