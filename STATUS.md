@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**27 ARs tracked** across 5 active status categories.
+**28 ARs tracked** across 6 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
 | **Open** | Dependency-ready and available to claim | 3 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 20 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -55,6 +55,7 @@ flowchart LR
         AR_0025["AR-0025 - In progress"]:::status_in_progress
         AR_0026["AR-0026 - Superseded"]:::status_superseded
         AR_0027["AR-0027 - In progress"]:::status_in_progress
+        AR_0028["AR-0028 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -131,6 +132,7 @@ flowchart LR
 | [AR-0025](tasks/AR-0025.md) | None | None |
 | [AR-0026](tasks/AR-0026.md) | None | None |
 | [AR-0027](tasks/AR-0027.md) | None | None |
+| [AR-0028](tasks/AR-0028.md) | None | None |
 
 ## Complete AR inventory
 
@@ -154,6 +156,12 @@ flowchart LR
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | Unclaimed | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. |
+
+### Planned (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0028](tasks/AR-0028.md): Coordinator vendor formal-boundary repair | Unclaimed | Keep coordinator vendor snapshots from overwriting ASB-owned formal qualification artifacts. | Promote and claim; remove ASB-owned formal qualification artifacts from the coordinator vendor allowlist, update positive/negative vendor tests and documentation, publish a reviewed release, and hand its exact tag to ASB. |
 
 ### Done (20)
 

@@ -24,6 +24,12 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0028](tasks/AR-0028.md): Coordinator vendor formal-boundary repair | Keep coordinator vendor snapshots from overwriting ASB-owned formal qualification artifacts. | Promote and claim; remove ASB-owned formal qualification artifacts from the coordinator vendor allowlist, update positive/negative vendor tests and documentation, publish a reviewed release, and hand its exact tag to ASB. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
