@@ -17,6 +17,12 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Promote and claim from exact coordinator main; restore bounded project_scan coverage for both the configured product repository and bound state repository, add regression tests, then publish only a reviewed immutable release. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
