@@ -288,8 +288,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-v0.3.4-clean` | `DETACHED` | `590036fbf9a0` | 0 | behind 2415, ahead 0 |
 | `agent-workflow-coordinator-v0.3.5-clean` | `DETACHED` | `510817b93feb` | 0 | behind 2413, ahead 0 |
 | `agent-workflow-coordinator-v035-vendor` | `DETACHED` | `510817b93feb` | 0 | behind 2413, ahead 0 |
-| `agent-workflow-coordinator-v0351` | `release/v0351-state-worktree` | `2f018d9e2335` | 3 | behind 0, ahead 0 |
-| changed files | - | - | - | `CHANGELOG.md`, `pyproject.toml`, `tools/handoffctl.py` |
+| `agent-workflow-coordinator-v0351` | `release/v0351-state-worktree` | `dce7433b88db` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-v037` | `fix/vendor-formal-runtime-v037` | `73f855d7b71f` | 0 | behind 2150, ahead 3 |
 | `agent-workflow-coordinator-validated-authority-revision` | `ar0007-validated-authority-revision` | `ca5af73ba929` | 0 | behind 1931, ahead 0 |
 | `agent-workflow-coordinator-validated-barrier-type` | `ar0007-validated-barrier-type` | `51da9276e304` | 0 | behind 1991, ahead 0 |
