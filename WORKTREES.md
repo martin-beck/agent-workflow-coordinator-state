@@ -456,6 +456,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | changed files | - | - | - | `release.contract.json`, `release.transition.json`, `runbooks/` |
 | `awc-release-version` | `DETACHED` | `550c014c440c` | 0 | behind 1851, ahead 0 |
 | `awc-status-sharding` | `ar1194-status-sharding` | `160c4c7ab7d3` | 0 | behind 1858, ahead 0 |
+| `awc-ar0012-next17.tFUQEe` | `DETACHED` | `1bea71cffa65` | 0 | behind 1260, ahead 1 |
 | `awc-ar0027-verify.TTeH7T` | `DETACHED` | `1d806fa2996b` | 0 | behind 16, ahead 0 |
 | `awc-pr536-head.F9w7dp` | `DETACHED` | `bbabd1c93b21` | 0 | behind 1256, ahead 0 |
 | `awc-pr536-merge.6vH7Cl` | `DETACHED` | `c812eea7d290` | 0 | behind 1255, ahead 0 |
