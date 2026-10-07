@@ -457,6 +457,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-release-version` | `DETACHED` | `550c014c440c` | 0 | behind 1851, ahead 0 |
 | `awc-status-sharding` | `ar1194-status-sharding` | `160c4c7ab7d3` | 0 | behind 1858, ahead 0 |
 | `awc-ar0027-verify.TTeH7T` | `DETACHED` | `1d806fa2996b` | 0 | behind 16, ahead 0 |
+| `awc-pr536-head.F9w7dp` | `DETACHED` | `bbabd1c93b21` | 0 | behind 1256, ahead 0 |
 | `awc-release-0355-FCzi4n` | `repair/release-v0355-metadata-retry` | `938092e869dc` | 0 | behind 5, ahead 1 |
 | `coordinator-pr1196.Oohn5p` | `DETACHED` | `b30c4f97d739` | 0 | behind 1, ahead 0 |
 | `policy-coordinator-review` | `codex/development-review-identity-coordinator` | `23501c87a246` | 0 | behind 11, ahead 0 |
