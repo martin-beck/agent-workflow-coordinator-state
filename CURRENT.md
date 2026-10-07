@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | codex-ar0012-next17-review-20261007 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -19,6 +13,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | - |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | - |
 
 ## Done
