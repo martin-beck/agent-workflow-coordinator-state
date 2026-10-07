@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Merged PR #1187 at 2f018d9e2335b9a7e0ae04cdbc36554bde8ef60d with green exact-head CI; AR-0026 owns publication of the immutable v0.3.51 release before ASB adoption. | codex-coordinator-state-repair |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -43,6 +37,7 @@ Never edit this file directly.
 | P0 | [AR-0020](tasks/AR-0020.md): Correct formal tier policy for merge and advisory exhaustive runs | Correct post-merge and sustained formal verification tier policy without weakening release evidence. | Correct formal tier dispatch so post-merge push verification uses required pr-fast, while scheduled and manually dispatched full-exhaustive runs remain advisory; preserve release-sensitive publication gates. | - |
 | P0 | [AR-0022](tasks/AR-0022.md): Bounded actionable state projection | Merged PR #1185 at 18f1f85; exact-head PR checks and post-merge Verify 36644952463 plus Formal 36644952450 passed. Immutable lightweight tag v0.3.49 points to 18f1f85; fresh clone release identity, contract, and runbook verification passed. | AR-0022 is complete. Downstream ASB AR-1534 may consume the exact coordinator v0.3.49 tag/source commit after independently rerunning vendor sync and all state gates. | - |
 | P0 | [AR-0023](tasks/AR-0023.md): Release metadata and vendor identity alignment | Align coordinator runtime metadata with the next immutable tag so ASB vendor verification accepts the upstream release. | Promote and claim the metadata-alignment repair from exact coordinator main; update the release version consistently, refresh formal evidence, and publish immutable v0.3.50 only after all exact-head gates pass. | - |
+| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Merged PR #1187 at 2f018d9e2335b9a7e0ae04cdbc36554bde8ef60d with green exact-head CI; AR-0026 owns publication of the immutable v0.3.51 release before ASB adoption. | - |
 | P0 | [AR-0028](tasks/AR-0028.md): Coordinator vendor formal-boundary repair | Keep coordinator vendor snapshots from overwriting ASB-owned formal qualification artifacts. | Promote and claim; remove ASB-owned formal qualification artifacts from the coordinator vendor allowlist, update positive/negative vendor tests and documentation, publish a reviewed release, and hand its exact tag to ASB. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
