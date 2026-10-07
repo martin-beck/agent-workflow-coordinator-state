@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**28 ARs tracked** across 4 active status categories.
+**28 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 5 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 4 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -52,7 +52,7 @@ flowchart LR
         AR_0022["AR-0022 - Done"]:::status_done
         AR_0023["AR-0023 - Done"]:::status_done
         AR_0024["AR-0024 - Blocked"]:::status_blocked
-        AR_0025["AR-0025 - Open"]:::status_open
+        AR_0025["AR-0025 - In progress"]:::status_in_progress
         AR_0026["AR-0026 - Superseded"]:::status_superseded
         AR_0027["AR-0027 - Open"]:::status_open
         AR_0028["AR-0028 - Done"]:::status_done
@@ -136,14 +136,19 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (5)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | codex-coordinator-state-repair | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Merged PR #1187 at 2f018d9e2335b9a7e0ae04cdbc36554bde8ef60d with green exact-head CI; AR-0026 owns publication of the immutable v0.3.51 release before ASB adoption. |
+
+### Open (4)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | PR #535 merged at 58b6243e; exact Verify 35200960921 and post-merge Verify 35201229361 succeeded. Next slice implemented locally as PR #536 combined retained descriptor and manifest revalidation gate at bbabd1c. | Run independent exact-head review of PR #536, then dispatch exact-head pr-fast Verify; merge only after review and terminal hosted success. |
-| P0 | [AR-0025](tasks/AR-0025.md): State worktree observation contract | Unclaimed | Restore coordinator project-scan visibility for state-repository worktrees required by downstream exact-head safety contracts. | Merged PR #1187 at 2f018d9e2335b9a7e0ae04cdbc36554bde8ef60d with green exact-head CI; AR-0026 owns publication of the immutable v0.3.51 release before ASB adoption. |
 | P0 | [AR-0027](tasks/AR-0027.md): Coordinator v0.3.52 version-alignment release repair | Unclaimed | Repair coordinator runtime/package version alignment after the v0.3.51 vendor rejection. | Promote and claim; update runtime/package/changelog version metadata consistently for the merged state-worktree repair, publish a reviewed PR, then create and verify the next immutable release only after all gates pass. |
 
 ### Blocked (1)
