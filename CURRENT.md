@@ -3,12 +3,17 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | codex-ar0012-next17-review-20261007 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | - |
 
 ## Blocked
 
