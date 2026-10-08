@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**87 ARs tracked** across 4 active status categories.
+**87 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 7 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 78 |
+| **Done** | Accepted, integrated, and durably verified | 79 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -114,7 +114,7 @@ flowchart LR
         AR_0084["AR-0084 - Done"]:::status_done
         AR_0085["AR-0085 - Done"]:::status_done
         AR_0086["AR-0086 - Done"]:::status_done
-        AR_0087["AR-0087 - In progress"]:::status_in_progress
+        AR_0087["AR-0087 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -351,12 +351,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | codex-coordinator-ar0087-spec-policy | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Terminal: independently approved exact reviewed tree merged with a signed+DCO local merge; exact-main hosted Verify and Formal succeeded. Release done and reconcile/live-doctor the canonical state. |
-
 ### Open (7)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -369,7 +363,7 @@ flowchart LR
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 
-### Done (78)
+### Done (79)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -438,6 +432,7 @@ flowchart LR
 | P0 | [AR-0084](tasks/AR-0084.md): Repair formal verifier vendor closure regression | Unclaimed | Repair the regressed Coordinator vendor allowlist so clean downstream syncs contain the complete formal-verification runtime and can run offline without hand-editing vendored files. | Inventory the current formal verifier runtime closure at exact upstream main, repair tools/vendor.py and its regression tests so a clean downstream sync includes every executed and hashed helper including tools/tlc_runner.py, then obtain independent exact-head review, merge the PR, and verify post-merge CI. |
 | P0 | [AR-0085](tasks/AR-0085.md): Repair external-blocked resume lifecycle | Unclaimed | Repair the lifecycle contradiction that leaves tasks released as blocked unable to return to open unless they possess an unrelated pause snapshot. | Close AR-0085 done, reconcile/snapshot/live-doctor state, and hand immutable Coordinator merge ee68fbd31ef5564586e4e81297a175abcaa49c6d plus manifest digest e90acfa96cbd2ec2667e5b36c1f5bd881338adcae05182f8a7800d6131d1305d to downstream asb-tui. |
 | P0 | [AR-0086](tasks/AR-0086.md): Repair pause-resume session provenance validation | Unclaimed | Close the pause-resume provenance gap that accepts duplicate, wrong-task, or nested-incoherent Git session records while external unblock correctly fails closed. | Downstream consumers must sync development commit f003d25e1ff99f30c24853553d1d72ebf0211657 tree eee603591b917eeca244425559d7c67bb88a7268 using the 68-file manifest sha256:97a8717255cbefe0e866106685548cb3a6b53cfdb2dfc22d139e5a961233707a. |
+| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | Unclaimed | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Terminal: independently approved exact reviewed tree merged with a signed+DCO local merge; exact-main hosted Verify and Formal succeeded. Release done and reconcile/live-doctor the canonical state. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
