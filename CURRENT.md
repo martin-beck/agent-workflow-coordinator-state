@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0118](tasks/AR-0118.md): Analyze and reduce handoffctl coordinator-lock contention | Measure shared coordinator-lock contention through real handoffctl routes and design or implement a safety-preserving concurrency solution. | Promote the contention investigation, reproduce lock stalls through handoffctl with independent workers, and capture phase-level wait/hold evidence before selecting a safe scalability repair. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |

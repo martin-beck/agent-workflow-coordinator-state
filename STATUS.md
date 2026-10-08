@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**117 ARs tracked** across 2 active status categories.
+**118 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 0 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 115 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 117 |
+| Tasks | 118 |
 | Parent tasks | 7 |
 | Child tasks | 21 |
 | Open or active | 0 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 117 | 0 | 0 | 115 |
+| unassigned | unassigned | 118 | 0 | 0 | 115 |
 
 ## Task drill-down
 
@@ -1676,6 +1676,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Executable fresh-state release campaign continuation needed to finish AR-0110 and AR-0009. |
 | Next action | Claim the isolated campaign worker, identify the exact unsigned release identity, and execute fresh Git/SQLite success and injected-failure recovery runs. |
 
+### AR-0118 — Analyze and reduce handoffctl coordinator-lock contention
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Measure shared coordinator-lock contention through real handoffctl routes and design or implement a safety-preserving concurrency solution. |
+| Next action | Promote the contention investigation, reproduce lock stalls through handoffctl with independent workers, and capture phase-level wait/hold evidence before selecting a safe scalability repair. |
+
 
 ## Dependency graph
 
@@ -1807,6 +1821,7 @@ flowchart LR
         AR_0115["AR-0115 - Done"]:::status_done
         AR_0116["AR-0116 - Done"]:::status_done
         AR_0117["AR-0117 - Done"]:::status_done
+        AR_0118["AR-0118 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1982,6 +1997,7 @@ flowchart LR
     AR_0113 --> AR_0115
     AR_0114 --> AR_0117
     AR_0115 --> AR_0116
+    AR_0117 --> AR_0118
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2112,9 +2128,16 @@ flowchart LR
 | [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | [AR-0117](tasks/AR-0117.md) |
 | [AR-0115](tasks/AR-0115.md) | [AR-0113](tasks/AR-0113.md) | [AR-0116](tasks/AR-0116.md) |
 | [AR-0116](tasks/AR-0116.md) | [AR-0115](tasks/AR-0115.md) | None |
-| [AR-0117](tasks/AR-0117.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md), [AR-0114](tasks/AR-0114.md) | None |
+| [AR-0117](tasks/AR-0117.md) | [AR-0102](tasks/AR-0102.md), [AR-0109](tasks/AR-0109.md), [AR-0114](tasks/AR-0114.md) | [AR-0118](tasks/AR-0118.md) |
+| [AR-0118](tasks/AR-0118.md) | [AR-0117](tasks/AR-0117.md) | None |
 
 ## Complete AR inventory
+
+### Planned (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0118](tasks/AR-0118.md): Analyze and reduce handoffctl coordinator-lock contention | Unclaimed | Measure shared coordinator-lock contention through real handoffctl routes and design or implement a safety-preserving concurrency solution. | Promote the contention investigation, reproduce lock stalls through handoffctl with independent workers, and capture phase-level wait/hold evidence before selecting a safe scalability repair. |
 
 ### Done (115)
 
