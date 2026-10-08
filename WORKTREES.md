@@ -4,5 +4,5 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 
 | Worktree | Branch | Head | Dirty | vs origin/main |
 | --- | --- | --- | ---: | --- |
-| `agent-workflow-coordinator-ar0084` | `repair/ar-0084-vendor-formal-closure-regression` | `1dc23c8ffd61` | 1 | behind 0, ahead 1 |
-| changed files | - | - | - | `tools/vendor.py` |
+| `agent-workflow-coordinator-ar0084` | `repair/ar-0084-vendor-formal-closure-regression` | `1dc23c8ffd61` | 2 | behind 0, ahead 1 |
+| changed files | - | - | - | `tests/test_vendor.py`, `tools/vendor.py` |
