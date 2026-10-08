@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0086](tasks/AR-0086.md): Repair pause-resume session provenance validation | Close the pause-resume provenance gap that accepts duplicate, wrong-task, or nested-incoherent Git session records while external unblock correctly fails closed. | Downstream consumers must sync development commit f003d25e1ff99f30c24853553d1d72ebf0211657 tree eee603591b917eeca244425559d7c67bb88a7268 using the 68-file manifest sha256:97a8717255cbefe0e866106685548cb3a6b53cfdb2dfc22d139e5a961233707a. | codex-awc-ar0086-resume-provenance |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -89,6 +83,7 @@ Never edit this file directly.
 | P0 | [AR-0083](tasks/AR-0083.md): Schema, migration, and doctor coverage for new record types | Add migrations and negative fixtures for task-spec, hierarchy, session, checkpoint, and directive records on both backends, with doctor catching every new-record corruption. | Extend migrations, doctor checks, and negative fixtures, then open a review PR. | - |
 | P0 | [AR-0084](tasks/AR-0084.md): Repair formal verifier vendor closure regression | Repair the regressed Coordinator vendor allowlist so clean downstream syncs contain the complete formal-verification runtime and can run offline without hand-editing vendored files. | Inventory the current formal verifier runtime closure at exact upstream main, repair tools/vendor.py and its regression tests so a clean downstream sync includes every executed and hashed helper including tools/tlc_runner.py, then obtain independent exact-head review, merge the PR, and verify post-merge CI. | - |
 | P0 | [AR-0085](tasks/AR-0085.md): Repair external-blocked resume lifecycle | Repair the lifecycle contradiction that leaves tasks released as blocked unable to return to open unless they possess an unrelated pause snapshot. | Close AR-0085 done, reconcile/snapshot/live-doctor state, and hand immutable Coordinator merge ee68fbd31ef5564586e4e81297a175abcaa49c6d plus manifest digest e90acfa96cbd2ec2667e5b36c1f5bd881338adcae05182f8a7800d6131d1305d to downstream asb-tui. | - |
+| P0 | [AR-0086](tasks/AR-0086.md): Repair pause-resume session provenance validation | Close the pause-resume provenance gap that accepts duplicate, wrong-task, or nested-incoherent Git session records while external unblock correctly fails closed. | Downstream consumers must sync development commit f003d25e1ff99f30c24853553d1d72ebf0211657 tree eee603591b917eeca244425559d7c67bb88a7268 using the 68-file manifest sha256:97a8717255cbefe0e866106685548cb3a6b53cfdb2dfc22d139e5a961233707a. | - |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Make every release's prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to >=95%, obtain new exact-head review and hosted green gates. | - |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. | - |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. | - |
