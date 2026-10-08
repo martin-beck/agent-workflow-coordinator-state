@@ -355,7 +355,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | codex-coordinator-ar0087-spec-policy | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Promote after dependency and overlap review, then implement an exact project-bound task-spec evidence policy plus scanner-safe upstream fixtures and publish a complete development vendor handoff. |
+| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | codex-coordinator-ar0087-spec-policy | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Await independent exact-head review and terminal hosted checks for PR #1201; repair findings without merging, then merge only after explicit approval. |
 
 ### Open (7)
 
