@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0086](tasks/AR-0086.md): Repair pause-resume session provenance validation | Close the pause-resume provenance gap that accepts duplicate, wrong-task, or nested-incoherent Git session records while external unblock correctly fails closed. | Reproduce the four exact Git-session provenance bypasses at ee68fbd, make pause resume reject ambiguous and incoherent records before mutation on both authorities, extend formal/vendor coverage, obtain independent review, merge, and verify exact-main CI. | codex-awc-ar0086-resume-provenance |
+| P0 | [AR-0086](tasks/AR-0086.md): Repair pause-resume session provenance validation | Close the pause-resume provenance gap that accepts duplicate, wrong-task, or nested-incoherent Git session records while external unblock correctly fails closed. | Downstream consumers must sync development commit f003d25e1ff99f30c24853553d1d72ebf0211657 tree eee603591b917eeca244425559d7c67bb88a7268 using the 68-file manifest sha256:97a8717255cbefe0e866106685548cb3a6b53cfdb2dfc22d139e5a961233707a. | codex-awc-ar0086-resume-provenance |
 
 ## Open
 
