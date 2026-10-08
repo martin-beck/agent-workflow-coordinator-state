@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `7d3c6242593798e511378ec98b3cfe3d905f3d02`
+- Product remote main: `c2eb41879be4f2d50c6b5650e82339e10d5961d8`
 - Local origin/main: `7d3c6242593798e511378ec98b3cfe3d905f3d02`
 - Primary worktree head: `392fa9900a60c607ab0292212c5e0f1fe2990abf`
 
@@ -10,15 +10,16 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
-| #1198 | `repair/ar-0084-vendor-formal-closure-regression@392fa9900a60` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS, QUEUED:, QUEUED: | feat(vendor): add exact development sync path |
+| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
+| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 37766293676 | `392fa9900a60` | pull_request | Verify | queued:- |
+| 37766594902 | `c2eb41879be4` | push | Formal | in_progress:- |
+| 37766594844 | `c2eb41879be4` | push | Verify | queued:- |
+| 37766293676 | `392fa9900a60` | pull_request | Verify | completed:success |
 | 37765473121 | `1dc23c8ffd61` | pull_request | Verify | completed:success |
 | 37763286268 | `658bb4f06b3b` | pull_request | Verify | completed:success |
 | 37762256623 | `7d3c62425937` | push | Verify | completed:success |
@@ -28,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 37640440913 | `1e77a620d6bd` | push | Formal | completed:success |
 | 37640440463 | `1e77a620d6bd` | push | Verify | completed:success |
 | 37639937001 | `b30c4f97d739` | pull_request | Verify | completed:success |
-| 37638917366 | `516c3cbeab1c` | push | Formal | completed:success |
-| 37638916894 | `516c3cbeab1c` | push | Verify | completed:success |
