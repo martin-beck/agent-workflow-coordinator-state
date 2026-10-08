@@ -348,7 +348,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0085](tasks/AR-0085.md): Repair external-blocked resume lifecycle | codex-awc-ar0085-external-unblock | Repair the lifecycle contradiction that leaves tasks released as blocked unable to return to open unless they possess an unrelated pause snapshot. | Await independent approval for exact PR 1199 head/tree; after root authorization merge unchanged, verify exact-main Verify and Formal, then produce downstream vendor handoff and reconcile state. |
+| P0 | [AR-0085](tasks/AR-0085.md): Repair external-blocked resume lifecycle | codex-awc-ar0085-external-unblock | Repair the lifecycle contradiction that leaves tasks released as blocked unable to return to open unless they possess an unrelated pause snapshot. | Close AR-0085 done, reconcile/snapshot/live-doctor state, and hand immutable Coordinator merge ee68fbd31ef5564586e4e81297a175abcaa49c6d plus manifest digest e90acfa96cbd2ec2667e5b36c1f5bd881338adcae05182f8a7800d6131d1305d to downstream asb-tui. |
 
 ### Open (7)
 
