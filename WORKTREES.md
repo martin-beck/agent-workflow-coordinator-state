@@ -4,5 +4,5 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 
 | Worktree | Branch | Head | Dirty | vs origin/main |
 | --- | --- | --- | ---: | --- |
-| `awc-product-audit.37wiwr` | `main` | `c2eb41879be4` | 0 | behind 0, ahead 0 |
-| `agent-workflow-coordinator-ar-0085-external-blocked-resume` | `repair/ar-0085-external-blocked-resume` | `603188804702` | 0 | behind 0, ahead 1 |
+| `awc-product-audit.37wiwr` | `main` | `c2eb41879be4` | 0 | behind 2, ahead 0 |
+| `agent-workflow-coordinator-ar-0085-external-blocked-resume` | `repair/ar-0085-external-blocked-resume` | `603188804702` | 0 | behind 1, ahead 0 |

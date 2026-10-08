@@ -3,22 +3,22 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `ee68fbd31ef5564586e4e81297a175abcaa49c6d`
-- Local origin/main: `c2eb41879be4f2d50c6b5650e82339e10d5961d8`
+- Local origin/main: `ee68fbd31ef5564586e4e81297a175abcaa49c6d`
 - Primary worktree head: `c2eb41879be4f2d50c6b5650e82339e10d5961d8`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
+| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
+| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 37791093382 | `ee68fbd31ef5` | push | Verify | queued:- |
-| 37791093305 | `ee68fbd31ef5` | push | Formal | queued:- |
+| 37791093382 | `ee68fbd31ef5` | push | Verify | in_progress:- |
+| 37791093305 | `ee68fbd31ef5` | push | Formal | in_progress:- |
 | 37790490147 | `603188804702` | pull_request | Verify | completed:success |
 | 37766594902 | `c2eb41879be4` | push | Formal | completed:success |
 | 37766594844 | `c2eb41879be4` | push | Verify | completed:success |
