@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Await independent exact-head review and terminal hosted checks for PR #1201; repair findings without merging, then merge only after explicit approval. | codex-coordinator-ar0087-spec-policy |
+| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Await fresh independent approval of exact e308c3d4/tree 2a786b8e and terminal hosted Verify run 37822386944; do not merge before both are green. | codex-coordinator-ar0087-spec-policy |
 
 ## Open
 
