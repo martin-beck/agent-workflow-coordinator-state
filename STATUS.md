@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**83 ARs tracked** across 4 active status categories.
+**84 ARs tracked** across 3 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 6 |
+| **In progress** | Claimed work with a live lease | 0 |
+| **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -90,7 +90,7 @@ flowchart LR
         AR_0060["AR-0060 - Open"]:::status_open
         AR_0061["AR-0061 - Done"]:::status_done
         AR_0062["AR-0062 - Done"]:::status_done
-        AR_0063["AR-0063 - In progress"]:::status_in_progress
+        AR_0063["AR-0063 - Open"]:::status_open
         AR_0064["AR-0064 - Done"]:::status_done
         AR_0065["AR-0065 - Done"]:::status_done
         AR_0066["AR-0066 - Done"]:::status_done
@@ -111,6 +111,7 @@ flowchart LR
         AR_0081["AR-0081 - Done"]:::status_done
         AR_0082["AR-0082 - Done"]:::status_done
         AR_0083["AR-0083 - Done"]:::status_done
+        AR_0084["AR-0084 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -147,6 +148,7 @@ flowchart LR
     AR_0008 --> AR_0032
     AR_0011 --> AR_0017
     AR_0015 --> AR_0016
+    AR_0015 --> AR_0084
     AR_0017 --> AR_0018
     AR_0017 --> AR_0019
     AR_0018 --> AR_0019
@@ -265,7 +267,7 @@ flowchart LR
 | [AR-0012](tasks/AR-0012.md) | [AR-0007](tasks/AR-0007.md) | None |
 | [AR-0013](tasks/AR-0013.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
 | [AR-0014](tasks/AR-0014-verified-supersession-dependencies.md) | [AR-0002](tasks/AR-0002.md) | None |
-| [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | [AR-0002](tasks/AR-0002.md), [AR-0003](tasks/AR-0003.md) | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) |
+| [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | [AR-0002](tasks/AR-0002.md), [AR-0003](tasks/AR-0003.md) | [AR-0016](tasks/AR-0016-release-validation-dispatch.md), [AR-0084](tasks/AR-0084.md) |
 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md) | [AR-0003](tasks/AR-0003.md), [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | None |
 | [AR-0017](tasks/AR-0017.md) | [AR-0011](tasks/AR-0011.md) | [AR-0018](tasks/AR-0018.md), [AR-0019](tasks/AR-0019.md) |
 | [AR-0018](tasks/AR-0018.md) | [AR-0017](tasks/AR-0017.md) | [AR-0019](tasks/AR-0019.md) |
@@ -334,16 +336,11 @@ flowchart LR
 | [AR-0081](tasks/AR-0081.md) | None | [AR-0083](tasks/AR-0083.md) |
 | [AR-0082](tasks/AR-0082.md) | [AR-0072](tasks/AR-0072.md), [AR-0075](tasks/AR-0075.md) | None |
 | [AR-0083](tasks/AR-0083.md) | [AR-0070](tasks/AR-0070.md), [AR-0072](tasks/AR-0072.md), [AR-0076](tasks/AR-0076.md), [AR-0079](tasks/AR-0079.md), [AR-0081](tasks/AR-0081.md) | None |
+| [AR-0084](tasks/AR-0084.md) | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md) | None |
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | codex-model-policy-20260925 | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
-
-### Open (6)
+### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -352,7 +349,9 @@ flowchart LR
 | P0 | [AR-0013](tasks/AR-0013.md): Selector-aware authenticated versioned runtime | Unclaimed | Exact origin/main f82467bfca14080a207361156fe43ff710f54b96 selector/runtime hostile matrix passed 192 tests across runtime bootstrap, selector authority/recovery, admission, engine, and identity. Injected publication failures remain fail-closed; no new dependency-safe non-overlapping seam found while mutation/dispatch stay disabled. | Keep AR-0013 open for a genuinely uncovered selector/versioned-runtime correctness boundary after future merges; preserve fail-closed mutation and dispatch. |
 | P0 | [AR-0031](tasks/AR-0031.md): Executable upgrade mutation and rollback boundary | Unclaimed | Backup and authority-neutral stage verification are merged and formally mapped; runtime replacement, selector publication, commit, apply, and rollback remain fail-closed. | Design the next smallest pre-commit selector/readiness evidence seam; do not enable selector publication, runtime replacement, commit, apply, or rollback until independent barrier, process-death, and formal contracts pass. |
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
+| P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
+| P0 | [AR-0084](tasks/AR-0084.md): Repair formal verifier vendor closure regression | Unclaimed | Repair the regressed Coordinator vendor allowlist so clean downstream syncs contain the complete formal-verification runtime and can run offline without hand-editing vendored files. | Inventory the current formal verifier runtime closure at exact upstream main, repair tools/vendor.py and its regression tests so a clean downstream sync includes every executed and hashed helper including tools/tlc_runner.py, then obtain independent exact-head review, merge the PR, and verify post-merge CI. |
 
 ### Done (75)
 
