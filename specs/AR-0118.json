@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0118.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "real-route", "description": "Independent workers access the same project only through the supported handoffctl routes, with no direct authority mutation."},
+    {"id": "contention-evidence", "description": "The workload records phase-level acquisition wait, lock hold, timeout, queue-depth, and throughput distributions at multiple concurrency levels."},
+    {"id": "root-cause", "description": "The evidence identifies the specific critical sections and routes responsible for worker stalls, including any projection, reconciliation, or publication work held under the coordinator lock."},
+    {"id": "scalable-solution", "description": "A concrete bounded design or implementation materially improves contention while preserving serializable task transitions, fencing, durability, and fail-closed recovery."},
+    {"id": "hostile-concurrency", "description": "Interruption, timeout, stale owner, competing worker, and crash/recovery tests remain safe and leave no false task outcome."}
+  ],
+  "definition_of_done": [
+    "The contention workload and baseline results are reproducible on a fresh isolated project state.",
+    "The scalability bottleneck and a measured solution or justified no-change decision are independently reviewed.",
+    "Exact-head hosted checks, required formal/concurrency review, and state reconciliation pass."
+  ],
+  "inputs": [
+    {"id": "handoffctl-routes", "description": "The supported claim, heartbeat, update, release, run, snapshot, doctor, and reconcile routes."},
+    {"id": "state-authority", "description": "The configured SQLite-WAL or Git-backed coordinator authority and its shared lock path."},
+    {"id": "development-policy", "description": "The project development guide requiring handoffctl routing and truthful durable state."}
+  ],
+  "outputs": [
+    {"id": "contention-report", "description": "Privacy-safe reproducible baseline and bottleneck report."},
+    {"id": "scalability-repair", "description": "Reviewed implementation or bounded design with evidence of improved concurrent-worker behavior."}
+  ],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
+  "allowed_tools": ["git", "pytest", "handoffctl", "gh", "sqlite3"],
+  "forbidden_tools": ["direct authority mutation outside handoffctl", "disabling or bypassing the coordinator lock", "unbounded retry or timeout suppression"],
+  "gates": [
+    {"id": "authority-safety", "description": "Every mutating state transition remains serialized or otherwise proven equivalent, fenced, durable, and fail-closed."},
+    {"id": "measured-improvement", "description": "The proposed or implemented change is compared with the baseline at the same worker counts and route mix."},
+    {"id": "independent", "description": "A distinct reviewer checks the exact candidate head, measurements, and concurrency claims."}
+  ]
+}
