@@ -12,11 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
+| #1197 | `repair/ar-0084-vendor-formal-closure-regression@e5445b76eb99` | `main` | UNSTABLE | QUEUED:, QUEUED: | fix(vendor): restore shared formal runner closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 37761955708 | `e5445b76eb99` | pull_request | Verify | queued:- |
 | 37678262303 | `c812eea7d290` | workflow_dispatch | Verify | completed:success |
 | 37640440913 | `1e77a620d6bd` | push | Formal | completed:success |
 | 37640440463 | `1e77a620d6bd` | push | Verify | completed:success |
@@ -28,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 37637110594 | `1bd8ac26d943` | push | Verify | completed:success |
 | 37637110546 | `1bd8ac26d943` | push | Formal | completed:success |
 | 37636297101 | `281eb36b4b53` | pull_request | Verify | completed:success |
-| 37633036718 | `ae5bf94a9c1c` | push | Formal | completed:success |
