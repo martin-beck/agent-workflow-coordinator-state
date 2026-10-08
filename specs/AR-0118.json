@@ -25,7 +25,7 @@
   ],
   "required_evidence_classes": ["contract-test", "property-or-fuzz", "environmental"],
   "allowed_tools": ["git", "pytest", "handoffctl", "gh", "sqlite3"],
-  "forbidden_tools": ["direct authority mutation outside handoffctl", "disabling or bypassing the coordinator lock", "unbounded retry or timeout suppression"],
+  "forbidden_tools": ["direct-authority-mutation", "lock-bypass", "unbounded-retry"],
   "gates": [
     {"id": "authority-safety", "description": "Every mutating state transition remains serialized or otherwise proven equivalent, fenced, durable, and fail-closed."},
     {"id": "measured-improvement", "description": "The proposed or implemented change is compared with the baseline at the same worker counts and route mix."},
