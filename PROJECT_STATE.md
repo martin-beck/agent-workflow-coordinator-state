@@ -12,6 +12,7 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
+| #1200 | `repair/ar-0086-resume-provenance-validation@f003d25e1ff9` | `main` | CLEAN | - | fix: validate exact pause provenance |
 
 ## Recent workflows
 
