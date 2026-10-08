@@ -15,6 +15,12 @@ Never edit this file directly.
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. | - |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Promote after dependency and overlap review, then implement an exact project-bound task-spec evidence policy plus scanner-safe upstream fixtures and publish a complete development vendor handoff. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
