@@ -1,0 +1,33 @@
+name: Verify vendored Coordinator
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'push' || github.ref != 'refs/heads/main' }}
+
+jobs:
+  vendor:
+    name: Clean-clone vendor verification
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Verify the immutable vendor snapshot
+        run: PYTHONDONTWRITEBYTECODE=1 python3 tools/handoffctl_vendor.py verify --target .
+      - name: Run the offline Coordinator regression suite
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.
+          python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Require a clean checkout after verification
+        run: git diff --exit-code && test -z "$(git status --porcelain)"
