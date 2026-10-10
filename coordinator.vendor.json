@@ -9,7 +9,7 @@
       "source": "docs/PUBLIC_CONTRACTS.md"
     },
     "docs/agent-workflow-coordinator.md": {
-      "sha256": "b6631d6023cf6454133cfe681675fd568787d1a2da88322e4062cdf7fef7aec4",
+      "sha256": "f5432fdcd73f9beb82a9f8b8fc2b0527a307562bd138033c0425e430d7b8306c",
       "source": "docs/PROJECT_GUIDE.md"
     },
     "examples/roles/role-registry.json": {
@@ -89,11 +89,11 @@
       "source": "formal/handoffctl/HandoffctlReceiptsFast.cfg"
     },
     "formal/handoffctl/HandoffctlRecovery.cfg": {
-      "sha256": "218dfc11282c91de1c5559b541b992f5317ae314aa7d272b57bf5a944013ff8a",
+      "sha256": "24084cc08f51ecdb2639ef9ef099b45f84bcc5b99f04149ce6a9cf74e239a8e6",
       "source": "formal/handoffctl/HandoffctlRecovery.cfg"
     },
     "formal/handoffctl/HandoffctlRecovery.tla": {
-      "sha256": "3bf8c6055743a14b47a30b267ebc3acd7c4f3759f611c57fd76aaf95ae2dda4e",
+      "sha256": "8d1a2fc024846ce0322c51d8f1fad995324ff66b17cc182b431edec1d5c2de13",
       "source": "formal/handoffctl/HandoffctlRecovery.tla"
     },
     "formal/handoffctl/HandoffctlRun.cfg": {
@@ -121,7 +121,7 @@
       "source": "formal/handoffctl/OBSERVATION_CORRESPONDENCE.md"
     },
     "formal/handoffctl/README.md": {
-      "sha256": "9e5e5c5c791f9ba7dae83a558f25aea405010dae4df35db5c1e90f0e43230004",
+      "sha256": "c87ae8af89dea45f9daa55646c2a88dd8fe13fe86a29d093b704e4f02b50c5fa",
       "source": "formal/handoffctl/README.md"
     },
     "formal/handoffctl/attest.py": {
@@ -189,7 +189,7 @@
       "source": "schema/role.schema.json"
     },
     "schema/task-record.schema.json": {
-      "sha256": "6fcdcf4b00dd8f14fb877f6f3418a5f7711584004c496ab5ca117b52ced21cda",
+      "sha256": "94b34621a639be7a873e7e2a0adc2526636a48829d5503a1ad75fe2d7ce57531",
       "source": "schema/task-record.schema.json"
     },
     "schema/task-spec-policy.schema.json": {
@@ -217,19 +217,19 @@
       "source": "tests/test_fast_receipt_cli.py"
     },
     "tests/test_fast_receipt_socket.py": {
-      "sha256": "5dbe2080f7b4b37dc90203a632835fc3c263db410621631305a03e6be0f3690a",
+      "sha256": "4b6d64f9b3398a60db53eb682104f6220b5b01521db913c72312ac572a061594",
       "source": "tests/test_fast_receipt_socket.py"
     },
     "tests/test_fast_receipt_worker.py": {
-      "sha256": "1d89cce91d44c0eabb669bc0cf32477bcebcecb8216eee952bedc352d38f3a3e",
+      "sha256": "7ce34f2b660c971e40c6155e7d4de287bd792acc2a8f1decd1dc8a70d76458ae",
       "source": "tests/test_fast_receipt_worker.py"
     },
     "tests/test_fast_receipts.py": {
-      "sha256": "4aa2854314059ac0387a232851ada3ccaee43d9412b18bf87fa77889038dcc0f",
+      "sha256": "95c1ff50b22e8726a2cd6e9128b2c14582ceb3034561d5330f87aedf7a334943",
       "source": "tests/test_fast_receipts.py"
     },
     "tests/test_handoffctl.py": {
-      "sha256": "5aea5b7cd55a54e1732ecbdc403b85be41a84ae24ce1a8cb11898e7e40d83dda",
+      "sha256": "77fbe1830abea1955f5089e6bd696cfd493c94fdfc60db3205f1c5ce8b1428ae",
       "source": "tests/test_handoffctl.py"
     },
     "tests/test_hierarchy.py": {
@@ -309,19 +309,19 @@
       "source": "tools/fast_observation.py"
     },
     "tools/fast_receipt_cli.py": {
-      "sha256": "e63b52fe176f8434c17a643b8184e067e25a8a26bc7391d92a3981ce166ed4df",
+      "sha256": "163c7b27e31ad80015ea0e63cd46b5e91733f594e1825c477fe0dacca724028c",
       "source": "tools/fast_receipt_cli.py"
     },
     "tools/fast_receipt_socket.py": {
-      "sha256": "e6abd4095b0529718b25216fe0afa7023488919bf2ccb05464b6bb6a221211a6",
+      "sha256": "553217c9ce1f029d30ccea4a765f306c97c1d27597c741867d0ee3fd40d43236",
       "source": "tools/fast_receipt_socket.py"
     },
     "tools/fast_receipt_worker.py": {
-      "sha256": "d2a1cdf9a06cd234e8304852969a2dbb0019654fb92116e3dd85af7bc3fddf1e",
+      "sha256": "fde203b7e630ad983a1162c1f7836205cb351841f4fae20ad85ecc7288ff7e06",
       "source": "tools/fast_receipt_worker.py"
     },
     "tools/fast_receipts.py": {
-      "sha256": "891d1c0d76341426a512ac6174d10504fb150eb99f073d89d1ef9e105c5b13ad",
+      "sha256": "7876c8731396af7f37f87d301b87def76f17942da56a2e7c9eb355d861fedcbb",
       "source": "tools/fast_receipts.py"
     },
     "tools/git_authority_adapter.py": {
@@ -341,7 +341,7 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "97aa9d5de5d4c7991f26227f1af015f444ec821d1557ab396a5c465f4d34df7f",
+      "sha256": "17dcbe39f8bfbf03fa56ac74e2246d430ec7f5a8e63a289fd35edf07c6828b68",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
@@ -484,9 +484,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "3a7395d4ecf1135c10165f2511a193a3bff0eb7f",
+    "commit": "92d50e0030eea13ff1e1380d9060213a00cdd95c",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "cc0b3706fb24db70265a9b83297fcc6020e9771f",
+    "tree": "d2d2dac80874259c5b9924b63fb3915b4559e4a5",
     "version": "v0.4.1"
   }
 }
