@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `113dc61029f0e0c57bc7832e1e41430eafa17e73`
-- Local origin/main: `113dc61029f0e0c57bc7832e1e41430eafa17e73`
-- Primary worktree head: `f003d25e1ff99f30c24853553d1d72ebf0211657`
+- Product remote main: `c8837f5a52e2d0e5c9516633ebe66885efa08235`
+- Local origin/main: `c8837f5a52e2d0e5c9516633ebe66885efa08235`
+- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
@@ -17,15 +17,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 37824043261 | `113dc61029f0` | push | Verify | completed:success |
-| 37824043227 | `113dc61029f0` | push | Formal | completed:success |
-| 37823515725 | `7314d0231148` | pull_request | Verify | completed:success |
-| 37822386944 | `e308c3d4c53a` | pull_request | Verify | completed:failure |
-| 37819708528 | `91a1ef9ca3a5` | pull_request | Verify | completed:success |
-| 37800348877 | `e863b57edc7f` | push | Verify | completed:success |
-| 37800348812 | `e863b57edc7f` | push | Formal | completed:success |
-| 37799953163 | `f003d25e1ff9` | pull_request | Verify | completed:success |
-| 37791093382 | `ee68fbd31ef5` | push | Verify | completed:success |
-| 37791093305 | `ee68fbd31ef5` | push | Formal | completed:success |
-| 37790490147 | `603188804702` | pull_request | Verify | completed:success |
-| 37766594902 | `c2eb41879be4` | push | Formal | completed:success |
+| 38087259208 | `c8837f5a52e2` | push | Formal | completed:success |
+| 38087259193 | `c8837f5a52e2` | push | Verify | completed:success |
+| 38087099280 | `3f30d43b68cd` | pull_request | Verify | completed:success |
+| 38086255644 | `75829e93eaba` | push | Formal | completed:success |
+| 38086255580 | `75829e93eaba` | push | Verify | completed:success |
+| 38086091945 | `890bfedb137f` | pull_request | Verify | completed:success |
+| 38085729164 | `ae6c92e329e5` | pull_request | Verify | completed:success |
+| 38085525562 | `9ce801e9b6b5` | pull_request | Verify | completed:failure |
+| 38085456807 | `0b747cf63695` | pull_request | Verify | completed:failure |
+| 38085358219 | `a3feca32ec0f` | pull_request | Verify | completed:cancelled |
+| 38085277960 | `8c6a0c644062` | pull_request | Verify | completed:failure |
+| 38084687488 | `92d50e0030ee` | push | Verify | completed:success |

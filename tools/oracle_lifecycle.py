@@ -14,11 +14,13 @@ import hashlib
 import json
 import re
 from collections.abc import Mapping
+from copy import deepcopy
 from dataclasses import dataclass
 from enum import StrEnum
 from typing import Any
 
 GATE_SEQUENCE = ("intake", "discussion", "formal_spec_review", "reconciliation")
+STAGE_GATE_SEQUENCE = ("role", "spec", "decision")
 SHA256 = re.compile(r"^sha256:[0-9a-f]{64}$")
 PUBLIC_REF = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._/-]{0,127}$")
 DISPOSITIONS = frozenset(
@@ -29,12 +31,19 @@ NON_AUTHORIZING_DISPOSITIONS = frozenset(
 )
 ACTIONS = frozenset({"open", "resolve", "reopen"})
 MAX_DISCUSSION_ROUNDS = 16
-SESSION_STATUSES = frozenset(
-    {"pending", "presenting", "in_progress", "clarification_requested", "resolved", "superseded", "cancelled"}
-)
+SESSION_ID = re.compile(r"^AWTUI-[A-Z0-9-]{1,127}$")
+REQUEST_REF = re.compile(r"^AWG-[A-Z0-9-]{1,127}$")
 SESSION_ACTIVATIONS = frozenset(
-    {"user-decision", "user-detail-request", "user-proposal-review", "agent-uncertainty", "policy-required-approval"}
+    {
+        "user-decision",
+        "user-detail-request",
+        "user-proposal-review",
+        "agent-uncertainty",
+        "policy-required-approval",
+    }
 )
+SESSION_STATUSES = frozenset({"presenting", "clarification_requested", "resolved"})
+SESSION_VERSION = "1.0"
 
 
 class GateStage(StrEnum):
@@ -42,6 +51,14 @@ class GateStage(StrEnum):
     DISCUSSION = "discussion"
     FORMAL_SPEC_REVIEW = "formal_spec_review"
     RECONCILIATION = "reconciliation"
+
+
+class StageGate(StrEnum):
+    """Generic task gates, kept separate from the legacy interaction stages."""
+
+    ROLE = "role"
+    SPEC = "spec"
+    DECISION = "decision"
 
 
 class GateError(ValueError):
@@ -60,6 +77,72 @@ def _digest(value: str, label: str) -> str:
     if not isinstance(value, str) or not SHA256.fullmatch(value):
         raise GateError(f"{label} must be a sha256 digest")
     return value
+
+
+def _timestamp(value: object, label: str) -> str:
+    if not isinstance(value, str):
+        raise GateError(f"{label} is invalid")
+    try:
+        parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as error:
+        raise GateError(f"{label} is invalid") from error
+    if parsed.tzinfo is None:
+        raise GateError(f"{label} requires a timezone")
+    return value
+
+
+def human_session_errors(value: object) -> list[str]:  # noqa: C901
+    """Validate the optional, currently presented human-TUI session record."""
+    if value is None:
+        return []
+    if not isinstance(value, dict):
+        return ["oracle_gate.human_session must be an object"]
+    required = {
+        "schema_version",
+        "session_id",
+        "request_ref",
+        "activation",
+        "status",
+        "task_revision",
+        "tui_contract_version",
+        "opened_at",
+    }
+    allowed = {*required, "closed_at"}
+    if not required.issubset(value) or set(value) - allowed:
+        return ["oracle_gate.human_session fields are incomplete or unknown"]
+    if (
+        value["schema_version"] != SESSION_VERSION
+        or value["tui_contract_version"] != SESSION_VERSION
+    ):
+        return ["oracle_gate.human_session contract version is unsupported"]
+    if not isinstance(value["session_id"], str) or not SESSION_ID.fullmatch(value["session_id"]):
+        return ["oracle_gate.human_session.session_id is invalid"]
+    if not isinstance(value["request_ref"], str) or not REQUEST_REF.fullmatch(value["request_ref"]):
+        return ["oracle_gate.human_session.request_ref is invalid"]
+    if (
+        not isinstance(value["activation"], str)
+        or not isinstance(value["status"], str)
+        or value["activation"] not in SESSION_ACTIVATIONS
+        or value["status"] not in SESSION_STATUSES
+    ):
+        return ["oracle_gate.human_session activation or status is invalid"]
+    if (
+        isinstance(value["task_revision"], bool)
+        or not isinstance(value["task_revision"], int)
+        or value["task_revision"] < 1
+    ):
+        return ["oracle_gate.human_session.task_revision is invalid"]
+    try:
+        _timestamp(value["opened_at"], "oracle_gate.human_session.opened_at")
+        if "closed_at" in value:
+            _timestamp(value["closed_at"], "oracle_gate.human_session.closed_at")
+    except GateError as error:
+        return [str(error)]
+    if value["status"] == "presenting" and "closed_at" in value:
+        return ["oracle_gate.human_session.presenting session cannot be closed"]
+    if value["status"] != "presenting" and "closed_at" not in value:
+        return ["oracle_gate.human_session closed session lacks closed_at"]
+    return []
 
 
 @dataclass(frozen=True, slots=True)
@@ -83,7 +166,7 @@ class InteractionEvent:
 
     task_id: str
     task_revision: int
-    stage: GateStage
+    stage: GateStage | StageGate
     action: str
     disposition: str
     before: tuple[ArtifactRef, ...]
@@ -125,6 +208,9 @@ class InteractionEvent:
         }
         if set(value) != required:
             raise GateError("interaction event fields are incomplete or unknown")
+        revision = value["task_revision"]
+        if isinstance(revision, bool) or not isinstance(revision, int):
+            raise GateError("interaction event task_revision is invalid")
 
         def refs(name: str) -> tuple[ArtifactRef, ...]:
             raw = value[name]
@@ -136,12 +222,15 @@ class InteractionEvent:
                 raise GateError(f"event {name} contains an invalid artifact") from error
 
         try:
-            stage = GateStage(str(value["stage"]))
+            try:
+                stage: GateStage | StageGate = GateStage(str(value["stage"]))
+            except ValueError:
+                stage = StageGate(str(value["stage"]))
         except ValueError as error:
             raise GateError("unknown interaction gate stage") from error
         return cls(
             task_id=str(value["task_id"]),
-            task_revision=int(value["task_revision"]),
+            task_revision=revision,
             stage=stage,
             action=str(value["action"]),
             disposition=str(value["disposition"]),
@@ -179,40 +268,42 @@ def gate_errors(value: object) -> list[str]:  # noqa: C901
     required = {"required", "open_stage", "completed", "events"}
     if not required.issubset(value) or set(value) - {
         *required,
+        "stage_sequence",
+        "human_session",
         "authorized",
         "discussion_rounds",
         "reconciliation_required",
-        "human_session",
     }:
         return ["oracle_gate fields are incomplete or unknown"]
     if value["required"] is not True:
         return ["oracle_gate.required must be true"]
+    stage_sequence = value.get("stage_sequence")
+    if stage_sequence is not None and (
+        not isinstance(stage_sequence, list)
+        or not stage_sequence
+        or len(stage_sequence) != len(set(stage_sequence))
+        or any(item not in {*GATE_SEQUENCE, *STAGE_GATE_SEQUENCE} for item in stage_sequence)
+    ):
+        return ["oracle_gate.stage_sequence is invalid"]
+    sequence = tuple(stage_sequence) if stage_sequence is not None else GATE_SEQUENCE
     open_stage = value["open_stage"]
-    if open_stage is not None and open_stage not in GATE_SEQUENCE:
+    if open_stage is not None and open_stage not in sequence:
         return ["oracle_gate.open_stage is invalid"]
     completed = value["completed"]
-    if not isinstance(completed, list) or any(item not in GATE_SEQUENCE for item in completed):
+    if not isinstance(completed, list) or any(item not in sequence for item in completed):
         return ["oracle_gate.completed is invalid"]
     rounds = value.get("discussion_rounds", 0)
     if not isinstance(rounds, int) or not 0 <= rounds <= MAX_DISCUSSION_ROUNDS:
         return ["oracle_gate.discussion_rounds is invalid"]
-    if not isinstance(value.get("authorized", False), bool):
+    # ``authorized`` is accepted only as a migration-era legacy field.  It is
+    # never consulted for admission and is removed on the next gate mutation.
+    if "authorized" in value and not isinstance(value["authorized"], bool):
         return ["oracle_gate.authorized is invalid"]
     if not isinstance(value.get("reconciliation_required", False), bool):
         return ["oracle_gate.reconciliation_required is invalid"]
-    session = value.get("human_session")
-    if session is not None:
-        required_session = {"schema_version", "session_id", "request_ref", "activation", "status", "tui_contract_version", "opened_at"}
-        if not required_session.issubset(session) or set(session) - {*required_session, "closed_at"}:
-            return ["oracle_gate.human_session fields are incomplete or unknown"]
-        if session["schema_version"] != "1.0" or session["tui_contract_version"] != "1.0":
-            return ["oracle_gate.human_session contract version is unsupported"]
-        if not isinstance(session["session_id"], str) or not re.fullmatch(r"AWTUI-[A-Z0-9-]+", session["session_id"]):
-            return ["oracle_gate.human_session.session_id is invalid"]
-        if not isinstance(session["request_ref"], str) or not re.fullmatch(r"AWG-[A-Z0-9-]+", session["request_ref"]):
-            return ["oracle_gate.human_session.request_ref is invalid"]
-        if session["activation"] not in SESSION_ACTIVATIONS or session["status"] not in SESSION_STATUSES:
-            return ["oracle_gate.human_session activation or status is invalid"]
+    errors = human_session_errors(value.get("human_session"))
+    if errors:
+        return errors
     events = value["events"]
     if not isinstance(events, list) or len(events) > 32:
         return ["oracle_gate.events is invalid or unbounded"]
@@ -221,56 +312,90 @@ def gate_errors(value: object) -> list[str]:  # noqa: C901
             InteractionEvent.from_record(item)
         except (GateError, KeyError, TypeError, ValueError) as error:
             return [f"oracle_gate event invalid: {error}"]
+    session = value.get("human_session")
+    if session is not None and not any(
+        item["action"] == "open" and item["task_revision"] == session["task_revision"]
+        for item in events
+    ):
+        return ["oracle_gate.human_session lacks its opening event"]
     return []
 
 
 def transition_allowed(meta: Mapping[str, Any], operation: str) -> None:
     """Reject autonomous lifecycle operations while a required gate is open."""
     gate = meta.get("oracle_gate")
-    legacy_authorized = (
-        (
-            ("completed" not in gate or gate.get("completed", []) == list(GATE_SEQUENCE))
-            and not gate.get("open_stage")
-            and not gate.get("reconciliation_required", False)
-            and "authorized" not in gate
-        )
+    sequence = (
+        tuple(gate.get("stage_sequence", GATE_SEQUENCE))
         if isinstance(gate, dict)
-        else False
+        else GATE_SEQUENCE
+    )
+    incomplete = (
+        isinstance(gate, dict) and "completed" in gate and gate.get("completed") != list(sequence)
+    )
+    presenting = (
+        isinstance(gate, dict)
+        and isinstance(gate.get("human_session"), dict)
+        and gate["human_session"].get("status") == "presenting"
     )
     if (
         isinstance(gate, dict)
         and gate.get("required") is True
-        and (gate.get("open_stage") or gate.get("authorized", legacy_authorized) is not True)
+        and (
+            gate.get("open_stage")
+            or gate.get("reconciliation_required", False)
+            or incomplete
+            or presenting
+        )
         and operation in {"promote", "claim", "run", "release"}
     ):
-        reason = gate.get("open_stage") or "reconciliation"
+        reason = gate.get("open_stage") or ("presenting" if presenting else "reconciliation")
         raise GateError(f"interaction gate unresolved: {reason}")
 
 
-def apply_event(meta: dict[str, Any], event: InteractionEvent) -> str:  # noqa: C901
+def apply_event(  # noqa: C901
+    meta: dict[str, Any], event: InteractionEvent, human_session: dict[str, Any] | None = None
+) -> str:
     """Apply one event to task metadata and return a stable audit note."""
     if event.task_id != meta.get("id"):
         raise GateError("event task_id does not match task")
     if event.task_revision != meta.get("task_revision"):
         raise GateError("stale interaction event revision")
-    current = meta.get("oracle_gate") or {
-        "required": True,
-        "open_stage": None,
-        "completed": [],
-        "events": [],
-        "authorized": False,
-        "discussion_rounds": 0,
-        "reconciliation_required": False,
-    }
+    current = deepcopy(
+        meta.get("oracle_gate")
+        or {
+            "required": True,
+            "open_stage": None,
+            "completed": [],
+            "events": [],
+            "discussion_rounds": 0,
+            "reconciliation_required": False,
+        }
+    )
+    if "stage_sequence" not in current and event.stage.value in STAGE_GATE_SEQUENCE:
+        current["stage_sequence"] = list(STAGE_GATE_SEQUENCE)
     errors = gate_errors(current)
     if errors:
         raise GateError(errors[0])
+    if human_session is not None:
+        if event.action != "open":
+            raise GateError("human session metadata is valid only when opening a gate")
+        errors = human_session_errors(human_session)
+        if errors:
+            raise GateError(errors[0])
+        if human_session["task_revision"] != event.task_revision:
+            raise GateError("human session task_revision does not match gate event")
+        if current.get("human_session", {}).get("status") == "presenting":
+            raise GateError("a human session is already presenting")
     open_stage = current["open_stage"]
     completed = list(current["completed"])
-    current.setdefault("authorized", False)
+    current.pop("authorized", None)
     current.setdefault("discussion_rounds", 0)
     current.setdefault("reconciliation_required", False)
-    index = GATE_SEQUENCE.index(event.stage.value)
+    sequence = tuple(current.get("stage_sequence", GATE_SEQUENCE))
+    try:
+        index = sequence.index(event.stage.value)
+    except ValueError as error:
+        raise GateError("unknown interaction gate stage") from error
     if event.action == "open":
         if open_stage is not None:
             raise GateError("interaction gate already open")
@@ -301,15 +426,19 @@ def apply_event(meta: dict[str, Any], event: InteractionEvent) -> str:  # noqa: 
     if (
         event.action == "resolve"
         and event.disposition == "accepted"
-        and event.stage is GateStage.RECONCILIATION
+        and event.stage.value in {GateStage.RECONCILIATION.value, StageGate.DECISION.value}
     ):
         current["reconciliation_required"] = False
     current["completed"] = completed
-    current["authorized"] = (
-        current["open_stage"] is None
-        and completed == list(GATE_SEQUENCE)
-        and not current["reconciliation_required"]
-    )
+    if human_session is not None:
+        current["human_session"] = human_session
+    elif event.action == "resolve" and isinstance(current.get("human_session"), dict):
+        session = current["human_session"]
+        if session.get("status") in {"presenting", "clarification_requested"}:
+            session["status"] = (
+                "resolved" if event.disposition == "accepted" else "clarification_requested"
+            )
+            session["closed_at"] = event.recorded_at
     current["events"] = [*current["events"], event.as_record()]
     if len(current["events"]) > 32:
         raise GateError("interaction event history is bounded at 32 events")

@@ -13,7 +13,7 @@ Initialization creates three tracked files:
 
 Every command after `init` verifies the profile UUID, state checkout root and origin, product
 identity from private runtime configuration, product checkout origin, and the caller's current
-working directory. Calls from another project fail before locking or reading/mutating task state.
+working directory. Calls from another project fail before locking or reading/mutating task status.
 The binding is an accidental-misuse boundary, not protection against someone who deliberately
 rewrites the coordinator source, Git history, and binding files.
 
@@ -22,6 +22,10 @@ rewrites the coordinator source, Git history, and binding files.
 - `.runtime/config.json`: ignored, mode 0600, with machine-local paths and optional push.
 - `.runtime/coordinator.sqlite3`: ignored SQLite WAL authority for default-backend projects.
 - `tasks/`: Markdown records with strict JSON front matter.
+- Hierarchical task records may set `parent_task_ref` and the reciprocal `children` list. Both
+  sides are required to name existing tasks, edges must be acyclic, and a parent cannot release
+  to `done` while any child is non-terminal. The task-record schema is
+  `schema/task-record.schema.json`.
 - `plans/`: detailed plans referenced by tasks.
 - `CURRENT.md`: deterministic compact queue; never edit directly.
 - `STATUS.md`: optional deterministic portfolio view or, for large projects, a compact index to
@@ -29,6 +33,23 @@ rewrites the coordinator source, Git history, and binding files.
   the complete graph, dependency index and AR inventory.
 - `PROJECT_STATE.md` and `WORKTREES.md`: generated live observations.
 - `coordinator.vendor.json`: upstream version, commit and SHA-256 for every vendored file.
+- Optional `task-spec-policy.json`: a tracked version-1 project policy that
+  adds a bounded evidence-class vocabulary without changing the five built-in
+  classes. Validate it with `schema/task-spec-policy.schema.json`; the file
+  must remain clean, regular, state-root-bound, and non-symlinked.
+- `sessions/AR-####.jsonl`: bounded, content-minimized session snapshots. Each record stores
+  only a context digest, step state, safe artifact references and the next action; raw prompts,
+  logs and command output are never retained. The latest record can be replayed with
+  `tools/handoffctl snapshot --task AR-####`.
+- `checkpoints/AR-####.jsonl`: bounded task checkpoints. Each record stores task metadata,
+  artifact references, a body digest and the signed source commit; raw command output is never
+  retained. Create one with `tools/handoffctl checkpoint AR-#### --owner OWNER
+  --expected-revision REV`.
+- `rollbacks/operations.jsonl`: bounded rollback journal. Planned, restore-started, completed and
+  ambiguous states are durable; an ambiguous operation must be reconciled before retrying.
+- `directives/records.jsonl`: bounded board-directive journal. Each revision carries its authority,
+  precedence, role/task scope, lease and lifecycle. Equal-precedence overlapping active directives
+  are rejected unless they are escalated to guidance AR-0053.
 
 ## Initialize exactly once
 
@@ -62,12 +83,19 @@ tracked binding.
 
 ## Normal user and agent loop
 
+Development merge review identity is defined in
+[`DEVELOPMENT_REVIEW_POLICY.md`](DEVELOPMENT_REVIEW_POLICY.md). The required
+technical review remains independent, while a same-account GitHub approval is
+acceptable for development-only integration. Verified releases retain their
+separate release and provenance gates.
+
 1. Read the project's development policy, complete snapshot, selected task and plan.
 2. Claim one dependency-ready open task with a stable unique owner.
 3. Run every state-changing product, Git, review or publication command through `run`.
 4. Record each material result immediately; heartbeat before lease expiry.
 5. After interruption, inspect revisions, commits, refs, processes and CI before retrying.
-6. Release to `done`, `open`, or `blocked`; reconcile and run the live doctor.
+6. For `done`, record reviewed task-spec acceptance at the exact current revision.
+7. Release to `done`, `open`, or `blocked`; reconcile and run the live doctor.
 
 ```sh
 tools/handoffctl snapshot
@@ -75,20 +103,69 @@ tools/handoffctl claim AR-0001 --owner worker-unique --lease-minutes 120
 tools/handoffctl run --owner worker-unique AR-0001 -- command arg
 tools/handoffctl update AR-0001 --owner worker-unique --expected-revision 2 \
   --note "Verified result and exact next action"
+tools/handoffctl accept AR-0001 --owner worker-unique --expected-revision 3 \
+  --evidence-class contract-test --evidence-ref quality/AR-0001-tests.txt \
+  --evidence-digest sha256:YOUR_EXACT_64_HEX_DIGEST \
+  --note "Accepted task spec against reviewed evidence"
 tools/handoffctl release AR-0001 --owner worker-unique --status done \
   --note "Integrated and verified"
 tools/handoffctl reconcile --commit --push
 tools/handoffctl doctor --live
 ```
 
-Use `promote` only for `planned -> open` after dependencies complete. Use `resume` only for
-`blocked -> open` after independently verifying the external blocker. Both require the exact
-current revision. Use `recover-expired` instead of impersonating the prior owner with `release`
+Workers that need snapshotless expired-claim recovery pass their live Linux PID and start-time
+with `claim --worker-pid PID --worker-start-time START_TIME`. Coordinator verifies that exact
+identity at claim time and later recovers only after it is absent.
+
+`accept` records the active owner's acceptance assertion for the task's referenced
+spec and validates the metadata. It does not independently inspect or prove the
+evidence contents; project review and evidence-class obligations still apply.
+The `done` release gate remains fail closed when acceptance is missing or invalid.
+
+Restore a verified checkpoint only from a clean descendant product checkout:
+
+```sh
+tools/handoffctl rollback --checkpoint AR-####-r####
+tools/handoffctl rollback --checkpoint AR-####-r####
+tools/handoffctl rollback --checkpoint AR-####-r#### --reconcile
+```
+
+Create and transition a directive with exact ownership and revision fencing:
+
+These commands are currently available for the Git authority backend; AR-0083
+tracks the corresponding SQLite migration and doctor coverage.
+
+```sh
+tools/handoffctl directive create --directive-id UD-0001 --authority BOARD-001 \
+  --precedence 10 --role-scope implementer --statement "Preserve the release boundary." \
+  --owner BOARD_OWNER
+tools/handoffctl directive transition UD-0001 activate --owner BOARD_OWNER \
+  --expected-revision 1
+tools/handoffctl directive list --lifecycle active
+```
+
+An overlapping directive at the same precedence cannot become active. Supplying
+`--guidance-ref AR-0053` records it as `escalated` instead, leaving the conflict
+visible for board guidance resolution.
+
+`--reconcile` is required only after a rollback is recorded as `restore_started`
+or `ambiguous`. It may continue only when the product checkout is at the exact
+durable rollback head (or at the previously recorded pre-rollback head when no
+product commit was published); otherwise the operation remains fail-closed.
+
+Use `promote` only for `planned -> open` after dependencies complete. Use `resume --session` only
+to restore a task from one unique, coherent pause record at that exact task and revision. Duplicate,
+cross-task, or internally inconsistent history fails closed. After independently verifying an external blocker,
+use `unblock` on a task that reached `blocked` through `release --status blocked`; it preserves the
+current `next_action` and creates no session snapshot. These commands require the exact current
+revision and reject cross-mode provenance. Use `recover-expired` instead of impersonating the prior owner with `release`
 when another process recovers an abandoned claim:
 
 ```sh
 tools/handoffctl recover-expired AR-0001 --expected-revision REVISION \
   --note "UTC expiry and absence of the previous worker independently verified"
+tools/handoffctl unblock AR-0002 --expected-revision REVISION \
+  --note "External blocker and exact revision independently verified"
 ```
 
 A future or malformed deadline and a stale revision are rejected before mutation.
@@ -128,6 +205,32 @@ Sync stages the complete file set before rollback-capable rename installation. I
 regenerates the project profile or binding. Review the full vendor diff and run project integration
 tests before committing. On interruption, inspect the manifest, hashes, refs, release and CI before
 retrying.
+
+For development integration from an untagged Coordinator head, use the explicit development-only
+path with a full immutable commit identifier:
+
+```sh
+python /path/to/agent-workflow-coordinator/tools/vendor.py sync-development \
+  --source /path/to/agent-workflow-coordinator \
+  --target /path/to/project-state \
+  --commit FULL_40_CHARACTER_HEAD_COMMIT
+```
+
+The source must be clean and its `HEAD` must equal the requested commit. The resulting schema-v2
+manifest is explicitly classified as `development` and binds the exact Git tree plus every vendored
+file digest. It is not release evidence. Normal `sync --version vMAJOR.MINOR.PATCH` behavior remains
+tag-bound and emits the existing schema-v1 release manifest.
+
+The vendor boundary includes the complete first-party Coordinator formal
+verification closure: lifecycle, binding, lock, run, storage, recovery and
+interaction-gate models/configurations; the verifier, runner, attestation
+helper; and evidence metadata. Vendor verification rejects runtime/model
+operation drift. Additional qualification models and launchers owned by
+downstream quality projects remain downstream-owned and are not overwritten.
+An empty-destination vendor diagnostic may supply the paired absolute
+`--diagnostic-queue` and `--diagnostic-admission-lock` verifier flags. That execution is explicitly
+noncanonical (`diagnostic-private-admission`) and cannot support publication or release claims;
+normal hosted verification continues to use the shared canonical admission path.
 
 ## Proof boundary
 
