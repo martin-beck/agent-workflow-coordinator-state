@@ -221,7 +221,7 @@
       "source": "tests/test_fast_receipt_socket.py"
     },
     "tests/test_fast_receipt_worker.py": {
-      "sha256": "7ce34f2b660c971e40c6155e7d4de287bd792acc2a8f1decd1dc8a70d76458ae",
+      "sha256": "8f8691653826cf880c87f93ded30a5336cd3e8f3f9b079c6e99977b951921f84",
       "source": "tests/test_fast_receipt_worker.py"
     },
     "tests/test_fast_receipts.py": {
@@ -231,6 +231,10 @@
     "tests/test_handoffctl.py": {
       "sha256": "a23605c036607f67d0096f0183ac90f0be7b243112ef1a285996c922356b42c9",
       "source": "tests/test_handoffctl.py"
+    },
+    "tests/test_handoffctl_recovery.py": {
+      "sha256": "253a487cd5e27727b04453b2437b2be416886b13ebedce0a1a8b799a3029498b",
+      "source": "tests/test_handoffctl_recovery.py"
     },
     "tests/test_hierarchy.py": {
       "sha256": "6337acc13c1b8903c1d81434fdcf287865a4b8d0cd06b37b5cde913281aa62d4",
@@ -317,7 +321,7 @@
       "source": "tools/fast_receipt_socket.py"
     },
     "tools/fast_receipt_worker.py": {
-      "sha256": "b4ac7feef7897651c9253c73590f56f8e4a1a60592e91af7203d6d990d1981bc",
+      "sha256": "69600ffb2077f76930aa1bb51a8aed099d1001ad769ff447618cdfa0f2e2e1f8",
       "source": "tools/fast_receipt_worker.py"
     },
     "tools/fast_receipts.py": {
@@ -345,7 +349,7 @@
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
-      "sha256": "5fdeb95334147af5a76a5d8ec8d9545be26c51703d06e0630f4ae2a62e3bb450",
+      "sha256": "0e0b44524bf7addbe6f32edb678bfdfafadf0c26db80ba97d8dc33fd86db9039",
       "source": "tools/vendor.py"
     },
     "tools/hierarchy.py": {
@@ -484,9 +488,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "75829e93eaba13e4e4f116dd5a89e3d3931487aa",
+    "commit": "c8837f5a52e2d0e5c9516633ebe66885efa08235",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "560c8ee7212fcd094f85ab59c050b95731eeae56",
+    "tree": "85907c8ad31140558835c08a711d55bb5f493d44",
     "version": "v0.5.0"
   }
 }
