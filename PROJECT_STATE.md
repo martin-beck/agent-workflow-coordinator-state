@@ -2,7 +2,7 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `75829e93eaba13e4e4f116dd5a89e3d3931487aa`
+- Product remote main: `c8837f5a52e2d0e5c9516633ebe66885efa08235`
 - Local origin/main: `75829e93eaba13e4e4f116dd5a89e3d3931487aa`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
@@ -10,14 +10,14 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
-| #1220 | `repair/ar-0089-fast-receipt-validation@3f30d43b68cd` | `main` | UNKNOWN | - | fix: validate fast receipt claim scope |
+| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
+| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 38087099280 | `3f30d43b68cd` | pull_request | Verify | completed:success |
 | 38086255644 | `75829e93eaba` | push | Formal | completed:success |
 | 38086255580 | `75829e93eaba` | push | Verify | completed:success |
 | 38086091945 | `890bfedb137f` | pull_request | Verify | completed:success |
@@ -29,4 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 38084687488 | `92d50e0030ee` | push | Verify | completed:success |
 | 38084687470 | `92d50e0030ee` | push | Formal | completed:success |
 | 38084497506 | `7f28ec3735dd` | pull_request | Verify | completed:success |
-| 38084262050 | `b5dc773bf3f9` | pull_request | Verify | completed:success |
