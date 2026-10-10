@@ -121,7 +121,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 385, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 381, ahead 0 |
 | `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e11d3d8c5bf7` | 0 | behind 4, ahead 0 |
-| `agent-workflow-coordinator-ar0089-vendor-closure` | `repair/ar-0089-vendor-closure` | `8cd6dc22c7d1` | 0 | behind 0, ahead 1 |
+| `agent-workflow-coordinator-ar0089-vendor-closure` | `repair/ar-0089-vendor-closure` | `f68ae9d90125` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0089-vendor-postverify` | `repair/ar-0089-vendor-postverify` | `f54a11b9d0b2` | 2 | behind 1, ahead 0 |
 | changed files | - | - | - | `tests/test_vendor.py`, `tools/vendor.py` |
 | `agent-workflow-coordinator-ar0120-command-inventory` | `release-v0.4.1` | `66c45cd88d70` | 1 | behind 15, ahead 0 |

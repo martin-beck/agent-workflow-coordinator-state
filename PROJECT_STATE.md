@@ -12,12 +12,13 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
-| #1217 | `repair/ar-0089-vendor-closure@c82a39b5c298` | `main` | CLEAN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: vendor complete coordinator runtime closure |
+| #1217 | `repair/ar-0089-vendor-closure@8cd6dc22c7d1` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: vendor complete coordinator runtime closure |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 38079189065 | `8cd6dc22c7d1` | pull_request | Verify | completed:success |
 | 38078782415 | `c82a39b5c298` | pull_request | Verify | completed:success |
 | 38077828409 | `1f4425ee4e7e` | pull_request | Verify | completed:success |
 | 38076753812 | `9e3b247655a4` | push | Verify | completed:success |
@@ -29,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 38074384978 | `e11d3d8c5bf7` | pull_request | Verify | completed:success |
 | 38074209163 | `52dfa01b641e` | pull_request | Verify | completed:success |
 | 38073915671 | `4fad730977ed` | pull_request | Verify | completed:success |
-| 38073771452 | `9b73337fbc04` | pull_request | Verify | completed:failure |
