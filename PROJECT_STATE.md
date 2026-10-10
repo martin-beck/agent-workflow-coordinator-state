@@ -12,13 +12,14 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
-| #1215 | `repair/ar-0089-session-handoff-contract@9b73337fbc04` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat: add typed human gate session handoff |
+| #1215 | `repair/ar-0089-session-handoff-contract@4fad730977ed` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | feat: add typed human gate session handoff |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38073771452 | `9b73337fbc04` | pull_request | Verify | in_progress:- |
+| 38073915671 | `4fad730977ed` | pull_request | Verify | in_progress:- |
+| 38073771452 | `9b73337fbc04` | pull_request | Verify | completed:failure |
 | 38073435570 | `f0f05c64cbc2` | pull_request | Verify | completed:success |
 | 38073187876 | `bf1a2a5dddd3` | pull_request | Verify | completed:success |
 | 38072897473 | `938709207f53` | pull_request | Verify | completed:failure |
@@ -29,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 37997125062 | `e05418ea6da4` | push | Formal | completed:success |
 | 37996854138 | `66c45cd88d70` | pull_request | Verify | completed:success |
 | 37996614521 | `8c43d4e4dfe4` | pull_request | Verify | completed:failure |
-| 37996449879 | `6f8421f251dc` | pull_request | Verify | completed:failure |
