@@ -121,7 +121,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 398, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 394, ahead 0 |
 | `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e11d3d8c5bf7` | 0 | behind 17, ahead 0 |
-| `agent-workflow-coordinator-ar0089-namespace` | `repair/ar-0089-claim-identity-namespace` | `a3feca32ec0f` | 0 | behind 0, ahead 2 |
+| `agent-workflow-coordinator-ar0089-namespace` | `repair/ar-0089-claim-identity-namespace` | `0b747cf63695` | 0 | behind 0, ahead 3 |
 | `agent-workflow-coordinator-ar0089-recovery-snapshot` | `repair/ar-0089-recovery-snapshot` | `7f28ec3735dd` | 0 | behind 1, ahead 0 |
 | `agent-workflow-coordinator-ar0089-vendor-closure` | `repair/ar-0089-vendor-closure` | `6feb191dbcb5` | 0 | behind 12, ahead 0 |
 | `agent-workflow-coordinator-ar0089-vendor-postverify` | `repair/ar-0089-vendor-postverify` | `f54a11b9d0b2` | 2 | behind 14, ahead 0 |
