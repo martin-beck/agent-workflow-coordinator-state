@@ -120,7 +120,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0077-pause-resume` | `ar0077-pause-and-resume-commands-with-session-reload` | `38077ff7554e` | 0 | behind 372, ahead 1 |
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 371, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 367, ahead 0 |
-| `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e05418ea6da4` | 0 | behind 0, ahead 0 |
+| `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e05418ea6da4` | 16 | behind 0, ahead 0 |
+| changed files | - | - | - | `docs/ARCHITECTURE.md`, `docs/OPERATIONS.md`, `docs/PUBLIC_CONTRACTS.md`, `formal/handoffctl/README.md`, `formal/oracle/OracleInteractionGates.cfg`, `formal/oracle/OracleInteractionGates.tla`, `schema/task-record.schema.json`, `tests/test_board_metrics.py`, `tests/test_handoffctl.py`, `tests/test_oracle_integration.py`, `tests/test_oracle_lifecycle.py`, `tests/test_sqlite_storage.py`, `tools/board_metrics.py`, `tools/handoffctl.py`, `tools/oracle_integration.py`, `tools/oracle_lifecycle.py` |
 | `agent-workflow-coordinator-ar0120-command-inventory` | `release-v0.4.1` | `66c45cd88d70` | 1 | behind 1, ahead 0 |
 | changed files | - | - | - | `.artifacts/` |
 | `agent-workflow-coordinator-ar0120-postmerge-coverage` | `ar0120-postmerge-coverage` | `9129b3fa0bbf` | 0 | behind 8, ahead 0 |
@@ -401,6 +402,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-v040-source` | `DETACHED` | `712b36ea3d18` | 0 | behind 82, ahead 0 |
 | `awc-ar0012-next17.tFUQEe` | `DETACHED` | `1bea71cffa65` | 0 | behind 1381, ahead 1 |
 | `awc-ar0027-verify.TTeH7T` | `DETACHED` | `1d806fa2996b` | 0 | behind 137, ahead 0 |
+| `awc-main-coverage` | `DETACHED` | `e05418ea6da4` | 0 | behind 0, ahead 0 |
 | `awc-pr536-head.F9w7dp` | `DETACHED` | `bbabd1c93b21` | 0 | behind 1377, ahead 0 |
 | `awc-pr536-merge.6vH7Cl` | `DETACHED` | `c812eea7d290` | 0 | behind 1376, ahead 0 |
 | `awc-release-0355-FCzi4n` | `repair/release-v0355-metadata-retry` | `938092e869dc` | 0 | behind 126, ahead 1 |
