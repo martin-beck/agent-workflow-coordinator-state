@@ -32,7 +32,7 @@ jobs:
         run: |
           PYTHONDONTWRITEBYTECODE=1 python3 tools/handoffctl_vendor.py verify --target .
           commit="$(python3 -c 'import json; print(json.load(open("coordinator.vendor.json"))["upstream"]["commit"])')"
-          test "${commit}" =~ ^[0-9a-f]{40}$
+          [[ "${commit}" =~ ^[0-9a-f]{40}$ ]]
           upstream="${RUNNER_TEMP}/agent-workflow-coordinator"
           expected="${RUNNER_TEMP}/expected-vendor"
           git clone --no-checkout --filter=blob:none https://github.com/martin-beck/agent-workflow-coordinator.git "${upstream}"
