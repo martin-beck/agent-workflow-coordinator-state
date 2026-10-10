@@ -53,7 +53,10 @@ jobs:
           expected_manifest = json.loads((expected / "coordinator.vendor.json").read_text())
           assert actual_manifest == expected_manifest
           for relative in actual_manifest["files"]:
-              assert filecmp.cmp(current / relative, expected / relative, shallow=False), relative
+              actual = current / relative
+              rebuilt = expected / relative
+              assert filecmp.cmp(actual, rebuilt, shallow=False), relative
+              assert actual.stat().st_mode & 0o777 == rebuilt.stat().st_mode & 0o777, relative
           PY
       - name: Run the offline Coordinator regression suite
         run: |
