@@ -121,6 +121,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 382, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 378, ahead 0 |
 | `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e11d3d8c5bf7` | 0 | behind 1, ahead 0 |
+| `agent-workflow-coordinator-ar0089-vendor-postverify` | `repair/ar-0089-vendor-postverify` | `120806de3194` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-ar0120-command-inventory` | `release-v0.4.1` | `66c45cd88d70` | 1 | behind 12, ahead 0 |
 | changed files | - | - | - | `.artifacts/` |
 | `agent-workflow-coordinator-ar0120-postmerge-coverage` | `ar0120-postmerge-coverage` | `9129b3fa0bbf` | 0 | behind 19, ahead 0 |
