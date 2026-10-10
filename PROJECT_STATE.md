@@ -3,20 +3,22 @@
 Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `92d50e0030eea13ff1e1380d9060213a00cdd95c`
-- Local origin/main: `3a7395d4ecf1135c10165f2511a193a3bff0eb7f`
+- Local origin/main: `92d50e0030eea13ff1e1380d9060213a00cdd95c`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
-| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
+| #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
+| #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 38084687488 | `92d50e0030ee` | push | Verify | completed:success |
+| 38084687470 | `92d50e0030ee` | push | Formal | completed:success |
 | 38084497506 | `7f28ec3735dd` | pull_request | Verify | completed:success |
 | 38084262050 | `b5dc773bf3f9` | pull_request | Verify | completed:success |
 | 38084094062 | `d92d3465d10d` | pull_request | Verify | completed:success |
@@ -27,5 +29,3 @@ Generated from local Git and GitHub. Do not edit.
 | 38082713464 | `9070c5559f7e` | pull_request | Verify | completed:failure |
 | 38082579492 | `bd569bb5b667` | pull_request | Verify | completed:failure |
 | 38082153795 | `3d285a7db1b5` | pull_request | Verify | completed:failure |
-| 38081895431 | `5e9e76ad67c4` | pull_request | Verify | completed:failure |
-| 38081736474 | `faf050fe1b17` | pull_request | Verify | completed:failure |
