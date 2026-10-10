@@ -15,6 +15,11 @@ from contextlib import AbstractContextManager, contextmanager, nullcontext
 from pathlib import Path
 from typing import Any, Protocol, cast
 
+if __package__:
+    from .session_records import validate_session_record
+else:  # pragma: no cover - direct script import
+    from session_records import validate_session_record  # type: ignore[import-not-found,no-redef]
+
 type Meta = dict[str, Any]
 type Task = tuple[Path, Meta, str]
 SCHEMA_VERSION = 1
@@ -152,19 +157,26 @@ class SQLiteBackendBinding:
 class SQLiteAuthorityBinding:
     """Immutable dual binding for control-session and authority descriptors."""
 
-    __slots__ = ("_control", "_identity", "_path")
+    __slots__ = ("_control", "_identity", "_parent_identity", "_path")
     _control: SQLiteBackendBinding
     _identity: tuple[int, int]
+    _parent_identity: tuple[int, int]
     _path: Path
 
     def __init__(
-        self, control: SQLiteBackendBinding, path: Path, identity: tuple[int, int], sentinel: object
+        self,
+        control: SQLiteBackendBinding,
+        path: Path,
+        identity: tuple[int, int],
+        parent_identity: tuple[int, int],
+        sentinel: object,
     ) -> None:
         if sentinel is not _FACTORY_SENTINEL:
             raise TypeError("SQLiteAuthorityBinding must be issued by bind()")
         object.__setattr__(self, "_control", control)
         object.__setattr__(self, "_path", path)
         object.__setattr__(self, "_identity", identity)
+        object.__setattr__(self, "_parent_identity", parent_identity)
 
     def __setattr__(self, name: str, value: object) -> None:
         raise AttributeError("SQLiteAuthorityBinding is immutable")
@@ -192,8 +204,15 @@ class SQLiteAuthorityBinding:
             raise ValueError("authority binding path does not match the admission scope authority")
         if path.is_symlink() or not path.is_file():
             raise ValueError("authority must be a regular non-symlink file")
+        parent_status = path.parent.stat()
         status = path.stat()
-        return cls(control, path, (status.st_dev, status.st_ino), _FACTORY_SENTINEL)
+        return cls(
+            control,
+            path,
+            (status.st_dev, status.st_ino),
+            (parent_status.st_dev, parent_status.st_ino),
+            _FACTORY_SENTINEL,
+        )
 
     @property
     def path(self) -> Path:
@@ -203,14 +222,33 @@ class SQLiteAuthorityBinding:
     def descriptor_identity(self) -> tuple[int, int]:
         return self._identity
 
+    @staticmethod
+    def _assert_parent_identity(
+        path: Path, expected: tuple[int, int], observed: tuple[int, int] | None = None
+    ) -> None:
+        if observed is None:
+            try:
+                status = path.parent.stat()
+            except OSError as error:
+                raise RuntimeError("SQLite authority parent identity unavailable") from error
+            actual = (status.st_dev, status.st_ino)
+        else:
+            actual = observed
+        if actual != expected:
+            raise RuntimeError("SQLite authority parent identity changed")
+
     def assert_current(self) -> None:
         self._control.assert_current()
         try:
             if self._path.is_symlink():
                 raise RuntimeError("SQLite authority descriptor is a symlink")
+            parent = self._path.parent.stat()
             status = self._path.stat()
         except OSError as error:
             raise RuntimeError("SQLite authority descriptor reread failed") from error
+        self._assert_parent_identity(
+            self._path, self._parent_identity, (parent.st_dev, parent.st_ino)
+        )
         if (status.st_dev, status.st_ino) != self._identity:
             raise RuntimeError("SQLite authority descriptor identity changed")
 
@@ -225,6 +263,7 @@ class SQLiteAuthorityBinding:
             not stat.S_ISREG(status.st_mode)
             or status.st_nlink != 1
             or status.st_uid != os.geteuid()
+            or stat.S_IMODE(status.st_mode) != 0o600
         ):
             os.close(descriptor)
             raise RuntimeError(f"SQLite authority {label} is unsafe")
@@ -247,6 +286,8 @@ class SQLiteAuthorityBinding:
             not stat.S_ISREG(current.st_mode)
             or current.st_nlink != 1
             or current.st_uid != os.geteuid()
+            or stat.S_IMODE(current.st_mode) != 0o600
+            or stat.S_IMODE(retained.st_mode) != 0o600
             or (retained.st_dev, retained.st_ino) != expected
             or (current.st_dev, current.st_ino) != expected
         ):
@@ -337,12 +378,91 @@ class SQLiteAuthorityBinding:
         return self._hold_path_sidecars(self._path, self.assert_current)
 
 
+class SQLiteMutationBinding:
+    """Provisioned authority binding for ordinary released-state writers.
+
+    Upgrade admission uses ``SQLiteAuthorityBinding`` and a held session. Normal
+    coordinator writes run while the durable barrier is released, so they need
+    the same descriptor/sidecar identity protection without manufacturing a
+    held upgrade session.
+    """
+
+    __slots__ = ("_fence", "_identity", "_parent_identity", "_path")
+    _fence: Any
+    _identity: tuple[int, int]
+    _parent_identity: tuple[int, int]
+    _path: Path
+
+    def __init__(
+        self,
+        fence: Any,
+        path: Path,
+        identity: tuple[int, int],
+        parent_identity: tuple[int, int],
+        sentinel: object,
+    ) -> None:
+        if sentinel is not _FACTORY_SENTINEL:
+            raise TypeError("SQLiteMutationBinding must be issued by its factory")
+        object.__setattr__(self, "_fence", fence)
+        object.__setattr__(self, "_path", path)
+        object.__setattr__(self, "_identity", identity)
+        object.__setattr__(self, "_parent_identity", parent_identity)
+
+    def __setattr__(self, name: str, value: object) -> None:
+        raise AttributeError("SQLiteMutationBinding is immutable")
+
+    @classmethod
+    def bind(cls, fence: Any, authority: Path) -> SQLiteMutationBinding:
+        from tools.mutation_fence import MutationFence
+
+        if not isinstance(fence, MutationFence):
+            raise TypeError("concrete mutation fence is required")
+        path = authority.absolute()
+        if fence.authority.absolute() != path:
+            raise ValueError("mutation fence authority does not match database")
+        fence.verify_binding()
+        if path.is_symlink() or not path.is_file():
+            raise ValueError("authority must be a regular non-symlink file")
+        parent_status = path.parent.stat()
+        status = path.stat()
+        return cls(
+            fence,
+            path,
+            (status.st_dev, status.st_ino),
+            (parent_status.st_dev, parent_status.st_ino),
+            _FACTORY_SENTINEL,
+        )
+
+    def assert_current(self) -> None:
+        self._fence.verify_binding()
+        try:
+            parent = self._path.parent.stat()
+            status = self._path.stat()
+        except OSError as error:
+            raise RuntimeError("SQLite authority descriptor reread failed") from error
+        if (parent.st_dev, parent.st_ino) != self._parent_identity:
+            raise RuntimeError("SQLite authority parent identity changed")
+        if (status.st_dev, status.st_ino) != self._identity:
+            raise RuntimeError("SQLite authority descriptor identity changed")
+
+    @property
+    def path(self) -> Path:
+        return self._path
+
+    def hold_sidecars(self) -> AbstractContextManager[Callable[[], None]]:
+        return SQLiteAuthorityBinding._hold_path_sidecars(self._path, self.assert_current)
+
+
 class Backend(Protocol):
     """Contract shared by authoritative storage implementations."""
 
     name: str
 
     def load_tasks(self) -> list[Task]: ...
+
+    def load_session_records(self, task_id: str | None = None) -> list[Meta]: ...
+
+    def load_checkpoint_records(self, task_id: str | None = None) -> list[Meta]: ...
 
     def append_command_result(
         self,
@@ -428,7 +548,10 @@ class SQLiteBackend:
         binding: Meta,
         tasks_root: Path,
         mutation_scope: Callable[[], AbstractContextManager[object]] | None = None,
-        backend_binding: SQLiteBackendBinding | SQLiteAuthorityBinding | None = None,
+        backend_binding: SQLiteBackendBinding
+        | SQLiteAuthorityBinding
+        | SQLiteMutationBinding
+        | None = None,
         _admission_capability: object | None = None,
     ) -> None:
         self.path = path
@@ -438,7 +561,10 @@ class SQLiteBackend:
         if backend_binding is not None:
             if _admission_capability is not _FACTORY_SENTINEL:
                 raise ValueError("bound SQLite backend must be created by its adapter factory")
-            if not isinstance(backend_binding, (SQLiteBackendBinding, SQLiteAuthorityBinding)):
+            if not isinstance(
+                backend_binding,
+                (SQLiteBackendBinding, SQLiteAuthorityBinding, SQLiteMutationBinding),
+            ):
                 raise TypeError("backend_binding must be an SQLite binding capability")
             if backend_binding.path != path:
                 raise ValueError("backend binding targets a different database")
@@ -506,7 +632,7 @@ class SQLiteBackend:
     @contextmanager
     def _transaction(self) -> Iterator[sqlite3.Connection]:
         if self.backend_binding is not None and not isinstance(
-            self.backend_binding, SQLiteAuthorityBinding
+            self.backend_binding, (SQLiteAuthorityBinding, SQLiteMutationBinding)
         ):
             raise RuntimeError("mutating SQLite backend requires dual authority binding")
         connection = self._connect()
@@ -575,6 +701,9 @@ class SQLiteBackend:
         kind: str,
         at: str,
         transition: Callable[[Meta, list[Task]], tuple[str, str]],
+        session_record: Meta | None = None,
+        session_factory: Callable[[Meta], Meta] | None = None,
+        checkpoint_factory: Callable[[Meta], Meta] | None = None,
     ) -> None:
         """Apply one transition and CAS the authoritative revision in one transaction."""
         with self.transaction() as connection:
@@ -591,6 +720,35 @@ class SQLiteBackend:
             note, body = transition(meta, tasks)
             meta["task_revision"] = current + 1
             meta["updated_at"] = at
+            checkpoint_record = checkpoint_factory(meta) if checkpoint_factory is not None else None
+            if checkpoint_record is not None:
+                connection.execute(
+                    """CREATE TABLE IF NOT EXISTS checkpoint_records(
+                       sequence INTEGER PRIMARY KEY AUTOINCREMENT,
+                       task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+                       task_revision INTEGER NOT NULL,
+                       record_json TEXT NOT NULL CHECK(json_valid(record_json)),
+                       recorded_at TEXT NOT NULL,
+                       UNIQUE(task_id, task_revision)) STRICT"""
+                )
+                connection.execute(
+                    """INSERT INTO checkpoint_records
+                       (task_id, task_revision, record_json, recorded_at)
+                       VALUES (?, ?, ?, ?)""",
+                    (
+                        task_id,
+                        int(checkpoint_record["task_revision"]),
+                        json.dumps(checkpoint_record, sort_keys=True, separators=(",", ":")),
+                        str(checkpoint_record["recorded_at"]),
+                    ),
+                )
+                connection.execute(
+                    """DELETE FROM checkpoint_records
+                       WHERE task_id=? AND sequence NOT IN
+                       (SELECT sequence FROM checkpoint_records WHERE task_id=?
+                        ORDER BY sequence DESC LIMIT 16)""",
+                    (task_id, task_id),
+                )
             cursor = connection.execute(
                 """UPDATE tasks SET meta_json=?, body=?, revision=?, status=?, owner=?,
                    claim_expires=?, branch=?, worktree_key=?, updated_at=?
@@ -611,6 +769,8 @@ class SQLiteBackend:
             )
             if cursor.rowcount != 1:
                 raise RuntimeError("SQLITE_CONFLICT: exact-revision update lost its fence")
+            if session_factory is not None:
+                session_record = session_factory(meta)
             connection.execute("DELETE FROM dependencies WHERE task_id=?", (task_id,))
             connection.executemany(
                 "INSERT INTO dependencies(task_id, dependency_id) VALUES (?, ?)",
@@ -621,6 +781,100 @@ class SQLiteBackend:
                    VALUES (?, ?, ?, ?, ?)""",
                 (task_id, meta["task_revision"], kind, at, note),
             )
+            if session_record is not None:
+                connection.execute(
+                    """CREATE TABLE IF NOT EXISTS session_records(
+                       sequence INTEGER PRIMARY KEY AUTOINCREMENT,
+                       task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+                       task_revision INTEGER NOT NULL,
+                       record_json TEXT NOT NULL CHECK(json_valid(record_json)),
+                       recorded_at TEXT NOT NULL,
+                       UNIQUE(task_id, task_revision)) STRICT"""
+                )
+                connection.execute(
+                    """INSERT INTO session_records
+                       (task_id, task_revision, record_json, recorded_at)
+                       VALUES (?, ?, ?, ?)""",
+                    (
+                        task_id,
+                        int(session_record["task_revision"]),
+                        json.dumps(session_record, sort_keys=True, separators=(",", ":")),
+                        str(session_record["recorded_at"]),
+                    ),
+                )
+                connection.execute(
+                    """DELETE FROM session_records
+                       WHERE task_id=? AND sequence NOT IN
+                       (SELECT sequence FROM session_records WHERE task_id=?
+                        ORDER BY sequence DESC LIMIT 32)""",
+                    (task_id, task_id),
+                )
+
+    def load_session_records(self, task_id: str | None = None) -> list[Meta]:
+        """Load bounded session records from the authoritative SQLite store."""
+        connection = self._connect(read_only=True)
+        try:
+            try:
+                rows = connection.execute(
+                    """SELECT task_id, task_revision, record_json FROM session_records
+                       WHERE (? IS NULL OR task_id=?) ORDER BY sequence""",
+                    (task_id, task_id),
+                )
+            except sqlite3.OperationalError as error:
+                if "no such table" not in str(error).lower():
+                    raise
+                return []
+            records: list[Meta] = []
+            for row in rows:
+                value = json.loads(str(row["record_json"]))
+                if not isinstance(value, dict):
+                    raise StorageCorruptionError("SQLITE_CORRUPT: invalid session record")
+                try:
+                    validate_session_record(value)
+                except ValueError as error:
+                    raise StorageCorruptionError(
+                        "SQLITE_CORRUPT: invalid session record"
+                    ) from error
+                if value["task"] != str(row["task_id"]) or value["task_revision"] != int(
+                    row["task_revision"]
+                ):
+                    raise StorageCorruptionError("SQLITE_CORRUPT: session record identity mismatch")
+                records.append(cast(Meta, value))
+            return records
+        except json.JSONDecodeError as error:
+            raise StorageCorruptionError("SQLITE_CORRUPT: invalid session JSON") from error
+        except sqlite3.Error as error:
+            raise _translate(error) from error
+        finally:
+            connection.close()
+
+    def load_checkpoint_records(self, task_id: str | None = None) -> list[Meta]:
+        """Load bounded checkpoint records from the authoritative SQLite store."""
+        connection = self._connect(read_only=True)
+        try:
+            try:
+                rows = connection.execute(
+                    """SELECT record_json FROM checkpoint_records
+                       WHERE (? IS NULL OR task_id=?) ORDER BY sequence""",
+                    (task_id, task_id),
+                )
+            except sqlite3.OperationalError as error:
+                if "no such table" not in str(error).lower():
+                    raise
+                return []
+            records: list[Meta] = []
+            for row in rows:
+                value = json.loads(str(row["record_json"]))
+                if not isinstance(value, dict):
+                    raise StorageCorruptionError("SQLITE_CORRUPT: invalid checkpoint record")
+                records.append(cast(Meta, value))
+            return records
+        except json.JSONDecodeError as error:
+            raise StorageCorruptionError("SQLITE_CORRUPT: invalid checkpoint JSON") from error
+        except sqlite3.Error as error:
+            raise _translate(error) from error
+        finally:
+            connection.close()
 
     def update_observations(self, observations: dict[str, Meta], at: str) -> None:
         """Persist changed live worktree observations in one transaction."""
@@ -753,6 +1007,8 @@ def create_database(
     source_backend: str,
     source_checkpoint: str,
     command_results: Sequence[Meta] = (),
+    session_records: Sequence[Meta] = (),
+    checkpoint_records: Sequence[Meta] = (),
 ) -> None:
     """Build a complete database beside its final target and install atomically."""
     require_local_filesystem(path)
@@ -822,6 +1078,60 @@ def create_database(
                    VALUES (:task, :owner, :argv_sha256, :returncode, :classification, :at)""",
                 command_results,
             )
+            if session_records:
+                connection.execute(
+                    """CREATE TABLE IF NOT EXISTS session_records(
+                       sequence INTEGER PRIMARY KEY AUTOINCREMENT,
+                       task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+                       task_revision INTEGER NOT NULL,
+                       record_json TEXT NOT NULL CHECK(json_valid(record_json)),
+                       recorded_at TEXT NOT NULL,
+                       UNIQUE(task_id, task_revision)) STRICT"""
+                )
+            if checkpoint_records:
+                connection.execute(
+                    """CREATE TABLE IF NOT EXISTS checkpoint_records(
+                       sequence INTEGER PRIMARY KEY AUTOINCREMENT,
+                       task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+                       task_revision INTEGER NOT NULL,
+                       record_json TEXT NOT NULL CHECK(json_valid(record_json)),
+                       recorded_at TEXT NOT NULL,
+                       UNIQUE(task_id, task_revision)) STRICT"""
+                )
+            if session_records:
+                connection.executemany(
+                    """INSERT INTO session_records
+                       (task_id, task_revision, record_json, recorded_at)
+                       VALUES (:task, :task_revision, :record_json, :recorded_at)""",
+                    [
+                        {
+                            "task": record["task"],
+                            "task_revision": record["task_revision"],
+                            "record_json": json.dumps(
+                                record, sort_keys=True, separators=(",", ":")
+                            ),
+                            "recorded_at": record["recorded_at"],
+                        }
+                        for record in session_records
+                    ],
+                )
+            if checkpoint_records:
+                connection.executemany(
+                    """INSERT INTO checkpoint_records
+                       (task_id, task_revision, record_json, recorded_at)
+                       VALUES (:task, :task_revision, :record_json, :recorded_at)""",
+                    [
+                        {
+                            "task": record["task"],
+                            "task_revision": record["task_revision"],
+                            "record_json": json.dumps(
+                                record, sort_keys=True, separators=(",", ":")
+                            ),
+                            "recorded_at": record["recorded_at"],
+                        }
+                        for record in checkpoint_records
+                    ],
+                )
             connection.commit()
             connection.execute("PRAGMA wal_checkpoint(TRUNCATE)")
         finally:
@@ -845,7 +1155,7 @@ def bind_sqlite_backend(
     path: Path,
     binding: Meta,
     tasks_root: Path,
-    backend_binding: SQLiteBackendBinding | SQLiteAuthorityBinding,
+    backend_binding: SQLiteBackendBinding | SQLiteAuthorityBinding | SQLiteMutationBinding,
     scope: object,
 ) -> SQLiteBackend:
     """Build a bound backend from the concrete ordered admission scope.
@@ -879,5 +1189,124 @@ def bind_sqlite_backend(
         tasks_root,
         mutation_scope=scope.hold,
         backend_binding=backend_binding,
+        _admission_capability=_FACTORY_SENTINEL,
+    )
+
+
+class SQLiteAuthorityWriteAdapter:
+    """Typed authority writer bound to one lock-domain scope.
+
+    The raw backend is intentionally retained privately.  Each operation must
+    enter the caller-owned common -> control -> authority scope first; the
+    backend transaction then performs only the SQLite/descriptor checks while
+    those locks remain held.  This adapter does not authorize upgrade phases
+    and is not connected to the public upgrade dispatcher.
+    """
+
+    __slots__ = ("_backend",)
+
+    def __init__(self, backend: SQLiteBackend, sentinel: object) -> None:
+        if sentinel is not _FACTORY_SENTINEL:
+            raise TypeError("SQLiteAuthorityWriteAdapter must be issued by its factory")
+        self._backend = backend
+
+    def mutate(
+        self,
+        task_id: str,
+        expected_revision: int,
+        kind: str,
+        at: str,
+        transition: Callable[[Meta, list[Task]], tuple[str, str]],
+        session_record: Meta | None = None,
+        session_factory: Callable[[Meta], Meta] | None = None,
+        checkpoint_factory: Callable[[Meta], Meta] | None = None,
+    ) -> None:
+        """Apply one fenced task transition."""
+        self._backend.mutate(
+            task_id,
+            expected_revision,
+            kind,
+            at,
+            transition,
+            session_record,
+            session_factory,
+            checkpoint_factory,
+        )
+
+    def update_observations(self, observations: dict[str, Meta], at: str) -> None:
+        """Persist fenced live-worktree observations."""
+        self._backend.update_observations(observations, at)
+
+    def append_command_result(
+        self,
+        task_id: str,
+        owner: str,
+        command_hash: str,
+        returncode: int,
+        classification: str,
+        recorded_at: str,
+    ) -> None:
+        """Persist fenced command evidence."""
+        self._backend.append_command_result(
+            task_id, owner, command_hash, returncode, classification, recorded_at
+        )
+
+    def retire(
+        self,
+        project: Callable[[list[Task]], None],
+        switch_selector: Callable[[], None],
+    ) -> None:
+        """Retire authority through the fenced route."""
+        self._backend.retire(project, switch_selector)
+
+
+def bind_sqlite_authority_writer(
+    path: Path,
+    binding: Meta,
+    tasks_root: Path,
+    authority_binding: SQLiteAuthorityBinding,
+    scope: object,
+) -> SQLiteAuthorityWriteAdapter:
+    """Issue typed scope-bound writes without exposing a raw backend."""
+    from tools.lock_domain_scope import LockDomainScope
+
+    if not isinstance(scope, LockDomainScope):
+        raise TypeError("authority writer requires adapter-owned LockDomainScope")
+    if not isinstance(authority_binding, SQLiteAuthorityBinding):
+        raise TypeError("authority writer requires SQLiteAuthorityBinding")
+    if authority_binding.path != path.absolute():
+        raise ValueError("authority writer path does not match its binding")
+    backend = bind_sqlite_backend(path, binding, tasks_root, authority_binding, scope)
+    return SQLiteAuthorityWriteAdapter(backend, _FACTORY_SENTINEL)
+
+
+def bind_released_sqlite_backend(
+    path: Path,
+    binding: Meta,
+    tasks_root: Path,
+    fence: object,
+    common_lock: Callable[[], AbstractContextManager[object]],
+    session_identity: object | None = None,
+) -> SQLiteBackend:
+    """Build the public writer backend for a provisioned released barrier.
+
+    This factory is intentionally separate from the held upgrade scope: normal
+    coordination must continue while no upgrade is active, while the fence
+    still rejects held, releasing, ambiguous, missing, or replaced control
+    state before SQLite opens a write transaction.
+    """
+    from tools.mutation_fence import MutationFence
+
+    if not isinstance(fence, MutationFence):
+        raise TypeError("released SQLite backend requires a concrete mutation fence")
+    if session_identity is not None:
+        fence.bind_session_identity(session_identity)
+    authority_binding = SQLiteMutationBinding.bind(fence, path)
+    return SQLiteBackend(
+        path,
+        binding,
+        tasks_root,
+        mutation_scope=lambda: fence.mutation_scope(common_lock),
+        backend_binding=authority_binding,
         _admission_capability=_FACTORY_SENTINEL,
     )

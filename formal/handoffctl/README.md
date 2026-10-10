@@ -7,15 +7,15 @@ the Python implementation, not a replacement implementation.
 ## Evidence classification
 
 [`../evidence.json`](../evidence.json) records the structured formal-evidence contract required by
-Agent Workflow Quality v0.24.0. It classifies these six TLC runs as bounded-model evidence and
+Agent Workflow Quality v0.24.0. It classifies these eight TLC runs as bounded-model evidence and
 records the largest finite process, task, actor, project, worktree, and revision domains used by
 their checked configurations. Each `.cfg` file remains authoritative for the exact bound of its
 model.
 
-The correspondence classification is `not-proven`. Passing TLC establishes the invariants and
+The correspondence classification is `best-effort`. Passing TLC establishes the invariants and
 temporal properties below only for the tracked TLA+ specifications under those finite bounds and
 assumptions. The implementation tests are separate evidence that selected Python behavior
-corresponds to the abstractions; neither evidence source proves implementation refinement or the
+corresponds to the abstractions; neither evidence source claims or requires implementation refinement or the
 correctness of Python, Git, SQLite, operating-system, kernel, filesystem, or arbitrary wrapped
 commands. The explicit assumptions, non-claims, and limitations in `formal/evidence.json` are part
 of this contract and must remain aligned with the configurations and runner.
@@ -23,21 +23,31 @@ of this contract and must remain aligned with the configurations and runner.
 ## Transition contract
 
 Every accepted lifecycle command increments `task_revision` exactly once and validates the result.
+Task hierarchy edges are reciprocal and acyclic; the bounded lifecycle model includes one parent
+with one child and rejects `release --status done` while that child is non-terminal. The Python
+validator additionally checks arbitrary task graphs and migration preservation.
 For Git authority, the task and generated projections update under the same repository lock and a
 detected pre-commit failure restores them. For SQLite authority, one database transaction commits
 the task first and generated projections are recoverable output. A rejected command leaves
-authoritative revision, task state and owner unchanged.
+authoritative revision, task status and owner unchanged.
 
 | Command | Required source | Required actor/revision | Result |
 | --- | --- | --- | --- |
 | `promote` | `planned`, unowned, dependencies done | exact revision | `open` |
-| `resume` | `blocked`, unowned | exact revision | `open` |
+| `pause` | `in_progress`, owned | exact revision and owner | `blocked`, ownership and lease cleared |
+| `resume` | `blocked`, unowned, paused session | exact revision and session reference | `open` |
+| `unblock` | `blocked`, unowned, no current-revision session | exact revision | `open` |
 | `claim` | `open`, dependencies done | owner has no active task | `in_progress`, lease set |
 | `heartbeat` | `in_progress` | current owner, positive lease | lease renewed |
 | `update` | `in_progress` | current owner, exact revision | active fields updated |
+| `accept` | `in_progress`, referenced spec | current owner, exact revision, valid evidence metadata | spec acceptance recorded; lifecycle status unchanged |
 | `release` | `in_progress` | current owner | chosen non-active state, owner and lease cleared |
-| `recover-expired` | expired `in_progress` | exact revision | `open`, ownership cleared |
+| `recover-expired` | expired `in_progress` with a valid session | exact revision | `open`, ownership cleared, session restored |
 | `run` record | `in_progress`, unexpired | owner and current revision | bounded result recorded |
+
+The model includes `accept` as a status-preserving, exact-revision transition.
+Its task-spec and evidence-field validation is checked by the concrete Git/SQLite
+tests; the bounded model does not claim to prove evidence contents.
 
 `release --status` currently accepts every schema status other than
 `in_progress`; therefore the formal model checks releases to `planned`,
@@ -75,7 +85,8 @@ outside the lifecycle abstraction below and does not alter the TLA+ transition r
 ## Checked properties
 
 `Handoffctl.tla` exhaustively enumerates two processes, two tasks, every
-coherent initial status/owner combination, ready and blocked dependencies,
+coherent initial status/owner combination, absent, unique-valid,
+unique-incoherent and duplicate pause provenance, ready and blocked dependencies,
 every lifecycle command, current and stale revisions, injected pre-commit
 rollback, and every process interleaving. `HandoffctlLocks.tla` separately
 enumerates three processes as readers and writers, including two simultaneous
@@ -85,7 +96,10 @@ readers, a competing writer, and bounded lock-wait timeout. TLC checks:
 - coherent ownership and at most one active task per actor;
 - no lost or duplicate accepted mutation through exact revision accounting;
 - atomic task/projection revision advancement and rollback;
+- reciprocal, bounded acyclic parent/child edges and done-rollup admission;
 - rejection of invalid source, owner, dependency, and revision combinations;
+- rejection of pause/external-block cross-mode transitions without mutation;
+- rejection of missing, incoherent, or duplicate provenance for paused resume;
 - timeout without state mutation when another process holds the lock;
 - acceptance of eligible recovery despite simultaneous expiries and an unrelated repository
   finding;
@@ -105,6 +119,24 @@ failure, and post-reconciliation success or failure. The binding model covers th
 project and one foreign caller, including rejection without mutation and fair progress. These are
 exhaustive proofs of the abstractions, not proofs of Linux, Git, Python, or the filesystem
 implementation.
+
+HandoffctlReceipts.tla checks bounded opt-in receipt phases: an enqueued
+intent is not a successful transition, local completion requires a verified
+commit, remote completion requires an observed remote ref, and crash recovery
+either finds that commit or retains an explicit ambiguous outcome. It models
+finite executor/publisher crash and restart with weak fairness; it does not
+prove operating-system service supervision, denial-of-service resistance, or
+implementation correspondence. Its liveness property is conditional on both
+services eventually remaining available; repeated crashes are therefore an
+explicitly nonterminal environmental condition, not a false completion claim.
+
+HandoffctlObservation.tla checks the bounded opt-in `cached-observation-v1`
+contract: cache hits require the exact current input generation, one refresh
+serves concurrent waiters, an input change rejects the in-flight generation,
+and timeout is terminal. It is an abstraction of the resident socket cache;
+it does not claim operating-system event delivery or implementation refinement.
+[`OBSERVATION_CORRESPONDENCE.md`](OBSERVATION_CORRESPONDENCE.md) maps the
+abstraction to focused implementation evidence and records those limits.
 
 `HandoffctlStorage.tla` checks both selected backends, transaction mutual exclusion, one accepted
 revision increment per process, prepared SQLite authority before selector switch, eventual command
@@ -143,16 +175,12 @@ generated-view behavior. The model and tests must both pass before a
 
 ## Human TUI handoff
 
-An AR may carry an `oracle_gate.human_session` record when a Guidance
-decision request is being presented through the human TUI. The record binds
-the session to the AR revision and contains the AWG request reference, the
-activation reason (`user-decision`, `user-detail-request`,
-`user-proposal-review`, `agent-uncertainty`, or `policy-required-approval`),
-and the TUI contract version. Opening a gate with partial session metadata is
-rejected. Resolving with an accepted disposition marks the session
-`resolved`; a clarification or other non-authorizing disposition remains
-`clarification_requested` and keeps the gate blocking autonomous lifecycle
-operations. Coordinator remains the only writer of the durable AR state.
+An interaction gate may retain one current `human_session` record while a decision is presented
+through a human TUI. The record binds its public session/request references and activation reason to
+the gate-opening revision. The `OracleInteractionGates` model checks that a presented session is
+revision-bound and cannot admit autonomous claim, run, or release work; resolution changes the
+session to a terminal public status. This is bounded best-effort design guidance, not a proof of
+the Python, TUI, or external decision system.
 
 ## CI scope
 
@@ -173,12 +201,12 @@ the JAR or modify coordinator state.
 
 Formal tiers are explicit: `verify.sh --tier portable-smoke` runs one model
 and is non-exhaustive; it cannot produce publication or full evidence.
-`verify.sh --tier pr-publication` checks every invariant family. Five models
+`verify.sh --tier pr-publication` checks every invariant family. Six models
 use their full configurations; the general lifecycle model uses the
 one-process `HandoffctlPR.cfg`, while the separate lock and recovery models
 retain independent-process races. This exact-head PR tier is not the complete
 two-process lifecycle cross-product and cannot produce full release evidence.
-`verify.sh --tier full-exhaustive` runs all six full configurations on the
+`verify.sh --tier full-exhaustive` runs all eight full configurations on the
 scheduled weekly or manually dispatched gate. A release claim requires its
 fresh exact-head full attestation; neither smaller tier substitutes for it.
 
@@ -194,15 +222,18 @@ death for stale-job recovery; completed, failed, and canceled outcomes retain
 the exact resource bounds and exit classification. `systemd-run` owns the process group (`KillMode=control-group`) on hosts with a user systemd bus. Hosted CI selects an explicit `portable` containment mode: GNU `timeout` and `prlimit` enforce aggregate address-space, process-count, CPU-time, and wall-clock limits; the runner fails closed if either tool is unavailable.
 
 The runner retains `/tmp/agent-workflow-coordinator-tlc-admission.lock` as the canonical
-publication lock. For an authorized local run on a host where that shared lock is inaccessible,
-the lower-level runner accepts an explicit private lock together with a private queue:
+publication lock. The verifier uses that shared admission path by default. For an isolated
+clean-destination diagnostic on a host where the shared path is inaccessible, the verifier accepts
+an explicit private queue and lock pair:
 
 ```bash
-python3 tools/tlc_runner.py --queue ./private-tlc-queue \\
-  --admission-lock ./private-tlc-admission.lock ...
+formal/handoffctl/verify.sh --tier portable-smoke \
+  --diagnostic-queue /absolute/private-tlc-queue \
+  --diagnostic-admission-lock /absolute/private-tlc-admission.lock
 ```
 
-This option is intentionally CLI-only; there is no environment override. The checked-in
-`formal/handoffctl/verify.sh` workflow never supplies it and therefore cannot silently replace
-canonical publication admission. An isolated run is local diagnostic evidence only and must not be
-reported as a canonical publication or weekly full attestation.
+Both distinct absolute paths are required together and are propagated as explicit runner CLI
+arguments; there is no verifier environment override. The resulting attestation is classified
+`diagnostic-private-admission`, sets `canonical_publication_evidence` to false, and states that it
+cannot support publication or release claims. Hosted and checked-in workflows omit these flags and
+therefore retain the canonical shared admission path and fail-closed publication semantics.

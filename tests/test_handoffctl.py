@@ -8,6 +8,7 @@ import datetime as dt
 import importlib.util
 import json
 import multiprocessing
+import os
 import re
 import subprocess
 import sys
@@ -19,6 +20,12 @@ from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 from typing import Any, cast
 from unittest.mock import patch
+
+from fixture_ids import project_uuid
+
+from tools.fast_receipt_cli import dispatch_fast
+from tools.fast_receipt_worker import process_one, publish_pending, verify_local_commit
+from tools.fast_receipts import ReceiptStore
 
 SOURCE = Path(__file__).resolve().parent.parent / "tools/handoffctl.py"
 sys.path.insert(0, str(SOURCE.parent))
@@ -108,6 +115,13 @@ def concurrent_reconcile(root_value: str, start: Any) -> None:
         CORE.reconcile(do_commit=False)
 
 
+def concurrent_observation_ticket(root_value: str, start: Any, outcomes: Any) -> None:
+    """Reserve an advisory scan ticket from one shared fixture across processes."""
+    configure_child(root_value)
+    start.wait(5)
+    outcomes.put(CORE.reserve_observation_ticket())
+
+
 def concurrent_promote(root_value: str, start: Any) -> None:
     """Promote through the real locked mutation path in a child process."""
     configure_child(root_value)
@@ -122,6 +136,42 @@ def concurrent_promote(root_value: str, start: Any) -> None:
         patch.object(CORE, "dirty_state_paths", return_value=[]),
     ):
         CORE.mutate(args, "promote")
+
+
+def racing_unblock(root_value: str, start: Any, outcomes: Any) -> None:
+    """Race one exact-revision external unblock through the Git authority."""
+    configure_child(root_value)
+    start.wait(5)
+    args = argparse.Namespace(task="AR-0001", expected_revision=1, note="external clear")
+    try:
+        with (
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "dirty_state_paths", return_value=[]),
+        ):
+            CORE.mutate(args, "unblock")
+    except RuntimeError as error:
+        outcomes.put(("rejected", str(error)))
+    else:
+        outcomes.put(("accepted", "open"))
+
+
+def racing_resume(root_value: str, start: Any, outcomes: Any) -> None:
+    """Race one exact paused-session resume through the Git authority."""
+    configure_child(root_value)
+    start.wait(5)
+    args = argparse.Namespace(
+        task="AR-0001", expected_revision=1, session="AR-0001@1", note="resume"
+    )
+    try:
+        with (
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "dirty_state_paths", return_value=[]),
+        ):
+            CORE.mutate(args, "resume")
+    except RuntimeError as error:
+        outcomes.put(("rejected", str(error)))
+    else:
+        outcomes.put(("accepted", "open"))
 
 
 def hold_repository_lock(root_value: str, ready: Any, release: Any) -> None:
@@ -163,7 +213,7 @@ class HandoffTest(unittest.TestCase):
             json.dumps(
                 {
                     "schema_version": 1,
-                    "project_id": "11111111-1111-4111-8111-111111111111",
+                    "project_id": project_uuid("1"),
                     "project_name": "test-project",
                     "project_title": "Test Project",
                     "status_view": True,
@@ -175,7 +225,7 @@ class HandoffTest(unittest.TestCase):
             json.dumps(
                 {
                     "schema_version": 1,
-                    "project_id": "11111111-1111-4111-8111-111111111111",
+                    "project_id": project_uuid("1"),
                     "state_repository": "owner/state",
                     "product_repository": "owner/product",
                 }
@@ -211,6 +261,51 @@ class HandoffTest(unittest.TestCase):
         CORE.write_task(path, meta, "# Test\n")
         self.refresh_views()
         return cast(Path, path)
+
+    def enable_additive_policy(self) -> None:
+        """Commit the supported downstream policy in the isolated state root."""
+        (self.root / "task-spec-policy.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "additional_evidence_classes": [
+                        "hosted",
+                        "offline",
+                        "privacy",
+                        "journey",
+                        "quality",
+                    ],
+                }
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        run_git(["git", "init", "-q", str(self.root)])
+        run_git(["git", "-C", str(self.root), "add", "task-spec-policy.json"])
+        run_git(
+            [
+                "git",
+                "-C",
+                str(self.root),
+                "-c",
+                "user.name=Policy Test",
+                "-c",
+                "user.email=policy@example.invalid",
+                "commit",
+                "-qm",
+                "policy fixture",
+            ],
+        )
+
+    def write_additive_spec(self) -> None:
+        """Write one realistic project spec that uses every additive class."""
+        value = json.loads(
+            (
+                Path(__file__).resolve().parents[1] / "examples/task-specs/downstream-additive.json"
+            ).read_text(encoding="utf-8")
+        )
+        value["spec_ref"] = "spec.json"
+        (self.root / "spec.json").write_text(json.dumps(value) + "\n", encoding="utf-8")
 
     def refresh_views(self) -> None:
         """Refresh both deterministic task views in a fixture repository."""
@@ -266,15 +361,13 @@ class HandoffTest(unittest.TestCase):
             patch.object(
                 CORE.uuid,
                 "uuid4",
-                return_value=CORE.uuid.UUID("33333333-3333-4333-8333-333333333333"),
+                return_value=CORE.uuid.UUID(project_uuid("3")),
             ),
             patch("builtins.print"),
         ):
             run.return_value = subprocess.CompletedProcess([], 0, str(self.root) + "\n", "")
             CORE.cmd_init(args)
-        self.assertEqual(
-            "33333333-3333-4333-8333-333333333333", CORE.project_settings()["project_id"]
-        )
+        self.assertEqual(project_uuid("3"), CORE.project_settings()["project_id"])
         with self.assertRaisesRegex(RuntimeError, "already initialized"):
             CORE.cmd_init(args)
 
@@ -286,7 +379,7 @@ class HandoffTest(unittest.TestCase):
             [],
             {**valid_settings, "schema_version": 2},
             {**valid_settings, "project_id": "bad"},
-            {**valid_settings, "project_id": "11111111-1111-1111-8111-111111111111"},
+            {**valid_settings, "project_id": project_uuid("1").replace("-4111-", "-1111-")},
             {**valid_settings, "project_name": "Bad Name"},
             {**valid_settings, "project_title": ""},
             {**valid_settings, "status_view": "yes"},
@@ -301,7 +394,7 @@ class HandoffTest(unittest.TestCase):
             {},
             {**valid_binding, "schema_version": 2},
             {**valid_binding, "project_id": "bad"},
-            {**valid_binding, "project_id": "11111111-1111-1111-8111-111111111111"},
+            {**valid_binding, "project_id": project_uuid("1").replace("-4111-", "-1111-")},
         ):
             with self.subTest(binding=value), self.assertRaises(RuntimeError):
                 CORE.BINDING.write_text(json.dumps(value))
@@ -323,6 +416,14 @@ class HandoffTest(unittest.TestCase):
 
     def test_binding_checks_root_origin_product_and_caller(self) -> None:
         completed = subprocess.CompletedProcess([], 0, str(self.root) + "\n", "")
+        other = self.root.parent / f"{self.root.name}-other"
+        with (
+            patch.object(CORE, "run", return_value=completed),
+            patch.object(CORE, "git_repository_slug", return_value="owner/state"),
+            patch.object(CORE.Path, "cwd", return_value=self.root),
+            self.assertRaisesRegex(RuntimeError, "must be called"),
+        ):
+            CORE.assert_project_binding(other)
         with (
             patch.object(CORE, "run", return_value=completed),
             patch.object(CORE, "git_repository_slug", return_value="other/state"),
@@ -330,7 +431,6 @@ class HandoffTest(unittest.TestCase):
         ):
             CORE.assert_project_binding()
 
-        other = self.root.parent / f"{self.root.name}-other"
         wrong_top = subprocess.CompletedProcess([], 0, str(other) + "\n", "")
         with (
             patch.object(CORE, "run", return_value=wrong_top),
@@ -532,6 +632,24 @@ class HandoffTest(unittest.TestCase):
         self.assertIn("flowchart LR", status)
         self.assertIn("**1 ARs tracked**", status)
 
+    def test_current_projection_is_actionable_and_keeps_terminal_history_out(self) -> None:
+        self.make_task("AR-0001", status="open", priority="P0")
+        self.make_task("AR-0002", status="in_progress", priority="P1")
+        self.make_task("AR-0003", status="blocked", priority="P2")
+        self.make_task("AR-0004", status="planned", priority="P3")
+        self.make_task("AR-0005", status="future", priority="P4")
+        for index, status in enumerate(("done", "cancelled", "superseded"), start=6):
+            self.make_task(f"AR-000{index}", status=status, priority="P0")
+
+        current = CORE.render_current(CORE.all_tasks())
+
+        for task_id in ("AR-0001", "AR-0002", "AR-0003", "AR-0004", "AR-0005"):
+            self.assertIn(f"[{task_id}]", current)
+        for task_id in ("AR-0006", "AR-0007", "AR-0008"):
+            self.assertNotIn(f"[{task_id}]", current)
+        for label in ("Done", "Cancelled", "Superseded"):
+            self.assertNotIn(f"## {label}", current)
+
     def test_status_is_deterministic_complete_accessible_and_injection_safe(self) -> None:
         self.make_task(
             "AR-0001",
@@ -549,6 +667,33 @@ class HandoffTest(unittest.TestCase):
         self.assertIn("&#93;(https://example.invalid)", status)
         self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", status)
         self.assertNotIn("%%{init: bad}%%", status)
+
+    def test_status_contains_company_role_and_task_rollups_without_private_body_data(self) -> None:
+        self.make_task(
+            "AR-0001",
+            title="Company parent",
+            role="implementer",
+            team="platform",
+            children=["AR-0002"],
+            summary="Public parent summary",
+        )
+        self.make_task(
+            "AR-0002",
+            role="reviewer",
+            team="platform",
+            parent_task_ref="AR-0001",
+            status="done",
+            summary="Public child summary",
+        )
+        tasks = CORE.all_tasks()
+        status = CORE.render_status_view(tasks)
+        self.assertEqual(status, CORE.render_status_view(list(reversed(tasks))))
+        self.assertIn("## Company hierarchy rollup", status)
+        self.assertIn("## Role and team rollup", status)
+        self.assertIn("## Task drill-down", status)
+        self.assertIn("| implementer | platform | 1 | 1 | 0 | 0 |", status)
+        self.assertIn("| Parent | AR-0001 |", status)
+        self.assertNotIn("\n# Test\n", status)
 
     def test_future_series_is_never_omitted_from_graph_or_text_fallback(self) -> None:
         self.make_task("AR-1101")
@@ -666,6 +811,23 @@ class HandoffTest(unittest.TestCase):
 
     def test_claim_update_release_and_stale_revision(self) -> None:
         path = self.make_task()
+        (self.root / "spec.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "spec_ref": "spec.json",
+                    "spec_revision": 1,
+                    "acceptance_predicates": [{"id": "predicate", "description": "pass"}],
+                    "definition_of_done": ["pass"],
+                    "inputs": [{"id": "input", "description": "input"}],
+                    "outputs": [{"id": "output", "description": "output"}],
+                    "allowed_tools": ["source.read"],
+                    "forbidden_tools": [],
+                    "required_evidence_classes": ["contract-test"],
+                    "gates": [{"id": "gate", "description": "pass"}],
+                }
+            )
+        )
         with patch.object(CORE, "commit", return_value=True):
             CORE.mutate(
                 argparse.Namespace(task="AR-0001", owner="worker-a", lease_minutes=10),
@@ -701,6 +863,18 @@ class HandoffTest(unittest.TestCase):
                 ),
                 "update",
             )
+            meta, body = CORE.read_task(path)
+            meta["spec_ref"] = "spec.json"
+            meta["spec_revision"] = 1
+            meta["spec_acceptance"] = {
+                "spec_ref": "spec.json",
+                "spec_revision": 1,
+                "status": "pass",
+                "evidence_class": "contract-test",
+                "evidence_ref": "awq/evidence/AR-0001",
+                "evidence_digest": "sha256:" + "a" * 64,
+            }
+            CORE.write_task(path, meta, body)
             CORE.mutate(
                 argparse.Namespace(
                     task="AR-0001",
@@ -876,7 +1050,15 @@ class HandoffTest(unittest.TestCase):
 
     def test_resume_reopens_only_exact_blocked_revision(self) -> None:
         target = self.make_task("AR-0001", status="blocked")
-        args = argparse.Namespace(task="AR-0001", expected_revision=0, note="blocker cleared")
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(
+                CORE.read_task(target)[0], "pause", "2026-09-24T12:00:00+00:00"
+            ),
+        )
+        args = argparse.Namespace(
+            task="AR-0001", expected_revision=0, session="AR-0001@1", note="blocker cleared"
+        )
         with (
             patch.object(CORE, "dirty_state_paths", return_value=[]),
             self.assertRaisesRegex(RuntimeError, "stale revision"),
@@ -908,9 +1090,364 @@ class HandoffTest(unittest.TestCase):
             self.assertRaisesRegex(RuntimeError, "not blocked"),
         ):
             CORE.mutate(
-                argparse.Namespace(task="AR-0001", expected_revision=2, note="again"),
+                argparse.Namespace(
+                    task="AR-0001", expected_revision=2, session="AR-0001@1", note="again"
+                ),
                 "resume",
             )
+
+    def test_external_unblock_release_reopen_and_claim_preserves_state(self) -> None:
+        target = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+            next_action="Wait for external AR-9999.",
+        )
+        with patch.object(CORE, "commit", return_value=True):
+            CORE.mutate(
+                argparse.Namespace(
+                    task="AR-0001", owner="worker-a", status="blocked", note="external wait"
+                ),
+                "release",
+            )
+        blocked, _ = CORE.read_task(target)
+        self.assertEqual(("blocked", 2), (blocked["status"], blocked["task_revision"]))
+        self.assertEqual([], CORE.storage_backend().load_session_records("AR-0001"))
+
+        with (
+            patch.object(CORE, "dirty_state_paths", return_value=[]),
+            patch.object(CORE, "commit", return_value=True),
+        ):
+            CORE.mutate(
+                argparse.Namespace(
+                    task="AR-0001", expected_revision=2, note="external dependency verified"
+                ),
+                "unblock",
+            )
+            CORE.mutate(
+                argparse.Namespace(task="AR-0001", owner="worker-b", lease_minutes=10),
+                "claim",
+            )
+        reopened, body = CORE.read_task(target)
+        self.assertEqual(("in_progress", 4), (reopened["status"], reopened["task_revision"]))
+        self.assertEqual("Wait for external AR-9999.", reopened["next_action"])
+        self.assertEqual([], CORE.storage_backend().load_session_records("AR-0001"))
+        self.assertIn("external dependency verified", body)
+
+    def test_unblock_and_resume_reject_cross_mode_and_hostile_provenance(self) -> None:
+        target = self.make_task(status="blocked", task_revision=2)
+        blocked, _ = CORE.read_task(target)
+        stale = argparse.Namespace(task="AR-0001", expected_revision=1, note="clear")
+        with self.assertRaisesRegex(RuntimeError, "stale revision"):
+            CORE.apply_unblock(stale, dict(blocked), [])
+
+        active = dict(blocked, owner="worker-a", claim_expires="later")
+        current = argparse.Namespace(task="AR-0001", expected_revision=2, note="clear")
+        with self.assertRaisesRegex(RuntimeError, "active claim metadata"):
+            CORE.apply_unblock(current, active, [])
+        with self.assertRaisesRegex(RuntimeError, "must not be empty"):
+            CORE.apply_unblock(
+                argparse.Namespace(task="AR-0001", expected_revision=2, note=""),
+                dict(blocked),
+                [],
+            )
+
+        old = dict(blocked, task_revision=1)
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(old, "pause", "2026-09-24T12:00:00+00:00"),
+        )
+        preserved = dict(blocked)
+        self.assertEqual("clear", CORE.apply_unblock(current, preserved, []))
+        self.assertEqual("open", preserved["status"])
+
+        pause = CORE.build_session_record(blocked, "pause", "2026-09-24T12:01:00+00:00")
+        CORE.append_session_record(CORE.ROOT, pause)
+        with self.assertRaisesRegex(RuntimeError, "task is paused"):
+            CORE.apply_unblock(current, dict(blocked), [])
+
+        external = self.make_task("AR-0002", status="blocked")
+        external_meta, _ = CORE.read_task(external)
+        with self.assertRaisesRegex(RuntimeError, "no session snapshot"):
+            CORE.apply_resume(
+                argparse.Namespace(
+                    task="AR-0002", expected_revision=1, session="AR-0002@1", note="wrong mode"
+                ),
+                external_meta,
+                [],
+            )
+
+        malformed = dict(pause, step_state={"status": "open", "task_revision": 2})
+        backend = SimpleNamespace(load_session_records=lambda _task: [malformed])
+        with (
+            patch.object(CORE, "storage_backend", return_value=backend),
+            self.assertRaisesRegex(RuntimeError, "provenance is malformed"),
+        ):
+            CORE.apply_unblock(current, dict(blocked), [])
+        duplicate = SimpleNamespace(load_session_records=lambda _task: [pause, dict(pause)])
+        with (
+            patch.object(CORE, "storage_backend", return_value=duplicate),
+            self.assertRaisesRegex(RuntimeError, "provenance is ambiguous"),
+        ):
+            CORE.apply_unblock(current, dict(blocked), [])
+
+    def test_resume_rejects_hostile_pause_provenance_without_mutation(self) -> None:
+        target = self.make_task(status="blocked", task_revision=7)
+        blocked, _ = CORE.read_task(target)
+        pause = CORE.build_session_record(blocked, "pause", "2026-10-08T00:00:00+00:00")
+        args = argparse.Namespace(
+            task="AR-0001", expected_revision=7, session="AR-0001@7", note="resume"
+        )
+        hostile = (
+            ([pause, dict(pause)], "ambiguous"),
+            (
+                [dict(pause, step_state={"status": "open", "task_revision": 7})],
+                "malformed",
+            ),
+            (
+                [dict(pause, step_state={"status": "blocked", "task_revision": 6})],
+                "malformed",
+            ),
+            ([dict(pause, task="AR-0002")], "coherent paused"),
+            ([dict(pause, trigger="update")], "coherent paused"),
+            (
+                [dict(pause, status="open", step_state={"status": "open", "task_revision": 7})],
+                "coherent paused",
+            ),
+        )
+        for records, message in hostile:
+            candidate = dict(blocked)
+            with (
+                self.subTest(message=message),
+                patch.object(
+                    CORE,
+                    "storage_backend",
+                    return_value=SimpleNamespace(
+                        load_session_records=lambda _task, value=records: value
+                    ),
+                ),
+                self.assertRaisesRegex(RuntimeError, message),
+            ):
+                CORE.apply_resume(args, candidate, [])
+            self.assertEqual(blocked, candidate)
+
+    def test_git_resume_hostile_histories_stutter_before_publication(self) -> None:
+        target = self.make_task(status="blocked", task_revision=7)
+        blocked, _ = CORE.read_task(target)
+        pause = CORE.build_session_record(blocked, "pause", "2026-10-08T00:00:00+00:00")
+        histories = (
+            [pause, dict(pause)],
+            [
+                dict(
+                    pause,
+                    task_revision=True,
+                    step_state={"status": "blocked", "task_revision": True},
+                )
+            ],
+            [dict(pause, step_state={"status": "open", "task_revision": 7})],
+            [dict(pause, step_state={"status": "blocked", "task_revision": 6})],
+            [dict(pause, task="AR-0002")],
+            [dict(pause, trigger="update")],
+        )
+        session = self.root / "sessions/AR-0001.jsonl"
+        session.parent.mkdir()
+        args = argparse.Namespace(
+            task="AR-0001", expected_revision=7, session="AR-0001@7", note="resume"
+        )
+        for records in histories:
+            session.write_text(
+                "".join(json.dumps(record, sort_keys=True) + "\n" for record in records)
+            )
+            before = {
+                path: path.read_bytes()
+                for path in (target, self.root / "CURRENT.md", self.root / "STATUS.md", session)
+            }
+            with (
+                self.subTest(records=records),
+                patch.object(CORE, "dirty_state_paths", return_value=[]),
+                patch.object(CORE, "commit") as commit,
+                patch.object(CORE, "push_replica") as push,
+                self.assertRaises(RuntimeError),
+            ):
+                CORE.mutate(args, "resume")
+            self.assertTrue(all(path.read_bytes() == content for path, content in before.items()))
+            commit.assert_not_called()
+            push.assert_not_called()
+
+    def test_unblock_failure_restores_task_views_and_session_history(self) -> None:
+        target = self.make_task(status="blocked")
+        before = {
+            path: path.read_text()
+            for path in (target, self.root / "CURRENT.md", self.root / "STATUS.md")
+        }
+        real_atomic = CORE.atomic
+
+        def fail_task(path: Path, content: str) -> None:
+            if path == target:
+                raise OSError("injected unblock failure")
+            real_atomic(path, content)
+
+        with (
+            patch.object(CORE, "dirty_state_paths", return_value=[]),
+            patch.object(CORE, "atomic", side_effect=fail_task),
+            self.assertRaisesRegex(OSError, "injected unblock failure"),
+        ):
+            CORE.mutate(
+                argparse.Namespace(task="AR-0001", expected_revision=1, note="external clear"),
+                "unblock",
+            )
+        self.assertTrue(all(path.read_text() == content for path, content in before.items()))
+        self.assertEqual([], CORE.storage_backend().load_session_records("AR-0001"))
+
+    def test_resume_failure_restores_task_views_and_preserves_pause_history(self) -> None:
+        target = self.make_task(status="blocked")
+        blocked, _ = CORE.read_task(target)
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(blocked, "pause", "2026-10-08T00:00:00+00:00"),
+        )
+        session = self.root / "sessions/AR-0001.jsonl"
+        before = {
+            path: path.read_text()
+            for path in (target, self.root / "CURRENT.md", self.root / "STATUS.md", session)
+        }
+        real_atomic = CORE.atomic
+
+        def fail_task(path: Path, content: str) -> None:
+            if path == target:
+                raise OSError("injected resume failure")
+            real_atomic(path, content)
+
+        with (
+            patch.object(CORE, "dirty_state_paths", return_value=[]),
+            patch.object(CORE, "atomic", side_effect=fail_task),
+            self.assertRaisesRegex(OSError, "injected resume failure"),
+        ):
+            CORE.mutate(
+                argparse.Namespace(
+                    task="AR-0001",
+                    expected_revision=1,
+                    session="AR-0001@1",
+                    note="resume",
+                ),
+                "resume",
+            )
+        self.assertTrue(all(path.read_text() == content for path, content in before.items()))
+
+    def test_pause_freezes_lease_and_resume_reloads_exact_snapshot(self) -> None:
+        target = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+            next_action="Continue the verified step.",
+        )
+        pause = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            note="operator pause",
+        )
+        with patch.object(CORE, "commit", return_value=True):
+            CORE.mutate(pause, "pause")
+        paused, _ = CORE.read_task(target)
+        self.assertEqual(
+            ("blocked", "", ""), (paused["status"], paused["owner"], paused["claim_expires"])
+        )
+        self.assertEqual(2, paused["task_revision"])
+        snapshot = CORE.latest_session(CORE.ROOT, "AR-0001")
+        self.assertIsNotNone(snapshot)
+        assert snapshot is not None
+        self.assertEqual(
+            ("pause", "blocked", 2),
+            (snapshot["trigger"], snapshot["status"], snapshot["task_revision"]),
+        )
+
+        resume = argparse.Namespace(
+            task="AR-0001", expected_revision=2, session="AR-0001@2", note="continue"
+        )
+        with (
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "dirty_state_paths", return_value=[]),
+        ):
+            CORE.mutate(resume, "resume")
+        resumed, _ = CORE.read_task(target)
+        self.assertEqual("open", resumed["status"])
+        self.assertEqual("Continue the verified step.", resumed["next_action"])
+
+    def test_pause_failure_restores_authority_and_session(self) -> None:
+        target = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        before = target.read_text()
+        pause = argparse.Namespace(
+            task="AR-0001", owner="worker-a", expected_revision=1, note="pause"
+        )
+        real_atomic = CORE.atomic
+
+        failed = False
+
+        def fail_task_once(path: Path, text: str) -> None:
+            nonlocal failed
+            if path == target and not failed:
+                failed = True
+                raise OSError("injected pause failure")
+            real_atomic(path, text)
+
+        with (
+            patch.object(CORE, "atomic", side_effect=fail_task_once),
+            self.assertRaisesRegex(OSError, "injected pause failure"),
+        ):
+            CORE.mutate(pause, "pause")
+        self.assertEqual(before, target.read_text())
+        self.assertIsNone(CORE.latest_session(CORE.ROOT, "AR-0001"))
+
+    def test_pause_and_resume_reject_invalid_authority_and_references(self) -> None:
+        target = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        meta, _ = CORE.read_task(target)
+        args = argparse.Namespace(
+            task="AR-0001", owner="worker-b", expected_revision=1, note="pause"
+        )
+        with self.assertRaisesRegex(RuntimeError, "owned by worker-a"):
+            CORE.apply_pause(args, meta)
+        args.owner = "worker-a"
+        args.expected_revision = 0
+        with self.assertRaisesRegex(RuntimeError, "stale revision"):
+            CORE.apply_pause(args, meta)
+        args.expected_revision = 1
+        meta["status"] = "open"
+        with self.assertRaisesRegex(RuntimeError, "not in progress"):
+            CORE.apply_pause(args, meta)
+        meta["status"] = "in_progress"
+        args.note = ""
+        with self.assertRaisesRegex(RuntimeError, "must not be empty"):
+            CORE.apply_pause(args, meta)
+
+        with self.assertRaisesRegex(RuntimeError, "TASK@REVISION"):
+            CORE._session_for_reference("AR-0001", "AR-0002@1")
+        with self.assertRaisesRegex(RuntimeError, "no session snapshot"):
+            CORE._session_for_reference("AR-0001", "AR-0001@9")
+        with self.assertRaisesRegex(RuntimeError, "^no session snapshot at requested revision$"):
+            CORE._session_for_reference("AR-0001", "AR-0001@" + "9" * 4000)
+
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(meta, "update", "2026-09-24T12:00:00+00:00"),
+        )
+        with self.assertRaisesRegex(RuntimeError, "not a coherent paused snapshot"):
+            CORE._session_for_reference("AR-0001", "AR-0001@1")
+
+        resume_meta = dict(meta, status="blocked", owner="worker-a", claim_expires="later")
+        resume = argparse.Namespace(
+            task="AR-0001", expected_revision=1, session="AR-0001@1", note="resume"
+        )
+        with self.assertRaisesRegex(RuntimeError, "active claim metadata"):
+            CORE.apply_resume(resume, resume_meta, [])
 
     def test_promote_failure_restores_task_and_generated_views(self) -> None:
         path = self.make_task(status="planned")
@@ -1116,6 +1653,24 @@ class HandoffTest(unittest.TestCase):
         with CORE.locked(timeout=0.1):
             pass
 
+    def test_private_lock_trace_records_wait_hold_and_timeout(self) -> None:
+        trace = self.root / "lock-trace.jsonl"
+        with (
+            patch.dict(os.environ, {"HANDOFFCTL_LOCK_TRACE": str(trace)}),
+            CORE.locked(phase="fixture_hold"),
+            self.assertRaisesRegex(CORE.LockTimeoutError, "LOCK_TIMEOUT"),
+            CORE.locked(timeout=0, phase="fixture_wait"),
+        ):
+            pass
+        records = [json.loads(line) for line in trace.read_text().splitlines()]
+        self.assertEqual({"fixture_hold", "fixture_wait"}, {item["phase"] for item in records})
+        self.assertTrue(
+            next(item for item in records if item["phase"] == "fixture_wait")["timeout"]
+        )
+        self.assertIsInstance(records[0]["ended_ns"], int)
+        with patch.dict(os.environ, {"HANDOFFCTL_LOCK_TRACE": str(self.root)}):
+            CORE.trace_lock_metric("fixture", "shared", 0, 0)
+
     def test_lock_yields_capability_and_invalidates_after_scope(self) -> None:
         with CORE.locked(timeout=0.1) as guard:
             self.assertEqual(CORE.coordinator_lock_path().resolve(), guard.path)
@@ -1239,6 +1794,52 @@ class HandoffTest(unittest.TestCase):
             CORE.render_status_view(CORE.all_tasks()), (self.root / "STATUS.md").read_text()
         )
 
+    def test_parallel_external_unblocks_have_one_linearization_winner(self) -> None:
+        self.make_task(status="blocked")
+        start = multiprocessing.Event()
+        outcomes: Any = multiprocessing.Queue()
+        workers = [
+            multiprocessing.Process(target=racing_unblock, args=(str(self.root), start, outcomes))
+            for _ in range(2)
+        ]
+        for process in workers:
+            process.start()
+        start.set()
+        for process in workers:
+            process.join(10)
+            self.assertEqual(0, process.exitcode)
+        self.assertEqual(
+            ["accepted", "rejected"], sorted(outcomes.get(timeout=2)[0] for _ in workers)
+        )
+        meta, _ = CORE.read_task(CORE.locate("AR-0001")[0])
+        self.assertEqual(("open", 2), (meta["status"], meta["task_revision"]))
+        self.assertEqual([], CORE.storage_backend().load_session_records("AR-0001"))
+
+    def test_parallel_paused_resumes_have_one_linearization_winner(self) -> None:
+        target = self.make_task(status="blocked")
+        blocked, _ = CORE.read_task(target)
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(blocked, "pause", "2026-10-08T00:00:00+00:00"),
+        )
+        start = multiprocessing.Event()
+        outcomes: Any = multiprocessing.Queue()
+        workers = [
+            multiprocessing.Process(target=racing_resume, args=(str(self.root), start, outcomes))
+            for _ in range(2)
+        ]
+        for process in workers:
+            process.start()
+        start.set()
+        for process in workers:
+            process.join(10)
+            self.assertEqual(0, process.exitcode)
+        self.assertEqual(
+            ["accepted", "rejected"], sorted(outcomes.get(timeout=2)[0] for _ in workers)
+        )
+        final, _ = CORE.read_task(target)
+        self.assertEqual(("open", 2), (final["status"], final["task_revision"]))
+
     def test_concurrent_claim_and_reconcile_keep_status_current(self) -> None:
         self.make_task()
         start = multiprocessing.Event()
@@ -1329,12 +1930,8 @@ class HandoffTest(unittest.TestCase):
         binary.write_bytes(b"\\xff")
         large = self.root / "large.md"
         large.write_text("x" * 200001)
-        sample_uuid = "33333333-3333-4333-8333-333333333333"
-        for relative in (
-            Path("tools/handoffctl.py"),
-            Path("tests/test_handoffctl.py"),
-            Path("tests/test_sqlite_storage.py"),
-        ):
+        sample_uuid = project_uuid("3")
+        for relative in (Path("tools/handoffctl.py"),):
             fixture = self.root / relative
             fixture.parent.mkdir(exist_ok=True)
             fixture.write_text(sample_uuid)
@@ -1344,8 +1941,6 @@ class HandoffTest(unittest.TestCase):
         self.assertIn("exceeds 200 KiB", errors)
         self.assertIn("notes.md: session-like UUID", errors)
         self.assertNotIn("tools/handoffctl.py: session-like UUID", errors)
-        self.assertNotIn("tests/test_handoffctl.py: session-like UUID", errors)
-        self.assertNotIn("tests/test_sqlite_storage.py: session-like UUID", errors)
         self.assertNotIn("coordinator.binding.json: session-like UUID", errors)
         self.assertIn("coordinator.binding.json: possible credential", errors)
 
@@ -1448,6 +2043,309 @@ class HandoffTest(unittest.TestCase):
                     "update",
                 )
 
+    def test_heartbeat_optional_revision_fences_stale_worker(self) -> None:
+        path = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        initial = path.read_bytes()
+        with patch.object(CORE, "commit", return_value=True) as commit:
+            with self.assertRaisesRegex(RuntimeError, "stale revision"):
+                CORE.mutate(
+                    argparse.Namespace(
+                        task="AR-0001",
+                        owner="worker-a",
+                        lease_minutes=20,
+                        expected_revision=2,
+                    ),
+                    "heartbeat",
+                )
+            self.assertEqual(initial, path.read_bytes())
+            commit.assert_not_called()
+            CORE.mutate(
+                argparse.Namespace(
+                    task="AR-0001",
+                    owner="worker-a",
+                    lease_minutes=20,
+                    expected_revision=1,
+                ),
+                "heartbeat",
+            )
+            self.assertEqual(2, CORE.read_task(path)[0]["task_revision"])
+            with self.assertRaisesRegex(RuntimeError, "stale revision"):
+                CORE.mutate(
+                    argparse.Namespace(
+                        task="AR-0001",
+                        owner="worker-a",
+                        lease_minutes=20,
+                        expected_revision=1,
+                    ),
+                    "heartbeat",
+                )
+            self.assertEqual(2, CORE.read_task(path)[0]["task_revision"])
+
+    def test_fast_heartbeat_marks_local_commit_without_reporting_push(self) -> None:
+        path = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        receipt_id = "a" * 32
+        args = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            lease_minutes=20,
+            expected_revision=1,
+            _receipt_id=receipt_id,
+        )
+        with (
+            patch.object(CORE, "commit", return_value=True) as commit,
+            patch.object(CORE, "push_replica") as push,
+            patch.object(CORE, "current_commit_oid", return_value="b" * 40),
+        ):
+            CORE.mutate(args, "heartbeat")
+        self.assertIn(f"Handoffctl-Receipt: {receipt_id}", commit.call_args.args[0])
+        push.assert_not_called()
+        self.assertEqual("b" * 40, args._committed_oid)
+        self.assertEqual(2, args._committed_revision)
+        self.assertEqual(2, CORE.read_task(path)[0]["task_revision"])
+
+    def test_fast_heartbeat_rejects_missing_fence_or_invalid_marker(self) -> None:
+        path = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        before = path.read_bytes()
+        for receipt_id, revision in (("wrong", 1), ("a" * 32, None)):
+            with self.subTest(receipt_id=receipt_id, revision=revision):
+                with self.assertRaisesRegex(RuntimeError, "invalid fast receipt"):
+                    CORE.mutate(
+                        argparse.Namespace(
+                            task="AR-0001",
+                            owner="worker-a",
+                            lease_minutes=20,
+                            expected_revision=revision,
+                            _receipt_id=receipt_id,
+                        ),
+                        "heartbeat",
+                    )
+                self.assertEqual(before, path.read_bytes())
+
+    def test_real_signed_fast_heartbeat_receipt_matches_git_commit(self) -> None:
+        path = self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        run_git(["git", "init", "-q", "--initial-branch=main", str(self.root)])
+        for name, value in (
+            ("user.name", "Receipt Fixture"),
+            ("user.email", "fixture@example.invalid"),
+            ("gpg.format", "ssh"),
+        ):
+            run_git(["git", "-C", str(self.root), "config", name, value])
+        keys = TemporaryDirectory()
+        self.addCleanup(keys.cleanup)
+        key = Path(keys.name) / "signing-key"
+        subprocess.run(  # noqa: S603
+            ["/usr/bin/ssh-keygen", "-q", "-t", "ed25519", "-N", "", "-f", str(key)],
+            check=True,
+        )
+        allowed = Path(keys.name) / "allowed-signers"
+        allowed.write_text(
+            f"fixture@example.invalid {key.with_suffix('.pub').read_text().strip()}\n"
+        )
+        run_git(["git", "-C", str(self.root), "config", "user.signingkey", str(key)])
+        run_git(["git", "-C", str(self.root), "config", "gpg.ssh.allowedSignersFile", str(allowed)])
+        run_git(
+            [
+                "git",
+                "-C",
+                str(self.root),
+                "add",
+                ".handoffctl.json",
+                "coordinator.binding.json",
+                "tasks",
+                "CURRENT.md",
+                "STATUS.md",
+            ]
+        )
+        run_git(["git", "-C", str(self.root), "commit", "-qm", "fixture baseline"])
+        remote = Path(keys.name) / "remote.git"
+        run_git(["git", "init", "--bare", "-q", "--initial-branch=main", str(remote)])
+        run_git(["git", "-C", str(self.root), "remote", "add", "origin", str(remote)])
+        run_git(["git", "-C", str(self.root), "push", "origin", "HEAD:refs/heads/main"])
+        with (
+            patch.object(CORE, "assert_project_binding"),
+            patch("builtins.print") as printed_receipt,
+        ):
+            dispatch_fast(
+                CORE,
+                argparse.Namespace(
+                    fast_action="heartbeat",
+                    key="worker-a:heartbeat:1",
+                    task="AR-0001",
+                    owner="worker-a",
+                    expected_revision=1,
+                    lease_minutes=20,
+                ),
+            )
+        queued = json.loads(printed_receipt.call_args.args[0])
+        self.assertEqual("queued-local", queued["phase"])
+        store = ReceiptStore(
+            CORE.coordinator_lock_path().parent / "fast-receipts.sqlite3", project_uuid("1")
+        )
+        self.addCleanup(store.close)
+        with patch.object(CORE, "assert_project_binding"):
+            result = process_one(CORE, store)
+        assert result is not None
+        self.assertEqual("completed-local", result["phase"])
+        self.assertEqual(2, result["result_revision"])
+        self.assertEqual(2, CORE.read_task(path)[0]["task_revision"])
+        self.assertEqual(queued["receipt_id"], result["receipt_id"])
+        run_git(["git", "-C", str(self.root), "verify-commit", str(result["commit_oid"])])
+        CORE.CONFIG.parent.mkdir(exist_ok=True)
+        CORE.CONFIG.write_text(json.dumps({"push_enabled": True}))
+        with patch.object(CORE, "assert_project_binding"):
+            publication = publish_pending(CORE, store)
+        self.assertEqual(1, len(publication))
+        self.assertEqual("published-remote", publication[0]["phase"], publication[0])
+        self.assertEqual(result["commit_oid"], publication[0]["remote_oid"])
+        self.assertEqual([], store.pending_publication())
+
+        view_forged = store.enqueue_heartbeat(
+            key="worker-a:heartbeat:2",
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=2,
+            lease_minutes=20,
+        )
+        meta, body = CORE.read_task(path)
+        meta["task_revision"] = 3
+        meta["updated_at"] = CORE.now()
+        meta["claim_expires"] = (
+            dt.datetime.fromisoformat(meta["updated_at"]) + dt.timedelta(minutes=20)
+        ).isoformat()
+        CORE.write_task(
+            path,
+            meta,
+            CORE._transition_note(body, "Heartbeat by worker-a.", meta["updated_at"]),
+        )
+        (self.root / "CURRENT.md").write_text("corrupted generated view\n")
+        run_git(
+            ["git", "-C", str(self.root), "add", str(path.relative_to(self.root)), "CURRENT.md"]
+        )
+        run_git(
+            [
+                "git",
+                "-C",
+                str(self.root),
+                "commit",
+                "-S",
+                "-s",
+                "-m",
+                "chore(state): heartbeat AR-0001",
+                "-m",
+                f"Handoffctl-Receipt: {view_forged['receipt_id']}",
+            ]
+        )
+        with self.assertRaisesRegex(RuntimeError, "task projection does not match"):
+            verify_local_commit(CORE, view_forged, CORE.current_commit_oid())
+        claimed = store.claim_next()
+        assert claimed is not None
+        self.assertEqual(view_forged["receipt_id"], claimed["receipt_id"])
+        store.record_ambiguity(str(view_forged["receipt_id"]), "TEST_FORGED")
+
+        field_forged = store.enqueue_heartbeat(
+            key="worker-a:heartbeat:3",
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=3,
+            lease_minutes=20,
+        )
+        meta, body = CORE.read_task(path)
+        meta["priority"] = "P0"
+        meta["task_revision"] = 4
+        meta["updated_at"] = CORE.now()
+        meta["claim_expires"] = (
+            dt.datetime.fromisoformat(meta["updated_at"]) + dt.timedelta(minutes=20)
+        ).isoformat()
+        CORE.write_task(path, meta, body)
+        run_git(["git", "-C", str(self.root), "add", str(path.relative_to(self.root))])
+        run_git(
+            [
+                "git",
+                "-C",
+                str(self.root),
+                "commit",
+                "-S",
+                "-s",
+                "-m",
+                "chore(state): heartbeat AR-0001",
+                "-m",
+                f"Handoffctl-Receipt: {field_forged['receipt_id']}",
+            ]
+        )
+        with self.assertRaisesRegex(RuntimeError, "task projection does not match"):
+            verify_local_commit(CORE, field_forged, CORE.current_commit_oid())
+        claimed = store.claim_next()
+        assert claimed is not None
+        self.assertEqual(field_forged["receipt_id"], claimed["receipt_id"])
+        store.record_ambiguity(str(field_forged["receipt_id"]), "TEST_FORGED")
+
+        meta, body = CORE.read_task(path)
+        meta.update({"status": "planned", "owner": "", "claim_expires": ""})
+        CORE.write_task(path, meta, body)
+        CORE.write_rendered_task_views(CORE.rendered_task_views(CORE.all_tasks()))
+        run_git(["git", "-C", str(self.root), "add", "-A"])
+        run_git(["git", "-C", str(self.root), "commit", "-qS", "-m", "fixture promote baseline"])
+        promote = store.enqueue_promote(
+            key="worker-a:promote:1",
+            task="AR-0001",
+            expected_revision=4,
+            note="Dependencies verified.",
+        )
+        with patch.object(CORE, "assert_project_binding"):
+            promoted = process_one(CORE, store)
+        assert promoted is not None
+        self.assertEqual("completed-local", promoted["phase"], promoted)
+        self.assertEqual(promote["receipt_id"], promoted["receipt_id"])
+        self.assertEqual(5, promoted["result_revision"])
+        self.assertEqual("open", CORE.read_task(path)[0]["status"])
+        run_git(["git", "-C", str(self.root), "verify-commit", str(promoted["commit_oid"])])
+
+        claim = store.enqueue_claim(
+            key="worker-a:claim:1",
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=5,
+            lease_minutes=20,
+        )
+        with patch.object(CORE, "assert_project_binding"):
+            claimed = process_one(CORE, store)
+        assert claimed is not None
+        self.assertEqual("completed-local", claimed["phase"], claimed)
+        self.assertEqual(claim["receipt_id"], claimed["receipt_id"])
+        self.assertEqual(6, claimed["result_revision"])
+        self.assertEqual("in_progress", CORE.read_task(path)[0]["status"])
+        run_git(["git", "-C", str(self.root), "verify-commit", str(claimed["commit_oid"])])
+
+        stale = store.enqueue_claim(
+            key="worker-b:claim:stale",
+            task="AR-0001",
+            owner="worker-b",
+            expected_revision=5,
+            lease_minutes=20,
+        )
+        with patch.object(CORE, "assert_project_binding"):
+            rejected = process_one(CORE, store)
+        assert rejected is not None
+        self.assertEqual("rejected", rejected["phase"])
+        self.assertEqual(stale["receipt_id"], rejected["receipt_id"])
+        self.assertEqual(6, CORE.read_task(path)[0]["task_revision"])
+
     def fake_scan(self) -> dict[str, object]:
         return {
             "remote_main": "a" * 40,
@@ -1461,8 +2359,10 @@ class HandoffTest(unittest.TestCase):
     def test_project_scan_covers_dirty_and_detached_worktrees(self) -> None:  # noqa: C901
         product = self.root / "agent-systems-benchmark"
         second = self.root / "agent-systems-benchmark-two"
+        state_task = self.root / "state-task"
         product.mkdir()
         second.mkdir()
+        state_task.mkdir()
         CORE.CONFIG.parent.mkdir()
         CORE.CONFIG.write_text(
             json.dumps(
@@ -1474,12 +2374,22 @@ class HandoffTest(unittest.TestCase):
             )
         )
 
+        calls: list[list[str]] = []
+
         def fake_run(args: list[str], **_: object) -> object:  # noqa: C901
+            calls.append(args)
             joined = " ".join(args)
             stdout = ""
             returncode = 0
             if "worktree list" in joined:
-                stdout = f"worktree {product}\n\nworktree {second}\n"
+                checkout = args[args.index("-C") + 1]
+                if checkout == str(CORE.ROOT):
+                    stdout = f"worktree {CORE.ROOT}\n\nworktree {state_task}\n"
+                else:
+                    stdout = (
+                        f"worktree {product}\nHEAD {'b' * 40}\nbranch refs/heads/main\n\n"
+                        f"worktree {second}\nHEAD {'c' * 40}\ndetached\n"
+                    )
             elif "symbolic-ref" in joined and str(second) in joined:
                 returncode = 1
             elif "symbolic-ref" in joined:
@@ -1508,6 +2418,96 @@ class HandoffTest(unittest.TestCase):
         self.assertEqual(2, len(state["worktrees"]))
         self.assertEqual(1, state["worktrees"][0]["dirty"])
         self.assertEqual("DETACHED", state["worktrees"][1]["branch"])
+        self.assertFalse(any("symbolic-ref" in args for args in calls))
+        self.assertFalse(any("rev-parse" in args and str(second) in args for args in calls))
+
+    def test_project_scan_excludes_all_coordinator_worktrees(self) -> None:
+        product = self.root / "product"
+        state_task = self.root / "state-task"
+        product.mkdir()
+        state_task.mkdir()
+        CORE.CONFIG.parent.mkdir()
+        CORE.CONFIG.write_text(
+            json.dumps(
+                {
+                    "projects_root": str(self.root),
+                    "product_worktree": product.name,
+                    "github_repository": "owner/repo",
+                }
+            )
+        )
+
+        def fake_run(args: list[str], **_: object) -> object:
+            joined = " ".join(args)
+            if "worktree list" in joined:
+                checkout = args[args.index("-C") + 1]
+                if checkout == str(CORE.ROOT):
+                    stdout = f"worktree {CORE.ROOT}\n\nworktree {state_task}\n"
+                else:
+                    stdout = f"worktree {product}\n"
+                return subprocess.CompletedProcess(args, 0, stdout=stdout, stderr="")
+            if args[:3] in (["gh", "pr", "list"], ["gh", "run", "list"]):
+                return subprocess.CompletedProcess(args, 0, stdout="[]", stderr="")
+            if "ls-remote" in joined:
+                return subprocess.CompletedProcess(args, 0, stdout=("a" * 40) + "\n", stderr="")
+            if "symbolic-ref" in joined:
+                return subprocess.CompletedProcess(args, 0, stdout="main\n", stderr="")
+            if "status --porcelain" in joined:
+                return subprocess.CompletedProcess(args, 0, stdout="", stderr="")
+            if "rev-list" in joined:
+                return subprocess.CompletedProcess(args, 0, stdout="0 0\n", stderr="")
+            return subprocess.CompletedProcess(args, 0, stdout=("b" * 40) + "\n", stderr="")
+
+        with patch.object(CORE, "run", side_effect=fake_run):
+            state = CORE.project_scan()
+        self.assertEqual(
+            {product.name},
+            {item["key"] for item in state["worktrees"]},
+        )
+
+    def test_project_scan_observes_worktrees_concurrently_in_inventory_order(self) -> None:
+        product = self.root / "product"
+        second = self.root / "second"
+        product.mkdir()
+        second.mkdir()
+        CORE.CONFIG.parent.mkdir()
+        CORE.CONFIG.write_text(
+            json.dumps(
+                {
+                    "projects_root": str(self.root),
+                    "product_worktree": product.name,
+                    "github_repository": "owner/repo",
+                }
+            )
+        )
+        simultaneous = threading.Barrier(2, timeout=2)
+
+        def fake_run(args: list[str], **_: object) -> subprocess.CompletedProcess[str]:
+            joined = " ".join(args)
+            if "worktree list" in joined:
+                stdout = (
+                    f"worktree {CORE.ROOT}\n"
+                    if str(CORE.ROOT) in args
+                    else f"worktree {product}\n\nworktree {second}\n"
+                )
+            elif args[:2] == ["gh", "pr"] or args[:2] == ["gh", "run"]:
+                stdout = "[]"
+            else:
+                stdout = "a" * 40 + "\n"
+            return subprocess.CompletedProcess(args, 0, stdout=stdout, stderr="")
+
+        def fake_scan(item: tuple[Path, str, str]) -> dict[str, object]:
+            simultaneous.wait()
+            if item[0] == product:
+                time.sleep(0.01)
+            return {"key": item[0].name}
+
+        with (
+            patch.object(CORE, "run", side_effect=fake_run),
+            patch.object(CORE, "scan_worktree", side_effect=fake_scan),
+        ):
+            state = CORE.project_scan()
+        self.assertEqual([product.name, second.name], [item["key"] for item in state["worktrees"]])
 
     def test_changed_paths_preserves_existing_and_deleted_semantics(self) -> None:
         changed = self.root / "changed.md"
@@ -1531,6 +2531,394 @@ class HandoffTest(unittest.TestCase):
             (self.root / "PROJECT_STATE.md").write_text("stale")
             errors = CORE.validate(live=True)
             self.assertIn("PROJECT_STATE.md is stale", errors)
+
+    def test_git_reconcile_observes_product_without_authority_lock(self) -> None:
+        self.make_task()
+        observed = False
+
+        def scan_without_lock() -> Any:
+            nonlocal observed
+            # A second descriptor must be able to acquire the same lock while
+            # the slow external observation phase is in progress.
+            with CORE.locked(timeout=0):
+                observed = True
+            return self.fake_scan()
+
+        with patch.object(CORE, "project_scan", side_effect=scan_without_lock):
+            self.assertTrue(CORE.reconcile(do_commit=False))
+        self.assertTrue(observed)
+
+    def test_git_snapshot_observes_product_without_shared_lock(self) -> None:
+        self.make_task()
+
+        def scan_without_lock() -> Any:
+            with CORE.locked(timeout=0):
+                pass
+            return self.fake_scan()
+
+        with patch.object(CORE, "project_scan", side_effect=scan_without_lock):
+            CORE.reconcile(do_commit=False)
+            with patch.object(CORE, "run", return_value=SimpleNamespace(stdout="state\n")):
+                CORE.cmd_snapshot()
+
+    def test_git_doctor_scans_unlocked_but_validates_under_shared_lock(self) -> None:
+        self.make_task()
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            CORE.reconcile(do_commit=False)
+        actual_validate = CORE.validate
+
+        def unlocked_scan() -> Any:
+            with CORE.locked(timeout=0):
+                pass
+            return self.fake_scan()
+
+        def locked_validation(*, live: bool, live_state: Any) -> list[str]:
+            with (
+                self.assertRaises(CORE.LockTimeoutError),
+                CORE.locked(timeout=0),
+            ):
+                pass
+            return cast(list[str], actual_validate(live=live, live_state=live_state))
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=unlocked_scan),
+            patch.object(CORE, "validate", side_effect=locked_validation),
+        ):
+            self.assertEqual(0, CORE.cmd_doctor(live=True))
+
+    def test_git_doctor_accepts_equivalent_publication_during_scan(self) -> None:
+        self.make_task()
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            CORE.reconcile(do_commit=False)
+        scans = 0
+
+        def interleaved_scan() -> Any:
+            nonlocal scans
+            scans += 1
+            if scans == 1:
+                with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+                    CORE.reconcile(do_commit=False)
+            return self.fake_scan()
+
+        with patch.object(CORE, "project_scan", side_effect=interleaved_scan):
+            self.assertEqual(0, CORE.cmd_doctor(live=True))
+        self.assertEqual(1, scans)
+
+    def test_git_doctor_retries_changed_publication_during_scan(self) -> None:
+        self.make_task()
+        older = self.fake_scan()
+        newer = self.fake_scan()
+        newer["remote_main"] = "c" * 40
+        with patch.object(CORE, "project_scan", return_value=older):
+            CORE.reconcile(do_commit=False)
+        scans = 0
+
+        def interleaved_scan() -> Any:
+            nonlocal scans
+            scans += 1
+            if scans == 1:
+                with patch.object(CORE, "project_scan", return_value=newer):
+                    CORE.reconcile(do_commit=False)
+                return older
+            return newer
+
+        with patch.object(CORE, "project_scan", side_effect=interleaved_scan):
+            self.assertEqual(0, CORE.cmd_doctor(live=True))
+        self.assertEqual(2, scans)
+
+    def test_git_doctor_fails_boundedly_if_every_scan_is_overtaken(self) -> None:
+        self.make_task()
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            CORE.reconcile(do_commit=False)
+        scans = 0
+
+        def overtaken_scan() -> Any:
+            nonlocal scans
+            scans += 1
+            newer = self.fake_scan()
+            newer["remote_main"] = "c" * 40
+            with patch.object(CORE, "project_scan", return_value=newer):
+                CORE.reconcile(do_commit=False)
+            return self.fake_scan()
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=overtaken_scan),
+            patch("builtins.print") as printed,
+        ):
+            self.assertEqual(1, CORE.cmd_doctor(live=True))
+        self.assertEqual(3, scans)
+        printed.assert_called_once_with("ERROR: OBSERVATION_CHANGED: retry doctor")
+
+    def test_git_doctor_does_not_hide_structural_error_behind_overtaken_scan(self) -> None:
+        self.make_task()
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            CORE.reconcile(do_commit=False)
+        scans = 0
+
+        def overtaken_scan() -> Any:
+            nonlocal scans
+            scans += 1
+            with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+                CORE.reconcile(do_commit=False)
+            return self.fake_scan()
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=overtaken_scan),
+            patch.object(
+                CORE,
+                "doctor_checks",
+                return_value=["PROJECT_STATE.md is stale", "structural error"],
+            ),
+            patch("builtins.print") as printed,
+        ):
+            self.assertEqual(1, CORE.cmd_doctor(live=True))
+        self.assertEqual(1, scans)
+        printed.assert_called_once_with("ERROR: PROJECT_STATE.md is stale\nERROR: structural error")
+
+    def test_git_doctor_rejects_changed_binding_after_scan(self) -> None:
+        self.make_task()
+
+        def changed_binding_scan() -> Any:
+            binding = json.loads(CORE.BINDING.read_text())
+            binding["product_repository"] = "owner/other"
+            CORE.BINDING.write_text(json.dumps(binding))
+            return self.fake_scan()
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=changed_binding_scan),
+            self.assertRaisesRegex(RuntimeError, "OBSERVATION_INPUT_CHANGED"),
+        ):
+            CORE.cmd_doctor(live=True)
+
+    def test_git_reconcile_does_not_publish_an_overtaken_scan(self) -> None:
+        self.make_task(worktree_key="worker-one")
+        older = self.fake_scan()
+        newer = self.fake_scan()
+        for state, head in ((older, "a" * 40), (newer, "b" * 40)):
+            state["worktrees"] = [
+                {
+                    "key": "worker-one",
+                    "branch": "feature/one",
+                    "head": head,
+                    "dirty": 0,
+                    "paths": [],
+                    "behind": 0,
+                    "ahead": 1,
+                }
+            ]
+        scans = 0
+
+        def out_of_order_scan() -> Any:
+            nonlocal scans
+            scans += 1
+            if scans == 1:
+                self.assertTrue(CORE.reconcile(do_commit=False))
+                return older
+            return newer
+
+        with patch.object(CORE, "project_scan", side_effect=out_of_order_scan):
+            self.assertTrue(CORE.reconcile(do_commit=False))
+        self.assertEqual(3, scans)
+        self.assertEqual("b" * 40, CORE.locate("AR-0001")[1]["observed_head"])
+        self.assertEqual(CORE.live_docs(newer)[1], (self.root / "WORKTREES.md").read_text())
+        self.assertEqual("3\n", CORE.observation_marker("observation-published").read_text())
+
+    def test_overtaken_commit_and_push_honor_durability_request(self) -> None:
+        task_path = self.make_task()
+        scans = 0
+
+        def publish_newer_plain_reconcile() -> Any:
+            nonlocal scans
+            scans += 1
+            if scans == 1:
+                self.assertTrue(CORE.reconcile(do_commit=False))
+                task_path.write_text(task_path.read_text() + "\nUnrelated draft note.\n")
+            return self.fake_scan()
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=publish_newer_plain_reconcile),
+            patch.object(CORE, "commit", return_value=True) as commit,
+            patch.object(CORE, "push_replica") as push,
+        ):
+            self.assertTrue(CORE.reconcile(do_commit=True, push=True))
+        commit.assert_called_once()
+        self.assertNotIn(task_path, commit.call_args.args[1])
+        push.assert_called_once()
+        self.assertEqual("3\n", CORE.observation_marker("observation-published").read_text())
+
+    def test_commit_collects_pending_paths_from_earlier_plain_reconcile(self) -> None:
+        self.make_task()
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            CORE.reconcile(do_commit=False)
+            pending = json.loads((CORE.RUNTIME / "last-reconcile.json").read_text())[
+                "pending_paths"
+            ]
+            self.assertTrue(pending)
+            with patch.object(CORE, "commit", return_value=True) as commit:
+                self.assertTrue(CORE.reconcile(do_commit=True))
+        self.assertTrue(
+            {CORE.ROOT / value for value in pending}.issubset(set(commit.call_args.args[1]))
+        )
+        self.assertEqual(
+            [], json.loads((CORE.RUNTIME / "last-reconcile.json").read_text())["pending_paths"]
+        )
+
+    def test_pending_task_content_change_refuses_later_commit(self) -> None:
+        task_path = self.make_task(worktree_key="worker-one")
+        state = self.fake_scan()
+        state["worktrees"] = [
+            {
+                "key": "worker-one",
+                "branch": "feature/one",
+                "head": "b" * 40,
+                "dirty": 0,
+                "paths": [],
+                "behind": 0,
+                "ahead": 1,
+            }
+        ]
+        with patch.object(CORE, "project_scan", return_value=state):
+            CORE.reconcile(do_commit=False)
+            task_path.write_text(task_path.read_text() + "\nUnrelated draft note.\n")
+            with self.assertRaisesRegex(RuntimeError, "PENDING_OBSERVATION_CHANGED"):
+                CORE.reconcile(do_commit=True)
+
+    def test_committed_task_transition_clears_stale_pending_hash(self) -> None:
+        task_path = self.make_task(worktree_key="worker-one")
+        CORE.run(["git", "init", "-b", "main", str(self.root)])
+        for key, value in (
+            ("user.name", "Fixture"),
+            ("user.email", "fixture@example.invalid"),
+            ("commit.gpgsign", "false"),
+        ):
+            CORE.run(["git", "-C", str(self.root), "config", key, value])
+        CORE.run(["git", "-C", str(self.root), "add", "--all"])
+        CORE.run(["git", "-C", str(self.root), "commit", "-m", "fixture baseline"])
+        state = self.fake_scan()
+        state["worktrees"] = [
+            {
+                "key": "worker-one",
+                "branch": "feature/one",
+                "head": "b" * 40,
+                "dirty": 0,
+                "paths": [],
+                "behind": 0,
+                "ahead": 1,
+            }
+        ]
+        with patch.object(CORE, "project_scan", return_value=state):
+            self.assertTrue(CORE.reconcile(do_commit=False))
+            self.assertIn(
+                str(task_path.relative_to(self.root)),
+                json.loads((CORE.RUNTIME / "last-reconcile.json").read_text())["pending_paths"],
+            )
+            meta, body = CORE.read_task(task_path)
+            meta["status"] = "in_progress"
+            meta["owner"] = "worker-one"
+            meta["claim_expires"] = "2030-01-01T00:00:00+00:00"
+            meta["task_revision"] = 2
+            CORE.write_task(task_path, meta, body)
+            self.refresh_views()
+            CORE.run(["git", "-C", str(self.root), "add", "--all"])
+            CORE.run(["git", "-C", str(self.root), "commit", "-m", "fixture claim"])
+            self.assertTrue(CORE.reconcile(do_commit=False))
+
+    def test_observation_tickets_are_checkout_local(self) -> None:
+        first = CORE.reserve_observation_ticket()
+        other_runtime = self.root / "other-checkout" / ".runtime"
+        with patch.object(CORE, "RUNTIME", other_runtime):
+            self.assertEqual(1, CORE.reserve_observation_ticket())
+            self.assertEqual(0, CORE.published_observation_ticket())
+        self.assertEqual(1, first)
+        self.assertEqual(2, CORE.reserve_observation_ticket())
+
+    def test_failed_push_keeps_locally_published_observation_ticket(self) -> None:
+        self.make_task()
+        with (
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "push_replica", side_effect=OSError("push failed")),
+            self.assertRaisesRegex(OSError, "push failed"),
+        ):
+            CORE.reconcile(do_commit=True, push=True)
+        self.assertEqual("1\n", CORE.observation_marker("observation-published").read_text())
+
+    def test_failed_publication_marker_recovers_on_later_scan(self) -> None:
+        self.make_task()
+        real_atomic = CORE.atomic
+
+        def fail_marker(path: Path, value: str) -> None:
+            if path.name == "last-reconcile.json":
+                raise OSError("marker write failed")
+            real_atomic(path, value)
+
+        with (
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "atomic", side_effect=fail_marker),
+            self.assertRaisesRegex(OSError, "marker write failed"),
+        ):
+            CORE.reconcile(do_commit=True)
+        self.assertEqual("1\n", CORE.observation_marker("observation-published").read_text())
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            self.assertTrue(CORE.reconcile(do_commit=False))
+        self.assertEqual("2\n", CORE.observation_marker("observation-published").read_text())
+
+    def test_snapshot_retries_when_reconcile_publishes_during_scan(self) -> None:
+        self.make_task()
+        with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+            CORE.reconcile(do_commit=False)
+        scans = 0
+
+        def scan_with_interleaved_publication() -> Any:
+            nonlocal scans
+            scans += 1
+            if scans == 1:
+                with patch.object(CORE, "project_scan", return_value=self.fake_scan()):
+                    CORE.reconcile(do_commit=False)
+            return self.fake_scan()
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=scan_with_interleaved_publication),
+            patch.object(CORE, "run", return_value=SimpleNamespace(stdout="state\n")),
+        ):
+            CORE.cmd_snapshot()
+        self.assertEqual(2, scans)
+
+    def test_observation_tickets_are_unique_across_workers(self) -> None:
+        start = multiprocessing.Event()
+        outcomes: Any = multiprocessing.Queue()
+        processes = [
+            multiprocessing.Process(
+                target=concurrent_observation_ticket,
+                args=(str(self.root), start, outcomes),
+            )
+            for _ in range(8)
+        ]
+        for process in processes:
+            process.start()
+        start.set()
+        values = [outcomes.get(timeout=5) for _ in processes]
+        for process in processes:
+            process.join(5)
+            self.assertEqual(0, process.exitcode)
+        self.assertEqual(list(range(1, 9)), sorted(values))
+
+    def test_git_reconcile_rejects_changed_scan_binding(self) -> None:
+        self.make_task()
+
+        def change_binding() -> Any:
+            binding = json.loads(CORE.BINDING.read_text())
+            binding["product_repository"] = "owner/other"
+            CORE.BINDING.write_text(json.dumps(binding))
+            return self.fake_scan()
+
+        with (
+            patch.object(CORE, "project_scan", side_effect=change_binding),
+            self.assertRaisesRegex(RuntimeError, "OBSERVATION_INPUT_CHANGED"),
+        ):
+            CORE.reconcile(do_commit=False)
+        self.assertFalse((self.root / "PROJECT_STATE.md").exists())
 
     def test_generated_view_validation_reports_stale_and_renderer_errors(self) -> None:
         self.make_task()
@@ -1571,17 +2959,17 @@ class HandoffTest(unittest.TestCase):
         real_atomic = CORE.atomic
         failed = False
 
-        def fail_status_once(target: Path, text: str) -> None:
+        def fail_project_once(target: Path, text: str) -> None:
             nonlocal failed
-            if target.name == "STATUS.md" and not failed:
+            if target.name == "PROJECT_STATE.md" and not failed:
                 failed = True
-                raise OSError("injected status write failure")
+                raise OSError("injected project view write failure")
             real_atomic(target, text)
 
         with (
             patch.object(CORE, "project_scan", return_value=state),
-            patch.object(CORE, "atomic", side_effect=fail_status_once),
-            self.assertRaisesRegex(OSError, "injected status write failure"),
+            patch.object(CORE, "atomic", side_effect=fail_project_once),
+            self.assertRaisesRegex(OSError, "injected project view write failure"),
         ):
             CORE.reconcile(do_commit=False)
         self.assertEqual(before_task, path.read_text())
@@ -1835,6 +3223,53 @@ class HandoffTest(unittest.TestCase):
             CORE.cmd_run(argparse.Namespace(task="AR-0001", owner="worker-a", command=["true"]))
         command.assert_not_called()
 
+    def test_run_a_b_a_policy_swap_has_no_command_or_journal_effect(self) -> None:
+        self.enable_additive_policy()
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        CORE.CONFIG.parent.mkdir(exist_ok=True)
+        CORE.CONFIG.write_text("{}")
+        policy_path = self.root / "task-spec-policy.json"
+        original_payload = policy_path.read_bytes()
+        original_check = CORE.require_policy_unchanged
+        checks = 0
+
+        def a_b_a_check(root: Path, expected: Any) -> None:
+            nonlocal checks
+            checks += 1
+            if checks == 1:
+                original_check(root, expected)
+                return
+            saved = self.root / "task-spec-policy.saved"
+            policy_path.replace(saved)
+            policy_path.write_bytes(original_payload.replace(b'"hosted"', b'"remote"', 1))
+            try:
+                original_check(root, expected)
+            finally:
+                policy_path.unlink()
+                saved.replace(policy_path)
+
+        real_subprocess_run = CORE.subprocess.run
+        commands: list[object] = []
+
+        def observe_run(command: object, *args: object, **kwargs: object) -> object:
+            commands.append(command)
+            return real_subprocess_run(command, *args, **kwargs)
+
+        with (
+            patch.object(CORE, "assert_invocation_worktree"),
+            patch.object(CORE, "require_policy_unchanged", side_effect=a_b_a_check),
+            patch.object(CORE.subprocess, "run", side_effect=observe_run),
+            self.assertRaisesRegex(RuntimeError, "changed during operation"),
+        ):
+            CORE.cmd_run(argparse.Namespace(task="AR-0001", owner="worker-a", command=["true"]))
+        self.assertNotIn(["true"], commands)
+        self.assertEqual(original_payload, policy_path.read_bytes())
+        self.assertFalse((self.root / "sessions/AR-0001.jsonl").exists())
+
     def test_replica_prewrite_fast_forward_and_dirty_refusal(self) -> None:
         CORE.CONFIG.parent.mkdir()
         CORE.CONFIG.write_text('{"push_enabled": true}')
@@ -1968,6 +3403,15 @@ class HandoffTest(unittest.TestCase):
             worktree_key="worktree-b",
             branch="feature/b",
         )
+        for task_id in ("AR-0001", "AR-0002"):
+            CORE.append_session_record(
+                CORE.ROOT,
+                CORE.build_session_record(
+                    CORE.read_task(CORE.locate(task_id)[0])[0],
+                    "update",
+                    "2026-09-24T12:00:00+00:00",
+                ),
+            )
         with patch.object(CORE, "commit", return_value=True):
             for task_id in ("AR-0001", "AR-0002"):
                 CORE.mutate(
@@ -2000,6 +3444,39 @@ class HandoffTest(unittest.TestCase):
             owner="healthy-worker",
             claim_expires="2099-01-01T00:00:00+00:00",
         )
+        healthy_meta, healthy_body = CORE.read_task(healthy)
+        healthy_meta.update(
+            {
+                "spec_ref": "spec.json",
+                "spec_revision": 1,
+                "spec_acceptance": {
+                    "spec_ref": "spec.json",
+                    "spec_revision": 1,
+                    "status": "pass",
+                    "evidence_class": "contract-test",
+                    "evidence_ref": "awq/evidence/AR-0003",
+                    "evidence_digest": "sha256:" + "b" * 64,
+                },
+            }
+        )
+        (self.root / "spec.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "spec_ref": "spec.json",
+                    "spec_revision": 1,
+                    "acceptance_predicates": [{"id": "predicate", "description": "pass"}],
+                    "definition_of_done": ["pass"],
+                    "inputs": [{"id": "input", "description": "input"}],
+                    "outputs": [{"id": "output", "description": "output"}],
+                    "allowed_tools": ["source.read"],
+                    "forbidden_tools": [],
+                    "required_evidence_classes": ["contract-test"],
+                    "gates": [{"id": "gate", "description": "pass"}],
+                }
+            )
+        )
+        CORE.write_task(healthy, healthy_meta, healthy_body)
         promoted = self.make_task("AR-0004", status="planned")
         with patch.object(CORE, "commit", return_value=True):
             CORE.mutate(
@@ -2040,6 +3517,12 @@ class HandoffTest(unittest.TestCase):
             owner="stale-worker",
             claim_expires="2000-01-01T00:00:00+00:00",
         )
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(
+                CORE.read_task(expired)[0], "update", "2026-09-24T12:00:00+00:00"
+            ),
+        )
         claimed = self.make_task("AR-0002")
         (self.root / "NOTES.md").write_text("Investigate " + "127." + "0.0.1.")
         (self.root / "archive.txt").write_text("x" * 200001)
@@ -2067,6 +3550,12 @@ class HandoffTest(unittest.TestCase):
             status="in_progress",
             owner="worker-a",
             claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(
+                CORE.read_task(path)[0], "update", "2026-09-24T12:00:00+00:00"
+            ),
         )
         owned = (path, self.root / "CURRENT.md", self.root / "STATUS.md")
         before = {candidate: candidate.read_text() for candidate in owned}
@@ -2107,6 +3596,45 @@ class HandoffTest(unittest.TestCase):
         self.assertTrue(all(candidate.read_text() == before[candidate] for candidate in owned))
         self.assertEqual(1, CORE.read_task(path)[0]["task_revision"])
 
+    def test_unchanged_content_skips_privacy_patterns_but_checks_raw_size(self) -> None:
+        path = self.root / "unchanged.txt"
+        path.write_text("plain\n")
+        with patch.object(CORE, "privacy_pattern_applies", side_effect=AssertionError("rescanned")):
+            self.assertEqual([], CORE.introduced_content_errors({path: "plain\n"}))
+
+        prior = "x\n" * 90000
+        path.write_bytes(b"x\r\n" * 90000)
+        self.assertEqual(prior, path.read_text())
+        with patch.object(CORE, "privacy_pattern_applies", side_effect=AssertionError("rescanned")):
+            self.assertIn(
+                "unchanged.txt: state file exceeds 200 KiB",
+                CORE.introduced_content_errors({path: prior}),
+            )
+
+    def test_privacy_prefilters_preserve_every_pattern_and_unicode_casefold(self) -> None:
+        path = self.root / "notes.txt"
+        cases = (
+            ("absolute Linux home path", "/" + "home/example"),
+            ("absolute Windows user path", "C:" + "\\Users\\example"),
+            ("private host alias", "ai" + "-ws"),
+            ("private or loopback IP", "127." + "0.0.1"),
+            ("possible credential", "token" + " = example"),
+            ("private key", "-----BEGIN " + "OPENSSH PRIVATE KEY-----"),
+            ("session-like UUID", "12345678-1234-" + "1234-1234-123456789abc"),
+            ("private host alias", "a\u0130" + "-ws"),
+            ("possible credential", "pa\u017f\u017fword" + ": example"),
+        )
+        for label, content in cases:
+            with self.subTest(label=label, content=content):
+                path.write_text(content)
+                self.assertTrue(CORE.possible_privacy_pattern(content, content.lower(), label))
+                self.assertIn(f"notes.txt: {label}", CORE.privacy_errors())
+        path.write_text("token" + "=127." + "0.0.1")
+        errors = CORE.privacy_errors()
+        self.assertIn("notes.txt: possible credential", errors)
+        self.assertIn("notes.txt: private or loopback IP", errors)
+        self.assertTrue(CORE.possible_privacy_pattern("plain", "plain", "future pattern"))
+
     def test_mutation_keeps_global_active_key_uniqueness(self) -> None:
         self.make_task(
             "AR-0001",
@@ -2137,6 +3665,65 @@ class HandoffTest(unittest.TestCase):
         self.assertIn("active branch also used", str(raised.exception))
         self.assertTrue(all(candidate.read_text() == before[candidate] for candidate in before))
 
+    def test_mutation_still_detects_out_of_band_sibling_edit_after_view_write(self) -> None:
+        target = self.make_task("AR-0001")
+        sibling = self.make_task("AR-0002")
+        before_target = target.read_text()
+        real_write_views = CORE.write_rendered_task_views
+
+        def edit_sibling_after_views(views: dict[Path, str]) -> None:
+            real_write_views(views)
+            meta, body = CORE.read_task(sibling)
+            meta.update(
+                status="in_progress",
+                owner="worker-a",
+                claim_expires="2099-01-01T00:00:00+00:00",
+            )
+            CORE.write_task(sibling, meta, body)
+
+        with (
+            patch.object(CORE, "write_rendered_task_views", side_effect=edit_sibling_after_views),
+            patch.object(CORE, "commit", return_value=True) as commit,
+            self.assertRaisesRegex(RuntimeError, "active owner also used"),
+        ):
+            CORE.mutate(
+                argparse.Namespace(task="AR-0001", owner="worker-a", lease_minutes=10), "claim"
+            )
+        commit.assert_not_called()
+        self.assertEqual(before_target, target.read_text())
+        self.assertEqual("in_progress", CORE.read_task(sibling)[0]["status"])
+
+    def test_mutation_reuses_render_only_for_unchanged_task_and_profile_inputs(self) -> None:
+        target = self.make_task("AR-0001")
+        with (
+            patch.object(CORE, "render_status_views", wraps=CORE.render_status_views) as render,
+            patch.object(CORE, "commit", return_value=True),
+        ):
+            CORE.mutate(
+                argparse.Namespace(task="AR-0001", owner="worker-a", lease_minutes=10), "claim"
+            )
+        self.assertEqual(1, render.call_count)
+        self.assertEqual("in_progress", CORE.read_task(target)[0]["status"])
+
+        real_write_views = CORE.write_rendered_task_views
+        config = json.loads(CORE.PROJECT_CONFIG.read_text())
+
+        def change_profile_after_views(views: dict[Path, str]) -> None:
+            real_write_views(views)
+            config["project_title"] = "Externally changed title"
+            CORE.PROJECT_CONFIG.write_text(json.dumps(config))
+
+        with (
+            patch.object(CORE, "write_rendered_task_views", side_effect=change_profile_after_views),
+            patch.object(CORE, "commit", return_value=True) as commit,
+            self.assertRaisesRegex(RuntimeError, "CURRENT.md differs"),
+        ):
+            CORE.mutate(
+                argparse.Namespace(task="AR-0001", owner="worker-a", lease_minutes=10),
+                "heartbeat",
+            )
+        commit.assert_not_called()
+
     def test_mutation_requires_valid_target_even_with_unrelated_findings(self) -> None:
         target = self.make_task("AR-0001", extra="unsupported")
         before = {
@@ -2162,6 +3749,13 @@ class HandoffTest(unittest.TestCase):
             status="in_progress",
             owner="worker-a",
             claim_expires=future,
+            next_action="Resume the verified step.",
+        )
+        CORE.append_session_record(
+            CORE.ROOT,
+            CORE.build_session_record(
+                CORE.read_task(path)[0], "update", "2026-09-24T12:00:00+00:00"
+            ),
         )
         args = argparse.Namespace(
             task="AR-0001",
@@ -2182,12 +3776,30 @@ class HandoffTest(unittest.TestCase):
         recovered, body = CORE.read_task(path)
         self.assertEqual("open", recovered["status"])
         self.assertEqual("", recovered["owner"])
+        self.assertEqual("Resume the verified step.", recovered["next_action"])
         self.assertIn("Recovered expired claim formerly owned by worker-a", body)
         with (
             patch.object(CORE, "commit", return_value=True),
             self.assertRaisesRegex(RuntimeError, "stale revision"),
         ):
             CORE.mutate(args, "recover-expired")
+
+    def test_recover_expired_rejects_missing_session(self) -> None:
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2000-01-01T00:00:00+00:00",
+        )
+        with (
+            patch.object(CORE, "commit", return_value=True),
+            self.assertRaisesRegex(RuntimeError, "no session snapshot"),
+        ):
+            CORE.mutate(
+                argparse.Namespace(
+                    task="AR-0001", expected_revision=1, note="No live process remains."
+                ),
+                "recover-expired",
+            )
 
     def test_run_preflight_and_durable_journal_precede_reconcile(self) -> None:
         self.make_task(
@@ -2224,6 +3836,165 @@ class HandoffTest(unittest.TestCase):
         self.assertEqual("AR-0001", journal[-1]["task"])
         self.assertEqual("EXIT", journal[-1]["classification"])
 
+    def test_update_and_run_append_replayable_session_snapshots(self) -> None:
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        update_args = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            status=None,
+            priority=None,
+            summary=None,
+            next_action="Run the verified command.",
+            note="updated session state",
+        )
+        with patch.object(CORE, "commit", return_value=True):
+            CORE.mutate(update_args, "update")
+        first = CORE.latest_session(CORE.ROOT, "AR-0001")
+        self.assertIsNotNone(first)
+        self.assertEqual("update", first["trigger"])
+        self.assertEqual(2, first["task_revision"])
+
+        CORE.CONFIG.parent.mkdir(exist_ok=True)
+        CORE.CONFIG.write_text("{}")
+        with (
+            patch.object(
+                CORE.subprocess, "run", return_value=subprocess.CompletedProcess(["true"], 0)
+            ),
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "reconcile", return_value=True),
+        ):
+            self.assertEqual(
+                0,
+                CORE.cmd_run(
+                    argparse.Namespace(task="AR-0001", owner="worker-a", command=["true"])
+                ),
+            )
+        latest = CORE.latest_session(CORE.ROOT, "AR-0001")
+        self.assertEqual("run", latest["trigger"])
+        self.assertEqual(3, latest["task_revision"])
+        with (
+            patch("builtins.print") as output,
+            patch.object(CORE, "validate", return_value=[]),
+            patch.object(CORE, "run", return_value=SimpleNamespace(stdout="state\n")),
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
+        ):
+            CORE.cmd_snapshot("AR-0001")
+        self.assertTrue(any("SESSION_SNAPSHOT=" in str(call) for call in output.call_args_list))
+        self.assertNotIn(
+            "updated session state", (self.root / "sessions/AR-0001.jsonl").read_text()
+        )
+
+        empty_note = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=3,
+            status=None,
+            priority=None,
+            summary=None,
+            next_action=None,
+            note="",
+        )
+        with patch.object(CORE, "commit", return_value=True):
+            CORE.mutate(empty_note, "update")
+        with (
+            patch("builtins.print"),
+            patch.object(CORE, "validate", return_value=[]),
+            patch.object(CORE, "run", return_value=SimpleNamespace(stdout="state\n")),
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
+            self.assertRaisesRegex(RuntimeError, "no session snapshot"),
+        ):
+            CORE.cmd_snapshot("AR-9999")
+
+    def test_doctor_rejects_corrupt_session_record(self) -> None:
+        self.make_task()
+        sessions = self.root / "sessions"
+        sessions.mkdir()
+        (sessions / "AR-0001.jsonl").write_text("{}\n")
+        errors = CORE.validate()
+        self.assertTrue(any("session validation failed" in error for error in errors))
+
+    def test_doctor_rejects_wrong_task_and_duplicate_session_history(self) -> None:
+        self.make_task()
+        sessions = self.root / "sessions"
+        sessions.mkdir()
+        record = CORE.build_session_record(
+            CORE.read_task(self.root / "tasks/AR-0001-test.md")[0],
+            "update",
+            "2026-10-08T00:00:00+00:00",
+        )
+        path = sessions / "AR-0001.jsonl"
+        path.write_text(json.dumps(dict(record, task="AR-0002")) + "\n")
+        self.assertTrue(any("session history is invalid" in error for error in CORE.validate()))
+        path.write_text(json.dumps(record) + "\n" + json.dumps(record) + "\n")
+        self.assertTrue(any("session history is invalid" in error for error in CORE.validate()))
+
+    def test_git_to_sqlite_migration_rejects_hostile_session_history(self) -> None:
+        self.make_task()
+        sessions = self.root / "sessions"
+        sessions.mkdir()
+        record = CORE.build_session_record(
+            CORE.read_task(self.root / "tasks/AR-0001-test.md")[0],
+            "update",
+            "2026-10-08T00:00:00+00:00",
+        )
+        histories = (
+            [record, dict(record)],
+            [dict(record, task="AR-0002")],
+        )
+        for history in histories:
+            (sessions / "AR-0001.jsonl").write_text(
+                "".join(json.dumps(item) + "\n" for item in history)
+            )
+            with (
+                self.subTest(history=history),
+                patch.object(CORE, "sync_replica_before_write"),
+                self.assertRaisesRegex(RuntimeError, "session history is invalid"),
+            ):
+                CORE.cmd_migrate(argparse.Namespace(to="sqlite"))
+            self.assertEqual("git", CORE.backend_selection()["backend"])
+            self.assertFalse(CORE.DATABASE.exists())
+
+    def test_checkpoint_captures_source_state_before_task_mutation(self) -> None:
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        args = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            source_commit="c" * 40,
+        )
+        with patch.object(CORE, "commit", return_value=True):
+            CORE.mutate(args, "checkpoint")
+        record = CORE.load_checkpoints(CORE.ROOT, "AR-0001")
+        self.assertEqual(1, len(record))
+        self.assertEqual("c" * 40, record[0]["source_commit"])
+        self.assertEqual(2, record[0]["task_revision"])
+        _, meta, _ = CORE.locate("AR-0001")
+        self.assertEqual("c" * 40, meta["checkpoint_commit"])
+
+    def test_checkpoint_command_uses_product_head_when_called_from_worktree(self) -> None:
+        args = argparse.Namespace(task="AR-0001", owner="worker-a", expected_revision=1)
+        with (
+            patch.object(CORE, "invocation_worktree", return_value=("worktree", "branch")),
+            patch.object(
+                CORE,
+                "run",
+                return_value=subprocess.CompletedProcess(["git"], 0, stdout="e" * 40 + "\n"),
+            ),
+            patch.object(CORE, "mutate") as mutate,
+        ):
+            CORE.cmd_checkpoint(args)
+        self.assertEqual("e" * 40, args.source_commit)
+        mutate.assert_called_once_with(args, "checkpoint")
+
     def test_explicit_status_render_and_stale_check(self) -> None:
         self.make_task()
         CORE.cmd_render_status(check=True)
@@ -2234,6 +4005,330 @@ class HandoffTest(unittest.TestCase):
         self.assertEqual(
             CORE.render_status_view(CORE.all_tasks()), (self.root / "STATUS.md").read_text()
         )
+
+    def test_additive_policy_is_shared_by_doctor_render_run_and_done_lifecycle(self) -> None:
+        self.enable_additive_policy()
+        self.write_additive_spec()
+        acceptance = {
+            "spec_ref": "spec.json",
+            "spec_revision": 1,
+            "status": "pass",
+            "evidence_class": "hosted",
+            "evidence_ref": "quality/AR-0001",
+            "evidence_digest": "sha256:" + "a" * 64,
+        }
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+            spec_ref="spec.json",
+            spec_revision=1,
+            spec_acceptance=acceptance,
+        )
+        self.assertEqual([], CORE.validate())
+        CORE.cmd_render_status(check=True)
+        with patch.object(CORE, "assert_invocation_worktree"):
+            CORE.require_active_owner("AR-0001", "worker-a")
+        args = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            status="done",
+            note="accepted",
+        )
+        with (
+            patch.object(CORE, "sync_replica_before_write"),
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "push_replica"),
+        ):
+            CORE.mutate(args, "release")
+        self.assertEqual("done", CORE.locate("AR-0001")[1]["status"])
+
+    def test_accept_records_spec_evidence_before_done_without_weakening_gate(self) -> None:
+        self.enable_additive_policy()
+        self.write_additive_spec()
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+            spec_ref="spec.json",
+            spec_revision=1,
+        )
+        release = argparse.Namespace(
+            task="AR-0001", owner="worker-a", status="done", note="finished"
+        )
+        accept = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            evidence_class="hosted",
+            evidence_ref="quality/AR-0001",
+            evidence_digest="sha256:" + "a" * 64,
+            note="reviewed evidence",
+        )
+        with (
+            patch.object(CORE, "sync_replica_before_write"),
+            patch.object(CORE, "commit", return_value=True),
+            patch.object(CORE, "push_replica"),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "spec_acceptance is incomplete"):
+                CORE.mutate(release, "release")
+            for replacement, message in (
+                ({"owner": "other"}, "owned by worker-a"),
+                ({"expected_revision": 2}, "stale revision"),
+                ({"evidence_class": "unknown"}, "evidence class is unknown"),
+                ({"evidence_ref": "../bad"}, "evidence ref is invalid"),
+                ({"evidence_digest": "sha256:bad"}, "evidence digest is invalid"),
+            ):
+                bad = argparse.Namespace(**{**vars(accept), **replacement})
+                with self.assertRaisesRegex(RuntimeError, message):
+                    CORE.mutate(bad, "accept")
+                self.assertNotIn("spec_acceptance", CORE.locate("AR-0001")[1])
+            CORE.mutate(accept, "accept")
+            accepted = CORE.locate("AR-0001")[1]
+            self.assertEqual(2, accepted["task_revision"])
+            self.assertEqual("in_progress", accepted["status"])
+            self.assertEqual("pass", accepted["spec_acceptance"]["status"])
+            CORE.mutate(release, "release")
+        self.assertEqual("done", CORE.locate("AR-0001")[1]["status"])
+
+    def test_accept_requires_active_task_with_referenced_spec(self) -> None:
+        self.make_task(
+            status="in_progress", owner="worker-a", claim_expires="2099-01-01T00:00:00+00:00"
+        )
+        args = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            evidence_class="contract-test",
+            evidence_ref="quality/AR-0001",
+            evidence_digest="sha256:" + "a" * 64,
+            note="accepted",
+        )
+        with self.assertRaisesRegex(RuntimeError, "requires a referenced task spec"):
+            CORE.apply_accept(args, CORE.locate("AR-0001")[1], CORE.DEFAULT_EVIDENCE_POLICY)
+
+    def test_policy_and_spec_failures_cover_every_read_only_preflight(self) -> None:
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        with patch.object(
+            CORE, "evidence_policy", side_effect=RuntimeError("invalid project policy")
+        ):
+            self.assertIn("invalid project policy", CORE.validate())
+            with self.assertRaisesRegex(RuntimeError, "task-spec policy invalid"):
+                CORE.cmd_render_status(check=True)
+            with self.assertRaisesRegex(RuntimeError, "run preflight failed"):
+                CORE.require_active_owner("AR-0001", "worker-a")
+
+        path, meta, body = CORE.locate("AR-0001")
+        meta.update(spec_ref="missing.json", spec_revision=1)
+        CORE.write_task(path, meta, body)
+        self.refresh_views()
+        with self.assertRaisesRegex(RuntimeError, "task-spec validation failed"):
+            CORE.cmd_render_status(check=True)
+        with self.assertRaisesRegex(RuntimeError, "run preflight failed"):
+            CORE.require_active_owner("AR-0001", "worker-a")
+
+    def test_done_policy_snapshot_rejects_missing_evidence_and_open_child(self) -> None:
+        meta = {"id": "AR-0001", "status": "in_progress"}
+        with self.assertRaisesRegex(RuntimeError, "spec_acceptance is incomplete"):
+            CORE.require_done_admission(meta, policy=CORE.DEFAULT_EVIDENCE_POLICY)
+        accepted = {
+            **meta,
+            "spec_ref": "spec.json",
+            "spec_revision": 1,
+            "spec_acceptance": {
+                "spec_ref": "spec.json",
+                "spec_revision": 1,
+                "status": "pass",
+                "evidence_class": "contract-test",
+                "evidence_ref": "quality/AR-0001",
+                "evidence_digest": "sha256:" + "a" * 64,
+            },
+        }
+        spec = json.loads(
+            (Path(__file__).resolve().parents[1] / "examples/task-specs/AR-0070.json").read_text()
+        )
+        spec["spec_ref"] = "spec.json"
+        (self.root / "spec.json").write_text(json.dumps(spec), encoding="utf-8")
+        with (
+            patch.object(CORE, "open_child_error", return_value="open child remains"),
+            self.assertRaisesRegex(RuntimeError, "open child remains"),
+        ):
+            CORE.require_done_admission(
+                accepted, [(self.root / "task", accepted, "body")], CORE.DEFAULT_EVIDENCE_POLICY
+            )
+        CORE.require_done_admission({"status": "open"}, policy=CORE.DEFAULT_EVIDENCE_POLICY)
+
+    def test_policy_change_during_git_mutation_is_atomic(self) -> None:
+        self.enable_additive_policy()
+        self.make_task(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        task_before = CORE.locate("AR-0001")[0].read_text(encoding="utf-8")
+        current_before = (self.root / "CURRENT.md").read_text(encoding="utf-8")
+        args = argparse.Namespace(
+            task="AR-0001",
+            owner="worker-a",
+            expected_revision=1,
+            status=None,
+            priority=None,
+            summary=None,
+            next_action="changed",
+            note="race",
+        )
+        with (
+            patch.object(CORE, "sync_replica_before_write"),
+            patch.object(
+                CORE,
+                "require_policy_unchanged",
+                side_effect=RuntimeError("task-spec policy changed during operation"),
+            ),
+            self.assertRaisesRegex(RuntimeError, "policy changed during operation"),
+        ):
+            CORE.mutate(args, "update")
+        self.assertEqual(task_before, CORE.locate("AR-0001")[0].read_text(encoding="utf-8"))
+        self.assertEqual(current_before, (self.root / "CURRENT.md").read_text(encoding="utf-8"))
+        self.assertFalse((self.root / "sessions/AR-0001.jsonl").exists())
+
+    def test_policy_validation_and_reconcile_failures_leave_state_unchanged(self) -> None:
+        path = self.make_task()
+        before = path.read_text(encoding="utf-8")
+        self.assertTrue(
+            any(
+                "mutation target is not unique" in error
+                for error in CORE.mutation_errors(self.root / "tasks/missing.md", {})
+            )
+        )
+        task = CORE.locate("AR-0001")
+        with patch.object(CORE, "all_tasks", return_value=[task, task]):
+            self.assertIn("duplicate AR-0001", CORE.validate())
+        failing_backend = unittest.mock.Mock()
+        failing_backend.load_tasks.return_value = [task]
+        failing_backend.load_checkpoint_records.side_effect = RuntimeError("checkpoint fault")
+        failing_backend.load_session_records.return_value = []
+        with patch.object(CORE, "storage_backend", return_value=failing_backend):
+            self.assertIn("checkpoint validation failed", "\n".join(CORE.validate()))
+
+        with (
+            patch.object(
+                CORE, "backend_selection", side_effect=[{"backend": "git"}, {"backend": "sqlite"}]
+            ),
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
+            self.assertRaisesRegex(RuntimeError, "BACKEND_CHANGED"),
+        ):
+            CORE.reconcile(do_commit=False)
+        with (
+            patch.object(CORE, "backend_selection", return_value={"backend": "git"}),
+            patch.object(CORE, "sync_replica_before_write"),
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
+            patch.object(CORE, "write_generated_views"),
+            patch.object(CORE, "validate", return_value=["injected policy validation"]),
+            self.assertRaisesRegex(RuntimeError, "validation failed"),
+        ):
+            CORE.reconcile(do_commit=False)
+        self.assertEqual(before, path.read_text(encoding="utf-8"))
+
+    def test_policy_lifecycle_helpers_reject_inactive_gate_and_prune_stale_view(self) -> None:
+        self.make_task(status="open", owner="worker-a")
+        with self.assertRaisesRegex(RuntimeError, "claim is not active"):
+            CORE.require_active_owner("AR-0001", "worker-a")
+        path, meta, body = CORE.locate("AR-0001")
+        meta.update(
+            status="in_progress",
+            owner="worker-a",
+            claim_expires="2099-01-01T00:00:00+00:00",
+        )
+        CORE.write_task(path, meta, body)
+        with (
+            patch.object(CORE, "transition_allowed", side_effect=CORE.GateError("gate denied")),
+            self.assertRaisesRegex(RuntimeError, "gate denied"),
+        ):
+            CORE.require_active_owner("AR-0001", "worker-a")
+        self.assertEqual("body", CORE._transition_note("body", "", "now"))
+        stale = self.root / "status/STATUS-9999.md"
+        stale.parent.mkdir()
+        stale.write_text("stale", encoding="utf-8")
+        CORE.write_status_views({"STATUS.md": "current\n"})
+        self.assertFalse(stale.exists())
+
+    def test_unchanged_generated_views_avoid_replacement_but_repair_unsafe_files(self) -> None:
+        current = self.root / "CURRENT.md"
+        status = self.root / "status/STATUS-0001.md"
+        views = {current: "current\n", status: "status\n"}
+        CORE.write_rendered_task_views(views)
+        original_inodes = (current.stat().st_ino, status.stat().st_ino)
+        with patch.object(CORE, "atomic", wraps=CORE.atomic) as atomic_write:
+            CORE.write_rendered_task_views(views)
+        atomic_write.assert_not_called()
+        self.assertEqual(original_inodes, (current.stat().st_ino, status.stat().st_ino))
+
+        with patch.object(CORE, "atomic", wraps=CORE.atomic) as atomic_write:
+            CORE.write_rendered_task_views({current: "changed\n", status: "status\n"})
+        self.assertEqual(1, atomic_write.call_count)
+        self.assertEqual("changed\n", current.read_text())
+
+        status.chmod(0o644)
+        self.assertFalse(CORE.unchanged_generated_view(status, "status\n"))
+        CORE.write_rendered_task_views({current: "changed\n", status: "status\n"})
+        self.assertEqual(0o600, status.stat().st_mode & 0o777)
+
+        other = self.root / "other-view"
+        other.write_text("status\n")
+        status.unlink()
+        status.symlink_to(other)
+        self.assertFalse(CORE.unchanged_generated_view(status, "status\n"))
+        CORE.write_rendered_task_views({current: "changed\n", status: "status\n"})
+        self.assertFalse(status.is_symlink())
+        self.assertEqual("status\n", other.read_text())
+
+        status.unlink()
+        os.link(other, status)
+        self.assertFalse(CORE.unchanged_generated_view(status, "status\n"))
+        CORE.write_rendered_task_views({current: "changed\n", status: "status\n"})
+        self.assertEqual(1, status.stat().st_nlink)
+        self.assertEqual("status\n", other.read_text())
+
+        status.unlink()
+        CORE.write_rendered_task_views({current: "changed\n", status: "status\n"})
+        self.assertEqual("status\n", status.read_text())
+
+    def test_unchanged_generated_view_rejects_symlink_parent(self) -> None:
+        real = self.root / "real-status"
+        real.mkdir()
+        candidate = real / "STATUS-0001.md"
+        candidate.write_text("status\n")
+        candidate.chmod(0o600)
+        (self.root / "status").symlink_to(real, target_is_directory=True)
+        self.assertFalse(
+            CORE.unchanged_generated_view(self.root / "status/STATUS-0001.md", "status\n")
+        )
+
+    def test_unchanged_generated_view_rejects_replacement_after_open(self) -> None:
+        candidate = self.root / "CURRENT.md"
+        candidate.write_text("current\n")
+        candidate.chmod(0o600)
+        other = self.root / "other-view"
+        other.write_text("current\n")
+        real_open = os.open
+
+        def replace_after_open(path: Path, flags: int, *args: Any, **kwargs: Any) -> int:
+            descriptor = real_open(path, flags, *args, **kwargs)
+            if Path(path) == candidate:
+                candidate.unlink()
+                candidate.symlink_to(other)
+            return descriptor
+
+        with patch.object(CORE.os, "open", side_effect=replace_after_open):
+            self.assertFalse(CORE.unchanged_generated_view(candidate, "current\n"))
+        CORE.write_rendered_task_views({candidate: "current\n"})
+        self.assertFalse(candidate.is_symlink())
+        self.assertEqual("current\n", other.read_text())
 
     def test_doctor_reports_replica_circuit_breaker(self) -> None:
         CORE.REPLICA_BLOCKED.parent.mkdir(exist_ok=True)
@@ -2273,8 +4368,38 @@ class HandoffTest(unittest.TestCase):
                     "AR-0001",
                     "--expected-revision",
                     "1",
+                    "--session",
+                    "AR-0001@1",
                     "--note",
                     "ready",
+                ],
+                "mutate",
+                None,
+            ),
+            (
+                [
+                    "handoffctl",
+                    "unblock",
+                    "AR-0001",
+                    "--expected-revision",
+                    "1",
+                    "--note",
+                    "external clear",
+                ],
+                "mutate",
+                None,
+            ),
+            (
+                [
+                    "handoffctl",
+                    "pause",
+                    "AR-0001",
+                    "--owner",
+                    "worker-a",
+                    "--expected-revision",
+                    "1",
+                    "--note",
+                    "pause",
                 ],
                 "mutate",
                 None,
@@ -2352,10 +4477,37 @@ class HandoffTest(unittest.TestCase):
         with (
             patch.object(sys, "argv", ["handoffctl", "doctor", "--live"]),
             patch.object(CORE, "validate", return_value=["bad"]),
+            patch.object(CORE, "project_scan", return_value=self.fake_scan()),
             patch.object(CORE, "assert_project_binding"),
             patch("builtins.print"),
         ):
             self.assertEqual(1, CORE.main())
+
+    def test_cmd_upgrade_dispatches_both_live_binding_resolvers(self) -> None:
+        commands = importlib.import_module("upgrade_commands")
+        production = importlib.import_module("production_upgrade_binding")
+        args = argparse.Namespace(
+            upgrade_action="apply",
+            contract="contract.json",
+            binding="binding.json",
+        )
+        for backend, resolver_name in (
+            ("sqlite", "resolve_sqlite_live_binding"),
+            ("git", "resolve_git_live_binding"),
+        ):
+            with (
+                self.subTest(backend=backend),
+                patch.object(CORE, "backend_selection", return_value={"backend": backend}),
+                patch.object(commands, "_read_contract", return_value={"contract": True}),
+                patch.object(commands, "_read_runtime_binding", return_value="runtime"),
+                patch.object(production, resolver_name, return_value="live") as resolver,
+                patch.object(commands, "execute_upgrade_command", return_value=0) as execute,
+            ):
+                self.assertEqual(0, CORE.cmd_upgrade(args))
+            resolver.assert_called_once()
+            execute.assert_called_once_with(
+                "apply", Path("contract.json"), backend, Path("binding.json"), "live"
+            )
 
     def test_oracle_gate_dispatch_and_transition_errors_are_normalized(self) -> None:
         digest = "sha256:" + "a" * 64
@@ -2399,6 +4551,43 @@ class HandoffTest(unittest.TestCase):
         self.assertEqual("released", CORE.apply_owned_change(release_args, "release", released))
         self.assertEqual("done", released["status"])
 
+    def test_gate_dispatch_records_complete_human_session_only(self) -> None:
+        digest = "sha256:" + "a" * 64
+        args = argparse.Namespace(
+            expected_revision=1,
+            stage="intake",
+            action="open",
+            disposition="unresolved",
+            before=[f"plan/before={digest}"],
+            after=[f"plan/after={'sha256:' + 'b' * 64}"],
+            public_ref="oracle/session-1",
+            session_id="AWTUI-SESSION-1",
+            request_ref="AWG-SESSION-1",
+            activation="user-decision",
+            tui_contract_version="1.0",
+        )
+        meta: dict[str, Any] = {"id": "AR-0022", "task_revision": 1}
+        self.assertIn("Recorded open", CORE.apply_gate(args, meta))
+        self.assertEqual("presenting", meta["oracle_gate"]["human_session"]["status"])
+        args.request_ref = None
+        with self.assertRaisesRegex(RuntimeError, "requires --session-id"):
+            CORE.apply_gate(args, {"id": "AR-0022", "task_revision": 1})
+        args.request_ref = "AWG-SESSION-1"
+        args.stage = "decision"
+        generic: dict[str, Any] = {
+            "id": "AR-0022",
+            "task_revision": 1,
+            "oracle_gate": {
+                "required": True,
+                "open_stage": None,
+                "completed": ["role", "spec"],
+                "events": [],
+                "stage_sequence": ["role", "spec", "decision"],
+            },
+        }
+        self.assertIn("Recorded open", CORE.apply_gate(args, generic))
+        self.assertEqual("decision", generic["oracle_gate"]["open_stage"])
+
     def test_oracle_gate_blocks_claim_and_promote(self) -> None:
         gate = {"required": True, "open_stage": "intake"}
         claim_args = argparse.Namespace(task="AR-0022", owner="worker", lease_minutes=10)
@@ -2415,35 +4604,6 @@ class HandoffTest(unittest.TestCase):
                 {"id": "AR-0022", "status": "planned", "task_revision": 1, "oracle_gate": gate},
                 [],
             )
-
-    def test_tui_gate_records_session_and_resolution_status(self) -> None:
-        digest = "sha256:" + "a" * 64
-        meta: dict[str, Any] = {"id": "AR-0022", "task_revision": 1}
-        args = argparse.Namespace(
-            expected_revision=1, stage="intake", action="open", disposition="unresolved",
-            before=[f"plan/before={digest}"], after=[f"plan/after={'sha256:' + 'b' * 64}"],
-            public_ref="oracle/session-1", session_id="AWTUI-SESSION-1",
-            request_ref="AWG-SESSION-1", activation="user-proposal-review", tui_contract_version="1.0",
-        )
-        self.assertIn("Recorded open", CORE.apply_gate(args, meta))
-        session = meta["oracle_gate"]["human_session"]
-        self.assertEqual("presenting", session["status"])
-        self.assertEqual("AWG-SESSION-1", session["request_ref"])
-        args.action = "resolve"
-        args.disposition = "accepted"
-        self.assertIn("Recorded resolve", CORE.apply_gate(args, meta))
-        self.assertEqual("resolved", meta["oracle_gate"]["human_session"]["status"])
-
-    def test_tui_gate_rejects_partial_session_metadata(self) -> None:
-        digest = "sha256:" + "a" * 64
-        args = argparse.Namespace(
-            expected_revision=1, stage="intake", action="open", disposition="unresolved",
-            before=[f"plan/before={digest}"], after=[f"plan/after={'sha256:' + 'b' * 64}"],
-            public_ref="oracle/session-1", session_id="AWTUI-SESSION-1", request_ref=None,
-            activation="agent-uncertainty", tui_contract_version="1.0",
-        )
-        with self.assertRaisesRegex(RuntimeError, "requires --session-id"):
-            CORE.apply_gate(args, {"id": "AR-0022", "task_revision": 1})
 
 
 if __name__ == "__main__":
