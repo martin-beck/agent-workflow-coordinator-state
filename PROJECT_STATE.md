@@ -12,13 +12,14 @@ Generated from local Git and GitHub. Do not edit.
 | --- | --- | --- | --- | --- | --- |
 | #1153 | `ar0101-production-upgrade-binding@f26411e0db32` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SUCCESS, COMPLETED:SUCCESS | Bind live upgrade identity to backend scope |
 | #1191 | `codex/ar1718-snapshotless-recovery@447bbe4de925` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence snapshotless expired-claim recovery |
-| #1219 | `repair/ar-0089-claim-identity-namespace@a3feca32ec0f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix: fence recovery to claim execution scope |
+| #1219 | `repair/ar-0089-claim-identity-namespace@0b747cf63695` | `main` | UNSTABLE | COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SKIPPED, COMPLETED:SKIPPED | fix: fence recovery to claim execution scope |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38085358219 | `a3feca32ec0f` | pull_request | Verify | in_progress:- |
+| 38085456807 | `0b747cf63695` | pull_request | Verify | completed:failure |
+| 38085358219 | `a3feca32ec0f` | pull_request | Verify | completed:cancelled |
 | 38085277960 | `8c6a0c644062` | pull_request | Verify | completed:failure |
 | 38084687488 | `92d50e0030ee` | push | Verify | completed:success |
 | 38084687470 | `92d50e0030ee` | push | Formal | completed:success |
@@ -29,4 +30,3 @@ Generated from local Git and GitHub. Do not edit.
 | 38083290123 | `2898f71552ac` | pull_request | Verify | completed:failure |
 | 38083154760 | `d894b6089614` | pull_request | Verify | completed:failure |
 | 38082986084 | `7931c705830c` | pull_request | Verify | completed:failure |
-| 38082713464 | `9070c5559f7e` | pull_request | Verify | completed:failure |
