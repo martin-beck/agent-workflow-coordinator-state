@@ -12,6 +12,10 @@
       "sha256": "b6631d6023cf6454133cfe681675fd568787d1a2da88322e4062cdf7fef7aec4",
       "source": "docs/PROJECT_GUIDE.md"
     },
+    "examples/roles/role-registry.json": {
+      "sha256": "fe68b36323aca79cc364d64fd7c6cd78642c440c9ffc10598c4169ac8891e893",
+      "source": "examples/roles/role-registry.json"
+    },
     "examples/task-specs/AR-0070.json": {
       "sha256": "1bdacfc1e5edb0d8941ae747f45e35751ffca268ff48e3f022b20b86bb6910f9",
       "source": "examples/task-specs/AR-0070.json"
@@ -172,6 +176,18 @@
       "sha256": "bf04d7297c037cac80dcfb0cf21cca024014455e8b5b45c9bc9d355259b627a4",
       "source": "schema/upgrade-contract.schema.json"
     },
+    "schema/role-assignment.schema.json": {
+      "sha256": "4bef843e049fbf297eeec7c0b3c9693a4b649f8ce78f90edacc2cb03b1a506e4",
+      "source": "schema/role-assignment.schema.json"
+    },
+    "schema/role-registry.schema.json": {
+      "sha256": "333b19512f1b550e262fd1840d0b53542a05437e13f9b43edc1ad025a8a24bcb",
+      "source": "schema/role-registry.schema.json"
+    },
+    "schema/role.schema.json": {
+      "sha256": "8db0e9b7989994a01afee031af63ca4e266bffad65220e955147f7bab0b69e00",
+      "source": "schema/role.schema.json"
+    },
     "schema/task-record.schema.json": {
       "sha256": "6fcdcf4b00dd8f14fb877f6f3418a5f7711584004c496ab5ca117b52ced21cda",
       "source": "schema/task-record.schema.json"
@@ -244,6 +260,38 @@
       "sha256": "001db4806d57612688a0006c98c74a8d5ea0ce1b7e0769acb8be95f16662074f",
       "source": "tools/admission_lease.py"
     },
+    "tools/admitted_control_store.py": {
+      "sha256": "fb34958ff063e33406979f838860917ff2c9f2f24c360888cd85373f20028908",
+      "source": "tools/admitted_control_store.py"
+    },
+    "tools/authority_mutation.py": {
+      "sha256": "df6692a9cf7473bc86de4a5e678ab55881eb33d56dc7657950f54f47bc77cdb7",
+      "source": "tools/authority_mutation.py"
+    },
+    "tools/authority_neutral_backup.py": {
+      "sha256": "3cc4d31ed24951b646ac02a5a6682eab3203d4f02c44d538d494d78fdb2c318e",
+      "source": "tools/authority_neutral_backup.py"
+    },
+    "tools/authority_neutral_commit.py": {
+      "sha256": "fa96074ef3736d9975fae445a841de7e3c62d9f163aa39352eea5b2f22e9fdc7",
+      "source": "tools/authority_neutral_commit.py"
+    },
+    "tools/authority_neutral_commit_dispatch.py": {
+      "sha256": "21dcc92e197ff11d95078aca5d3021fd6486572208e16ccc0b3d375cc14c8572",
+      "source": "tools/authority_neutral_commit_dispatch.py"
+    },
+    "tools/authority_neutral_rollback_dispatch.py": {
+      "sha256": "5b6e0f73782c13f8c65c43cda4a01901be142403703903a67f310f924915e69b",
+      "source": "tools/authority_neutral_rollback_dispatch.py"
+    },
+    "tools/authority_neutral_stage.py": {
+      "sha256": "ca93e3b627356b71ff94cb92e72df01f86ba0098d3c95efc29ebc734eedb7390",
+      "source": "tools/authority_neutral_stage.py"
+    },
+    "tools/authority_neutral_validation.py": {
+      "sha256": "de7c4b5d2b6100b2bf7e42c2399bf971dc307e09bd5f3748f787cbd519d2f0e2",
+      "source": "tools/authority_neutral_validation.py"
+    },
     "tools/board_metrics.py": {
       "sha256": "a563bfccca4b94b0584ffe431bebb3a60e6ff8a34277fdb231c2db59ac1ae285",
       "source": "tools/board_metrics.py"
@@ -276,6 +324,18 @@
       "sha256": "891d1c0d76341426a512ac6174d10504fb150eb99f073d89d1ef9e105c5b13ad",
       "source": "tools/fast_receipts.py"
     },
+    "tools/git_authority_adapter.py": {
+      "sha256": "df8c7ce06224e1de460a081c946ec6c2465db6aeb2a47cfa9b3e0dd846fd9b52",
+      "source": "tools/git_authority_adapter.py"
+    },
+    "tools/git_authority_mutation.py": {
+      "sha256": "e93f4d0efaa614de0ead2d1a1a567572c864e7f3b804cd296ed9f1b0aa4d6949",
+      "source": "tools/git_authority_mutation.py"
+    },
+    "tools/git_backup.py": {
+      "sha256": "c773f836d229ddf03a6cf71cb0e852dc17e224c3edc2734a99a413a47a11ecd1",
+      "source": "tools/git_backup.py"
+    },
     "tools/handoffctl": {
       "sha256": "8b2cb30ee306ff7b1e932c1dc5107172607417de2e836b89ef61cde951b1ec30",
       "source": "tools/handoffctl"
@@ -285,12 +345,16 @@
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
-      "sha256": "54eabeaa844d130a640b5ff34a98713ecbadce10def77bacd7fa2712aa6ec7bd",
+      "sha256": "5fdeb95334147af5a76a5d8ec8d9545be26c51703d06e0630f4ae2a62e3bb450",
       "source": "tools/vendor.py"
     },
     "tools/hierarchy.py": {
       "sha256": "cbb9a2cfea40bb2b62b02567b2aed2d802de2d9fff5b3efa994ee969c055bf4f",
       "source": "tools/hierarchy.py"
+    },
+    "tools/lifecycle_session.py": {
+      "sha256": "94d8585554e4fb72117a1b284d54535cfe03a4ea8a6d8cc4312bd5bc8bc26b90",
+      "source": "tools/lifecycle_session.py"
     },
     "tools/lifecycle_trace.py": {
       "sha256": "e31d35c0e1c3af2b749e3ce22b3252b3ad44ca4e553436e4c23f98ddc364e092",
@@ -316,6 +380,18 @@
       "sha256": "8e8d26366f1482c4a174ffd5d4ed6a97ab25bd9a1f9e962adbc0be6b45b4d1f5",
       "source": "tools/production_upgrade_binding.py"
     },
+    "tools/role_assignment.py": {
+      "sha256": "4dc11cbe14cde756fb4b10f0d043b0680564d39a2f58380e10a14fe97d9464db",
+      "source": "tools/role_assignment.py"
+    },
+    "tools/role_registry.py": {
+      "sha256": "95027137271e7217de2730f55ef4f2f00d336042eaf5cddaf5363a123f25776b",
+      "source": "tools/role_registry.py"
+    },
+    "tools/roles.py": {
+      "sha256": "52cd8fc4589c9a5c2cb4a14ed73c2b4718fe6ed5e6a0732755afaca0a7b44a48",
+      "source": "tools/roles.py"
+    },
     "tools/rollback_control_store.py": {
       "sha256": "d84f8a582bfc70276200dc2973e3490b79b3036995470be44ee6d15fff3719bf",
       "source": "tools/rollback_control_store.py"
@@ -332,9 +408,25 @@
       "sha256": "100637722010937ac71ff094fb8d5cb2cc96ee65548a14b8e7c7002be3e19d22",
       "source": "tools/runtime_bootstrap.py"
     },
+    "tools/scoped_backend_adapter.py": {
+      "sha256": "5ccbba15660bd8b0ef4d267c40633191686ad6c6d74475e1d77a7bcc999252d7",
+      "source": "tools/scoped_backend_adapter.py"
+    },
     "tools/session_records.py": {
       "sha256": "35a9529ae3207977827b84bc145c03b55c5f4021fedf49a9590450a5ec125be3",
       "source": "tools/session_records.py"
+    },
+    "tools/sqlite_authority_adapter.py": {
+      "sha256": "f6788303895e86e549055614bbf304f2ce727a80663297057bf275d419cb723e",
+      "source": "tools/sqlite_authority_adapter.py"
+    },
+    "tools/sqlite_authority_mutation.py": {
+      "sha256": "15472ba214ecaba4ae9040e4dfa00c6a404966f820128a59cd01f11e847aa97d",
+      "source": "tools/sqlite_authority_mutation.py"
+    },
+    "tools/sqlite_backup.py": {
+      "sha256": "a9d7c309998864ff70713f8a20a0e9663e663c4163115855be16c05169c84349",
+      "source": "tools/sqlite_backup.py"
     },
     "tools/sqlite_storage.py": {
       "sha256": "fbfc7687542ad9ec55e5fe47589451e5e56ac2f700b91777bca5051f41d762b2",
@@ -356,6 +448,10 @@
       "sha256": "ac37928ae2a4c26464f38ce348ae49e6551b5deb6d9d73ca983cd208eae5a732",
       "source": "tools/tlc_runner.py"
     },
+    "tools/upgrade_admission.py": {
+      "sha256": "0dfc53126675a3cfbc52d14322a0bfb0b04e2c18a1be4c0dfaf44e4d6eb884e6",
+      "source": "tools/upgrade_admission.py"
+    },
     "tools/upgrade_authority.py": {
       "sha256": "13351edbea86873b0fd4d09d1f4f4c6540d5db2f2f397c0894e8d22064c51dd1",
       "source": "tools/upgrade_authority.py"
@@ -372,6 +468,10 @@
       "sha256": "2327a4a7f78d39138a8b8cb9304213547b0cd443049619e47161b6c8b9496b30",
       "source": "tools/upgrade_contract_runtime.py"
     },
+    "tools/upgrade_engine.py": {
+      "sha256": "c10effd2a91e0d94d515d57f0665c1a8c5b85aa63319ef410bb068f8ba8c4165",
+      "source": "tools/upgrade_engine.py"
+    },
     "tools/upgrade_identity.py": {
       "sha256": "80bdd94e461b1ad24078d55e4c69b16fcd9560c641620e703fcf84b0ef9e1798",
       "source": "tools/upgrade_identity.py"
@@ -384,9 +484,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "9e3b247655a412c47cff51ddd5795a8a8d1b46ae",
+    "commit": "3a7395d4ecf1135c10165f2511a193a3bff0eb7f",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "5a6b835ade80d79c71a3d115b200c16c18f7bcbe",
+    "tree": "cc0b3706fb24db70265a9b83297fcc6020e9771f",
     "version": "v0.4.1"
   }
 }
