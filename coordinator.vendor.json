@@ -93,7 +93,7 @@
       "source": "formal/handoffctl/HandoffctlRecovery.cfg"
     },
     "formal/handoffctl/HandoffctlRecovery.tla": {
-      "sha256": "8d1a2fc024846ce0322c51d8f1fad995324ff66b17cc182b431edec1d5c2de13",
+      "sha256": "622f5e6f3e7768914e5ab8097894fe60bb27c022d24ad734db2a688a91b003bb",
       "source": "formal/handoffctl/HandoffctlRecovery.tla"
     },
     "formal/handoffctl/HandoffctlRun.cfg": {
@@ -189,7 +189,7 @@
       "source": "schema/role.schema.json"
     },
     "schema/task-record.schema.json": {
-      "sha256": "94b34621a639be7a873e7e2a0adc2526636a48829d5503a1ad75fe2d7ce57531",
+      "sha256": "31f6c20ffb2337aff0368af48181a9303c58d79b631168871607bc19cfdaf526",
       "source": "schema/task-record.schema.json"
     },
     "schema/task-spec-policy.schema.json": {
@@ -229,7 +229,7 @@
       "source": "tests/test_fast_receipts.py"
     },
     "tests/test_handoffctl.py": {
-      "sha256": "77fbe1830abea1955f5089e6bd696cfd493c94fdfc60db3205f1c5ce8b1428ae",
+      "sha256": "a23605c036607f67d0096f0183ac90f0be7b243112ef1a285996c922356b42c9",
       "source": "tests/test_handoffctl.py"
     },
     "tests/test_hierarchy.py": {
@@ -317,7 +317,7 @@
       "source": "tools/fast_receipt_socket.py"
     },
     "tools/fast_receipt_worker.py": {
-      "sha256": "fde203b7e630ad983a1162c1f7836205cb351841f4fae20ad85ecc7288ff7e06",
+      "sha256": "b4ac7feef7897651c9253c73590f56f8e4a1a60592e91af7203d6d990d1981bc",
       "source": "tools/fast_receipt_worker.py"
     },
     "tools/fast_receipts.py": {
@@ -341,7 +341,7 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "17dcbe39f8bfbf03fa56ac74e2246d430ec7f5a8e63a289fd35edf07c6828b68",
+      "sha256": "680877250c1953fa323606c544df97b038df155270154c1cb0f8c2699b45648d",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
@@ -484,9 +484,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "92d50e0030eea13ff1e1380d9060213a00cdd95c",
+    "commit": "75829e93eaba13e4e4f116dd5a89e3d3931487aa",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "d2d2dac80874259c5b9924b63fb3915b4559e4a5",
-    "version": "v0.4.1"
+    "tree": "560c8ee7212fcd094f85ab59c050b95731eeae56",
+    "version": "v0.5.0"
   }
 }
