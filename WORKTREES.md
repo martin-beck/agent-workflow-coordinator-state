@@ -120,7 +120,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0077-pause-resume` | `ar0077-pause-and-resume-commands-with-session-reload` | `38077ff7554e` | 0 | behind 372, ahead 1 |
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 371, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 367, ahead 0 |
-| `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `f0f05c64cbc2` | 0 | behind 0, ahead 6 |
+| `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `9b73337fbc04` | 0 | behind 0, ahead 7 |
 | `agent-workflow-coordinator-ar0120-command-inventory` | `release-v0.4.1` | `66c45cd88d70` | 1 | behind 1, ahead 0 |
 | changed files | - | - | - | `.artifacts/` |
 | `agent-workflow-coordinator-ar0120-postmerge-coverage` | `ar0120-postmerge-coverage` | `9129b3fa0bbf` | 0 | behind 8, ahead 0 |
