@@ -121,8 +121,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 387, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 383, ahead 0 |
 | `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e11d3d8c5bf7` | 0 | behind 6, ahead 0 |
-| `agent-workflow-coordinator-ar0089-recovery-snapshot` | `repair/ar-0089-recovery-snapshot` | `faf050fe1b17` | 7 | behind 0, ahead 1 |
-| changed files | - | - | - | `docs/OPERATIONS.md`, `docs/PROJECT_GUIDE.md`, `formal/handoffctl/HandoffctlRecovery.cfg`, `formal/handoffctl/HandoffctlRecovery.tla`, `formal/handoffctl/README.md`, `tests/test_handoffctl.py`, `tools/handoffctl.py` |
+| `agent-workflow-coordinator-ar0089-recovery-snapshot` | `repair/ar-0089-recovery-snapshot` | `5e9e76ad67c4` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0089-vendor-closure` | `repair/ar-0089-vendor-closure` | `6feb191dbcb5` | 0 | behind 1, ahead 0 |
 | `agent-workflow-coordinator-ar0089-vendor-postverify` | `repair/ar-0089-vendor-postverify` | `f54a11b9d0b2` | 2 | behind 3, ahead 0 |
 | changed files | - | - | - | `tests/test_vendor.py`, `tools/vendor.py` |
