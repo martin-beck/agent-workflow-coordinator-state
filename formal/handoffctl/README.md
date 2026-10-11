@@ -42,7 +42,7 @@ authoritative revision, task status and owner unchanged.
 | `update` | `in_progress` | current owner, exact revision | active fields updated |
 | `accept` | `in_progress`, referenced spec | current owner, exact revision, valid evidence metadata | spec acceptance recorded; lifecycle status unchanged |
 | `release` | `in_progress` | current owner | chosen non-active state, owner and lease cleared |
-| `recover-expired` | expired `in_progress` | exact revision; a verified claim-time worker identity must now be absent unless a validated exact-current session exists | `open`, ownership cleared; restores `next_action` only from an exact-current session snapshot |
+| `recover-expired` | expired `in_progress` | exact revision; a verified claim-time worker identity must now be absent unless a validated exact-current session exists; pre-identity records require explicit `--allow-legacy-without-identity` | `open`, ownership cleared; restores `next_action` only from an exact-current session snapshot |
 | `run` record | `in_progress`, unexpired | owner and current revision | bounded result recorded |
 
 The model includes `accept` as a status-preserving, exact-revision transition.
@@ -130,6 +130,18 @@ implementation correspondence. Its liveness property is conditional on both
 services eventually remaining available; repeated crashes are therefore an
 explicitly nonterminal environmental condition, not a false completion claim.
 
+`HandoffctlPublication.tla` checks candidate-bound protected-main publication: idempotent admission,
+descriptor-change rejection, one publisher lease, expected-base compare-and-swap, remote observation
+before success, and observation-based recovery from ambiguous pushes. It is a one-candidate
+abstraction: database-wide liveness across historical jobs is established by executable sweep tests,
+not claimed as a refinement result. The fast PR tier checks its
+safety invariants; publication and full tiers also check eventual terminal resolution after the
+publisher eventually remains available. Repeated publisher crashes remain a nonterminal
+environmental condition, rather than an unsound completion guarantee. The finite model includes
+at most one ambiguous push and one competing remote advance.
+Git ancestry and transport are abstracted as finite head values; this is not
+implementation-correspondence evidence.
+
 HandoffctlObservation.tla checks the bounded opt-in `cached-observation-v1`
 contract: cache hits require the exact current input generation, one refresh
 serves concurrent waiters, an input change rejects the in-flight generation,
@@ -201,21 +213,32 @@ the JAR or modify coordinator state.
 
 Formal tiers are explicit: `verify.sh --tier portable-smoke` runs one model
 and is non-exhaustive; it cannot produce publication or full evidence.
-`verify.sh --tier pr-publication` checks every invariant family. Six models
+`verify.sh --tier pr-publication` checks every invariant family. Seven models
 use their full configurations; the general lifecycle model uses the
 one-process `HandoffctlPR.cfg`, while the separate lock and recovery models
 retain independent-process races. This exact-head PR tier is not the complete
 two-process lifecycle cross-product and cannot produce full release evidence.
-`verify.sh --tier full-exhaustive` runs all eight full configurations on the
-scheduled weekly or manually dispatched gate. A release claim requires its
-fresh exact-head full attestation; neither smaller tier substitutes for it.
+`verify.sh --tier full-exhaustive` runs every full focused configuration plus
+the complete two-process lifecycle domain as fifteen disjoint immutable-
+operation slices. Each slice fixes one process's request operation and leaves
+the competing process's operation domain complete; because requests do not
+change operation, their union is exactly the original aggregate state graph.
+The scheduled weekly gate or an explicit `full-exhaustive` manual-dispatch
+choice on `main` requires success for every slice. A release claim requires
+that fresh exact-head aggregate attestation; neither a missing slice nor a
+smaller tier substitutes for it.
 
 Each model is executed through `tools/tlc_runner.py`, never directly through
-TLC. The runner uses finite workers (`2`), a `4096m` heap for cgroup-contained
-same-repository publication and weekly runs, a `512m` heap for hosted smoke, CPU
-quota (`200%`), process limit (`64`), a 1200-second ordinary PR or 6000-second
-release-sensitive/weekly per-model deadline, and cgroup memory/swap limits (`6G`/`6G`) for contained runs
-and (`3G`/`3G`) for hosted smoke. A canonical host-wide admission lock prevents
+TLC. The runner uses finite workers (`2`), a dedicated `48g` heap and `64G`/`64G`
+memory/swap cgroup limits for full-exhaustive runs, a `2g` heap and `3G`/`3G`
+limits for ordinary same-repository PR publication, and a `512m` heap for hosted
+smoke. It retains CPU quota (`200%`), process limit (`64`), a 1200-second ordinary
+PR or 6000-second full-exhaustive per-model deadline, and a fail-closed 64 GiB
+host/parent-cgroup prerequisite for full evidence. Before every required TLC
+execution, the runner reads `memory.max`, `memory.high`, and
+`memory.swap.max` from inside the transient unit and all of its ancestors; the
+leaf limits must exactly match the requested bounds and no ancestor may be
+lower. A canonical host-wide admission lock prevents
 multiple formal jobs from competing for memory while leaving coordinator worker
 processes and leases untouched. A durable per-job queue record survives caller
 death for stale-job recovery; completed, failed, and canceled outcomes retain

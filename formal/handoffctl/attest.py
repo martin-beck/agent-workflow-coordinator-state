@@ -10,14 +10,21 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from slices import OPERATIONS, render_source
+
+OPERATION_SLICES = {f"HandoffctlSlice-{operation}" for operation in OPERATIONS}
 
 EXPECTED_MODELS = {
     "portable-smoke": {"HandoffctlBinding"},
     "pr-fast": {
         "HandoffctlFast",
         "HandoffctlReceiptsFast",
+        "HandoffctlPublicationFast",
         "HandoffctlObservation",
         "OracleInteractionGates",
     },
@@ -27,6 +34,7 @@ EXPECTED_MODELS = {
         "HandoffctlRun",
         "HandoffctlStorage",
         "HandoffctlReceipts",
+        "HandoffctlPublication",
         "HandoffctlObservation",
         "HandoffctlPR",
         "HandoffctlRecovery",
@@ -37,8 +45,9 @@ EXPECTED_MODELS = {
         "HandoffctlRun",
         "HandoffctlStorage",
         "HandoffctlReceipts",
+        "HandoffctlPublication",
         "HandoffctlObservation",
-        "Handoffctl",
+        *OPERATION_SLICES,
         "HandoffctlRecovery",
     },
 }
@@ -46,9 +55,14 @@ MODEL_SOURCE = {
     "HandoffctlPR": "Handoffctl",
     "HandoffctlFast": "HandoffctlBinding",
     "HandoffctlReceiptsFast": "HandoffctlReceipts",
+    "HandoffctlPublicationFast": "HandoffctlPublication",
     "OracleInteractionGates": "../oracle/OracleInteractionGates",
 }
-MODEL_CONFIG = {"OracleInteractionGates": "../oracle/OracleInteractionGates"}
+MODEL_CONFIG = {
+    "OracleInteractionGates": "../oracle/OracleInteractionGates",
+    "HandoffctlPublicationFast": "HandoffctlPublicationFast",
+}
+MODEL_CONFIG.update(dict.fromkeys(OPERATION_SLICES, "Handoffctl"))
 
 
 def effective_bound(name: str, default: str, boundary: str) -> str:
@@ -155,12 +169,19 @@ def main() -> int:
     ):
         parser.error(f"{args.tier} attestation has an unexpected model set")
     root = Path(__file__).resolve().parents[2]
+    base_source = root / "formal" / "handoffctl" / "Handoffctl.tla"
     configs = {
         model: digest(root / "formal" / "handoffctl" / f"{MODEL_CONFIG.get(model, model)}.cfg")
         for model in args.models
     }
     models = {
-        model: digest(root / "formal" / "handoffctl" / f"{MODEL_SOURCE.get(model, model)}.tla")
+        model: hashlib.sha256(
+            render_source(
+                base_source.read_text(encoding="utf-8"), model.removeprefix("HandoffctlSlice-")
+            ).encode()
+        ).hexdigest()
+        if model in OPERATION_SLICES
+        else digest(root / "formal" / "handoffctl" / f"{MODEL_SOURCE.get(model, model)}.tla")
         for model in args.models
     }
     inputs = {
@@ -169,6 +190,7 @@ def main() -> int:
             "formal/handoffctl/verify.sh",
             "tools/tlc_runner.py",
             "formal/handoffctl/attest.py",
+            "formal/handoffctl/slices.py",
             "formal/evidence.json",
             "formal/tier-evidence.json",
         )
