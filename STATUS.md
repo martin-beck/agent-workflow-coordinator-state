@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**89 ARs tracked** across 5 active status categories.
+**99 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 7 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 1 |
+| **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 79 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,9 +24,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 89 |
-| Parent tasks | 0 |
-| Child tasks | 0 |
+| Tasks | 99 |
+| Parent tasks | 1 |
+| Child tasks | 8 |
 | Open or active | 8 |
 | Blocked | 0 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 89 | 8 | 0 | 79 |
+| unassigned | unassigned | 99 | 8 | 0 | 79 |
 
 ## Task drill-down
 
@@ -1284,6 +1284,146 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. |
 | Next action | Synchronize the official tagged Coordinator v0.5.0 vendor snapshot so legacy tasks gain bind-spec, then bind AR-0089 to a reviewed task spec, record acceptance, and re-run exact-main integrity checks before release. |
 
+### AR-0090 — Concise AR Titles
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. |
+| Next action | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. |
+
+### AR-0091 — Focused Autonomy Program
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | AR-0092, AR-0093, AR-0094, AR-0095, AR-0096, AR-0097, AR-0098, AR-0099 |
+| Summary | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. |
+| Next action | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
+
+### AR-0092 — Task Execution Envelopes
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. |
+| Next action | Specify and implement revision-bound task execution envelopes. |
+
+### AR-0093 — Change Drift Guard
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. |
+| Next action | Implement path-aware change-scope observation and exception records. |
+
+### AR-0094 — Step Evidence Ledger
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. |
+| Next action | Design a predicate-level work and evidence ledger. |
+
+### AR-0095 — Assumption Revalidation
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. |
+| Next action | Add freshness-bound assumptions and explicit revalidation. |
+
+### AR-0096 — Drift Aware Resume
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. |
+| Next action | Build deterministic resume cards from task, scope, evidence, and freshness state. |
+
+### AR-0097 — Retry Circuit Breaker
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. |
+| Next action | Implement bounded no-progress detection and recovery routes. |
+
+### AR-0098 — Campaign Coordination Layer
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. |
+| Next action | Model campaign-level recovery and progress without replacing task authority. |
+
+### AR-0099 — Autonomy Limits Escalation
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0091 |
+| Children | None |
+| Summary | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. |
+| Next action | Add opt-in autonomy budgets and declared escalation triggers. |
+
 
 ## Dependency graph
 
@@ -1384,6 +1524,16 @@ flowchart LR
         AR_0087["AR-0087 - Done"]:::status_done
         AR_0088["AR-0088 - Planned"]:::status_planned
         AR_0089["AR-0089 - In progress"]:::status_in_progress
+        AR_0090["AR-0090 - Planned"]:::status_planned
+        AR_0091["AR-0091 - Planned"]:::status_planned
+        AR_0092["AR-0092 - Planned"]:::status_planned
+        AR_0093["AR-0093 - Planned"]:::status_planned
+        AR_0094["AR-0094 - Planned"]:::status_planned
+        AR_0095["AR-0095 - Planned"]:::status_planned
+        AR_0096["AR-0096 - Planned"]:::status_planned
+        AR_0097["AR-0097 - Planned"]:::status_planned
+        AR_0098["AR-0098 - Planned"]:::status_planned
+        AR_0099["AR-0099 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1519,6 +1669,20 @@ flowchart LR
     AR_0087 --> AR_0088
     AR_0087 --> AR_0089
     AR_0089 --> AR_0088
+    AR_0090 --> AR_0091
+    AR_0090 --> AR_0092
+    AR_0092 --> AR_0093
+    AR_0092 --> AR_0094
+    AR_0092 --> AR_0095
+    AR_0092 --> AR_0099
+    AR_0093 --> AR_0096
+    AR_0094 --> AR_0095
+    AR_0094 --> AR_0096
+    AR_0094 --> AR_0097
+    AR_0094 --> AR_0098
+    AR_0095 --> AR_0096
+    AR_0096 --> AR_0098
+    AR_0097 --> AR_0099
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1622,6 +1786,16 @@ flowchart LR
 | [AR-0087](tasks/AR-0087.md) | [AR-0086](tasks/AR-0086.md) | [AR-0088](tasks/AR-0088.md), [AR-0089](tasks/AR-0089.md) |
 | [AR-0088](tasks/AR-0088.md) | [AR-0087](tasks/AR-0087.md), [AR-0089](tasks/AR-0089.md) | None |
 | [AR-0089](tasks/AR-0089.md) | [AR-0087](tasks/AR-0087.md) | [AR-0088](tasks/AR-0088.md) |
+| [AR-0090](tasks/AR-0090.md) | None | [AR-0091](tasks/AR-0091.md), [AR-0092](tasks/AR-0092.md) |
+| [AR-0091](tasks/AR-0091.md) | [AR-0090](tasks/AR-0090.md) | None |
+| [AR-0092](tasks/AR-0092.md) | [AR-0090](tasks/AR-0090.md) | [AR-0093](tasks/AR-0093.md), [AR-0094](tasks/AR-0094.md), [AR-0095](tasks/AR-0095.md), [AR-0099](tasks/AR-0099.md) |
+| [AR-0093](tasks/AR-0093.md) | [AR-0092](tasks/AR-0092.md) | [AR-0096](tasks/AR-0096.md) |
+| [AR-0094](tasks/AR-0094.md) | [AR-0092](tasks/AR-0092.md) | [AR-0095](tasks/AR-0095.md), [AR-0096](tasks/AR-0096.md), [AR-0097](tasks/AR-0097.md), [AR-0098](tasks/AR-0098.md) |
+| [AR-0095](tasks/AR-0095.md) | [AR-0092](tasks/AR-0092.md), [AR-0094](tasks/AR-0094.md) | [AR-0096](tasks/AR-0096.md) |
+| [AR-0096](tasks/AR-0096.md) | [AR-0093](tasks/AR-0093.md), [AR-0094](tasks/AR-0094.md), [AR-0095](tasks/AR-0095.md) | [AR-0098](tasks/AR-0098.md) |
+| [AR-0097](tasks/AR-0097.md) | [AR-0094](tasks/AR-0094.md) | [AR-0099](tasks/AR-0099.md) |
+| [AR-0098](tasks/AR-0098.md) | [AR-0094](tasks/AR-0094.md), [AR-0096](tasks/AR-0096.md) | None |
+| [AR-0099](tasks/AR-0099.md) | [AR-0092](tasks/AR-0092.md), [AR-0097](tasks/AR-0097.md) | None |
 
 ## Complete AR inventory
 
@@ -1643,11 +1817,21 @@ flowchart LR
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 
-### Planned (1)
+### Planned (11)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Unclaimed | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. |
+| P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
+| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
+| P0 | [AR-0093](tasks/AR-0093.md): Change Drift Guard | Unclaimed | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. |
+| P0 | [AR-0094](tasks/AR-0094.md): Step Evidence Ledger | Unclaimed | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. |
+| P1 | [AR-0090](tasks/AR-0090.md): Concise AR Titles | Unclaimed | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. |
+| P1 | [AR-0095](tasks/AR-0095.md): Assumption Revalidation | Unclaimed | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. |
+| P1 | [AR-0096](tasks/AR-0096.md): Drift Aware Resume | Unclaimed | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. | Build deterministic resume cards from task, scope, evidence, and freshness state. |
+| P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
+| P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
+| P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
 ### Done (79)
 
