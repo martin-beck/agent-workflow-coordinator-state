@@ -31,6 +31,7 @@ jobs:
         shell: bash
         run: |
           PYTHONDONTWRITEBYTECODE=1 python3 tools/handoffctl_vendor.py verify --target .
+          schema_version="$(python3 -c 'import json; print(json.load(open("coordinator.vendor.json"))["schema_version"])')"
           commit="$(python3 -c 'import json; print(json.load(open("coordinator.vendor.json"))["upstream"]["commit"])')"
           [[ "${commit}" =~ ^[0-9a-f]{40}$ ]]
           upstream="${RUNNER_TEMP}/agent-workflow-coordinator"
@@ -39,8 +40,20 @@ jobs:
           git -C "${upstream}" fetch --depth=1 origin "${commit}"
           git -C "${upstream}" checkout --detach FETCH_HEAD
           test "$(git -C "${upstream}" rev-parse HEAD)" = "${commit}"
-          PYTHONDONTWRITEBYTECODE=1 python3 "${upstream}/tools/vendor.py" sync-development \
-            --source "${upstream}" --target "${expected}" --commit "${commit}"
+          if [[ "${schema_version}" == "1" ]]; then
+            version="$(python3 -c 'import json; print(json.load(open("coordinator.vendor.json"))["upstream"]["version"])')"
+            [[ "${version}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+            PYTHONDONTWRITEBYTECODE=1 python3 "${upstream}/tools/vendor.py" sync \
+              --source "${upstream}" --target "${expected}" --version "${version}"
+          elif [[ "${schema_version}" == "2" ]]; then
+            channel="$(python3 -c 'import json; print(json.load(open("coordinator.vendor.json"))["upstream"].get("channel", ""))')"
+            [[ "${channel}" == "development" ]]
+            PYTHONDONTWRITEBYTECODE=1 python3 "${upstream}/tools/vendor.py" sync-development \
+              --source "${upstream}" --target "${expected}" --commit "${commit}"
+          else
+            echo "unsupported vendor manifest schema: ${schema_version}" >&2
+            exit 1
+          fi
           python3 - "${expected}" <<'PY'
           import filecmp
           import json
