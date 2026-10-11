@@ -8,7 +8,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. | codex-ar0088-idempotent-bind |
-| P1 | [AR-0090](tasks/AR-0090.md): Concise AR Titles | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. | codex-ar0090-titles |
 
 ## Open
 
