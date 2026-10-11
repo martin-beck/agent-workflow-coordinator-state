@@ -234,6 +234,12 @@ LIFECYCLE_MUTATION_COMMANDS = (
     "recover-expired",
     "update",
 )
+
+
+class IdempotentMutationError(RuntimeError):
+    """Signal an admitted replay that must not create another state revision."""
+
+
 # CURRENT.md is the compact actionable queue; terminal history remains in the
 # full STATUS.md projection and authoritative task records.
 CURRENT_STATUSES = ("in_progress", "open", "blocked", "planned", "future")
@@ -250,6 +256,7 @@ REQ = (
     "updated_at",
 )
 FIELDS = set(REQ) | {
+    "short_title",
     "owner",
     "role",
     "team",
@@ -275,7 +282,32 @@ type Meta = dict[str, Any]
 type Task = tuple[Path, Meta, str]
 type State = dict[str, Any]
 
-COORDINATOR_VERSION = "0.5.0"
+
+def task_label(meta: Meta) -> str:
+    """Return the compatibility-safe human label for one task."""
+    return f"{meta['id']} — {meta.get('short_title') or meta['title']}"
+
+
+def short_title_errors(path: Path, task_id: str, value: object) -> list[str]:
+    """Validate optional concise navigational metadata independently of task state."""
+    if value is None:
+        return []
+    if (
+        not isinstance(value, str)
+        or not value.strip()
+        or any(ord(char) < 32 or ord(char) == 127 for char in value)
+    ):
+        return [f"{task_id}: invalid short_title"]
+    if len(value) > 120:
+        return [f"{task_id}: short_title exceeds 120 characters"]
+    if len(value.split()) > 4:
+        return [f"{task_id}: short_title exceeds four words"]
+    if private_text_errors(path, value):
+        return [f"{task_id}: privacy-unsafe short_title"]
+    return []
+
+
+COORDINATOR_VERSION = "0.5.2"
 DEFAULT_PROJECT_SETTINGS: Meta = {
     "schema_version": 1,
     "project_id": "00000000-0000-4000-8000-000000000000",
@@ -573,7 +605,11 @@ def assert_project_binding(caller_cwd: Path | None = None) -> None:
         raise RuntimeError("handoffctl must be called from its bound state or product project")
 
 
-class LockTimeoutError(RuntimeError):
+class RetryableCoordinatorError(RuntimeError):
+    """A coordinator contention or replica condition that must not block work."""
+
+
+class LockTimeoutError(RetryableCoordinatorError):
     """The coordinator lock could not be acquired within its bounded deadline."""
 
 
@@ -648,8 +684,12 @@ class SubprocessTimeoutError(RuntimeError):
     """A Git/GitHub or coordinator command exceeded its bounded deadline."""
 
 
-class ReplicaDivergedError(RuntimeError):
-    """The state replica cannot be advanced without reconciling Git history."""
+class RepairRequiredCoordinatorError(RuntimeError):
+    """Local durable state needs reconciliation before its operation can continue."""
+
+
+class ReplicaDivergedError(RepairRequiredCoordinatorError):
+    """The state replica needs explicit reconciliation before a retry."""
 
 
 class ExternalObservationError(RuntimeError):
@@ -929,7 +969,16 @@ def render_current(tasks: list[Task]) -> str:
     by_id = {meta["id"]: path.name for path, meta, _ in tasks}
 
     def clean(value: object) -> str:
-        return str(value or "-").replace("|", "\\|").replace("\n", " ")
+        return (
+            str(value or "-")
+            .replace("\\", "\\\\")
+            .replace("|", "\\|")
+            .replace("\n", " ")
+            .replace("[", "\\[")
+            .replace("]", "\\]")
+            .replace("(", "\\(")
+            .replace(")", "\\)")
+        )
 
     for status in CURRENT_STATUSES:
         rows = sorted(
@@ -944,9 +993,9 @@ def render_current(tasks: list[Task]) -> str:
             "| --- | --- | --- | --- | --- |",
         ]
         for meta in rows:
-            link = f"[{meta['id']}](tasks/{by_id[meta['id']]})"
+            link = f"[{clean(task_label(meta))}](tasks/{by_id[meta['id']]})"
             row = (
-                f"| {meta['priority']} | {link}: {clean(meta['title'])} | "
+                f"| {meta['priority']} | {link} | "
                 f"{clean(meta['summary'])} | {clean(meta['next_action'])} | "
                 f"{clean(meta.get('owner'))} |"
             )
@@ -1311,6 +1360,7 @@ def value_errors(path: Path, meta: Meta) -> list[str]:
         for name in ("title", "summary", "next_action", "updated_at")
         if not isinstance(meta.get(name), str) or not meta.get(name)
     )
+    errors.extend(short_title_errors(path, task_id, meta.get("short_title")))
     errors.extend(f"{task_id}: {error}" for error in gate_errors(meta.get("oracle_gate")))
     claim_process = meta.get("claim_process")
     if claim_process is not None and not valid_claim_process(claim_process):
@@ -1444,6 +1494,16 @@ def require_claimed_worker_absent(meta: Meta) -> None:
     start_time = identity["start_time"]
     if process_start_time(pid) == start_time:
         raise RuntimeError("former worker process is still alive")
+
+
+def legacy_recovery_admitted(args: argparse.Namespace, meta: Meta) -> bool:
+    """Admit an explicitly acknowledged recovery of a pre-identity legacy claim."""
+    if not getattr(args, "allow_legacy_without_identity", False):
+        return False
+    if "claim_process" in meta:
+        return False
+    expiry = parse_claim_expiry(meta.get("claim_expires"))
+    return not expiry > dt.datetime.now(dt.UTC)
 
 
 def attach_claim_process(args: argparse.Namespace, meta: Meta) -> None:
@@ -2448,6 +2508,17 @@ def apply_unblock(args: argparse.Namespace, meta: Meta, _tasks: list[Task]) -> s
     return str(args.note)
 
 
+def current_recovery_session(records: list[Meta], revision: int) -> Meta | None:
+    """Validate recovery snapshots and return only the exact-current record."""
+    for session in records:
+        validate_session_record(session)
+        if session["task_revision"] > revision:
+            raise RuntimeError("session snapshot revision is newer than the task")
+    return next(
+        (session for session in reversed(records) if session["task_revision"] == revision), None
+    )
+
+
 def apply_recover_expired(args: argparse.Namespace, meta: Meta, _tasks: list[Task]) -> str:
     """Reopen an expired claim, restoring only its exact current session snapshot."""
     if args.expected_revision != meta["task_revision"]:
@@ -2465,28 +2536,20 @@ def apply_recover_expired(args: argparse.Namespace, meta: Meta, _tasks: list[Tas
     if not args.note.strip():
         raise RuntimeError("expired-claim recovery note must not be empty")
     records = storage_backend().load_session_records(args.task)
-    for session in records:
-        validate_session_record(session)
-        if session["task_revision"] > meta["task_revision"]:
-            raise RuntimeError("session snapshot revision is newer than the task")
     previous_owner = str(meta["owner"])
-    current_session = next(
-        (
-            session
-            for session in reversed(records)
-            if session["task_revision"] == meta["task_revision"]
-        ),
-        None,
-    )
+    recovery_note = str(args.note)
+    current_session = current_recovery_session(records, int(meta["task_revision"]))
     if current_session is not None:
         meta["next_action"] = str(current_session["next_action"])
+    elif legacy_recovery_admitted(args, meta):
+        recovery_note = "LEGACY_NO_IDENTITY_RECOVERY: " + recovery_note
     else:
         require_claimed_worker_absent(meta)
     meta["status"] = "open"
     meta["owner"] = ""
     meta["claim_expires"] = ""
     meta.pop("claim_process", None)
-    return f"Recovered expired claim formerly owned by {previous_owner}. {args.note}"
+    return f"Recovered expired claim formerly owned by {previous_owner}. {recovery_note}"
 
 
 def require_promotion_preflight(kind: str) -> None:
@@ -2611,20 +2674,31 @@ def require_active_binding_owner(args: argparse.Namespace, meta: Meta) -> None:
 def require_bind_worktree_admission(
     args: argparse.Namespace, meta: Meta, tasks: list[Task]
 ) -> None:
-    """Reject every non-legacy or conflicting worktree-binding request."""
+    """Admit a first binding or an exact no-op replay, rejecting every other request."""
     require_active_binding_owner(args, meta)
-    if meta.get("branch") or meta.get("worktree_key"):
-        raise RuntimeError("bind-worktree requires empty legacy worktree metadata")
     if not valid_binding_branch(args.branch):
         raise RuntimeError("bind-worktree branch is invalid")
     if not valid_binding_worktree(args.worktree_key):
         raise RuntimeError("bind-worktree worktree key is invalid")
     if binding_identity_conflicts(args, meta, tasks):
         raise RuntimeError("bind-worktree identity conflicts with an active task")
+    branch = meta.get("branch", "")
+    worktree_key = meta.get("worktree_key", "")
+    if branch or worktree_key:
+        if (
+            branch == args.branch
+            and worktree_key == args.worktree_key
+            and valid_binding_branch(branch)
+            and valid_binding_worktree(worktree_key)
+        ):
+            raise IdempotentMutationError(
+                f"Worktree {args.worktree_key} on branch {args.branch} is already bound."
+            )
+        raise RuntimeError("bind-worktree requires empty legacy worktree metadata")
 
 
 def apply_bind_worktree(args: argparse.Namespace, meta: Meta, tasks: list[Task]) -> str:
-    """Bind one legacy active task to its sole validated product-worktree identity."""
+    """Bind one legacy task, or report an exact retry without mutating it."""
     require_bind_worktree_admission(args, meta, tasks)
     meta.update(branch=args.branch, worktree_key=args.worktree_key)
     return f"Bound worktree {args.worktree_key} on branch {args.branch}."
@@ -2702,6 +2776,10 @@ def apply_rollback(args: argparse.Namespace, meta: Meta) -> str:
     state = checkpoint["state"]
     if not isinstance(state, dict) or state.get("id") != meta.get("id"):
         raise RuntimeError("rollback checkpoint task does not match target task")
+    if "short_title" in state:
+        meta["short_title"] = state["short_title"]
+    else:
+        meta.pop("short_title", None)
     for field in (
         "priority",
         "summary",
@@ -3020,13 +3098,15 @@ def commit_persisted_mutation(
     return committed
 
 
-def mutate(args: argparse.Namespace, kind: str, policy: EvidencePolicy | None = None) -> None:
+def mutate(args: argparse.Namespace, kind: str, policy: EvidencePolicy | None = None) -> str | None:
     receipt_id = fast_receipt_id(args, kind)
     if backend_selection()["backend"] == "sqlite":
         if receipt_id is not None:
             raise RuntimeError("fast receipts require Git authority")
-        mutate_sqlite(args, kind, policy)
-        return
+        try:
+            return mutate_sqlite(args, kind, policy)
+        except IdempotentMutationError as replay:
+            return str(replay)
     with locked(phase="git_mutate"):
         if backend_selection()["backend"] != "git":
             raise RuntimeError("BACKEND_CHANGED: retry using the selected backend")
@@ -3041,7 +3121,10 @@ def mutate(args: argparse.Namespace, kind: str, policy: EvidencePolicy | None = 
                 for target in generated_paths()
             }
         )
-        note = apply_transition(args, kind, meta, all_tasks(), selected_policy)
+        try:
+            note = apply_transition(args, kind, meta, all_tasks(), selected_policy)
+        except IdempotentMutationError as replay:
+            return str(replay)
         meta["task_revision"] += 1
         meta["updated_at"] = now()
         session_record = git_session_record(args, kind, meta, before)
@@ -3077,6 +3160,7 @@ def mutate(args: argparse.Namespace, kind: str, policy: EvidencePolicy | None = 
             session_record,
             checkpoint_record,
         )
+    return None
 
 
 def _transition_note(body: str, note: str, at: str) -> str:
@@ -3099,7 +3183,7 @@ def _transition_note(body: str, note: str, at: str) -> str:
 
 def mutate_sqlite(
     args: argparse.Namespace, kind: str, policy: EvidencePolicy | None = None
-) -> None:
+) -> str | None:
     """Linearize a lifecycle mutation at SQLite's committed CAS update."""
     selected_policy = policy_snapshot(policy)
     backend = mutating_sqlite_backend()
@@ -3161,6 +3245,7 @@ def mutate_sqlite(
         raise StorageCommittedError(
             f"SQLITE_COMMITTED_EXPORT_FAILED: task={args.task}; revision={expected + 1}; {error}"
         ) from error
+    return None
 
 
 def cmd_render_status(*, check: bool) -> None:
@@ -4150,6 +4235,13 @@ def dispatch_fast_command(args: argparse.Namespace) -> int:
     return dispatch_fast(sys.modules[__name__], args)
 
 
+def dispatch_lifecycle_mutation(args: argparse.Namespace) -> None:
+    """Run one lifecycle mutation and report an admitted no-op replay."""
+    note = mutate(args, args.cmd)
+    if note is not None:
+        print(note)
+
+
 def dispatch_bound_standard_command(args: argparse.Namespace) -> int:  # noqa: C901
     """Dispatch every non-fast command after permanent project binding."""
     if args.cmd == "reconcile":
@@ -4170,7 +4262,7 @@ def dispatch_bound_standard_command(args: argparse.Namespace) -> int:  # noqa: C
         *LIFECYCLE_MUTATION_COMMANDS,
         "gate",
     ):
-        mutate(args, args.cmd)
+        dispatch_lifecycle_mutation(args)
     elif args.cmd == "run":
         if args.command and args.command[0] == "--":
             args.command = args.command[1:]
@@ -4378,6 +4470,7 @@ def main() -> int:
     item = commands.add_parser("recover-expired")
     item.add_argument("task")
     item.add_argument("--expected-revision", type=int, required=True)
+    item.add_argument("--allow-legacy-without-identity", action="store_true")
     item.add_argument("--note", required=True)
     item = commands.add_parser("update")
     item.add_argument("task")
@@ -4432,9 +4525,28 @@ def main() -> int:
     return dispatch_bound_command(args)
 
 
-if __name__ == "__main__":
+def main_entrypoint() -> int:
+    """Run the CLI with a machine-readable transient-failure boundary.
+
+    A remote main movement or bounded local lock wait says nothing about
+    whether the task itself is blocked.  Callers receive the conventional
+    temporary-failure exit status so they can retry without changing task
+    status or releasing the live claim.  A divergent or dirty replica instead
+    needs reconciliation of potentially durable local state; it is explicitly
+    repair-required rather than a retry loop or task-level blocker.
+    """
     try:
-        raise SystemExit(main())
+        return main()
+    except RetryableCoordinatorError as error:
+        print(f"RETRYABLE: {error}", file=sys.stderr)
+        return 75
+    except RepairRequiredCoordinatorError as error:
+        print(f"REPAIR_REQUIRED: {error}", file=sys.stderr)
+        return 76
     except Exception as error:
         print(f"ERROR: {error}", file=sys.stderr)
-        raise SystemExit(1) from error
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main_entrypoint())

@@ -83,6 +83,7 @@ SOURCE_FILES: tuple[tuple[str, str], ...] = (
     ("tools/tlc_runner.py", "tools/tlc_runner.py"),
     ("tools/vendor.py", "tools/handoffctl_vendor.py"),
     ("tests/test_handoffctl.py", "tests/test_handoffctl.py"),
+    ("tests/test_concise_titles.py", "tests/test_concise_titles.py"),
     ("tests/test_handoffctl_recovery.py", "tests/test_handoffctl_recovery.py"),
     ("tests/test_fast_receipts.py", "tests/test_fast_receipts.py"),
     ("tests/test_fast_observation.py", "tests/test_fast_observation.py"),
@@ -193,6 +194,18 @@ SOURCE_FILES: tuple[tuple[str, str], ...] = (
         "formal/handoffctl/HandoffctlReceipts.tla",
         "formal/handoffctl/HandoffctlReceipts.tla",
     ),
+    (
+        "formal/handoffctl/HandoffctlPublication.cfg",
+        "formal/handoffctl/HandoffctlPublication.cfg",
+    ),
+    (
+        "formal/handoffctl/HandoffctlPublicationFast.cfg",
+        "formal/handoffctl/HandoffctlPublicationFast.cfg",
+    ),
+    (
+        "formal/handoffctl/HandoffctlPublication.tla",
+        "formal/handoffctl/HandoffctlPublication.tla",
+    ),
     ("formal/handoffctl/HandoffctlStorage.cfg", "formal/handoffctl/HandoffctlStorage.cfg"),
     ("formal/handoffctl/HandoffctlStorage.tla", "formal/handoffctl/HandoffctlStorage.tla"),
     (
@@ -201,6 +214,7 @@ SOURCE_FILES: tuple[tuple[str, str], ...] = (
     ),
     ("formal/handoffctl/README.md", "formal/handoffctl/README.md"),
     ("formal/handoffctl/attest.py", "formal/handoffctl/attest.py"),
+    ("formal/handoffctl/slices.py", "formal/handoffctl/slices.py"),
     ("formal/handoffctl/verify.sh", "formal/handoffctl/verify.sh"),
     ("formal/oracle/OracleInteractionGates.cfg", "formal/oracle/OracleInteractionGates.cfg"),
     ("formal/oracle/OracleInteractionGates.tla", "formal/oracle/OracleInteractionGates.tla"),
