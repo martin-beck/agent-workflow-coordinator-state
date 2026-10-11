@@ -318,6 +318,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-v0353-tag` | `DETACHED` | `b476a61e93d7` | 0 | behind 180, ahead 0 |
 | `agent-workflow-coordinator-v037` | `fix/vendor-formal-runtime-v037` | `73f855d7b71f` | 0 | behind 2335, ahead 3 |
 | `agent-workflow-coordinator-v050-release` | `release/v0.5.0` | `ce81dc72dd69` | 0 | behind 1, ahead 0 |
+| `agent-workflow-coordinator-v050-vendor` | `DETACHED` | `3f644ac6353d` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-validated-authority-revision` | `ar0007-validated-authority-revision` | `ca5af73ba929` | 0 | behind 2116, ahead 0 |
 | `agent-workflow-coordinator-validated-barrier-type` | `ar0007-validated-barrier-type` | `51da9276e304` | 0 | behind 2176, ahead 0 |
 | `agent-workflow-coordinator-validated-bool-authority` | `ar0007-validated-bool-authority` | `1992d4413811` | 0 | behind 2090, ahead 0 |
