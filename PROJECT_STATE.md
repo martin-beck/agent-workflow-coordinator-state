@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `c8837f5a52e2d0e5c9516633ebe66885efa08235`
-- Local origin/main: `c8837f5a52e2d0e5c9516633ebe66885efa08235`
+- Product remote main: `3f644ac6353dc70e1729d1b1369c18e7d2c5adb8`
+- Local origin/main: `3f644ac6353dc70e1729d1b1369c18e7d2c5adb8`
 - Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
 
 ## Open pull requests
@@ -17,15 +17,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38087259208 | `c8837f5a52e2` | push | Formal | completed:success |
-| 38087259193 | `c8837f5a52e2` | push | Verify | completed:success |
-| 38087099280 | `3f30d43b68cd` | pull_request | Verify | completed:success |
-| 38086255644 | `75829e93eaba` | push | Formal | completed:success |
-| 38086255580 | `75829e93eaba` | push | Verify | completed:success |
-| 38086091945 | `890bfedb137f` | pull_request | Verify | completed:success |
-| 38085729164 | `ae6c92e329e5` | pull_request | Verify | completed:success |
-| 38085525562 | `9ce801e9b6b5` | pull_request | Verify | completed:failure |
-| 38085456807 | `0b747cf63695` | pull_request | Verify | completed:failure |
-| 38085358219 | `a3feca32ec0f` | pull_request | Verify | completed:cancelled |
-| 38085277960 | `8c6a0c644062` | pull_request | Verify | completed:failure |
-| 38084687488 | `92d50e0030ee` | push | Verify | completed:success |
+| 38093404113 | `3f644ac6353d` | push | Formal | completed:success |
+| 38093404110 | `3f644ac6353d` | push | Verify | completed:success |
+| 38093252471 | `ce81dc72dd69` | pull_request | Verify | completed:success |
+| 38093173756 | `a85ee2b5e0ca` | pull_request | Verify | completed:cancelled |
+| 38092934156 | `648264ddf799` | push | Formal | completed:success |
+| 38092934147 | `648264ddf799` | push | Verify | completed:success |
+| 38092790727 | `22c245041696` | pull_request | Verify | completed:success |
+| 38092168368 | `757d37177719` | pull_request | Verify | completed:failure |
+| 38089183434 | `ebda83df0e0c` | push | Formal | completed:success |
+| 38089183408 | `ebda83df0e0c` | push | Verify | completed:success |
+| 38088996273 | `0c61530f2bad` | pull_request | Verify | completed:success |
+| 38088757953 | `6d4fa67a63d9` | pull_request | Verify | completed:success |
