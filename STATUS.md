@@ -1282,7 +1282,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. |
-| Next action | Move the Coordinator-state-only TUI session additions into reviewed upstream Coordinator contracts, then restore the state repository with an official complete vendor synchronization and exact digest verification. |
+| Next action | Repair AR-0089 terminal closure: record independent exact-main review, run and retain two clean-clone vendor verifications plus deterministic/formal qualification, then publish a reviewed signed+DCO state PR with truthful upstream commit/tree and vendor-manifest receipts. |
 
 
 ## Dependency graph
@@ -1629,7 +1629,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | codex-ar0089-terminal-receipts | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Move the Coordinator-state-only TUI session additions into reviewed upstream Coordinator contracts, then restore the state repository with an official complete vendor synchronization and exact digest verification. |
+| P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | codex-ar0089-terminal-receipts | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Repair AR-0089 terminal closure: record independent exact-main review, run and retain two clean-clone vendor verifications plus deterministic/formal qualification, then publish a reviewed signed+DCO state PR with truthful upstream commit/tree and vendor-manifest receipts. |
 
 ### Open (7)
 
