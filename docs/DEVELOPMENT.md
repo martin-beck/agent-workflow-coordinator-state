@@ -16,3 +16,16 @@ machine-specific configuration. AWQ policy files belong to the product
 repository and must pin an immutable released AWQ commit while retaining all
 native product gates.
 
+## Local verification
+
+Install the pinned development test dependencies, then run the deterministic
+state suite from the repository root:
+
+```sh
+python -m pip install -r requirements-dev.txt
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p 'test_*.py'
+```
+
+The `Verify Coordinator state` workflow runs this same suite for pull requests
+and pushes to `main`. It complements, rather than replaces, the separate
+clean-clone vendor verification workflow.
