@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0089.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "vendor-identity",
+      "description": "The state manifest and every declared vendor file verify against one immutable Coordinator v0.5.0 source commit and tree."
+    },
+    {
+      "id": "closure-evidence",
+      "description": "The reviewed receipt identifies the source, two clean-clone verifications, independent exact-head review, and exact-main checks."
+    },
+    {
+      "id": "required-gates",
+      "description": "Main requires clean-clone vendor verification and deterministic state verification before merge."
+    }
+  ],
+  "definition_of_done": [
+    "The official vendor verifier passes on the exact merged state head.",
+    "The deterministic state suite and both protected exact-main checks pass.",
+    "An independent reviewer accepts the exact PR head and the final receipt is durable."
+  ],
+  "inputs": [
+    {
+      "id": "vendor-manifest",
+      "description": "The tracked Coordinator vendor manifest and the clean signed v0.5.0 source checkout."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "closure-receipt",
+      "description": "A public-safe receipt with immutable source identity and verification references."
+    }
+  ],
+  "allowed_tools": [
+    "handoffctl",
+    "vendor.py",
+    "git",
+    "gh",
+    "python"
+  ],
+  "forbidden_tools": [
+    "manual-vendor-copy",
+    "manual-manifest-digest-edit",
+    "direct-task-metadata-edit"
+  ],
+  "required_evidence_classes": [
+    "contract-test"
+  ],
+  "gates": [
+    {
+      "id": "independent-review",
+      "description": "A separate worker reviews the exact candidate head before merge."
+    },
+    {
+      "id": "protected-ci",
+      "description": "Both required exact-head hosted checks complete successfully."
+    }
+  ]
+}
