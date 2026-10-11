@@ -1282,7 +1282,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. |
-| Next action | Repair AR-0089 terminal closure: record independent exact-main review, run and retain two clean-clone vendor verifications plus deterministic/formal qualification, then publish a reviewed signed+DCO state PR with truthful upstream commit/tree and vendor-manifest receipts. |
+| Next action | Synchronize the official tagged Coordinator v0.5.0 vendor snapshot so legacy tasks gain bind-spec, then bind AR-0089 to a reviewed task spec, record acceptance, and re-run exact-main integrity checks before release. |
 
 
 ## Dependency graph
@@ -1629,7 +1629,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | codex-ar0089-terminal-receipts | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Repair AR-0089 terminal closure: record independent exact-main review, run and retain two clean-clone vendor verifications plus deterministic/formal qualification, then publish a reviewed signed+DCO state PR with truthful upstream commit/tree and vendor-manifest receipts. |
+| P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | codex-ar0089-terminal-receipts | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Synchronize the official tagged Coordinator v0.5.0 vendor snapshot so legacy tasks gain bind-spec, then bind AR-0089 to a reviewed task spec, record acceptance, and re-run exact-main integrity checks before release. |
 
 ### Open (7)
 
