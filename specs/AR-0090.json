@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0090.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "short-title-contract",
+      "description": "An optional short_title has a strict one-to-four-word, 120-character, privacy-safe contract and legacy records remain readable."
+    },
+    {
+      "id": "rendering-and-rollback",
+      "description": "Human views render the distinct concise label safely, while rollback and Git-to-SQLite-to-Git migration preserve or remove it exactly."
+    },
+    {
+      "id": "reviewed-main",
+      "description": "The signed source change is independently reviewed and all exact-head required checks pass before merge."
+    }
+  ],
+  "definition_of_done": [
+    "The concise-title implementation is merged to source main after exact-head CI and independent review.",
+    "Focused contract tests, migration coverage, and the full required source suite pass.",
+    "The task records reviewed evidence against this specification before release to done."
+  ],
+  "inputs": [
+    {
+      "id": "task-records",
+      "description": "Legacy and new coordinator task records plus the AR-0090 plan."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "merged-source-pr",
+      "description": "A signed and reviewed Coordinator source pull request with compatible rendered projections."
+    }
+  ],
+  "allowed_tools": ["handoffctl", "git", "gh", "python", "uv"],
+  "forbidden_tools": ["direct-task-metadata-edit", "unsigned-source-commit"],
+  "required_evidence_classes": ["contract-test"],
+  "gates": [
+    {
+      "id": "exact-head-ci",
+      "description": "Required hosted checks pass at the exact candidate head."
+    },
+    {
+      "id": "independent-review",
+      "description": "A separate worker independently reviews the exact candidate head."
+    }
+  ]
+}
