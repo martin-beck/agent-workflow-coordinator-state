@@ -19,14 +19,26 @@ the source tree above. Its SHA-256 at receipt creation is
 
 ## Verification evidence
 
-- The v0.5.0 candidate's two clean-clone verifications, deterministic state
-  suite, independent review and exact-main checks are recorded only after its
-  own PR reaches a reviewed head. Earlier c8837f evidence is historical and
-  must not be used as v0.5.0 qualification.
+- State PR [#16](https://github.com/martin-beck/agent-workflow-coordinator-state/pull/16)
+  was independently reviewed at exact candidate
+  `0f54f97b73b32dd9589c567d402e659929db64e3`. The review confirmed that the
+  release-snapshot rebuild distinguishes schema-1 tagged releases from
+  schema-2 development snapshots, and found no defect in the candidate.
+- The reviewed candidate passed both required checks:
+  [deterministic state verification](https://github.com/martin-beck/agent-workflow-coordinator-state/actions/runs/38121869453)
+  and [clean-clone vendor verification](https://github.com/martin-beck/agent-workflow-coordinator-state/actions/runs/38121869465).
+- The merged exact-main state commit
+  `8bd6034dc692dd101648703514b4161e682777c7` passed the same two independent
+  gates again:
+  [deterministic state verification](https://github.com/martin-beck/agent-workflow-coordinator-state/actions/runs/38121984920)
+  and [clean-clone vendor verification](https://github.com/martin-beck/agent-workflow-coordinator-state/actions/runs/38121984916).
+
+The two clean-clone passes above cover both the independently reviewed
+candidate and the exact merged main tree. Earlier c8837f evidence is historical
+and is not used as v0.5.0 qualification.
 
 ## Review and publication boundary
 
-This receipt is intentionally incomplete until an independent reviewer has
-reviewed the exact v0.5.0 state PR head and the merged head has passed both
-clean-clone vendor verification and deterministic state verification. The
-earlier c8837f repair and its follow-up do not substitute for this review.
+The reviewed source, candidate, and exact merged main checks above establish
+the downstream vendor-integrity boundary. This receipt does not assert release
+provenance beyond the cited upstream v0.5.0 release identity.
