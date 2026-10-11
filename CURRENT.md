@@ -8,6 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. | codex-ar0088-idempotent-bind |
+| P1 | [AR-0090](tasks/AR-0090.md): Concise AR Titles | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. | codex-ar0090-titles |
 
 ## Open
 
@@ -20,7 +21,6 @@ Never edit this file directly.
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. | - |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. | - |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
-| P1 | [AR-0090](tasks/AR-0090.md): Concise AR Titles | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. | - |
 
 ## Planned
 
