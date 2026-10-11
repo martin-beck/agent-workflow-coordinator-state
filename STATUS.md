@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 8 |
+| **Planned** | Defined work awaiting promotion or dependencies | 7 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 81 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 99 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 9 |
+| Open or active | 10 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 99 | 9 | 0 | 81 |
+| unassigned | unassigned | 99 | 10 | 0 | 81 |
 
 ## Task drill-down
 
@@ -1316,7 +1316,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | open |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
@@ -1526,7 +1526,7 @@ flowchart LR
         AR_0089["AR-0089 - Done"]:::status_done
         AR_0090["AR-0090 - Done"]:::status_done
         AR_0091["AR-0091 - Open"]:::status_open
-        AR_0092["AR-0092 - Planned"]:::status_planned
+        AR_0092["AR-0092 - Open"]:::status_open
         AR_0093["AR-0093 - Planned"]:::status_planned
         AR_0094["AR-0094 - Planned"]:::status_planned
         AR_0095["AR-0095 - Planned"]:::status_planned
@@ -1805,7 +1805,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | codex-ar0088-idempotent-bind | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. |
 
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1817,12 +1817,12 @@ flowchart LR
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
+| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
 
-### Planned (8)
+### Planned (7)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
 | P0 | [AR-0093](tasks/AR-0093.md): Change Drift Guard | Unclaimed | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. |
 | P0 | [AR-0094](tasks/AR-0094.md): Step Evidence Ledger | Unclaimed | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. |
 | P1 | [AR-0095](tasks/AR-0095.md): Assumption Revalidation | Unclaimed | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. |
