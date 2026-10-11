@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 7 |
+| **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 10 |
+| **Planned** | Defined work awaiting promotion or dependencies | 9 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 80 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 99 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 8 |
+| Open or active | 9 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 99 | 8 | 0 | 80 |
+| unassigned | unassigned | 99 | 9 | 0 | 80 |
 
 ## Task drill-down
 
@@ -1288,7 +1288,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | open |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
@@ -1524,7 +1524,7 @@ flowchart LR
         AR_0087["AR-0087 - Done"]:::status_done
         AR_0088["AR-0088 - In progress"]:::status_in_progress
         AR_0089["AR-0089 - Done"]:::status_done
-        AR_0090["AR-0090 - Planned"]:::status_planned
+        AR_0090["AR-0090 - Open"]:::status_open
         AR_0091["AR-0091 - Planned"]:::status_planned
         AR_0092["AR-0092 - Planned"]:::status_planned
         AR_0093["AR-0093 - Planned"]:::status_planned
@@ -1805,7 +1805,7 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | codex-ar0088-idempotent-bind | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. |
 
-### Open (7)
+### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1816,8 +1816,9 @@ flowchart LR
 | P0 | [AR-0060](tasks/AR-0060.md): First release integration and upgrade campaign | Unclaimed | First release campaign is not yet authorized: generated prerequisites/runbooks and unsigned-tag checks exist, but selector publication, runtime replacement, authority commit/apply, and rollback mutation remain rejection-only. Fresh-clone campaign must wait for the new separately gated AR-0061, AR-0062, and AR-0063 sequence. | Keep AR-0060 in progress while AR-0061 proves selector/runtime publication, AR-0062 proves authority commit/apply, and AR-0063 proves rollback and the complete fresh-clone campaign. |
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
+| P1 | [AR-0090](tasks/AR-0090.md): Concise AR Titles | Unclaimed | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. |
 
-### Planned (10)
+### Planned (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1825,7 +1826,6 @@ flowchart LR
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
 | P0 | [AR-0093](tasks/AR-0093.md): Change Drift Guard | Unclaimed | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. |
 | P0 | [AR-0094](tasks/AR-0094.md): Step Evidence Ledger | Unclaimed | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. |
-| P1 | [AR-0090](tasks/AR-0090.md): Concise AR Titles | Unclaimed | Give every AR a concise human-readable title of no more than four words and show it beside the AR number whenever an operator works on that task. | Design and implement a backward-compatible short-title contract, migrate existing task records, and expose it in active handoffctl output with focused validation. |
 | P1 | [AR-0095](tasks/AR-0095.md): Assumption Revalidation | Unclaimed | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. |
 | P1 | [AR-0096](tasks/AR-0096.md): Drift Aware Resume | Unclaimed | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. | Build deterministic resume cards from task, scope, evidence, and freshness state. |
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
