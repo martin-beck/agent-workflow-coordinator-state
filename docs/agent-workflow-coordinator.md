@@ -99,18 +99,20 @@ tracked binding.
 
 ## Normal user and agent loop
 
-Development merge review identity is defined in
-[`DEVELOPMENT_REVIEW_POLICY.md`](DEVELOPMENT_REVIEW_POLICY.md). The required
-technical review remains independent, while a same-account GitHub approval is
-acceptable for development-only integration. Verified releases retain their
-separate release and provenance gates.
+Local evidence is sufficient for normal autonomous development and release:
+the coordinator must not require an external signature, authentication service,
+GitHub approval, or independent reviewer to make progress.  A review or hosted
+attestation may be recorded as supplementary evidence when available, but is
+never a lifecycle, merge, or release prerequisite.  Functional checks and
+truthful evidence claims remain required.
 
 1. Read the project's development policy, complete snapshot, selected task and plan.
 2. Claim one dependency-ready open task with a stable unique owner.
 3. Run every state-changing product, Git, review or publication command through `run`.
 4. Record each material result immediately; heartbeat before lease expiry.
 5. After interruption, inspect revisions, commits, refs, processes and CI before retrying.
-6. For `done`, record reviewed task-spec acceptance at the exact current revision.
+6. For `done`, record task-spec acceptance with locally verifiable evidence at
+   the exact current revision; supplementary review is optional.
 7. Release to `done`, `open`, or `blocked`; reconcile and run the live doctor.
 
 ```sh
@@ -135,8 +137,9 @@ identity at claim time and later recovers only after it is absent.
 
 `accept` records the active owner's acceptance assertion for the task's referenced
 spec and validates the metadata. It does not independently inspect or prove the
-evidence contents; project review and evidence-class obligations still apply.
-The `done` release gate remains fail closed when acceptance is missing or invalid.
+evidence contents; locally verifiable evidence-class obligations still apply.
+The `done` release gate remains fail closed when acceptance is missing or invalid,
+not when external review or authentication is unavailable.
 
 Restore a verified checkpoint only from a clean descendant product checkout:
 
