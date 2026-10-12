@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0108 — Issue-series optional publication adapter](tasks/AR-0108.md) | Offer optional issue-series projections and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement optional idempotent GitHub issue-series publication, privacy-safe comment receipts, and local deferred-projection handling. | codex-awc-ar0108-completion-20261012 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
