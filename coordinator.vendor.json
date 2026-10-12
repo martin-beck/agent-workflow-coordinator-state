@@ -196,6 +196,10 @@
       "sha256": "bf04d7297c037cac80dcfb0cf21cca024014455e8b5b45c9bc9d355259b627a4",
       "source": "schema/upgrade-contract.schema.json"
     },
+    "schema/issue-series-manifest.schema.json": {
+      "sha256": "294a546ab1b5244871d91aa7e212fa84440ff556115dae0c6c1101dc5bc11960",
+      "source": "schema/issue-series-manifest.schema.json"
+    },
     "schema/role-assignment.schema.json": {
       "sha256": "4bef843e049fbf297eeec7c0b3c9693a4b649f8ce78f90edacc2cb03b1a506e4",
       "source": "schema/role-assignment.schema.json"
@@ -209,7 +213,7 @@
       "source": "schema/role.schema.json"
     },
     "schema/task-record.schema.json": {
-      "sha256": "5055efaaaccab298db030bdd31176fa4d648991a7dac6760a41155e8a293977e",
+      "sha256": "6472c530a359444d44c5273c56bea926fb78f68e249e11269f004ff83e0cf7d4",
       "source": "schema/task-record.schema.json"
     },
     "schema/task-spec-policy.schema.json": {
@@ -257,7 +261,7 @@
       "source": "tests/test_formal_receipt.py"
     },
     "tests/test_handoffctl.py": {
-      "sha256": "47a1644a1e6e653292c0132d527001730e2e71b8126f0c7bb1170921b0ada109",
+      "sha256": "c11bbc4e7852f7d897fe9755006b05a1c2618ccc57d871a3110756f4b6ee9998",
       "source": "tests/test_handoffctl.py"
     },
     "tests/test_handoffctl_recovery.py": {
@@ -268,6 +272,10 @@
       "sha256": "6337acc13c1b8903c1d81434fdcf287865a4b8d0cd06b37b5cde913281aa62d4",
       "source": "tests/test_hierarchy.py"
     },
+    "tests/test_issue_series_handoffctl.py": {
+      "sha256": "261d4eebd0aa13254eaa2208c0a3675957a5d9d03d0dfe233ab498b9ffe8b89a",
+      "source": "tests/test_issue_series_handoffctl.py"
+    },
     "tests/test_rollback_command.py": {
       "sha256": "bd73d2e508d9ebdc3c95eda84152bc71738c1173cbd31731129c5e7c17800b42",
       "source": "tests/test_rollback_command.py"
@@ -277,7 +285,7 @@
       "source": "tests/test_session_records.py"
     },
     "tests/test_sqlite_storage.py": {
-      "sha256": "01009f9f6e82a4dc8220d34f0d341dc2f160e54dc7ab5b8a05a0e3a5b6e50f62",
+      "sha256": "4f458e66eaf2bcaa523fabb1ae78c53a1f1d573602548570cb44c1bd418fbee0",
       "source": "tests/test_sqlite_storage.py"
     },
     "tests/test_task_spec.py": {
@@ -377,16 +385,24 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "a578b638fd00cfa443120ddec59914ac94a07789f62d494ebe624718c38c1dd3",
+      "sha256": "8772449cf1d54a60604edc5751910aef65939bf1f0dbc5609c1b2f8e618419b6",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
-      "sha256": "18c4711226033c2e6ac7e25dc0fc22e7d351a5e37fa8ed13e79c5505a40949c4",
+      "sha256": "134efc0da82fa7510638063b60238f6aaf67b7bfe1ccf6591f4f40238eebfb60",
       "source": "tools/vendor.py"
     },
     "tools/hierarchy.py": {
       "sha256": "cbb9a2cfea40bb2b62b02567b2aed2d802de2d9fff5b3efa994ee969c055bf4f",
       "source": "tools/hierarchy.py"
+    },
+    "tools/issue_series.py": {
+      "sha256": "e0b26a801f4f6b151ece3a562f34875c7a00ae4609d780285a36e30082d7d63d",
+      "source": "tools/issue_series.py"
+    },
+    "tools/issue_series_plan.py": {
+      "sha256": "3c3ac33a3e09ba8c00fca47de2078211e8d06083b75b7615a8102d434db12977",
+      "source": "tools/issue_series_plan.py"
     },
     "tools/lifecycle_session.py": {
       "sha256": "94d8585554e4fb72117a1b284d54535cfe03a4ea8a6d8cc4312bd5bc8bc26b90",
@@ -465,7 +481,7 @@
       "source": "tools/sqlite_backup.py"
     },
     "tools/sqlite_storage.py": {
-      "sha256": "fbfc7687542ad9ec55e5fe47589451e5e56ac2f700b91777bca5051f41d762b2",
+      "sha256": "3da24d6cc7673a8b54dc0e511d153a5bd6ce7819e9564deaa0d6612b9d16c860",
       "source": "tools/sqlite_storage.py"
     },
     "tools/sqlite_wal_lifecycle.py": {
@@ -517,10 +533,12 @@
       "source": "LICENSE"
     }
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "upstream": {
-    "commit": "2714cfd87f9dd1c6229ab6d9622b13862de186b1",
+    "channel": "development",
+    "commit": "79c939fa3ae19600187eedb06777fa77c6991982",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
+    "tree": "433ba8f746e408eb4068a15bad2ae70b2131f9e2",
     "version": "v0.5.3"
   }
 }

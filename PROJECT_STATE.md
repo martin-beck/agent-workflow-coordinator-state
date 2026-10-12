@@ -2,9 +2,9 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `2714cfd87f9dd1c6229ab6d9622b13862de186b1`
-- Local origin/main: `2714cfd87f9dd1c6229ab6d9622b13862de186b1`
-- Primary worktree head: `b5dcd924e967d9f2ee67fecab0f9e43aff437f6b`
+- Product remote main: `79c939fa3ae19600187eedb06777fa77c6991982`
+- Local origin/main: `79c939fa3ae19600187eedb06777fa77c6991982`
+- Primary worktree head: `bd36fe5e3bc69f414d94079f442bee6511b9cb2a`
 
 ## Open pull requests
 
@@ -18,15 +18,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 38278280027 | `79c939fa3ae1` | push | Formal | completed:success |
+| 38278280007 | `79c939fa3ae1` | push | Verify | in_progress:- |
+| 38277861883 | `73d2b5cfebe9` | pull_request | Verify | completed:failure |
+| 38277213303 | `620bd3cc2722` | pull_request | Verify | completed:failure |
+| 38276093422 | `2b47ec53c2f4` | push | Formal | completed:success |
+| 38276093286 | `2b47ec53c2f4` | push | Verify | completed:failure |
+| 38275871166 | `bd36fe5e3bc6` | pull_request | Verify | completed:failure |
+| 38275645353 | `2d10c6e848e4` | pull_request | Verify | completed:failure |
+| 38275460813 | `3f684b32378f` | pull_request | Verify | completed:failure |
+| 38275330080 | `0b957224d51a` | pull_request | Verify | completed:failure |
+| 38275224360 | `2a6f8efc0d8d` | pull_request | Verify | completed:failure |
 | 38267597170 | `2714cfd87f9d` | push | Formal | completed:success |
-| 38267597127 | `2714cfd87f9d` | push | Verify | completed:success |
-| 38267277009 | `9ed5702152a0` | pull_request | Verify | completed:success |
-| 38267160421 | `be4d03803a7a` | pull_request | Verify | completed:failure |
-| 38267011422 | `dd1a5d83d7d4` | push | Verify | completed:success |
-| 38267011007 | `dd1a5d83d7d4` | push | Formal | completed:failure |
-| 38266706701 | `f80338157845` | pull_request | Verify | completed:success |
-| 38266421482 | `b6d3e5d677f8` | push | Formal | completed:failure |
-| 38266421378 | `b6d3e5d677f8` | push | Verify | completed:success |
-| 38266169012 | `cbd372be3fb4` | pull_request | Verify | completed:success |
-| 38266047832 | `359262fae456` | pull_request | Verify | completed:failure |
-| 38265396085 | `0c1ba32deecf` | pull_request | Verify | completed:failure |

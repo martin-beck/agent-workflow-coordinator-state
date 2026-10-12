@@ -1,0 +1,17 @@
+{
+  "acceptance_predicates": [
+    {"id": "strict-series", "description": "Local validation rejects malformed, private, cross-project, duplicate, cyclic, orphaned, stale, and partial issue-series decompositions."},
+    {"id": "atomic-parity", "description": "Validated creation is atomic and produces equivalent Git and SQLite task graphs and generated views."},
+    {"id": "optional-projection", "description": "No GitHub publication, credentials, signature, authentication, or external review is required for creation or acceptance."}
+  ],
+  "allowed_tools": ["handoffctl", "git", "python", "unittest"],
+  "definition_of_done": ["A locally validated issue-series manifest and dry-run/create command are implemented.", "Valid decomposition atomically creates member ARs and one dependency-ordered finalizer with generated views.", "Contract, property-or-fuzz, fault, concurrency, and bounded-model evidence are recorded locally."],
+  "forbidden_tools": ["direct-task-metadata-edit", "external-review-requirement", "external-signature-requirement", "external-authentication-requirement"],
+  "gates": [{"id": "local-functional-evidence", "description": "Locally reproducible evidence is the sole progression gate."}],
+  "inputs": [{"id": "series-manifest", "description": "A structured privacy-safe issue-to-AR decomposition bound to repository identity."}],
+  "outputs": [{"id": "validated-task-graph", "description": "An atomically persisted member graph and finalizer with deterministic generated views."}],
+  "required_evidence_classes": ["contract-test", "property-or-fuzz", "bounded-model"],
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0107.json",
+  "spec_revision": 1
+}
