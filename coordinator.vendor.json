@@ -137,7 +137,7 @@
       "source": "formal/handoffctl/OBSERVATION_CORRESPONDENCE.md"
     },
     "formal/handoffctl/README.md": {
-      "sha256": "b8e48ecde11202fa5a2b54fb511f008b5763ffd4b608d0d3992cbaed67df2f13",
+      "sha256": "29430f0a89daa0e753d75e4862cc6195ebfcffea8eeea7f96bcf6741fa738174",
       "source": "formal/handoffctl/README.md"
     },
     "formal/handoffctl/attest.py": {
@@ -252,6 +252,10 @@
       "sha256": "f90327c7a985135ead29aff4f71f9ec33fe689a3267a583072f1657f67bcf2a7",
       "source": "tests/test_fast_receipts.py"
     },
+    "tests/test_formal_receipt.py": {
+      "sha256": "05faf6bfc0feb0a1db8e542155061efae77a91f9b068281ecbde64a3da3db538",
+      "source": "tests/test_formal_receipt.py"
+    },
     "tests/test_handoffctl.py": {
       "sha256": "47a1644a1e6e653292c0132d527001730e2e71b8126f0c7bb1170921b0ada109",
       "source": "tests/test_handoffctl.py"
@@ -352,6 +356,10 @@
       "sha256": "95a8694096aec2c27125cdf4839b9a0cbcb84c166e34611a62135029e824a846",
       "source": "tools/fast_receipts.py"
     },
+    "tools/formal_receipt.py": {
+      "sha256": "83a291aee127c943cadee3d3d4d7c7951a064611850243bcdb6c55045c35735d",
+      "source": "tools/formal_receipt.py"
+    },
     "tools/git_authority_adapter.py": {
       "sha256": "df8c7ce06224e1de460a081c946ec6c2465db6aeb2a47cfa9b3e0dd846fd9b52",
       "source": "tools/git_authority_adapter.py"
@@ -373,7 +381,7 @@
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
-      "sha256": "2566032c89e13fe5383358629ad85a96c14837076746bd92e47c8f3f8b4e9174",
+      "sha256": "18c4711226033c2e6ac7e25dc0fc22e7d351a5e37fa8ed13e79c5505a40949c4",
       "source": "tools/vendor.py"
     },
     "tools/hierarchy.py": {
@@ -512,9 +520,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "1c4c0603fc0775e7059a0d833b06ff9c9889ba85",
+    "commit": "81b37dcd15716444a68295785c0740f8af2ff02a",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "17d844ba63112a8c855de24bd5714ba2e07a622b",
+    "tree": "49b1337281144479fbf1c0e6d63a874ae30a0682",
     "version": "v0.5.2"
   }
 }
