@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 10 |
+| **Open** | Dependency-ready and available to claim | 11 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 14 |
+| **Planned** | Defined work awaiting promotion or dependencies | 13 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 81 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 106 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 10 |
+| Open or active | 11 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 106 | 10 | 0 | 81 |
+| unassigned | unassigned | 106 | 11 | 0 | 81 |
 
 ## Task drill-down
 
@@ -1428,7 +1428,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | open |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
@@ -1635,7 +1635,7 @@ flowchart LR
     end
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
-        AR_0100["AR-0100 - Planned"]:::status_planned
+        AR_0100["AR-0100 - Open"]:::status_open
         AR_0101["AR-0101 - Planned"]:::status_planned
         AR_0102["AR-0102 - Planned"]:::status_planned
         AR_0103["AR-0103 - Planned"]:::status_planned
@@ -1925,7 +1925,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (10)
+### Open (11)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1939,14 +1939,14 @@ flowchart LR
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Unclaimed | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | Unclaimed | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. |
 
-### Planned (14)
+### Planned (13)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093](tasks/AR-0093.md): Change Drift Guard | Unclaimed | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. |
 | P0 | [AR-0094](tasks/AR-0094.md): Step Evidence Ledger | Unclaimed | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | Unclaimed | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. |
 | P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | Unclaimed | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 | P0 | [AR-0102](tasks/AR-0102.md): Budgeted Formal Runner Storage and Resource Handling | Unclaimed | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. |
 | P0 | [AR-0103](tasks/AR-0103.md): Candidate-Bound Formal Job Lifecycle | Unclaimed | Decouple long formal execution from coordinator locks using fenced, candidate-bound job lifecycle evidence. | Implement candidate-bound formal job receipts that do not retain coordinator authority while a job runs. |
