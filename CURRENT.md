@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0107 — Issue-to-AR series contract and validated decomposition](tasks/AR-0107.md) | Define a durable inspectable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Define a durable manifest, strict task linkage, and locally validated decomposition before optional GitHub publication. | codex-awc-ar0107-implementation-20261012 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
