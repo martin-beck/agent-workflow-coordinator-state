@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. | codex-ar0092-envelopes |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -22,6 +16,7 @@ Never edit this file directly.
 | P0 | [AR-0069 — Roles release and downstream pinning](tasks/AR-0069.md) | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 | P0 | [AR-0088 — Supported active-task worktree binding](tasks/AR-0088.md) | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
+| P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. | - |
 
 ## Planned
 
@@ -29,6 +24,13 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093 — Change Drift Guard](tasks/AR-0093.md) | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. | - |
 | P0 | [AR-0094 — Step Evidence Ledger](tasks/AR-0094.md) | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. | - |
+| P0 | [AR-0100 — Bounded Formal Verification Tier Policy](tasks/AR-0100.md) | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. | - |
+| P0 | [AR-0101 — Reduced Liveness Model and Coverage Mapping](tasks/AR-0101.md) | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. | - |
+| P0 | [AR-0102 — Budgeted Formal Runner Storage and Resource Handling](tasks/AR-0102.md) | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. | - |
+| P0 | [AR-0103 — Candidate-Bound Formal Job Lifecycle](tasks/AR-0103.md) | Decouple long formal execution from coordinator locks using fenced, candidate-bound job lifecycle evidence. | Implement candidate-bound formal job receipts that do not retain coordinator authority while a job runs. | - |
+| P0 | [AR-0104 — Minute-Scale Formal CI Integration](tasks/AR-0104.md) | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. | - |
+| P0 | [AR-0105 — Advisory Formal Stress Exploration](tasks/AR-0105.md) | Retain high-cardinality liveness exploration without allowing it to stall routine development. | Move the large liveness configuration into a contained advisory stress workflow. | - |
+| P0 | [AR-0106 — Formal Tier Migration Qualification](tasks/AR-0106.md) | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. | - |
 | P1 | [AR-0095 — Assumption Revalidation](tasks/AR-0095.md) | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. | - |
 | P1 | [AR-0096 — Drift Aware Resume](tasks/AR-0096.md) | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. | Build deterministic resume cards from task, scope, evidence, and freshness state. | - |
 | P1 | [AR-0097 — Retry Circuit Breaker](tasks/AR-0097.md) | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. | - |
