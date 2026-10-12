@@ -245,15 +245,15 @@
       "source": "tests/test_fast_receipt_cli.py"
     },
     "tests/test_fast_receipt_socket.py": {
-      "sha256": "4b6d64f9b3398a60db53eb682104f6220b5b01521db913c72312ac572a061594",
+      "sha256": "132d14fb53097bdad150809ad7a0d08a8979335302ba044374a8bbfbc2e809e2",
       "source": "tests/test_fast_receipt_socket.py"
     },
     "tests/test_fast_receipt_worker.py": {
-      "sha256": "c846e90cd75fd1a50915518072e7a723582c93a4d6815c27015e5e1fb28ab363",
+      "sha256": "f880886fff6524cf8d428c24d1cde753556b981fac32bec9191f99491c3951a6",
       "source": "tests/test_fast_receipt_worker.py"
     },
     "tests/test_fast_receipts.py": {
-      "sha256": "f90327c7a985135ead29aff4f71f9ec33fe689a3267a583072f1657f67bcf2a7",
+      "sha256": "ffc410f6a9ee740f02084fbd92ec2fc60c016014cddc8f00b1a2982162ec4a4c",
       "source": "tests/test_fast_receipts.py"
     },
     "tests/test_formal_receipt.py": {
@@ -261,7 +261,7 @@
       "source": "tests/test_formal_receipt.py"
     },
     "tests/test_handoffctl.py": {
-      "sha256": "c11bbc4e7852f7d897fe9755006b05a1c2618ccc57d871a3110756f4b6ee9998",
+      "sha256": "d447bef4243e382c245793f62fe3fa5d2570473c881fe2f7a4bbe758a12bffeb",
       "source": "tests/test_handoffctl.py"
     },
     "tests/test_handoffctl_recovery.py": {
@@ -273,7 +273,7 @@
       "source": "tests/test_hierarchy.py"
     },
     "tests/test_issue_series_handoffctl.py": {
-      "sha256": "261d4eebd0aa13254eaa2208c0a3675957a5d9d03d0dfe233ab498b9ffe8b89a",
+      "sha256": "dbe5e173135ec5fd4ae1eeba54dab1bb378060e541bbe735c1f4a37332e6fc1f",
       "source": "tests/test_issue_series_handoffctl.py"
     },
     "tests/test_rollback_command.py": {
@@ -385,7 +385,7 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "8772449cf1d54a60604edc5751910aef65939bf1f0dbc5609c1b2f8e618419b6",
+      "sha256": "b5ac10f46e2443c7005fd54bad9a6ef4b1bf9d86f7130357592597cee693dc8c",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
@@ -481,7 +481,7 @@
       "source": "tools/sqlite_backup.py"
     },
     "tools/sqlite_storage.py": {
-      "sha256": "3da24d6cc7673a8b54dc0e511d153a5bd6ce7819e9564deaa0d6612b9d16c860",
+      "sha256": "00524b0fd1dd0b1f92606da172c34e34bf282aa885444827b24758b4c0d0a60a",
       "source": "tools/sqlite_storage.py"
     },
     "tools/sqlite_wal_lifecycle.py": {
@@ -493,7 +493,7 @@
       "source": "tools/status_renderer.py"
     },
     "tools/task_spec.py": {
-      "sha256": "6b635d0576ece23d677426d1268552c57737e1573339917c0e024b5bb66fd8a9",
+      "sha256": "372da3029b3ea405b96d0190f708dfbc2eb016ac351d26723cf4777b5469c016",
       "source": "tools/task_spec.py"
     },
     "tools/tlc_runner.py": {
@@ -505,7 +505,7 @@
       "source": "tools/upgrade_admission.py"
     },
     "tools/upgrade_authority.py": {
-      "sha256": "13351edbea86873b0fd4d09d1f4f4c6540d5db2f2f397c0894e8d22064c51dd1",
+      "sha256": "bc0755aead276923af83baaa5a56981887e1a5e76bfe6288132605c094d6c75d",
       "source": "tools/upgrade_authority.py"
     },
     "tools/upgrade_binding.py": {
@@ -533,12 +533,10 @@
       "source": "LICENSE"
     }
   },
-  "schema_version": 2,
+  "schema_version": 1,
   "upstream": {
-    "channel": "development",
-    "commit": "79c939fa3ae19600187eedb06777fa77c6991982",
+    "commit": "962d45900012571b8f01157b3166fd8bfbb1187c",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "433ba8f746e408eb4068a15bad2ae70b2131f9e2",
-    "version": "v0.5.3"
+    "version": "v0.5.5"
   }
 }
