@@ -1,6 +1,6 @@
 # AR-0107: Issue-to-AR series contract and reviewed decomposition
 
-Implement a strict issue-series manifest and reviewed `handoffctl` planning and
+Implement a strict issue-series manifest and locally validated `handoffctl` planning and
 creation path. Support dry-run, require scope/acceptance/ownership and
 dependency rationale for each generated AR, atomically create the graph and
 finalizer, and retain Git/SQLite parity. Add schema, migration, property,
