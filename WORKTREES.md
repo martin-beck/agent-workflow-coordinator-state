@@ -264,6 +264,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-process-handoff` | `ar0007-process-handoff` | `d48a62b16f39` | 0 | behind 2279, ahead 0 |
 | `agent-workflow-coordinator-process-wal-evidence` | `feat/upgrade-process-wal-evidence` | `82bdeb7e0f1e` | 0 | behind 2475, ahead 0 |
 | `agent-workflow-coordinator-recheck-entry` | `feature/ar0007-recheck-entry` | `69e3ef95f327` | 0 | behind 2291, ahead 0 |
+| `agent-workflow-coordinator-reduced-liveness-model` | `ar0101-reduced-liveness` | `253b0e7e39e5` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-reject-context-equality-failure` | `ar0007-reject-context-equality-failure` | `6a0818a367c5` | 0 | behind 2064, ahead 0 |
 | `agent-workflow-coordinator-reject-context-extra-keys` | `ar0007-reject-context-extra-keys` | `58611bc61500` | 0 | behind 2076, ahead 1 |
 | `agent-workflow-coordinator-reject-context-get-override` | `ar0007-reject-context-get-override` | `7bdf2533447e` | 0 | behind 2066, ahead 0 |
