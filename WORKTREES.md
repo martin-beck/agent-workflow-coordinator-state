@@ -13,7 +13,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-admitted-control` | `feature/admitted-control-store` | `b190c46f2916` | 0 | behind 2446, ahead 1 |
 | `agent-workflow-coordinator-admitted-control-fix` | `fix/admitted-control-test-types` | `0d2281e5eafc` | 0 | behind 2444, ahead 0 |
 | `agent-workflow-coordinator-ambiguous-fencing` | `feat/upgrade-ambiguous-fencing` | `b5f3f7d765de` | 0 | behind 2468, ahead 0 |
-| `agent-workflow-coordinator-ar-0088-worktree-binding` | `repair/ar-0088-worktree-binding` | `22c245041696` | 0 | behind 57, ahead 0 |
+| `agent-workflow-coordinator-ar-0088-worktree-binding` | `repair/ar-0088-worktree-binding-transition` | `592757649c20` | 6 | behind 0, ahead 0 |
+| changed files | - | - | - | `formal/handoffctl/Handoffctl.cfg`, `formal/handoffctl/Handoffctl.tla`, `formal/handoffctl/LIFECYCLE_CORRESPONDENCE.md`, `tests/test_bind_spec.py`, `tests/test_sqlite_storage.py`, `tools/handoffctl.py` |
 | `agent-workflow-coordinator-ar0007-auth-coverage` | `ar0007-auth-coverage` | `8db6d114b6c1` | 0 | behind 1932, ahead 0 |
 | `agent-workflow-coordinator-ar0007-authority-parent-safety` | `ar0007-authority-parent-safety` | `cf47c033cb55` | 0 | behind 1709, ahead 0 |
 | `agent-workflow-coordinator-ar0007-authority-sidecar-disappearance` | `ar0007-authority-sidecar-disappearance` | `a0cc1d435246` | 0 | behind 1715, ahead 0 |
@@ -121,7 +122,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0077-pause-resume` | `ar0077-pause-and-resume-commands-with-session-reload` | `38077ff7554e` | 0 | behind 473, ahead 1 |
 | `agent-workflow-coordinator-ar0078-session-restore-on-expired-lease-recovery` | `ar0078-session-restore-on-expired-lease-recovery` | `294c8e5e0301` | 0 | behind 472, ahead 1 |
 | `agent-workflow-coordinator-ar0082-company-board-and-metrics-commands` | `ar0082-company-board-and-metrics-commands` | `db00f3a320df` | 0 | behind 468, ahead 0 |
-| `agent-workflow-coordinator-ar0088-idempotent` | `repair/ar-0088-worktree-binding-transition` | `ca8cbbb10396` | 0 | behind 53, ahead 0 |
+| `agent-workflow-coordinator-ar0088-idempotent-legacy` | `DETACHED` | `ca8cbbb10396` | 0 | behind 53, ahead 0 |
 | `agent-workflow-coordinator-ar0088-release` | `release/ar-0088-v0.5.1` | `14b73062d906` | 0 | behind 51, ahead 0 |
 | `agent-workflow-coordinator-ar0089` | `repair/ar-0089-session-handoff-contract` | `e11d3d8c5bf7` | 0 | behind 91, ahead 0 |
 | `agent-workflow-coordinator-ar0089-fast-receipt-validation` | `repair/ar-0089-fast-receipt-validation` | `3f30d43b68cd` | 0 | behind 66, ahead 0 |
