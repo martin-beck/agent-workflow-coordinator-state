@@ -427,7 +427,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-vendor-92d50e0` | `DETACHED` | `92d50e0030ee` | 0 | behind 139, ahead 0 |
 | `agent-workflow-coordinator-vendor-9e3b247` | `DETACHED` | `9e3b247655a4` | 0 | behind 152, ahead 0 |
 | `agent-workflow-coordinator-vendor-c8837f5` | `DETACHED` | `c8837f5a52e2` | 0 | behind 130, ahead 0 |
-| `awc-ar0108-product` | `feature/issue-series-publication` | `79c939fa3ae1` | 0 | behind 2, ahead 0 |
+| `awc-ar0108-product` | `feature/issue-series-publication` | `0f63787f453e` | 0 | behind 0, ahead 0 |
 | `awc-main-vendor-0107` | `DETACHED` | `79c939fa3ae1` | 0 | behind 2, ahead 0 |
 | `awc-main-verify-0107` | `DETACHED` | `2b47ec53c2f4` | 0 | behind 5, ahead 0 |
 | `awc-release-v0.4.1` | `DETACHED` | `e05418ea6da4` | 0 | behind 166, ahead 0 |
