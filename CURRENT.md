@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0100 — Bounded Formal Verification Tier Policy](tasks/AR-0100.md) | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. | codex-awc-ar0100-tier-policy-20261012 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -17,7 +23,6 @@ Never edit this file directly.
 | P0 | [AR-0088 — Supported active-task worktree binding](tasks/AR-0088.md) | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, obtain independent review, merge the signed reviewed tree, and publish a complete downstream vendor handoff. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
 | P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. | - |
-| P0 | [AR-0100 — Bounded Formal Verification Tier Policy](tasks/AR-0100.md) | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. | - |
 
 ## Planned
 
