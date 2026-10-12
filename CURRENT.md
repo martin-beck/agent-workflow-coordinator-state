@@ -7,6 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
+| P0 | [AR-0106 — Formal Tier Migration Qualification](tasks/AR-0106.md) | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. | codex-awc-ar0106-qualification-20261012 |
 | P0 | [AR-0107 — Issue-to-AR series contract and reviewed decomposition](tasks/AR-0107.md) | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. | codex-awc-ar0107-20261012 |
 
 ## Open
@@ -22,7 +23,6 @@ Never edit this file directly.
 | P0 | [AR-0069 — Roles release and downstream pinning](tasks/AR-0069.md) | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
 | P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. | - |
-| P0 | [AR-0106 — Formal Tier Migration Qualification](tasks/AR-0106.md) | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. | - |
 
 ## Planned
 
