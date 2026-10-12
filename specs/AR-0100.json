@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0100.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "minute-tiers",
+      "description": "The canonical pr-fast and reduced release qualification tiers enforce aggregate 300-second and 900-second verifier budgets, including download, admission, model execution, checksum, and attestation."
+    },
+    {
+      "id": "truthful-evidence",
+      "description": "Receipts bind the exact candidate, model set, declared and completion-time elapsed budget, and explicit non-claims for implementation refinement and the full two-process cross-product."
+    },
+    {
+      "id": "nonblocking-stress",
+      "description": "Hour-scale full-exhaustive runs are scheduled or manual advisory evidence and cannot obstruct ordinary progression until AR-0102."
+    }
+  ],
+  "definition_of_done": [
+    "The exact product merge and exact-main verification demonstrate the bounded tiers and their failure checks.",
+    "The tracked evidence records measured pr-fast and reduced release-tier runs below their declared budgets.",
+    "No signature, authentication service, GitHub approval, or independent reviewer is required for the transition."
+  ],
+  "inputs": [
+    {
+      "id": "formal-runner",
+      "description": "The Coordinator formal runner, tier evidence, bounded-model configurations, and exact current-main candidate."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "tier-receipt",
+      "description": "A locally reproducible, exact-candidate formal receipt with aggregate budget and truthful claim boundaries."
+    }
+  ],
+  "allowed_tools": [
+    "handoffctl",
+    "git",
+    "gh",
+    "python",
+    "uv"
+  ],
+  "forbidden_tools": [
+    "unbounded-formal-gate",
+    "external-review-requirement",
+    "external-signature-requirement",
+    "external-authentication-requirement"
+  ],
+  "required_evidence_classes": [
+    "contract-test",
+    "bounded-model"
+  ],
+  "gates": [
+    {
+      "id": "local-functional-evidence",
+      "description": "Locally reproducible functional checks and truthful exact-head evidence are required."
+    }
+  ]
+}

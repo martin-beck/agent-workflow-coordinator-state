@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0100 — Bounded Formal Verification Tier Policy](tasks/AR-0100.md) | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | PR #1246 applies the current-main-native minute-scale formal tier; await exact-head CI, merge, post-merge verification, and state reconciliation. | codex-awc-ar0100-tier-policy-20261012 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -36,6 +30,10 @@ Never edit this file directly.
 | P0 | [AR-0104 — Minute-Scale Formal CI Integration](tasks/AR-0104.md) | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. | - |
 | P0 | [AR-0105 — Advisory Formal Stress Exploration](tasks/AR-0105.md) | Retain high-cardinality liveness exploration without allowing it to stall routine development. | Move the large liveness configuration into a contained advisory stress workflow. | - |
 | P0 | [AR-0106 — Formal Tier Migration Qualification](tasks/AR-0106.md) | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. | - |
+| P0 | [AR-0107 — Issue-to-AR series contract and reviewed decomposition](tasks/AR-0107.md) | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. | - |
+| P0 | [AR-0108 — Issue-series GitHub publication and receipt adapter](tasks/AR-0108.md) | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. | - |
+| P0 | [AR-0109 — Issue-series lifecycle updates and finalizer closure](tasks/AR-0109.md) | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. | - |
+| P0 | [AR-0110 — Issue-to-AR series end-to-end qualification and release](tasks/AR-0110.md) | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. | - |
 | P1 | [AR-0095 — Assumption Revalidation](tasks/AR-0095.md) | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. | - |
 | P1 | [AR-0096 — Drift Aware Resume](tasks/AR-0096.md) | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. | Build deterministic resume cards from task, scope, evidence, and freshness state. | - |
 | P1 | [AR-0097 — Retry Circuit Breaker](tasks/AR-0097.md) | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. | - |

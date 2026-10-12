@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task": "AR-0100",
+  "product": {
+    "repository": "martin-beck/agent-workflow-coordinator",
+    "pull_request": 1246,
+    "merge_commit": "592757649c206ed45b8ff7c8b990aa900b58024e",
+    "post_merge_verify_run": 38251814434
+  },
+  "local_validation": {
+    "tests": 1930,
+    "coverage_percent": 95,
+    "pr_fast_seconds": 4.34,
+    "pr_publication_seconds": 45.75
+  },
+  "claims": [
+    "pr-fast is bounded to 300 seconds",
+    "pr-publication is bounded to 900 seconds",
+    "pr-publication is reduced qualification, not implementation refinement or full two-process coverage",
+    "full-exhaustive is advisory until AR-0102"
+  ]
+}
