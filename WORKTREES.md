@@ -143,6 +143,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-barrier-caller` | `feature/ar0007-sqlite-sidecar-faults` | `36cd3ed24087` | 1 | behind 2400, ahead 0 |
 | changed files | - | - | - | `tests/test_rollback_control_store.py` |
 | `agent-workflow-coordinator-bounded-actionable-projection` | `feature/bounded-actionable-state-projection` | `f3942c32325e` | 0 | behind 238, ahead 0 |
+| `agent-workflow-coordinator-bounded-formal-tier-policy` | `ar0100-bounded-formal-tier-policy` | `8d9fc1a2ce2c` | 0 | behind 417, ahead 18 |
 | `agent-workflow-coordinator-canonical-scope` | `ar0007-canonical-scope-boundary` | `9979977163e8` | 0 | behind 2245, ahead 0 |
 | `agent-workflow-coordinator-capability-matrix-semantics-and-formal-specification` | `ar0067-capability-matrix-semantics-and-formal-specification` | `f28a7d8db0d2` | 0 | behind 484, ahead 0 |
 | `agent-workflow-coordinator-checkpoint-command-for-task-state-and-artifacts` | `ar0079-checkpoint-command-for-task-state-and-artifacts` | `704bf6311332` | 0 | behind 475, ahead 2 |
