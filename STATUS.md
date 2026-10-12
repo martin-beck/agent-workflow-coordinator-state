@@ -1268,7 +1268,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. |
-| Next action | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, validate it locally, merge the verified tree, and publish a complete downstream vendor handoff. |
+| Next action | Merge the verified partial-key binding repair, then vendor it and bind AR-0101 through the supported handoffctl transition. |
 
 ### AR-0089 — Restore Coordinator-state vendor integrity
 
@@ -1997,7 +1997,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | codex-awc-ar0088-partial-bind-20261012 | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, validate it locally, merge the verified tree, and publish a complete downstream vendor handoff. |
+| P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | codex-awc-ar0088-partial-bind-20261012 | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Merge the verified partial-key binding repair, then vendor it and bind AR-0101 through the supported handoffctl transition. |
 | P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | codex-awc-ar0101-reduced-liveness-20261012 | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 | P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and reviewed decomposition | codex-awc-ar0107-20261012 | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
 
