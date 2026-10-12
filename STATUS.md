@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**110 ARs tracked** across 5 active status categories.
+**110 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 10 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 17 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 81 |
+| **Done** | Accepted, integrated, and durably verified | 82 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 110 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 11 |
+| Open or active | 10 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 110 | 11 | 0 | 81 |
+| unassigned | unassigned | 110 | 10 | 0 | 82 |
 
 ## Task drill-down
 
@@ -1428,11 +1428,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0100-tier-policy-20261012 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. |
@@ -1691,7 +1691,7 @@ flowchart LR
     end
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
-        AR_0100["AR-0100 - In progress"]:::status_in_progress
+        AR_0100["AR-0100 - Done"]:::status_done
         AR_0101["AR-0101 - Planned"]:::status_planned
         AR_0102["AR-0102 - Planned"]:::status_planned
         AR_0103["AR-0103 - Planned"]:::status_planned
@@ -1993,12 +1993,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | codex-awc-ar0100-tier-policy-20261012 | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | PR #1246 applies the current-main-native minute-scale formal tier; await exact-head CI, merge, post-merge verification, and state reconciliation. |
-
 ### Open (10)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2036,7 +2030,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (81)
+### Done (82)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2107,6 +2101,7 @@ flowchart LR
 | P0 | [AR-0086](tasks/AR-0086.md): Repair pause-resume session provenance validation | Unclaimed | Close the pause-resume provenance gap that accepts duplicate, wrong-task, or nested-incoherent Git session records while external unblock correctly fails closed. | Downstream consumers must sync development commit f003d25e1ff99f30c24853553d1d72ebf0211657 tree eee603591b917eeca244425559d7c67bb88a7268 using the 68-file manifest sha256:97a8717255cbefe0e866106685548cb3a6b53cfdb2dfc22d139e5a961233707a. |
 | P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | Unclaimed | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Terminal: independently approved exact reviewed tree merged with a signed+DCO local merge; exact-main hosted Verify and Formal succeeded. Release done and reconcile/live-doctor the canonical state. |
 | P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | Unclaimed | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Synchronize the official tagged Coordinator v0.5.0 vendor snapshot so legacy tasks gain bind-spec, then bind AR-0089 to a reviewed task spec, record acceptance, and re-run exact-main integrity checks before release. |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | Unclaimed | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | PR #1246 applies the current-main-native minute-scale formal tier; await exact-head CI, merge, post-merge verification, and state reconciliation. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
