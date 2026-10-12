@@ -13,8 +13,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-admitted-control` | `feature/admitted-control-store` | `b190c46f2916` | 0 | behind 2446, ahead 1 |
 | `agent-workflow-coordinator-admitted-control-fix` | `fix/admitted-control-test-types` | `0d2281e5eafc` | 0 | behind 2444, ahead 0 |
 | `agent-workflow-coordinator-ambiguous-fencing` | `feat/upgrade-ambiguous-fencing` | `b5f3f7d765de` | 0 | behind 2468, ahead 0 |
-| `agent-workflow-coordinator-ar-0088-worktree-binding` | `repair/ar-0088-worktree-binding-transition` | `592757649c20` | 6 | behind 0, ahead 0 |
-| changed files | - | - | - | `formal/handoffctl/Handoffctl.cfg`, `formal/handoffctl/Handoffctl.tla`, `formal/handoffctl/LIFECYCLE_CORRESPONDENCE.md`, `tests/test_bind_spec.py`, `tests/test_sqlite_storage.py`, `tools/handoffctl.py` |
+| `agent-workflow-coordinator-ar-0088-worktree-binding` | `repair/ar-0088-worktree-binding-transition` | `0b46969f4073` | 0 | behind 0, ahead 2 |
 | `agent-workflow-coordinator-ar0007-auth-coverage` | `ar0007-auth-coverage` | `8db6d114b6c1` | 0 | behind 1932, ahead 0 |
 | `agent-workflow-coordinator-ar0007-authority-parent-safety` | `ar0007-authority-parent-safety` | `cf47c033cb55` | 0 | behind 1709, ahead 0 |
 | `agent-workflow-coordinator-ar0007-authority-sidecar-disappearance` | `ar0007-authority-sidecar-disappearance` | `a0cc1d435246` | 0 | behind 1715, ahead 0 |
@@ -133,6 +132,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | changed files | - | - | - | `tests/test_vendor.py`, `tools/vendor.py` |
 | `agent-workflow-coordinator-ar0090-spec-binding` | `repair/ar-0090-legacy-task-spec-binding` | `0c61530f2bad` | 0 | behind 63, ahead 0 |
 | `agent-workflow-coordinator-ar0090-vendor-source` | `DETACHED` | `3f644ac6353d` | 0 | behind 54, ahead 0 |
+| `agent-workflow-coordinator-ar0107-issue-series` | `feat/ar0107-issue-series-contract` | `592757649c20` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-ar0120-command-inventory` | `release-v0.4.1` | `66c45cd88d70` | 1 | behind 102, ahead 0 |
 | changed files | - | - | - | `.artifacts/` |
 | `agent-workflow-coordinator-ar0120-postmerge-coverage` | `ar0120-postmerge-coverage` | `9129b3fa0bbf` | 0 | behind 109, ahead 0 |
