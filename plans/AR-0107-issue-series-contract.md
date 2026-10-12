@@ -6,4 +6,5 @@ dependency rationale for each generated AR, atomically create the graph and
 finalizer, and retain Git/SQLite parity. Add schema, migration, property,
 fault, concurrent-create, generated-view and bounded-model tests. Reject
 duplicate, stale, malformed, private-text, cross-project, cyclic, orphaned and
-partial-write cases. Require independent exact-head review and hosted CI.
+partial-write cases. Require locally reproducible exact-head verification;
+external review and hosted CI are optional.

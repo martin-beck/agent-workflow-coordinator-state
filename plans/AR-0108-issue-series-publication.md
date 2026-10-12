@@ -6,4 +6,5 @@ repository, issue and manifest revision before publication. Retries discover
 and verify a matching comment rather than duplicate it; conflicting markers or
 malformed responses require typed recovery. Test success, replay, wrong
 identity, closed/moved issue, permission failure, timeout, conflict and privacy
-filtering under Git/SQLite parity, then require independent review and CI.
+filtering under Git/SQLite parity, then require locally reproducible functional
+verification. External review and CI are optional.

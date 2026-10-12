@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0101 — Reduced Liveness Model and Coverage Mapping](tasks/AR-0101.md) | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. | codex-awc-ar0101-reduced-liveness-20261012 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -24,7 +30,6 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093 — Change Drift Guard](tasks/AR-0093.md) | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. | - |
 | P0 | [AR-0094 — Step Evidence Ledger](tasks/AR-0094.md) | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. | - |
-| P0 | [AR-0101 — Reduced Liveness Model and Coverage Mapping](tasks/AR-0101.md) | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. | - |
 | P0 | [AR-0102 — Budgeted Formal Runner Storage and Resource Handling](tasks/AR-0102.md) | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. | - |
 | P0 | [AR-0103 — Candidate-Bound Formal Job Lifecycle](tasks/AR-0103.md) | Decouple long formal execution from coordinator locks using fenced, candidate-bound job lifecycle evidence. | Implement candidate-bound formal job receipts that do not retain coordinator authority while a job runs. | - |
 | P0 | [AR-0104 — Minute-Scale Formal CI Integration](tasks/AR-0104.md) | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. | - |
