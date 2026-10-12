@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0088.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "matching-partial-key",
+      "description": "An active leased task with an empty branch and a matching valid predeclared worktree key can bind its missing branch without replacing the key."
+    },
+    {
+      "id": "fenced-rejection",
+      "description": "Mismatched keys, branch-only partial metadata, invalid identities, stale revisions, expired or foreign owners, and active identity collisions reject without mutation."
+    },
+    {
+      "id": "backend-and-model-coverage",
+      "description": "Git and SQLite tests cover the transition and the bounded lifecycle model explores matching and mismatched key requests."
+    }
+  ],
+  "definition_of_done": [
+    "The Coordinator source change is merged to main with locally reproducible functional verification.",
+    "Focused and complete test, quality, and bounded-model evidence are recorded for the exact implementation head.",
+    "No external signature, authentication, hosted approval, or independent reviewer is required for acceptance or release."
+  ],
+  "inputs": [
+    {
+      "id": "partial-legacy-task",
+      "description": "A claimed Coordinator task with an empty branch and a valid predeclared worktree key."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bound-worktree-transition",
+      "description": "A fenced Coordinator transition that completes only a matching partial legacy identity."
+    }
+  ],
+  "allowed_tools": ["handoffctl", "git", "python", "uv"],
+  "forbidden_tools": ["direct-task-metadata-edit"],
+  "required_evidence_classes": ["bounded-model"],
+  "gates": [
+    {
+      "id": "local-functional-evidence",
+      "description": "Locally reproducible tests, quality checks, and bounded-model evidence cover the exact implementation head."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "ar": "AR-0088",
+  "evidence_class": "bounded-model",
+  "implementation": {
+    "merge_commit": "253b0e7e39e50d490df86d3925fe14259aa18306",
+    "pull_request": "https://github.com/martin-beck/agent-workflow-coordinator/pull/1247",
+    "candidate_head": "0b46969f40732064637ca14dc36b5cf4cc80ed62"
+  },
+  "local_verification": {
+    "complete_suite": "1930 tests passed; 95% branch coverage; Ruff format/check and strict mypy passed",
+    "focused": "test_bind_spec: 3 passed; test_sqlite_storage: 50 passed; test_rollback_control_store: 97 passed after quiescent-lock retry",
+    "formal": "formal/handoffctl/verify.sh --tier pr-publication passed in 42 seconds; matching and mismatched partial-key requests were explored"
+  },
+  "post_merge_verification": {
+    "workflow": "https://github.com/martin-beck/agent-workflow-coordinator/actions/runs/38256554051",
+    "status": "success",
+    "head": "253b0e7e39e50d490df86d3925fe14259aa18306"
+  },
+  "policy": "Local reproducible evidence is sufficient. External signatures, authentication, hosted approval, and independent review are optional supplementary evidence."
+}
