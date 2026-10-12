@@ -423,6 +423,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-v040-source` | `DETACHED` | `712b36ea3d18` | 0 | behind 178, ahead 0 |
 | `awc-ar0012-next17.tFUQEe` | `DETACHED` | `1bea71cffa65` | 0 | behind 1477, ahead 1 |
 | `awc-ar0027-verify.TTeH7T` | `DETACHED` | `1d806fa2996b` | 0 | behind 233, ahead 0 |
+| `awc-ar0100-current-main` | `ar0100-current-main-contract` | `c4728e156f42` | 0 | behind 0, ahead 4 |
 | `awc-ar1796-exact` | `DETACHED` | `efbe49d96b51` | 0 | behind 0, ahead 0 |
 | `awc-main-coverage` | `DETACHED` | `e05418ea6da4` | 0 | behind 96, ahead 0 |
 | `awc-pr536-head.F9w7dp` | `DETACHED` | `bbabd1c93b21` | 0 | behind 1473, ahead 0 |
