@@ -10,9 +10,9 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1232 | `fix/formal-slice-config-syntax@091ba524ea41` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): render TLC-compatible slice configs |
-| #1233 | `fix/formal-slice-selector@0b7317e42770` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): select operation slices in model |
-| #1245 | `feature/task-execution-envelopes@703abd2d905f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat: add task execution envelopes |
+| #1232 | `fix/formal-slice-config-syntax@091ba524ea41` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): render TLC-compatible slice configs |
+| #1233 | `fix/formal-slice-selector@0b7317e42770` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): select operation slices in model |
+| #1245 | `feature/task-execution-envelopes@703abd2d905f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat: add task execution envelopes |
 
 ## Recent workflows
 
