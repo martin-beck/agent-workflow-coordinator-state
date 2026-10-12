@@ -12,9 +12,9 @@
 | **In progress** | Claimed work with a live lease | 2 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 11 |
+| **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 87 |
+| **Done** | Accepted, integrated, and durably verified | 88 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 110 | 11 | 0 | 87 |
+| unassigned | unassigned | 110 | 11 | 0 | 88 |
 
 ## Task drill-down
 
@@ -1484,11 +1484,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0104-minute-ci-20261012 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. |
@@ -1512,11 +1512,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0106-qualification-20261012 |
 | Parent | None |
 | Children | None |
 | Summary | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. |
@@ -1695,9 +1695,9 @@ flowchart LR
         AR_0101["AR-0101 - Done"]:::status_done
         AR_0102["AR-0102 - Done"]:::status_done
         AR_0103["AR-0103 - Done"]:::status_done
-        AR_0104["AR-0104 - In progress"]:::status_in_progress
+        AR_0104["AR-0104 - Done"]:::status_done
         AR_0105["AR-0105 - Done"]:::status_done
-        AR_0106["AR-0106 - Planned"]:::status_planned
+        AR_0106["AR-0106 - In progress"]:::status_in_progress
         AR_0107["AR-0107 - In progress"]:::status_in_progress
         AR_0108["AR-0108 - Planned"]:::status_planned
         AR_0109["AR-0109 - Planned"]:::status_planned
@@ -1997,7 +1997,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0104](tasks/AR-0104.md): Minute-Scale Formal CI Integration | codex-awc-ar0104-minute-ci-20261012 | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. |
+| P0 | [AR-0106](tasks/AR-0106.md): Formal Tier Migration Qualification | codex-awc-ar0106-qualification-20261012 | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. |
 | P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and reviewed decomposition | codex-awc-ar0107-20261012 | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
 
 ### Open (9)
@@ -2014,13 +2014,12 @@ flowchart LR
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
 
-### Planned (11)
+### Planned (10)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093](tasks/AR-0093.md): Change Drift Guard | Unclaimed | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. |
 | P0 | [AR-0094](tasks/AR-0094.md): Step Evidence Ledger | Unclaimed | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. |
-| P0 | [AR-0106](tasks/AR-0106.md): Formal Tier Migration Qualification | Unclaimed | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. |
 | P0 | [AR-0108](tasks/AR-0108.md): Issue-series GitHub publication and receipt adapter | Unclaimed | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. |
 | P0 | [AR-0109](tasks/AR-0109.md): Issue-series lifecycle updates and finalizer closure | Unclaimed | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. |
 | P0 | [AR-0110](tasks/AR-0110.md): Issue-to-AR series end-to-end qualification and release | Unclaimed | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. |
@@ -2030,7 +2029,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (87)
+### Done (88)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2106,6 +2105,7 @@ flowchart LR
 | P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | Unclaimed | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 | P0 | [AR-0102](tasks/AR-0102.md): Budgeted Formal Runner Storage and Resource Handling | Unclaimed | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. |
 | P0 | [AR-0103](tasks/AR-0103.md): Candidate-Bound Formal Job Lifecycle | Unclaimed | Decouple long formal execution from coordinator locks using fenced, candidate-bound job lifecycle evidence. | Implement candidate-bound formal job receipts that do not retain coordinator authority while a job runs. |
+| P0 | [AR-0104](tasks/AR-0104.md): Minute-Scale Formal CI Integration | Unclaimed | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. |
 | P0 | [AR-0105](tasks/AR-0105.md): Advisory Formal Stress Exploration | Unclaimed | Retain high-cardinality liveness exploration without allowing it to stall routine development. | Move the large liveness configuration into a contained advisory stress workflow. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |

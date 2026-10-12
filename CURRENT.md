@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0104 — Minute-Scale Formal CI Integration](tasks/AR-0104.md) | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. | codex-awc-ar0104-minute-ci-20261012 |
+| P0 | [AR-0106 — Formal Tier Migration Qualification](tasks/AR-0106.md) | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. | codex-awc-ar0106-qualification-20261012 |
 | P0 | [AR-0107 — Issue-to-AR series contract and reviewed decomposition](tasks/AR-0107.md) | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. | codex-awc-ar0107-20261012 |
 
 ## Open
@@ -30,7 +30,6 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093 — Change Drift Guard](tasks/AR-0093.md) | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. | - |
 | P0 | [AR-0094 — Step Evidence Ledger](tasks/AR-0094.md) | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. | - |
-| P0 | [AR-0106 — Formal Tier Migration Qualification](tasks/AR-0106.md) | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. | - |
 | P0 | [AR-0108 — Issue-series GitHub publication and receipt adapter](tasks/AR-0108.md) | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. | - |
 | P0 | [AR-0109 — Issue-series lifecycle updates and finalizer closure](tasks/AR-0109.md) | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. | - |
 | P0 | [AR-0110 — Issue-to-AR series end-to-end qualification and release](tasks/AR-0110.md) | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. | - |
