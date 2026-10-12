@@ -385,7 +385,7 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "fa12bb14a79b603e42fd5584b082468b36c8ce4f555b036ee367679e6cf09f9e",
+      "sha256": "11424b6765229cf460914828acbad8a38a6a2409cb6da47660745cd8f443a6ef",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
@@ -539,8 +539,8 @@
   },
   "schema_version": 1,
   "upstream": {
-    "commit": "a29bb2d963673812147b4b3736b10a0f07868e8f",
+    "commit": "2bfab9093eb925b7fe29a742511a266d8db1efcd",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "version": "v0.5.7"
+    "version": "v0.5.8"
   }
 }
