@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0102 — Budgeted Formal Runner Storage and Resource Handling](tasks/AR-0102.md) | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. | codex-awc-ar0102-budgeted-formal-20261012 |
 | P0 | [AR-0107 — Issue-to-AR series contract and reviewed decomposition](tasks/AR-0107.md) | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. | codex-awc-ar0107-20261012 |
 
 ## Open
