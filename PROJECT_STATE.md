@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `e99e48c5ce8b498273caeeac4445b1329e450f29`
-- Local origin/main: `e99e48c5ce8b498273caeeac4445b1329e450f29`
+- Product remote main: `2714cfd87f9dd1c6229ab6d9622b13862de186b1`
+- Local origin/main: `2714cfd87f9dd1c6229ab6d9622b13862de186b1`
 - Primary worktree head: `b5dcd924e967d9f2ee67fecab0f9e43aff437f6b`
 
 ## Open pull requests
@@ -13,21 +13,20 @@ Generated from local Git and GitHub. Do not edit.
 | #1232 | `fix/formal-slice-config-syntax@091ba524ea41` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): render TLC-compatible slice configs |
 | #1233 | `fix/formal-slice-selector@0b7317e42770` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): select operation slices in model |
 | #1245 | `feature/task-execution-envelopes@703abd2d905f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat: add task execution envelopes |
-| #1257 | `repair/ci-trusted-workflow-isolation@9d92d56e028b` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, IN_PROGRESS:, COMPLETED:SKIPPED | fix(ci): isolate trusted formal workflows |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38264556742 | `9d92d56e028b` | pull_request | Verify | in_progress:- |
-| 38264549249 | `9d92d56e028b` | push | .github/workflows/formal-stress.yml | completed:failure |
-| 38264187651 | `e99e48c5ce8b` | push | .github/workflows/formal-stress.yml | completed:failure |
-| 38264094136 | `e99e48c5ce8b` | push | Formal | completed:success |
-| 38264094089 | `e99e48c5ce8b` | push | Verify | completed:failure |
-| 38264092455 | `e99e48c5ce8b` | push | .github/workflows/formal-stress.yml | completed:failure |
-| 38264089276 | `2e109779dbe9` | pull_request | Verify | completed:failure |
-| 38264089248 | `2e109779dbe9` | pull_request | Formal | completed:success |
-| 38264083620 | `2e109779dbe9` | push | .github/workflows/formal-stress.yml | completed:failure |
-| 38263799499 | `81b37dcd1571` | push | Formal | completed:success |
-| 38263799471 | `81b37dcd1571` | push | Verify | completed:failure |
-| 38263797914 | `81b37dcd1571` | push | .github/workflows/formal-stress.yml | completed:failure |
+| 38267597170 | `2714cfd87f9d` | push | Formal | completed:success |
+| 38267597127 | `2714cfd87f9d` | push | Verify | completed:success |
+| 38267277009 | `9ed5702152a0` | pull_request | Verify | completed:success |
+| 38267160421 | `be4d03803a7a` | pull_request | Verify | completed:failure |
+| 38267011422 | `dd1a5d83d7d4` | push | Verify | completed:success |
+| 38267011007 | `dd1a5d83d7d4` | push | Formal | completed:failure |
+| 38266706701 | `f80338157845` | pull_request | Verify | completed:success |
+| 38266421482 | `b6d3e5d677f8` | push | Formal | completed:failure |
+| 38266421378 | `b6d3e5d677f8` | push | Verify | completed:success |
+| 38266169012 | `cbd372be3fb4` | pull_request | Verify | completed:success |
+| 38266047832 | `359262fae456` | pull_request | Verify | completed:failure |
+| 38265396085 | `0c1ba32deecf` | pull_request | Verify | completed:failure |

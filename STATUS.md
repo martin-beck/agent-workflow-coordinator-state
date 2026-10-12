@@ -1522,7 +1522,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. |
 | Next action | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. |
 
-### AR-0107 — Issue-to-AR series contract and reviewed decomposition
+### AR-0107 — Issue-to-AR series contract and validated decomposition
 
 | Field | Value |
 | --- | --- |
@@ -1533,24 +1533,10 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | codex-awc-ar0107-20261012 |
 | Parent | None |
 | Children | None |
-| Summary | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. |
-| Next action | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
+| Summary | Define a durable inspectable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. |
+| Next action | Define a durable manifest, strict task linkage, and locally validated decomposition before optional GitHub publication. |
 
-### AR-0108 — Issue-series GitHub publication and receipt adapter
-
-| Field | Value |
-| --- | --- |
-| Status | planned |
-| Priority | P0 |
-| Role | unassigned |
-| Team | unassigned |
-| Owner | Unclaimed |
-| Parent | None |
-| Children | None |
-| Summary | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. |
-| Next action | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. |
-
-### AR-0109 — Issue-series lifecycle updates and finalizer closure
+### AR-0108 — Issue-series optional publication adapter
 
 | Field | Value |
 | --- | --- |
@@ -1561,8 +1547,22 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | Unclaimed |
 | Parent | None |
 | Children | None |
-| Summary | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. |
-| Next action | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. |
+| Summary | Offer optional issue-series projections and retain idempotent bounded receipts without treating GitHub as task authority. |
+| Next action | After AR-0107, implement optional idempotent GitHub issue-series publication, privacy-safe comment receipts, and local deferred-projection handling. |
+
+### AR-0109 — Issue-series lifecycle and optional closure
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Offer optional verified issue projections for completed ARs and finalizer closure while keeping all task lifecycle decisions locally evidence-backed. |
+| Next action | After the series model and optional publication adapter are complete, add idempotent deferred issue projections and guarded optional finalizer closure. |
 
 ### AR-0110 — Issue-to-AR series end-to-end qualification and release
 
@@ -1997,7 +1997,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and reviewed decomposition | codex-awc-ar0107-20261012 | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
+| P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and validated decomposition | codex-awc-ar0107-20261012 | Define a durable inspectable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Define a durable manifest, strict task linkage, and locally validated decomposition before optional GitHub publication. |
 
 ### Open (9)
 
@@ -2019,8 +2019,8 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093](tasks/AR-0093.md): Change Drift Guard | Unclaimed | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. |
 | P0 | [AR-0094](tasks/AR-0094.md): Step Evidence Ledger | Unclaimed | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. |
-| P0 | [AR-0108](tasks/AR-0108.md): Issue-series GitHub publication and receipt adapter | Unclaimed | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. |
-| P0 | [AR-0109](tasks/AR-0109.md): Issue-series lifecycle updates and finalizer closure | Unclaimed | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. |
+| P0 | [AR-0108](tasks/AR-0108.md): Issue-series optional publication adapter | Unclaimed | Offer optional issue-series projections and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement optional idempotent GitHub issue-series publication, privacy-safe comment receipts, and local deferred-projection handling. |
+| P0 | [AR-0109](tasks/AR-0109.md): Issue-series lifecycle and optional closure | Unclaimed | Offer optional verified issue projections for completed ARs and finalizer closure while keeping all task lifecycle decisions locally evidence-backed. | After the series model and optional publication adapter are complete, add idempotent deferred issue projections and guarded optional finalizer closure. |
 | P0 | [AR-0110](tasks/AR-0110.md): Issue-to-AR series end-to-end qualification and release | Unclaimed | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. |
 | P1 | [AR-0095](tasks/AR-0095.md): Assumption Revalidation | Unclaimed | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. |
 | P1 | [AR-0096](tasks/AR-0096.md): Drift Aware Resume | Unclaimed | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. | Build deterministic resume cards from task, scope, evidence, and freshness state. |

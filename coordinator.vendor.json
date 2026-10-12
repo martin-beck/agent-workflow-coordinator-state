@@ -253,7 +253,7 @@
       "source": "tests/test_fast_receipts.py"
     },
     "tests/test_formal_receipt.py": {
-      "sha256": "05faf6bfc0feb0a1db8e542155061efae77a91f9b068281ecbde64a3da3db538",
+      "sha256": "0154d4fc9ba333f9ecbde734ec41458e23f417aac8c9fd0ab133c7df4e7b7200",
       "source": "tests/test_formal_receipt.py"
     },
     "tests/test_handoffctl.py": {
@@ -285,7 +285,7 @@
       "source": "tests/test_task_spec.py"
     },
     "tests/test_tlc_runner.py": {
-      "sha256": "f477071aef1bc73d90a44d9f5fab9bdac608373944c23ebcb25b85191aebcfcd",
+      "sha256": "cd6c00aca8989a9eb3d9514f23053c4c3bf1d21ec28279e928f0accc8d75dd78",
       "source": "tests/test_tlc_runner.py"
     },
     "tools/admission_lease.py": {
@@ -377,7 +377,7 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "15480f97d88fa1924ee0c6b3e79862836867dbb4cc3c565ff7cb4b963393744d",
+      "sha256": "a578b638fd00cfa443120ddec59914ac94a07789f62d494ebe624718c38c1dd3",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
@@ -517,12 +517,10 @@
       "source": "LICENSE"
     }
   },
-  "schema_version": 2,
+  "schema_version": 1,
   "upstream": {
-    "channel": "development",
-    "commit": "e99e48c5ce8b498273caeeac4445b1329e450f29",
+    "commit": "2714cfd87f9dd1c6229ab6d9622b13862de186b1",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "7a80b4ee92487a5dbf3360e8007c537a8e6387ca",
-    "version": "v0.5.2"
+    "version": "v0.5.3"
   }
 }
