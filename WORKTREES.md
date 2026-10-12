@@ -165,7 +165,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-fix-vendor-version-alignment` | `ar0007-fix-vendor-version-alignment` | `7a6fcbda454d` | 0 | behind 2094, ahead 1 |
 | `agent-workflow-coordinator-formal-snapshot-752` | `ar0064-formal-snapshot-752` | `1eef1250d5e4` | 0 | behind 719, ahead 0 |
 | `agent-workflow-coordinator-formal-snapshot-revision` | `ar0064-formal-snapshot-revision` | `d9576c6c6973` | 0 | behind 722, ahead 1 |
-| `agent-workflow-coordinator-formal-tier-qualification` | `ar0106-formal-tier-qualification` | `2e109779dbe9` | 0 | behind 1, ahead 0 |
+| `agent-workflow-coordinator-formal-tier-qualification` | `ar0106-formal-tier-qualification` | `9d92d56e028b` | 0 | behind 1, ahead 1 |
 | `agent-workflow-coordinator-fresh-process` | `ar0007-fresh-process` | `ed77f94e645b` | 0 | behind 2288, ahead 0 |
 | `agent-workflow-coordinator-fresh-repeat` | `ar0007-fresh-repeat` | `5f712785ef00` | 0 | behind 2286, ahead 0 |
 | `agent-workflow-coordinator-fresh-reread` | `ar0007-fresh-reread` | `392228b92980` | 0 | behind 2292, ahead 0 |

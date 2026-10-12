@@ -1,10 +1,12 @@
 # AR-0110: Issue-to-AR series end-to-end qualification and release
 
-Release the workflow as a complete Coordinator capability. Prove a mock issue
-journey creates a reviewed series, publishes its map, posts exactly one update
-for each accepted completion, rejects premature closure and allows one complete
-finalizer closure. Deliver command/operator docs and migration/permission
-guidance. Require end-to-end, property/fault, Git/SQLite parity, privacy/view
-and bounded formal evidence, then locally reproducible release qualification
-and immutable upstream publication. External review, CI, signatures, and DCO
-are optional supplementary evidence.
+Release the workflow as a complete Coordinator capability. Prove a deterministic
+mock journey creates a validated series, queues or delivers idempotent optional
+projections, records each locally accepted completion, rejects premature local
+finalization, and permits finalizer eligibility only after complete local
+evidence. Deliver command and operator documentation, including optional
+upstream publication and recovery guidance. Require end-to-end, property/fault,
+Git/SQLite parity, privacy/view, bounded formal evidence, and locally
+reproducible release qualification. An upstream publication may be attempted as
+an optional integration and must not require authentication, signatures, hosted
+CI, external review, or external GitHub state for progression.
