@@ -1324,7 +1324,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | AR-0091 |
 | Children | None |
 | Summary | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. |
-| Next action | Implement durable Git/SQLite execution intent/result records, then require run --envelope preflight before subprocess execution. |
+| Next action | Review exact head, repair any findings, then open the implementation PR and run full qualification. |
 
 ### AR-0093 — Change Drift Guard
 
@@ -1997,7 +1997,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | codex-ar0092-envelopes-20261012 | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Implement durable Git/SQLite execution intent/result records, then require run --envelope preflight before subprocess execution. |
+| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | codex-ar0092-envelopes-20261012 | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Review exact head, repair any findings, then open the implementation PR and run full qualification. |
 
 ### Open (8)
 

@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Implement durable Git/SQLite execution intent/result records, then require run --envelope preflight before subprocess execution. | codex-ar0092-envelopes-20261012 |
+| P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Review exact head, repair any findings, then open the implementation PR and run full qualification. | codex-ar0092-envelopes-20261012 |
 
 ## Open
 
