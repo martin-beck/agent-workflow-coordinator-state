@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0101.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "named-reduced-liveness",
+      "description": "A named one-process liveness configuration is distinct from the full stress configuration and retains all lifecycle safety invariants and EventualCompletion."
+    },
+    {
+      "id": "coverage-map",
+      "description": "Every removed dimension has a checked mapping to a declared focused model or an existing source-only concrete test, with explicit non-claims."
+    },
+    {
+      "id": "vendor-upgrade",
+      "description": "An old vendor can perform a transitional sync, then the installed new vendor removes the retired configuration atomically and verifies the exact development snapshot."
+    }
+  ],
+  "definition_of_done": [
+    "The merged Coordinator source has locally verified formal, unit, static, and vendor-migration evidence.",
+    "The exact development vendor passes the bounded pr-publication formal tier within its declared budget.",
+    "The task records locally reproducible bounded-model evidence."
+  ],
+  "inputs": [
+    {
+      "id": "formal-lifecycle-model",
+      "description": "The lifecycle TLA model, full configuration, and reduced release-tier configuration."
+    },
+    {
+      "id": "vendor-updater",
+      "description": "The Coordinator vendor snapshot updater and an existing pre-AR-0101 state snapshot."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bounded-liveness-receipt",
+      "description": "A local exact-candidate bounded-model receipt and coverage map."
+    }
+  ],
+  "allowed_tools": ["handoffctl", "git", "python", "uv", "gh"],
+  "forbidden_tools": [
+    "direct-task-metadata-edit",
+    "external-review-requirement",
+    "external-signature-requirement",
+    "external-authentication-requirement"
+  ],
+  "required_evidence_classes": ["bounded-model", "contract-test"],
+  "gates": [
+    {
+      "id": "local-functional-evidence",
+      "description": "Locally reproducible functional and bounded-model evidence is required; external systems are supplementary only."
+    }
+  ]
+}
