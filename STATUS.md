@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**110 ARs tracked** across 4 active status categories.
+**110 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 11 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 10 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 16 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1442,11 +1442,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-awc-ar0101-reduced-liveness-20261012 |
 | Parent | None |
 | Children | None |
 | Summary | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. |
@@ -1692,7 +1692,7 @@ flowchart LR
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
         AR_0100["AR-0100 - Done"]:::status_done
-        AR_0101["AR-0101 - Open"]:::status_open
+        AR_0101["AR-0101 - In progress"]:::status_in_progress
         AR_0102["AR-0102 - Planned"]:::status_planned
         AR_0103["AR-0103 - Planned"]:::status_planned
         AR_0104["AR-0104 - Planned"]:::status_planned
@@ -1993,7 +1993,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (11)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | codex-awc-ar0101-reduced-liveness-20261012 | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
+
+### Open (10)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2007,7 +2013,6 @@ flowchart LR
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Unclaimed | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, validate it locally, merge the verified tree, and publish a complete downstream vendor handoff. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
-| P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | Unclaimed | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 
 ### Planned (16)
 
