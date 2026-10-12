@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0102.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "private-workspace", "description": "Each verifier uses a private workspace and binds Java temporary and working directories to it."},
+    {"id": "storage-classification", "description": "Capacity preflight and runtime storage overages produce durable typed failures, including fast-exit overages."},
+    {"id": "contained-stop", "description": "An over-budget required-mode run explicitly stops its unique transient systemd unit."}
+  ],
+  "definition_of_done": [
+    "The merged exact vendor and locally reproducible tests demonstrate private workspaces and storage handling.",
+    "A bounded formal tier completes within its declared budget without shared temporary-module paths.",
+    "No external signature, authentication, hosted approval, or external review is required."
+  ],
+  "inputs": [{"id": "tlc-runner", "description": "TLC runner, formal verifier, and contained execution resources."}],
+  "outputs": [{"id": "resource-receipt", "description": "Typed local receipt for normal and resource-exhausted formal execution."}],
+  "allowed_tools": ["handoffctl", "git", "python", "uv", "gh"],
+  "forbidden_tools": ["direct-task-metadata-edit", "external-review-requirement", "external-signature-requirement", "external-authentication-requirement"],
+  "required_evidence_classes": ["bounded-model", "contract-test"],
+  "gates": [{"id": "local-functional-evidence", "description": "Locally reproducible functional evidence is required; external systems are supplementary only."}]
+}

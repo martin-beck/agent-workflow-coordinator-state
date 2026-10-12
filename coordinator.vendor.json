@@ -137,7 +137,7 @@
       "source": "formal/handoffctl/OBSERVATION_CORRESPONDENCE.md"
     },
     "formal/handoffctl/README.md": {
-      "sha256": "aa0f8d604d4a0ab55ff4cfb787cb43e2c72d67b0daea4d82fb2f8232277dfdee",
+      "sha256": "bfdeeb1ef50262b847b4a7ad8780b7bba9389c8f6db8c65eafa47ee3a625047a",
       "source": "formal/handoffctl/README.md"
     },
     "formal/handoffctl/attest.py": {
@@ -149,7 +149,7 @@
       "source": "formal/handoffctl/slices.py"
     },
     "formal/handoffctl/verify.sh": {
-      "sha256": "74dadfd15e1b16bae09e451462dd9fa120c4d8a9ea5d3ec443ac7ca224c0f78b",
+      "sha256": "71ada73fdf6bbbac17496c39d6323b31ca5e5b18c5cfdc3217ba0460cf55d3c9",
       "source": "formal/handoffctl/verify.sh"
     },
     "formal/oracle/OracleInteractionGates.cfg": {
@@ -281,7 +281,7 @@
       "source": "tests/test_task_spec.py"
     },
     "tests/test_tlc_runner.py": {
-      "sha256": "4b95200b85b0d644faaf519eb28e7a134d5e24f5d0d5db12fbfe98adb2b77752",
+      "sha256": "f477071aef1bc73d90a44d9f5fab9bdac608373944c23ebcb25b85191aebcfcd",
       "source": "tests/test_tlc_runner.py"
     },
     "tools/admission_lease.py": {
@@ -473,7 +473,7 @@
       "source": "tools/task_spec.py"
     },
     "tools/tlc_runner.py": {
-      "sha256": "926bba2291472672ffa150fd1df74bcd9bbcd01e8a487955dec66ed018660d7e",
+      "sha256": "1432e80b5ed469120591507c79c1bab9da787d2b0f436aacc46f9242680efaed",
       "source": "tools/tlc_runner.py"
     },
     "tools/upgrade_admission.py": {
@@ -512,9 +512,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "506d941eecfad40c9a7070fb04e95e0da8f1dd19",
+    "commit": "d24b62148a03e9492bb6da0c3b9db0ae2329c237",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "d2456419c8bbc262259adee7d1200217f6c76d27",
+    "tree": "e44e2c1f5618803d37d8596ff68bd868740488d6",
     "version": "v0.5.2"
   }
 }
