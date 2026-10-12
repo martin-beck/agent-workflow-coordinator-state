@@ -5,5 +5,6 @@ journey creates a reviewed series, publishes its map, posts exactly one update
 for each accepted completion, rejects premature closure and allows one complete
 finalizer closure. Deliver command/operator docs and migration/permission
 guidance. Require end-to-end, property/fault, Git/SQLite parity, privacy/view
-and bounded formal evidence, then independent review, exact-head CI, signed DCO
-release and immutable upstream publication.
+and bounded formal evidence, then locally reproducible release qualification
+and immutable upstream publication. External review, CI, signatures, and DCO
+are optional supplementary evidence.
