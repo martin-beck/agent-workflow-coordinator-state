@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**106 ARs tracked** across 5 active status categories.
+**110 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 10 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 13 |
+| **Planned** | Defined work awaiting promotion or dependencies | 17 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 81 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 106 |
+| Tasks | 110 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
 | Open or active | 11 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 106 | 11 | 0 | 81 |
+| unassigned | unassigned | 110 | 11 | 0 | 81 |
 
 ## Task drill-down
 
@@ -1522,6 +1522,62 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. |
 | Next action | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. |
 
+### AR-0107 — Issue-to-AR series contract and reviewed decomposition
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. |
+| Next action | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
+
+### AR-0108 — Issue-series GitHub publication and receipt adapter
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. |
+| Next action | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. |
+
+### AR-0109 — Issue-series lifecycle updates and finalizer closure
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. |
+| Next action | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. |
+
+### AR-0110 — Issue-to-AR series end-to-end qualification and release
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. |
+| Next action | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. |
+
 
 ## Dependency graph
 
@@ -1642,6 +1698,10 @@ flowchart LR
         AR_0104["AR-0104 - Planned"]:::status_planned
         AR_0105["AR-0105 - Planned"]:::status_planned
         AR_0106["AR-0106 - Planned"]:::status_planned
+        AR_0107["AR-0107 - Planned"]:::status_planned
+        AR_0108["AR-0108 - Planned"]:::status_planned
+        AR_0109["AR-0109 - Planned"]:::status_planned
+        AR_0110["AR-0110 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1802,6 +1862,10 @@ flowchart LR
     AR_0103 --> AR_0104
     AR_0104 --> AR_0106
     AR_0105 --> AR_0106
+    AR_0107 --> AR_0108
+    AR_0107 --> AR_0109
+    AR_0108 --> AR_0109
+    AR_0109 --> AR_0110
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -1922,6 +1986,10 @@ flowchart LR
 | [AR-0104](tasks/AR-0104.md) | [AR-0101](tasks/AR-0101.md), [AR-0102](tasks/AR-0102.md), [AR-0103](tasks/AR-0103.md) | [AR-0106](tasks/AR-0106.md) |
 | [AR-0105](tasks/AR-0105.md) | [AR-0100](tasks/AR-0100.md), [AR-0102](tasks/AR-0102.md) | [AR-0106](tasks/AR-0106.md) |
 | [AR-0106](tasks/AR-0106.md) | [AR-0104](tasks/AR-0104.md), [AR-0105](tasks/AR-0105.md) | None |
+| [AR-0107](tasks/AR-0107.md) | None | [AR-0108](tasks/AR-0108.md), [AR-0109](tasks/AR-0109.md) |
+| [AR-0108](tasks/AR-0108.md) | [AR-0107](tasks/AR-0107.md) | [AR-0109](tasks/AR-0109.md) |
+| [AR-0109](tasks/AR-0109.md) | [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
+| [AR-0110](tasks/AR-0110.md) | [AR-0109](tasks/AR-0109.md) | None |
 
 ## Complete AR inventory
 
@@ -1946,7 +2014,7 @@ flowchart LR
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
 
-### Planned (13)
+### Planned (17)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -1958,6 +2026,10 @@ flowchart LR
 | P0 | [AR-0104](tasks/AR-0104.md): Minute-Scale Formal CI Integration | Unclaimed | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. |
 | P0 | [AR-0105](tasks/AR-0105.md): Advisory Formal Stress Exploration | Unclaimed | Retain high-cardinality liveness exploration without allowing it to stall routine development. | Move the large liveness configuration into a contained advisory stress workflow. |
 | P0 | [AR-0106](tasks/AR-0106.md): Formal Tier Migration Qualification | Unclaimed | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. |
+| P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and reviewed decomposition | Unclaimed | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
+| P0 | [AR-0108](tasks/AR-0108.md): Issue-series GitHub publication and receipt adapter | Unclaimed | Publish an approved AR-series map to its GitHub issue and retain idempotent bounded receipts without treating GitHub as task authority. | After AR-0107, implement authenticated idempotent GitHub issue-series publication and privacy-safe comment receipts. |
+| P0 | [AR-0109](tasks/AR-0109.md): Issue-series lifecycle updates and finalizer closure | Unclaimed | Make every completed AR publish a verified issue update and allow only the declared finalizer to close the issue after all series evidence is complete. | After the series model and publication adapter are complete, bind done/reopen transitions to idempotent issue updates and implement guarded finalizer closure. |
+| P0 | [AR-0110](tasks/AR-0110.md): Issue-to-AR series end-to-end qualification and release | Unclaimed | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. |
 | P1 | [AR-0095](tasks/AR-0095.md): Assumption Revalidation | Unclaimed | Bind material assumptions to commits, dependency revisions, and observations, then require an explicit disposition when they become stale. | Add freshness-bound assumptions and explicit revalidation. |
 | P1 | [AR-0096](tasks/AR-0096.md): Drift Aware Resume | Unclaimed | Provide a compact resume packet showing accepted progress, source identity, drift, stale assumptions, unresolved gates, and one next action. | Build deterministic resume cards from task, scope, evidence, and freshness state. |
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
