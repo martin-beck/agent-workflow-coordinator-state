@@ -9,7 +9,7 @@
       "source": "docs/PUBLIC_CONTRACTS.md"
     },
     "docs/agent-workflow-coordinator.md": {
-      "sha256": "c539d0d8eeb7258134921135bf60f1840450e92a3c269acaf98c4059f8ad652a",
+      "sha256": "f2df9932a8538fed2b9ab03b27ec792026d6a1d4c1fae4e6f82878428cd9dcf0",
       "source": "docs/PROJECT_GUIDE.md"
     },
     "examples/roles/role-registry.json": {
@@ -33,15 +33,15 @@
       "source": "examples/task-specs/hostile-unknown-evidence.json"
     },
     "formal/evidence.json": {
-      "sha256": "0cdfd98d60e6ef58ff4dfc2d2ffa4163d5a853f87a70df228d682951d7d18bf6",
+      "sha256": "816c5756a27e5a3416d4ecfba887a30cef3e98c29875c06eb3b14135ccd9d345",
       "source": "formal/evidence.json"
     },
     "formal/handoffctl/Handoffctl.cfg": {
-      "sha256": "53fb6527176eb711cd5d1c9ac30adb95c2780969d4ca0e177e7e6b0557f09653",
+      "sha256": "72871aaf00f69bbaa0f0a0586f649c64a6402288e6e43e9d584bebd803d952a0",
       "source": "formal/handoffctl/Handoffctl.cfg"
     },
     "formal/handoffctl/Handoffctl.tla": {
-      "sha256": "3cd5ca1da8ba1371f048c9eacc728718bdd632d60544ee72a6c09088047c6583",
+      "sha256": "4a2d141e3bb107688b452b707f2996fa6a55fa743b6561b23f6f45615dedd5dd",
       "source": "formal/handoffctl/Handoffctl.tla"
     },
     "formal/handoffctl/HandoffctlBinding.cfg": {
@@ -73,7 +73,7 @@
       "source": "formal/handoffctl/HandoffctlObservation.tla"
     },
     "formal/handoffctl/HandoffctlPR.cfg": {
-      "sha256": "3e63b73d2ab90b3f65d30176f5d39939e7024403e5dddd75211e5de721076310",
+      "sha256": "42c21f13941a2dfcdf882444e1c4e0449207718a29bc09b8e5964137e4541089",
       "source": "formal/handoffctl/HandoffctlPR.cfg"
     },
     "formal/handoffctl/HandoffctlPublication.cfg": {
@@ -125,7 +125,7 @@
       "source": "formal/handoffctl/HandoffctlStorage.tla"
     },
     "formal/handoffctl/LIFECYCLE_CORRESPONDENCE.md": {
-      "sha256": "0ee34e51055839c1737d0f3b2d0dbc5a2f8cd9abd0fd12186c9cc9f5aec421ed",
+      "sha256": "71e649a11bc4815bc3213cfdd69f3a3dd91506892d96d160951b5694e95cf97c",
       "source": "formal/handoffctl/LIFECYCLE_CORRESPONDENCE.md"
     },
     "formal/handoffctl/OBSERVATION_CORRESPONDENCE.md": {
@@ -133,19 +133,19 @@
       "source": "formal/handoffctl/OBSERVATION_CORRESPONDENCE.md"
     },
     "formal/handoffctl/README.md": {
-      "sha256": "9742b77574257f8c0b3c041228b302b965c88ac3c087e8c65e4d2bd407cba29b",
+      "sha256": "0f371e43674dd891ecee4afae45285865808204730c8434f907daebd7c9f67b6",
       "source": "formal/handoffctl/README.md"
     },
     "formal/handoffctl/attest.py": {
-      "sha256": "fe150921c3a7dad0d02118a508cddff8f993192b01f52cd7dc25532640527519",
+      "sha256": "c3814b4d4f00b12f50115a93199e21537c4a9abc999055ae96f96fe26316c5f0",
       "source": "formal/handoffctl/attest.py"
     },
     "formal/handoffctl/slices.py": {
-      "sha256": "67b48842156afaae56d30f0fb832b94052d7f220e994954b147b06feb0644694",
+      "sha256": "47ad2ff30a9446add5db9ad41e25e6b68bf7d15706d7c49b3aa0c76ba9ae8870",
       "source": "formal/handoffctl/slices.py"
     },
     "formal/handoffctl/verify.sh": {
-      "sha256": "f512a09b1b1970773a3cde28d7711303d16c98068cb29ea5c34ddd08d2b62706",
+      "sha256": "3411f0c478ba3186d8f63f1bc13c8f55402479a8b0820fa0833e8d422e9b8d4a",
       "source": "formal/handoffctl/verify.sh"
     },
     "formal/oracle/OracleInteractionGates.cfg": {
@@ -157,7 +157,7 @@
       "source": "formal/oracle/OracleInteractionGates.tla"
     },
     "formal/tier-evidence.json": {
-      "sha256": "8a4d790663d5ffaedd1d43377131ee8102e77043fdd62c13d66c0cd19486a8ac",
+      "sha256": "ba1e163e33224abbcf3ef428268cb6e4650fb436547e783af22cb095ece0d68d",
       "source": "formal/tier-evidence.json"
     },
     "schema/handoffctl-backend-config.schema.json": {
@@ -269,7 +269,7 @@
       "source": "tests/test_session_records.py"
     },
     "tests/test_sqlite_storage.py": {
-      "sha256": "1b3fca56ee3b11dcee6c0879ff4cf9da18bd6de2ff5fa365fc28b49d3ad19379",
+      "sha256": "01009f9f6e82a4dc8220d34f0d341dc2f160e54dc7ab5b8a05a0e3a5b6e50f62",
       "source": "tests/test_sqlite_storage.py"
     },
     "tests/test_task_spec.py": {
@@ -365,7 +365,7 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "422228e68b0b6fb8dd3213db7eee8134300c6e216933bddda786c2934a67cd85",
+      "sha256": "15480f97d88fa1924ee0c6b3e79862836867dbb4cc3c565ff7cb4b963393744d",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
@@ -508,9 +508,9 @@
   "schema_version": 2,
   "upstream": {
     "channel": "development",
-    "commit": "efbe49d96b51a7278cfd060b6a1bc7a43dfb24c0",
+    "commit": "253b0e7e39e50d490df86d3925fe14259aa18306",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "8a9dddb6b30f1030fb292a8948a095ba4abef853",
+    "tree": "4aea853eff253fae3c5d6d9762584a875c44d180",
     "version": "v0.5.2"
   }
 }
