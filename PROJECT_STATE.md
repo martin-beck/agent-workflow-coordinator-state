@@ -2,31 +2,31 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `253b0e7e39e50d490df86d3925fe14259aa18306`
-- Local origin/main: `253b0e7e39e50d490df86d3925fe14259aa18306`
+- Product remote main: `506d941eecfad40c9a7070fb04e95e0da8f1dd19`
+- Local origin/main: `506d941eecfad40c9a7070fb04e95e0da8f1dd19`
 - Primary worktree head: `b5dcd924e967d9f2ee67fecab0f9e43aff437f6b`
 
 ## Open pull requests
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1232 | `fix/formal-slice-config-syntax@091ba524ea41` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): render TLC-compatible slice configs |
-| #1233 | `fix/formal-slice-selector@0b7317e42770` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): select operation slices in model |
-| #1245 | `feature/task-execution-envelopes@703abd2d905f` | `main` | DIRTY | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat: add task execution envelopes |
+| #1232 | `fix/formal-slice-config-syntax@091ba524ea41` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): render TLC-compatible slice configs |
+| #1233 | `fix/formal-slice-selector@0b7317e42770` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(formal): select operation slices in model |
+| #1245 | `feature/task-execution-envelopes@703abd2d905f` | `main` | UNKNOWN | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED | feat: add task execution envelopes |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 38260692702 | `506d941eecfa` | push | Verify | completed:failure |
+| 38260692676 | `506d941eecfa` | push | Formal | completed:failure |
+| 38260687446 | `b4db4407a507` | pull_request | Verify | completed:failure |
+| 38260382977 | `94a1d32a88a8` | push | Verify | completed:failure |
+| 38260382785 | `94a1d32a88a8` | push | Formal | completed:failure |
+| 38260378721 | `43d159dcac7a` | pull_request | Verify | completed:success |
+| 38260265067 | `853b2c8ff3d9` | push | Formal | completed:failure |
+| 38260265015 | `853b2c8ff3d9` | push | Verify | completed:failure |
+| 38260160442 | `22cd81de42f2` | pull_request | Verify | completed:failure |
 | 38256554053 | `253b0e7e39e5` | push | Formal | completed:failure |
 | 38256554051 | `253b0e7e39e5` | push | Verify | completed:success |
 | 38256227337 | `0b46969f4073` | pull_request | Verify | completed:success |
-| 38251814434 | `592757649c20` | push | Verify | completed:success |
-| 38251814428 | `592757649c20` | push | Formal | completed:failure |
-| 38251504249 | `c4728e156f42` | pull_request | Verify | completed:success |
-| 38216641065 | `703abd2d905f` | pull_request | Verify | completed:success |
-| 38210403216 | `c0fc6ba6e53e` | pull_request | Verify | completed:success |
-| 38210060589 | `0361ae2189a1` | pull_request | Verify | completed:success |
-| 38198829521 | `66979c071e3b` | pull_request | Verify | completed:failure |
-| 38197128091 | `ae3bfd577c10` | pull_request | Verify | completed:failure |
-| 38178528301 | `72fbbb5d527a` | pull_request | Verify | completed:failure |
