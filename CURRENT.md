@@ -17,6 +17,7 @@ Never edit this file directly.
 | P0 | [AR-0088 — Supported active-task worktree binding](tasks/AR-0088.md) | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Implement a supported exact-revision worktree-binding transition for claimed legacy tasks, validate it locally, merge the verified tree, and publish a complete downstream vendor handoff. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
 | P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. | - |
+| P0 | [AR-0101 — Reduced Liveness Model and Coverage Mapping](tasks/AR-0101.md) | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. | - |
 
 ## Planned
 
@@ -24,7 +25,6 @@ Never edit this file directly.
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0093 — Change Drift Guard](tasks/AR-0093.md) | Compare task changes with the execution envelope, record scope exceptions, and block completion only on unexplained material drift. | Implement path-aware change-scope observation and exception records. | - |
 | P0 | [AR-0094 — Step Evidence Ledger](tasks/AR-0094.md) | Represent acceptance predicates as durable steps with candidate identity, evidence references, digests, status, and reopen semantics. | Design a predicate-level work and evidence ledger. | - |
-| P0 | [AR-0101 — Reduced Liveness Model and Coverage Mapping](tasks/AR-0101.md) | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. | - |
 | P0 | [AR-0102 — Budgeted Formal Runner Storage and Resource Handling](tasks/AR-0102.md) | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. | - |
 | P0 | [AR-0103 — Candidate-Bound Formal Job Lifecycle](tasks/AR-0103.md) | Decouple long formal execution from coordinator locks using fenced, candidate-bound job lifecycle evidence. | Implement candidate-bound formal job receipts that do not retain coordinator authority while a job runs. | - |
 | P0 | [AR-0104 — Minute-Scale Formal CI Integration](tasks/AR-0104.md) | Use exact-head CI to enforce a reliable minute-scale formal gate with truthful receipts. | Wire the bounded tier into exact-head CI and verify the stated minute-scale contract. | - |
