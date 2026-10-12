@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0101 — Reduced Liveness Model and Coverage Mapping](tasks/AR-0101.md) | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. | codex-awc-ar0101-reduced-liveness-20261012 |
 | P0 | [AR-0107 — Issue-to-AR series contract and reviewed decomposition](tasks/AR-0107.md) | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. | codex-awc-ar0107-20261012 |
 
 ## Open

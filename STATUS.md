@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 15 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 83 |
+| **Done** | Accepted, integrated, and durably verified | 84 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 110 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 11 |
+| Open or active | 10 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 110 | 11 | 0 | 83 |
+| unassigned | unassigned | 110 | 10 | 0 | 84 |
 
 ## Task drill-down
 
@@ -1442,11 +1442,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-awc-ar0101-reduced-liveness-20261012 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. |
@@ -1692,7 +1692,7 @@ flowchart LR
     subgraph series_01["01 - Contracts and runtime"]
         direction TB
         AR_0100["AR-0100 - Done"]:::status_done
-        AR_0101["AR-0101 - In progress"]:::status_in_progress
+        AR_0101["AR-0101 - Done"]:::status_done
         AR_0102["AR-0102 - Planned"]:::status_planned
         AR_0103["AR-0103 - Planned"]:::status_planned
         AR_0104["AR-0104 - Planned"]:::status_planned
@@ -1993,11 +1993,10 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | codex-awc-ar0101-reduced-liveness-20261012 | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 | P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and reviewed decomposition | codex-awc-ar0107-20261012 | Define a durable reviewable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Promote and claim the issue-series foundation; define durable manifest, strict task linkage, and reviewed decomposition before GitHub publication. |
 
 ### Open (9)
@@ -2034,7 +2033,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (83)
+### Done (84)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2107,6 +2106,7 @@ flowchart LR
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Unclaimed | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Merge the verified partial-key binding repair, then vendor it and bind AR-0101 through the supported handoffctl transition. |
 | P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | Unclaimed | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Synchronize the official tagged Coordinator v0.5.0 vendor snapshot so legacy tasks gain bind-spec, then bind AR-0089 to a reviewed task spec, record acceptance, and re-run exact-main integrity checks before release. |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | Unclaimed | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | PR #1246 applies the current-main-native minute-scale formal tier; await exact-head CI, merge, post-merge verification, and state reconciliation. |
+| P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | Unclaimed | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |

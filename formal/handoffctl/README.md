@@ -215,10 +215,18 @@ Formal tiers are explicit: `verify.sh --tier portable-smoke` runs one model
 and is non-exhaustive; it cannot produce publication or full evidence.
 `verify.sh --tier pr-publication` is reduced bounded release qualification for
 its declared model set. Seven models use their full configurations; the general
-lifecycle model uses the one-process `HandoffctlPR.cfg`, while the separate lock
-and recovery models retain independent-process races. It is neither refinement
-evidence nor the complete two-process lifecycle cross-product, and cannot
-produce full formal or release evidence.
+lifecycle model uses the explicitly named one-process `HandoffctlLiveness.cfg`.
+`LIVENESS_COVERAGE.json` maps each omitted dimension to focused models and
+concrete tests, while the separate lock and recovery models retain
+independent-process races. The reduced configuration retains every lifecycle
+safety invariant and `EventualCompletion`. This is a bounded coverage argument,
+not refinement evidence or the complete two-process lifecycle cross-product,
+and cannot produce full formal or release evidence.
+
+`HandoffctlPR.cfg` is a source-only compatibility bootstrap for snapshots
+created before AR-0101. It is deliberately excluded from every tier. An old
+vendored updater needs it for one sync that installs the new updater; the new
+updater removes the bootstrap on its next atomic sync.
 `verify.sh --tier full-exhaustive` runs every full focused configuration plus
 the complete two-process lifecycle domain as fifteen disjoint immutable-
 operation slices. Each slice fixes one process's request operation and leaves

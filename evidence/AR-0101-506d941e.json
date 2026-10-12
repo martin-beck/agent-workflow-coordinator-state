@@ -1,0 +1,18 @@
+{
+  "ar": "AR-0101",
+  "evidence_class": "bounded-model",
+  "implementation": {
+    "merge_commit": "506d941eecfad40c9a7070fb04e95e0da8f1dd19",
+    "pull_requests": [
+      "https://github.com/martin-beck/agent-workflow-coordinator/pull/1248",
+      "https://github.com/martin-beck/agent-workflow-coordinator/pull/1249",
+      "https://github.com/martin-beck/agent-workflow-coordinator/pull/1250"
+    ]
+  },
+  "local_verification": {
+    "formal": "exact development-vendor formal/handoffctl/verify.sh --tier pr-publication succeeded in 47 seconds with all nine declared models, complete lifecycle safety invariants, and EventualCompletion",
+    "focused": "Coordinator focused formal-evidence and vendor suites passed; Ruff and mypy tools/tests passed for the CI repair",
+    "vendor_migration": "pre-AR-0101 updater completed a transitional sync using HandoffctlPR.cfg; the installed AR-0101 updater then completed a second sync, removed that retired artifact, and verified the exact development snapshot"
+  },
+  "policy": "This is locally reproducible bounded-model evidence and a best-effort coverage argument, not source-to-model refinement proof. External signatures, authentication, hosted approval, and independent review are optional supplementary evidence, never progression gates."
+}
