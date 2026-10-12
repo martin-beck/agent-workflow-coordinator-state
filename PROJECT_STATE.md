@@ -4,7 +4,7 @@ Generated from local Git and GitHub. Do not edit.
 
 - Product remote main: `2b47ec53c2f4e458060571b68fb74c6cbcbb4c73`
 - Local origin/main: `2b47ec53c2f4e458060571b68fb74c6cbcbb4c73`
-- Primary worktree head: `4438ec573bfaea626076a558f1ac00be25fb6a20`
+- Primary worktree head: `bd36fe5e3bc69f414d94079f442bee6511b9cb2a`
 
 ## Open pull requests
 
@@ -19,7 +19,7 @@ Generated from local Git and GitHub. Do not edit.
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
 | 38276093422 | `2b47ec53c2f4` | push | Formal | completed:success |
-| 38276093286 | `2b47ec53c2f4` | push | Verify | in_progress:- |
+| 38276093286 | `2b47ec53c2f4` | push | Verify | completed:failure |
 | 38275871166 | `bd36fe5e3bc6` | pull_request | Verify | completed:failure |
 | 38275645353 | `2d10c6e848e4` | pull_request | Verify | completed:failure |
 | 38275460813 | `3f684b32378f` | pull_request | Verify | completed:failure |
