@@ -1436,7 +1436,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. |
-| Next action | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. |
+| Next action | Implement and qualify the self-contained bounded tier contract; external evidence remains optional. |
 
 ### AR-0101 — Reduced Liveness Model and Coverage Mapping
 
@@ -1929,7 +1929,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | codex-awc-ar0100-tier-policy-20261012 | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. |
+| P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | codex-awc-ar0100-tier-policy-20261012 | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Implement and qualify the self-contained bounded tier contract; external evidence remains optional. |
 
 ### Open (10)
 

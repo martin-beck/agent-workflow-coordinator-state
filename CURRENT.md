@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0100 — Bounded Formal Verification Tier Policy](tasks/AR-0100.md) | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Define the bounded formal-verification tier contract and migrate existing labels without changing product behavior. | codex-awc-ar0100-tier-policy-20261012 |
+| P0 | [AR-0100 — Bounded Formal Verification Tier Policy](tasks/AR-0100.md) | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | Implement and qualify the self-contained bounded tier contract; external evidence remains optional. | codex-awc-ar0100-tier-policy-20261012 |
 
 ## Open
 
