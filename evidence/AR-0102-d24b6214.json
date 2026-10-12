@@ -1,0 +1,7 @@
+{
+  "ar": "AR-0102",
+  "evidence_class": "bounded-model",
+  "implementation": {"merge_commit": "d24b62148a03e9492bb6da0c3b9db0ae2329c237", "pull_requests": ["https://github.com/martin-beck/agent-workflow-coordinator/pull/1251", "https://github.com/martin-beck/agent-workflow-coordinator/pull/1252"]},
+  "local_verification": {"formal": "pr-publication completed in 49 seconds using private TLC workspace paths", "focused": "28 TLC runner tests, formal-evidence tests, Ruff and mypy tools/tests passed", "review_repair": "independent advisory review findings for transient unit termination and fast-exit storage overage were repaired with deterministic regression tests"},
+  "policy": "Local reproducible bounded-model evidence is sufficient. External signatures, authentication, hosted approval, and independent review are optional supplementary evidence."
+}
