@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1291 | `codex/ar0031-v074-fixture-error-contracts@c9df7069acaa` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: codify v0.7.4 fixture and error contracts |
+| #1291 | `codex/ar0031-v074-fixture-error-contracts@c9df7069acaa` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:SKIPPED, IN_PROGRESS:, COMPLETED:SUCCESS | test: codify v0.7.4 fixture and error contracts |
 
 ## Recent workflows
 
