@@ -95,6 +95,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0022-formal-repair` | `ar0022-formal-repair` | `2397eea1471f` | 25 | behind 1506, ahead 0 |
 | changed files | - | - | - | `.tlc-admission-final.lock`, `.tlc-admission-final2.lock`, `.tlc-admission-final3.lock`, `.tlc-admission-final4.lock`, `.tlc-admission-final5.lock`, `.tlc-admission-final6.lock`, `.tlc-admission-final7.lock`, `.tlc-admission-final8.lock`, `.tlc-admission4.lock`, `.tlc-admission5.lock`, `.tlc-admission6.lock`, `.tlc-admission7.lock`, `.tlc-model-states6/`, `.tlc-queue-final/`, `.tlc-queue-final2/`, `.tlc-queue-final3/`, `.tlc-queue-final4/`, `.tlc-queue-final5/`, `.tlc-queue-final6/`, `.tlc-queue-final7/`, `.tlc-queue-final8/`, `.tlc-queue4/`, `.tlc-queue5/`, `.tlc-queue6/`, `.tlc-queue7/` |
 | `agent-workflow-coordinator-ar0025-product` | `repair/ar-0025-state-worktree-product` | `7a1f21e70449` | 0 | behind 459, ahead 2 |
+| `agent-workflow-coordinator-ar0029-formal-admission-env` | `codex/ar0029-formal-admission-env` | `2c1641516495` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0031-binding` | `ar0031-authority-binding` | `95d27e9c41c8` | 0 | behind 1340, ahead 0 |
 | `agent-workflow-coordinator-ar0031-durable-binding` | `ar0031-durable-binding` | `c794ac3ac140` | 0 | behind 1339, ahead 0 |
 | `agent-workflow-coordinator-ar0031-executable-backup` | `ar0031-executable-backup` | `65d869d87f9a` | 0 | behind 1343, ahead 0 |
