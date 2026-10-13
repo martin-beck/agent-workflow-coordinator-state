@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**111 ARs tracked** across 5 active status categories.
+**111 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 90 |
+| **Done** | Accepted, integrated, and durably verified | 91 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 111 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 10 |
+| Open or active | 9 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 111 | 10 | 0 | 90 |
+| unassigned | unassigned | 111 | 9 | 0 | 91 |
 
 ## Task drill-down
 
@@ -1582,11 +1582,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | ar0119-strict-role-luna |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Restore strict role authorization after the Coordinator v0.7.8 regression. |
@@ -1716,7 +1716,7 @@ flowchart LR
         AR_0108["AR-0108 - Planned"]:::status_planned
         AR_0109["AR-0109 - Planned"]:::status_planned
         AR_0110["AR-0110 - Planned"]:::status_planned
-        AR_0119["AR-0119 - In progress"]:::status_in_progress
+        AR_0119["AR-0119 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2010,12 +2010,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | ar0119-strict-role-luna | Restore strict role authorization after the Coordinator v0.7.8 regression. | Merged b46d2b3 to Coordinator origin/main; exact-main Formal 38469028066 and Verify 38469028330 passed; post-merge focused role 8/8 and formal-evidence 21/21 pass; hand exact release to ASB AR-1852. |
-
 ### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2045,7 +2039,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (90)
+### Done (91)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2125,6 +2119,7 @@ flowchart LR
 | P0 | [AR-0105](tasks/AR-0105.md): Advisory Formal Stress Exploration | Unclaimed | Retain high-cardinality liveness exploration without allowing it to stall routine development. | Move the large liveness configuration into a contained advisory stress workflow. |
 | P0 | [AR-0106](tasks/AR-0106.md): Formal Tier Migration Qualification | Unclaimed | Qualify the new formal workflow end to end and prevent a return to multi-hour blocking runs. | Qualify the migration and add regression tests for tier accuracy, duration, and non-blocking behavior. |
 | P0 | [AR-0107](tasks/AR-0107.md): Issue-to-AR series contract and validated decomposition | Unclaimed | Define a durable inspectable issue-to-AR-series contract for work, dependencies, progress and one finalizer without parsing free-form issue text. | Define a durable manifest, strict task linkage, and locally validated decomposition before optional GitHub publication. |
+| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | Unclaimed | Restore strict role authorization after the Coordinator v0.7.8 regression. | Merged b46d2b3 to Coordinator origin/main; exact-main Formal 38469028066 and Verify 38469028330 passed; post-merge focused role 8/8 and formal-evidence 21/21 pass; hand exact release to ASB AR-1852. |
 | P1 | [AR-0010](tasks/AR-0010.md): Operational upgrade runbooks and generated release steps | Unclaimed | Make every release&#x27;s prerequisites, steps, evidence, and rollback path explicit and safe to operate. | Add targeted generator/verifier branch tests, rerun full coverage to &gt;=95&#37;, obtain new exact-head review and hosted green gates. |
 | P1 | [AR-0015](tasks/AR-0015-vendor-formal-runtime-closure.md): Complete formal runtime vendor closure | Unclaimed | PR #309 merged at 6332f032b7445b8a02f60fdf99113d0d835de29e; post-merge Verify 34997001352 failed only formal evidence hash consistency: tools/handoffctl.py changed for v0.3.8 but formal/evidence.json retains prior digest. 512 tests executed; AWQ/scope passed. Existing v0.3.7 immutable tag remains untouched; no release published. | Repair formal/evidence.json using the canonical evidence generator from exact merge 6332f032; obtain independent review and green exact-head Verify, then publish signed immutable v0.3.8 targeting the repaired merge. |
 | P1 | [AR-0016](tasks/AR-0016-release-validation-dispatch.md): Release validation dispatch gate | Unclaimed | Release-validation dispatch evidence is complete: merged PR #314 and successful exact-head full run on b097c757. | Release AR-0016 after recording exact PR/run/artifact evidence; retain AR-0007 open for executable rollback criteria. |
