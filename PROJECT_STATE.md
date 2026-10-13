@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1297 | `codex/ar0119-strict-role@93eec4e4d60f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, IN_PROGRESS:, COMPLETED:SKIPPED | Restore strict role admission and doctor checks |
+| #1297 | `codex/ar0119-strict-role@93eec4e4d60f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Restore strict role admission and doctor checks |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38467745778 | `93eec4e4d60f` | pull_request | Verify | in_progress:- |
+| 38467745778 | `93eec4e4d60f` | pull_request | Verify | completed:failure |
 | 38467463005 | `60da24522767` | pull_request | Verify | completed:failure |
 | 38445459917 | `3dda5d2d021b` | push | Formal | completed:success |
 | 38445459677 | `3dda5d2d021b` | push | Verify | completed:success |
