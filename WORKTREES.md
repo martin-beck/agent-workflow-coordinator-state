@@ -109,6 +109,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0031-sqlite-session-snapshot` | `ar0031-sqlite-session-snapshot` | `df2d4c1696ba` | 0 | behind 1351, ahead 0 |
 | `agent-workflow-coordinator-ar0031-v074` | `codex/ar0031-v074-fixture-error-contracts` | `c9df7069acaa` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0034-legacy-binding-repair` | `codex/ar0034-legacy-binding-repair` | `113d6b35e49e` | 0 | behind 644, ahead 0 |
+| `agent-workflow-coordinator-ar0034-legacy-binding-repair-v075` | `codex/ar0034-legacy-binding-repair-v075` | `e4b79aa4fa45` | 0 | behind 0, ahead 0 |
 | `agent-workflow-coordinator-ar0064-admission-identity-correspondence` | `ar0064-admission-identity-correspondence` | `dcef4f1a665a` | 0 | behind 900, ahead 0 |
 | `agent-workflow-coordinator-ar0064-admission-revision-binding` | `ar0064-admission-revision-binding` | `a3a85597813a` | 0 | behind 902, ahead 0 |
 | `agent-workflow-coordinator-ar0064-effect-finish-publication` | `ar0064-effect-finish-publication` | `516edefef05c` | 0 | behind 912, ahead 0 |
