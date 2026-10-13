@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0119.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "authorized-role-preserved", "description": "A valid durable role assignment continues to pass lifecycle admission and doctor checks."},
+    {"id": "unknown-role-rejected", "description": "An owner or role absent from the durable role store is rejected fail-closed with no implicit creation or advisory fallback."},
+    {"id": "stale-role-rejected", "description": "Expired, stale, unauthorized, malformed, and replayed assignments are rejected without mutation."},
+    {"id": "strict-admission-doctor-coverage", "description": "Positive and negative contract tests prove strict authorization across lifecycle admission and relevant doctor paths."},
+    {"id": "upstream-only-scope", "description": "Only the Coordinator role-admission contract and owned runtime/tests/docs change; ASB AR-1852 and vendor files remain untouched."}
+  ],
+  "definition_of_done": [
+    "The smallest strict-role restoration is implemented on an exact reviewed Coordinator head.",
+    "Required native, schema, privacy, formal, and hosted quality checks pass on that exact head.",
+    "Independent review confirms fail-closed strict authorization and no authority weakening.",
+    "The exact reviewed release/source commit is handed to ASB AR-1852 for requalification."
+  ],
+  "inputs": [
+    {"id": "coordinator-ar0032-regression", "description": "Coordinator AR-0032 role-store authorization contract and the v0.7.8 strict-to-advisory regression context."},
+    {"id": "coordinator-v078", "description": "Coordinator v0.7.8 lifecycle admission and doctor behavior on immutable source."},
+    {"id": "asb-ar1852", "description": "ASB AR-1852 strict-role compatibility failure evidence, used as downstream contract context only."}
+  ],
+  "outputs": [
+    {"id": "reviewed-strict-role-repair", "description": "A signed, independently reviewed Coordinator repair restoring strict role authorization."},
+    {"id": "strict-role-contract-evidence", "description": "Concise positive and negative evidence for role-store admission and doctor behavior."},
+    {"id": "downstream-handoff", "description": "Exact release/source commit and bounded evidence for ASB AR-1852 requalification."}
+  ],
+  "allowed_tools": ["git", "gh", "uv", "python", "tools/handoffctl"],
+  "forbidden_tools": ["asb-vendor-file-edits", "local-tlc-execution", "authority-or-gate-weakening", "credentials-or-raw-logs"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {"id": "exact-head-review", "description": "Independent review covers the exact Coordinator commit and confirms strict, fail-closed role semantics."},
+    {"id": "hosted-quality", "description": "Required native and hosted quality checks pass on the exact reviewed head."},
+    {"id": "downstream-handoff", "description": "ASB AR-1852 can consume the exact reviewed result without Coordinator task absorbing ASB implementation."}
+  ]
+}
