@@ -10,11 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
+| #1291 | `codex/ar0031-v074-fixture-error-contracts@c9df7069acaa` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | test: codify v0.7.4 fixture and error contracts |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
+| 38420873973 | `c9df7069acaa` | pull_request | Verify | in_progress:- |
 | 38406516406 | `e4b79aa4fa45` | push | Formal | completed:success |
 | 38406516306 | `e4b79aa4fa45` | push | Verify | completed:success |
 | 38406061023 | `c62a4b92bdcb` | pull_request | Verify | completed:success |
@@ -26,4 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 38404580869 | `ab97139da3bb` | push | Verify | completed:failure |
 | 38404302023 | `880a198b19b5` | pull_request | Verify | completed:success |
 | 38404049899 | `08cdd9d288b6` | pull_request | Verify | completed:success |
-| 38403839876 | `c7f361b033a6` | pull_request | Verify | completed:success |
