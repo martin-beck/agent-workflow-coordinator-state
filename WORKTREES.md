@@ -102,7 +102,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-ar0031-executable-backup` | `ar0031-executable-backup` | `65d869d87f9a` | 0 | behind 1357, ahead 0 |
 | `agent-workflow-coordinator-ar0031-failure-tests` | `ar0031-snapshot-failure-tests` | `47392c62963d` | 0 | behind 1350, ahead 1 |
 | `agent-workflow-coordinator-ar0031-git-backup` | `ar0031-git-backup` | `37bfb9ef1c55` | 0 | behind 1355, ahead 0 |
-| `agent-workflow-coordinator-ar0031-integration` | `codex/ar0031-integration` | `e4b79aa4fa45` | 0 | behind 0, ahead 0 |
+| `agent-workflow-coordinator-ar0031-integration` | `codex/ar0031-integration` | `1fd250b3a02c` | 0 | behind 0, ahead 2 |
 | `agent-workflow-coordinator-ar0031-snapshot-continuity` | `ar0031-snapshot-continuity` | `3612ff85e417` | 0 | behind 1347, ahead 0 |
 | `agent-workflow-coordinator-ar0031-snapshot-failure-evidence` | `ar0031-snapshot-failure-evidence` | `c7f9cc50c813` | 0 | behind 1349, ahead 0 |
 | `agent-workflow-coordinator-ar0031-snapshot-safe-mode` | `ar0031-evidence-values` | `1622a4d37f27` | 0 | behind 1100, ahead 0 |
