@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 4 active status categories.
+**29 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 0 |
 | **Future** | Deferred roadmap work | 0 |
@@ -56,7 +56,7 @@ flowchart LR
         AR_0026["AR-0026 - Superseded"]:::status_superseded
         AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Done"]:::status_done
-        AR_0029["AR-0029 - Open"]:::status_open
+        AR_0029["AR-0029 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -138,12 +138,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (2)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | ar0029-formal-admission-env-luna | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Promote and claim the workflow-scoped private TLC admission environment repair, then run focused/full gates and exact-head review. |
+
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
-| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | Unclaimed | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Promote and claim the workflow-scoped private TLC admission environment repair, then run focused/full gates and exact-head review. |
 
 ### Blocked (2)
 

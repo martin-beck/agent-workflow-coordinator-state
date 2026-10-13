@@ -3,12 +3,17 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Promote and claim the workflow-scoped private TLC admission environment repair, then run focused/full gates and exact-head review. | ar0029-formal-admission-env-luna |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Promote and claim the workflow-scoped private TLC admission environment repair, then run focused/full gates and exact-head review. | - |
 
 ## Blocked
 
