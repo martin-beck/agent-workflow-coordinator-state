@@ -1,0 +1,10 @@
+AR-0119 strict-role restoration evidence
+
+Coordinator product merge: b46d2b3f3dfbf1a77f0836be0783a102e5b84612
+Reviewed PR head: 2868c6d9e55f5a5538c42a26303587e60240b492
+Hosted PR checks: AWQ, scope, Formal-portable, Verify passed; smoke skipped by policy.
+Exact-main Formal: 38469028066 passed.
+Exact-main Verify: 38469028330 passed.
+Post-merge focused role tests: 8/8 passed.
+Post-merge formal evidence tests: 21/21 passed.
+Downstream handoff: ASB AR-1852; no ASB mutation.
