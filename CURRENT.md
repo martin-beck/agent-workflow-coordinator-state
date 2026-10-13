@@ -8,13 +8,13 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | PR #1291 exact head c9df706: focused suites and locked full unittest discovery green; obtain independent review, then merge only after terminal required CI and post-merge verification. | ar0031-upstream-luna |
+| P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. | ar0034-legacy-repair-luna |
 
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. | - |
 
 ## Blocked
 

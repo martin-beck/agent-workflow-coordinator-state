@@ -9,8 +9,8 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 2 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -61,7 +61,7 @@ flowchart LR
         AR_0031["AR-0031 - In progress"]:::status_in_progress
         AR_0032["AR-0032 - Planned"]:::status_planned
         AR_0033["AR-0033 - Planned"]:::status_planned
-        AR_0034["AR-0034 - Open"]:::status_open
+        AR_0034["AR-0034 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -152,18 +152,18 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
+### In progress (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | ar0031-upstream-luna | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | PR #1291 exact head c9df706: focused suites and locked full unittest discovery green; obtain independent review, then merge only after terminal required CI and post-merge verification. |
+| P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | ar0034-legacy-repair-luna | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. |
 
-### Open (2)
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
-| P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | Unclaimed | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. |
 
 ### Blocked (2)
 
