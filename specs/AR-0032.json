@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0032.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {
+      "id": "doctor_rejects_unauthorized_role",
+      "description": "The role-store doctor rejects an assignment whose role is not authorized by the durable role store, with no fail-open fallback."
+    },
+    {
+      "id": "admission_rejects_unknown_owner",
+      "description": "Lifecycle admission rejects an owner absent from the durable role store, with no implicit owner creation or fallback."
+    },
+    {
+      "id": "authorized_role_preserved",
+      "description": "Valid durable role assignments continue to pass doctor and lifecycle admission checks."
+    },
+    {
+      "id": "negative_contract_coverage",
+      "description": "Focused positive and negative contract tests cover accepted, missing, stale, unauthorized-role, and unknown-owner cases."
+    },
+    {
+      "id": "upstream_scope_only",
+      "description": "The repair changes only the coordinator role-store runtime/test seam and does not alter downstream ASB vendor files or AR-1849-owned behavior."
+    }
+  ],
+  "definition_of_done": [
+    "The smallest upstream role-store authorization repair is implemented on an exact reviewed product head.",
+    "Native, role/lifecycle, schema, privacy, and required hosted checks pass.",
+    "Independent exact-head review confirms fail-closed doctor and lifecycle admission semantics.",
+    "The exact reviewed result is handed to downstream ASB for requalification."
+  ],
+  "inputs": [
+    {
+      "id": "coordinator_v074",
+      "description": "The immutable Coordinator v0.7.4 source and its role-store behavior."
+    },
+    {
+      "id": "asb_ar1852",
+      "description": "ASB AR-1852 role-store compatibility failure evidence, used only as downstream contract context."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "reviewed_repair",
+      "description": "A signed, independently reviewed upstream role-store authorization repair."
+    },
+    {
+      "id": "contract_evidence",
+      "description": "Concise positive and negative test evidence for doctor and lifecycle admission."
+    }
+  ],
+  "allowed_tools": ["git", "gh", "uv", "python", "tools/handoffctl"],
+  "forbidden_tools": ["local TLC execution", "ASB vendor-file edits"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {
+      "id": "exact_head_review",
+      "description": "Independent review covers the exact product commit and confirms the scoped role-store repair."
+    },
+    {
+      "id": "hosted_quality",
+      "description": "Required native and hosted quality checks pass on the exact reviewed head."
+    },
+    {
+      "id": "downstream_handoff",
+      "description": "ASB can consume the exact reviewed result and rerun AR-1852 without vendor mutation in this task."
+    }
+  ]
+}

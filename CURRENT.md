@@ -16,6 +16,14 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | - |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. | - |
+| P0 | [AR-0032](tasks/AR-0032.md): Coordinator v0.7.4 role-store authorization | Restore v0.7.4 durable role-store authorization semantics. | Promote after AR-0031; repair durable role-store authorization compatibility with v0.7.4 and prove rejection paths. | - |
+| P1 | [AR-0033](tasks/AR-0033.md): Coordinator v0.7.4 complexity-contract repair | Align the enforced workflow complexity contract with v0.7.4 modules. | Promote after AR-0031; reconcile the workflow complexity contract for the v0.7.4 adoption without weakening the budget. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |

@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**30 ARs tracked** across 4 active status categories.
+**33 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 3 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 26 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -58,6 +58,9 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
+        AR_0031["AR-0031 - Planned"]:::status_planned
+        AR_0032["AR-0032 - Planned"]:::status_planned
+        AR_0033["AR-0033 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -94,6 +97,9 @@ flowchart LR
     AR_0022 --> AR_0023
     AR_0023 --> AR_0024
     AR_0029 --> AR_0030
+    AR_0030 --> AR_0031
+    AR_0031 --> AR_0032
+    AR_0031 --> AR_0033
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -137,7 +143,10 @@ flowchart LR
 | [AR-0027](tasks/AR-0027.md) | None | None |
 | [AR-0028](tasks/AR-0028.md) | None | None |
 | [AR-0029](tasks/AR-0029.md) | None | [AR-0030](tasks/AR-0030.md) |
-| [AR-0030](tasks/AR-0030.md) | [AR-0029](tasks/AR-0029.md) | None |
+| [AR-0030](tasks/AR-0030.md) | [AR-0029](tasks/AR-0029.md) | [AR-0031](tasks/AR-0031.md) |
+| [AR-0031](tasks/AR-0031.md) | [AR-0030](tasks/AR-0030.md) | [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) |
+| [AR-0032](tasks/AR-0032.md) | [AR-0031](tasks/AR-0031.md) | None |
+| [AR-0033](tasks/AR-0033.md) | [AR-0031](tasks/AR-0031.md) | None |
 
 ## Complete AR inventory
 
@@ -153,6 +162,14 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | Unclaimed | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. |
+
+### Planned (3)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Unclaimed | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. |
+| P0 | [AR-0032](tasks/AR-0032.md): Coordinator v0.7.4 role-store authorization | Unclaimed | Restore v0.7.4 durable role-store authorization semantics. | Promote after AR-0031; repair durable role-store authorization compatibility with v0.7.4 and prove rejection paths. |
+| P1 | [AR-0033](tasks/AR-0033.md): Coordinator v0.7.4 complexity-contract repair | Unclaimed | Align the enforced workflow complexity contract with v0.7.4 modules. | Promote after AR-0031; reconcile the workflow complexity contract for the v0.7.4 adoption without weakening the budget. |
 
 ### Done (26)
 
