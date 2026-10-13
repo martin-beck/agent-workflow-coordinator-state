@@ -145,7 +145,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | ar0030-release-version-alignment-luna | Keep Coordinator runtime version metadata aligned with immutable release tags. | Publish PR from reviewed exact head 40054931 and await required hosted CI. |
+| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | ar0030-release-version-alignment-luna | Keep Coordinator runtime version metadata aligned with immutable release tags. | Downstream ASB should adopt immutable Coordinator release v0.7.4 at 2ea256d0c0bdcb9922c88e6778a104b33c0e47da. |
 
 ### Open (1)
 
