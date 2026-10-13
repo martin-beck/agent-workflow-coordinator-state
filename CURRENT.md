@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Obtain independent exact-head review, publish PR, and require exact-head hosted checks before merge. | ar0029-formal-admission-env-luna |
+| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Publish PR from exact head 2c16415164954dcf21a4b7ffe8a0a32e45232e91; wait for all required exact-head CI, then merge only when green. | ar0029-formal-admission-env-luna |
 
 ## Open
 
