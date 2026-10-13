@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1297 | `codex/ar0119-strict-role@60da24522767` | `main` | UNSTABLE | QUEUED:, QUEUED: | Restore strict role admission and doctor checks |
+| #1297 | `codex/ar0119-strict-role@60da24522767` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | Restore strict role admission and doctor checks |
 
 ## Recent workflows
 
