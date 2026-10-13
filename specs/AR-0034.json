@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0034.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "exact-legacy-match", "description": "Repair requires an exact expected revision, exact retained worktree key, open/unowned task, and empty branch."},
+    {"id": "minimal-clear", "description": "A successful repair clears only the stale worktree key and preserves all other task metadata and body."},
+    {"id": "fail-closed", "description": "Wrong key, stale revision, active owner/lease, non-empty branch, malformed identity, conflict, or replay is rejected without mutation."},
+    {"id": "downstream-unblock", "description": "The released coordinator can clear ASB AR-1826's retained legacy key so bind-worktree can bind the reviewed branch and worktree."}
+  ],
+  "definition_of_done": ["Reviewed signed-DCO upstream release with focused/full gates and durable exact-head evidence is available for ASB AR-1826."],
+  "inputs": [{"id": "asb-ar-1826", "description": "ASB AR-1826 durable blocker and exact stale metadata observation."}],
+  "outputs": [{"id": "legacy-repair-command", "description": "Narrow coordinator repair transition and documented contract."}],
+  "allowed_tools": ["python", "git", "tools/handoffctl"],
+  "forbidden_tools": ["arbitrary-metadata-editor", "history-rewrite", "force-push", "gate-weakening", "credential-output", "asb-product-mutation"],
+  "required_evidence_classes": ["mechanical", "contract-test", "quality"],
+  "gates": [{"id": "repair-contract", "description": "Focused positive/negative tests prove exact-match, minimal-clear, fail-closed, and replay behavior."}]
+}
