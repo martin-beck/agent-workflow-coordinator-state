@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. | ar0031-upstream-luna |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | PR #1291 exact head c9df706: focused suites and locked full unittest discovery green; obtain independent review, then merge only after terminal required CI and post-merge verification. | ar0031-upstream-luna |
 
 ## Open
 
