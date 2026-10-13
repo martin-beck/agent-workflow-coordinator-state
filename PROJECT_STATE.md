@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1287 | `codex/ar0029-formal-admission-env@31bd4a215928` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, IN_PROGRESS:, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(workflow): scope TLC admission paths per run |
+| #1287 | `codex/ar0029-formal-admission-env@31bd4a215928` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | fix(workflow): scope TLC admission paths per run |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38392939279 | `31bd4a215928` | pull_request | Verify | in_progress:- |
+| 38392939279 | `31bd4a215928` | pull_request | Verify | completed:failure |
 | 38392854740 | `2c1641516495` | push | Verify | completed:failure |
 | 38392853374 | `2c1641516495` | push | Formal | completed:failure |
 | 38375188001 | `53bf17e13563` | push | Formal | completed:success |
