@@ -3,12 +3,17 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | Keep Coordinator runtime version metadata aligned with immutable release tags. | Promote and claim the release metadata alignment repair, then run focused/full gates and exact-head review. | ar0030-release-version-alignment-luna |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | Keep Coordinator runtime version metadata aligned with immutable release tags. | Promote and claim the release metadata alignment repair, then run focused/full gates and exact-head review. | - |
 
 ## Blocked
 
