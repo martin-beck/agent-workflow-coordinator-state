@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0119 — Coordinator v0.7.8 strict-role restoration](tasks/AR-0119.md) | Restore strict role authorization after the Coordinator v0.7.8 regression. | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. | ar0119-strict-role-luna |
+| P0 | [AR-0119 — Coordinator v0.7.8 strict-role restoration](tasks/AR-0119.md) | Restore strict role authorization after the Coordinator v0.7.8 regression. | Merged b46d2b3 to Coordinator origin/main; exact-main Formal 38469028066 and Verify 38469028330 passed; post-merge focused role 8/8 and formal-evidence 21/21 pass; hand exact release to ASB AR-1852. | ar0119-strict-role-luna |
 
 ## Open
 

@@ -1590,7 +1590,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Restore strict role authorization after the Coordinator v0.7.8 regression. |
-| Next action | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. |
+| Next action | Merged b46d2b3 to Coordinator origin/main; exact-main Formal 38469028066 and Verify 38469028330 passed; post-merge focused role 8/8 and formal-evidence 21/21 pass; hand exact release to ASB AR-1852. |
 
 
 ## Dependency graph
@@ -2014,7 +2014,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | ar0119-strict-role-luna | Restore strict role authorization after the Coordinator v0.7.8 regression. | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. |
+| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | ar0119-strict-role-luna | Restore strict role authorization after the Coordinator v0.7.8 regression. | Merged b46d2b3 to Coordinator origin/main; exact-main Formal 38469028066 and Verify 38469028330 passed; post-merge focused role 8/8 and formal-evidence 21/21 pass; hand exact release to ASB AR-1852. |
 
 ### Open (9)
 
