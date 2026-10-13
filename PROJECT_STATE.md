@@ -10,7 +10,7 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1297 | `codex/ar0119-strict-role@93eec4e4d60f` | `main` | UNSTABLE | COMPLETED:SUCCESS, COMPLETED:SUCCESS, COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED | Restore strict role admission and doctor checks |
+| #1297 | `codex/ar0119-strict-role@2868c6d9e55f` | `main` | UNKNOWN | - | Restore strict role admission and doctor checks |
 
 ## Recent workflows
 
