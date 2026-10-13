@@ -145,7 +145,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | ar0030-release-version-alignment-luna | Keep Coordinator runtime version metadata aligned with immutable release tags. | Promote and claim the release metadata alignment repair, then run focused/full gates and exact-head review. |
+| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | ar0030-release-version-alignment-luna | Keep Coordinator runtime version metadata aligned with immutable release tags. | Independent exact-head review of e834a82+d8cd61a, then publish PR and await required CI. |
 
 ### Open (1)
 
