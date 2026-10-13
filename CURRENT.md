@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0119 — Coordinator v0.7.8 strict-role restoration](tasks/AR-0119.md) | Restore strict role authorization after the Coordinator v0.7.8 regression. | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. | ar0119-strict-role-luna |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |

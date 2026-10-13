@@ -5,11 +5,11 @@
 
 ## Portfolio overview
 
-**110 ARs tracked** across 4 active status categories.
+**111 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
@@ -24,17 +24,17 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 110 |
+| Tasks | 111 |
 | Parent tasks | 1 |
 | Child tasks | 8 |
-| Open or active | 9 |
+| Open or active | 10 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 110 | 9 | 0 | 90 |
+| unassigned | unassigned | 111 | 10 | 0 | 90 |
 
 ## Task drill-down
 
@@ -1578,6 +1578,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. |
 | Next action | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. |
 
+### AR-0119 — Coordinator v0.7.8 strict-role restoration
+
+| Field | Value |
+| --- | --- |
+| Status | in_progress |
+| Priority | P0 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | ar0119-strict-role-luna |
+| Parent | None |
+| Children | None |
+| Summary | Restore strict role authorization after the Coordinator v0.7.8 regression. |
+| Next action | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. |
+
 
 ## Dependency graph
 
@@ -1702,6 +1716,7 @@ flowchart LR
         AR_0108["AR-0108 - Planned"]:::status_planned
         AR_0109["AR-0109 - Planned"]:::status_planned
         AR_0110["AR-0110 - Planned"]:::status_planned
+        AR_0119["AR-0119 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -1754,6 +1769,7 @@ flowchart LR
     AR_0032 --> AR_0033
     AR_0032 --> AR_0035
     AR_0032 --> AR_0037
+    AR_0032 --> AR_0119
     AR_0033 --> AR_0035
     AR_0033 --> AR_0037
     AR_0035 --> AR_0036
@@ -1911,7 +1927,7 @@ flowchart LR
 | [AR-0029](tasks/AR-0029.md) | [AR-0028](tasks/AR-0028.md) | None |
 | [AR-0030](tasks/AR-0030.md) | [AR-0001](tasks/AR-0001.md) | None |
 | [AR-0031](tasks/AR-0031.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | None |
-| [AR-0032](tasks/AR-0032.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0033](tasks/AR-0033.md), [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
+| [AR-0032](tasks/AR-0032.md) | [AR-0007](tasks/AR-0007.md), [AR-0008](tasks/AR-0008.md) | [AR-0033](tasks/AR-0033.md), [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md), [AR-0119](tasks/AR-0119.md) |
 | [AR-0033](tasks/AR-0033.md) | [AR-0032](tasks/AR-0032.md) | [AR-0035](tasks/AR-0035.md), [AR-0037](tasks/AR-0037.md) |
 | [AR-0034](tasks/AR-0034.md) | [AR-0007](tasks/AR-0007.md) | None |
 | [AR-0035](tasks/AR-0035.md) | [AR-0032](tasks/AR-0032.md), [AR-0033](tasks/AR-0033.md) | [AR-0036](tasks/AR-0036.md), [AR-0038](tasks/AR-0038.md) |
@@ -1990,8 +2006,15 @@ flowchart LR
 | [AR-0108](tasks/AR-0108.md) | [AR-0107](tasks/AR-0107.md) | [AR-0109](tasks/AR-0109.md) |
 | [AR-0109](tasks/AR-0109.md) | [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
 | [AR-0110](tasks/AR-0110.md) | [AR-0109](tasks/AR-0109.md) | None |
+| [AR-0119](tasks/AR-0119.md) | [AR-0032](tasks/AR-0032.md) | None |
 
 ## Complete AR inventory
+
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | ar0119-strict-role-luna | Restore strict role authorization after the Coordinator v0.7.8 regression. | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. |
 
 ### Open (9)
 
