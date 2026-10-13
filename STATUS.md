@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**111 ARs tracked** across 5 active status categories.
+**111 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 9 |
+| **In progress** | Claimed work with a live lease | 0 |
+| **Open** | Dependency-ready and available to claim | 10 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1582,11 +1582,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | open |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | ar0119-strict-role-luna |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Restore strict role authorization after the Coordinator v0.7.8 regression. |
@@ -1716,7 +1716,7 @@ flowchart LR
         AR_0108["AR-0108 - Planned"]:::status_planned
         AR_0109["AR-0109 - Planned"]:::status_planned
         AR_0110["AR-0110 - Planned"]:::status_planned
-        AR_0119["AR-0119 - In progress"]:::status_in_progress
+        AR_0119["AR-0119 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2010,13 +2010,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | ar0119-strict-role-luna | Restore strict role authorization after the Coordinator v0.7.8 regression. | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. |
-
-### Open (9)
+### Open (10)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2029,6 +2023,7 @@ flowchart LR
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
+| P0 | [AR-0119](tasks/AR-0119.md): Coordinator v0.7.8 strict-role restoration | Unclaimed | Restore strict role authorization after the Coordinator v0.7.8 regression. | Claim when dependency-ready; reproduce the v0.7.8 strict-role regression on a clean Coordinator product head and implement the smallest fail-closed admission and doctor repair. |
 
 ### Planned (10)
 
