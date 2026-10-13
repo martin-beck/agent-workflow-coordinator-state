@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1297 | `codex/ar0119-strict-role@60da24522767` | `main` | UNSTABLE | IN_PROGRESS:, QUEUED: | Restore strict role admission and doctor checks |
+| #1297 | `codex/ar0119-strict-role@60da24522767` | `main` | UNSTABLE | IN_PROGRESS:, COMPLETED:SUCCESS | Restore strict role admission and doctor checks |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38467463005 | `60da24522767` | pull_request | Verify | queued:- |
+| 38467463005 | `60da24522767` | pull_request | Verify | in_progress:- |
 | 38445459917 | `3dda5d2d021b` | push | Formal | completed:success |
 | 38445459677 | `3dda5d2d021b` | push | Verify | completed:success |
 | 38444988246 | `eee760513969` | pull_request | Verify | completed:success |
