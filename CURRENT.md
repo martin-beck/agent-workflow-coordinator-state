@@ -16,6 +16,12 @@ Never edit this file directly.
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. | - |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. | - |
 
+## Planned
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0029](tasks/AR-0029.md): Formal admission environment scope repair | Keep all formal workflow commands inside the runner-private TLC admission boundary. | Promote and claim the workflow-scoped private TLC admission environment repair, then run focused/full gates and exact-head review. | - |
+
 ## Done
 
 | Priority | Task | Summary | Next action | Owner |
