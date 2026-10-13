@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**29 ARs tracked** across 4 active status categories.
+**30 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
-| **Planned** | Defined work awaiting promotion or dependencies | 0 |
+| **Planned** | Defined work awaiting promotion or dependencies | 1 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 25 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -57,6 +57,7 @@ flowchart LR
         AR_0027["AR-0027 - Done"]:::status_done
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
+        AR_0030["AR-0030 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -92,6 +93,7 @@ flowchart LR
     AR_0019 --> AR_0020
     AR_0022 --> AR_0023
     AR_0023 --> AR_0024
+    AR_0029 --> AR_0030
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -134,7 +136,8 @@ flowchart LR
 | [AR-0026](tasks/AR-0026.md) | None | None |
 | [AR-0027](tasks/AR-0027.md) | None | None |
 | [AR-0028](tasks/AR-0028.md) | None | None |
-| [AR-0029](tasks/AR-0029.md) | None | None |
+| [AR-0029](tasks/AR-0029.md) | None | [AR-0030](tasks/AR-0030.md) |
+| [AR-0030](tasks/AR-0030.md) | [AR-0029](tasks/AR-0029.md) | None |
 
 ## Complete AR inventory
 
@@ -150,6 +153,12 @@ flowchart LR
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | Unclaimed | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. |
+
+### Planned (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | Unclaimed | Keep Coordinator runtime version metadata aligned with immutable release tags. | Promote and claim the release metadata alignment repair, then run focused/full gates and exact-head review. |
 
 ### Done (25)
 
