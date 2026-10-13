@@ -14,6 +14,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
+| P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. | - |
 
 ## Blocked
 
@@ -27,7 +28,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0032](tasks/AR-0032.md): Coordinator v0.7.4 role-store authorization | Restore v0.7.4 durable role-store authorization semantics. | Promote after AR-0031; repair durable role-store authorization compatibility with v0.7.4 and prove rejection paths. | - |
-| P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. | - |
 | P1 | [AR-0033](tasks/AR-0033.md): Coordinator v0.7.4 complexity-contract repair | Align the enforced workflow complexity contract with v0.7.4 modules. | Promote after AR-0031; reconcile the workflow complexity contract for the v0.7.4 adoption without weakening the budget. | - |
 
 ## Done
