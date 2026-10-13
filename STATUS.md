@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 1 |
+| **Open** | Dependency-ready and available to claim | 2 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
-| **Planned** | Defined work awaiting promotion or dependencies | 3 |
+| **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 26 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -58,7 +58,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
-        AR_0031["AR-0031 - Planned"]:::status_planned
+        AR_0031["AR-0031 - Open"]:::status_open
         AR_0032["AR-0032 - Planned"]:::status_planned
         AR_0033["AR-0033 - Planned"]:::status_planned
     end
@@ -150,11 +150,12 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (1)
+### Open (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Unclaimed | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. |
 
 ### Blocked (2)
 
@@ -163,11 +164,10 @@ flowchart LR
 | P0 | [AR-0012](tasks/AR-0012.md): Durable upgrade barrier and SQLite write fencing | Unclaimed | Next17 formal seam implemented locally: terminal contract now requires explicit FreshRuntimeRead model branch; signed commit 1bea71c, focused gates green. | Run full discovery/formal evidence for local next17 commit 1bea71c, binding FreshRuntimeRead model branch; publish only after green gates. Mutation remains disabled. |
 | P0 | [AR-0024](tasks/AR-0024.md): Vendor snapshot atomicity and self-consistency | Unclaimed | The v0.3.50 source snapshot is internally self-consistent; the observed failure is downstream ASB allowlist/overlay and ASB-owned API compatibility, not an upstream atomicity defect. | Remain blocked while ASB AR-1539 owns downstream compatibility. Do not publish another coordinator release or alter immutable vendor files for a consumer-specific overlay. |
 
-### Planned (3)
+### Planned (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Unclaimed | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. |
 | P0 | [AR-0032](tasks/AR-0032.md): Coordinator v0.7.4 role-store authorization | Unclaimed | Restore v0.7.4 durable role-store authorization semantics. | Promote after AR-0031; repair durable role-store authorization compatibility with v0.7.4 and prove rejection paths. |
 | P1 | [AR-0033](tasks/AR-0033.md): Coordinator v0.7.4 complexity-contract repair | Unclaimed | Align the enforced workflow complexity contract with v0.7.4 modules. | Promote after AR-0031; reconcile the workflow complexity contract for the v0.7.4 adoption without weakening the budget. |
 
