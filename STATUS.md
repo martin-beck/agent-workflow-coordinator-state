@@ -156,7 +156,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | ar0031-upstream-luna | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | PR #1291 exact head c9df706: focused suites and locked full unittest discovery green; obtain independent review, then merge only after terminal required CI and post-merge verification. |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | ar0031-upstream-luna | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Local signed integration merge 1fd250b3 complete; post-merge focused suite 3/3 green. Record independent exact-head review and publish durable completion evidence, then release AR-0031. |
 | P0 | [AR-0034](tasks/AR-0034.md): Fail-closed legacy worktree binding repair | ar0034-legacy-repair-luna | Provide a coordinator-mediated repair for stale partial legacy worktree metadata. | Promote and claim; add a reviewed, fail-closed coordinator command to clear only the exact stale legacy worktree key when branch is empty, then publish the repaired upstream release for ASB adoption. |
 
 ### Open (1)
