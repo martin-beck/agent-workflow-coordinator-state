@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | Keep Coordinator runtime version metadata aligned with immutable release tags. | Fresh independent exact-head review at 40054931, then publish PR. | ar0030-release-version-alignment-luna |
+| P0 | [AR-0030](tasks/AR-0030.md): Release metadata and tag alignment | Keep Coordinator runtime version metadata aligned with immutable release tags. | Publish PR from reviewed exact head 40054931 and await required hosted CI. | ar0030-release-version-alignment-luna |
 
 ## Open
 
