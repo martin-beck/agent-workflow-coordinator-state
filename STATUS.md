@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**33 ARs tracked** across 5 active status categories.
+**33 ARs tracked** across 6 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 1 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 2 |
 | **Future** | Deferred roadmap work | 0 |
@@ -58,7 +58,7 @@ flowchart LR
         AR_0028["AR-0028 - Done"]:::status_done
         AR_0029["AR-0029 - Done"]:::status_done
         AR_0030["AR-0030 - Done"]:::status_done
-        AR_0031["AR-0031 - Open"]:::status_open
+        AR_0031["AR-0031 - In progress"]:::status_in_progress
         AR_0032["AR-0032 - Planned"]:::status_planned
         AR_0033["AR-0033 - Planned"]:::status_planned
     end
@@ -150,12 +150,17 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (2)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | ar0031-upstream-luna | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. |
+
+### Open (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | Unclaimed | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. |
-| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Unclaimed | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. |
 
 ### Blocked (2)
 

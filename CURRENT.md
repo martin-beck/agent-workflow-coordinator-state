@@ -3,12 +3,17 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. | ar0031-upstream-luna |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P0 | [AR-0009](tasks/AR-0009.md): Release integration and first upgrade | PR #529 merged as 7f50b294; exact Verify 35197634079 and post-merge Verify 35198022149 succeeded. | Release completed AR-0009 and select next dependency-safe P0/P1 slice. | - |
-| P0 | [AR-0031](tasks/AR-0031.md): Coordinator v0.7.4 fixture/error compatibility | Restore v0.7.4 fixture and error contracts exposed by downstream adoption. | Promote and claim after AR-0030; align v0.7.4 fixture and error-message contracts without changing runtime authority semantics. | - |
 
 ## Blocked
 
