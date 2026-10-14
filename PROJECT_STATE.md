@@ -10,13 +10,17 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1307 | `codex/ar0092-envelope-replacement@dab4f8c3f31a` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(envelope): add fail-closed successor replacement |
+| #1307 | `codex/ar0092-envelope-replacement@4a205d8a5675` | `main` | UNSTABLE | QUEUED:, QUEUED: | feat(envelope): add fail-closed successor replacement |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38564213420 | `dab4f8c3f31a` | pull_request | Verify | queued:- |
+| 38565321880 | `4a205d8a5675` | pull_request | Verify | queued:- |
+| 38564937688 | `4587e7068672` | pull_request | Verify | completed:failure |
+| 38564630116 | `34e4e485f3c7` | pull_request | Verify | completed:failure |
+| 38564267451 | `9433f0cadf50` | pull_request | Verify | completed:failure |
+| 38564213420 | `dab4f8c3f31a` | pull_request | Verify | completed:failure |
 | 38564109198 | `a2b3e8ed6020` | pull_request | Verify | completed:failure |
 | 38563973754 | `4b2ae5fe97cd` | pull_request | Verify | completed:failure |
 | 38535929444 | `9d56254b5382` | push | Verify | completed:failure |
@@ -24,7 +28,3 @@ Generated from local Git and GitHub. Do not edit.
 | 38535878447 | `8247f771051b` | pull_request | Verify | completed:failure |
 | 38535856361 | `34cc668b6e7d` | pull_request | Verify | completed:cancelled |
 | 38535778862 | `cd620d2a6b58` | pull_request | Verify | completed:failure |
-| 38535686480 | `81e46099a5bb` | pull_request | Verify | completed:failure |
-| 38535606426 | `508b33219e2d` | pull_request | Verify | completed:failure |
-| 38535511426 | `5ea38d69bef3` | pull_request | Verify | completed:failure |
-| 38524059986 | `6f7cb5eeb411` | push | Verify | completed:success |
