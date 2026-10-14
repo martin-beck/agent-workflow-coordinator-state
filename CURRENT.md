@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0128 — Repair stale ledger](tasks/AR-0128.md) | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. | Implement the bounded scope and record local acceptance evidence. | codex-ar0128-predicate-ledger-successor |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
