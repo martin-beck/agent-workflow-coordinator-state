@@ -10,13 +10,13 @@ Generated from local Git and GitHub. Do not edit.
 
 | PR | Head | Base | Merge | Checks | Title |
 | --- | --- | --- | --- | --- | --- |
-| #1307 | `codex/ar0092-envelope-replacement@a2b3e8ed6020` | `main` | UNSTABLE | IN_PROGRESS:, IN_PROGRESS: | feat(envelope): add fail-closed successor replacement |
+| #1307 | `codex/ar0092-envelope-replacement@a2b3e8ed6020` | `main` | UNSTABLE | COMPLETED:FAILURE, COMPLETED:SUCCESS, COMPLETED:SKIPPED, COMPLETED:SKIPPED, COMPLETED:SKIPPED | feat(envelope): add fail-closed successor replacement |
 
 ## Recent workflows
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38564109198 | `a2b3e8ed6020` | pull_request | Verify | in_progress:- |
+| 38564109198 | `a2b3e8ed6020` | pull_request | Verify | completed:failure |
 | 38563973754 | `4b2ae5fe97cd` | pull_request | Verify | completed:failure |
 | 38535929444 | `9d56254b5382` | push | Verify | completed:failure |
 | 38535929399 | `9d56254b5382` | push | Formal | completed:success |
