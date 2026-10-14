@@ -9,12 +9,12 @@
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 2 |
+| **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 97 |
+| **Done** | Accepted, integrated, and durably verified | 98 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 118 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
-| Open or active | 10 |
+| Open or active | 9 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 118 | 10 | 0 | 97 |
+| unassigned | unassigned | 118 | 9 | 0 | 98 |
 
 ## Task drill-down
 
@@ -1680,11 +1680,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-ar0124-closeout-20261014 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence. |
@@ -1821,7 +1821,7 @@ flowchart LR
         AR_0121["AR-0121 - Done"]:::status_done
         AR_0122["AR-0122 - Done"]:::status_done
         AR_0123["AR-0123 - Done"]:::status_done
-        AR_0124["AR-0124 - In progress"]:::status_in_progress
+        AR_0124["AR-0124 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2123,12 +2123,11 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (2)
+### In progress (1)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0120](tasks/AR-0120.md): Repair multi-root envelope scope | codex-ar0120-multiroot-20261014 | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. |
-| P1 | [AR-0124](tasks/AR-0124.md): Refresh reviewed code digest | codex-ar0124-closeout-20261014 | Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Open (8)
 
@@ -2158,7 +2157,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (97)
+### Done (98)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2259,6 +2258,7 @@ flowchart LR
 | P1 | [AR-0121](tasks/AR-0121.md): Bounded multi-root envelope adapter | Unclaimed | Add the narrow product-root adapter needed to interpret validated product-root and state-root contract inputs without authorizing paths outside the bound root. Do not edit downstream consumers, vendor snapshots, or immutable AR-0120 envelope/spec files. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0122](tasks/AR-0122.md): Repair bound execution cwd | Unclaimed | Repair runtime cwd routing for bound product-worktree execution and add focused offline tests. Do not weaken envelope, publication, lifecycle, identity, or privacy gates. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0123](tasks/AR-0123.md): Complete envelope test scope | Unclaimed | Add tools/execution_envelope.py to the concrete product-root read scope and focused import tests. Do not widen authorization beyond declared product files. | Implement the bounded scope and record local acceptance evidence. |
+| P1 | [AR-0124](tasks/AR-0124.md): Refresh reviewed code digest | Unclaimed | Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Superseded (1)
 
