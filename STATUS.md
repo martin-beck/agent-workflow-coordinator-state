@@ -5,7 +5,7 @@
 
 ## Portfolio overview
 
-**120 ARs tracked** across 5 active status categories.
+**121 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
@@ -14,7 +14,7 @@
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 98 |
+| **Done** | Accepted, integrated, and durably verified | 99 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 120 |
+| Tasks | 121 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
 | Open or active | 9 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 120 | 9 | 2 | 98 |
+| unassigned | unassigned | 121 | 9 | 2 | 99 |
 
 ## Task drill-down
 
@@ -1718,6 +1718,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. |
 | Next action | Implement the bounded scope and record local acceptance evidence. |
 
+### AR-0127 — Publish predicate ledger release
+
+| Field | Value |
+| --- | --- |
+| Status | done |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Adopt merged Coordinator predicate-ledger repair from exact main, run documented release metadata and non-formal gates, publish the next immutable release, and reconcile the state vendor snapshot only after exact tag and commit identity are verified. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
 
 ## Dependency graph
 
@@ -1852,6 +1866,7 @@ flowchart LR
         AR_0124["AR-0124 - Done"]:::status_done
         AR_0125["AR-0125 - Blocked"]:::status_blocked
         AR_0126["AR-0126 - Blocked"]:::status_blocked
+        AR_0127["AR-0127 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2152,6 +2167,7 @@ flowchart LR
 | [AR-0124](tasks/AR-0124.md) | None | None |
 | [AR-0125](tasks/AR-0125.md) | None | None |
 | [AR-0126](tasks/AR-0126.md) | None | None |
+| [AR-0127](tasks/AR-0127.md) | None | None |
 
 ## Complete AR inventory
 
@@ -2191,7 +2207,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (98)
+### Done (99)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2293,6 +2309,7 @@ flowchart LR
 | P1 | [AR-0122](tasks/AR-0122.md): Repair bound execution cwd | Unclaimed | Repair runtime cwd routing for bound product-worktree execution and add focused offline tests. Do not weaken envelope, publication, lifecycle, identity, or privacy gates. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0123](tasks/AR-0123.md): Complete envelope test scope | Unclaimed | Add tools/execution_envelope.py to the concrete product-root read scope and focused import tests. Do not widen authorization beyond declared product files. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0124](tasks/AR-0124.md): Refresh reviewed code digest | Unclaimed | Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence. | Implement the bounded scope and record local acceptance evidence. |
+| P1 | [AR-0127](tasks/AR-0127.md): Publish predicate ledger release | Unclaimed | Adopt merged Coordinator predicate-ledger repair from exact main, run documented release metadata and non-formal gates, publish the next immutable release, and reconcile the state vendor snapshot only after exact tag and commit identity are verified. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Superseded (1)
 

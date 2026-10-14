@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0127",
+  "issue": {
+    "number": 1315,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1315"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "The exact merged repair commit passes all applicable documented non-formal release gates; the next immutable release tag contains repair-predicate-ledger and exact metadata identity; the state vendor snapshot is reconciled to that tag; and live doctor passes without weakening blocked AR-0125 or AR-0126 history.",
+      "depends_on": [],
+      "id": "AR-0127",
+      "ownership": "Coordinator release publication and state adoption of the merged predicate-ledger repair only; preserve fail-closed acceptance evidence, immutable tags, generated projections, and prior AR history.",
+      "scope": "Adopt merged Coordinator predicate-ledger repair from exact main, run documented release metadata and non-formal gates, publish the next immutable release, and reconcile the state vendor snapshot only after exact tag and commit identity are verified.",
+      "short_title": "Publish predicate ledger release"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
