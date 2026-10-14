@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0092 — Task Execution Envelopes](tasks/AR-0092.md) | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Implement a coordinator-native, exact-revision successor-envelope replacement transition for already-bound envelopes; preserve immutable old evidence, reject reservations/stale owners/scope widening, and add schema, positive/negative tests, and vendor-release adoption evidence. | codex-ar0092-envelope-replacement-20261014 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |

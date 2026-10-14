@@ -5,16 +5,16 @@
 
 ## Portfolio overview
 
-**113 ARs tracked** across 5 active status categories.
+**113 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
-| **Done** | Accepted, integrated, and durably verified | 93 |
+| **Done** | Accepted, integrated, and durably verified | 94 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
 | **Superseded** | Replaced by another AR | 1 |
 
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 113 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
-| Open or active | 9 |
+| Open or active | 8 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 113 | 9 | 0 | 93 |
+| unassigned | unassigned | 113 | 8 | 0 | 94 |
 
 ## Task drill-down
 
@@ -1316,11 +1316,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | done |
 | Priority | P0 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-ar0092-envelope-replacement-20261014 |
+| Owner | Unclaimed |
 | Parent | AR-0091 |
 | Children | None |
 | Summary | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. |
@@ -1722,7 +1722,7 @@ flowchart LR
         AR_0089["AR-0089 - Done"]:::status_done
         AR_0090["AR-0090 - Done"]:::status_done
         AR_0091["AR-0091 - Open"]:::status_open
-        AR_0092["AR-0092 - In progress"]:::status_in_progress
+        AR_0092["AR-0092 - Done"]:::status_done
         AR_0093["AR-0093 - Planned"]:::status_planned
         AR_0094["AR-0094 - Planned"]:::status_planned
         AR_0095["AR-0095 - Planned"]:::status_planned
@@ -2043,12 +2043,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | codex-ar0092-envelope-replacement-20261014 | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Implement a coordinator-native, exact-revision successor-envelope replacement transition for already-bound envelopes; preserve immutable old evidence, reject reservations/stale owners/scope widening, and add schema, positive/negative tests, and vendor-release adoption evidence. |
-
 ### Open (8)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2077,7 +2071,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 
-### Done (93)
+### Done (94)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2149,6 +2143,7 @@ flowchart LR
 | P0 | [AR-0087](tasks/AR-0087.md): Project-bound task-spec policy and privacy-safe vendor fixtures | Unclaimed | Allow downstream projects to declare a strict additive task-spec evidence vocabulary without patching vendored Coordinator bytes, and keep Coordinator fixtures privacy-scanner safe. | Terminal: independently approved exact reviewed tree merged with a signed+DCO local merge; exact-main hosted Verify and Formal succeeded. Release done and reconcile/live-doctor the canonical state. |
 | P0 | [AR-0088](tasks/AR-0088.md): Supported active-task worktree binding | Unclaimed | Allow an active legacy task with empty branch/worktree metadata to bind one isolated product worktree through a validated Coordinator mutation instead of manual task-file edits or unfenced git -C execution. | Merge the verified partial-key binding repair, then vendor it and bind AR-0101 through the supported handoffctl transition. |
 | P0 | [AR-0089](tasks/AR-0089.md): Restore Coordinator-state vendor integrity | Unclaimed | Repair the Coordinator state repository whose tracked vendored runtime and tests were changed directly after the recorded vendor snapshot, leaving coordinator.vendor.json inconsistent with authoritative bytes. | Synchronize the official tagged Coordinator v0.5.0 vendor snapshot so legacy tasks gain bind-spec, then bind AR-0089 to a reviewed task spec, record acceptance, and re-run exact-main integrity checks before release. |
+| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Implement a coordinator-native, exact-revision successor-envelope replacement transition for already-bound envelopes; preserve immutable old evidence, reject reservations/stale owners/scope widening, and add schema, positive/negative tests, and vendor-release adoption evidence. |
 | P0 | [AR-0100](tasks/AR-0100.md): Bounded Formal Verification Tier Policy | Unclaimed | Define truthful, minute-scale formal verification tiers and separate them from exploratory stress work. | PR #1246 applies the current-main-native minute-scale formal tier; await exact-head CI, merge, post-merge verification, and state reconciliation. |
 | P0 | [AR-0101](tasks/AR-0101.md): Reduced Liveness Model and Coverage Mapping | Unclaimed | Make liveness verification finish in minutes by exhaustively checking a documented reduced abstraction. | Implement the reduced liveness abstraction and its explicit coverage argument. |
 | P0 | [AR-0102](tasks/AR-0102.md): Budgeted Formal Runner Storage and Resource Handling | Unclaimed | Prevent disk and resource exhaustion from stalling formal work while preserving concise diagnostics. | Add budgeted TLC execution with isolated storage and typed resource receipts. |
