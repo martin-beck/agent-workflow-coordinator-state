@@ -1,15 +1,15 @@
 {
   "files": {
     "docs/EXTENDING.md": {
-      "sha256": "282e7d66f0ce43d4f96f4b15754182b9e4bc139ffca659df9b3119c4ba40fb61",
+      "sha256": "31a853efa408c28076aa0debbaf4bc667650dfe0a95900f9c04a405ad7711b63",
       "source": "docs/EXTENDING.md"
     },
     "docs/PUBLIC_CONTRACTS.md": {
-      "sha256": "790ae4d8be6e50a31a886e9e4f4f4fb338a71b04bb3fe91375c33b6df0892312",
+      "sha256": "3f4fd15fbcbf9b23a381fc4ae5a4e51670228c6a880a9f4c3928f149724e2d2d",
       "source": "docs/PUBLIC_CONTRACTS.md"
     },
     "docs/agent-workflow-coordinator.md": {
-      "sha256": "f2df9932a8538fed2b9ab03b27ec792026d6a1d4c1fae4e6f82878428cd9dcf0",
+      "sha256": "a17b571673988b01347e09dfb2e7374b9e1a964c980461e72d0c823c1aa4c9ff",
       "source": "docs/PROJECT_GUIDE.md"
     },
     "examples/roles/role-registry.json": {
@@ -33,7 +33,7 @@
       "source": "examples/task-specs/hostile-unknown-evidence.json"
     },
     "formal/evidence.json": {
-      "sha256": "106fbf75aef7e881f454101d374eef6782ef4f27c542a03e2570b6362262acb3",
+      "sha256": "e0ab51f7ee5c348a66d4755413cc6f9f8cbe23a54c21812b72a4d5611e291f45",
       "source": "formal/evidence.json"
     },
     "formal/handoffctl/Handoffctl.cfg": {
@@ -41,8 +41,24 @@
       "source": "formal/handoffctl/Handoffctl.cfg"
     },
     "formal/handoffctl/Handoffctl.tla": {
-      "sha256": "4a2d141e3bb107688b452b707f2996fa6a55fa743b6561b23f6f45615dedd5dd",
+      "sha256": "e81dbcffcc44d47b75e776bec1863c8c48e216a0ec944864ac597b5054019fb6",
       "source": "formal/handoffctl/Handoffctl.tla"
+    },
+    "formal/handoffctl/HandoffctlAssumptions.cfg": {
+      "sha256": "ed9837f17c4ae36d418bc0d1954816c1fcdc37dc855566e9cd43a6ee031d9741",
+      "source": "formal/handoffctl/HandoffctlAssumptions.cfg"
+    },
+    "formal/handoffctl/HandoffctlAssumptions.tla": {
+      "sha256": "043e0497aa3016f5ac82f7578e95cce70b8c039c82841a614762247ce2d3fb0f",
+      "source": "formal/handoffctl/HandoffctlAssumptions.tla"
+    },
+    "formal/handoffctl/HandoffctlAutonomyLimits.cfg": {
+      "sha256": "3069f5a6de4f0e96f1ac84d09adf5febe4dc4b683827f3e9c5afcc90c6faf294",
+      "source": "formal/handoffctl/HandoffctlAutonomyLimits.cfg"
+    },
+    "formal/handoffctl/HandoffctlAutonomyLimits.tla": {
+      "sha256": "bb01f93cc25ffa3180afb7a2ba5301f906d2612d054fdac29d7f9c7cb5a5fa96",
+      "source": "formal/handoffctl/HandoffctlAutonomyLimits.tla"
     },
     "formal/handoffctl/HandoffctlBinding.cfg": {
       "sha256": "5bbbcc739ee5aa66591bbedc09f814ef2e04f9d8848af943a6e40ffa709882d1",
@@ -76,6 +92,14 @@
       "sha256": "7c9cc7f82d7c30a5351148eb02b20ae5b092406c386b70880315d425c98e982a",
       "source": "formal/handoffctl/HandoffctlObservation.tla"
     },
+    "formal/handoffctl/HandoffctlPredicateLedger.cfg": {
+      "sha256": "27ed3c0adfa6214ac61b43e588178f0d46fa0e9499006480185830bddcadcb37",
+      "source": "formal/handoffctl/HandoffctlPredicateLedger.cfg"
+    },
+    "formal/handoffctl/HandoffctlPredicateLedger.tla": {
+      "sha256": "ee86015eee4f21fe2835c854039ca80d60ba2d05c17b8ca52d73b451cc2955ce",
+      "source": "formal/handoffctl/HandoffctlPredicateLedger.tla"
+    },
     "formal/handoffctl/HandoffctlPublication.cfg": {
       "sha256": "77b18d2c74b8929f125d9945279abf564b4ca851c2ec2644ce9f58b4e980b7d0",
       "source": "formal/handoffctl/HandoffctlPublication.cfg"
@@ -108,12 +132,20 @@
       "sha256": "622f5e6f3e7768914e5ab8097894fe60bb27c022d24ad734db2a688a91b003bb",
       "source": "formal/handoffctl/HandoffctlRecovery.tla"
     },
+    "formal/handoffctl/HandoffctlRetryCircuit.cfg": {
+      "sha256": "ebe965f24912020f6264cb63959a054f53148356e542c9f1f1e47820b2f6b5bd",
+      "source": "formal/handoffctl/HandoffctlRetryCircuit.cfg"
+    },
+    "formal/handoffctl/HandoffctlRetryCircuit.tla": {
+      "sha256": "320992a7e21a56dbae20cb3e30a6f9cb248bf3be952d572c04bf586ecfdba145",
+      "source": "formal/handoffctl/HandoffctlRetryCircuit.tla"
+    },
     "formal/handoffctl/HandoffctlRun.cfg": {
-      "sha256": "52036e211235cb09ee66128784ec9a52358f9d633bc81c2b74ba5edadba6d7f5",
+      "sha256": "49a9b66adc6790b4bc03fd6d4d383f59e67a4122ea478e1bab67754462a711d2",
       "source": "formal/handoffctl/HandoffctlRun.cfg"
     },
     "formal/handoffctl/HandoffctlRun.tla": {
-      "sha256": "6dc618758cc2fbeb7fad10edbca3039ab3f86496a92428e96820d6beb96f5d46",
+      "sha256": "edd2ddc0369691b7568e2975b9aca78a2d57279c0be80065e12c1297614e2ef4",
       "source": "formal/handoffctl/HandoffctlRun.tla"
     },
     "formal/handoffctl/HandoffctlStorage.cfg": {
@@ -125,7 +157,7 @@
       "source": "formal/handoffctl/HandoffctlStorage.tla"
     },
     "formal/handoffctl/LIFECYCLE_CORRESPONDENCE.md": {
-      "sha256": "71e649a11bc4815bc3213cfdd69f3a3dd91506892d96d160951b5694e95cf97c",
+      "sha256": "791c2a1939d06903746ab3a004f7917df8752ea5afb23d844153e902225c0a44",
       "source": "formal/handoffctl/LIFECYCLE_CORRESPONDENCE.md"
     },
     "formal/handoffctl/LIVENESS_COVERAGE.json": {
@@ -137,19 +169,19 @@
       "source": "formal/handoffctl/OBSERVATION_CORRESPONDENCE.md"
     },
     "formal/handoffctl/README.md": {
-      "sha256": "5867f26b2b643081105504480c09cd2dc8cfd359456ec6f1f6198281d09aa273",
+      "sha256": "677aec0873108906d8b3491c8d87bd761f284018febe6ca8750756886f62dca5",
       "source": "formal/handoffctl/README.md"
     },
     "formal/handoffctl/attest.py": {
-      "sha256": "8b40ac1784917c31cf0cd0c228b1dac5f72312b0a22f8eb029f7d45975e0af05",
+      "sha256": "fb8ff762dcbbbe7812e4eec7c016ad46d0efc7d81a1e2ce2e48b9fe09434d724",
       "source": "formal/handoffctl/attest.py"
     },
     "formal/handoffctl/slices.py": {
-      "sha256": "47ad2ff30a9446add5db9ad41e25e6b68bf7d15706d7c49b3aa0c76ba9ae8870",
+      "sha256": "ffc0e1777349ac55157e6455be2d0c9739a62588c312397dfb72cfee7cdb53cb",
       "source": "formal/handoffctl/slices.py"
     },
     "formal/handoffctl/verify.sh": {
-      "sha256": "14c281385a9c84cf6a57ee17db59441b022207b1660c934858f71f47c3a445f4",
+      "sha256": "23fc8cb1d0a5ad0dde8d92dab38c8c705c3d4cac1a33576b8a9e8888629e40ab",
       "source": "formal/handoffctl/verify.sh"
     },
     "formal/oracle/OracleInteractionGates.cfg": {
@@ -161,8 +193,20 @@
       "source": "formal/oracle/OracleInteractionGates.tla"
     },
     "formal/tier-evidence.json": {
-      "sha256": "c606cc9a041e266eb0911582a6c3e18b396ff0c6509965a689b0d7d7f2f5768e",
+      "sha256": "ad5ab6e4dfea217197ee87a62d75a4e9c121a7dd49db36fad6c95fe1f12d0e06",
       "source": "formal/tier-evidence.json"
+    },
+    "schema/autonomy-limits-policy.schema.json": {
+      "sha256": "07461288618e78f0552c093f19460bb1a130724a7738ef3949d6b67da2662cf9",
+      "source": "schema/autonomy-limits-policy.schema.json"
+    },
+    "schema/campaign-projection.schema.json": {
+      "sha256": "cb6d844f20b5d1956c8fd45e6a586c0b0b41711dbb04dcc4daae57bf033f765b",
+      "source": "schema/campaign-projection.schema.json"
+    },
+    "schema/execution-envelope.schema.json": {
+      "sha256": "21b67400ee11969c81b4eb4b7126f51450e00ed10d2ebb6ef2969c2f60adf6d0",
+      "source": "schema/execution-envelope.schema.json"
     },
     "schema/handoffctl-backend-config.schema.json": {
       "sha256": "3a1d3b591b31bf6ede7a562433fe90886f5a0a16d4fcff2e5dab30de29558251",
@@ -196,10 +240,6 @@
       "sha256": "bf04d7297c037cac80dcfb0cf21cca024014455e8b5b45c9bc9d355259b627a4",
       "source": "schema/upgrade-contract.schema.json"
     },
-    "schema/issue-series-manifest.schema.json": {
-      "sha256": "294a546ab1b5244871d91aa7e212fa84440ff556115dae0c6c1101dc5bc11960",
-      "source": "schema/issue-series-manifest.schema.json"
-    },
     "schema/role-assignment.schema.json": {
       "sha256": "4bef843e049fbf297eeec7c0b3c9693a4b649f8ce78f90edacc2cb03b1a506e4",
       "source": "schema/role-assignment.schema.json"
@@ -213,7 +253,7 @@
       "source": "schema/role.schema.json"
     },
     "schema/task-record.schema.json": {
-      "sha256": "6472c530a359444d44c5273c56bea926fb78f68e249e11269f004ff83e0cf7d4",
+      "sha256": "d8651b77fe59e038d085e76555232f2cb7288492fd50cb0f9e767c19cc0dd618",
       "source": "schema/task-record.schema.json"
     },
     "schema/task-spec-policy.schema.json": {
@@ -228,6 +268,22 @@
       "sha256": "cd8bd61acc7bda446cae7ba634dd8847fa7d21cd8224610267c331610fe6f684",
       "source": "tests/fixture_ids.py"
     },
+    "tests/test_assumption_revalidation.py": {
+      "sha256": "134e3a0025ec6ea4198e1afaf7d6e41ca622174d9a79ae691be323e5727c92f5",
+      "source": "tests/test_assumption_revalidation.py"
+    },
+    "tests/test_assumption_revalidation_formal_model.py": {
+      "sha256": "5288e135666a511bca610dee82026f693a8bc0c987a53fc0c73369815ddbd086",
+      "source": "tests/test_assumption_revalidation_formal_model.py"
+    },
+    "tests/test_autonomy_limits.py": {
+      "sha256": "6a7962822a8f9d8b43cfab640f86fdbdc768dae8aba929c13c24162c53821f76",
+      "source": "tests/test_autonomy_limits.py"
+    },
+    "tests/test_campaign.py": {
+      "sha256": "d163e79912e6b6233a99b3b49533250b1da46e2ee9f6d81b1151f2b159109224",
+      "source": "tests/test_campaign.py"
+    },
     "tests/test_checkpoint_records.py": {
       "sha256": "1fb9d5276e58fc8f37ba29eca4dbad9eb007601d78a4a6e26ec90531649c1594",
       "source": "tests/test_checkpoint_records.py"
@@ -235,6 +291,14 @@
     "tests/test_concise_titles.py": {
       "sha256": "a6f7c5b51c27d3b84eee2983f23b7f593e8f8b2382d6ff679d13da75b6f629ae",
       "source": "tests/test_concise_titles.py"
+    },
+    "tests/test_execution_envelope.py": {
+      "sha256": "d56dc92f1a6548ca507b29c8007c89813dc739816ce6089588439c3f973e7bb3",
+      "source": "tests/test_execution_envelope.py"
+    },
+    "tests/test_execution_sandbox.py": {
+      "sha256": "44ef92f7c7fcab592522f4577735d40001987c4081df402a1e7ff3b07bdfb8bd",
+      "source": "tests/test_execution_sandbox.py"
     },
     "tests/test_fast_observation.py": {
       "sha256": "a48db9a54135359df2027325152ec7be02d64f9c2b1be71ab602256021f29a4b",
@@ -245,15 +309,15 @@
       "source": "tests/test_fast_receipt_cli.py"
     },
     "tests/test_fast_receipt_socket.py": {
-      "sha256": "4b6d64f9b3398a60db53eb682104f6220b5b01521db913c72312ac572a061594",
+      "sha256": "8c962ad7827722df094095b9908d880d447093dc67b5157b44425d409cb15154",
       "source": "tests/test_fast_receipt_socket.py"
     },
     "tests/test_fast_receipt_worker.py": {
-      "sha256": "c846e90cd75fd1a50915518072e7a723582c93a4d6815c27015e5e1fb28ab363",
+      "sha256": "6c754306732e46d5efe42e7867219dea86dd97b7ded61aaeedeba999e3bf8961",
       "source": "tests/test_fast_receipt_worker.py"
     },
     "tests/test_fast_receipts.py": {
-      "sha256": "f90327c7a985135ead29aff4f71f9ec33fe689a3267a583072f1657f67bcf2a7",
+      "sha256": "ffc410f6a9ee740f02084fbd92ec2fc60c016014cddc8f00b1a2982162ec4a4c",
       "source": "tests/test_fast_receipts.py"
     },
     "tests/test_formal_receipt.py": {
@@ -261,20 +325,36 @@
       "source": "tests/test_formal_receipt.py"
     },
     "tests/test_handoffctl.py": {
-      "sha256": "c11bbc4e7852f7d897fe9755006b05a1c2618ccc57d871a3110756f4b6ee9998",
+      "sha256": "6cdbff0788b322823e4abd009e915d489497084f77c8825bdbfd1121d612d2e3",
       "source": "tests/test_handoffctl.py"
     },
     "tests/test_handoffctl_recovery.py": {
       "sha256": "f2e2d7fc692b1f9d55b6612a1bb340d312e42f158c342810c98e32615942cd26",
       "source": "tests/test_handoffctl_recovery.py"
     },
+    "tests/test_handoffctl_retry_recovery.py": {
+      "sha256": "32bed56bf8905fbf081d3fa113d46d3cc90f2a66382fd55b4dc4ff9fba27e761",
+      "source": "tests/test_handoffctl_retry_recovery.py"
+    },
     "tests/test_hierarchy.py": {
-      "sha256": "6337acc13c1b8903c1d81434fdcf287865a4b8d0cd06b37b5cde913281aa62d4",
+      "sha256": "54716ff99381cec5237a9ca6a0b266e72e2dcc0156983486bb284d61c95dc62d",
       "source": "tests/test_hierarchy.py"
     },
     "tests/test_issue_series_handoffctl.py": {
-      "sha256": "261d4eebd0aa13254eaa2208c0a3675957a5d9d03d0dfe233ab498b9ffe8b89a",
+      "sha256": "2994a07fe179a3f509ec53800ce95f2d9492a57a2e894a3462df4edeb9018489",
       "source": "tests/test_issue_series_handoffctl.py"
+    },
+    "tests/test_predicate_evidence_ledger.py": {
+      "sha256": "10cee7533e79dfb0f1fe5cb59d708c13eab753f8d6b82e218f7b897801f039aa",
+      "source": "tests/test_predicate_evidence_ledger.py"
+    },
+    "tests/test_resume_card.py": {
+      "sha256": "eb37e86e465cd90f820d69d9c1d02247131c644f8657793d34de9e1d08a24966",
+      "source": "tests/test_resume_card.py"
+    },
+    "tests/test_retry_circuit.py": {
+      "sha256": "5595b81cfb12b2a2bd87e6ad2607fbb7e204d23d6b4b45f170e7054a8cfeaa8e",
+      "source": "tests/test_retry_circuit.py"
     },
     "tests/test_rollback_command.py": {
       "sha256": "bd73d2e508d9ebdc3c95eda84152bc71738c1173cbd31731129c5e7c17800b42",
@@ -285,15 +365,15 @@
       "source": "tests/test_session_records.py"
     },
     "tests/test_sqlite_storage.py": {
-      "sha256": "4f458e66eaf2bcaa523fabb1ae78c53a1f1d573602548570cb44c1bd418fbee0",
+      "sha256": "e12beb5c4647b5125668be9ba10ec816779a98930f146957f2a08d90f5a9d95d",
       "source": "tests/test_sqlite_storage.py"
     },
     "tests/test_task_spec.py": {
-      "sha256": "4c34a39e14f9379195ec3780d950dd67024e79bccd04656c7ef16f83be14600e",
+      "sha256": "4e827852a3b2366df7a661f7ad3b52794296202d4ae58e201bf0dca833e2fef8",
       "source": "tests/test_task_spec.py"
     },
     "tests/test_tlc_runner.py": {
-      "sha256": "cd6c00aca8989a9eb3d9514f23053c4c3bf1d21ec28279e928f0accc8d75dd78",
+      "sha256": "0953d2a2203b79c47f495a2c968b975d143bf202c5ff4290f951ab0de08155b7",
       "source": "tests/test_tlc_runner.py"
     },
     "tools/admission_lease.py": {
@@ -303,6 +383,10 @@
     "tools/admitted_control_store.py": {
       "sha256": "fb34958ff063e33406979f838860917ff2c9f2f24c360888cd85373f20028908",
       "source": "tools/admitted_control_store.py"
+    },
+    "tools/assumption_revalidation.py": {
+      "sha256": "f1d724fad6a3ba6e521759611b2c5003454105e4b8ae5b4bec09bf2da6813cab",
+      "source": "tools/assumption_revalidation.py"
     },
     "tools/authority_mutation.py": {
       "sha256": "df6692a9cf7473bc86de4a5e678ab55881eb33d56dc7657950f54f47bc77cdb7",
@@ -332,17 +416,53 @@
       "sha256": "de7c4b5d2b6100b2bf7e42c2399bf971dc307e09bd5f3748f787cbd519d2f0e2",
       "source": "tools/authority_neutral_validation.py"
     },
+    "tools/autonomy_limits.py": {
+      "sha256": "e777e99484934d815c817fada577eb82de62b69dcef31abc3f8de318b2573546",
+      "source": "tools/autonomy_limits.py"
+    },
     "tools/board_metrics.py": {
       "sha256": "a563bfccca4b94b0584ffe431bebb3a60e6ff8a34277fdb231c2db59ac1ae285",
       "source": "tools/board_metrics.py"
     },
+    "tools/campaign.py": {
+      "sha256": "4c061a09bc5ac3aadcc690f7c522f606a7ed88ee6fd0c748a098ff993abde095",
+      "source": "tools/campaign.py"
+    },
+    "tools/campaign_runtime.py": {
+      "sha256": "d00a9e76da7a83eec7dffbeefdff36c24577430326ba2a794e73d4b64263918a",
+      "source": "tools/campaign_runtime.py"
+    },
+    "tools/change_drift.py": {
+      "sha256": "e90eb99842afd2fc3a46623043ceb0b3bd2f91235afc93fd45b2fc6c3444c627",
+      "source": "tools/change_drift.py"
+    },
     "tools/checkpoint_records.py": {
-      "sha256": "4a6455765fe9b00ece90c8c51e08794d5079b7de5daf217d7ff827386f3e64b0",
+      "sha256": "4421d9599553b952dd0ac6451a64f69e5b900d52eb8aba19e15697bbaf367855",
       "source": "tools/checkpoint_records.py"
+    },
+    "tools/command_results.py": {
+      "sha256": "d2c21b4d772171c614da4380d3652abf73663a0c1e8f803c16f20db9097cc2ce",
+      "source": "tools/command_results.py"
     },
     "tools/directive_records.py": {
       "sha256": "e5290365a963b26d5c922f2dcd32a903e2cec69b5d5d05a1ace7df4cc6c719a4",
       "source": "tools/directive_records.py"
+    },
+    "tools/execution_abandonment.py": {
+      "sha256": "861d1c3f91a62eb7db82044592921509e91b1ce8e44d355d79eca8c10147d648",
+      "source": "tools/execution_abandonment.py"
+    },
+    "tools/execution_envelope.py": {
+      "sha256": "5fb9f1532551c078850f0df67b02511444bdbeccf7a07b65e55d978360990439",
+      "source": "tools/execution_envelope.py"
+    },
+    "tools/execution_lifecycle.py": {
+      "sha256": "85521ef71fbe06c094ef1c4b35aecbc155a4169fdbd199d1bbd05137ef54d5cc",
+      "source": "tools/execution_lifecycle.py"
+    },
+    "tools/execution_receipt.py": {
+      "sha256": "19429571ea98e2707aa74061593e4d6e17ebbf57c2b18274c9514f1fa5b132ba",
+      "source": "tools/execution_receipt.py"
     },
     "tools/fast_observation.py": {
       "sha256": "6610b75527567b7540e42712f32bb2b63e10851b53fc16a71b74e539ec145528",
@@ -357,7 +477,7 @@
       "source": "tools/fast_receipt_socket.py"
     },
     "tools/fast_receipt_worker.py": {
-      "sha256": "a0c58d06f7d5beb8edbce6e23147e16b1b1bb7724f9a2bfa42da418f14fb3ef9",
+      "sha256": "03317f1d5c77e9e35aaeff3979ca22a2f38afa47efc5af1660ccc538b2dc492d",
       "source": "tools/fast_receipt_worker.py"
     },
     "tools/fast_receipts.py": {
@@ -385,11 +505,11 @@
       "source": "tools/handoffctl"
     },
     "tools/handoffctl.py": {
-      "sha256": "8772449cf1d54a60604edc5751910aef65939bf1f0dbc5609c1b2f8e618419b6",
+      "sha256": "fba1c5c015a93ecaedcbcc967f6f757edd9da7679302caf2a945db80845478c7",
       "source": "tools/handoffctl.py"
     },
     "tools/handoffctl_vendor.py": {
-      "sha256": "134efc0da82fa7510638063b60238f6aaf67b7bfe1ccf6591f4f40238eebfb60",
+      "sha256": "b6a02b484c8c6a091736f664fade99083d81f74c866431225a5c14ba161ce059",
       "source": "tools/vendor.py"
     },
     "tools/hierarchy.py": {
@@ -403,6 +523,18 @@
     "tools/issue_series_plan.py": {
       "sha256": "3c3ac33a3e09ba8c00fca47de2078211e8d06083b75b7615a8102d434db12977",
       "source": "tools/issue_series_plan.py"
+    },
+    "tools/issue_series_publish.py": {
+      "sha256": "59ae0a369e0b4938f5d8893b79efd66feda5eee64f2a2712e1d3e1eca17b6835",
+      "source": "tools/issue_series_publish.py"
+    },
+    "tools/issue_series_service.py": {
+      "sha256": "bd1d10e5fdff7e591c95a89b00a53fea715348c1140e9378be0edac1cac0f3b2",
+      "source": "tools/issue_series_service.py"
+    },
+    "tools/legacy_binding_repair.py": {
+      "sha256": "c24043d3785ba421d41ac3ca15a8d4384f05ff81317ed83fec2d93182331f13a",
+      "source": "tools/legacy_binding_repair.py"
     },
     "tools/lifecycle_session.py": {
       "sha256": "94d8585554e4fb72117a1b284d54535cfe03a4ea8a6d8cc4312bd5bc8bc26b90",
@@ -428,9 +560,25 @@
       "sha256": "10cdd3263155bd2178e8c7e06857dd8dbea1581e9e2ac4f3413a3d6c6f67e3c6",
       "source": "tools/oracle_lifecycle.py"
     },
+    "tools/predicate_ledger.py": {
+      "sha256": "ff99feb06cf0c0b2f44b6f4c1ea3ab76220a39e5667c668072c164518c3245ca",
+      "source": "tools/predicate_ledger.py"
+    },
     "tools/production_upgrade_binding.py": {
       "sha256": "8e8d26366f1482c4a174ffd5d4ed6a97ab25bd9a1f9e962adbc0be6b45b4d1f5",
       "source": "tools/production_upgrade_binding.py"
+    },
+    "tools/resume_card.py": {
+      "sha256": "5fdf6e331c1357e34a176224cd500a4bec7f66e24d9eb9d268d529f34186fda9",
+      "source": "tools/resume_card.py"
+    },
+    "tools/resume_card_runtime.py": {
+      "sha256": "dfa4a31386c993b607ea7a324ed79fa33fc06b7bf733d0080c3188fc9944eb23",
+      "source": "tools/resume_card_runtime.py"
+    },
+    "tools/retry_circuit.py": {
+      "sha256": "03b0ff1fc942652222df1722fac252483bed34531fce486ad6e1658f1754c3c3",
+      "source": "tools/retry_circuit.py"
     },
     "tools/role_assignment.py": {
       "sha256": "4dc11cbe14cde756fb4b10f0d043b0680564d39a2f58380e10a14fe97d9464db",
@@ -441,7 +589,7 @@
       "source": "tools/role_registry.py"
     },
     "tools/roles.py": {
-      "sha256": "52cd8fc4589c9a5c2cb4a14ed73c2b4718fe6ed5e6a0732755afaca0a7b44a48",
+      "sha256": "1860ef2d5b1cd5c9b4909cda55af515bd5f42dcbfd5773a4f07bbe2622fabaac",
       "source": "tools/roles.py"
     },
     "tools/rollback_control_store.py": {
@@ -456,6 +604,10 @@
       "sha256": "0dc58796276f30a446203a033955ab4719bfd4737c5a6e010f17eae43f079186",
       "source": "tools/rollback_records.py"
     },
+    "tools/run_command.py": {
+      "sha256": "972b241471f21a657afa4a068e26dfe37699f5be7170d69af90aefee1cfff1f2",
+      "source": "tools/run_command.py"
+    },
     "tools/runtime_bootstrap.py": {
       "sha256": "100637722010937ac71ff094fb8d5cb2cc96ee65548a14b8e7c7002be3e19d22",
       "source": "tools/runtime_bootstrap.py"
@@ -465,7 +617,7 @@
       "source": "tools/scoped_backend_adapter.py"
     },
     "tools/session_records.py": {
-      "sha256": "35a9529ae3207977827b84bc145c03b55c5f4021fedf49a9590450a5ec125be3",
+      "sha256": "9d4be0f5f9ce3854c2d46ba71648c0df09529450a323467c3a7272bfc1712352",
       "source": "tools/session_records.py"
     },
     "tools/sqlite_authority_adapter.py": {
@@ -481,7 +633,7 @@
       "source": "tools/sqlite_backup.py"
     },
     "tools/sqlite_storage.py": {
-      "sha256": "3da24d6cc7673a8b54dc0e511d153a5bd6ce7819e9564deaa0d6612b9d16c860",
+      "sha256": "9d7e3a75036d73b9a8b9997dcdaf5a9f116f6134e769be90aafa5f1a27aa31e8",
       "source": "tools/sqlite_storage.py"
     },
     "tools/sqlite_wal_lifecycle.py": {
@@ -493,7 +645,7 @@
       "source": "tools/status_renderer.py"
     },
     "tools/task_spec.py": {
-      "sha256": "6b635d0576ece23d677426d1268552c57737e1573339917c0e024b5bb66fd8a9",
+      "sha256": "b7e119dafd1cdc37774a0ef20fcf875f5721ece7b721d68668fafc1d5d4bed99",
       "source": "tools/task_spec.py"
     },
     "tools/tlc_runner.py": {
@@ -505,7 +657,7 @@
       "source": "tools/upgrade_admission.py"
     },
     "tools/upgrade_authority.py": {
-      "sha256": "13351edbea86873b0fd4d09d1f4f4c6540d5db2f2f397c0894e8d22064c51dd1",
+      "sha256": "ab187c653c641e9f7101f87bb9e4c1b1070a9aaeec07e2d52b571569118785c1",
       "source": "tools/upgrade_authority.py"
     },
     "tools/upgrade_binding.py": {
@@ -533,12 +685,10 @@
       "source": "LICENSE"
     }
   },
-  "schema_version": 2,
+  "schema_version": 1,
   "upstream": {
-    "channel": "development",
-    "commit": "79c939fa3ae19600187eedb06777fa77c6991982",
+    "commit": "6f7cb5eeb411898c7812fdebc9da08e1f586c936",
     "repository": "https://github.com/martin-beck/agent-workflow-coordinator",
-    "tree": "433ba8f746e408eb4068a15bad2ae70b2131f9e2",
-    "version": "v0.5.3"
+    "version": "v0.7.11"
   }
 }
