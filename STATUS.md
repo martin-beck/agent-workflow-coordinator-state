@@ -10,9 +10,9 @@
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 2 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 11 |
+| **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 94 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 116 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
-| Open or active | 10 |
+| Open or active | 11 |
 | Blocked | 0 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 116 | 10 | 0 | 94 |
+| unassigned | unassigned | 116 | 11 | 0 | 94 |
 
 ## Task drill-down
 
@@ -1652,7 +1652,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | planned |
+| Status | open |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
@@ -1791,7 +1791,7 @@ flowchart LR
         AR_0119["AR-0119 - Done"]:::status_done
         AR_0120["AR-0120 - In progress"]:::status_in_progress
         AR_0121["AR-0121 - In progress"]:::status_in_progress
-        AR_0122["AR-0122 - Planned"]:::status_planned
+        AR_0122["AR-0122 - Open"]:::status_open
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2098,7 +2098,7 @@ flowchart LR
 | P1 | [AR-0120](tasks/AR-0120.md): Repair multi-root envelope scope | codex-ar0120-multiroot-20261014 | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0121](tasks/AR-0121.md): Bounded multi-root envelope adapter | codex-ar0121-multiroot-20261014 | Add the narrow product-root adapter needed to interpret validated product-root and state-root contract inputs without authorizing paths outside the bound root. Do not edit downstream consumers, vendor snapshots, or immutable AR-0120 envelope/spec files. | Implement the bounded scope and record local acceptance evidence. |
 
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2110,8 +2110,9 @@ flowchart LR
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
+| P1 | [AR-0122](tasks/AR-0122.md): Repair bound execution cwd | Unclaimed | Repair runtime cwd routing for bound product-worktree execution and add focused offline tests. Do not weaken envelope, publication, lifecycle, identity, or privacy gates. | Implement the bounded scope and record local acceptance evidence. |
 
-### Planned (11)
+### Planned (10)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2125,7 +2126,6 @@ flowchart LR
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
-| P1 | [AR-0122](tasks/AR-0122.md): Repair bound execution cwd | Unclaimed | Repair runtime cwd routing for bound product-worktree execution and add focused offline tests. Do not weaken envelope, publication, lifecycle, identity, or privacy gates. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (94)
 
