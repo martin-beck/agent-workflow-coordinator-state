@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0120",
+  "issue": {
+    "number": 1308,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1308"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Implement and validate a versioned multi-root execution-envelope/publication contract that independently allowlists product-root and state-root paths, preserves single-root compatibility, rejects missing paths, traversal, symlink or wrong-root paths, and prevents publication outside the declared root. Add positive and negative offline tests for both roots and exact publication scope; preserve existing lifecycle, identity, command, evidence, and gate boundaries.",
+      "depends_on": [],
+      "id": "AR-0120",
+      "ownership": "Coordinator execution-envelope and publication-scope repair only; own the product-root/state-root path contract and tests while preserving AR-0092 evidence and all existing gates.",
+      "scope": "Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths.",
+      "short_title": "Repair multi-root envelope scope"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
