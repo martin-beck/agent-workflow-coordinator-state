@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0128",
+  "issue": {
+    "number": 1317,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1317"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Repair validates a done target, exact revision, and fresh candidate; preserves invalid history byte-for-byte; appends one audited correction row; and leaves normal acceptance immutable. Tests, docs, vendor bootstrap, review, CI, merge, v0.7.14 release, state acceptance, and doctor pass.",
+      "depends_on": [],
+      "id": "AR-0128",
+      "ownership": "Coordinator repair-predicate-ledger successor only; preserve immutable historical rows, fail-closed validation, normal acceptance semantics, and prior AR-0125 through AR-0127 history.",
+      "scope": "Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision.",
+      "short_title": "Repair stale ledger"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}

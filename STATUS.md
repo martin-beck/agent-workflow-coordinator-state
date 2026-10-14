@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**121 ARs tracked** across 5 active status categories.
+**122 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
-| **Planned** | Defined work awaiting promotion or dependencies | 10 |
+| **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 99 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 121 |
+| Tasks | 122 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
 | Open or active | 9 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 121 | 9 | 2 | 99 |
+| unassigned | unassigned | 122 | 9 | 2 | 99 |
 
 ## Task drill-down
 
@@ -1732,6 +1732,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Adopt merged Coordinator predicate-ledger repair from exact main, run documented release metadata and non-formal gates, publish the next immutable release, and reconcile the state vendor snapshot only after exact tag and commit identity are verified. |
 | Next action | Implement the bounded scope and record local acceptance evidence. |
 
+### AR-0128 — Repair stale ledger
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
 
 ## Dependency graph
 
@@ -1867,6 +1881,7 @@ flowchart LR
         AR_0125["AR-0125 - Blocked"]:::status_blocked
         AR_0126["AR-0126 - Blocked"]:::status_blocked
         AR_0127["AR-0127 - Done"]:::status_done
+        AR_0128["AR-0128 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2168,6 +2183,7 @@ flowchart LR
 | [AR-0125](tasks/AR-0125.md) | None | None |
 | [AR-0126](tasks/AR-0126.md) | None | None |
 | [AR-0127](tasks/AR-0127.md) | None | None |
+| [AR-0128](tasks/AR-0128.md) | None | None |
 
 ## Complete AR inventory
 
@@ -2192,7 +2208,7 @@ flowchart LR
 | P1 | [AR-0125](tasks/AR-0125.md): Repair acceptance evidence ledger | Unclaimed | Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0126](tasks/AR-0126.md): Adopt ledger repair release | Unclaimed | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. |
 
-### Planned (10)
+### Planned (11)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2206,6 +2222,7 @@ flowchart LR
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
+| P1 | [AR-0128](tasks/AR-0128.md): Repair stale ledger | Unclaimed | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (99)
 
