@@ -8,7 +8,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0120 — Repair multi-root envelope scope](tasks/AR-0120.md) | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. | codex-ar0120-multiroot-20261014 |
-| P1 | [AR-0123 — Complete envelope test scope](tasks/AR-0123.md) | Add tools/execution_envelope.py to the concrete product-root read scope and focused import tests. Do not widen authorization beyond declared product files. | Implement the bounded scope and record local acceptance evidence. | codex-ar0123-closeout-20261014 |
 | P1 | [AR-0124 — Refresh reviewed code digest](tasks/AR-0124.md) | Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence. | Implement the bounded scope and record local acceptance evidence. | codex-ar0124-closeout-20261014 |
 
 ## Open
