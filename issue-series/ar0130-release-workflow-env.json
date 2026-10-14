@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0130",
+  "issue": {
+    "number": 1319,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1319"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "The release workflow installs the locked quality dependency group before quality gates; the existing signed candidate is reviewed at exact head, passes required CI, merges, publishes immutable v0.7.15, and is freshly verified. AR-0129 and AR-0130 state closeout plus live doctor pass.",
+      "depends_on": ["AR-0129"],
+      "id": "AR-0130",
+      "ownership": "Coordinator release-workflow environment installation and publication only; preserve AR-0129 history, existing signed product commit, required gates, and immutable release semantics.",
+      "scope": "Promote and claim the successor release follow-up for the existing signed change adding uv sync --locked --only-group quality to .github/workflows/release.yml, then perform exact-head review, CI, merge, v0.7.15 publication, post-merge verification, and durable closeout.",
+      "short_title": "Release workflow environment"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
