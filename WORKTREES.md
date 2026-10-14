@@ -4,7 +4,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 
 | Worktree | Branch | Head | Dirty | vs origin/main |
 | --- | --- | --- | ---: | --- |
-| `agent-workflow-coordinator` | `repair/ar-0092-envelope-replacement` | `7d4f333b75ee` | 1 | behind 23, ahead 1 |
+| `agent-workflow-coordinator` | `codex/ar0035-publication-envelope` | `d652bef8adee` | 1 | behind 23, ahead 0 |
 | changed files | - | - | - | `formal/upgrade/evidence.json` |
 | `agent-workflow-coordinator-upgrade-formal` | `feature/upgrade-formal-recovery` | `a4d651f45658` | 0 | behind 2766, ahead 0 |
 | `agent-workflow-coordinator-adapter-session` | `feature/ar0007-adapter-session-entry` | `6324d7ca3137` | 0 | behind 2593, ahead 0 |
@@ -142,6 +142,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | changed files | - | - | - | `tests/test_vendor.py`, `tools/vendor.py` |
 | `agent-workflow-coordinator-ar0090-spec-binding` | `repair/ar-0090-legacy-task-spec-binding` | `0c61530f2bad` | 0 | behind 365, ahead 0 |
 | `agent-workflow-coordinator-ar0090-vendor-source` | `DETACHED` | `3f644ac6353d` | 0 | behind 356, ahead 0 |
+| `agent-workflow-coordinator-ar0092-clean` | `codex/ar0092-envelope-replacement` | `4b2ae5fe97cd` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0107-current` | `feature/issue-series-contract` | `bd36fe5e3bc6` | 0 | behind 243, ahead 0 |
 | `agent-workflow-coordinator-ar0107-issue-series` | `feat/ar0107-issue-series-contract` | `714bea01c45f` | 0 | behind 266, ahead 3 |
 | `agent-workflow-coordinator-ar0111-formal-inventory-repair` | `ar0111-formal-inventory-repair` | `eee760513969` | 0 | behind 34, ahead 0 |
