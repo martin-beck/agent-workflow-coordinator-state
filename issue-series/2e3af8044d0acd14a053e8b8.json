@@ -1,0 +1,33 @@
+{
+  "finalizer": "AR-0114",
+  "issue": {
+    "number": 1301,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1301"
+  },
+  "issue_digest": "sha256:e8278a318734c980c5b3d8306e40f3a32c5d4146865bb59c942029a752d033be",
+  "members": [
+    {
+      "acceptance": "A bounded handoffctl-managed state-root recovery/abandonment route is implemented and tested fail-closed for expired orphan execution reservations, with exact task/revision/reservation identity, explicit operator evidence, matching-result validation, immutable audit, and no direct task-file edits. Reviewed signed commit, exact-head CI, merge, and post-merge doctor pass.",
+      "depends_on": [],
+      "id": "AR-0113",
+      "ownership": "Coordinator state-root orphan execution recovery and abandonment only; preserve all lifecycle gates and historical task records.",
+      "scope": "Add the authorized state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences.",
+      "short_title": "Recover orphan executions"
+    },
+    {
+      "acceptance": "The handoffctl command surface is split into cohesive bounded libraries with stable imports and unchanged behavior; positive/negative contract tests, offline operation, privacy checks, source headers, signed DCO review, exact-head CI, merge, and post-merge doctor all pass.",
+      "depends_on": [
+        {
+          "id": "AR-0113",
+          "rationale": "Decompose handoffctl after the state-root recovery route is available and validated."
+        }
+      ],
+      "id": "AR-0114",
+      "ownership": "Coordinator handoffctl internal library decomposition only; preserve public CLI contracts and native authorization gates.",
+      "scope": "Refactor the monolithic handoffctl implementation into separately testable libraries with explicit boundaries, no circular runtime dependency, and no semantic or gate weakening.",
+      "short_title": "Split handoffctl libraries"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}

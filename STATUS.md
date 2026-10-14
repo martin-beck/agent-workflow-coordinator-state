@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**111 ARs tracked** across 5 active status categories.
+**113 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 1 |
 | **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 10 |
+| **Planned** | Defined work awaiting promotion or dependencies | 12 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 91 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,9 +24,9 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 111 |
-| Parent tasks | 1 |
-| Child tasks | 8 |
+| Tasks | 113 |
+| Parent tasks | 2 |
+| Child tasks | 9 |
 | Open or active | 9 |
 | Blocked | 0 |
 
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 111 | 9 | 0 | 91 |
+| unassigned | unassigned | 113 | 9 | 0 | 91 |
 
 ## Task drill-down
 
@@ -1578,6 +1578,34 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Qualify and document issue-to-AR-series creation, per-AR updates and evidence-backed final closure as one upstream Coordinator capability. |
 | Next action | After lifecycle automation is complete, qualify the full issue-to-AR-series workflow, publish operator documentation, and release the upstream Coordinator capability. |
 
+### AR-0113 — Recover orphan executions
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | AR-0114 |
+| Children | None |
+| Summary | Add the authorized state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
+### AR-0114 — Split handoffctl libraries
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | AR-0113 |
+| Summary | Refactor the monolithic handoffctl implementation into separately testable libraries with explicit boundaries, no circular runtime dependency, and no semantic or gate weakening. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
 ### AR-0119 — Coordinator v0.7.8 strict-role restoration
 
 | Field | Value |
@@ -1716,6 +1744,8 @@ flowchart LR
         AR_0108["AR-0108 - Planned"]:::status_planned
         AR_0109["AR-0109 - Planned"]:::status_planned
         AR_0110["AR-0110 - Planned"]:::status_planned
+        AR_0113["AR-0113 - Planned"]:::status_planned
+        AR_0114["AR-0114 - Planned"]:::status_planned
         AR_0119["AR-0119 - Done"]:::status_done
     end
     AR_0001 --> AR_0002
@@ -1882,6 +1912,7 @@ flowchart LR
     AR_0107 --> AR_0109
     AR_0108 --> AR_0109
     AR_0109 --> AR_0110
+    AR_0113 --> AR_0114
     classDef status_in_progress fill:#1565c0,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_open fill:#2e7d32,color:#ffffff,stroke:#263238,stroke-width:2px
     classDef status_blocked fill:#c62828,color:#ffffff,stroke:#263238,stroke-width:2px
@@ -2006,6 +2037,8 @@ flowchart LR
 | [AR-0108](tasks/AR-0108.md) | [AR-0107](tasks/AR-0107.md) | [AR-0109](tasks/AR-0109.md) |
 | [AR-0109](tasks/AR-0109.md) | [AR-0107](tasks/AR-0107.md), [AR-0108](tasks/AR-0108.md) | [AR-0110](tasks/AR-0110.md) |
 | [AR-0110](tasks/AR-0110.md) | [AR-0109](tasks/AR-0109.md) | None |
+| [AR-0113](tasks/AR-0113.md) | None | [AR-0114](tasks/AR-0114.md) |
+| [AR-0114](tasks/AR-0114.md) | [AR-0113](tasks/AR-0113.md) | None |
 | [AR-0119](tasks/AR-0119.md) | [AR-0032](tasks/AR-0032.md) | None |
 
 ## Complete AR inventory
@@ -2029,7 +2062,7 @@ flowchart LR
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
 
-### Planned (10)
+### Planned (12)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2043,6 +2076,8 @@ flowchart LR
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
+| P1 | [AR-0113](tasks/AR-0113.md): Recover orphan executions | Unclaimed | Add the authorized state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. | Implement the bounded scope and record local acceptance evidence. |
+| P1 | [AR-0114](tasks/AR-0114.md): Split handoffctl libraries | Unclaimed | Refactor the monolithic handoffctl implementation into separately testable libraries with explicit boundaries, no circular runtime dependency, and no semantic or gate weakening. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (91)
 
