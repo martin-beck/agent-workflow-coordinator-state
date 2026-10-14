@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**116 ARs tracked** across 5 active status categories.
+**117 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 3 |
 | **Open** | Dependency-ready and available to claim | 8 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 10 |
+| **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 94 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 116 |
+| Tasks | 117 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
 | Open or active | 11 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 116 | 11 | 0 | 94 |
+| unassigned | unassigned | 117 | 11 | 0 | 94 |
 
 ## Task drill-down
 
@@ -1662,6 +1662,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Repair runtime cwd routing for bound product-worktree execution and add focused offline tests. Do not weaken envelope, publication, lifecycle, identity, or privacy gates. |
 | Next action | Implement the bounded scope and record local acceptance evidence. |
 
+### AR-0123 — Complete envelope test scope
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Add tools/execution_envelope.py to the concrete product-root read scope and focused import tests. Do not widen authorization beyond declared product files. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
 
 ## Dependency graph
 
@@ -1792,6 +1806,7 @@ flowchart LR
         AR_0120["AR-0120 - In progress"]:::status_in_progress
         AR_0121["AR-0121 - In progress"]:::status_in_progress
         AR_0122["AR-0122 - In progress"]:::status_in_progress
+        AR_0123["AR-0123 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2088,6 +2103,7 @@ flowchart LR
 | [AR-0120](tasks/AR-0120.md) | None | None |
 | [AR-0121](tasks/AR-0121.md) | None | None |
 | [AR-0122](tasks/AR-0122.md) | None | None |
+| [AR-0123](tasks/AR-0123.md) | None | None |
 
 ## Complete AR inventory
 
@@ -2112,7 +2128,7 @@ flowchart LR
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 
-### Planned (10)
+### Planned (11)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2126,6 +2142,7 @@ flowchart LR
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
+| P1 | [AR-0123](tasks/AR-0123.md): Complete envelope test scope | Unclaimed | Add tools/execution_envelope.py to the concrete product-root read scope and focused import tests. Do not widen authorization beyond declared product files. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (94)
 
