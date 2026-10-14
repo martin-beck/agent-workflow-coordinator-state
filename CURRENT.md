@@ -8,6 +8,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0120 — Repair multi-root envelope scope](tasks/AR-0120.md) | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. | codex-ar0120-multiroot-20261014 |
+| P1 | [AR-0121 — Bounded multi-root envelope adapter](tasks/AR-0121.md) | Add the narrow product-root adapter needed to interpret validated product-root and state-root contract inputs without authorizing paths outside the bound root. Do not edit downstream consumers, vendor snapshots, or immutable AR-0120 envelope/spec files. | Implement the bounded scope and record local acceptance evidence. | codex-ar0121-multiroot-20261014 |
 
 ## Open
 
@@ -21,7 +22,6 @@ Never edit this file directly.
 | P0 | [AR-0063 — Rollback and first release integration campaign](tasks/AR-0063.md) | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. | - |
 | P0 | [AR-0069 — Roles release and downstream pinning](tasks/AR-0069.md) | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
-| P1 | [AR-0121 — Bounded multi-root envelope adapter](tasks/AR-0121.md) | Add the narrow product-root adapter needed to interpret validated product-root and state-root contract inputs without authorizing paths outside the bound root. Do not edit downstream consumers, vendor snapshots, or immutable AR-0120 envelope/spec files. | Implement the bounded scope and record local acceptance evidence. | - |
 
 ## Planned
 
