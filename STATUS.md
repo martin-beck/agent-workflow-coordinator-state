@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**113 ARs tracked** across 4 active status categories.
+**113 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 10 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
 | **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1582,11 +1582,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-state-ar0113 |
 | Parent | AR-0114 |
 | Children | None |
 | Summary | Add a state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. |
@@ -1744,7 +1744,7 @@ flowchart LR
         AR_0108["AR-0108 - Planned"]:::status_planned
         AR_0109["AR-0109 - Planned"]:::status_planned
         AR_0110["AR-0110 - Planned"]:::status_planned
-        AR_0113["AR-0113 - Open"]:::status_open
+        AR_0113["AR-0113 - In progress"]:::status_in_progress
         AR_0114["AR-0114 - Planned"]:::status_planned
         AR_0119["AR-0119 - Done"]:::status_done
     end
@@ -2043,7 +2043,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (10)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0113](tasks/AR-0113.md): Recover orphan executions | codex-state-ar0113 | Add a state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. | Implement the bounded scope and record local acceptance evidence. |
+
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2056,7 +2062,6 @@ flowchart LR
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | Unclaimed | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
-| P1 | [AR-0113](tasks/AR-0113.md): Recover orphan executions | Unclaimed | Add a state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Planned (11)
 
