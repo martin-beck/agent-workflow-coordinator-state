@@ -328,7 +328,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `agent-workflow-coordinator-spec-acceptance-release` | `DETACHED` | `712b36ea3d18` | 0 | behind 485, ahead 0 |
 | `agent-workflow-coordinator-spec-gated-done-admission` | `ar0071-spec-gated-done-admission` | `f81aaf605b9c` | 0 | behind 784, ahead 1 |
 | `agent-workflow-coordinator-step-evidence-ledger` | `feature/step-evidence-ledger` | `adc0b11c61f7` | 0 | behind 156, ahead 0 |
-| `agent-workflow-coordinator-task-execution-envelopes` | `release/v0.6.0-candidate` | `02a1c83dbe10` | 0 | behind 174, ahead 0 |
+| `agent-workflow-coordinator-task-execution-envelopes` | `feature/task-execution-envelopes` | `0a228db1529e` | 0 | behind 177, ahead 0 |
 | `agent-workflow-coordinator-task-hierarchy-edges-and-rollup-constraints` | `ar0072-task-hierarchy-edges-and-rollup-constraints` | `830e07200a93` | 0 | behind 779, ahead 1 |
 | `agent-workflow-coordinator-task-spec-schema-and-task-metadata-fields` | `ar0070-task-spec-schema-and-task-metadata-fields` | `8d2af18895cf` | 0 | behind 785, ahead 0 |
 | `agent-workflow-coordinator-tlc-resource-bound` | `feature/tlc-resource-bound-reliability` | `e3ad0edb2318` | 0 | behind 2261, ahead 0 |
