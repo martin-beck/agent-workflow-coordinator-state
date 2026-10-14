@@ -488,5 +488,6 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-main-verify-JxJH1p` | `DETACHED` | `d785af8574a4` | 0 | behind 35, ahead 0 |
 | `awc-retention` | `DETACHED` | `54a6af80be82` | 0 | behind 11, ahead 0 |
 | `awc-v0710-qu21gM` | `DETACHED` | `c6536a16710b` | 0 | behind 33, ahead 0 |
+| `awc-v0711` | `DETACHED` | `6f7cb5eeb411` | 0 | behind 31, ahead 0 |
 | `awc-v0711-ibyfrY` | `DETACHED` | `6f7cb5eeb411` | 0 | behind 31, ahead 0 |
 | `awc-v0712` | `DETACHED` | `9d56254b5382` | 0 | behind 21, ahead 0 |
