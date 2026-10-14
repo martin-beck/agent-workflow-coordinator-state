@@ -142,7 +142,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | changed files | - | - | - | `tests/test_vendor.py`, `tools/vendor.py` |
 | `agent-workflow-coordinator-ar0090-spec-binding` | `repair/ar-0090-legacy-task-spec-binding` | `0c61530f2bad` | 0 | behind 365, ahead 0 |
 | `agent-workflow-coordinator-ar0090-vendor-source` | `DETACHED` | `3f644ac6353d` | 0 | behind 356, ahead 0 |
-| `agent-workflow-coordinator-ar0092-clean` | `codex/ar0092-envelope-replacement` | `212d30b01dc9` | 0 | behind 0, ahead 1 |
+| `agent-workflow-coordinator-ar0092-clean` | `codex/ar0092-envelope-replacement` | `c8265aa5725a` | 0 | behind 0, ahead 1 |
 | `agent-workflow-coordinator-ar0107-current` | `feature/issue-series-contract` | `bd36fe5e3bc6` | 0 | behind 243, ahead 0 |
 | `agent-workflow-coordinator-ar0107-issue-series` | `feat/ar0107-issue-series-contract` | `714bea01c45f` | 0 | behind 266, ahead 3 |
 | `agent-workflow-coordinator-ar0111-formal-inventory-repair` | `ar0111-formal-inventory-repair` | `eee760513969` | 0 | behind 34, ahead 0 |
