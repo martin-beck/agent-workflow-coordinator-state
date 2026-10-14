@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0121.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "product-root-contract", "description": "Product-root-relative declarations are independently validated without widening the bound root."},
+    {"id": "state-root-contract", "description": "State-root declarations are validated as contract inputs without authorizing product paths."},
+    {"id": "hostile-paths-rejected", "description": "Missing, traversal, absolute, symlink, wrong-root, and publication-widening paths fail closed."},
+    {"id": "single-root-compatible", "description": "Existing single-root envelope behavior and digest bindings remain unchanged."}
+  ],
+  "definition_of_done": [
+    "Implement the bounded product-root adapter on an exact reviewed head.",
+    "Add offline positive and negative root-contract and publication-scope tests.",
+    "Preserve lifecycle, identity, command, evidence, privacy, release, signing, and DCO gates."
+  ],
+  "inputs": [
+    {"id": "ar0120-envelope", "description": "Immutable AR-0120 envelope and scope failure evidence."}
+  ],
+  "outputs": [
+    {"id": "root-adapter", "description": "Product-root implementation for validated multi-root contract inputs."},
+    {"id": "root-tests", "description": "Bounded offline positive and hostile path tests."}
+  ],
+  "allowed_tools": ["git", "uv", "python", "tools/handoffctl"],
+  "forbidden_tools": ["unbounded-evidence", "credential-or-prompt-data", "authority-or-gate-weakening", "direct-task-file-edits"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {"id": "exact-head-review", "description": "Review the exact implementation head for root-specific fail-closed behavior."},
+    {"id": "offline-quality", "description": "Native and contract tests pass offline on the exact head."}
+  ]
+}

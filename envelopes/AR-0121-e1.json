@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "capabilities": {"git_metadata": {"allowed": true}, "network": {"allowed": true}},
+  "envelope_id": "AR-0121-e1",
+  "envelope_revision": 1,
+  "task": "AR-0121",
+  "task_revision": 6,
+  "spec_ref": "specs/AR-0121.json",
+  "spec_revision": 1,
+  "outputs": [
+    {"id": "root-adapter", "description": "Product-root implementation for validated multi-root contract inputs."},
+    {"id": "root-tests", "description": "Bounded offline positive and hostile path tests."}
+  ],
+  "non_goals": ["Do not edit downstream consumers or vendor snapshots.", "Do not authorize paths outside the bound product worktree."],
+  "path_scope": {"read": ["tools/execution_lifecycle.py", "tools/handoffctl.py", "tests", "docs"], "write": ["tools/execution_lifecycle.py", "tools/handoffctl.py", "tests", "docs"]},
+  "command_classes": {"read": {"allowed": true}, "test": {"allowed": true, "timeout_seconds": 600}, "source-write": {"allowed": true, "timeout_seconds": 600}, "git-publication": {"allowed": true, "timeout_seconds": 600}},
+  "evidence": [{"id": "mechanical", "class": "mechanical", "required": true}, {"id": "contract-tests", "class": "contract-test", "required": true}, {"id": "environment", "class": "environmental", "required": true}],
+  "stop_conditions": [{"id": "scope-widening", "kind": "deny"}, {"id": "gate-weakening", "kind": "deny"}, {"id": "root-identity-uncertain", "kind": "pause"}]
+}
