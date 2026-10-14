@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0124",
+  "issue": {
+    "number": 1312,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1312"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Refresh only the authoritative recorded implementation hash for the reviewed AR-0123 handoffctl change; preserve exact hash validation and pass focused/full checks.",
+      "depends_on": [],
+      "id": "AR-0124",
+      "ownership": "Coordinator formal evidence digest refresh only; preserve AR-0123 history and hash contract.",
+      "scope": "Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence.",
+      "short_title": "Refresh reviewed code digest"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
