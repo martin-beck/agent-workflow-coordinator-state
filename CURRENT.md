@@ -8,7 +8,6 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0120 — Repair multi-root envelope scope](tasks/AR-0120.md) | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. | codex-ar0120-multiroot-20261014 |
-| P1 | [AR-0121 — Bounded multi-root envelope adapter](tasks/AR-0121.md) | Add the narrow product-root adapter needed to interpret validated product-root and state-root contract inputs without authorizing paths outside the bound root. Do not edit downstream consumers, vendor snapshots, or immutable AR-0120 envelope/spec files. | Implement the bounded scope and record local acceptance evidence. | codex-ar0121-closeout-20261014 |
 
 ## Open
 
