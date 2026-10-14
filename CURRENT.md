@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0126 — Adopt ledger repair release](tasks/AR-0126.md) | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. | codex-ar0126-release-ledger-20261014 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -16,7 +22,6 @@ Never edit this file directly.
 | P0 | [AR-0069 — Roles release and downstream pinning](tasks/AR-0069.md) | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
 | P1 | [AR-0120 — Repair multi-root envelope scope](tasks/AR-0120.md) | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. | - |
-| P1 | [AR-0126 — Adopt ledger repair release](tasks/AR-0126.md) | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. | - |
 
 ## Blocked
 
