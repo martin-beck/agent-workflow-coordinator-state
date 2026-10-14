@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0127 — Publish predicate ledger release](tasks/AR-0127.md) | Adopt merged Coordinator predicate-ledger repair from exact main, run documented release metadata and non-formal gates, publish the next immutable release, and reconcile the state vendor snapshot only after exact tag and commit identity are verified. | Implement the bounded scope and record local acceptance evidence. | codex-ar0127-release-20261014 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
