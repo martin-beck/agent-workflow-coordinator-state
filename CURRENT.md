@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0128 — Repair stale ledger](tasks/AR-0128.md) | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. | Implement the bounded scope and record local acceptance evidence. | codex-ar0128-predicate-ledger-successor |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -16,7 +22,6 @@ Never edit this file directly.
 | P0 | [AR-0069 — Roles release and downstream pinning](tasks/AR-0069.md) | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
 | P1 | [AR-0120 — Repair multi-root envelope scope](tasks/AR-0120.md) | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. | - |
-| P1 | [AR-0128 — Repair stale ledger](tasks/AR-0128.md) | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. | Implement the bounded scope and record local acceptance evidence. | - |
 
 ## Blocked
 

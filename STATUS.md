@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**122 ARs tracked** across 5 active status categories.
+**122 ARs tracked** across 6 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 0 |
-| **Open** | Dependency-ready and available to claim | 10 |
+| **In progress** | Claimed work with a live lease | 1 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1736,11 +1736,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | open |
+| Status | in_progress |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | Unclaimed |
+| Owner | codex-ar0128-predicate-ledger-successor |
 | Parent | None |
 | Children | None |
 | Summary | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. |
@@ -1881,7 +1881,7 @@ flowchart LR
         AR_0125["AR-0125 - Blocked"]:::status_blocked
         AR_0126["AR-0126 - Blocked"]:::status_blocked
         AR_0127["AR-0127 - Done"]:::status_done
-        AR_0128["AR-0128 - Open"]:::status_open
+        AR_0128["AR-0128 - In progress"]:::status_in_progress
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2187,7 +2187,13 @@ flowchart LR
 
 ## Complete AR inventory
 
-### Open (10)
+### In progress (1)
+
+| Priority | AR | Owner | Summary | Next action |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0128](tasks/AR-0128.md): Repair stale ledger | codex-ar0128-predicate-ledger-successor | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. | Implement the bounded scope and record local acceptance evidence. |
+
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2200,7 +2206,6 @@ flowchart LR
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P1 | [AR-0120](tasks/AR-0120.md): Repair multi-root envelope scope | Unclaimed | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. |
-| P1 | [AR-0128](tasks/AR-0128.md): Repair stale ledger | Unclaimed | Extend the released repair-predicate-ledger command so stale or invalid historical rows remain immutable while a strictly validated fresh candidate and audited correction row are appended for a done target task at an exact revision. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Blocked (2)
 
