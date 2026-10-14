@@ -1,0 +1,15 @@
+{
+  "finalizer": "AR-0122",
+  "issue": {"number": 1310, "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1310"},
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [{
+    "acceptance": "Bounded handoffctl run commands execute from the bound direct product worktree while state coordination remains authoritative; positive and negative tests cover cwd identity, wrong-root rejection, path scopes, and fail-closed behavior.",
+    "depends_on": [],
+    "id": "AR-0122",
+    "ownership": "Coordinator execution routing only; preserve AR-0121 immutable history, state-root coordination, direct-directory binding, and all root/path fences.",
+    "scope": "Repair runtime cwd routing for bound product-worktree execution and add focused offline tests. Do not weaken envelope, publication, lifecycle, identity, or privacy gates.",
+    "short_title": "Repair bound execution cwd"
+  }],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
