@@ -486,6 +486,8 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | `awc-v078-source` | `DETACHED` | `f1f42d448c89` | 0 | behind 56, ahead 0 |
 | `awc-validator-coverage` | `test/validator-coverage` | `c19381d7d611` | 0 | behind 188, ahead 1 |
 | `awc-main-verify-JxJH1p` | `DETACHED` | `d785af8574a4` | 0 | behind 35, ahead 0 |
+| `awc-release-0713` | `DETACHED` | `7eacbc82bb84` | 4 | behind 0, ahead 0 |
+| changed files | - | - | - | `CHANGELOG.md`, `pyproject.toml`, `tools/handoffctl.py`, `uv.lock` |
 | `awc-retention` | `DETACHED` | `54a6af80be82` | 0 | behind 11, ahead 0 |
 | `awc-v0710-qu21gM` | `DETACHED` | `c6536a16710b` | 0 | behind 33, ahead 0 |
 | `awc-v0711` | `DETACHED` | `6f7cb5eeb411` | 0 | behind 31, ahead 0 |
