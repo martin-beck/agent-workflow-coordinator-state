@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**118 ARs tracked** across 4 active status categories.
+**119 ARs tracked** across 4 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 0 |
-| **Planned** | Defined work awaiting promotion or dependencies | 10 |
+| **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 98 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 118 |
+| Tasks | 119 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
 | Open or active | 9 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 118 | 9 | 0 | 98 |
+| unassigned | unassigned | 119 | 9 | 0 | 98 |
 
 ## Task drill-down
 
@@ -1690,6 +1690,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Update the reviewed formal evidence hash bound to tools/handoffctl.py and add focused evidence for exact digest correspondence. Do not weaken validation or alter unrelated evidence. |
 | Next action | Implement the bounded scope and record local acceptance evidence. |
 
+### AR-0125 — Repair acceptance evidence ledger
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
 
 ## Dependency graph
 
@@ -1822,6 +1836,7 @@ flowchart LR
         AR_0122["AR-0122 - Done"]:::status_done
         AR_0123["AR-0123 - Done"]:::status_done
         AR_0124["AR-0124 - Done"]:::status_done
+        AR_0125["AR-0125 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2120,6 +2135,7 @@ flowchart LR
 | [AR-0122](tasks/AR-0122.md) | None | None |
 | [AR-0123](tasks/AR-0123.md) | None | None |
 | [AR-0124](tasks/AR-0124.md) | None | None |
+| [AR-0125](tasks/AR-0125.md) | None | None |
 
 ## Complete AR inventory
 
@@ -2137,7 +2153,7 @@ flowchart LR
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P1 | [AR-0120](tasks/AR-0120.md): Repair multi-root envelope scope | Unclaimed | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. |
 
-### Planned (10)
+### Planned (11)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2151,6 +2167,7 @@ flowchart LR
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
+| P1 | [AR-0125](tasks/AR-0125.md): Repair acceptance evidence ledger | Unclaimed | Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (98)
 

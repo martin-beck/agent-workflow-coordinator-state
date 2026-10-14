@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0125",
+  "issue": {
+    "number": 1313,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1313"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Every repaired ledger entry is bound to an existing task specification predicate, accepted evidence class/reference/digest, and exact task revision; ambiguous or non-reconstructible entries remain blocked with a privacy-safe evidence envelope and no lifecycle weakening.",
+      "depends_on": [],
+      "id": "AR-0125",
+      "ownership": "Coordinator post-acceptance evidence-ledger audit and repair only; preserve task authority, acceptance gates, generated projections, and prior AR history.",
+      "scope": "Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible.",
+      "short_title": "Repair acceptance evidence ledger"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
