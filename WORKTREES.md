@@ -5,7 +5,7 @@ Generated from live Git. Paths are privacy-safe worktree keys.
 | Worktree | Branch | Head | Dirty | vs origin/main |
 | --- | --- | --- | ---: | --- |
 | `agent-workflow-coordinator` | `repair/ar-0092-envelope-replacement` | `d652bef8adee` | 8 | behind 23, ahead 0 |
-| changed files | - | - | - | `docs/PROJECT_GUIDE.md`, `formal/handoffctl/Handoffctl.tla`, `formal/handoffctl/README.md`, `formal/upgrade/evidence.json`, `schema/task-record.schema.json`, `tools/execution_envelope.py`, `tools/handoffctl.py`, `tests/test_execution_envelope_replacement.py` |
+| changed files | - | - | - | `docs/PROJECT_GUIDE.md`, `formal/handoffctl/Handoffctl.tla`, `formal/handoffctl/README.md`, `formal/upgrade/evidence.json`, `schema/task-record.schema.json`, `tests/test_execution_envelope_replacement.py`, `tools/execution_envelope.py`, `tools/handoffctl.py` |
 | `agent-workflow-coordinator-upgrade-formal` | `feature/upgrade-formal-recovery` | `a4d651f45658` | 0 | behind 2766, ahead 0 |
 | `agent-workflow-coordinator-adapter-session` | `feature/ar0007-adapter-session-entry` | `6324d7ca3137` | 0 | behind 2593, ahead 0 |
 | `agent-workflow-coordinator-admission-gaps` | `feature/document-admission-gaps` | `746426a58118` | 0 | behind 2756, ahead 0 |
