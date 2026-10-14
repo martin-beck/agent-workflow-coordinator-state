@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0129",
+  "issue": {
+    "number": 1318,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1318"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Only an exact repair-predicate-ledger invocation for a done, inactive, unowned target may bypass stale historical-ledger admission; fresh task/spec/candidate validation, append-only correction, privacy, and audit checks remain strict. All other commands and ordinary acceptance remain fail-closed. Positive and negative tests, docs, review, CI, merge, immutable release, state adoption, and live doctor pass.",
+      "depends_on": [],
+      "id": "AR-0129",
+      "ownership": "Coordinator repair-predicate-ledger admission seam only; preserve normal admission, immutable historical rows, task/spec identity, privacy, and AR-0125 through AR-0128 history.",
+      "scope": "Add a narrowly scoped admission seam allowing only repair-predicate-ledger to reach its strict repair validation when global stale historical-ledger validation would otherwise reject the command. Require exact command identity and a done, inactive, unowned target; reject active/owned/non-done targets, malformed or stale candidates, and every other command through existing fail-closed admission.",
+      "short_title": "Admit ledger repair"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
