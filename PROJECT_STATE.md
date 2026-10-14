@@ -2,8 +2,8 @@
 
 Generated from local Git and GitHub. Do not edit.
 
-- Product remote main: `c40457ec0696925d021a4996fb07f44d3b067f4d`
-- Local origin/main: `c40457ec0696925d021a4996fb07f44d3b067f4d`
+- Product remote main: `015813f09a6a7643a8fdb5b42cdf0b29589cea0e`
+- Local origin/main: `c9529fef59bf924510501e52cb2dbe5694fee5ba`
 - Primary worktree head: `d652bef8adee2fdded34ccfcb764fc9aa68026fc`
 
 ## Open pull requests
@@ -15,15 +15,15 @@ Generated from local Git and GitHub. Do not edit.
 
 | Run | SHA | Event | Workflow | State |
 | --- | --- | --- | --- | --- |
-| 38647394962 | `c40457ec0696` | push | Verify | completed:success |
-| 38647394926 | `c40457ec0696` | push | Formal | completed:success |
-| 38646885432 | `cc133a69aed6` | pull_request | Verify | completed:success |
-| 38646277237 | `4a5b2bf13677` | pull_request | Verify | completed:failure |
-| 38645850633 | `f5847f67c748` | push | Verify | completed:success |
-| 38645850414 | `f5847f67c748` | push | Formal | completed:success |
-| 38645689459 | `f9162509e5c0` | pull_request | Verify | completed:success |
-| 38640868285 | `7eacbc82bb84` | push | Verify | completed:success |
-| 38640868279 | `7eacbc82bb84` | push | Formal | completed:success |
-| 38640193121 | `c2b773ba4215` | pull_request | Verify | completed:success |
-| 38639651744 | `6d05da44c76a` | pull_request | Verify | completed:failure |
-| 38639143325 | `87f3d296a444` | pull_request | Verify | completed:failure |
+| 38653474859 | `015813f09a6a` | workflow_dispatch | Release upgrade contract | completed:failure |
+| 38653089813 | `015813f09a6a` | push | Formal | completed:success |
+| 38653089603 | `015813f09a6a` | push | Verify | completed:success |
+| 38653020227 | `13be0bf3c0c1` | pull_request | Verify | completed:success |
+| 38652959172 | `84029239708b` | workflow_dispatch | Release upgrade contract | completed:failure |
+| 38652522525 | `84029239708b` | push | Verify | completed:success |
+| 38652522504 | `84029239708b` | push | Formal | completed:success |
+| 38652151530 | `5b21d25a2e7a` | pull_request | Verify | completed:success |
+| 38651795611 | `6267e9055b84` | pull_request | Verify | completed:failure |
+| 38651762507 | `1a8fb5bc454e` | pull_request | Verify | completed:failure |
+| 38651331452 | `c9529fef59bf` | push | Formal | completed:success |
+| 38651331447 | `c9529fef59bf` | push | Verify | completed:success |
