@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0114 — Split handoffctl libraries](tasks/AR-0114.md) | Refactor the monolithic handoffctl implementation into separately testable libraries with explicit boundaries, no circular runtime dependency, and no semantic or gate weakening. | Implement the bounded scope and record local acceptance evidence. | codex-state-ar0114 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
