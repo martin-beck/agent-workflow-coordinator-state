@@ -1324,7 +1324,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | AR-0091 |
 | Children | None |
 | Summary | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. |
-| Next action | Specify and implement revision-bound task execution envelopes. |
+| Next action | Implement a coordinator-native, exact-revision successor-envelope replacement transition for already-bound envelopes; preserve immutable old evidence, reject reservations/stale owners/scope widening, and add schema, positive/negative tests, and vendor-release adoption evidence. |
 
 ### AR-0093 — Change Drift Guard
 
@@ -2047,7 +2047,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | codex-ar0092-envelope-replacement-20261014 | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Specify and implement revision-bound task execution envelopes. |
+| P0 | [AR-0092](tasks/AR-0092.md): Task Execution Envelopes | codex-ar0092-envelope-replacement-20261014 | Add a versioned execution envelope defining outputs, non-goals, path scope, command classes, evidence, and stop conditions for each task. | Implement a coordinator-native, exact-revision successor-envelope replacement transition for already-bound envelopes; preserve immutable old evidence, reject reservations/stale owners/scope widening, and add schema, positive/negative tests, and vendor-release adoption evidence. |
 
 ### Open (8)
 
