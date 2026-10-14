@@ -5,13 +5,13 @@
 
 ## Portfolio overview
 
-**120 ARs tracked** across 6 active status categories.
+**120 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
+| **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 9 |
-| **Blocked** | Cannot proceed until its recorded blocker clears | 1 |
+| **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 10 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 98 |
@@ -27,14 +27,14 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Tasks | 120 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
-| Open or active | 10 |
-| Blocked | 1 |
+| Open or active | 9 |
+| Blocked | 2 |
 
 ## Role and team rollup
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 120 | 10 | 1 | 98 |
+| unassigned | unassigned | 120 | 9 | 2 | 98 |
 
 ## Task drill-down
 
@@ -1708,11 +1708,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | blocked |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-ar0126-release-ledger-20261014 |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. |
@@ -1851,7 +1851,7 @@ flowchart LR
         AR_0123["AR-0123 - Done"]:::status_done
         AR_0124["AR-0124 - Done"]:::status_done
         AR_0125["AR-0125 - Blocked"]:::status_blocked
-        AR_0126["AR-0126 - In progress"]:::status_in_progress
+        AR_0126["AR-0126 - Blocked"]:::status_blocked
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2155,12 +2155,6 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0126](tasks/AR-0126.md): Adopt ledger repair release | codex-ar0126-release-ledger-20261014 | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. |
-
 ### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
@@ -2175,11 +2169,12 @@ flowchart LR
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
 | P1 | [AR-0120](tasks/AR-0120.md): Repair multi-root envelope scope | Unclaimed | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. |
 
-### Blocked (1)
+### Blocked (2)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0125](tasks/AR-0125.md): Repair acceptance evidence ledger | Unclaimed | Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible. | Implement the bounded scope and record local acceptance evidence. |
+| P1 | [AR-0126](tasks/AR-0126.md): Adopt ledger repair release | Unclaimed | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Planned (10)
 

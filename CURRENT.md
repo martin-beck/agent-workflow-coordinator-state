@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0126 — Adopt ledger repair release](tasks/AR-0126.md) | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. | codex-ar0126-release-ledger-20261014 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -28,6 +22,7 @@ Never edit this file directly.
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
 | P1 | [AR-0125 — Repair acceptance evidence ledger](tasks/AR-0125.md) | Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible. | Implement the bounded scope and record local acceptance evidence. | - |
+| P1 | [AR-0126 — Adopt ledger repair release](tasks/AR-0126.md) | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. | - |
 
 ## Planned
 
