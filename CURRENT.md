@@ -3,12 +3,6 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
-## In Progress
-
-| Priority | Task | Summary | Next action | Owner |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0113 — Recover orphan executions](tasks/AR-0113.md) | Add a state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. | Implement the bounded scope and record local acceptance evidence. | codex-state-ar0113 |
-
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
