@@ -1589,7 +1589,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Owner | Unclaimed |
 | Parent | AR-0114 |
 | Children | None |
-| Summary | Add the authorized state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. |
+| Summary | Add a state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. |
 | Next action | Implement the bounded scope and record local acceptance evidence. |
 
 ### AR-0114 — Split handoffctl libraries
@@ -2071,7 +2071,7 @@ flowchart LR
 | P1 | [AR-0097](tasks/AR-0097.md): Retry Circuit Breaker | Unclaimed | Detect bounded repeated failures or unchanged progress and require a changed approach, checkpoint, or explicit retry exception. | Implement bounded no-progress detection and recovery routes. |
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
-| P1 | [AR-0113](tasks/AR-0113.md): Recover orphan executions | Unclaimed | Add the authorized state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. | Implement the bounded scope and record local acceptance evidence. |
+| P1 | [AR-0113](tasks/AR-0113.md): Recover orphan executions | Unclaimed | Add a state-root administrative recovery route required to clear stale AR-1773/1852/1871-style reservations without weakening identity, expiry, result, or evidence fences. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0114](tasks/AR-0114.md): Split handoffctl libraries | Unclaimed | Refactor the monolithic handoffctl implementation into separately testable libraries with explicit boundaries, no circular runtime dependency, and no semantic or gate weakening. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (91)
