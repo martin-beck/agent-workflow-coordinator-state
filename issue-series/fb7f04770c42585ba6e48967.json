@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0121",
+  "issue": {
+    "number": 1309,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1309"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Implement and validate a bounded multi-root execution-envelope/publication adapter over product-root-relative inputs; preserve single-root compatibility and reject missing, traversal, symlink, wrong-root, or widened publication paths with positive and negative offline tests.",
+      "depends_on": [],
+      "id": "AR-0121",
+      "ownership": "Coordinator execution-envelope lifecycle and publication-scope adapter only; product-root implementation, tests, and docs. Preserve AR-0120 immutable history and all existing gates.",
+      "scope": "Add the narrow product-root adapter needed to interpret validated product-root and state-root contract inputs without authorizing paths outside the bound root. Do not edit downstream consumers, vendor snapshots, or immutable AR-0120 envelope/spec files.",
+      "short_title": "Bounded multi-root envelope adapter"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
