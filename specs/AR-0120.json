@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0120.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "product-root-allowlist", "description": "Product-root paths are independently allowlisted and valid in-scope paths are admitted."},
+    {"id": "state-root-allowlist", "description": "State-root paths are independently allowlisted and valid in-scope paths are admitted."},
+    {"id": "missing-path-rejected", "description": "Missing or empty path declarations are rejected fail-closed."},
+    {"id": "traversal-rejected", "description": "Traversal, absolute, symlink, and normalized escape paths are rejected for both roots."},
+    {"id": "wrong-root-rejected", "description": "A path from one root cannot be used under the other root or publication target."},
+    {"id": "single-root-compatible", "description": "Existing single-root envelopes retain their behavior and exact digest bindings."},
+    {"id": "publication-scope-bound", "description": "Publication is limited to the declared root-specific allowlist and rejects widening."}
+  ],
+  "definition_of_done": [
+    "Implement the smallest coordinator-native multi-root envelope/publication scope repair on an exact reviewed head.",
+    "Add offline positive and negative contract tests for product-root, state-root, missing, traversal, wrong-root, publication widening, and single-root compatibility.",
+    "Preserve existing identity, lifecycle, command, evidence, privacy, and release gates; record exact-head validation and downstream handoff evidence."
+  ],
+  "inputs": [
+    {"id": "ar0092-envelope-contract", "description": "Merged Coordinator execution-envelope contract and immutable binding behavior."},
+    {"id": "ar0092-successor-context", "description": "AR-0092 successor-envelope context identifying the remaining scope and publication boundary."}
+  ],
+  "outputs": [
+    {"id": "multi-root-contract", "description": "Versioned product-root/state-root path and publication scope contract."},
+    {"id": "multi-root-tests", "description": "Bounded offline positive and hostile path test evidence."},
+    {"id": "reviewed-upstream-repair", "description": "Exact reviewed Coordinator repair and release handoff."
+    }
+  ],
+  "allowed_tools": ["git", "gh", "uv", "python", "tools/handoffctl"],
+  "forbidden_tools": ["unbounded-evidence", "credential-or-prompt-data", "authority-or-gate-weakening", "direct-task-file-edits"],
+  "required_evidence_classes": ["mechanical", "contract-test", "environmental"],
+  "gates": [
+    {"id": "exact-head-review", "description": "Independent review covers the exact Coordinator commit and confirms root-specific fail-closed scope."},
+    {"id": "hosted-quality", "description": "Required native and hosted quality checks pass on the exact reviewed head."},
+    {"id": "publication-boundary", "description": "Publication evidence demonstrates exact declared root scope without widening."}
+  ]
+}
