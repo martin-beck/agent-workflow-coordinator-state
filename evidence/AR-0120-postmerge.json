@@ -1,0 +1,1 @@
+{"task":"AR-0120","implementation_head":"a64a33c37348a4297a61af05aec3f147601b08db","merge_commit":"02e3593136ba69c3160fb2143d0d946deb2f243d","pr":1319,"ci_run":"38680489348","focused_tests":"24/24 passed","ruff":"passed","full_verify":"2601 tests passed after legacy diagnostic repair","scope":"root-qualified product/state execution and publication scopes"}
