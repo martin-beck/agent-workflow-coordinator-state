@@ -3,6 +3,12 @@
 This file is generated. Read `README.md`, then use `tools/handoffctl snapshot`.
 Never edit this file directly.
 
+## In Progress
+
+| Priority | Task | Summary | Next action | Owner |
+| --- | --- | --- | --- | --- |
+| P1 | [AR-0131 — Bind external source roots](tasks/AR-0131.md) | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Implement the bounded scope and record local acceptance evidence. | gpt-5.6-luna-ar1885-v0715 |
+
 ## Open
 
 | Priority | Task | Summary | Next action | Owner |
@@ -16,7 +22,6 @@ Never edit this file directly.
 | P0 | [AR-0069 — Roles release and downstream pinning](tasks/AR-0069.md) | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. | - |
 | P0 | [AR-0091 — Focused Autonomy Program](tasks/AR-0091.md) | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. | - |
 | P1 | [AR-0129 — Admit ledger repair](tasks/AR-0129.md) | Add a narrowly scoped admission seam allowing only repair-predicate-ledger to reach its strict repair validation when global stale historical-ledger validation would otherwise reject the command. Require exact command identity and a done, inactive, unowned target; reject active/owned/non-done targets, malformed or stale candidates, and every other command through existing fail-closed admission. | Implement the bounded scope and record local acceptance evidence. | - |
-| P1 | [AR-0131 — Bind external source roots](tasks/AR-0131.md) | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Implement the bounded scope and record local acceptance evidence. | - |
 
 ## Blocked
 
