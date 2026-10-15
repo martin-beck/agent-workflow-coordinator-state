@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_ref": "specs/AR-0131.json",
+  "spec_revision": 1,
+  "acceptance_predicates": [
+    {"id": "source-root-positive", "description": "A declared clean source root is admitted and mounted read-only for the bound command."},
+    {"id": "source-root-negative", "description": "Missing, symlinked, wrong-root, traversal, and unbound source roots are rejected fail-closed."},
+    {"id": "compatibility", "description": "Single-root and existing product/state root-qualified envelopes retain their behavior."},
+    {"id": "publication", "description": "Signed review, exact-head CI, merge, release, and post-merge verification pass without gate weakening."}
+  ],
+  "definition_of_done": ["Source-root admission and sandbox mounting are implemented with focused positive and hostile tests.", "Existing envelope and lifecycle tests pass.", "The reviewed signed+DCO change is merged and released."],
+  "inputs": [{"id": "coordinator", "description": "Coordinator main after AR-0120 merge."}, {"id": "source-root", "description": "Clean external Coordinator checkout declared at invocation."}],
+  "outputs": [{"id": "source-binding", "description": "Identity-bound source-root selector and admission evidence."}, {"id": "verification", "description": "Focused and full applicable nonformal test evidence."}, {"id": "publication", "description": "Exact-head hosted review, merge, release, and reconciliation evidence."}],
+  "allowed_tools": ["git", "gh", "python", "uv", "tools/handoffctl"],
+  "forbidden_tools": ["tlc", "agent-relay", "history-rewrite", "direct-source-copy", "runtime-download"],
+  "required_evidence_classes": ["contract-test", "mechanical", "environmental"],
+  "gates": [{"id": "scope", "description": "Root-qualified source, state, and product paths admit only their declared identities."}, {"id": "non-formal", "description": "Focused and applicable full nonformal tests pass."}, {"id": "publication", "description": "Exact signed/DCO head is reviewed, green, merged, and released."}]
+}
