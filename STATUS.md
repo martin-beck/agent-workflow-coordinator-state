@@ -5,14 +5,14 @@
 
 ## Portfolio overview
 
-**124 ARs tracked** across 5 active status categories.
+**125 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
 | **In progress** | Claimed work with a live lease | 0 |
 | **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
-| **Planned** | Defined work awaiting promotion or dependencies | 11 |
+| **Planned** | Defined work awaiting promotion or dependencies | 12 |
 | **Future** | Deferred roadmap work | 0 |
 | **Done** | Accepted, integrated, and durably verified | 101 |
 | **Cancelled** | Stopped with a recorded rationale | 0 |
@@ -24,7 +24,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Metric | Value |
 | --- | ---: |
-| Tasks | 124 |
+| Tasks | 125 |
 | Parent tasks | 2 |
 | Child tasks | 9 |
 | Open or active | 9 |
@@ -34,7 +34,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Role | Team | Tasks | Open/active | Blocked | Done |
 | --- | --- | ---: | ---: | ---: | ---: |
-| unassigned | unassigned | 124 | 9 | 2 | 101 |
+| unassigned | unassigned | 125 | 9 | 2 | 101 |
 
 ## Task drill-down
 
@@ -1774,6 +1774,20 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Summary | Promote and claim the successor release follow-up for the existing signed change adding uv sync --locked --only-group quality to .github/workflows/release.yml, then perform exact-head review, CI, merge, v0.7.15 publication, post-merge verification, and durable closeout. |
 | Next action | Promote, claim, bind, and execute the release-workflow environment follow-up. |
 
+### AR-0131 — Bind external source roots
+
+| Field | Value |
+| --- | --- |
+| Status | planned |
+| Priority | P1 |
+| Role | unassigned |
+| Team | unassigned |
+| Owner | Unclaimed |
+| Parent | None |
+| Children | None |
+| Summary | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. |
+| Next action | Implement the bounded scope and record local acceptance evidence. |
+
 
 ## Dependency graph
 
@@ -1912,6 +1926,7 @@ flowchart LR
         AR_0128["AR-0128 - Done"]:::status_done
         AR_0129["AR-0129 - Open"]:::status_open
         AR_0130["AR-0130 - Planned"]:::status_planned
+        AR_0131["AR-0131 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
     AR_0001 --> AR_0021
@@ -2217,6 +2232,7 @@ flowchart LR
 | [AR-0128](tasks/AR-0128.md) | None | None |
 | [AR-0129](tasks/AR-0129.md) | None | [AR-0130](tasks/AR-0130.md) |
 | [AR-0130](tasks/AR-0130.md) | [AR-0129](tasks/AR-0129.md) | None |
+| [AR-0131](tasks/AR-0131.md) | None | None |
 
 ## Complete AR inventory
 
@@ -2241,7 +2257,7 @@ flowchart LR
 | P1 | [AR-0125](tasks/AR-0125.md): Repair acceptance evidence ledger | Unclaimed | Audit post-acceptance task evidence ledgers for exact predicate, evidence-class, digest, and revision correspondence; repair only the bounded authoritative ledger or publish a fail-closed blocker with exact evidence when the source acceptance is not reconstructible. | Implement the bounded scope and record local acceptance evidence. |
 | P1 | [AR-0126](tasks/AR-0126.md): Adopt ledger repair release | Unclaimed | Adopt the existing released Coordinator capability from the documented release path, then create the missing bounded AR-0125 specification/binding and repair its acceptance ledger only when exact predicate, class, digest, and revision evidence is reconstructible; otherwise retain a fail-closed blocker. | Implement the bounded scope and record local acceptance evidence. |
 
-### Planned (11)
+### Planned (12)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2256,6 +2272,7 @@ flowchart LR
 | P1 | [AR-0098](tasks/AR-0098.md): Campaign Coordination Layer | Unclaimed | Add a cross-session campaign view linking tasks, workers, attempts, dependencies, blockers, and terminal outcomes while tasks remain authoritative. | Model campaign-level recovery and progress without replacing task authority. |
 | P1 | [AR-0099](tasks/AR-0099.md): Autonomy Limits Escalation | Unclaimed | Support project-defined limits and pause conditions for autonomous work without treating those controls as human-account authorization requirements. | Add opt-in autonomy budgets and declared escalation triggers. |
 | P1 | [AR-0130](tasks/AR-0130.md): Release workflow environment | Unclaimed | Promote and claim the successor release follow-up for the existing signed change adding uv sync --locked --only-group quality to .github/workflows/release.yml, then perform exact-head review, CI, merge, v0.7.15 publication, post-merge verification, and durable closeout. | Promote, claim, bind, and execute the release-workflow environment follow-up. |
+| P1 | [AR-0131](tasks/AR-0131.md): Bind external source roots | Unclaimed | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Done (101)
 

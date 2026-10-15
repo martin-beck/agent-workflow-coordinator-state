@@ -1,0 +1,20 @@
+{
+  "finalizer": "AR-0131",
+  "issue": {
+    "number": 1321,
+    "url": "https://github.com/martin-beck/agent-workflow-coordinator/issues/1321"
+  },
+  "issue_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "members": [
+    {
+      "acceptance": "Positive and hostile offline contract tests pass; a clean downstream vendor invocation can consume the exact declared source root through handoffctl; exact-head review/CI, merge, release, and post-merge evidence pass.",
+      "depends_on": [],
+      "id": "AR-0131",
+      "ownership": "Coordinator execution-envelope root binding and publication admission only; preserve existing task histories and downstream overlays.",
+      "scope": "Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying.",
+      "short_title": "Bind external source roots"
+    }
+  ],
+  "repository": "github.com/martin-beck/agent-workflow-coordinator",
+  "schema_version": 1
+}
