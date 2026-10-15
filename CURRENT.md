@@ -7,7 +7,6 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P1 | [AR-0120 — Repair multi-root envelope scope](tasks/AR-0120.md) | Repair execution-envelope path and publication scope for independent product-root and state-root execution. Add only the narrowly scoped multi-root contract and its validation/tests, retain single-root behavior, and fail closed on missing, traversal, symlink, wrong-root, or widened publication paths. | Implement the bounded scope and record local acceptance evidence. | gpt-5.6-luna-ar0120-20261015 |
 | P1 | [AR-0129 — Admit ledger repair](tasks/AR-0129.md) | Add a narrowly scoped admission seam allowing only repair-predicate-ledger to reach its strict repair validation when global stale historical-ledger validation would otherwise reject the command. Require exact command identity and a done, inactive, unowned target; reject active/owned/non-done targets, malformed or stale candidates, and every other command through existing fail-closed admission. | Implement the bounded scope and record local acceptance evidence. | codex-ar0129-admission-seam |
 
 ## Open
