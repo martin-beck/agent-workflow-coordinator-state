@@ -5,12 +5,12 @@
 
 ## Portfolio overview
 
-**124 ARs tracked** across 6 active status categories.
+**124 ARs tracked** across 5 active status categories.
 
 | Status | Meaning | Count |
 | --- | --- | ---: |
-| **In progress** | Claimed work with a live lease | 1 |
-| **Open** | Dependency-ready and available to claim | 8 |
+| **In progress** | Claimed work with a live lease | 0 |
+| **Open** | Dependency-ready and available to claim | 9 |
 | **Blocked** | Cannot proceed until its recorded blocker clears | 2 |
 | **Planned** | Defined work awaiting promotion or dependencies | 11 |
 | **Future** | Deferred roadmap work | 0 |
@@ -1750,11 +1750,11 @@ This deterministic view contains task metadata only; raw logs, command output, a
 
 | Field | Value |
 | --- | --- |
-| Status | in_progress |
+| Status | open |
 | Priority | P1 |
 | Role | unassigned |
 | Team | unassigned |
-| Owner | codex-ar0129-admission-seam |
+| Owner | Unclaimed |
 | Parent | None |
 | Children | None |
 | Summary | Add a narrowly scoped admission seam allowing only repair-predicate-ledger to reach its strict repair validation when global stale historical-ledger validation would otherwise reject the command. Require exact command identity and a done, inactive, unowned target; reject active/owned/non-done targets, malformed or stale candidates, and every other command through existing fail-closed admission. |
@@ -1910,7 +1910,7 @@ flowchart LR
         AR_0126["AR-0126 - Blocked"]:::status_blocked
         AR_0127["AR-0127 - Done"]:::status_done
         AR_0128["AR-0128 - Done"]:::status_done
-        AR_0129["AR-0129 - In progress"]:::status_in_progress
+        AR_0129["AR-0129 - Open"]:::status_open
         AR_0130["AR-0130 - Planned"]:::status_planned
     end
     AR_0001 --> AR_0002
@@ -2220,13 +2220,7 @@ flowchart LR
 
 ## Complete AR inventory
 
-### In progress (1)
-
-| Priority | AR | Owner | Summary | Next action |
-| --- | --- | --- | --- | --- |
-| P1 | [AR-0129](tasks/AR-0129.md): Admit ledger repair | codex-ar0129-admission-seam | Add a narrowly scoped admission seam allowing only repair-predicate-ledger to reach its strict repair validation when global stale historical-ledger validation would otherwise reject the command. Require exact command identity and a done, inactive, unowned target; reject active/owned/non-done targets, malformed or stale candidates, and every other command through existing fail-closed admission. | Implement the bounded scope and record local acceptance evidence. |
-
-### Open (8)
+### Open (9)
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -2238,6 +2232,7 @@ flowchart LR
 | P0 | [AR-0063](tasks/AR-0063.md): Rollback and first release integration campaign | Unclaimed | Complete rollback and the first supported upgrade campaign without exposing a partial or non-functional coordinator. | Implement and independently verify the first durable rollback boundary: bind verified backup, restore, runtime, barrier, and fencing identities under the held barrier; cover process death, ambiguous fsync, reopen, and competing-owner rejection while keeping public rollback and release publication disabled. |
 | P0 | [AR-0069](tasks/AR-0069.md): Roles release and downstream pinning | Unclaimed | Release agent-workflow-roles v1.0.0 with SPDX graph, bounded distribution archives, and a downstream lock manifest following the coordinator vendor pattern. | Define the authoritative agent-workflow-roles package/repository and release target, then prepare its manifest, SPDX graph, bounded archives, and downstream lock. |
 | P0 | [AR-0091](tasks/AR-0091.md): Focused Autonomy Program | Unclaimed | Release-scoped parent for durable task scope, drift prevention, resumability, bounded autonomy, and cross-session coordination. Independent review remains optional policy, not a required product feature. | Implement the dependency-ordered focused-autonomy series for the next Coordinator release. |
+| P1 | [AR-0129](tasks/AR-0129.md): Admit ledger repair | Unclaimed | Add a narrowly scoped admission seam allowing only repair-predicate-ledger to reach its strict repair validation when global stale historical-ledger validation would otherwise reject the command. Require exact command identity and a done, inactive, unowned target; reject active/owned/non-done targets, malformed or stale candidates, and every other command through existing fail-closed admission. | Implement the bounded scope and record local acceptance evidence. |
 
 ### Blocked (2)
 
