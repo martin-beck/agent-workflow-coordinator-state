@@ -7,7 +7,7 @@ Never edit this file directly.
 
 | Priority | Task | Summary | Next action | Owner |
 | --- | --- | --- | --- | --- |
-| P1 | [AR-0131 — Bind external source roots](tasks/AR-0131.md) | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Implement the bounded scope and record local acceptance evidence. | gpt-5.6-luna-ar1885-v0715 |
+| P1 | [AR-0131 — Bind external source roots](tasks/AR-0131.md) | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Run post-merge verification and adopt v0.7.16 downstream through AR-1951. | gpt-5.6-luna-ar1885-v0715 |
 
 ## Open
 

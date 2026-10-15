@@ -1786,7 +1786,7 @@ This deterministic view contains task metadata only; raw logs, command output, a
 | Parent | None |
 | Children | None |
 | Summary | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. |
-| Next action | Implement the bounded scope and record local acceptance evidence. |
+| Next action | Run post-merge verification and adopt v0.7.16 downstream through AR-1951. |
 
 
 ## Dependency graph
@@ -2240,7 +2240,7 @@ flowchart LR
 
 | Priority | AR | Owner | Summary | Next action |
 | --- | --- | --- | --- | --- |
-| P1 | [AR-0131](tasks/AR-0131.md): Bind external source roots | gpt-5.6-luna-ar1885-v0715 | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Implement the bounded scope and record local acceptance evidence. |
+| P1 | [AR-0131](tasks/AR-0131.md): Bind external source roots | gpt-5.6-luna-ar1885-v0715 | Extend the versioned Coordinator execution/publication scope contract with an explicit, identity-bound source-root selector for clean upstream vendor inputs. Admit only the declared source checkout, state root, and product root; reject missing, symlinked, wrong-root, traversal, and unbound sources. Preserve single-root compatibility and all lifecycle/privacy gates; no gate weakening, formal/TLC requirement, or direct source copying. | Run post-merge verification and adopt v0.7.16 downstream through AR-1951. |
 
 ### Open (9)
 
